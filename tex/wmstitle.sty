@@ -1,0 +1,211 @@
+%% ************ AKADEMIA GÓRNICZO-HUTNICZA W KRAKOWIE **************
+%% ***************** Wydzial Matematyki Stosowanej *****************
+%% ******* STRONA TYTULOWA PRACY MAGISTERSKIEJ w LaTeX-u ***********
+%%
+%% This is file `wmstitle.sty',
+%% author: Rafa/l Czarny
+%% version:  0.99  10/04/2003     
+%%
+%% Copyright (C) 2003 by Rafal Czarny & WMS. All rights reserved.
+%% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.2
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% 
+\NeedsTeXFormat{LaTeX2e}[1996/12/01]
+\ProvidesPackage{wmstitle}
+  \typeout{************************************************}
+  \typeout{** AKADEMIA GORNICZO-HUTNICZA W KRAKOWIE        }
+  \typeout{** WEAIiE											                 }
+  \typeout{** Strona tytulowa pracy magisterskiej          }
+  \typeout{** Autor: Rafa/l Czarny, poprawki Jakub Kaprzyk }
+  \typeout{** Dodatkowe zmiany: Micha/l Fita}
+  \typeout{************************************************}
+%---------------- nowe if-y -------------------%
+\newif\ifmgr@pdftex\mgr@pdftexfalse
+\newif\ifmgr@man\mgr@manfalse
+\def\mgr@spec{oik}
+%----------------- Opcje ----------------------%
+\DeclareOption{pdftex}{\mgr@pdftextrue}
+\DeclareOption{man}{\mgr@mantrue}
+\DeclareOption{mfu}{\gdef\mgr@spec{mfu}}
+\DeclareOption{oik}{\gdef\mgr@spec{oik}}
+\DeclareOption{pit}{\gdef\mgr@spec{pit}}
+\DeclareOption{opt}{\gdef\mgr@spec{opt}}
+\ProcessOptions
+%---------- Zaladowanie pakietow ---------------%
+\RequirePackage{calc}
+\RequirePackage{ifthen}
+\ifmgr@pdftex
+% \RequirePackage[pdftex]{graphicx}
+\else
+ \RequirePackage[dvips]{graphicx}\fi
+%----- Definicje uniwersalnych literek :)-------%
+\newcommand{\m@a}{\k a}             %{\char177}
+\newcommand{\m@c}{\@tabacckludge'c} %{\char230}
+\newcommand{\m@e}{\k e}             %{\char234}
+\newcommand{\m@l}{\l}               %{\char179}
+\newcommand{\m@o}{\@tabacckludge'o} %{\char243}
+\newcommand{\m@s}{\@tabacckludge's} %{\char182}
+\newcommand{\m@z}{\.z}              %{\char191}
+\newcommand{\m@x}{\@tabacckludge'z} %{\char188}
+\ifmgr@man\gdef\m@k{y}\else\gdef\m@k{a}\fi
+%---------------- Marginesy --------------------%
+\newlength{\mgrlewy}\newlength{\mgrprawy}
+\newlength{\mgrgora}\newlength{\mgrdol}
+\newlength{\mgrstopka}\newlength{\mgrdoglowki}
+%------- Ustawienia marginesów --------%
+\setlength{\mgrlewy}{3.5cm}
+\setlength{\mgrprawy}{2.1cm}
+\setlength{\mgrgora}{1.75cm}
+\setlength{\mgrdol}{2.25cm}
+\setlength{\mgrstopka}{2.75\baselineskip}
+\setlength{\mgrdoglowki}{1.5pt}
+%--------------------------------------%
+\newlength{\@pomc}
+\newcount\@tempcntr
+\setlength\marginparwidth{0pt}
+\setlength\marginparsep{0pt}
+\setlength\oddsidemargin{\mgrlewy}
+\addtolength\oddsidemargin{-1in} 
+\setlength\evensidemargin{\mgrprawy}
+\addtolength\evensidemargin{-1in} 
+\setlength\textwidth{\paperwidth}
+\addtolength\textwidth{-\mgrlewy}
+\addtolength\textwidth{-\mgrprawy}
+  %------ wymiary pionowe -------%
+\setlength\headheight{\baselineskip}
+\addtolength\headheight{0.3pt}
+\setlength\headsep{\baselineskip}
+\addtolength\headsep{\mgrdoglowki}
+\setlength\footskip{\mgrstopka}
+\setlength\topmargin{\mgrgora}
+\addtolength\topmargin{-1in}
+\setlength\@pomc{\paperheight}
+\addtolength\@pomc{-\mgrgora}
+\addtolength\@pomc{-\mgrdol}
+\addtolength\@pomc{-\headheight}
+\addtolength\@pomc{-\headsep}
+\addtolength\@pomc{-\footskip}
+ \advance\@pomc-.5\baselineskip
+ \divide\@pomc\baselineskip
+ \@tempcntr=\@pomc
+ \setlength\textheight{\@tempcntr\baselineskip}
+ \addtolength\textheight{\topskip} 
+%% Kontrolujemy odstepy pionowe
+\raggedbottom
+%-------------- STONA TYTULOWA ----------------%
+%------ Wybor i sklad specjalosci
+\newcommand{\mgr@wybor@spec}{%
+ \ifthenelse{\equal{\mgr@spec}{mfu}}
+  {\gdef\mgr@sklad@spec{%
+	 \mgr@otheri@font Matematyka w ekonomii, \\ &\mgr@otheri@font f{i}nansach i ubezpieczeniach}}{}
+\ifthenelse{\equal{\mgr@spec}{oik}}
+  {\gdef\mgr@sklad@spec{%
+	 \mgr@otheri@font Matematyka obliczeniowa \\ &\mgr@otheri@font i komputerowa}}{}
+\ifthenelse{\equal{\mgr@spec}{pit}}
+  {\gdef\mgr@sklad@spec{%
+	 \mgr@otheri@font Matematyka w naukach technicznych \\ &\mgr@otheri@font i przyrodniczych}}{}
+\ifthenelse{\equal{\mgr@spec}{opt}}
+  {\gdef\mgr@sklad@spec{%
+	 \mgr@otheri@font Optymalizacja}}{}}	
+\mgr@wybor@spec
+%------ Dodatkowe polecenia
+\let\@date\@empty
+\def\promotorJeden#1{\gdef\@promotorJeden{#1}}
+\def\promotorDwa#1{\gdef\@promotorDwa{#1}}
+\def\authorJeden#1{\gdef\@authorJeden{#1}}
+\def\authorDwa#1{\gdef\@authorDwa{#1}}
+\def\@promotorJeden{\ClassError{mgrwms}{Brak promotora pracy!}\@ehc}
+\def\@promotorDwa{\ClassError{mgrwms}{Brak promotora pracy!}\@ehc}
+\def\nralbumuJeden#1{\gdef\@nralbumuJeden{#1}}
+\def\nralbumuDwa#1{\gdef\@nralbumuDwa{#1}}
+\def\@nralbumuJeden{\ClassError{mgrwms}{Brak numeru albumu!}\@ehc}
+\def\@nralbumuDwa{\ClassError{mgrwms}{Brak numeru albumu!}\@ehc}
+\ifmgr@pdftex 
+  \def\@orzelek{orzelAGH.jpg}
+  \def\@logoWMS{logoWMS.pdf}
+\else 
+  \def\@orzelek{orzelAGH.eps}
+  \def\@logoWMS{logoWMS.eps}\fi
+\newcommand{\mgr@titlesetup}{\huge\bfseries}
+\newcommand{\mgr@aut@font}{\LARGE}
+\newcommand{\mgr@other@font}{\large}
+\newcommand{\mgr@otheri@font}{\normalsize}
+\newlength{\mgr@tit@dim}
+\settowidth{\mgr@tit@dim}{\mgr@other@font Nr albumu: }
+%---- sklad ,,wlasciwy'' ----%
+\renewcommand{\maketitle}{\begin{titlepage}%
+ \vbox to\textheight{%
+  \hyphenpenalty=10000
+  \begin{center}%
+    \vspace{-3\baselineskip}
+     \includegraphics[height=3\baselineskip]{\@orzelek}\par
+		\vspace*{\medskipamount}
+    \begin{tabular}{c}
+      \mgr@other@font Akademia G{\m@o}rniczo-Hutnicza im. Stanis{\m@l}awa Staszica w Krakowie
+		\end{tabular}\par
+  \vspace{\smallskipamount}
+  \noindent\rule{\textwidth}{1pt}\\[-3.65\smallskipamount]
+  \noindent\rule{\textwidth}{.4pt}\par 
+
+     {\mgr@other@font Wydzia{\m@l}\ Elektrotechniki, Automatyki, Informatyki i Elektroniki \textit{Katedra Informatyki}}
+
+    \vspace*{1.5\baselineskip}
+    {\mgr@aut@font Praca magisterska\par}
+     \vspace*{1.5\baselineskip}
+    {\mgr@titlesetup\@title\par} %
+     \vspace{2\baselineskip} 
+    {\LARGE\strut\@authorJeden\par}
+    {\mgr@other@font Nr albumu:} {\mgr@other@font\@nralbumuJeden\par} 
+    {\LARGE\strut\@authorDwa\par}
+    {\mgr@other@font Nr albumu:} {\mgr@other@font\@nralbumuDwa\par} 
+		\vfill
+%    {\mgr@other@font Kierunek:} {\mgr@other@font Informatyka} \\
+		\noindent\begin{tabular}[b]{@{}p{\mgr@tit@dim}@{\ }l@{}}
+    \end{tabular}\hfill\mbox{}\par\vspace*{\baselineskip}
+    \begin{tabular}[b]{@{}l@{}} 
+    	\newline
+      Promotorzy: \\[\smallskipamount]
+      {\mgr@other@font\@promotorJeden} \\
+      {\mgr@other@font\@promotorDwa}
+    \end{tabular}\par 
+	 	\vspace*{1.0\baselineskip}	
+  \noindent\rule{\textwidth}{.4pt}\\[-3.65\smallskipamount]
+  \noindent\rule{\textwidth}{1pt}\\[\smallskipamount]
+ {\mgr@other@font Krak{\m@o}w 2007}
+  \end{center} }
+%------- Oswiadczenie --------% 
+  \newpage\thispagestyle{empty}
+    \vspace*{2\baselineskip}
+    \begin{center} 
+			{\large\bfseries O{\m@s}wiadczenie autor{\m@o}w}\par\bigskip
+    \end{center}
+    {\itshape Ja, ni{\m@z}ej podpisany \@authorJeden\ o{\m@s}wiadczam, {\m@s}wiadomy odpowiedzialno{\m@s}ci karnej za po{\m@s}wiadczenie nieprawdy, {\m@z}e niniejsz{\m@a} prac{\m@e} dyplomow{\m@a} wykona{\m@l}em osobi{\m@s}cie i samodzielnie i {\m@z}e nie korzysta{\m@l}em ze {\m@x}rode{\m@l} innych ni{\m@z} wymienione w pracy.}\par
+	  \vspace{3\baselineskip}
+	  \hfill\parbox{15em}{{\small\dotfill}\\[-.3ex] \centerline{\footnotesize(Podpis)}}\par
+    \vspace{4\baselineskip}
+    {\itshape Ja, ni{\m@z}ej podpisany \@authorDwa\ o{\m@s}wiadczam, {\m@s}wiadomy odpowiedzialno{\m@s}ci karnej za po{\m@s}wiadczenie nieprawdy, {\m@z}e niniejsz{\m@a} prac{\m@e} dyplomow{\m@a} wykona{\m@l}em osobi{\m@s}cie i samodzielnie i {\m@z}e nie korzysta{\m@l}em ze {\m@x}rode{\m@l} innych ni{\m@z} wymienione w pracy.}\par
+	  \vspace{3\baselineskip}
+	  \hfill\parbox{15em}{{\small\dotfill}\\[-.3ex] \centerline{\footnotesize(Podpis)}}\par
+    \vspace{4\baselineskip}
+  \end{titlepage}%
+  \global\let\maketitle\relax
+  \global\let\title\relax
+  \global\let\authorJeden\relax
+  \global\let\authorDwa\relax
+  \global\let\date\relax
+  \global\let\and\relax
+  \global\let\promotorJeden\relax
+  \global\let\nralbumuJeden\relax
+  \global\let\promotorDwa\relax
+  \global\let\nralbumuDwa\relax
+}
+%-----------------------------------------------------------%
+\endinput
+%% End of file 'wmstitle.sty'

@@ -1,0 +1,316 @@
+%% LyX 1.5.0 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,oneside,polish,wide,pdftex]{mwbk}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,a4paper,lmargin=3cm}
+\pagestyle{uheadings}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{fix-cm}
+\usepackage[pdftex,man,opt]{wmstitle}
+\usepackage[bookmarks, bookmarksopen=true, bookmarksnumbered=true, colorlinks=true, pdftitle={System sterowania robotem mobilnym}, pdfauthor={Micha³ Fita}]{hyperref}
+
+\usepackage{polski}
+\makeatother
+
+\begin{document}
+\promotorJeden{dr in¿. Roman Krasowski}
+\nralbumuJeden{99999}
+\authorJeden{Micha³ Fita}
+\promotorDwa{}
+\nralbumuDwa{}
+\authorDwa{}
+
+
+\title{System sterowania robotem}
+
+
+\author{Micha³ Fita}
+
+\maketitle
+\tableofcontents{}
+
+
+\chapter*{Wstêp}
+
+Niedocenianym obszarem wspó³czesnej in¿ynierii jest robotyka. £±czy
+ona w sobie wiedzê z dziedziny elektroniki, automatyki, mechaniki
+oraz in¿ynierii oprogramowania. Wielu nawet dzi¶ uwa¿a robotykê za
+zabawê, a nie powa¿n± dziedzinê badawczo--rozwojow±. Lecz sukcesy
+takich projektów jak Mars Pathfinder czy DARPA Grand Challanger pokazuj±
+rosn±ce znaczenie robotyki we wspó³czesnym ¶wiecie. Bill Gates powiedzia³:
+{}``Wiek XX by³ er± komputerów, wiek XXI bêdzie er± robotów''.
+
+Przedmiotem pracy jest sterownik mikroprocesorowy oraz zestaw oprogramowania
+dla sterownika oraz wspó³pracuj±cego komputera PC. Platform± mechaniczn±
+jest robot zabawka Robo--Actor, który ma s³u¿yæ do demonstracji dzia³ania
+uk³adu i oprogramowania stworzonych w ramach tej pracy. W kolejnych
+rozdzia³ach zosta³y opisane tematy teoretyczne oraz zadania realizowane
+w celu konstrukcji sterownika oraz stworzenia oprogramowania zarówno
+sterownika mikroprocesorowego oraz systemu kontrolnego dla komputera
+PC.
+
+Praca zosta³a podzielona na dwie logiczne czê¶ci, z której pierwsza
+omawia teoretyczne zagadnienia zwi±zane z tematem robotyki i technologii
+stosowanych w realizacji projektu, a czê¶æ druga opisuje praktyczn±
+realizacjê wszystkich elementów z opisem kroków prowadz±cych do wyboru
+stosowanych rozwi±zañ. W¶ród opisywanych tematów znajduj± siê przede
+wszystkim systemy wbudowane, systemy operacyjne czasu rzeczywstego,
+radiowa transmisja danych, sterowanie silników elektrycznych oraz
+przetwarzanie obrazu.
+
+Uk³ad sterownika mikroprocesorowego zosta³ zrealizowany na platformie
+AVR32 firmy Atmel. Jest to rodzina 32 bitowych mikrokontrolerów wystêpuj±ca
+w dwóch g³ównych odmianach, lekkiej odmianie UC3 dla mocno zintegrowanych
+rozwi±zañ, oraz AP7 -- odmianie wysokowydajnych mikrokontrolerów dla
+zaawansowanych aplikacji przeno¶nych, mog±cy miêdzy innymi pracowaæ
+pod kontrol± systemu Linux. Istotn± przewag± oferty firmy Atmel i
+uk³adów AVR32 nad uk³adami innych producentów jest bardzo silne wsparcie
+dla amatorów oraz ¶rodowiska otwartego oprogramowania.
+
+
+\part{Teoria}
+
+
+\chapter{Interfejsy}
+
+
+\section{Interfejs JTAG}
+
+Interfejs JTAG jest uznanym ¶wiatowym standardem sprzêtowego sprzêgu
+mikroprocesorów i uk³adów programowalnych ze stanowiskiem pracy in¿yniera,
+czyli komputera PC. Popularnie u¿ywany skrót JTAG od nazwy Joint Test
+Action Group to historyczna zasz³o¶æ z 1985 roku, gdy powo³ano grupê
+przemys³ow± do opracowania metod testowania p³ytek drukowanych na
+etapie postprodukcji. Za³o¿eniem grupy by³o opracowanie mechanizmu
+pozwalaj±cego na testowanie po³±czeñ z dowolnej nó¿ki z³o¿onego uk³adu
+scalonego po ¶cie¿ce poprowadzonej po p³ytce drukowanej. W roku 1990
+metoda ta zosta³a zatwierdzona jako standard IEEE 1149.1\cite{jtag-std}.
+Tego samego roku INTEL w³o¿y³ obs³ugê tego standardu do procesora
+80486. Zastosowana metoda testowania pozwala³a weryfikowaæ elektryczne
+po³±czenia na p³ytce drukowanej z otoczeniem uk³adu, st±d nosi nazwê
+skanowania granicznego (ang. boundary-scan). Polega ona na zastosowaniu
+pojedynczych bramek (ang. Boundary Scan Cells) na wszystkich nó¿kach
+sygna³owych uk³adu scalonego, które mog± byæ wymuszane w stan logiczny
+zero lub jeden, mog± odczytywaæ stan logiczny nó¿ki podawany z zewn±trz
+lub w trakcie normalnej pracy uk³adu pozostawaæ nieaktywne i odizolowane
+od wyprowadzenia. £añcuch takich bramek tworzy rejestr (ang. Boundary
+Scan Register), który wspó³pracuje z dodatkowymi rejestrami instrukcji
+i danych. W dziesiejszych czasach znaczenie interfejsu IEEE 1149.1
+i wszelkich jego pochodnych specyficznych dla ró¿nych producentów
+ma tak naprawdê najwiêksze znaczenie na etapie przygotowywania oprogramowania
+dla urz±dzeñ wyposa¿onych w mikrokontrolery. O ile architetkura sprzêtowa
+szeregowej komunikacji z wewnêtrznymi uk³adami mikrokontrolerów zosta³a
+zachowana to ka¿dy producent stosuje swoje rozszerzenia i wymaga w³asnego
+oprogramowania do sterowania interfejsem, które umo¿liwia programowanie
+pamiêci flash w uk³adach oraz przeprowadzanie z³o¿onego procesu uruchomieniowego
+wspomaganego przez sprzêtowe pu³apki. Programowanie uk³adów scalonych
+z zastosowaniem tej metody (ale nie tylko) nazywa siê programowaniem
+w systemie (ang. in-system programming, w skrócie ISP). Przyk³ady
+wielu mikrokontrolerów 8-bitowych pokazuj±, ¿e ISP nie wumaga istnienia
+pe³nego IEEE 1149.1 a wymaga tylko dostarczenia wyprowadzeñ pozwalaj±cy
+szeregowo programowaæ pamiêæ Flash lub sieæ bramek wewn±trz uk³adu
+scalonego (tak robi ATMEL z rodzin± uk³adów 8-bitowych i Xilinx dla
+uk³adów CPLD).
+
+<Opis HW>
+
+Dla wielu producentów cyfrowego sprzêtu elektronicznego istnienie
+wyprowadzeñ dla JTAG stanowi zagro¿enie dla naruszenia dóbr intelektualnych
+zawartych w rozwi±zaniach zastosowanych w sprzedawanych urz±dzeniach.
+Umiejêtnie zastosowany JTAG pozwala na przeprowadzanie in¿ynierii
+odwrotnej uk³adu i oprogramowania w nim zawartego (mimo zabezpieczenia
+wewnêtrznej pamiêci Flash przed bezpo¶rednim odczytem). Dziêki takim
+mo¿liwo¶ciom, kilka bardzo popularnych urz±dzeñ%
+\footnote{Popularny router Linksys WRT54G posiada alternatywne oprogramowanie,
+dostêpne g³ównie na http://www.openwrt.org.%
+} zyska³o szerokie grono u¿ytkowników ze ¶rodowiska oprogramowania
+otwartego, które tworzy w³asne wersje oprogramowania o alternatywnych
+mo¿liwo¶ciach. Nieliczni producenci zdecydowali siê z sukcesem wspieraæ
+w pewnym stopniu takie dzia³ania ¶rodowisk u¿ytkowników. Im wiêcej
+mo¿na zrobiæ z urz±dzeniem przez modyfikacjê oprogramowania, tym wy¿sze
+ceny tych urz±dzeñ s± na rynku wtórnym.
+
+
+\chapter{Mikrokontrolery}
+
+Rozdzia³ opisuje wybrane konstrukcje mikrokontrolerów oferowanych
+przez ró¿nych producentów, których wybór rozwa¿ano do zastosowania
+w projekcie. Opis obejmuje szczegó³y techniczne konstrukcji oraz aspekty
+in¿ynierskie zwi±zane z zastosowaniem opisywanych uk³adów w praktyce.
+
+
+\section{ARM}
+
+Firma ARM nie jest producentem uk³adów scalonych mikroprocesorów,
+lecz zajmuje siê projektowaniem rdzeni procesorów oraz sprzeda¿± w³a¶no¶ci
+intelektualnej do tych projektów firmom trzecim, g³ównie uznanym producentom
+uk³adów mikroprocesorowych, o których mowa w tym rozdziale. Rdzenie
+serii ARM w kolejnych wcieleniach ciesz± siê ogromn± popularno¶ci±
+producentów urz±dzeñ codziennego u¿ytku potrzebuj±cych wysokich wydajno¶ci,
+takich jak telefony komórkowe, przeno¶ne odtwarzacze DVD oraz wiele
+innych. Procesory z rdzeniem ARM stanowi± oko³o 3/4 rynku sprzeda¿y
+dla 32 bitowych uk³adów.
+
+Stosowana w tej chwili nazwa ARM jest akronimem od angieskich s³ów
+\textsl{Advanced RISC Machine}, a wcze¶niej \textsl{Acorn RISC machine}.
+Historia tych procesorów siêga roku 1983, gdy brytyjska firma Acorn
+Computers pracowa³a nad nowym procesorem dla swoich komputerów. Znaczenie
+komputerów Acorn na brytyjskim rynku w owym czasie, przypomina³o tryumfy
+komputerów Apple w Stanach Zjednoczonych. W latach odpowiednio 1985
+i roku nastêpnym, Acorn prezentuje kolejno procesory ARM1 i ARM2.
+
+Cech± szczególn± ca³ej rodziny procesorów ARM, w tym równie¿ odga³êzieñ
+jest zestaw instrukcji maszynowych ³±cz±cych pewne zestawy operacji
+czêsto pojawiaj±cych siê w kodzie napisanych w jêzykach wy¿szego poziomu.
+Dziêki czemu, skompilowany kod binarny jest bardzo ma³y i mo¿e byæ
+wykonywany szybko, mimo niskich czêstotliwo¶ci zegarów taktuj±cych
+pracê rdzenia procesora. Zachowano przy tym mechanizmy z procesorów
+RISC, gwarantuj±ce sta³± d³ugo¶æ rozkazu. ARM dodatkowo rozszerzy³a
+mo¿liwo¶ci rdzeni o technologie \textsc{Thumb}, \textsc{Thumb-2} i
+\textsc{Neon} -- w szczególno¶ci ta ostatnia znalaz³a zastosowanie
+w implementacji kodeków g³osowych w telefonach GSM.
+
+Z architektury ARM wywodz± siê takie rodziny procesorów, jak XScale
+firmy Intel -- znajduj±cy zastosowanie w wielu PDA -- oraz OMAP firmy
+Texas Instruments -- wielordzeniowe procesory multimedialne.
+
+
+\subsection{ARM 3}
+
+
+\subsection{ARM 6}
+
+
+\subsection{ARM 7}
+
+
+\subsection{ARM 9}
+
+
+\subsection{Jazelle}
+
+Technologia Jazelle DBX (skrót od ang. \textsl{Direct Bytecode eXecution})
+zosta³a opracowana przez ARM w celu przyspieszania sprzêtowego pewnych
+operacji bajtkodu maszyny wirtualnej Java (w skrócie JVM). Pozwala
+ona wykonywaæ bajtkod Javy, jakby by³ on natywnym kodem procesora.
+Sprzêtowa implementacja Jazelle DBX wykonana jest na oko³o 12 tysi±cach
+bramek, co oznacza niski koszt implementacji wewn±trz uk³adu. Liczba
+ta jest znacz±co mniejsza od liczby bramek typowego koprocesora matematycznego.
+
+Takie podej¶cie wzmocnione przez technologiê Jazelle RCT (ang. \textsl{Runtime
+Compilation Target}), która wspiera kompilacjê ahead-of-time (AOT)
+i just-in-time (JIT), pozwala znacz±co zwiêkszyæ wydajno¶æ aplikacji
+Java w urz±dzeniach przeno¶nych, g³ównie telefonach komórkowych. Aktualne
+mo¿liwo¶ci technologii Jazelle RCT siêgaj± du¿o dalej, wspieraj±c
+kompilacjê i wykonywanie kodu takich platform jak Microsoft.NET, Perl
+czy Python. Implementacjê tej technologii wspieraj± wszystkie mikroprocesory
+z rodziny ARM Cortex-A\cite{jazelle-wp}.
+
+
+\section{Freescale}
+
+Firma Freescale%
+\footnote{Strona producenta: http://www.freescale.com%
+}to korporacja powsta³a z wydzielenia dzia³u uk³adów scalonych firmy
+Motorola. Uk³ady scalone Motoroli od kilkudziesiêciu lat maj± uznan±
+pozycjê na rynku elektoniki cyfrowej, a udzia³ Motoroli w konsorcjum
+tworz±cym rdzeñ PowerPC odcisn±³ du¿e piêtno na tej architekturze.
+
+>Motorola bra³a udzia³ w pracach konsorcjum tworz±cym rdzeñ PowerPC,
+a pod koniec lat '80 assembler rodziny mikroprocesorów 6800 by³ w
+Polsce bardzo popularny.
+
+Aktualnie Freescale posiada cztery rodziny mikroprocesorów 32 bitowych:
+
+\begin{description}
+\item [{PowerQUICC}]~
+\item [{ARM}]~
+\item [{68K/ColdFire}]~
+\item [{MCORE}]~
+\end{description}
+
+\section{Atmel}
+
+Firma Atmel oferuje wiele ró¿nych konstrukcji procesorów, z których
+najpopularniejsze to ca³a rodzina mikrokontrolerów AVR -- 8 bitowych
+uk³adów o architekturze RISC, ciesz±ca siê ogromn± popularno¶ci± w¶ród
+amatorów. Wiele projektów elektronicznych dostêpnych w internecie
+opartych jest w³a¶nie o uk³ady z tej rodziny. Oprócz tego Atmel oferuje
+szerok± gamê uk³adów opartych o rdzeñ ARM.
+
+AVR32 to rodzina 32 bitowych mikrokontrolerów produkcji firmy Atmel%
+\footnote{Strona uk³adów AVR32 u producenta: http://www.atmel.com/products/avr32/%
+} Oferowane s± uk³ady z dwóch g³ównych odmianach: 
+
+\begin{description}
+\item [{UC3}] l¿ejszej odmianie mikrokontrolera dla dla mocno zintegrowanych
+rozwi±zañ o niskim poborze energii do kontroli i sterowania, 
+\item [{AP7}] odmianie wysokowydajnych mikrokontrolerów dla zaawansowanych
+multimedialnych aplikacji przeno¶nych, mog±cy miêdzy innymi pracowaæ
+pod kontrol± systemu operacyjnego Linux. 
+\end{description}
+Istotn± przewag± oferty firmy Atmel i uk³adów AVR32 nad uk³adami innych
+producentów jest bardzo silne wsparcie dla amatorów oraz ¶rodowiska
+otwartego oprogramowania.
+
+
+\section{Analog Devices}
+
+Istniej±ca od 1965 roku firma Analog Devices zajmuje siê projektowaniem
+i produkcj± z³o¿onych uk³adów scalonych dla techniki analogowej i
+cyfrowej. Opórcz uznanych wzmacniaczy i przetwoników analogowo-cyfrowych,
+firma produkuje ró¿nego rodzaju sensory (w tym linowy sensor przyspieszenia
+ADXL3300 zastosowany w konsoli do gier Wii firmy Nitendo\cite{ad-wii-sensor})
+oraz znan± rodzinê procesorów Blackfin, stosowan± w wielu urz±dzeniach
+firm takich jak Hitachi czy Roland.
+
+
+\subsection{Blackfin}
+
+\includegraphics{images/BF_chip_100x100}Mikroprocesory z rdzeniem
+Blackfin to 16- lub 32-bitowe uk³ady w architekturze RISC. Potok przetwarzania
+jest 10 etapowy, a konstrukcje jednostek arytmetycznych, stawiaj±
+architekturê Blackfin w¶ród procesorów DSP. Pe³ne wsparcie SIMD pozwala
+na wydajne przetwarzanie multimedialne obrazu wideo oraz d¼wiêku.
+Procesor ten powsta³ jako rozwiniêcie starszej architektury SHARC
+firmy Analog Devices i architektury XScale firmy Intel. Wewnêtrzna
+budowa uk³adów Blackfin oparta jest o architekturê harvardzk±. Dwie
+16-bitowe jednostki MAC, dwie 40-bitowe jednoski arytmetyczno-logiczne,
+dwie 40-bitowe <barrel shifter> pozwalaj± wykonaæ do trzech instrukcji
+w jednym cyklu zegara, przy odpowiedniej optymalizacji. Lokuje to
+procesory Blackfin w rodzinie DSP. Ochrona pamiêci (MPU), ró¿ne poziomy
+operacji (u¿ytkownik, j±dro), operacje jednocyklowe, pamiêæ podrêczna
+instrukcji i danych oraz zestaw instrukcji do testów bitu, dostêpu
+do bajtu, s³owa lub liczby ca³kowitej i do zintegrowanych \char`\"{}peryferiów\char`\"{}
+czyni± ten uk³ad procesorem RISC. Lista instrukcji (16-biotwych dla
+zwyk³ych operacji i 32- lub 64-bitowych dla operacji DSP) tego procesora
+obejmuje bardzo z³o¿one operacje, co czyni skompilowany kod binarny
+bardzo wydajnym i wysoce zoptymalizwoanym. Do wad uk³adów Blackfin
+trzeba zaliczyæ brak jedostki zarz±dzania pamiêci± (MMU) i obs³ugi
+wirtualizacji. Uk³ad ten najczê¶ciej jest stosowanych w urz±dzeniach
+audio-video do u¿ytku codziennego oraz w profesjonalnych urz±dzeniach
+wysokiej jako¶ci przetwarzaj±cych d¼wiêk lub obraz. 
+
+
+\subsection{TigerSHARC}
+
+
+
+
+\part{Realizacja praktyczna}
+
+Testing
+
+\bibliographystyle{plain}
+\bibliography{literatura}
+
+\end{document}

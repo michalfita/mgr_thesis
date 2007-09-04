@@ -1,0 +1,706 @@
+#LyX 1.5.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass mwbk
+\begin_preamble
+\usepackage{fix-cm}
+\usepackage[pdftex,man,opt]{wmstitle}
+\usepackage[bookmarks, bookmarksopen=true, bookmarksnumbered=true, colorlinks=true, pdftitle={System sterowania robotem mobilnym}, pdfauthor={Michał Fita}]{hyperref}
+\end_preamble
+\options wide,pdftex
+\language polish
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing onehalf
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle uheadings
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+promotorJeden{dr inż.
+ Roman Krasowski}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+nralbumuJeden{99999}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+authorJeden{Michał Fita}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+promotorDwa{}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+nralbumuDwa{}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+authorDwa{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+System sterowania robotem
+\end_layout
+
+\begin_layout Author
+Michał Fita
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Wstęp
+\end_layout
+
+\begin_layout Standard
+Niedocenianym obszarem współczesnej inżynierii jest robotyka.
+ Łączy ona w sobie wiedzę z dziedziny elektroniki, automatyki, mechaniki
+ oraz inżynierii oprogramowania.
+ Wielu nawet dziś uważa robotykę za zabawę, a nie poważną dziedzinę badawczo--ro
+zwojową.
+ Lecz sukcesy takich projektów jak Mars Pathfinder czy DARPA Grand Challanger
+ pokazują rosnące znaczenie robotyki we współczesnym świecie.
+ Bill Gates powiedział: 
+\begin_inset Quotes eld
+\end_inset
+
+Wiek XX był erą komputerów, wiek XXI będzie erą robotów
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Przedmiotem pracy jest sterownik mikroprocesorowy oraz zestaw oprogramowania
+ dla sterownika oraz współpracującego komputera PC.
+ Platformą mechaniczną jest robot zabawka Robo--Actor, który ma służyć do
+ demonstracji działania układu i oprogramowania stworzonych w ramach tej
+ pracy.
+ W kolejnych rozdziałach zostały opisane tematy teoretyczne oraz zadania
+ realizowane w celu konstrukcji sterownika oraz stworzenia oprogramowania
+ zarówno sterownika mikroprocesorowego oraz systemu kontrolnego dla komputera
+ PC.
+\end_layout
+
+\begin_layout Standard
+Praca została podzielona na dwie logiczne części, z której pierwsza omawia
+ teoretyczne zagadnienia związane z tematem robotyki i technologii stosowanych
+ w realizacji projektu, a część druga opisuje praktyczną realizację wszystkich
+ elementów z opisem kroków prowadzących do wyboru stosowanych rozwiązań.
+ Wśród opisywanych tematów znajdują się przede wszystkim systemy wbudowane,
+ systemy operacyjne czasu rzeczywstego, radiowa transmisja danych, sterowanie
+ silników elektrycznych oraz przetwarzanie obrazu.
+\end_layout
+
+\begin_layout Standard
+Układ sterownika mikroprocesorowego został zrealizowany na platformie AVR32
+ firmy Atmel.
+ Jest to rodzina 32 bitowych mikrokontrolerów występująca w dwóch głównych
+ odmianach, lekkiej odmianie UC3 dla mocno zintegrowanych rozwiązań, oraz
+ AP7 -- odmianie wysokowydajnych mikrokontrolerów dla zaawansowanych aplikacji
+ przenośnych, mogący między innymi pracować pod kontrolą systemu Linux.
+ Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
+ producentów jest bardzo silne wsparcie dla amatorów oraz środowiska otwartego
+ oprogramowania.
+\end_layout
+
+\begin_layout Part
+Teoria
+\end_layout
+
+\begin_layout Chapter
+Interfejsy
+\end_layout
+
+\begin_layout Section
+Interfejs JTAG
+\end_layout
+
+\begin_layout Standard
+Interfejs JTAG jest uznanym światowym standardem sprzętowego sprzęgu mikroproces
+orów i układów programowalnych ze stanowiskiem pracy inżyniera, czyli komputera
+ PC.
+ Popularnie używany skrót JTAG od nazwy Joint Test Action Group to historyczna
+ zaszłość z 1985 roku, gdy powołano grupę przemysłową do opracowania metod
+ testowania płytek drukowanych na etapie postprodukcji.
+ Założeniem grupy było opracowanie mechanizmu pozwalającego na testowanie
+ połączeń z dowolnej nóżki złożonego układu scalonego po ścieżce poprowadzonej
+ po płytce drukowanej.
+ W roku 1990 metoda ta została zatwierdzona jako standard IEEE 1149.1
+\begin_inset LatexCommand cite
+key "jtag-std"
+
+\end_inset
+
+.
+ Tego samego roku INTEL włożył obsługę tego standardu do procesora 80486.
+ Zastosowana metoda testowania pozwalała weryfikować elektryczne połączenia
+ na płytce drukowanej z otoczeniem układu, stąd nosi nazwę skanowania graniczneg
+o (ang.
+ boundary-scan).
+ Polega ona na zastosowaniu pojedynczych bramek (ang.
+ Boundary Scan Cells) na wszystkich nóżkach sygnałowych układu scalonego,
+ które mogą być wymuszane w stan logiczny zero lub jeden, mogą odczytywać
+ stan logiczny nóżki podawany z zewnątrz lub w trakcie normalnej pracy układu
+ pozostawać nieaktywne i odizolowane od wyprowadzenia.
+ Łańcuch takich bramek tworzy rejestr (ang.
+ Boundary Scan Register), który współpracuje z dodatkowymi rejestrami instrukcji
+ i danych.
+ W dziesiejszych czasach znaczenie interfejsu IEEE 1149.1 i wszelkich jego
+ pochodnych specyficznych dla różnych producentów ma tak naprawdę największe
+ znaczenie na etapie przygotowywania oprogramowania dla urządzeń wyposażonych
+ w mikrokontrolery.
+ O ile architetkura sprzętowa szeregowej komunikacji z wewnętrznymi układami
+ mikrokontrolerów została zachowana to każdy producent stosuje swoje rozszerzeni
+a i wymaga własnego oprogramowania do sterowania interfejsem, które umożliwia
+ programowanie pamięci flash w układach oraz przeprowadzanie złożonego procesu
+ uruchomieniowego wspomaganego przez sprzętowe pułapki.
+ Programowanie układów scalonych z zastosowaniem tej metody (ale nie tylko)
+ nazywa się programowaniem w systemie (ang.
+ in-system programming, w skrócie ISP).
+ Przykłady wielu mikrokontrolerów 8-bitowych pokazują, że ISP nie wumaga
+ istnienia pełnego IEEE 1149.1 a wymaga tylko dostarczenia wyprowadzeń pozwalając
+y szeregowo programować pamięć Flash lub sieć bramek wewnątrz układu scalonego
+ (tak robi ATMEL z rodziną układów 8-bitowych i Xilinx dla układów CPLD).
+\end_layout
+
+\begin_layout Standard
+<Opis HW>
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename vector/jtag-internals-01.svg
+	lyxscale 20
+	height 30pheight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Schemat blokowy implementacji JTAG w układzie 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dla wielu producentów cyfrowego sprzętu elektronicznego istnienie wyprowadzeń
+ dla JTAG stanowi zagrożenie dla naruszenia dóbr intelektualnych zawartych
+ w rozwiązaniach zastosowanych w sprzedawanych urządzeniach.
+ Umiejętnie zastosowany JTAG pozwala na przeprowadzanie inżynierii odwrotnej
+ układu i oprogramowania w nim zawartego (mimo zabezpieczenia wewnętrznej
+ pamięci Flash przed bezpośrednim odczytem).
+ Dzięki takim możliwościom, kilka bardzo popularnych urządzeń
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Popularny router Linksys WRT54G posiada alternatywne oprogramowanie, dostępne
+ głównie na http://www.openwrt.org.
+\end_layout
+
+\end_inset
+
+ zyskało szerokie grono użytkowników ze środowiska oprogramowania otwartego,
+ które tworzy własne wersje oprogramowania o alternatywnych możliwościach.
+ Nieliczni producenci zdecydowali się z sukcesem wspierać w pewnym stopniu
+ takie działania środowisk użytkowników.
+ Im więcej można zrobić z urządzeniem przez modyfikację oprogramowania,
+ tym wyższe ceny tych urządzeń są na rynku wtórnym.
+\end_layout
+
+\begin_layout Chapter
+Mikrokontrolery
+\end_layout
+
+\begin_layout Standard
+Rozdział opisuje wybrane konstrukcje mikrokontrolerów oferowanych przez
+ różnych producentów, których wybór rozważano do zastosowania w projekcie.
+ Opis obejmuje szczegóły techniczne konstrukcji oraz aspekty inżynierskie
+ związane z zastosowaniem opisywanych układów w praktyce.
+\end_layout
+
+\begin_layout Section
+ARM
+\end_layout
+
+\begin_layout Standard
+Firma ARM nie jest producentem układów scalonych mikroprocesorów, lecz zajmuje
+ się projektowaniem rdzeni procesorów oraz sprzedażą właśności intelektualnej
+ do tych projektów firmom trzecim, głównie uznanym producentom układów mikroproc
+esorowych, o których mowa w tym rozdziale.
+ Rdzenie serii ARM w kolejnych wcieleniach cieszą się ogromną popularnością
+ producentów urządzeń codziennego użytku potrzebujących wysokich wydajności,
+ takich jak telefony komórkowe, przenośne odtwarzacze DVD oraz wiele innych.
+ Procesory z rdzeniem ARM stanowią około 3/4 rynku sprzedaży dla 32 bitowych
+ układów.
+\end_layout
+
+\begin_layout Standard
+Stosowana w tej chwili nazwa ARM jest akronimem od angieskich słów 
+\shape slanted
+Advanced RISC Machine
+\shape default
+, a wcześniej 
+\shape slanted
+Acorn RISC machine
+\shape default
+.
+ Historia tych procesorów sięga roku 1983, gdy brytyjska firma Acorn Computers
+ pracowała nad nowym procesorem dla swoich komputerów.
+ Znaczenie komputerów Acorn na brytyjskim rynku w owym czasie, przypominało
+ tryumfy komputerów Apple w Stanach Zjednoczonych.
+ W latach odpowiednio 1985 i roku następnym, Acorn prezentuje kolejno procesory
+ ARM1 i ARM2.
+\end_layout
+
+\begin_layout Standard
+Cechą szczególną całej rodziny procesorów ARM, w tym również odgałęzień
+ jest zestaw instrukcji maszynowych łączących pewne zestawy operacji często
+ pojawiających się w kodzie napisanych w językach wyższego poziomu.
+ Dzięki czemu, skompilowany kod binarny jest bardzo mały i może być wykonywany
+ szybko, mimo niskich częstotliwości zegarów taktujących pracę rdzenia procesora.
+ Zachowano przy tym mechanizmy z procesorów RISC, gwarantujące stałą długość
+ rozkazu.
+ ARM dodatkowo rozszerzyła możliwości rdzeni o technologie 
+\shape smallcaps
+Thumb
+\shape default
+, 
+\shape smallcaps
+Thumb-2
+\shape default
+ i 
+\shape smallcaps
+Neon
+\shape default
+ -- w szczególności ta ostatnia znalazła zastosowanie w implementacji kodeków
+ głosowych w telefonach GSM.
+\end_layout
+
+\begin_layout Standard
+Z architektury ARM wywodzą się takie rodziny procesorów, jak XScale firmy
+ Intel -- znajdujący zastosowanie w wielu PDA -- oraz OMAP firmy Texas Instrumen
+ts -- wielordzeniowe procesory multimedialne.
+\end_layout
+
+\begin_layout Subsection
+ARM 3
+\end_layout
+
+\begin_layout Subsection
+ARM 6
+\end_layout
+
+\begin_layout Subsection
+ARM 7
+\end_layout
+
+\begin_layout Subsection
+ARM 9
+\end_layout
+
+\begin_layout Subsection
+Jazelle
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+placement r
+width "34mm"
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/jazelle_logo.png
+	lyxscale 30
+	width 30mm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Technologia Jazelle DBX (skrót od ang.
+ 
+\shape slanted
+Direct Bytecode eXecution
+\shape default
+) została opracowana przez ARM w celu przyspieszania sprzętowego pewnych
+ operacji bajtkodu maszyny wirtualnej Java (w skrócie JVM).
+ Pozwala ona wykonywać bajtkod Javy, jakby był on natywnym kodem procesora.
+ Sprzętowa implementacja Jazelle DBX wykonana jest na około 12 tysiącach
+ bramek, co oznacza niski koszt implementacji wewnątrz układu.
+ Liczba ta jest znacząco mniejsza od liczby bramek typowego koprocesora
+ matematycznego.
+\end_layout
+
+\begin_layout Standard
+Takie podejście wzmocnione przez technologię Jazelle RCT (ang.
+ 
+\shape slanted
+Runtime Compilation Target
+\shape default
+), która wspiera kompilację ahead-of-time (AOT) i just-in-time (JIT), pozwala
+ znacząco zwiększyć wydajność aplikacji Java w urządzeniach przenośnych,
+ głównie telefonach komórkowych.
+ Aktualne możliwości technologii Jazelle RCT sięgają dużo dalej, wspierając
+ kompilację i wykonywanie kodu takich platform jak Microsoft.NET, Perl czy
+ Python.
+ Implementację tej technologii wspierają wszystkie mikroprocesory z rodziny
+ ARM Cortex-A
+\begin_inset LatexCommand cite
+key "jazelle-wp"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Freescale
+\end_layout
+
+\begin_layout Standard
+Firma Freescale
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Strona producenta: http://www.freescale.com
+\end_layout
+
+\end_inset
+
+to korporacja powstała z wydzielenia działu układów scalonych firmy Motorola.
+ Układy scalone Motoroli od kilkudziesięciu lat mają uznaną pozycję na rynku
+ elektoniki cyfrowej, a udział Motoroli w konsorcjum tworzącym rdzeń PowerPC
+ odcisnął duże piętno na tej architekturze.
+\end_layout
+
+\begin_layout Standard
+>Motorola brała udział w pracach konsorcjum tworzącym rdzeń PowerPC, a pod
+ koniec lat '80 assembler rodziny mikroprocesorów 6800 był w Polsce bardzo
+ popularny.
+\end_layout
+
+\begin_layout Standard
+Aktualnie Freescale posiada cztery rodziny mikroprocesorów 32 bitowych:
+\end_layout
+
+\begin_layout Description
+PowerQUICC
+\end_layout
+
+\begin_layout Description
+ARM
+\end_layout
+
+\begin_layout Description
+68K/ColdFire
+\end_layout
+
+\begin_layout Description
+MCORE
+\end_layout
+
+\begin_layout Section
+Atmel
+\end_layout
+
+\begin_layout Standard
+Firma Atmel oferuje wiele różnych konstrukcji procesorów, z których najpopularni
+ejsze to cała rodzina mikrokontrolerów AVR -- 8 bitowych układów o architekturze
+ RISC, ciesząca się ogromną popularnością wśród amatorów.
+ Wiele projektów elektronicznych dostępnych w internecie opartych jest właśnie
+ o układy z tej rodziny.
+ Oprócz tego Atmel oferuje szeroką gamę układów opartych o rdzeń ARM.
+\end_layout
+
+\begin_layout Standard
+AVR32 to rodzina 32 bitowych mikrokontrolerów produkcji firmy Atmel
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Strona układów AVR32 u producenta: http://www.atmel.com/products/avr32/
+\end_layout
+
+\end_inset
+
+ Oferowane są układy z dwóch głównych odmianach: 
+\end_layout
+
+\begin_layout Description
+UC3 lżejszej odmianie mikrokontrolera dla dla mocno zintegrowanych rozwiązań
+ o niskim poborze energii do kontroli i sterowania, 
+\end_layout
+
+\begin_layout Description
+AP7 odmianie wysokowydajnych mikrokontrolerów dla zaawansowanych multimedialnych
+ aplikacji przenośnych, mogący między innymi pracować pod kontrolą systemu
+ operacyjnego Linux.
+ 
+\end_layout
+
+\begin_layout Standard
+Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
+ producentów jest bardzo silne wsparcie dla amatorów oraz środowiska otwartego
+ oprogramowania.
+\end_layout
+
+\begin_layout Section
+Analog Devices
+\end_layout
+
+\begin_layout Standard
+Istniejąca od 1965 roku firma Analog Devices zajmuje się projektowaniem
+ i produkcją złożonych układów scalonych dla techniki analogowej i cyfrowej.
+ Opórcz uznanych wzmacniaczy i przetwoników analogowo-cyfrowych, firma produkuje
+ różnego rodzaju sensory (w tym linowy sensor przyspieszenia ADXL3300 zastosowan
+y w konsoli do gier Wii firmy Nitendo
+\begin_inset LatexCommand cite
+key "ad-wii-sensor"
+
+\end_inset
+
+) oraz znaną rodzinę procesorów Blackfin, stosowaną w wielu urządzeniach
+ firm takich jak Hitachi czy Roland.
+\end_layout
+
+\begin_layout Subsection
+Blackfin
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+placement r
+width "15col%"
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/BF_chip_100x100.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Mikroprocesory z rdzeniem Blackfin to 16- lub 32-bitowe układy w architekturze
+ RISC.
+ Potok przetwarzania jest 10 etapowy, a konstrukcje jednostek arytmetycznych,
+ stawiają architekturę Blackfin wśród procesorów DSP.
+ Pełne wsparcie SIMD pozwala na wydajne przetwarzanie multimedialne obrazu
+ wideo oraz dźwięku.
+ Procesor ten powstał jako rozwinięcie starszej architektury SHARC firmy
+ Analog Devices i architektury XScale firmy Intel.
+ Wewnętrzna budowa układów Blackfin oparta jest o architekturę harvardzką.
+ Dwie 16-bitowe jednostki MAC, dwie 40-bitowe jednoski arytmetyczno-logiczne,
+ dwie 40-bitowe <barrel shifter> pozwalają wykonać do trzech instrukcji
+ w jednym cyklu zegara, przy odpowiedniej optymalizacji.
+ Lokuje to procesory Blackfin w rodzinie DSP.
+ Ochrona pamięci (MPU), różne poziomy operacji (użytkownik, jądro), operacje
+ jednocyklowe, pamięć podręczna instrukcji i danych oraz zestaw instrukcji
+ do testów bitu, dostępu do bajtu, słowa lub liczby całkowitej i do zintegrowany
+ch "peryferiów" czynią ten układ procesorem RISC.
+ Lista instrukcji (16-biotwych dla zwykłych operacji i 32- lub 64-bitowych
+ dla operacji DSP) tego procesora obejmuje bardzo złożone operacje, co czyni
+ skompilowany kod binarny bardzo wydajnym i wysoce zoptymalizwoanym.
+ Do wad układów Blackfin trzeba zaliczyć brak jedostki zarządzania pamięcią
+ (MMU) i obsługi wirtualizacji.
+ Układ ten najczęściej jest stosowanych w urządzeniach audio-video do użytku
+ codziennego oraz w profesjonalnych urządzeniach wysokiej jakości przetwarzający
+ch dźwięk lub obraz.
+ 
+\end_layout
+
+\begin_layout Subsection
+TigerSHARC
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+placement r
+width "15col%"
+status collapsed
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/TS_chip_100x100.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Procesory TigerSHARK są podobnie jak układy Blackfin połączeniem konstrukcji
+ DSP z wydajną architekturą RISC, jednakże ogromny nacisk położono na architektu
+rę wieloprocesorową.
+ Bardzo duża wewnętrzna pamięć pozwala przetważać FFT nawet do 64.000 punktów,
+ a bardzo szybkie szyny wewnętrze i zewnętrzne pozwalają uzyskiwać ogromne
+ moce przetwarzania strumieni danych.
+\end_layout
+
+\begin_layout Standard
+Układy te są stosowane szeroko w urządzeniach infrastruktury telefonii 3G
+ oraz w militarnych systemach obronnych, na przykład radarach lotniczych.
+\end_layout
+
+\begin_layout Subsection
+SHARC
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+placement r
+width "15col%"
+status collapsed
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/sharc_chip_100x100.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Układy SHARC (nazwa od ang.
+ 
+\shape slanted
+Super Harvard Architecture Single-Chip Computer
+\shape default
+) to wydajne procesory DSP o architekturze RISC, których pierwsze konstrukcje
+ sięgają roku 1994.
+ Są wzorcem dla nowszych układów TigerSHARC i Blackfin.
+\end_layout
+
+\begin_layout Standard
+Szerokość słowa rozkazu tych procesorów do 48 bitów, a liczby całkowitej
+ i pojedynczej precyzji 32 bity.
+ Rozrzeszona obsługa liczb zmienno-przecinkowych rozszerzona jest do 40
+ bitów.
+ SHARC nie posiada wbudowanego MMU.
+ Dwa identyczne zestawy rejestrów ogólnego stosowania pozwalają na realizację
+ bardzo szybkiego przełączania kontekstu.
+ Współpraca pomiędzy wieloma procesorami w systemie może być realizowana
+ szeregowo, gdyż SHARC oferują wiele niezależnych interfejsów szeregowych
+ na pojedynczym układzie.
+\end_layout
+
+\begin_layout Part
+Realizacja praktyczna
+\end_layout
+
+\begin_layout Standard
+Testing
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand bibtex
+options "plplain"
+bibfiles "literatura"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
