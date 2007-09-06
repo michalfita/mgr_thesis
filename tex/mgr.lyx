@@ -5,8 +5,15 @@
 \textclass mwbk
 \begin_preamble
 \usepackage{fix-cm}
+
+\usepackage{type1ec}
+\usepackage[T1]{fontenc}
+
+
 \usepackage[pdftex,man,opt]{wmstitle}
 \usepackage[bookmarks, bookmarksopen=true, bookmarksnumbered=true, colorlinks=true, pdftitle={System sterowania robotem mobilnym}, pdfauthor={Michał Fita}]{hyperref}
+
+\usepackage[protrusion=true,expansion=true, tracking=true, spacing=true, kerning=true, selected=true, babel=true]{microtype}
 \end_preamble
 \options wide,pdftex
 \language polish
@@ -29,7 +36,10 @@
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
-\leftmargin 3cm
+\leftmargin 3.5cm
+\topmargin 2cm
+\rightmargin 2.1cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -62,7 +72,7 @@ promotorJeden{dr inż.
 
 
 \backslash
-nralbumuJeden{99999}
+nralbumuJeden{209034}
 \end_layout
 
 \begin_layout Standard
@@ -204,15 +214,26 @@ key "jtag-std"
  Zastosowana metoda testowania pozwalała weryfikować elektryczne połączenia
  na płytce drukowanej z otoczeniem układu, stąd nosi nazwę skanowania graniczneg
 o (ang.
- boundary-scan).
+ 
+\shape italic
+boundary-scan
+\shape default
+).
  Polega ona na zastosowaniu pojedynczych bramek (ang.
- Boundary Scan Cells) na wszystkich nóżkach sygnałowych układu scalonego,
- które mogą być wymuszane w stan logiczny zero lub jeden, mogą odczytywać
- stan logiczny nóżki podawany z zewnątrz lub w trakcie normalnej pracy układu
- pozostawać nieaktywne i odizolowane od wyprowadzenia.
+ 
+\shape italic
+Boundary Scan Cells
+\shape default
+) na wszystkich nóżkach sygnałowych układu scalonego, które mogą być wymuszane
+ w stan logiczny zero lub jeden, mogą odczytywać stan logiczny nóżki podawany
+ z zewnątrz lub w trakcie normalnej pracy układu pozostawać nieaktywne i
+ odizolowane od wyprowadzenia.
  Łańcuch takich bramek tworzy rejestr (ang.
- Boundary Scan Register), który współpracuje z dodatkowymi rejestrami instrukcji
- i danych.
+ 
+\shape italic
+Boundary Scan Register
+\shape default
+), który współpracuje z dodatkowymi rejestrami instrukcji i danych.
  W dziesiejszych czasach znaczenie interfejsu IEEE 1149.1 i wszelkich jego
  pochodnych specyficznych dla różnych producentów ma tak naprawdę największe
  znaczenie na etapie przygotowywania oprogramowania dla urządzeń wyposażonych
@@ -224,7 +245,11 @@ a i wymaga własnego oprogramowania do sterowania interfejsem, które umożliwia
  uruchomieniowego wspomaganego przez sprzętowe pułapki.
  Programowanie układów scalonych z zastosowaniem tej metody (ale nie tylko)
  nazywa się programowaniem w systemie (ang.
- in-system programming, w skrócie ISP).
+ 
+\emph on
+in-system programming
+\emph default
+, w skrócie ISP).
  Przykłady wielu mikrokontrolerów 8-bitowych pokazują, że ISP nie wumaga
  istnienia pełnego IEEE 1149.1 a wymaga tylko dostarczenia wyprowadzeń pozwalając
 y szeregowo programować pamięć Flash lub sieć bramek wewnątrz układu scalonego
@@ -232,7 +257,6 @@ y szeregowo programować pamięć Flash lub sieć bramek wewnątrz układu scalo
 \end_layout
 
 \begin_layout Standard
-<Opis HW>
 \begin_inset Float figure
 wide false
 sideways false
@@ -242,7 +266,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename vector/jtag-internals-01.svg
-	lyxscale 20
+	lyxscale 50
 	height 30pheight%
 
 \end_inset
@@ -254,6 +278,11 @@ status open
 \begin_inset Caption
 
 \begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:Schemat-blokowy-implementacji"
+
+\end_inset
+
 Schemat blokowy implementacji JTAG w układzie 
 \end_layout
 
@@ -265,6 +294,39 @@ Schemat blokowy implementacji JTAG w układzie
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Prezentowany na 
+\begin_inset LatexCommand ref
+reference "fig:Schemat-blokowy-implementacji"
+
+\end_inset
+
+ diagram wewnętrznej architektury JTAG wbudowanej w układzie pokazuje, jak
+ pojedyncze wyprowadzenia układu mogą być testowane i ustawiane przez pojedyncze
+ komórki rejestru.
+ Rejestr ten przypomina klasyczy rejestr przesuwny, przy czym w zależności
+ od instrukcji przesłanej na wejście TDI wartość komórki jest odczytywana
+ i wyprowadzana poprzed odpowiedź wysyłaną na wyjście TDO, bądź programowana
+ wartością przesłaną razem z rozkazem JTAG.
+ Obsługa interfejsu odbywa się szeregowo z dużą szybkością, często zbliżoną
+ do prędkości pracy układu w gotowym systemie, stąd wymagania dla urządzeń
+ obsługujących interfejs zgodny z IEEE 1149.1 we współczesnych układach 32
+ bitowych są naprawdę wyśróbowane, co wpływa również na cenę tych urządzeń.
+ Jednym z takich urządzeń firmy Atmel jest JTAG ICE mk-II opisywany w rozdziale
+ <!-- tu referencja do rozdziału o narzędziach -->.
+\end_layout
+
+\begin_layout Standard
+Rozszerzenia producentów wbududowane w układ pozwalają na stosowanie JTAG
+ do uruchamiania i odpluskwiania programów działających w rzeczywistym systemie
+ (ang.
+ 
+\emph on
+on-chip debugging
+\emph default
+).
 \end_layout
 
 \begin_layout Standard
@@ -305,6 +367,11 @@ Rozdział opisuje wybrane konstrukcje mikrokontrolerów oferowanych przez
 \end_layout
 
 \begin_layout Section
+\begin_inset LatexCommand label
+name "sec:ARM"
+
+\end_inset
+
 ARM
 \end_layout
 
@@ -377,10 +444,20 @@ ARM 6
 \end_layout
 
 \begin_layout Subsection
+\begin_inset LatexCommand label
+name "sub:ARM-7"
+
+\end_inset
+
 ARM 7
 \end_layout
 
 \begin_layout Subsection
+\begin_inset LatexCommand label
+name "sub:ARM-9"
+
+\end_inset
+
 ARM 9
 \end_layout
 
@@ -427,9 +504,16 @@ Takie podejście wzmocnione przez technologię Jazelle RCT (ang.
 \shape slanted
 Runtime Compilation Target
 \shape default
-), która wspiera kompilację ahead-of-time (AOT) i just-in-time (JIT), pozwala
- znacząco zwiększyć wydajność aplikacji Java w urządzeniach przenośnych,
- głównie telefonach komórkowych.
+), która wspiera kompilację 
+\shape slanted
+ahead-of-time
+\shape default
+ (AOT) i 
+\shape slanted
+just-in-time
+\shape default
+ (JIT), pozwala znacząco zwiększyć wydajność aplikacji Java w urządzeniach
+ przenośnych, głównie telefonach komórkowych.
  Aktualne możliwości technologii Jazelle RCT sięgają dużo dalej, wspierając
  kompilację i wykonywanie kodu takich platform jak Microsoft.NET, Perl czy
  Python.
@@ -465,29 +549,255 @@ to korporacja powstała z wydzielenia działu układów scalonych firmy Motorola
 \end_layout
 
 \begin_layout Standard
->Motorola brała udział w pracach konsorcjum tworzącym rdzeń PowerPC, a pod
- koniec lat '80 assembler rodziny mikroprocesorów 6800 był w Polsce bardzo
- popularny.
+Warto również dodać, iż pod koniec lat '80 assembler rodziny mikroprocesorów
+ 6800 był w Polsce bardzo popularny.
+ Procesory te znalazły się w popularnych komputerach Amiga oraz były stosowane
+ w wielu urządzeniach.
+ Wartość programów w assemblerze dla tych układów była bardzo wysoka, a
+ kompilatory języków wysokiego poziomu obarczone były dużym nakładem na
+ kodzie wynikowym.
+ Osiąganie dobrych wyników w programach graficznych i grach na komputerze
+ Amiga osiągano dzięki fragmentom programów pisanych w assemblerze.
 \end_layout
 
 \begin_layout Standard
-Aktualnie Freescale posiada cztery rodziny mikroprocesorów 32 bitowych:
+Firma Motorola w latach 1991--2004 wraz z IBM i Apple brała udział w pracach
+ konsorcjum tworzącym rdzeń PowerPC.
+ W roku 2006, gdy firma Apple zrezygnowała oficjalnie z architektury PowerPC
+ na rzecz produktów firmy Intel, konsorcjum zmieniło swój kształt.
+ Od 2004 roku, gdy Freescale został wydzielony jako osobny podmiot biznesowy
+ z Motoroli, nadal pracował nad udoskonalaniem architektury PowerPC, natomiast
+ wycofanie się Apple sprawiło, że świetny skąd inąd PowerPC G5 był ostatnim
+ układem zastosowanym w popularnych komputerach użytkowych.
+ 
+\begin_inset Wrap figure
+placement r
+width "3cm"
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/logo_power_org_black.gif
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Description
+\end_inset
+
+Aktualnie firmy współpracujące nad architekturą związane są z Power.org
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Istniejąca od 2004 roku, utworzona przez IBM fundacja na rzecz architektury
+ 
+\shape smallcaps
+Power
+\shape default
+, jej adres internetowy: http://www.power.org.
+\end_layout
+
+\end_inset
+
+.
+ Organizacja ta zrzesza ponad 40 firm z branży elektroniki i oprogramowania,
+ między innymi IBM, Freescale, Synopsys, Cadence, Mentor Graphics, Wind
+ River, Xilinx.
+ Głównym jej celem jest promowanie platformy dla nowych rozwiązań i wspólne
+ badanie nad rozwojem 
+\shape smallcaps
+Power Architecture
+\shape default
+
+\begin_inset LatexCommand cite
+key "power.org-vision"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Firma Freescale posiada cztery rodziny mikroprocesorów 32 bitowych, opisane
+ krótko w kolejnych podrozdziałach.
+\end_layout
+
+\begin_layout Subsection
 PowerQUICC
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
+Układy zaawansowanych mikrokontrolerów na bazie konstrukcji PowerPC rozwijane
+ od 1995 roku.
+ Cechą szczególną linii PowerQUICC jest wbudowany zaawansowany podsystem
+ kontroli komunikacyjnej, odciążającej główny rdzeń układu.
+ Dzięki temu nadają się do zastosowań w systemach telekomutacyjnych, takich
+ jak routery lub centrale telefoniczne.
+ Seria układów PowerQUICC I oznaczana przez symbole MPC8xx były pierwszymi
+ układami z rodziny PowerPC produkowanymi przez Motorolę.
+ Różnorodne wersje układów różniły się dokładanym wyposażeniem, konfiguracją
+ ilości potoków, pamięci cache, obsługiwanymi interfejsami.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vector/mpc885-block-diagram.svg
+	lyxscale 20
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Schemat blokowy MPC885.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+W roku 1998 pojawiły się układy z linii PowerQUICC II oznaczane symbolami
+ MPC82xx bazowane na procesorze PowerPC 603e znanym też jako G2 (pojawiły
+ się w komupterach firmy Apple).
+ Wersja od Motoroli trafiała do stacji bazowych telefonii komórkowej, switchy
+ sieciowych i multiplekserów obsługujących abonenckie linie cyfrowe
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+abonencka linia cyfrowa (ang.
+ Digital Subscriber Line, DSL) stosowana w telekomunikacji naziemnej do
+ oferowania szybkich łącz Internetowych; multiplekser dostępowy DSL to urządzeni
+e pozwalające na obsługę sygnału cyfrowego na analogowych liniach abonenckich.
+\end_layout
+
+\end_inset
+
+.
+ Seria ta została całkowicie zastąpiona przez linię PowerQUICC II Pro produkowan
+ą od roku 2004.
+\end_layout
+
+\begin_layout Standard
+Linia PowerQUICC II Pro bazowała na rozbudowanym rdzeniu, którego pamięć
+ cache została zwiększona do 32kB dla instrukcji i 32kB dla danych oraz
+ zwiększono maksymalne taktowanie rdzenia.
+ Oznaczano ją symbolami MPC83xx, przy czym dodatkowa litera E symbolizowała
+ wbudowaną jednostkę szyfrującą.
+ Układy te trafiły do urządzeń produkowanych przez firmę Cisco.
+\end_layout
+
+\begin_layout Standard
+Od roku 2003 firma Freescale oferuje układy z linii PowerQUICC III oparte
+ o rdzeń e500, który nie ma odpowiednika w procesorach PowerPC ogólnego
+ zastosowania.
+ Oznaczane symbolami MPC85xx układy sa specjalizowanymi procesorami komunikacyjn
+ymi, zdolnymi obsługiwać wiele portów Gigabit Ethernet jednocześnie, co
+ czyni je doskonałymi procesorami dla szybkich switchy.
+ W tej linii są układy wielordzeniowe.
+\end_layout
+
+\begin_layout Standard
+Firma Freescale wspiera projektowanie dla procesorów linii PowerQUICC bogatym
+ zestawem nardzędzi, w tym środowiskiem CodeWarrior.
+ Narzędzia te są jednak są bardzo drogie.
+ Testowe wersje tego oprogramowania mają okrojone możliwości i nie są popularne
+ wśród amatorów.
+\end_layout
+
+\begin_layout Subsection
 ARM
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
+W rozdziale 
+\begin_inset LatexCommand ref
+reference "sec:ARM"
+
+\end_inset
+
+ opisane są osiągnięcia firmy ARM w projektowaniu i sprzedaży projektów
+ rdzeni mikroprocesorów dla innych firm produkujących układy scalone procesorów
+ i mikrokontrolerów.
+\end_layout
+
+\begin_layout Subsection
 68K/ColdFire
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
+Rodzina 68K jest najbardziej znaną rodziną mikroprocesorów firmy Motorola,
+ a aktualnie Freescale Semiconductor.
+ Model MC68000 debiutiował w 1979 roku i mocno zmodyfikowany jest produkowany
+ do dnia dziesiejszego.
+ Najmocniejszy typ układu w rodzinie MC68060 jest również nadal produkowany
+ w kilku odmianach.
+ Procesory te znalazły zastosowane w komputerach Atari i Amiga oraz wielu
+ urządzeniach powszechnego użytku.
+\end_layout
+
+\begin_layout Standard
+Układy ColdFire są przekształconą wersją układów rodziny 68K dla zastosowań
+ w systemach wbudowanych.
+ Są wielokrotnie szybsze niż ich oryginalne odpowiedniki, pracują z częstotliwoś
+cią do 300 MHz (w porównaniu z 60 MHz fla MC68060).
+ Aktualna zgodność binarna układów ColdFire sprawia, że grupy zapaleńców
+ konstruują klony komputerów Atari i Amiga.
+ Istnieją również porty systemu Linux dla układów z rodziny 68K
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Więcej informacji na stronie http://www.linux-m68k.org.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ostatnia wersja rdzenia ColdFire oznaczana jako V5 jest rdzeniem superskalarnym,
+ przy czym do dziś firma Freescale nie rozpoczeła sprzedaży układów z tej
+ rodziny.
+ Produkowane i sprzedawane układy posiadają nadal rdzeń oznaczany jako V4,
+ który nie jest jeszcze w pełni superskalarny.
+\end_layout
+
+\begin_layout Subsection
 MCORE
+\end_layout
+
+\begin_layout Standard
+Rodzina MCORE to kilka układów 32-bitowych zaprojektowanych specjalnie do
+ specyficznych zastosowań przemysłowych i medycznych.
+ Głównym kryterium branym pod uwagę przy konstrukcji tych procesorów była
+ energooszczędność oraz obsługa specyficznych interfejsów przydatnych w
+ przemyśle (np.
+ PWM, ang.
+ 
+\emph on
+Pulse Width Modulation
+\emph default
+).
 \end_layout
 
 \begin_layout Section
@@ -501,6 +811,10 @@ ejsze to cała rodzina mikrokontrolerów AVR -- 8 bitowych układów o architekt
  Wiele projektów elektronicznych dostępnych w internecie opartych jest właśnie
  o układy z tej rodziny.
  Oprócz tego Atmel oferuje szeroką gamę układów opartych o rdzeń ARM.
+\end_layout
+
+\begin_layout Subsection
+AVR32
 \end_layout
 
 \begin_layout Standard
@@ -533,6 +847,40 @@ AP7 odmianie wysokowydajnych mikrokontrolerów dla zaawansowanych multimedialnyc
 Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
  producentów jest bardzo silne wsparcie dla amatorów oraz środowiska otwartego
  oprogramowania.
+\end_layout
+
+\begin_layout Subsection
+ARM
+\end_layout
+
+\begin_layout Standard
+Układy serii AT91SAM cieszą się coraz większą popularnością, są bardzo dobrze
+ udokumentowane przez producenta, który również dostarcza do nich bogatą
+ bibliotekę kodu do obsługi wbudowanych w układ interfejsów.
+ Dzięki temu implementacje wielu zastosowań tej serii procesorów zajmują
+ mniej czasu.
+ Ciekawe konstrukcje płyt ewaluacyjnych dla tych układów czynią produkty
+ firmy Atmel najciekawszymi w rodzinie układów z rdzeniem ARM.
+\end_layout
+
+\begin_layout Standard
+Grupy układów AT91SAM7S, AT91SAM7SE, AT91SAM7X oparte są o rdzeń ARM 7 opisany
+ w rozdziale 
+\begin_inset LatexCommand ref
+reference "sub:ARM-7"
+
+\end_inset
+
+.
+ Poszczególne wersje różnią się dostępnymi interfejsami oraz wiekościami
+ wbudowanej pamięci.
+ Układy serii AT91SAM9 bazują na rdzeniu ARM 9 opisanym w rozdziale 
+\begin_inset LatexCommand ref
+reference "sub:ARM-9"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section

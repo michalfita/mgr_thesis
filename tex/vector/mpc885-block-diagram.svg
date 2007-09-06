@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="55cm"
+   height="47cm"
+   viewBox="-4 2 55 47"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   sodipodi:docname="mpc885-block-diagram.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:docbase="M:\Projekty\mgr\trunk\tex\vector">
+  <metadata
+     id="metadata391">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs389" />
+  <sodipodi:namedview
+     inkscape:window-height="808"
+     inkscape:window-width="1152"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.64029437"
+     inkscape:cx="490.71418"
+     inkscape:cy="1471.5004"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:current-layer="svg2" />
+  <rect
+     style="fill: #ffffff"
+     x="17.05"
+     y="2.1"
+     width="6"
+     height="2.9"
+     id="rect4" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.05"
+     y="2.1"
+     width="6"
+     height="2.9"
+     id="rect6" />
+  <rect
+     style="fill: #ffffff"
+     x="17.05"
+     y="6"
+     width="6"
+     height="3.05"
+     id="rect8" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.05"
+     y="6"
+     width="6"
+     height="3.05"
+     id="rect10" />
+  <rect
+     style="fill: #ffffff"
+     x="17.05"
+     y="11.05"
+     width="6"
+     height="3"
+     id="rect12" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.05"
+     y="11.05"
+     width="6"
+     height="3"
+     id="rect14" />
+  <rect
+     style="fill: #ffffff"
+     x="17.1"
+     y="15.05"
+     width="5.95"
+     height="2.95"
+     id="rect16" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.1"
+     y="15.05"
+     width="5.95"
+     height="2.95"
+     id="rect18" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="20.05"
+     y1="10.45"
+     x2="20.05"
+     y2="9.65"
+     id="line20" />
+  <polygon
+     style="fill: #000000"
+     points="19.8,10.45 20.05,10.95 20.3,10.45 "
+     id="polygon22" />
+  <polygon
+     style="fill: #000000"
+     points="20.3,9.65 20.05,9.15 19.8,9.65 "
+     id="polygon24" />
+  <rect
+     style="fill: #ffffff"
+     x="8.05"
+     y="4"
+     width="6"
+     height="12.05"
+     id="rect26" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8.05"
+     y="4"
+     width="6"
+     height="12.05"
+     id="rect28" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="14.65"
+     y1="5.6"
+     x2="16.5"
+     y2="5.6"
+     id="line30" />
+  <polygon
+     style="fill: #000000"
+     points="14.65,5.35 14.15,5.6 14.65,5.85 "
+     id="polygon32" />
+  <polygon
+     style="fill: #000000"
+     points="16.5,5.85 17,5.6 16.5,5.35 "
+     id="polygon34" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="14.65"
+     y1="14.55"
+     x2="16.45"
+     y2="14.55"
+     id="line36" />
+  <polygon
+     style="fill: #000000"
+     points="14.65,14.3 14.15,14.55 14.65,14.8 "
+     id="polygon38" />
+  <polygon
+     style="fill: #000000"
+     points="16.45,14.8 16.95,14.55 16.45,14.3 "
+     id="polygon40" />
+  <rect
+     style="fill: #ffffff"
+     x="26"
+     y="11"
+     width="8"
+     height="3"
+     id="rect42" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="26"
+     y="11"
+     width="8"
+     height="3"
+     id="rect44" />
+  <rect
+     style="fill: #ffffff"
+     x="26"
+     y="16"
+     width="8"
+     height="3"
+     id="rect46" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="26"
+     y="16"
+     width="8"
+     height="3"
+     id="rect48" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="30"
+     y1="14.6"
+     x2="30"
+     y2="15.4"
+     id="line50" />
+  <polygon
+     style="fill: #000000"
+     points="30.25,14.6 30,14.1 29.75,14.6 "
+     id="polygon52" />
+  <polygon
+     style="fill: #000000"
+     points="29.75,15.4 30,15.9 30.25,15.4 "
+     id="polygon54" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="20.65"
+     y1="10.0484"
+     x2="38.4"
+     y2="10.0016"
+     id="line56" />
+  <polygon
+     style="fill: #000000"
+     points="20.6493,9.79842 20.15,10.0497 20.6507,10.2984 "
+     id="polygon58" />
+  <polygon
+     style="fill: #000000"
+     points="38.4007,10.2516 38.9,10.0003 38.3993,9.75158 "
+     id="polygon60" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="30"
+     y1="10"
+     x2="30"
+     y2="10.4"
+     id="line62" />
+  <polygon
+     style="fill: #000000"
+     points="29.75,10.4 30,10.9 30.25,10.4 "
+     id="polygon64" />
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="8.7975"
+     y="10.025"
+     id="text66">Embedded</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="9.2875"
+     y="11.025"
+     id="text68">8xx core</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="19.2463"
+     y="3.3"
+     id="text70">8kB</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="17.59"
+     y="4.3"
+     id="text72">Data Cache</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="19.2712"
+     y="15.825"
+     id="text74">8kB</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="17.69"
+     y="16.825"
+     id="text76">Instructions</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="18.7287"
+     y="17.825"
+     id="text78">Cache</text>
+  <text
+     style="fill: #000000; font-size: 0.8 cm; length: 0 cm; font-family: sans; font-style: normal; font-weight: normal"
+     x="17.45"
+     y="17.35"
+     id="text80" />
+  <text
+     style="fill: #000000; font-size: 0.8 cm; length: 0 cm; font-family: sans; font-style: normal; font-weight: normal"
+     x="20.95"
+     y="16.4"
+     id="text82" />
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="17.605"
+     y="7.31"
+     id="text84">Instructions</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="18.8763"
+     y="8.31"
+     id="text86">MMU</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="19.0162"
+     y="12.3"
+     id="text88">Data</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="18.8862"
+     y="13.3"
+     id="text90">MMU</text>
+  <rect
+     style="fill: #ffffff"
+     x="8.05"
+     y="22"
+     width="8.05"
+     height="4.05"
+     id="rect92" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8.05"
+     y="22"
+     width="8.05"
+     height="4.05"
+     id="rect94" />
+  <rect
+     style="fill: #ffffff"
+     x="17.05"
+     y="22.05"
+     width="5"
+     height="4"
+     id="rect96" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.05"
+     y="22.05"
+     width="5"
+     height="4"
+     id="rect98" />
+  <rect
+     style="fill: #ffffff"
+     x="22.98"
+     y="22.065"
+     width="5.07"
+     height="4"
+     id="rect100" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="22.98"
+     y="22.065"
+     width="5.07"
+     height="4"
+     id="rect102" />
+  <rect
+     style="fill: #ffffff"
+     x="29.07"
+     y="22.0225"
+     width="4.98"
+     height="4"
+     id="rect104" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="29.07"
+     y="22.0225"
+     width="4.98"
+     height="4"
+     id="rect106" />
+  <text
+     style="font-size:0.76200002"
+     x="10.650743"
+     y="24.469683"
+     id="text108">Parallel I/O</text>
+  <text
+     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="18.363068"
+     y="24.431532"
+     id="text110">Timers</text>
+  <text
+     style="font-size:0.6171822px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="24.891581"
+     y="26.127113"
+     id="text112">Interrupt</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="24.62348"
+     y="25.002176"
+     id="text114">Control</text>
+  <text
+     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="30.458427"
+     y="23.854033"
+     id="text116">Dual-Port</text>
+  <text
+     style="font-size:0.78852814px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="31.40517"
+     y="24.7225"
+     id="text118">RAM</text>
+  <rect
+     style="fill: #ffffff"
+     x="8.04"
+     y="27.0075"
+     width="8.05"
+     height="4.05"
+     id="rect120" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8.04"
+     y="27.0075"
+     width="8.05"
+     height="4.05"
+     id="rect122" />
+  <rect
+     style="fill: #ffffff"
+     x="8.03"
+     y="32.015"
+     width="8.05"
+     height="4.05"
+     id="rect124" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8.03"
+     y="32.015"
+     width="8.05"
+     height="4.05"
+     id="rect126" />
+  <text
+     style="font-size:0.76200002"
+     x="10.685833"
+     y="29.164032"
+     id="text128">Baud Rate</text>
+  <text
+     style="font-size:0.76200002"
+     x="10.566838"
+     y="30.169676"
+     id="text130">Generator</text>
+  <text
+     style="font-size:0.76200002"
+     x="9.4244146"
+     y="34.171684"
+     id="text132">Parallel Interface</text>
+  <text
+     style="font-size:0.76200002"
+     x="11.832228"
+     y="35.171535"
+     id="text134">Ports</text>
+  <polygon
+     style="fill: #ffffff"
+     points="17,27 34.05,26.95 34.05,35.95 23,36 23,32 17,32 "
+     id="polygon136" />
+  <polygon
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     points="17,27 34.05,26.95 34.05,35.95 23,36 23,32 17,32 "
+     id="polygon138" />
+  <rect
+     style="fill: #ffffff"
+     x="17"
+     y="33"
+     width="5"
+     height="3"
+     id="rect140" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17"
+     y="33"
+     width="5"
+     height="3"
+     id="rect142" />
+  <text
+     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="18.571867"
+     y="34.864735"
+     id="text144">Timer</text>
+  <text
+     style="font-size:0.60113484px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="20.663425"
+     y="30.970575"
+     id="text146">32-bit Controller and Program ROM</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="27.2787"
+     y="12.2332"
+     id="text148">Slave Master</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="28.1863"
+     y="13.2332"
+     id="text150">Interface</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="26.735"
+     y="17.7332"
+     id="text152">Security Engine</text>
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="15"
+     width="9"
+     height="15"
+     id="rect154" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="15"
+     width="9"
+     height="15"
+     id="rect156" />
+  <rect
+     style="fill: #ffffff"
+     x="-3"
+     y="14"
+     width="9"
+     height="15"
+     rx="1.17549e-038"
+     ry="1.17549e-038"
+     id="rect158" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-3"
+     y="14"
+     width="9"
+     height="15"
+     rx="1.17549e-038"
+     ry="1.17549e-038"
+     id="rect160" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="30"
+     y1="20"
+     x2="7.6"
+     y2="20"
+     id="line162" />
+  <polygon
+     style="fill: #000000"
+     points="7.6,19.75 7.1,20 7.6,20.25 "
+     id="polygon164" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="30"
+     y1="20"
+     x2="30"
+     y2="21.4"
+     id="line166" />
+  <polygon
+     style="fill: #000000"
+     points="29.75,21.4 30,21.9 30.25,21.4 "
+     id="polygon168" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="25"
+     y1="10"
+     x2="25"
+     y2="20"
+     id="line170" />
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="-1.26875"
+     y="15.14"
+     id="text172">Fast Ethernet</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="-0.48875"
+     y="16.14"
+     id="text174">Controller</text>
+  <rect
+     style="fill: #ffffff"
+     x="37.0015"
+     y="27.0868"
+     width="9.1"
+     height="8.9"
+     id="rect176" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="37.0015"
+     y="27.0868"
+     width="9.1"
+     height="8.9"
+     id="rect178" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="34.65"
+     y1="31.4472"
+     x2="36.2515"
+     y2="31.4396"
+     id="line180" />
+  <polygon
+     style="fill: #000000"
+     points="34.6488,31.1972 34.15,31.4495 34.6512,31.6972 "
+     id="polygon182" />
+  <polygon
+     style="fill: #000000"
+     points="36.2527,31.6896 36.7515,31.4373 36.2503,31.1896 "
+     id="polygon184" />
+  <text
+     style="font-size:0.6171822px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="37.561523"
+     y="32.532112"
+     id="text186">Virtual Independent</text>
+  <text
+     style="font-size:0.78852814px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="41.380249"
+     y="31.27"
+     id="text188">DMA</text>
+  <text
+     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="41.180859"
+     y="32.401535"
+     id="text190">and</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="39.698811"
+     y="33.407177"
+     id="text192">Serial DMA</text>
+  <text
+     style="fill: #000000; font-size: 0.8 cm; length: 0 cm; font-family: sans; font-style: normal; font-weight: normal"
+     x="49.8015"
+     y="31.3368"
+     id="text194" />
+  <rect
+     style="fill: #ffffff"
+     x="39"
+     y="6"
+     width="10"
+     height="20"
+     id="rect196" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="39"
+     y="6"
+     width="10"
+     height="20"
+     id="rect198" />
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="40.5"
+     y="7.73322"
+     id="text200">System Interface</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="43.1713"
+     y="8.73322"
+     id="text202">Unit</text>
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="38"
+     y1="10.6"
+     x2="38"
+     y2="26.4"
+     id="line204" />
+  <polygon
+     style="fill: #000000"
+     points="38.25,10.6 38,10.1 37.75,10.6 "
+     id="polygon206" />
+  <polygon
+     style="fill: #000000"
+     points="37.75,26.4 38,26.9 38.25,26.4 "
+     id="polygon208" />
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="17"
+     width="7"
+     height="2"
+     id="rect210" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="17"
+     width="7"
+     height="2"
+     id="rect212" />
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="20"
+     width="7"
+     height="2"
+     id="rect214" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="20"
+     width="7"
+     height="2"
+     id="rect216" />
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="23"
+     width="7"
+     height="2"
+     id="rect218" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="23"
+     width="7"
+     height="2"
+     id="rect220" />
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="26"
+     width="7"
+     height="2"
+     id="rect222" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="26"
+     width="7"
+     height="2"
+     id="rect224" />
+  <text
+     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="1.0959274"
+     y="18.364733"
+     id="text226">DMAs</text>
+  <text
+     style="font-size:0.76201862px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="1.1659546"
+     y="21.370382"
+     id="text228">RFOs</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="-0.098887809"
+     y="24.370377"
+     id="text230">10/100 Media</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="0.57028162"
+     y="27.370377"
+     id="text232">MII/RMII</text>
+  <rect
+     style="fill: #ffffff"
+     x="40"
+     y="10"
+     width="8"
+     height="3"
+     id="rect234" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="40"
+     y="10"
+     width="8"
+     height="3"
+     id="rect236" />
+  <rect
+     style="fill: #ffffff"
+     x="40"
+     y="14"
+     width="8"
+     height="3"
+     id="rect238" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="40"
+     y="14"
+     width="8"
+     height="3"
+     id="rect240" />
+  <rect
+     style="fill: #ffffff"
+     x="40"
+     y="18"
+     width="8"
+     height="3"
+     id="rect242" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="40"
+     y="18"
+     width="8"
+     height="3"
+     id="rect244" />
+  <rect
+     style="fill: #ffffff"
+     x="40"
+     y="22"
+     width="8"
+     height="3"
+     id="rect246" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="40"
+     y="22"
+     width="8"
+     height="3"
+     id="rect248" />
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="42.3162"
+     y="11.2332"
+     id="text250">Memory</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="41.9813"
+     y="12.2332"
+     id="text252">Controller</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="41.2525"
+     y="15.2332"
+     id="text254">Bus Interface</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="43.1713"
+     y="16.2332"
+     id="text256">Unit</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="42.4438"
+     y="19.2332"
+     id="text258">System</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="41.9787"
+     y="20.2332"
+     id="text260">Functions</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="42.1863"
+     y="23.2332"
+     id="text262">PCMCIA</text>
+  <text
+     style="fill:#000000;font-size:0.76200002"
+     x="42.1863"
+     y="24.2332"
+     id="text264">Interface</text>
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="48.6"
+     y1="23.5"
+     x2="50.4"
+     y2="23.5"
+     id="line266" />
+  <polygon
+     style="fill: #000000"
+     points="48.6,23.25 48.1,23.5 48.6,23.75 "
+     id="polygon268" />
+  <polygon
+     style="fill: #000000"
+     points="50.4,23.75 50.9,23.5 50.4,23.25 "
+     id="polygon270" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="48"
+     y1="19.5"
+     x2="50.39"
+     y2="19.506"
+     id="line272" />
+  <polygon
+     style="fill: #000000"
+     points="50.3894,19.756 50.89,19.5072 50.3906,19.256 "
+     id="polygon274" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="48"
+     y1="15.5"
+     x2="50.38"
+     y2="15.512"
+     id="line276" />
+  <polygon
+     style="fill: #000000"
+     points="50.3787,15.762 50.88,15.5145 50.3813,15.262 "
+     id="polygon278" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="48"
+     y1="11.5"
+     x2="50.37"
+     y2="11.518"
+     id="line280" />
+  <polygon
+     style="fill: #000000"
+     points="50.3681,11.7679 50.87,11.5217 50.3719,11.268 "
+     id="polygon282" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="46.1015"
+     y1="31.5368"
+     x2="50.28"
+     y2="31.5177"
+     id="line284" />
+  <polygon
+     style="fill: #000000"
+     points="50.2811,31.7677 50.78,31.5155 50.2789,31.2677 "
+     id="polygon286" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.3; stroke: #000000"
+     x1="6"
+     y1="38"
+     x2="47"
+     y2="38"
+     id="line288" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="12.038"
+     y1="36.6648"
+     x2="12.017"
+     y2="37.4002"
+     id="line290" />
+  <polygon
+     style="fill: #000000"
+     points="12.2879,36.6719 12.0522,36.165 11.7881,36.6577 "
+     id="polygon292" />
+  <polygon
+     style="fill: #000000"
+     points="11.7671,37.3931 12.0028,37.9 12.2669,37.4073 "
+     id="polygon294" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="27.983"
+     y1="36.5998"
+     x2="27.962"
+     y2="37.3352"
+     id="line296" />
+  <polygon
+     style="fill: #000000"
+     points="28.2329,36.6069 27.9972,36.1 27.7331,36.5927 "
+     id="polygon298" />
+  <polygon
+     style="fill: #000000"
+     points="27.7121,37.3281 27.9478,37.835 28.2119,37.3423 "
+     id="polygon300" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="9.98295"
+     y1="38.5998"
+     x2="9.96205"
+     y2="39.3352"
+     id="line302" />
+  <polygon
+     style="fill: #000000"
+     points="10.2329,38.6069 9.99716,38.1 9.73305,38.5927 "
+     id="polygon304" />
+  <polygon
+     style="fill: #000000"
+     points="9.71215,39.3281 9.94784,39.835 10.2119,39.3423 "
+     id="polygon306" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="13.983"
+     y1="38.5998"
+     x2="13.962"
+     y2="39.3352"
+     id="line308" />
+  <polygon
+     style="fill: #000000"
+     points="14.2329,38.6069 13.9972,38.1 13.7331,38.5927 "
+     id="polygon310" />
+  <polygon
+     style="fill: #000000"
+     points="13.7121,39.3281 13.9478,39.835 14.2119,39.3423 "
+     id="polygon312" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="17.983"
+     y1="38.5998"
+     x2="17.962"
+     y2="39.3352"
+     id="line314" />
+  <polygon
+     style="fill: #000000"
+     points="18.2329,38.6069 17.9972,38.1 17.7331,38.5927 "
+     id="polygon316" />
+  <polygon
+     style="fill: #000000"
+     points="17.7121,39.3281 17.9478,39.835 18.2119,39.3423 "
+     id="polygon318" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="22"
+     y1="38.6"
+     x2="22"
+     y2="39.4"
+     id="line320" />
+  <polygon
+     style="fill: #000000"
+     points="22.25,38.6 22,38.1 21.75,38.6 "
+     id="polygon322" />
+  <polygon
+     style="fill: #000000"
+     points="21.75,39.4 22,39.9 22.25,39.4 "
+     id="polygon324" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="34.983"
+     y1="38.5998"
+     x2="34.962"
+     y2="39.3352"
+     id="line326" />
+  <polygon
+     style="fill: #000000"
+     points="35.2329,38.6069 34.9972,38.1 34.7331,38.5927 "
+     id="polygon328" />
+  <polygon
+     style="fill: #000000"
+     points="34.7121,39.3281 34.9478,39.835 35.2119,39.3423 "
+     id="polygon330" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="30.983"
+     y1="38.5998"
+     x2="30.962"
+     y2="39.3352"
+     id="line332" />
+  <polygon
+     style="fill: #000000"
+     points="31.2329,38.6069 30.9972,38.1 30.7331,38.5927 "
+     id="polygon334" />
+  <polygon
+     style="fill: #000000"
+     points="30.7121,39.3281 30.9478,39.835 31.2119,39.3423 "
+     id="polygon336" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="26.983"
+     y1="38.5998"
+     x2="26.962"
+     y2="39.3352"
+     id="line338" />
+  <polygon
+     style="fill: #000000"
+     points="27.2329,38.6069 26.9972,38.1 26.7331,38.5927 "
+     id="polygon340" />
+  <polygon
+     style="fill: #000000"
+     points="26.7121,39.3281 26.9478,39.835 27.2119,39.3423 "
+     id="polygon342" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="39"
+     y1="38.6"
+     x2="39"
+     y2="39.4"
+     id="line344" />
+  <polygon
+     style="fill: #000000"
+     points="39.25,38.6 39,38.1 38.75,38.6 "
+     id="polygon346" />
+  <polygon
+     style="fill: #000000"
+     points="38.75,39.4 39,39.9 39.25,39.4 "
+     id="polygon348" />
+  <rect
+     style="fill: #ffffff"
+     x="8"
+     y="40"
+     width="15.5"
+     height="2"
+     id="rect350" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8"
+     y="40"
+     width="15.5"
+     height="2"
+     id="rect352" />
+  <rect
+     style="fill: #ffffff"
+     x="25.5"
+     y="40"
+     width="15.5"
+     height="2"
+     id="rect354" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="25.5"
+     y="40"
+     width="15.5"
+     height="2"
+     id="rect356" />
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="39.323029"
+     y="41.370377"
+     id="text358">I2C</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="34.752312"
+     y="41.370377"
+     id="text360">SPI</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="30.209808"
+     y="41.370377"
+     id="text362">SMC2</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="26.209808"
+     y="41.370377"
+     id="text364">SMC1</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="9.9246655"
+     y="41.370377"
+     id="text366">USB</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="13.262308"
+     y="41.370377"
+     id="text368">SCC2</text>
+  <text
+     style="font-size:0.76201862px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="17.262331"
+     y="41.37587"
+     id="text370">SCC3</text>
+  <text
+     style="font-size:0.76200002px"
+     x="21.015223"
+     y="40.949375"
+     id="text372">SCC4</text>
+  <text
+     style="font-size:0.76200002px;text-align:center;text-anchor:middle"
+     x="21.823883"
+     y="41.649384"
+     id="text374">/UTOPIA</text>
+  <rect
+     style="fill: #ffffff"
+     x="8"
+     y="43"
+     width="21"
+     height="2"
+     id="rect376" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8"
+     y="43"
+     width="21"
+     height="2"
+     id="rect378" />
+  <text
+     style="font-size:0.60144758px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="14.853454"
+     y="46.632015"
+     id="text380">Time Slot Assigner</text>
+  <polygon
+     style="fill: #ffffff"
+     points="30,43 41,43 41,48 8,48 8,46 30,46 "
+     id="polygon382" />
+  <polygon
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     points="30,43 41,43 41,48 8,48 8,46 30,46 "
+     id="polygon384" />
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="33.369816"
+     y="46.370312"
+     id="text386">Serial Interface</text>
+</svg>
