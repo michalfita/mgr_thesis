@@ -109,7 +109,7 @@ authorDwa{}
 \end_layout
 
 \begin_layout Title
-System sterowania robotem
+System sterowania robotem mobilnym
 \end_layout
 
 \begin_layout Author
@@ -182,7 +182,7 @@ Układ sterownika mikroprocesorowego został zrealizowany na platformie AVR32
 \end_layout
 
 \begin_layout Part
-Teoria
+Wprowadzenie teoretyczne
 \end_layout
 
 \begin_layout Chapter
@@ -211,9 +211,12 @@ key "jtag-std"
 
 .
  Tego samego roku INTEL włożył obsługę tego standardu do procesora 80486.
- Zastosowana metoda testowania pozwalała weryfikować elektryczne połączenia
- na płytce drukowanej z otoczeniem układu, stąd nosi nazwę skanowania graniczneg
-o (ang.
+\end_layout
+
+\begin_layout Standard
+Zastosowana metoda testowania pozwalała weryfikować elektryczne połączenia
+ na płytce drukowanej z otoczeniem układu, stąd nosi nazwę ścieżki krawędziowej
+ lub rzadziej skanowania granicznego (ang.
  
 \shape italic
 boundary-scan
@@ -234,7 +237,10 @@ Boundary Scan Cells
 Boundary Scan Register
 \shape default
 ), który współpracuje z dodatkowymi rejestrami instrukcji i danych.
- W dziesiejszych czasach znaczenie interfejsu IEEE 1149.1 i wszelkich jego
+\end_layout
+
+\begin_layout Standard
+W dziesiejszych czasach znaczenie interfejsu IEEE 1149.1 i wszelkich jego
  pochodnych specyficznych dla różnych producentów ma tak naprawdę największe
  znaczenie na etapie przygotowywania oprogramowania dla urządzeń wyposażonych
  w mikrokontrolery.
@@ -256,6 +262,10 @@ y szeregowo programować pamięć Flash lub sieć bramek wewnątrz układu scalo
  (tak robi ATMEL z rodziną układów 8-bitowych i Xilinx dla układów CPLD).
 \end_layout
 
+\begin_layout Subsection
+Zasada działania JTAG
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -263,6 +273,7 @@ sideways false
 status open
 
 \begin_layout Standard
+\noindent
 \align center
 \begin_inset Graphics
 	filename vector/jtag-internals-01.svg
@@ -306,11 +317,19 @@ reference "fig:Schemat-blokowy-implementacji"
  diagram wewnętrznej architektury JTAG wbudowanej w układzie pokazuje, jak
  pojedyncze wyprowadzenia układu mogą być testowane i ustawiane przez pojedyncze
  komórki rejestru.
- Rejestr ten przypomina klasyczy rejestr przesuwny, przy czym w zależności
- od instrukcji przesłanej na wejście TDI wartość komórki jest odczytywana
- i wyprowadzana poprzed odpowiedź wysyłaną na wyjście TDO, bądź programowana
- wartością przesłaną razem z rozkazem JTAG.
- Obsługa interfejsu odbywa się szeregowo z dużą szybkością, często zbliżoną
+ Rejestr ten przypomina klasyczy rejestr przesuwny i jest aktywowany w trybie
+ testowym przez wejście TMS, przy czym w zależności od instrukcji przesłanej
+ na wejście TDI wartość komórki jest odczytywana i wyprowadzana poprzed
+ odpowiedź wysyłaną na wyjście TDO, bądź programowana wartością przesłaną
+ razem z rozkazem JTAG.
+ Rejestr ten jest taktowany częstotliwością podawaną przez urządzenie testujące
+ na wejście TMS, kierunek działania rejestru jest jeden.
+ Za poprawną obsługę danych pochodzących z poszczególnych komórek testujących
+ odpowiada urządzenie sterujące.
+\end_layout
+
+\begin_layout Standard
+Obsługa interfejsu odbywa się szeregowo z dużą szybkością, często zbliżoną
  do prędkości pracy układu w gotowym systemie, stąd wymagania dla urządzeń
  obsługujących interfejs zgodny z IEEE 1149.1 we współczesnych układach 32
  bitowych są naprawdę wyśróbowane, co wpływa również na cenę tych urządzeń.
@@ -319,14 +338,122 @@ reference "fig:Schemat-blokowy-implementacji"
 \end_layout
 
 \begin_layout Standard
-Rozszerzenia producentów wbududowane w układ pozwalają na stosowanie JTAG
- do uruchamiania i odpluskwiania programów działających w rzeczywistym systemie
- (ang.
+Technikę ścieżki krawędziowej można wykorzystywać w celu przetestowania
+ różnych elementów.
+ W układzie wspierającym JTAG możliwe jest testowanie zarówno samych układów
+ i połączeń poza układem.
+ Możliwe jest testowanie elementów nie posiadających własnych wyprowadzeń
+ dla JTAG, taki jak pamięci RAM.
+ Testy polegają wtedy na takim sterowaniu wyprowadzeń układu, jak przy normalnej
+ współpracy układem pamięci (lub innym testowanym) i odczytywanie stanów
+ z wyprowadzeń układu.
+ Przypomina to wtedy rzeczywiste zachowanie układu testowanego w systemie.
+\end_layout
+
+\begin_layout Standard
+Wykorzystanie wszystkich możliwości JTAG do testowania, wymaga programu
+ potrafiącego wiernie symulować zachowanie komórek ścieżki krawędziowej,
+ w zastosowanych układach.
+ Na rynku dostępne jest oprogramowanie, pozwalające na kompleksowe sterowanie
+ testowanie i programowanie przez IEEE 1149.1.
+ Wśród jego producentów są takie firmy jak JTAG Technologies, XJTAG, Corelis,
+ Intellitech, Universal Scan, Applegate czy Temento Sytems.
+ Oprogramowanie to wykorzystuje pliki BSDL, dostarczane przez producentów
+ układów scalonych zawierających JTAG.
+ Zawierają one dokładny sformalizowany opis umieszczonych w układzie komórek
+ JTAG i ich otoczenia.
+ Treść pliku zapisana jest w języku BSDL (ang.
  
 \emph on
-on-chip debugging
+Boundary-Scan Description Language
 \emph default
-).
+), który został opracowany na podstawie wybranych elementów składni języka
+ VHDL.
+ Na podstawie wgranych plików oraz wygenerowanych wektorów testowych, oprogramow
+anie sterujące potrafi dość dokładnie obliczyć przewidywany procent pokrycia
+ uszkodzeń.
+ Umożliwia także precyzyjne zlokalizowanie uszkodzenia, w przypadku, gdy
+ otrzymany na wyjściu ścieżki ciąg bitów, nie będzie zgadzał się z przewidywanym.
+ (
+\begin_inset LatexCommand cite
+key "jtag-elektronik-online"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+Zalety stosowania JTAG
+\end_layout
+
+\begin_layout Standard
+Ścieżka krawędziowa jest metodą prostą w implementacji i jest względnie
+ tania w stosowaniu.
+ Wyróżnia się pozytywnie na tle innych dostępnych metod testowania układów
+ elektronicznych.
+ Większość z testów dostępnych za pomocą ścieżki krawędziowej jest możliwa
+ do wykonania także za pomocą łoża szpilkowego
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+ łoże szpilkowe (ang.
+ 
+\emph on
+nail bed tester
+\emph default
+), to podłoże z drobnymi, gęsto rozmieszczonymi szpilkami, stykającymi się
+ w punktach kontaktowych z punktami testowymi na płytce drukowanej, pomiędzy
+ którymi dokonuje się pomiaru paramterów sygnału elektrycznego; koszty testera
+ tego typu to rząd kilkunastu do setek tysięcy dolarów.
+ 
+\end_layout
+
+\end_inset
+
+ to ta technika jest nieporównywalnie droższa.
+ Zwiększenie powierzchni płytki drukowanej przez ulokowanie dodatkowych
+ punktów testowych na powierzchni PCB również podnosi koszty takiego testu.
+ Z racji swych ograniczeń, JTAG nie może zastąpić pełnej funkcjonalności
+ testera igłowego, związanej przykładowo z testowaniem układu pod kątem
+ bardzo szybkich impulsów i innych niestandardowych sygnałów.
+ Zdarza się i tak, że ścieżka brzegowa oferuje możliwości, których zwykłe
+ łoże szpilkowe nie jest w stanie zapewnić.
+ Przykładem jest testowanie układów BGA, wybieranych przez producenta w
+ celu ograniczenia rozmiarów urządzenia.
+ Dostosowanie płytki z układem BGA do testowania za pomocą igieł wymaga
+ wyprowadzenia bardzo wielu dodatkowych punktów testowych, co spowoduje
+ znaczny wzrost jej powierzchni.
+ Co prawda, JTAG nie jest jedyną sprawną metodą testowania układów BGA w
+ systemie, ale konkurencyjna opcja, polegająca na prześwietlaniu zmontowanej
+ płytki, za pomocą promieni X, nie tylko wymaga większych nakładów, ale
+ może być niebezpieczna zarówno dla testowanej elektroniki, jak i pracowników
+ laboratorium.
+\end_layout
+
+\begin_layout Standard
+Kolejna zaleta posiadania JTAG w układzie to możliwość jego testowania przez
+ cały czas jego życia.
+ Zastosowanie JTAG pozwala w dowolnej chwili wykonać testy w trybie testowania
+ i w prosty sposób ocenić jego sprawność, bez konieczności wymontowywania
+ podzespołów lub umieszczania systemu w specjalnych maszynach testujących.
+ Wbudowanie logiki testera na płytkę drukowaną z układem pozwala przeprowadzać
+ testy bez konieczności dołączania zewnętrznych urządzeń testujących.
+ Daje to możliwość regularnego kontrolowania sprawności układu, dzięki czemu
+ jest możliwe zapewnienie wysokiego poziomu bezpieczeństwa i jakości pracy
+ całego urządzenia.
+ (
+\begin_inset LatexCommand cite
+key "jtag-elektronik-online,why-jtag-works"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Subsection
+Wady stosowania JTAG
 \end_layout
 
 \begin_layout Standard
@@ -355,6 +482,386 @@ Popularny router Linksys WRT54G posiada alternatywne oprogramowanie, dostępne
  tym wyższe ceny tych urządzeń są na rynku wtórnym.
 \end_layout
 
+\begin_layout Subsection
+On-chip debugging
+\end_layout
+
+\begin_layout Standard
+Rozszerzenia producentów wbududowane w układ pozwalają na stosowanie JTAG
+ do uruchamiania i odpluskwiania programów działających w rzeczywistym systemie
+ (ang.
+ 
+\emph on
+on-chip debugging
+\emph default
+).
+\end_layout
+
+\begin_layout Section
+\begin_inset LatexCommand label
+name "sec:Interfejs-USB"
+
+\end_inset
+
+Interfejs USB
+\end_layout
+
+\begin_layout Standard
+Interfejs USB (ang.
+ 
+\emph on
+Universal Serial Bus
+\emph default
+) jest dziś najpopularniejszym interfejsem szeregowym dla różnych urządzeń
+ współpracujących ze sobą, również komputerów z urządzeniami wejścia-wyjścia
+ i urządzeniami multimedialnymi, takimi jak odtwarzacze muzyki, aparaty
+ i kamery cyfrowe.
+ Ogromna ilość narzędzi dla elektroników korzysta już z interfejsu USB (w
+ tym JTAG ICE mk-II opisany w rozdziale 
+\begin_inset LatexCommand vref
+reference "sec:JTAG-ICE"
+
+\end_inset
+
+ oraz zestaw EVK1100 opisany w rozdziale <brak>).
+ Jednakże implementacja USB we własnym urządzeniu może być z wielu względów
+ kłopotliwa.
+ Poniższy opis techczny wyjaśni dlaczego tak jest i jakie stosuje się aktualnie
+ rozwiązania tego problemu.
+\end_layout
+
+\begin_layout Standard
+Standard USB został oficjalnie ogłoszony w 1996 roku przez konsorcjum złożone
+ z firm: Compaq, DEC, IBM, Intel, Microsoft, Nec i Northern Telecom.
+ Zatwierdzono wtedy standard USB 1.0, który istniał do 1999 roku, zyskał
+ popularność gdy Microsoft i Apple wprowadziły sterowniki USB do swoich
+ systemów operacyjnych.
+ Od tamtego momentu USB występuje aktualnie w dwóch obowiązujących wersjach:
+\end_layout
+
+\begin_layout Description
+USB\InsetSpace ~
+1.1 Standard ten koryguje braki standardu w wersji 1.0 i stosowany od 1999
+ roku jest do dziś w większości urządzeń wejścia-wyjścia, gdyż jest prostrzy
+ w implementacji od USB 2.0.
+ Obsługuje dwie standardowe prędkości transmisji danych 1,5\InsetSpace ~
+Mbit/s oraz 12\InsetSpace ~
+Mbit/s.
+ Do jednego kontrolera może być podłączonych maksymalnie 127 urządzeń.
+\end_layout
+
+\begin_layout Description
+USB\InsetSpace ~
+2.0 Istniejący od roku 2000 standard ten wprowadza tryb dużej prędkości
+ (ang.
+ 
+\emph on
+High Speed USB
+\emph default
+) o prędkości 480\InsetSpace ~
+Mbit/s.
+ Dodatkowo w roku 2001 pojawia się suplement On-the-Go pozwalające łączyć
+ ze sobą takie urządzenia jak dysk twardy i aparat cyfrowy, polegające na
+ negocjacji, które z połączonych urządzeń będzie pełnić rolę hosta.
+\end_layout
+
+\begin_layout Standard
+Urządzenia podłączone do portów interfejsu USB nie wymagają dodatkowego
+ zasialania w przypadku spełniania pewnych warunków, standardowo pojedynczy
+ port może zostać obciążony prądem 100\InsetSpace ~
+mA.
+ Po wykonaniu programowej konfiguracji port powinien umożliwiać pobór do
+ 500\InsetSpace ~
+mA.
+ Fakt ten jest wykorzysytwany jest już nawet do ładownia telefonów komórkowych
+ podłączonych przez port USB do komputera PC.
+ Aktualnie trwają pracę nad stworzeniem standardu Powered USB, który umożliwi
+ zasilanie urządzeń nawet napięciem 24\InsetSpace ~
+V i obciążeniem do 6\InsetSpace ~
+A, co pozwoliłoby
+ na rezygnację z zasilania zewnętrznego takich urządeń jak drukarki, czy
+ skanery.
+\end_layout
+
+\begin_layout Standard
+Wśród nowości związanych z USB warto wspomnieć powstanie standardu Wireless
+ USB, który zachowując zgodność komunikacyjną ze zwykłym USB miałby umożliwiać
+ ustandaryzowaną bezprzewodową komunikację wielu urządzeń, w tym wejścia-wyjścia
+ oraz na przykład fotograficznych aparatów cyfrowych.
+\end_layout
+
+\begin_layout Subsection
+Zasada działania USB
+\end_layout
+
+\begin_layout Standard
+Specyfikacja standardu USB określa precyzyjnie wszystkie aspekty związane
+ z implementacją obsługi portu i komunikacji, co obejmuje również mechaniczną
+ konstrukcję gniazd i wtyków USB, wymagania elektryczne okablowania.
+ Dodatkowo istnieją specyfikacje dla kontrolerów hostów USB:
+\end_layout
+
+\begin_layout Description
+UHCI (ang.
+ 
+\emph on
+Universal Host Controller Interface
+\emph default
+) opracowany przez Intela, który kładzie największy nacisk na oprogramowania
+ redukując koszty sprzętu.
+\end_layout
+
+\begin_layout Description
+OHCI (ang.
+ 
+\emph on
+Open Host Controller Interface
+\emph default
+) opracowany wspólnie przez Compaq, Microsoft i National Semiconductor,
+ który kładzie nawiększy nacisk na część sprzętową redukując oprogramowanie
+ kontrolera do minimum.
+\end_layout
+
+\begin_layout Description
+EHCI (ang.
+ 
+\emph on
+Enhanced Host Controller Interface
+\emph default
+) opracowany dopiero na potrzeby USB 2.0 przez Intel, Compaq, NEC, Lucent
+ i Microsoft.
+ Łączy pełne elementy tworząc wspólny standard współpracy urządzeń USB,
+ również z rozszerzeniem On-the-Go.
+\end_layout
+
+\begin_layout Standard
+Fizycznie interfejs USB jest magistralą szeregową zrealizowaną na 4 przewodach,
+ z których dwa dostarczają zasilanie +5\InsetSpace ~
+V oraz GND.
+ Pozostałe dwa przewody tworzą skręconą parę transmitującą sygnały różnicowe.
+ Wykorzystywane jest przy tym kodowanie NRZI (ang.
+ Non Return to Zero Invert) do transmisji danych zawierające pole synchronizacyj
+ne dla uzgodniania sychronizacji zegarów urządzeń podpiętych do magistrali.
+ Zastosowane kodowanie NRZI działa na zasadzie zmiany stanu na lini transmisyjne
+j w sytuacji transmitowania logicznej jedynki.
+ Wadą tego rozwiązania jest utrata synchronizacji przy długich ciągach zer,
+ stąd dodanie pól sycnchronizacyjnych w logicznej strukturze transmisji
+ USB.
+\end_layout
+
+\begin_layout Standard
+Dla niskiej (1,5\InsetSpace ~
+MBit/s) i pełnej (12\InsetSpace ~
+Mbit/s) prędkości transmisji kodowanie
+ różnicowego zera (oznaczanego sybolem 
+\begin_inset Quotes eld
+\end_inset
+
+K
+\begin_inset Quotes erd
+\end_inset
+
+) odbywa się przez podciąganie linii D+ ponad 2,8\InsetSpace ~
+V rezystorem 15\InsetSpace ~
+k
+\begin_inset Formula $\Omega$
+\end_inset
+
+ podłączonym do masy, a linii D- poniżej 0,3\InsetSpace ~
+ poprzez rezystor 1,5\InsetSpace ~
+k
+\begin_inset Formula $\Omega$
+\end_inset
+
+ podłączony do 3,6\InsetSpace ~
+V.
+ Kodowanie różnicowej jedynki (oznaczanej symbolem 
+\begin_inset Quotes eld
+\end_inset
+
+J
+\begin_inset Quotes erd
+\end_inset
+
+) odbywa się przez podciąganie D- powyżej 2,8\InsetSpace ~
+V i D+ poniżej 0,3\InsetSpace ~
+V poprzez
+ te same rezystory.
+ Dla odbiornika sygnał 
+\begin_inset Quotes eld
+\end_inset
+
+J
+\begin_inset Quotes erd
+\end_inset
+
+ jest zdefiniowany jako D+ większe o 200\InsetSpace ~
+mV od D-, a sygnał 
+\begin_inset Quotes eld
+\end_inset
+
+K
+\begin_inset Quotes erd
+\end_inset
+
+ jako D+ mniejsze o 200\InsetSpace ~
+,V od D-.
+ Polaryzacja sygnału zamienia się dla wysokiej prędkości (480\InsetSpace ~
+Mbit/s) i 
+\begin_inset Quotes eld
+\end_inset
+
+J
+\begin_inset Quotes erd
+\end_inset
+
+ oznacza różnicową 1, a 
+\begin_inset Quotes eld
+\end_inset
+
+K
+\begin_inset Quotes erd
+\end_inset
+
+ oznacza różnicowe 0.
+\end_layout
+
+\begin_layout Standard
+Transceivery USB obsługują sygnalizację różnicową opisaną powyżej, ale również
+ mogą indywidualnie terminować linie D- i D+, co jest stosowane do specjalnej
+ sygnalizacji na magistrali (jest to możliwe dzięki zasilaniu magistrali
+ USB).
+ Przykładowo sygnał SE0 jest otrzymywany przez utrzymanie niskiego stanu
+ na obu liniach D- i D+.
+ Nie można tego faktu pomijać przy implemetacji interfejsu USB, gdyż nie
+ wystarczy porównywanie sygnałów różnicowych dla realizacji prawidłowej
+ komunikacji po magistrali USB.
+\end_layout
+
+\begin_layout Standard
+Impedacja linii dla niskiej i pełnej prędkości wynosi według specyfikacji
+ 90\InsetSpace ~
+
+\begin_inset Formula $\Omega\ \pm$
+\end_inset
+
+\InsetSpace ~
+15%.
+ Tryb wysokiej prędkości wymaga stałego prądu 17,78\InsetSpace ~
+mA dla sygnalizacji,
+ co ma redukować poziom szumu.
+\end_layout
+
+\begin_layout Standard
+Identyfikacja prędkości urządzenia odbywa się przez podciąganie lini D+
+ do 3,3\InsetSpace ~
+V dla pełnej prędkości lub przez podciąganie D- do 3,3\InsetSpace ~
+V dla niskiej
+ prędkości przez rezystor 1,5\InsetSpace ~
+k
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Brak jednego z tych podciągnięć spowoduje niewykrycie urządzenia.
+ Część układów scalonych posiada te rezystory wbudowane, można je wtedy
+ kontrolować programowo, jednak część wymaga rezystora zewnętrznego według
+ specyfikacji.
+ Identyfikacja wysokiej prędkości urządzanie odbywa się na drodze negocjacji
+ z hubem, a po jego włączeniu rezystor podciągający jest odłączany.
+\end_layout
+
+\begin_layout Subsection
+Identyfikacja urządzeń USB
+\end_layout
+
+\begin_layout Standard
+Interfejs USB wspiera filozofię włącz i działaj (ang.
+ 
+\emph on
+Plug and Play
+\emph default
+) wraz z dynamicznym ładowaniem sterowników.
+ Użytkownik wpina urządzenie do magistrali i następuje jego automatyczna
+ identyfikacja.
+ Podobnie, po zakończeniu pracy wystarczy poprostu odłączyć urządzenie i
+ nastąpi automatyczna identyfikacja odpięcia z magistrali.
+ Ładowanie i usuwanie z pamięci sterowników urządzenia następuje automatycznie.
+ Przy pierwszym ładowaniu sterowników system operacyjny może zarządać wskazania
+ fizycznej lokalizacji plików sterownika urządzenia.
+ Identyfikacja urządzeń następuje poprzez dwa numery identyfikacyjne PID
+ (ang.
+ 
+\emph on
+Product IDentification
+\emph default
+ -- identyfikator produktu) i VID (ang.
+ 
+\emph on
+Vendor IDenticifation
+\emph default
+ -- identyfikator producenta).
+ Uzyskanie numeru producenta wymaga wykupienia licencji od USB Implementation
+ Forum
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Szczegóły dotyczące rejestracji numeru producenta (ang.
+ 
+\emph on
+Vendor ID
+\emph default
+) można znaleźć na stronie: http://www.usb.org/developers/vendor.html.
+\end_layout
+
+\end_inset
+
+, co kosztuje od $2000 w górę.
+ Jest to poważną barierą dla elektroniki amatorskiej.
+\end_layout
+
+\begin_layout Standard
+Problem identyfikatorów dla projektów amatorskich korzystających z USB został
+ jednak rozwiązany na następujące sposoby:
+\end_layout
+
+\begin_layout Itemize
+Projektant urządzenia stosujący układ mikrokontrolera z wbudowaną sprzętową
+ obsługą USB może wykorzystać numer produktu puli oferowanej przez producenta
+ układu.
+ Numer producenta będzie wtedy taki sam, jak producent układu scalonego.
+ Jest to rozwiąznie dopuszczalne tylko dla produktów niekomercyjnych.
+\end_layout
+
+\begin_layout Itemize
+Projektant urządzenia planujący rozpowszechniania lub sprzedaż urządzenia
+ może skorzystać z usług firm
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Taką ofertę mają między innymi: Mechanique (http://www.mecanique.co.uk), EZPrototyp
+es (http:://www.ezprototypes.com), MCS Electronics (http://mcselec.com).
+\end_layout
+
+\end_inset
+
+, które zarejestrowały swój identyfikator producenta i odsprzedają pojedyncze
+ identyfikatory produktu dla zainteresowanych elektroników lub małych firm,
+ których budżet nie pozwala na rejestrację w USB Impelentation Forum.
+\end_layout
+
+\begin_layout Standard
+Oba powyższe rozwiązania nie pozwalają na stosowanie zastrzeżonego logo
+ certyfikowanego produktu USB, którego licencja dopuszcza tylko firmy mające
+ podpisaną umowę z USB Implementation Forum.
+\end_layout
+
+\begin_layout Subsection
+Metody implementacji
+\end_layout
+
 \begin_layout Chapter
 Mikrokontrolery
 \end_layout
@@ -372,14 +879,15 @@ name "sec:ARM"
 
 \end_inset
 
-ARM
+ARM Limited
 \end_layout
 
 \begin_layout Standard
-Firma ARM nie jest producentem układów scalonych mikroprocesorów, lecz zajmuje
- się projektowaniem rdzeni procesorów oraz sprzedażą właśności intelektualnej
- do tych projektów firmom trzecim, głównie uznanym producentom układów mikroproc
-esorowych, o których mowa w tym rozdziale.
+Firma ARM Limited z siedzibą w Wielkiej Brytanii, nie jest producentem układów
+ scalonych mikroprocesorów, lecz zajmuje się projektowaniem rdzeni procesorów
+ oraz sprzedażą właśności intelektualnej do tych projektów firmom trzecim,
+ głównie uznanym producentom układów mikroprocesorowych, o których mowa
+ w tym rozdziale.
  Rdzenie serii ARM w kolejnych wcieleniach cieszą się ogromną popularnością
  producentów urządzeń codziennego użytku potrzebujących wysokich wydajności,
  takich jak telefony komórkowe, przenośne odtwarzacze DVD oraz wiele innych.
@@ -472,6 +980,7 @@ width "34mm"
 status open
 
 \begin_layout Standard
+\noindent
 \begin_inset Graphics
 	filename images/jazelle_logo.png
 	lyxscale 30
@@ -528,21 +1037,21 @@ key "jazelle-wp"
 \end_layout
 
 \begin_layout Section
-Freescale
+Freescale Semiconductor
 \end_layout
 
 \begin_layout Standard
-Firma Freescale
+Firma Freescale Semiconductor
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Standard
-Strona producenta: http://www.freescale.com
+Strona producenta: http://www.freescale.com.
 \end_layout
 
 \end_inset
 
-to korporacja powstała z wydzielenia działu układów scalonych firmy Motorola.
+ to korporacja powstała z wydzielenia działu układów scalonych firmy Motorola.
  Układy scalone Motoroli od kilkudziesięciu lat mają uznaną pozycję na rynku
  elektoniki cyfrowej, a udział Motoroli w konsorcjum tworzącym rdzeń PowerPC
  odcisnął duże piętno na tej architekturze.
@@ -576,6 +1085,7 @@ width "3cm"
 status open
 
 \begin_layout Standard
+\noindent
 \begin_inset Graphics
 	filename images/logo_power_org_black.gif
 	lyxscale 50
@@ -650,6 +1160,7 @@ sideways false
 status open
 
 \begin_layout Standard
+\noindent
 \begin_inset Graphics
 	filename vector/mpc885-block-diagram.svg
 	lyxscale 20
@@ -801,13 +1312,14 @@ Pulse Width Modulation
 \end_layout
 
 \begin_layout Section
-Atmel
+Atmel Corporation
 \end_layout
 
 \begin_layout Standard
-Firma Atmel oferuje wiele różnych konstrukcji procesorów, z których najpopularni
-ejsze to cała rodzina mikrokontrolerów AVR -- 8 bitowych układów o architekturze
- RISC, ciesząca się ogromną popularnością wśród amatorów.
+Firma Atmel Corporation oferuje wiele różnych konstrukcji procesorów, z
+ których najpopularniejsze to cała rodzina mikrokontrolerów AVR -- 8 bitowych
+ układów o architekturze RISC, ciesząca się ogromną popularnością wśród
+ amatorów.
  Wiele projektów elektronicznych dostępnych w internecie opartych jest właśnie
  o układy z tej rodziny.
  Oprócz tego Atmel oferuje szeroką gamę układów opartych o rdzeń ARM.
@@ -913,6 +1425,7 @@ width "15col%"
 status open
 
 \begin_layout Standard
+\noindent
 \begin_inset Graphics
 	filename images/BF_chip_100x100.jpg
 	scale 50
@@ -960,9 +1473,10 @@ TigerSHARC
 \begin_inset Wrap figure
 placement r
 width "15col%"
-status collapsed
+status open
 
 \begin_layout Standard
+\noindent
 \begin_inset Graphics
 	filename images/TS_chip_100x100.jpg
 	scale 50
@@ -995,9 +1509,10 @@ SHARC
 \begin_inset Wrap figure
 placement r
 width "15col%"
-status collapsed
+status open
 
 \begin_layout Standard
+\noindent
 \begin_inset Graphics
 	filename images/sharc_chip_100x100.jpg
 	scale 50
@@ -1030,6 +1545,19 @@ Szerokość słowa rozkazu tych procesorów do 48 bitów, a liczby całkowitej
  Współpraca pomiędzy wieloma procesorami w systemie może być realizowana
  szeregowo, gdyż SHARC oferują wiele niezależnych interfejsów szeregowych
  na pojedynczym układzie.
+\end_layout
+
+\begin_layout Chapter
+Narzędzia
+\end_layout
+
+\begin_layout Section
+\begin_inset LatexCommand label
+name "sec:JTAG-ICE"
+
+\end_inset
+
+JTAG ICE mk-II
 \end_layout
 
 \begin_layout Part
