@@ -132,8 +132,8 @@ Wstęp
 Niedocenianym obszarem współczesnej inżynierii jest robotyka.
  Łączy ona w sobie wiedzę z dziedziny elektroniki, automatyki, mechaniki
  oraz inżynierii oprogramowania.
- Wielu nawet dziś uważa robotykę za zabawę, a nie poważną dziedzinę badawczo--ro
-zwojową.
+ Wielu nawet dziś uważa robotykę za zabawę, a nie poważną dziedzinę badawczo-roz
+wojową.
  Lecz sukcesy takich projektów jak Mars Pathfinder czy DARPA Grand Challanger
  pokazują rosnące znaczenie robotyki we współczesnym świecie.
  Bill Gates powiedział: 
@@ -145,6 +145,99 @@ Wiek XX był erą komputerów, wiek XXI będzie erą robotów
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+Słowo 
+\begin_inset Quotes eld
+\end_inset
+
+robot
+\begin_inset Quotes erd
+\end_inset
+
+ zostało po raz pierwszy użyte w sztuce 
+\begin_inset Quotes eld
+\end_inset
+
+R.U.R.
+\begin_inset Quotes erd
+\end_inset
+
+ (cz.
+ 
+\emph on
+Rosumovi Uměli Roboti
+\emph default
+ - Roboty Uniwersalne Rossuma), której autorem jest Karel Čapek - jeden
+ z najbardziej uznanych pisarzy czeskich.
+ Pierwotnie słowo to odnosiło się do istot żywych, sztucznie produkowanej
+ uproszczonej wersji ludzi, jednaże dziś określa urządzenia mechaniczne.
+ Termin 
+\begin_inset Quotes eld
+\end_inset
+
+robotyka
+\begin_inset Quotes erd
+\end_inset
+
+ użył poraz pierwszy znany autor literatury fantastycznej Isaac Asimov w
+ roku 1942 roku w opowiadaniu 
+\begin_inset Quotes eld
+\end_inset
+
+Zabawa w berka
+\begin_inset Quotes erd
+\end_inset
+
+ (ang.
+ 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Runaround
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+).
+ W jego literaturze pojawiają się również słynne trzy prawa robotyki:
+\end_layout
+
+\begin_layout Enumerate
+Robot nie może skrzywdzić człowieka, ani przez zaniechanie działania dopuścić,
+ aby człowiek doznał krzywdy.
+\end_layout
+
+\begin_layout Enumerate
+Robot musi być posłuszny rozkazom człowieka, chyba że stoją one w sprzeczności
+ z Pierwszym Prawem.
+\end_layout
+
+\begin_layout Enumerate
+Robot musi chronić sam siebie, jeśli tylko nie stoi to w sprzeczności z
+ Pierwszym lub Drugim Prawem.
+ 
+\end_layout
+
+\begin_layout Standard
+Idea sztucznej istoty pojawia się w historii znacznie wcześniej, w mitologii
+ jest wiele sztucznych istot.
+ Choć najbardziej znaną sztuczną istotą jest Golem, choć ten najbardziej
+ legendarny pojawia się w drugiej połowie XVI jako dzieło rabina Jehudę
+ Löw ben Bezalela z Pragi.
+ Najstarszy zachowany projekt humanoidalnej sztucznej istoty to rysunki
+ Leonarda da Vinci przedstawiające mechanicznego rycerza, który miał siadać,
+ poruszać rękami, głową oraz szczęką.
+ Pierwsze znane mechanizmy przypominające roboty są datowane na rok 1738
+ i są dziełem Jacquesa de Vaucanson.
+ Zbudował on androida grającego na flecie, gracza na tamburynie (obie konstrukcj
+e nie przetrwały rewolucji francuskiej) oraz mechaniczną kaczkę.
+ On też jako pierwszy zastosował walec do sterowania procesem produkcyjnym
+ zamiast karty perforowanej.
 \end_layout
 
 \begin_layout Standard
