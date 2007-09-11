@@ -1640,6 +1640,77 @@ Szerokość słowa rozkazu tych procesorów do 48 bitów, a liczby całkowitej
  na pojedynczym układzie.
 \end_layout
 
+\begin_layout Section
+Infineon Technologies
+\end_layout
+
+\begin_layout Standard
+Firma Infineon Technologies z siedzibą w Niemczech to producent układów
+ półprzewodnikowych znany przede wszystkim z układłow pamięci DRAM.
+\end_layout
+
+\begin_layout Section
+Texas Instruments
+\end_layout
+
+\begin_layout Standard
+Firma Texas Instruments jest bardzo znanym producentem elektroniki dla zastosowa
+ń wojskowych i słynie z kalkulatorów naukowych, których rola spadła w dziesiejsz
+ych czasach, gdy dostęp do notebooków i palmtopów jest na porządku dziennym.
+ Najważniejszą dziedziną działania tej firmy jest aktualnie rozwijanie nowatorsk
+ich technologii, takich jak DLP.
+ Mikroprocesory tej firmy mają ogromny udział w rynku telefonii komórkowej.
+\end_layout
+
+\begin_layout Section
+Microchip Technology
+\end_layout
+
+\begin_layout Standard
+Firma Microchip Technology z siedzibą w USA to producent bardzo znanych
+ układów PIC, które są 8 lub 16-bitowymi mikrokontrolerami w Polsce często
+ stosowanymi do celów edukacyjnych.
+ Cechą szczególną układów PIC jest ich prostota, co w sytuacjach budowy
+ bardoz prostych urządzeń kontrolnych ma niebagatelne znaczenie.
+ Brak jest w ofercie Microchip Technology układów o architekturze 32-bitowej.
+ 
+\end_layout
+
+\begin_layout Section
+NXP Semiconductors
+\end_layout
+
+\begin_layout Standard
+Firma NXP Semiconductors z siedzibą w Holandii jest kontynuatorem dokonań
+ firmy Philips w zakresie scalonych układów półprzewodnikowych.
+ Wsród nich znajdują się układy mikrokontrolerów z rodziny 80C51 oraz układy
+ oparte o rdzenie ARM7 i ARM9 opisane w rozdziale 
+\begin_inset LatexCommand ref
+reference "sec:ARM"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+STMicroelectronics
+\end_layout
+
+\begin_layout Standard
+Firma STMicroelectronics z siedzibą w Szwajcarii jest twórcą i producentem
+ znanych układów 8-bitowych serii ST6 i ST7.
+ Ma w swojej ofercie również 16-bitowe układy serii ST10.
+ Rodzina 32-bitowych układów STM32, STR7 i STR9 produkowanych przez tą firmę,
+ to konstrukcje bazujące na rdzeniach z firmy ARM (szerzej rozdział 
+\begin_inset LatexCommand ref
+reference "sec:ARM"
+
+\end_inset
+
+).
+\end_layout
+
 \begin_layout Chapter
 Narzędzia
 \end_layout
