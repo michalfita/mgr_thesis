@@ -283,6 +283,11 @@ Interfejsy
 \end_layout
 
 \begin_layout Section
+\begin_inset LatexCommand label
+name "sec:Interfejs-JTAG"
+
+\end_inset
+
 Interfejs JTAG
 \end_layout
 
@@ -1658,8 +1663,111 @@ Firma Texas Instruments jest bardzo znanym producentem elektroniki dla zastosowa
 ń wojskowych i słynie z kalkulatorów naukowych, których rola spadła w dziesiejsz
 ych czasach, gdy dostęp do notebooków i palmtopów jest na porządku dziennym.
  Najważniejszą dziedziną działania tej firmy jest aktualnie rozwijanie nowatorsk
-ich technologii, takich jak DLP.
- Mikroprocesory tej firmy mają ogromny udział w rynku telefonii komórkowej.
+ich technologii, takich jak DLP oraz projektowanie i produkcja szerokiej
+ gamy układów scalonych dla różnych zastosowań w elektronice.
+ Klientami Texas Instruments są firmy działające w każdej istniejącej brażny
+ przemysłu.
+\end_layout
+
+\begin_layout Standard
+Mikroprocesory tej firmy mają ogromny udział w rynku telefonii komórkowej.
+ Wydajność i możliwości układów tej firmy przyczyniła się do znacznego postępu
+ w dziedzinie telefonii 3G, w krótce prawdopodobnie 4G.
+ Wśród oferowanych przez Texas Instruments układów są również 32 bitowe
+ mikrokontrolery, w tym również układy o cech DSP, lub z rdzeniami DSP zintegrow
+ane (patrz: OMAP).
+\end_layout
+
+\begin_layout Subsection
+MSP430
+\end_layout
+
+\begin_layout Standard
+Układu serii MSP430 to nastawione na oszczędność energii 16 bitowe układy
+ RISC, które cechują się małymi rozmiarami i bardzo niską ceną.
+ Oferowane są w szerokiej gamie wersji, w czterech głównych gałęziach, które
+ rozróżnia obsługa wyświetlacza LCD lub jej brak, oraz maksymalna wydajność
+ oraz napięcia zasilania.
+\end_layout
+
+\begin_layout Standard
+Przykładowo układ mikrokontrolera MSP430FG4618 wyposażony w 116\InsetSpace ~
+kB pamięci
+ Flash, 8\InsetSpace ~
+kB RAM, zasilany napięciem 2,2\InsetSpace ~
+V pobiera tylko 400\InsetSpace ~
+
+\begin_inset Formula $\mu$
+\end_inset
+
+A w trakcie aktywności przy 1\InsetSpace ~
+MHz taktowania, 1,3\InsetSpace ~
+
+\begin_inset Formula $\mu$
+\end_inset
+
+A w trakcie spoczynku i 0,22\InsetSpace ~
+
+\begin_inset Formula $\mu$
+\end_inset
+
+A w trybie podtrzymywania pamięci.
+ Układ ten został przewidziany do przenośnych urządzeń medycznych.
+\end_layout
+
+\begin_layout Subsection
+C2000
+\end_layout
+
+\begin_layout Standard
+Układy rodziny TMS320C2000 są określane przez producenta jako cyfrowe kontrolery
+ sygnałowe DSC (ang.
+ 
+\emph on
+Digital Signal Controller
+\emph default
+).
+ Jest to hybryda cech mikrokontrolera RISC z architekturą DSP, która przenaczo
+ na jest do szybkiej analizy sygnałów w urządzeniach pomiarowych i pomiarowo-ste
+rujących.
+ Wszystkie układy z tej rodziny posiadają wbudowane kanały PWM, które doskonale
+ nadają się do sterowania urządzeń elektromechanicznych.
+ Dodatkowo dostępne są wersje wspierające interfejsy CAN, SCI, SPI, I
+\begin_inset Formula $^{\text{2}}$
+\end_inset
+
+C.
+\end_layout
+
+\begin_layout Standard
+Istotną cechą dostępną w tej rodzinie jest gałąź układów oznaczna symbolem
+ TMS320F283xx, która posiada sprzętową jednostkę do operacji zmiennoprzecinkowyc
+h.
+ Wydajność maksymalna osiągana w tych układach dochodzi do 300 MFLOPS przy
+ 150 MHz zegarze taktującym rdzeń mikrokontrolera.
+\end_layout
+
+\begin_layout Standard
+Dodatkową cechą istotną z punktu widzenia konstruktorów i programistów systemu
+ na bazie tych mikorokontrolerów, jest sprzętowe wparcie dla JTAG (patrz
+ rozdział 
+\begin_inset LatexCommand ref
+reference "sec:Interfejs-JTAG"
+
+\end_inset
+
+) pracującego z pełną prędkością układu.
+ Zastosowanie JTAG do uruchamiania systemu wymaga zastosowania odpowiedniego
+ emulatora, które znajdują się w bogatej ofercie kilku firm współpracujących.
+ Oferta układów uruchomieniowych dla tej serii mikrokontrolerów jest bogata,
+ jednakże produkty Texas Instruments są drogie.
+ Sztandarowe środowisko programistyczne Code Composer Studio również należy
+ do drogich narzędzi, choć ewaluacyjne wersje są dostępne za darmo nawet
+ na 120 dni.
+\end_layout
+
+\begin_layout Subsection
+TMS470
 \end_layout
 
 \begin_layout Section
