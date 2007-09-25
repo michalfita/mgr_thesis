@@ -117,16 +117,19 @@
 \mgr@wybor@spec
 %------ Dodatkowe polecenia
 \let\@date\@empty
-\def\promotorJeden#1{\gdef\@promotorJeden{#1}}
-\def\promotorDwa#1{\gdef\@promotorDwa{#1}}
+\newcommand{\promotorJeden}[1]{\gdef\@promotorJeden{#1}}
+%%%%\def\promotorJeden#1{\gdef\@promotorJeden{#1}}
+\gdef\@promotorDwa{}
+\newcommand{\promotorDwa}[1]{\gdef\@promotorDwa{#1}}
+%%%%\def\promotorDwa#1{\gdef\@promotorDwa{#1}}
 \def\authorJeden#1{\gdef\@authorJeden{#1}}
 \def\authorDwa#1{\gdef\@authorDwa{#1}}
-\def\@promotorJeden{\ClassError{mgrwms}{Brak promotora pracy!}\@ehc}
-\def\@promotorDwa{\ClassError{mgrwms}{Brak promotora pracy!}\@ehc}
+\def\@promotorJeden{\PackageError{mgrwms}{Brak promotora pracy!}\@ehc}
+%%%%\def\@promotorDwa{\PackageInfo{mgrwms}{Brak drugiego promotora pracy.}\@ehc}
 \def\nralbumuJeden#1{\gdef\@nralbumuJeden{#1}}
 \def\nralbumuDwa#1{\gdef\@nralbumuDwa{#1}}
-\def\@nralbumuJeden{\ClassError{mgrwms}{Brak numeru albumu!}\@ehc}
-\def\@nralbumuDwa{\ClassError{mgrwms}{Brak numeru albumu!}\@ehc}
+\def\@nralbumuJeden{\PackageError{mgrwms}{Brak numeru albumu!}\@ehc}
+\def\@nralbumuDwa{\PackageInfo{mgrwms}{Brak numeru drugiego albumu.}\@ehc}
 \ifmgr@pdftex 
   \def\@orzelek{orzelAGH.jpg}
   \def\@logoWMS{logoWMS.pdf}
