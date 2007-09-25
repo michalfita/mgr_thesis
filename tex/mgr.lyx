@@ -1,4 +1,4 @@
-#LyX 1.5.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 276
 \begin_document
 \begin_header
@@ -27,7 +27,7 @@
 \font_sf_scale 100
 \font_tt_scale 100
 \graphics default
-\paperfontsize 12
+\paperfontsize 11
 \spacing onehalf
 \papersize a4paper
 \use_geometry true
@@ -129,12 +129,99 @@ Wstęp
 \end_layout
 
 \begin_layout Standard
+Słowo 
+\begin_inset Quotes eld
+\end_inset
+
+robot
+\begin_inset Quotes erd
+\end_inset
+
+ pojawia się po raz pierwszy w sztuce, której autorem jest czeski pisarz
+ Karel Čapek.
+ Określenie to szybko trafia pomiędzy okładki dzieł literatury fantastycznej,
+ zmieniając pierwotne znaczenie ze sztucznie chodowanego człowieka na sztucznie
+ konstruowanego człowieka, by przez kolejne lata ewoluować do dziesiejszego
+ znaczenia elektromechanicznej maszyny wykonującej różnorodne prace.
+ Premiera czeskiej sztuki miała miejsce w 1921 roku, a dziś prawie wiek
+ później słowo 
+\begin_inset Quotes eld
+\end_inset
+
+robot
+\begin_inset Quotes erd
+\end_inset
+
+ jest tak powszechne, że mało kto wie, jaka jest jego geneza.
+ Tym bardzej niewielu wie, że termin 
+\begin_inset Quotes eld
+\end_inset
+
+robotyki
+\begin_inset Quotes erd
+\end_inset
+
+ jako dziedziny badań naukowych stworzył Isaac Asimov, który użył go w swoim
+ opowiadaniu w 1942 roku.
+\end_layout
+
+\begin_layout Standard
+Słowo to z kart książkek szybko trafia do świata nauki i zaczyna żyć własnym
+ życiem w raz z postępem technologii elektronicznej i mechanicznej.
+ Choć dziś nadal robotyka przez wielu traktowana jest jako zabawa, niż poważna
+ dziedzina naukowa, to jednak znaczenie robotyki we współczesnym świecie
+ gwałtownie rośnie.
+ Stosowanie robotów w produkcji przemysłowej jest już standardem; nie przypomina
+ją one wyglądem człowieka, lecz za to są dobrze przystosowane do pracy,
+ którą mają realizować.
+\end_layout
+
+\begin_layout Standard
+Ustanowienie 13 września 2007 roku -- przy wsparciu ze strony Google --
+ nagrody 
+\noun on
+Lunar X Prize
+\noun default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Szczegóły na stronie fundacji X Prize: 
+\begin_inset LatexCommand htmlurl
+target "http://www.xprize.org"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ stawia robotykę przed nowym wyzwaniem wspieranym przez pieniądze prywantych
+ inwestorów na nową niespotykaną dotąd skalę, porównywalną z tą, która towarzysz
+yła do 2004 roku wyścigowi o pobicie bariery atmosfery i kosmosu przez prywatny
+ pojazd kosmiczny.
+ Tym razem walka toczy się o konstrukcję robota, który jako pierwszy wyląduje
+ na księżycu i pokona co najmniej 500 metrów po jego powierzchni przekazując
+ na Ziemię zdjęcia i film video.
+ Ogromna nagroda finansowa napędza do pracy siły i umysły, które wcześniej
+ wogóle nie zakładały zajęcia się takim problemem.
+ Czeka nas fascynująca rywalizacja, a na rezultat ludzkość będzie czekać
+ z tak samo zapartym tchem, jak na start Space Ship One.
+\end_layout
+
+\begin_layout Standard
++
+\end_layout
+
+\begin_layout Standard
 Niedocenianym obszarem współczesnej inżynierii jest robotyka.
  Łączy ona w sobie wiedzę z dziedziny elektroniki, automatyki, mechaniki
  oraz inżynierii oprogramowania.
  Wielu nawet dziś uważa robotykę za zabawę, a nie poważną dziedzinę badawczo-roz
 wojową.
- Lecz sukcesy takich projektów jak Mars Pathfinder czy DARPA Grand Challanger
+ Lecz sukcesy takich projektów jak Mars Pathfinder czy DARPA Grand Challange
  pokazują rosnące znaczenie robotyki we współczesnym świecie.
  Bill Gates powiedział: 
 \begin_inset Quotes eld
@@ -279,6 +366,56 @@ Wprowadzenie teoretyczne
 \end_layout
 
 \begin_layout Chapter
+Historia
+\end_layout
+
+\begin_layout Section
+Starożytność
+\end_layout
+
+\begin_layout Section
+Średniowiecze
+\end_layout
+
+\begin_layout Section
+Czasy Napoleońskie
+\end_layout
+
+\begin_layout Standard
+W okresie panowania Napoleona i jego europejskich podbojów do historii zapisał
+ się 
+\begin_inset Quotes eld
+\end_inset
+
+Mechaniczny Turek
+\begin_inset Quotes erd
+\end_inset
+
+, który miałbyć wybitnym automatem do gry w szachy.
+ Skonstruowany w 1770 roku by zaimponować cesarzowej Marii Teresie przez
+ barona Wolfganga von Kempelena mechanizm przez prawie 80 lat podbijał Europę
+ i Amerykę.
+ W historii i legendzie zapisał się, gdy rzekomo w 1809 roku pokonał samego
+ Napoleona, uważanego za szachowego mistrza
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Niektóre źródła podają, że mistrzostwo Napolena wynikało ze strachu jego
+ przeciwników przed przegraną.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Prawdziwy sekret tej mechanicznej maszyny został ujawniony dopiero w 1859
+ roku, już po zniszczeniu maszyny w pożarze Muzeum Peale w 1854 roku.
+\end_layout
+
+\begin_layout Chapter
 Interfejsy
 \end_layout
 
@@ -338,14 +475,14 @@ Boundary Scan Register
 \end_layout
 
 \begin_layout Standard
-W dziesiejszych czasach znaczenie interfejsu IEEE 1149.1 i wszelkich jego
+W dzisiejszych czasach znaczenie interfejsu IEEE 1149.1 i wszelkich jego
  pochodnych specyficznych dla różnych producentów ma tak naprawdę największe
  znaczenie na etapie przygotowywania oprogramowania dla urządzeń wyposażonych
  w mikrokontrolery.
- O ile architetkura sprzętowa szeregowej komunikacji z wewnętrznymi układami
+ O ile architektura sprzętowa szeregowej komunikacji z wewnętrznymi układami
  mikrokontrolerów została zachowana to każdy producent stosuje swoje rozszerzeni
 a i wymaga własnego oprogramowania do sterowania interfejsem, które umożliwia
- programowanie pamięci flash w układach oraz przeprowadzanie złożonego procesu
+ programowanie pamięci Flash w układach oraz przeprowadzanie złożonego procesu
  uruchomieniowego wspomaganego przez sprzętowe pułapki.
  Programowanie układów scalonych z zastosowaniem tej metody (ale nie tylko)
  nazywa się programowaniem w systemie (ang.
@@ -354,7 +491,7 @@ a i wymaga własnego oprogramowania do sterowania interfejsem, które umożliwia
 in-system programming
 \emph default
 , w skrócie ISP).
- Przykłady wielu mikrokontrolerów 8-bitowych pokazują, że ISP nie wumaga
+ Przykłady wielu mikrokontrolerów 8-bitowych pokazują, że ISP nie wymaga
  istnienia pełnego IEEE 1149.1 a wymaga tylko dostarczenia wyprowadzeń pozwalając
 y szeregowo programować pamięć Flash lub sieć bramek wewnątrz układu scalonego
  (tak robi ATMEL z rodziną układów 8-bitowych i Xilinx dla układów CPLD).
@@ -415,11 +552,11 @@ reference "fig:Schemat-blokowy-implementacji"
  diagram wewnętrznej architektury JTAG wbudowanej w układzie pokazuje, jak
  pojedyncze wyprowadzenia układu mogą być testowane i ustawiane przez pojedyncze
  komórki rejestru.
- Rejestr ten przypomina klasyczy rejestr przesuwny i jest aktywowany w trybie
- testowym przez wejście TMS, przy czym w zależności od instrukcji przesłanej
- na wejście TDI wartość komórki jest odczytywana i wyprowadzana poprzed
- odpowiedź wysyłaną na wyjście TDO, bądź programowana wartością przesłaną
- razem z rozkazem JTAG.
+ Rejestr ten przypomina klasyczny rejestr przesuwny i jest aktywowany w
+ trybie testowym przez wejście TMS, przy czym w zależności od instrukcji
+ przesłanej na wejście TDI wartość komórki jest odczytywana i wyprowadzana
+ poprzez odpowiedź wysyłaną na wyjście TDO, bądź programowana wartością
+ przesłaną razem z rozkazem JTAG.
  Rejestr ten jest taktowany częstotliwością podawaną przez urządzenie testujące
  na wejście TMS, kierunek działania rejestru jest jeden.
  Za poprawną obsługę danych pochodzących z poszczególnych komórek testujących
@@ -430,9 +567,15 @@ reference "fig:Schemat-blokowy-implementacji"
 Obsługa interfejsu odbywa się szeregowo z dużą szybkością, często zbliżoną
  do prędkości pracy układu w gotowym systemie, stąd wymagania dla urządzeń
  obsługujących interfejs zgodny z IEEE 1149.1 we współczesnych układach 32
- bitowych są naprawdę wyśróbowane, co wpływa również na cenę tych urządzeń.
+ bitowych są naprawdę wyśrubowane, co wpływa również na cenę tych urządzeń.
  Jednym z takich urządzeń firmy Atmel jest JTAG ICE mk-II opisywany w rozdziale
- <!-- tu referencja do rozdziału o narzędziach -->.
+ 
+\begin_inset LatexCommand vref
+reference "sec:JTAG-ICE"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -472,7 +615,7 @@ anie sterujące potrafi dość dokładnie obliczyć przewidywany procent pokryci
  uszkodzeń.
  Umożliwia także precyzyjne zlokalizowanie uszkodzenia, w przypadku, gdy
  otrzymany na wyjściu ścieżki ciąg bitów, nie będzie zgadzał się z przewidywanym.
- (
+ (na podstawie 
 \begin_inset LatexCommand cite
 key "jtag-elektronik-online"
 
@@ -541,7 +684,7 @@ Kolejna zaleta posiadania JTAG w układzie to możliwość jego testowania przez
  Daje to możliwość regularnego kontrolowania sprawności układu, dzięki czemu
  jest możliwe zapewnienie wysokiego poziomu bezpieczeństwa i jakości pracy
  całego urządzenia.
- (
+ (na podstawie 
 \begin_inset LatexCommand cite
 key "jtag-elektronik-online,why-jtag-works"
 
@@ -585,7 +728,7 @@ On-chip debugging
 \end_layout
 
 \begin_layout Standard
-Rozszerzenia producentów wbududowane w układ pozwalają na stosowanie JTAG
+Rozszerzenia producentów wbudowane w układ pozwalają na stosowanie JTAG
  do uruchamiania i odpluskwiania programów działających w rzeczywistym systemie
  (ang.
  
@@ -624,8 +767,8 @@ reference "sec:JTAG-ICE"
  oraz zestaw EVK1100 opisany w rozdziale <brak>).
  Jednakże implementacja USB we własnym urządzeniu może być z wielu względów
  kłopotliwa.
- Poniższy opis techczny wyjaśni dlaczego tak jest i jakie stosuje się aktualnie
- rozwiązania tego problemu.
+ Poniższy opis techniczny wyjaśni dlaczego tak jest i jakie stosuje się
+ aktualnie rozwiązania tego problemu.
 \end_layout
 
 \begin_layout Standard
@@ -640,7 +783,7 @@ Standard USB został oficjalnie ogłoszony w 1996 roku przez konsorcjum złożon
 \begin_layout Description
 USB\InsetSpace ~
 1.1 Standard ten koryguje braki standardu w wersji 1.0 i stosowany od 1999
- roku jest do dziś w większości urządzeń wejścia-wyjścia, gdyż jest prostrzy
+ roku jest do dziś w większości urządzeń wejścia-wyjścia, gdyż jest prostszy
  w implementacji od USB 2.0.
  Obsługuje dwie standardowe prędkości transmisji danych 1,5\InsetSpace ~
 Mbit/s oraz 12\InsetSpace ~
@@ -665,26 +808,26 @@ Mbit/s.
 
 \begin_layout Standard
 Urządzenia podłączone do portów interfejsu USB nie wymagają dodatkowego
- zasialania w przypadku spełniania pewnych warunków, standardowo pojedynczy
+ zasilania w przypadku spełniania pewnych warunków, standardowo pojedynczy
  port może zostać obciążony prądem 100\InsetSpace ~
 mA.
  Po wykonaniu programowej konfiguracji port powinien umożliwiać pobór do
  500\InsetSpace ~
 mA.
- Fakt ten jest wykorzysytwany jest już nawet do ładownia telefonów komórkowych
+ Fakt ten jest wykorzystywany jest już nawet do ładownia telefonów komórkowych
  podłączonych przez port USB do komputera PC.
  Aktualnie trwają pracę nad stworzeniem standardu Powered USB, który umożliwi
  zasilanie urządzeń nawet napięciem 24\InsetSpace ~
 V i obciążeniem do 6\InsetSpace ~
 A, co pozwoliłoby
- na rezygnację z zasilania zewnętrznego takich urządeń jak drukarki, czy
+ na rezygnację z zasilania zewnętrznego takich urządzeń jak drukarki, czy
  skanery.
 \end_layout
 
 \begin_layout Standard
 Wśród nowości związanych z USB warto wspomnieć powstanie standardu Wireless
  USB, który zachowując zgodność komunikacyjną ze zwykłym USB miałby umożliwiać
- ustandaryzowaną bezprzewodową komunikację wielu urządzeń, w tym wejścia-wyjścia
+ standaryzowaną bezprzewodową komunikację wielu urządzeń, w tym wejścia-wyjścia
  oraz na przykład fotograficznych aparatów cyfrowych.
 \end_layout
 
@@ -716,7 +859,7 @@ OHCI (ang.
 Open Host Controller Interface
 \emph default
 ) opracowany wspólnie przez Compaq, Microsoft i National Semiconductor,
- który kładzie nawiększy nacisk na część sprzętową redukując oprogramowanie
+ który kładzie największy nacisk na część sprzętową redukując oprogramowanie
  kontrolera do minimum.
 \end_layout
 
@@ -739,19 +882,18 @@ V oraz GND.
  Pozostałe dwa przewody tworzą skręconą parę transmitującą sygnały różnicowe.
  Wykorzystywane jest przy tym kodowanie NRZI (ang.
  Non Return to Zero Invert) do transmisji danych zawierające pole synchronizacyj
-ne dla uzgodniania sychronizacji zegarów urządzeń podpiętych do magistrali.
- Zastosowane kodowanie NRZI działa na zasadzie zmiany stanu na lini transmisyjne
-j w sytuacji transmitowania logicznej jedynki.
+ne dla uzgadniania synchronizacji zegarów urządzeń podpiętych do magistrali.
+ Zastosowane kodowanie NRZI działa na zasadzie zmiany stanu na linii transmisyjn
+ej w sytuacji transmitowania logicznej jedynki.
  Wadą tego rozwiązania jest utrata synchronizacji przy długich ciągach zer,
- stąd dodanie pól sycnchronizacyjnych w logicznej strukturze transmisji
- USB.
+ stąd dodanie pól synchronizacyjnych w logicznej strukturze transmisji USB.
 \end_layout
 
 \begin_layout Standard
 Dla niskiej (1,5\InsetSpace ~
 MBit/s) i pełnej (12\InsetSpace ~
 Mbit/s) prędkości transmisji kodowanie
- różnicowego zera (oznaczanego sybolem 
+ różnicowego zera (oznaczanego symbolem 
 \begin_inset Quotes eld
 \end_inset
 
@@ -765,7 +907,7 @@ k
 \begin_inset Formula $\Omega$
 \end_inset
 
- podłączonym do masy, a linii D- poniżej 0,3\InsetSpace ~
+ podłączonym do masy, a linii D-- poniżej 0,3\InsetSpace ~
  poprzez rezystor 1,5\InsetSpace ~
 k
 \begin_inset Formula $\Omega$
@@ -781,7 +923,7 @@ J
 \begin_inset Quotes erd
 \end_inset
 
-) odbywa się przez podciąganie D- powyżej 2,8\InsetSpace ~
+) odbywa się przez podciąganie D-- powyżej 2,8\InsetSpace ~
 V i D+ poniżej 0,3\InsetSpace ~
 V poprzez
  te same rezystory.
@@ -794,7 +936,7 @@ J
 \end_inset
 
  jest zdefiniowany jako D+ większe o 200\InsetSpace ~
-mV od D-, a sygnał 
+mV od D--, a sygnał 
 \begin_inset Quotes eld
 \end_inset
 
@@ -803,7 +945,7 @@ K
 \end_inset
 
  jako D+ mniejsze o 200\InsetSpace ~
-,V od D-.
+mV od D--.
  Polaryzacja sygnału zamienia się dla wysokiej prędkości (480\InsetSpace ~
 Mbit/s) i 
 \begin_inset Quotes eld
@@ -826,18 +968,18 @@ K
 
 \begin_layout Standard
 Transceivery USB obsługują sygnalizację różnicową opisaną powyżej, ale również
- mogą indywidualnie terminować linie D- i D+, co jest stosowane do specjalnej
+ mogą indywidualnie terminować linie D-- i D+, co jest stosowane do specjalnej
  sygnalizacji na magistrali (jest to możliwe dzięki zasilaniu magistrali
  USB).
  Przykładowo sygnał SE0 jest otrzymywany przez utrzymanie niskiego stanu
- na obu liniach D- i D+.
- Nie można tego faktu pomijać przy implemetacji interfejsu USB, gdyż nie
+ na obu liniach D-- i D+.
+ Nie można tego faktu pomijać przy implementacji interfejsu USB, gdyż nie
  wystarczy porównywanie sygnałów różnicowych dla realizacji prawidłowej
  komunikacji po magistrali USB.
 \end_layout
 
 \begin_layout Standard
-Impedacja linii dla niskiej i pełnej prędkości wynosi według specyfikacji
+Impedancja linii dla niskiej i pełnej prędkości wynosi według specyfikacji
  90\InsetSpace ~
 
 \begin_inset Formula $\Omega\ \pm$
@@ -851,9 +993,9 @@ mA dla sygnalizacji,
 \end_layout
 
 \begin_layout Standard
-Identyfikacja prędkości urządzenia odbywa się przez podciąganie lini D+
+Identyfikacja prędkości urządzenia odbywa się przez podciąganie linii D+
  do 3,3\InsetSpace ~
-V dla pełnej prędkości lub przez podciąganie D- do 3,3\InsetSpace ~
+V dla pełnej prędkości lub przez podciąganie D-- do 3,3\InsetSpace ~
 V dla niskiej
  prędkości przez rezystor 1,5\InsetSpace ~
 k
@@ -882,10 +1024,10 @@ Plug and Play
 ) wraz z dynamicznym ładowaniem sterowników.
  Użytkownik wpina urządzenie do magistrali i następuje jego automatyczna
  identyfikacja.
- Podobnie, po zakończeniu pracy wystarczy poprostu odłączyć urządzenie i
- nastąpi automatyczna identyfikacja odpięcia z magistrali.
+ Podobnie, po zakończeniu pracy wystarczy po prostu odłączyć urządzenie
+ i nastąpi automatyczna identyfikacja odpięcia z magistrali.
  Ładowanie i usuwanie z pamięci sterowników urządzenia następuje automatycznie.
- Przy pierwszym ładowaniu sterowników system operacyjny może zarządać wskazania
+ Przy pierwszym ładowaniu sterowników system operacyjny może zażądać wskazania
  fizycznej lokalizacji plików sterownika urządzenia.
  Identyfikacja urządzeń następuje poprzez dwa numery identyfikacyjne PID
  (ang.
@@ -929,7 +1071,7 @@ Projektant urządzenia stosujący układ mikrokontrolera z wbudowaną sprzętow�
  obsługą USB może wykorzystać numer produktu puli oferowanej przez producenta
  układu.
  Numer producenta będzie wtedy taki sam, jak producent układu scalonego.
- Jest to rozwiąznie dopuszczalne tylko dla produktów niekomercyjnych.
+ Jest to rozwiązanie dopuszczalne tylko dla produktów niekomercyjnych.
 \end_layout
 
 \begin_layout Itemize
@@ -1144,7 +1286,13 @@ Firma Freescale Semiconductor
 status open
 
 \begin_layout Standard
-Strona producenta: http://www.freescale.com.
+Strona producenta: 
+\begin_inset LatexCommand htmlurl
+target "http://www.freescale.com"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -1179,7 +1327,7 @@ Firma Motorola w latach 1991--2004 wraz z IBM i Apple brała udział w pracach
  
 \begin_inset Wrap figure
 placement r
-width "3cm"
+width "2cm"
 status open
 
 \begin_layout Standard
@@ -1187,7 +1335,7 @@ status open
 \begin_inset Graphics
 	filename images/logo_power_org_black.gif
 	lyxscale 50
-	scale 50
+	width 2cm
 
 \end_inset
 
@@ -1206,7 +1354,13 @@ Istniejąca od 2004 roku, utworzona przez IBM fundacja na rzecz architektury
 \shape smallcaps
 Power
 \shape default
-, jej adres internetowy: http://www.power.org.
+, jej adres internetowy: 
+\begin_inset LatexCommand htmlurl
+target "http://www.power.org"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -1292,7 +1446,7 @@ W roku 1998 pojawiły się układy z linii PowerQUICC II oznaczane symbolami
 status open
 
 \begin_layout Standard
-abonencka linia cyfrowa (ang.
+Abonencka linia cyfrowa (ang.
  Digital Subscriber Line, DSL) stosowana w telekomunikacji naziemnej do
  oferowania szybkich łącz Internetowych; multiplekser dostępowy DSL to urządzeni
 e pozwalające na obsługę sygnału cyfrowego na analogowych liniach abonenckich.
@@ -1375,7 +1529,13 @@ cią do 300 MHz (w porównaniu z 60 MHz fla MC68060).
 status open
 
 \begin_layout Standard
-Więcej informacji na stronie http://www.linux-m68k.org.
+Więcej informacji na stronie 
+\begin_inset LatexCommand htmlurl
+target "http://www.linux-m68k.org"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -1433,7 +1593,13 @@ AVR32 to rodzina 32 bitowych mikrokontrolerów produkcji firmy Atmel
 status collapsed
 
 \begin_layout Standard
-Strona układów AVR32 u producenta: http://www.atmel.com/products/avr32/
+Strona układów AVR32 u producenta: 
+\begin_inset LatexCommand htmlurl
+target "http://www.atmel.com/products/avr32/"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1519,14 +1685,14 @@ Blackfin
 \begin_layout Standard
 \begin_inset Wrap figure
 placement r
-width "15col%"
+width "2cm"
 status open
 
 \begin_layout Standard
 \noindent
 \begin_inset Graphics
 	filename images/BF_chip_100x100.jpg
-	scale 50
+	width 2cm
 
 \end_inset
 
@@ -1570,14 +1736,14 @@ TigerSHARC
 \begin_layout Standard
 \begin_inset Wrap figure
 placement r
-width "15col%"
-status open
+width "2cm"
+status collapsed
 
 \begin_layout Standard
 \noindent
 \begin_inset Graphics
 	filename images/TS_chip_100x100.jpg
-	scale 50
+	width 2cm
 
 \end_inset
 
@@ -1606,14 +1772,14 @@ SHARC
 \begin_layout Standard
 \begin_inset Wrap figure
 placement r
-width "15col%"
+width "2cm"
 status open
 
 \begin_layout Standard
 \noindent
 \begin_inset Graphics
 	filename images/sharc_chip_100x100.jpg
-	scale 50
+	width 2cm
 
 \end_inset
 
