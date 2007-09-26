@@ -1,4 +1,4 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+#LyX 1.5.0 created this file. For more info see http://www.lyx.org/
 \lyxformat 276
 \begin_document
 \begin_header
@@ -377,13 +377,9 @@ Czasy Napoleońskie
 \begin_layout Standard
 W okresie panowania Napoleona i jego europejskich podbojów do historii zapisał
  się 
-\begin_inset Quotes eld
-\end_inset
-
+\shape slanted
 Mechaniczny Turek
-\begin_inset Quotes erd
-\end_inset
-
+\shape default
 , który miałbyć wybitnym automatem do gry w szachy.
  Skonstruowany w 1770 roku by zaimponować cesarzowej Marii Teresie przez
  barona Wolfganga von Kempelena mechanizm przez prawie 80 lat podbijał Europę
@@ -400,12 +396,65 @@ Niektóre źródła podają, że mistrzostwo Napolena wynikało ze strachu jego
 
 \end_inset
 
-.
+ oraz kilku innych wybitnych szachistów tamtych czasów, w tym Benjamina
+ Franklina.
+ 
 \end_layout
 
 \begin_layout Standard
-Prawdziwy sekret tej mechanicznej maszyny został ujawniony dopiero w 1859
- roku, już po zniszczeniu maszyny w pożarze Muzeum Peale w 1854 roku.
+Choć prawdziwy sekret tej mechanicznej maszyny został ujawniony dopiero
+ w 1859 roku, już po zniszczeniu maszyny w pożarze Muzeum Peale w 1854 roku,
+ to tajemnica wydała się wcześniej.
+ Tajemnica została zdradzona w 1834 roku przez szachistę o nazwisku Mälzl,
+ który nie stronił od alkoholu, a był wielokrotnie we wnętrzu 
+\shape slanted
+Turka
+\shape default
+ jako gracz przez kilka wcześniejszych lat.
+ W tym czasie 
+\shape slanted
+Turek
+\shape default
+ podróżował po Ameryce.
+\end_layout
+
+\begin_layout Standard
+Do czasu powstanie komputera DeepBlue w 1997 roku nie podjęto poważnej próby
+ przeciwstawienia maszyny największym mistrzom szachów.
+ Mechanizm ten jednak był szczytem technologii mechanicznej tamtego okresu
+ i można odważyć się na nazwanie go robotem sterowanym przez człowieka.
+ Mimo, że był dobrze kamuflowanym oszustem, przez kilkadzisiąt lat szokował
+ obesrwatorów wierzących, że 
+\shape slanted
+Turek
+\shape default
+ jest mechanicznym samodzielnym graczem.
+\end_layout
+
+\begin_layout Standard
+W historii 
+\shape slanted
+Mechanicznego Turka
+\shape default
+ jest też silny polski wątek, związany misją jaką brytyjski agent Beniamin
+ Bathurst miał wykonywać w roku 1806 mającą na celu porwanie Napoleona.
+ Przedmiotem pomagającym w dywersji miał być właśnie wspomniany 
+\shape slanted
+Turek
+\shape default
+ von Kempelena.
+ Ten rzekomy fakt historyczny jest dokładnie opisany w memoriale, do którego
+ dostęp uzyskał Waldemar Łysiak w trakcie studiów i zamienił potem na fabularyzo
+waną historię 
+\begin_inset LatexCommand cite
+key "szachista-lysiak"
+
+\end_inset
+
+.
+ Wiele osób wątpi, czy jest to historia prawdziwa, choć mowa w niej o polskim
+ zakonniku Stefanie Błażejewskim, którego życiorys zapisany w archiwach
+ klasztoru w Gostyniu odpowiada zakonnikowi opisywanemu jako sobowtór Napoleona.
 \end_layout
 
 \begin_layout Chapter
