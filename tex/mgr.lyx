@@ -4,13 +4,16 @@
 \begin_header
 \textclass mwbk
 \begin_preamble
+\usepackage{thumbpdf}
+
 \usepackage{fix-cm}
 
 \usepackage{type1ec}
 \usepackage[T1]{fontenc}
 
 
-\usepackage[pdftex,man,opt]{wmstitle}
+%\usepackage[pdftex,man,opt]{wmstitle}
+\usepackage[pdftex,type=mgr]{aghtitle}
 \usepackage[bookmarks, bookmarksopen=true, bookmarksnumbered=true, colorlinks=true, pdftitle={System sterowania robotem mobilnym}, pdfauthor={Michał Fita}]{hyperref}
 
 \usepackage[protrusion=true,expansion=true, tracking=true, spacing=true, kerning=true, selected=true, babel=true]{microtype}
@@ -106,7 +109,7 @@ System sterowania robotem mobilnym
 \end_layout
 
 \begin_layout Author
-Michał Fita
+Michał Fita,Dupek Pupkowski
 \end_layout
 
 \begin_layout Standard

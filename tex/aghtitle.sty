@@ -22,14 +22,28 @@
 % Ladowanie niezbednych zaleznosci
 \RequirePackage{ifthen}
 \RequirePackage{xkeyval}
+\RequirePackage{substr}
 \RequirePackage{calc}
+
+% Deklaracje liczników
+\newcounter{@authorCounter}
 
 % Deklaracje wartosci logicznych
 \newboolean{WhetherPdf} \setboolean{WhetherPdf}{false}
+\newboolean{WhetherMoreAuthors} \setboolean{WhetherMoreAuthors}{false}
 
 % Opcje pakietu
 \DeclareOptionX{pdftex}{\setboolean{WhetherPdf}{true}}
-\DeclareOptionX{type}[lic]{\def\agh@worktype{Praca Licencjacka}}
+\DeclareOptionX{type}[lic]{
+  \ifthenelse{\equal{#1}{lic}}
+    {\def\agh@worktype{Praca licencjacka}}{}
+  \ifthenelse{\equal{#1}{mgr}}
+    {\def\agh@worktype{Praca magisterska}}{}
+  \ifthenelse{\equal{#1}{inz}}
+    {\def\agh@worktype{Praca in¿ynierska}}{}
+  \ifthenelse{\equal{#1}{dr}}
+    {\def\agh@worktype{Praca doktorska}}{}
+}
 \ProcessOptionsX
 % Opcjonalne ladowanie
 \ifthenelse{\boolean{WhetherPdf}}
@@ -50,11 +64,42 @@
 \newcommand{\agh@s}{\@tabacckludge's} %{\char182}
 \newcommand{\agh@z}{\.z}              %{\char191}
 \newcommand{\agh@x}{\@tabacckludge'z} %{\char188}
+
 % Nowe komendy
-\renewcommand{\title}[1]{\def\agh@title{#1}}
-\renewcommand{\author}[1]{\def\agh@author{#1}}
+%\renewcommand{\title}[1]{\def\agh@title{#1}}
+%\renewcommand{\author}[1]{\def\agh@author{#1}}
+
+\newcommand{\authorIter}
+{
+  \def\@nauthor{\@author}
+  \def\@tmpauthor\@empty
+  \whiledo{\value{@authorCounter}>0}
+  {
+    \Large{\BeforeSubString{,}{\@nauthor}}\\
+    Nr albumu: \BeforeSubString{,}{\@nauthor}\\
+    \let\@tmpauthor\BehindSubString{,}{\@nauthor}
+    \let\@nauthor\@tmpauthor 
+    \addtocounter{@authorCounter}{-1}
+  }
+  \global\let\@nauthor\@empty
+  \global\let\@tmpauthor\@empty
+}
+
+\newcommand{\promotorJeden}[1]{}
+\newcommand{\promotorDwa}[1]{}
+\newcommand{\authorJeden}[1]{}
+\newcommand{\authorDwa}[1]{}
+\newcommand{\nralbumuJeden}[1]{}
+\newcommand{\nralbumuDwa}[1]{}
+
 % Uklad strony tytulowej
 \renewcommand{\maketitle}{
+  \IfSubStringInString{,}{\@author}{
+    \SubStringsToCounter{@authorCounter}{,}{\@author}
+    \stepcounter{@authorCounter}
+    \setboolean{WhetherMoreAuthors}{true}
+  }
+  
   \begin{titlepage}
   	
     \begin{center}
@@ -63,7 +108,7 @@
       \vspace*{\medskipamount}
       
       \begin{tabular}{c}
-        \large Akademia G{\agh@o}rniczo-Hutnicza im. Stanis{\agh@l}awa Staszica w Krakowie
+        \large{Akademia G{\agh@o}rniczo-Hutnicza im. Stanis{\agh@l}awa Staszica w Krakowie}
       \end{tabular}
       
       \vspace{-1.3\smallskipamount}
@@ -71,13 +116,22 @@
   		\noindent\rule{\textwidth}{1pt}\\[-3.85\smallskipamount]
   		\noindent\rule{\textwidth}{.4pt}\par 
       
-      \vspace*{1.5\baselineskip}
-    	{\large\agh@worktype\par} % Typ pracy (definiowane opcj¹)
-     	\vspace*{1.5\baselineskip}
+      \vspace*{1.5\smallskipamount}
       
-      \vspace*{1.5\baselineskip}
-      {\huge\bfseries\agh@title} % Tyty³ pracy
+      \begin{tabular}{c}
+        \large{Wydzia{\agh@l}\ Elektrotechniki, Automatyki, Informatyki i Elektroniki}\\
+        \large\textit{Katedra Informatyki}
+      \end{tabular}
+      
+      \vspace*{3.0\baselineskip}
+    	{\Large\agh@worktype\par} % Typ pracy (definiowane opcj¹)
+     	
+      \vspace*{3.0\baselineskip}
+      
+      {\huge\bfseries\@title} % Tyty³ pracy
       \vspace{2\baselineskip}
+      
+      \authorIter
       
       \vfill
       
@@ -85,7 +139,7 @@
   		\noindent\rule{\textwidth}{1pt}\\[-3.85\smallskipamount]
   		\noindent\rule{\textwidth}{.4pt}\par
   		\begin{tabular}{c}
-  			\large Kraków 2007
+  			\large Kraków 2007 \the@authorCounter
   		\end{tabular}
       
     \end{center}
