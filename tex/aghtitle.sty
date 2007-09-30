@@ -27,6 +27,7 @@
 
 % Deklaracje liczników
 \newcounter{@authorCounter}
+\setcounter{@authorCounter}{2}
 
 % Deklaracje wartosci logicznych
 \newboolean{WhetherPdf} \setboolean{WhetherPdf}{false}
@@ -69,20 +70,28 @@
 %\renewcommand{\title}[1]{\def\agh@title{#1}}
 %\renewcommand{\author}[1]{\def\agh@author{#1}}
 
-\newcommand{\authorIter}
-{
-  \def\@nauthor{\@author}
-  \def\@tmpauthor\@empty
-  \whiledo{\value{@authorCounter}>0}
-  {
-    \Large{\BeforeSubString{,}{\@nauthor}}\\
-    Nr albumu: \BeforeSubString{,}{\@nauthor}\\
-    \let\@tmpauthor\BehindSubString{,}{\@nauthor}
-    \let\@nauthor\@tmpauthor 
-    \addtocounter{@authorCounter}{-1}
-  }
-  \global\let\@nauthor\@empty
-  \global\let\@tmpauthor\@empty
+\newcommand{\countAuthors}{%
+  \IfSubStringInString{,}{\@author}{%
+    \SubStringsToCounter{@authorCounter}{,}{\@author}%
+    \stepcounter{@authorCounter}%
+    \setboolean{WhetherMoreAuthors}{true}%
+  }%
+}
+
+\newcommand{\authorIter}{\begingroup%
+  \def\@nauthor{\@author}%
+  \def\@tmpauthor\@empty%
+  \whiledo{\the@authorCounter>0}{\begingroup%
+    \Large{\BeforeSubString{,}{\@nauthor}}\par%
+    \small{Nr albumu: \BeforeSubString{,}{\@nauthor}}\par%
+    \global\def\@tmpauthor\the{\BehindSubString{,}{\@nauthor,}}%
+    \global\def\@nauthor\the{\@tmpauthor}%
+    \addtocounter{@authorCounter}{-1}%
+    \endgroup%
+  }%
+  \global\let\@nauthor\@empty%
+  \global\let\@tmpauthor\@empty%
+  \endgroup%
 }
 
 \newcommand{\promotorJeden}[1]{}
@@ -94,11 +103,7 @@
 
 % Uklad strony tytulowej
 \renewcommand{\maketitle}{
-  \IfSubStringInString{,}{\@author}{
-    \SubStringsToCounter{@authorCounter}{,}{\@author}
-    \stepcounter{@authorCounter}
-    \setboolean{WhetherMoreAuthors}{true}
-  }
+  \countAuthors
   
   \begin{titlepage}
   	
@@ -132,6 +137,9 @@
       \vspace{2\baselineskip}
       
       \authorIter
+      
+      \newcounter{@maja}
+      \whiledo{\the@maja<3}{\addtocounter{@maja}{1}X}
       
       \vfill
       
