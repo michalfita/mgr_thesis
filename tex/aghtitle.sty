@@ -27,11 +27,14 @@
 
 % Deklaracje liczników
 \newcounter{@authorCounter}
-\setcounter{@authorCounter}{2}
+\setcounter{@authorCounter}{0}
+\newcounter{@promotorCounter}
+\setcounter{@promotorCounter}{0}
 
 % Deklaracje wartosci logicznych
 \newboolean{WhetherPdf} \setboolean{WhetherPdf}{false}
 \newboolean{WhetherMoreAuthors} \setboolean{WhetherMoreAuthors}{false}
+\newboolean{WhetherMorePromotors} \setboolean{WhetherMorePromotors}{false}
 
 % Opcje pakietu
 \DeclareOptionX{pdftex}{\setboolean{WhetherPdf}{true}}
@@ -70,29 +73,28 @@
 %\renewcommand{\title}[1]{\def\agh@title{#1}}
 %\renewcommand{\author}[1]{\def\agh@author{#1}}
 
-\newcommand{\countAuthors}{%
+\edef\@albumNumber{\@empty} % Przechowuje numery albumów
+\edef\@promotor{\@empty} % Przechowuje promotorów
+
+\newcommand{\countAuthors}{% Liczenie autorów
   \IfSubStringInString{,}{\@author}{%
     \SubStringsToCounter{@authorCounter}{,}{\@author}%
     \stepcounter{@authorCounter}%
     \setboolean{WhetherMoreAuthors}{true}%
-  }%
+  }{\stepcounter{@authorCounter}}%
 }
 
-\newcommand{\authorIter}{\begingroup%
-  \def\@nauthor{\@author}%
-  \def\@tmpauthor\@empty%
-  \whiledo{\the@authorCounter>0}{\begingroup%
-    \Large{\BeforeSubString{,}{\@nauthor}}\par%
-    \small{Nr albumu: \BeforeSubString{,}{\@nauthor}}\par%
-    \global\def\@tmpauthor\the{\BehindSubString{,}{\@nauthor,}}%
-    \global\def\@nauthor\the{\@tmpauthor}%
-    \addtocounter{@authorCounter}{-1}%
-    \endgroup%
-  }%
-  \global\let\@nauthor\@empty%
-  \global\let\@tmpauthor\@empty%
-  \endgroup%
+\newcommand{\countPromotors}{% Liczenie promotorów
+  \IfSubStringInString{,}{\@promotor}{%
+    \SubStringsToCounter{@promotorCounter}{,}{\@promotor}%
+    \stepcounter{@promotorCounter}%
+    \setboolean{WhetherMorePromotors}{true}%
+  }{\stepcounter{@promotorCounter}}%
 }
+
+
+\newcommand{\albumNumber}[1]{\global\edef\@albumNumber{#1}}
+\newcommand{\promotor}[1]{\global\edef\@promotor{#1}}
 
 \newcommand{\promotorJeden}[1]{}
 \newcommand{\promotorDwa}[1]{}
@@ -104,6 +106,7 @@
 % Uklad strony tytulowej
 \renewcommand{\maketitle}{
   \countAuthors
+  \countPromotors
   
   \begin{titlepage}
   	
@@ -134,22 +137,52 @@
       \vspace*{3.0\baselineskip}
       
       {\huge\bfseries\@title} % Tyty³ pracy
-      \vspace{2\baselineskip}
+      \vspace{2.5\baselineskip}
       
-      \authorIter
-      
-      \newcounter{@maja}
-      \whiledo{\the@maja<3}{\addtocounter{@maja}{1}X}
+      % Put author info for each author
+      \global\edef\@nauthor{\@author}
+      \global\edef\@tmpauthor{.,.,.}
+      \def\@leftPart##1,##2{##1}
+      \def\@rightPart##1,##2{##2}
+      \whiledo{\the@authorCounter>0}{\begingroup%
+        \Large{\BeforeSubString{,}{\@nauthor}}\\
+        \small{Numer albumu: 1234}\\
+        \addtocounter{@authorCounter}{-1}%
+        \global\edef\@tmpauthor{\@nauthor,}%
+        \IfSubStringInString{,}{\@tmpauthor}
+        {
+          \global\edef\@nauthor{\expandafter\@rightPart\@tmpauthor\relax}
+        }{\@empty}%
+      \endgroup}
       
       \vfill
+      
+      % Put promotor names
+      \global\edef\@npromotor{\@promotor}
+      \global\edef\@tmppromotor{.,.,.}
+      %\begin{tabular}{c}
+      \ifthenelse{\boolean{WhetherMorePromotors}}{Promotorzy:}{Promotor:}\\
+      \whiledo{\the@promotorCounter>0}{\begingroup%
+        \large{\BeforeSubString{,}{\@npromotor}}\\        
+        \addtocounter{@promotorCounter}{-1}%
+        \global\edef\@tmppromotor{\@npromotor,}%
+      %  \IfSubStringInString{,}{\@tmppromotor}
+      %  {
+          \global\edef\@npromotor{\expandafter\@rightPart\@tmppromotor\relax}%
+      %  }{\@empty}%
+      \endgroup}
+      %\end{tabular}
+      
+      \vspace{2.5\baselineskip}
       
       \noindent\rule{\textwidth}{.4pt}\\[-3.65\smallskipamount]
   		\noindent\rule{\textwidth}{1pt}\\[-3.85\smallskipamount]
   		\noindent\rule{\textwidth}{.4pt}\par
   		\begin{tabular}{c}
-  			\large Kraków 2007 \the@authorCounter
+  			\large Kraków 2007
   		\end{tabular}
       
     \end{center}
   \end{titlepage}
+  \newpage\relax
 }

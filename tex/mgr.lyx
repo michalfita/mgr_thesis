@@ -67,36 +67,17 @@ status open
 
 
 \backslash
-promotorJeden{dr inż.
- Roman Krasowski}
+promotor{dr inż.
+ Roman Krasowski,prof.
+ dr.
+ Lucjan Hihotek}
 \end_layout
 
 \begin_layout Standard
 
 
 \backslash
-nralbumuJeden{209034}
-\end_layout
-
-\begin_layout Standard
-
-
-\backslash
-authorJeden{Michał Fita}
-\end_layout
-
-\begin_layout Standard
-
-
-\backslash
-nralbumuDwa{}
-\end_layout
-
-\begin_layout Standard
-
-
-\backslash
-authorDwa{}
+albumNumber{209034,678901}
 \end_layout
 
 \end_inset
