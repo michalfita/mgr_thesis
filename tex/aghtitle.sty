@@ -35,6 +35,7 @@
 \newboolean{WhetherPdf} \setboolean{WhetherPdf}{false}
 \newboolean{WhetherMoreAuthors} \setboolean{WhetherMoreAuthors}{false}
 \newboolean{WhetherMorePromotors} \setboolean{WhetherMorePromotors}{false}
+\newboolean{WhetherWoman} \setboolean{WhetherWoman}{true}
 
 % Opcje pakietu
 \DeclareOptionX{pdftex}{\setboolean{WhetherPdf}{true}}
@@ -47,6 +48,15 @@
     {\def\agh@worktype{Praca in¿ynierska}}{}
   \ifthenelse{\equal{#1}{dr}}
     {\def\agh@worktype{Praca doktorska}}{}
+}
+\DeclareOptionX{gender}[female]{
+  \ifthenelse{\equal{#1}{male}}
+  {
+    \setboolean{WhetherWoman}{false}
+  }
+  {
+    \setboolean{WhetherWoman}{true}
+  }
 }
 \ProcessOptionsX
 % Opcjonalne ladowanie
@@ -185,16 +195,38 @@
     \end{center}
   \end{titlepage}
   \newpage\relax
-
-% Dla pracy jednoosobowej:
-O{\agh@s}wiadczam, {\agh@s}wiadomy(-a) odpowiedzialno{\agh@s}ci karnej za po{\agh@s}wiadczenie nieprawdy,
-{\agh@z}e niniejsz{\agh@a} prac{\agh@e} dyplomow{\agh@a} wykona{\agh@l}em(-am) osobi{\agh@s}cie i samodzielnie i {\agh@z}e nie
-korzysta{\agh@l}em(-am) ze {\agh@x}róde{\agh@l} innych ni{\agh@z} wymienione w pracy.
-
-% Dla pracy dwuosobowej:
-O{\agh@s}wiadczamy, {\agh@s}wiadomi odpowiedzialno{\agh@s}ci karnej za po{\agh@s}wiadczenie nieprawdy,
-{\agh@z}e niniejsz{\agh@a} prac{\agh@e} dyplomow{\agh@a} wykonali{\agh@s}my osobi{\agh@s}cie i samodzielnie (w zakresie
-wyszczeg{\agh@o}lnionym we wstêpie) i {\agh@z}e nie korzystali{\agh@s}my ze {\agh@x}róde³ innych ni{\agh@z}
-wymienione w pracy.
-
+  
+  \pagestyle{empty}
+  \vspace*{4.3\baselineskip}
+  \ifthenelse{\NOT\boolean{WhetherMoreAuthors}}
+  {
+    \begin{center} 
+		  {\large\bfseries O{\agh@s}wiadczenie autora}\par\bigskip
+    \end{center}
+      
+    \ifthenelse{\boolean{WhetherWoman}}{
+      % Dla pracy jednoosobowej (kobieta):
+      O{\agh@s}wiadczam, {\agh@s}wiadoma odpowiedzialno{\agh@s}ci karnej za po{\agh@s}wiadczenie nieprawdy,
+      {\agh@z}e niniejsz{\agh@a} prac{\agh@e} dyplomow{\agh@a} wykona{\agh@l}am osobi{\agh@s}cie i samodzielnie oraz {\agh@z}e nie
+      korzysta{\agh@l}am ze {\agh@x}r{\agh@o}de{\agh@l} innych ni{\agh@z} wymienione w pracy.
+    }{
+      % Dla pracy jednoosobowej (mezczyzna):
+      O{\agh@s}wiadczam, {\agh@s}wiadomy odpowiedzialno{\agh@s}ci karnej za po{\agh@s}wiadczenie nieprawdy,
+      {\agh@z}e niniejsz{\agh@a} prac{\agh@e} dyplomow{\agh@a} wykona{\agh@l}em osobi{\agh@s}cie i samodzielnie oraz {\agh@z}e nie
+      korzysta{\agh@l}em ze {\agh@x}r{\agh@o}de{\agh@l} innych ni{\agh@z} wymienione w pracy.
+    }
+  }{
+    \begin{center} 
+		  {\large\bfseries O{\agh@s}wiadczenie autor{\agh@o}w}\par\bigskip
+    \end{center}
+    
+    % Dla pracy dwuosobowej:
+    O{\agh@s}wiadczamy, {\agh@s}wiadomi odpowiedzialno{\agh@s}ci karnej za po{\agh@s}wiadczenie nieprawdy,
+    {\agh@z}e niniejsz{\agh@a} prac{\agh@e} dyplomow{\agh@a} wykonali{\agh@s}my osobi{\agh@s}cie i samodzielnie (w zakresie
+    wyszczeg{\agh@o}lnionym we wstêpie) i {\agh@z}e nie korzystali{\agh@s}my ze {\agh@x}róde³ innych ni{\agh@z}
+    wymienione w pracy.
+  }
+  \vfill
+  \newpage\relax
+  % Hmm... \setcounter{page}{2}
 }
