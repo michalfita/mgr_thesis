@@ -1,4 +1,4 @@
-#LyX 1.5.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.5.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 276
 \begin_document
 \begin_header
@@ -31,7 +31,7 @@
 \font_tt_scale 100
 \graphics default
 \paperfontsize 11
-\spacing onehalf
+\spacing single
 \papersize a4paper
 \use_geometry true
 \use_amsmath 1
@@ -68,16 +68,14 @@ status open
 
 \backslash
 promotor{dr inż.
- Roman Krasowski,prof.
- dr.
- Lucjan Hihotek}
+ Roman Krasowski}
 \end_layout
 
 \begin_layout Standard
 
 
 \backslash
-albumNumber{209034,678901}
+albumNumber{209034}
 \end_layout
 
 \end_inset
@@ -90,7 +88,7 @@ System sterowania robotem mobilnym
 \end_layout
 
 \begin_layout Author
-Michał Fita,Dupek Pupkowski
+Michał Fita
 \end_layout
 
 \begin_layout Standard
@@ -790,7 +788,13 @@ reference "sec:JTAG-ICE"
 
 \end_inset
 
- oraz zestaw EVK1100 opisany w rozdziale <brak>).
+ oraz zestaw EVK1100 opisany w rozdziale 
+\begin_inset LatexCommand vref
+reference "sec:EVK1100"
+
+\end_inset
+
+).
  Jednakże implementacja USB we własnym urządzeniu może być z wielu względów
  kłopotliwa.
  Poniższy opis techniczny wyjaśni dlaczego tak jest i jakie stosuje się
@@ -1128,6 +1132,162 @@ Oba powyższe rozwiązania nie pozwalają na stosowanie zastrzeżonego logo
 Metody implementacji
 \end_layout
 
+\begin_layout Section
+Bluetooth
+\end_layout
+
+\begin_layout Standard
+Technologia Bluetooth oferuje bezprzewodową komunikację krótkiego zasięgu
+ pomiędzy urządzeniami elektronicznymi przy niskim zużyciu energii i niskim
+ koszcie implementacji.
+ Wiele z właściwości Bluetooth opisanych w specyfikacji jest opcjonalnych,
+ dzieki czemu wachlarz urządzeń elektronicnych z tą technologią może być
+ bardzo zróżnicowany.
+\end_layout
+
+\begin_layout Standard
+Fizyczna warstwa radiowa Bluetooth działa w nielicencjonowanym paśmie 2,4\InsetSpace ~
+GHz.
+ System stosuje szybką zmianę częstotliwości (ang.
+ frequency hoping) w celu zapobiegania interferencjom, zanikaniu i odbiciu
+ oraz wykorzystuje wiele nośnych w technice FHSS (ang.
+ frequency hoping spread spectrum).
+ Tor radiowy działa z użyciem kształtowanej binarnej modulacji częstotliwości
+ w celu znacznej redukcji złożoności transcivera.
+ Konstrukcja pozwala na przesłanie 1 miliona symboli na sekundę, co pozwala
+ na transfer danych z prędkością 1\InsetSpace ~
+MBit/s w trybie Basic Rate i nawet do
+ 3\InsetSpace ~
+MBit/s w trybie Enhanced Data Rate.
+\end_layout
+
+\begin_layout Standard
+Podczas normalnej pracy fizyczny kanał radiowy jest dzielony przez grupę
+ urządzeń zsynchronizowancyh do wspłólnego zegara i wzorca zmian częstotliwości.
+ Jedno z urzadzeń nadaje referencyjny sygnał synchronizacyjny i jest uznawane
+ za nadrzędne.
+ Wszystkie pozostałe urządzenia określane są jako podrzędne.
+ Grupa zsynchronizowanych w ten sposób urządzeń określana jest jako 
+\emph on
+piconet
+\emph default
+.
+ Jest to podstawowa forma komunikacji w technologii Bluetooth.
+\end_layout
+
+\begin_layout Standard
+Urzadzenia w piconet używają specyficznego wzorca zmian częstotliwości,
+ które są określane na podstawie algorytmu z pewnych pól w adresie Bluetooth
+ oraz czasu urządzenia nadrzędnego.
+ Podstawową wzorcem dla zmian częstotliwości jest pseudolosowy układ 79
+ częstotliwości w paśmie ISM
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+ang.
+ 
+\emph on
+industrial, scientific and medical radio bands
+\emph default
+ -- wybór pasm częstotliwości radiowych określonych dla przemysłu, medycyny
+ i nauki do celów innych niż komunikacja; aktualnie stosowanych w nielicencjonow
+anych urządzeniach komunikacyjnych odpornych na zakłócenia
+\emph on
+
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+
+\emph on
+dopisać źródła specyfikacji...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Wzorzec ten może być adaptacyjnie dostosowany do warunków interferencji
+ przez usuwanie częstotliwości o złych parametrach.
+ Technika adaptacyjnej zmiany częstotliwości poprawia współistnienie Bluetooth
+ z innymi urządzeniami w pasmie ISM, gdy pracują w jednym otoczeniu.
+ 
+\end_layout
+
+\begin_layout Standard
+Kanał fizyczny jest podzielony na sloty czasowe.
+ Dane są transmitowane pomiędzy urządzeniami Bluetooth w paczka, które są
+ umiejscawiane w tych slotach.
+ Pewna liczba kolejnych slotów może być przydzielona dla pojedynczego pakietu,
+ gdy warunki na to pozwalają.
+ Zmiany częstotliwości następują pomiędzy nadaniem lub odbiorem pojedynczych
+ pakietów.
+ Technologia Bluetooth pozwala na transmisję z pełnym duplexem dzięki zastosowan
+iu schematu TTD (ang.
+ 
+\emph on
+Time-Division Duplex
+\emph default
+ -- duplex z podziałem czasu).
+\end_layout
+
+\begin_layout Standard
+The physical channel is sub-divided into time units known as slots.
+ Data is transmitted between Bluetooth devices in packets, that are positioned
+ in these slots.
+ When circumstances permit, a number of consecutive slots may be allocated
+ to a single packet.
+ Frequency hopping takes place between the transmission or reception of
+ packets.
+ Bluetooth technology provides the effect of full duplex transmission through
+ the use of a Time-Division Duplex (TDD) scheme.
+\end_layout
+
+\begin_layout Subsection
+Architektura rdzenia Bluetooth
+\end_layout
+
+\begin_layout Standard
+Rdzeń systemu Bluetooth pokrywa cztery warstwy i powiązane z nimi protokoły
+ zdefiniowane w specyfikacji, jak również jedną wspólną warstwę serwisów
+ SDP (ang.
+ Service Discovery Protocol) oraz ogólne wymagania profili określone w GAP
+ (ang.
+ Generic Access Profile).
+ Kompletna aplikacja Bluetooth wymaga wielu dodatkowych serwisów i protokołów
+ warstwy wyższej określonych w specyfikacji Bluetooth ale nie opisanych
+ tutaj.
+ Architektura rdzenia jest pokazana na rysunku (blabla rysunek do wymachania)
+ nie obejmującym SDP, który nie jest pokazany dla zachowania przejżystości.
+\end_layout
+
+\begin_layout Standard
+<pict here>
+\end_layout
+
+\begin_layout Standard
+Trzy najniższe warstwy są czasem grupowane w podsystem okreslany jako kontroler
+ Bluetooth.
+ To jest potoczna implementacja obejmująca standardowy interfejs komunikacyjny
+ pomiędzy kontrolerem i resztą systemu Bluetooth z włączeniem L2CAP (ang.
+ 
+\emph on
+Logical Link Control and Adaptation Protocol
+\emph default
+), serwisów i warstw wyższych -- określanych jako host Bluetooth.
+ Aczkolwiek ten interfejs jest opcjonalny, architektura jest zaprojektowana
+ aby umożliwi jego istninie i charakterystykę.
+ Specyfikacja umożliwia współdziałanie pomiędzy niezależymi systemami Bluetooth
+ poprzez zdefiniowanie wiadomości protokołu wymienianych na poziomie odpowiadają
+cych sobie warstw, jak również współdziałanie pomiędzy niezależnymi podsystemami
+ poprzez zdefiniowanie wspólnego interfejsu pomiędzy kontrolerem a hostem.
+\end_layout
+
 \begin_layout Chapter
 Mikrokontrolery
 \end_layout
@@ -1236,6 +1396,11 @@ ARM 9
 \end_layout
 
 \begin_layout Subsection
+\begin_inset LatexCommand label
+name "sub:Jazelle"
+
+\end_inset
+
 Jazelle
 \end_layout
 
@@ -1651,6 +1816,74 @@ Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
  oprogramowania.
 \end_layout
 
+\begin_layout Subsubsection*
+Mikrokontroler AT32UC3A0512
+\end_layout
+
+\begin_layout Standard
+Układ AT32UC3A jest kompletnym systemem-w-układzie na bazie 32-bitowego
+ rdzenia AVR32 UC typu RISC działającym z\InsetSpace ~
+częstotliwością do 66\InsetSpace ~
+MHz.
+ Rdzeń tego typu został zaprojektowany w celu redukcji kosztów aplikacji
+ wbudowanych ze szczególnym naciskiem na niskie zużycie mocy, wysoką gęstość
+ kodu i wysoką wydajność.
+\end_layout
+
+\begin_layout Standard
+Układ posiada jednostkę ochrony pamięci (MPU) oraz szybki i elatyczny kontroler
+ przerwań wspierający nowoczesne systemy operacyjne i systemy operacyjne
+ czasu rzeczywistego.
+ Wysokia wydajność obliczeniowa jest osiągalna dzięki bogatemu zestawowi
+ instrukcji DSP.
+\end_layout
+
+\begin_layout Standard
+Układ AT32UC3A0512 zawiera wewnętrzną pamięć Flash i pamięć statyczną dla
+ bezpiecznego i szybkiego dostepu.
+ Aplikacje wymagające większej dodatkowej pamięci mogą skorzystać z interfejsu
+ zewnętrznej pamięci dynamicznej.
+ Kontroler peryferyjnego bezpośredniego dostępu do pamięci (PDCA) umożliwia
+ transfer danych pomiędzy peryferiami a pamięcią bez angażowania procesora.
+ PDCA drastycznie redukuje koszty transferu ciągłych i wielkich strumieni
+ danych pomiędzy modułami wewnątrz mikrokontrolera.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+The PowerManager improves design flexibility and security: the on-chip Brown-Out
+ Detector monitors the power supply, the CPU runs from the on-chip RC oscillator
+ or from one of external oscillator sources, a Real-Time Clock and its associate
+d timer keeps track of the time.
+ The Timer/Counter includes three identical 16-bit timer/counter channels.
+ Each channel can be independently programmed to perform frequency measurement,
+ event counting, interval measurement, pulse generation, delay timing and
+ pulse width modulation.
+ The PWM modules provides seven independent channels with many configuration
+ options including polarity, edge alignment and waveform non overlap control.
+ One PWM channel can trigger ADC conversions for more accurate close loop
+ control implementations.
+ The AT32UC3A also features many communication interfaces for communication
+ intensive applications.
+ In addition to standard serial interfaces like UART, SPI or TWI, other
+ interfaces like flexible Synchronous Serial Controller, USB and Ethernet
+ MAC are available.
+ The Synchronous Serial Controller provides easy access to serial communication
+ protocols and audio standards like I2S.
+ The Full-Speed USB 2.0 Device interface supports several USB Classes at
+ the same time thanks to the rich End-Point configuration.
+ The On-The-GO (OTG) Host interface allows device like a USB Flash disk
+ or a USB printer to be directly connected to the processor.
+ The media-independent interface (MII) and reduced MII (RMII) 10/100 Ethernet
+ MAC module provides on-chip solutions for network-connected devices.
+ AT32UC3A integrates a class 2+ Nexus 2.0 On-Chip Debug (OCD) System, with
+ non-intrusive real-time trace, full-speed read/write memory access in addition
+ to basic runtime control.
+\end_layout
+
 \begin_layout Subsection
 ARM
 \end_layout
@@ -1971,9 +2204,29 @@ Firma Microchip Technology z siedzibą w USA to producent bardzo znanych
  układów PIC, które są 8 lub 16-bitowymi mikrokontrolerami w Polsce często
  stosowanymi do celów edukacyjnych.
  Cechą szczególną układów PIC jest ich prostota, co w sytuacjach budowy
- bardoz prostych urządzeń kontrolnych ma niebagatelne znaczenie.
- Brak jest w ofercie Microchip Technology układów o architekturze 32-bitowej.
- 
+ bardzo prostych urządzeń kontrolnych ma niebagatelne znaczenie.
+\end_layout
+
+\begin_layout Standard
+Od 5 listopada 2007 roku w ofercie Microchip Technology znajdują się układy
+ z rodziny PIC32, które rozpoczynają nową linię produktów tej firmy.
+\end_layout
+
+\begin_layout Subsection
+PIC32
+\end_layout
+
+\begin_layout Standard
+Od 5 listopada 2007 roku w ofercie Microchip Technology znajdują się układy
+ z rodziny PIC32, które rozpoczynają nową linię produktów tej firmy.
+ Układy tego typu pracują z częstotliwością 20 lub 72 MHz i mogą posiadać
+ do 512 kB pamięci Flash oraz 32 kB pamięci RAM oraz wyposażone są w kontroler
+ DMA.
+\end_layout
+
+\begin_layout Standard
+Jest to całkowicie nowa nie poznana dobrze linia układów mikrokontrolerów,
+ dlatego też nie zostanie opisana zbyt dokładnie.
 \end_layout
 
 \begin_layout Section
@@ -2012,7 +2265,273 @@ reference "sec:ARM"
 \end_layout
 
 \begin_layout Chapter
-Narzędzia
+Języki programowania
+\end_layout
+
+\begin_layout Section
+C
+\end_layout
+
+\begin_layout Standard
+Autorem języka jest Dennis Ritchie, który zapisał się w historii informatyki
+ swoim udziałem w tworzeniu systemu operacyjnego Unix.
+ Razem z Brianem Kerninghanem rozwijali język C, by w 1978 roku opublikować
+ dokumentację języka.
+ Do dziś język C jest wykorzystywany w poważnych projektach informatycznych
+ i jest jedynym językiem wysokiego poziomu uznawanym za dostatecznie bliski
+ niskiego poziomu, by tworzyć w nim systemy operacyjne i sterowniki urządzeń.
+ Stosowanie go w projektach komercyjnych budzi dziś jednak spore kontrowersje,
+ gdyż kod w C jest trudny i kosztowny w utrzymywaniu.
+\end_layout
+
+\begin_layout Standard
+W roku 1989 pojawiła się pierwsza norma dla języka C w postaci standardu
+ ANSI\InsetSpace ~
+X3.159-1989.
+ W 1990 roku norma amerykańska została zaadoptowana standardu w formie normy
+ ISO\InsetSpace ~
+9899:1990.
+ Standard ten był wielokrotnie modyfikowany by doczekać się wersji ISO\InsetSpace ~
+9899:1999,
+ potocznie określaną jako C99.
+\end_layout
+
+\begin_layout Standard
+Zaletą języka C jest jego prostota i wydajny kod wynikowy.
+ Do wad należy zaliczyć istnienie niezdefiniowanych zachowań, nie weryfikowanych
+ przez kompilator, które często służą do wykonywania bardzo skomplikowanych
+ zabiegów przez biegłych i doświadczonych programistów.
+ Wśród innych wad jest stosowanie niezabezpieczonych wskaźników, bardzo
+ przydatnych w programowaniu niskopoziomowym, lecz będących przyczyną bardzo
+ wielu poważnych błędów w programach pisanych w języku C.
+ Kolejny kłopot sprawiają statyczne tablice, których zasięg nie podlega
+ sprawdzaniu, w przeciwieństwie do języka Pascal.
+ Tablice są częstą przyczyną luk bezpieczeństwa w programach pisanych w
+ języku C.
+\end_layout
+
+\begin_layout Standard
+Język C jest dobrym narzędziem dla doświadczonego programisty potrzebującego
+ napisać kod działający na niskim poziomie, ściśle związany z współpracą
+ z programowanym urządzeniem.
+ Dodatkowo powinien być stosowany w programowaniu obliczeń wysokiej wydajności,
+ lecz pod warunkiem zastosowania bardzo dużego rygoru kontroli kodu i trzymania
+ się czytelnego standardu kodowania.
+\end_layout
+
+\begin_layout Section
+C++
+\end_layout
+
+\begin_layout Standard
+Język C++ powstał jako obiektowe rozszerzenie języka C, a jego autor --
+ duńczyk Bjarne Stroustrup -- bazował na takich językach jak Simula, Algol,
+ Ada, ML
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Z funkcyjnego języka ML wykształcił się również język Ocaml, mający dziś
+ wielu zwolenników.
+\end_layout
+
+\end_inset
+
+ i Clu.
+ Stopniowo pojawiało się w nim jednak wiele innych ulepszeń, z których część
+ została później przeniesiona do C99.
+ Język C++ jest bardzo często stosowany w programowaniu komercyjnym, gdyż
+ stosowany zgodnie ze sztuką kompozycji obiektowej, nadal pozwala na wygenerowan
+ie optymalnego i szybkiego kodu maszynowego.
+\end_layout
+
+\begin_layout Standard
+Wadą języka C++ jest specyficzne pomieszanie go z elementami charakterystycznymi
+ dla C, co dla początkującego programisty może być trudne do zrozumienia,
+ ale prowadzi również do tworzenia kodu bardzo niskiej jakości i trudnego
+ w zarzaniu.
+ Natomiast najczęściej popełnianym błędem przez doświadczonych programistów
+ w C, którzy przesiadają się na C++ jest pisanie kodu jak w języku C, tylko
+ otoczonego klasami.
+ Tak napisany kod jest bardzo podatny na wprowadzanie nowych błędów przy
+ poprawianiu, a do tego nie utrzymuje zgodności z modelem obiektowym znanym
+ np.
+ z UML.
+\end_layout
+
+\begin_layout Standard
+Do przydatnych cech języka poza obiektowością, należy zaliczyć szablony,
+ które pozwalają na programowanie generyczne, to znaczy bez znajomości typów
+ danych na których operują stworzone klasy i metody.
+ Z szablonami wiąże się też biblioteka STL, dziś nierozerwalnie złączona
+ z każdym kompilatorem C++, choć istniejące stosowane biblioteki STL to
+ kolejne wersje zaproponowanej przez Silicon Graphics pierwszej komercyjnie
+ stosowanej impelentacji oraz biblioteka STLport
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Dostępna jako kod otwarty pod adresem http://www.stlport.org/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Java
+\end_layout
+
+\begin_layout Standard
+Język Java od samego początku tworzony był do celów komercyjnych przez profesjon
+alny zespół pod kierunkiem Jamesa Goslinga z firmy Sun Microsystems
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Do dziś strona numer jeden języka Java to http://java.sun.com
+\end_layout
+
+\end_inset
+
+.
+ Język ten bazuje na koncepcjach obiektowości z języka Smalltalk, lecz składnia
+ bazuje na języku C++, przy czym w Java nie ma plików nagłówkowych.
+ Dodatkowo z języka Smalltalk zaczęrpnął również idee maszyny wirtualnej
+ i odśmiecacza (ang.
+ 
+\emph on
+garbage collector
+\emph default
+).
+ W przeciwieństwie do Smalltalk w języku Java istnieje silne typowanie,
+ choć typowanie może się w pewien sposób odbywać dynamicznie (możliwy jest
+ dzięki temu mechanizm refleksji).
+ Od C++ odróżnia Javę w szczególności brak wielokrotnego dziedziczenia oraz
+ możliwość tworzenia interfejsów, które jednak w przeciwieństiwe do klas
+ abstrakcyjnych C++ nie mogą implementować żadnej funkcjonalności.
+\end_layout
+
+\begin_layout Standard
+Cechą wyróżniającą język Java i wszystkie narzędzia współpracujące jest
+ niezależność od sprzętu, dzięki zastosowaniu maszyn wirtualnych, które
+ mogą być realizowane dla wielu platform sprzętowych, w tym tak popularnych
+ dziś telefonów komórkowych.
+ Gwałtowny rozwój Javy miał miejsce w okresie szczególnym dla rozwoju urządzeń
+ osobistych.
+ Dzięki temu wizja firmy Sun została częściowo zrealizowana -- gdy po raz
+ pierwszy zademonstrowano tą technologię, zapowiadano jej obecność w każdym
+ urządzeniu, nawet w pralce.
+\end_layout
+
+\begin_layout Standard
+Maszyny wirtualne Java są tworzone dziś nie tylko przez firmę Sun, ale również
+ innych producentów, w tym IBM, którego wersje dla systemów AIX i Linux
+ są ogólnie dostępne.
+ Firma Microsoft zarzuciła rozwój swojej wersji maszyny wirtualnej po przegranym
+ procesie o prawa do patentów z Sun Microsystems.
+ Istnieje wiele implementacji stworzonych jako wolny kod, w tym:
+\end_layout
+
+\begin_layout Itemize
+JamVM
+\end_layout
+
+\begin_layout Itemize
+Kaffe
+\end_layout
+
+\begin_layout Standard
+Od 13 Listopada 2006 technologia Java z firmy Sun Microsystems została przekazan
+a na rzecz społeczności na licencji GNU GPL.
+ Aktualnie technologia firmy Sun jest rozwijana równolegle z udziałem wkładu
+ programistów z całego świata, przy czym firma nadal zarządza całym projektem
+ ze swoich stron internetowych.
+\end_layout
+
+\begin_layout Standard
+Ciekawym aspektem języka Java są wielokrotnie podejmowane próby stworzenia
+ kompilatorów do natywnego kodu maszynowego docelowej platformy, co stoi
+ w sprzeczności z założeniem o pełnej przenoszalności kodu, jednak ma znacząco
+ pozytywny wpływ na wydajność tak skompilowanych programów.
+ Pośród takich kompilatorów znajduje się GCJ, który może dokonać translacji
+ do bajtkodu dla maszyny wirtualnej, jak również kompilacji bajtkodu do
+ natywnego kodu maszynowego.
+ Umożliwa tez miesznia kodu z bajtkodzie i binarnego kodu natywnego.
+ Aktualnie GCJ wspiera standard Java 1.4, z pewnymi rozszerzeniami z Java
+ 1.5.
+\end_layout
+
+\begin_layout Standard
+W związku z gwałtownym rozwojem języka Java na platformy wbudowane, podjęto
+ próby skonstruowania procesora, który potrafiłby wykonywać bajtkod języka
+ Java.
+ Sum Microsystems oferuje wersję źródłową rdzenia dla bajtkodu Java do mikroproc
+esorów.
+ Firma Xilinx oferuje LAVAcore, które jest kompletną implementacją mikroprocesor
+a bajtkodu Java dla układów FPGA typu Virtex i Virtex-II.
+ W rozdziale 
+\begin_inset LatexCommand vref
+reference "sub:Jazelle"
+
+\end_inset
+
+ wspomniana została technologia Jazelle opracowana dla rdzeni mikroprocesorów
+ ARM, która jest technologią przyspieszania wykonania bajtkodu Java na tych
+ mikroporocesorach.
+\end_layout
+
+\begin_layout Standard
+Oprócz rozwiązań komercyjnych istnieje kilka udanych konstrukcji stworzonych
+ w ramach prac badawczych na uniwersytetach.
+ Jedną z nich jest JOP
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Strona projektu http://www.jopdesign.com
+\end_layout
+
+\end_inset
+
+ stworzony w ramach pracy doktorskiej Martina Schoeberla na Wiedeńskim Uniwersyt
+ecie Technicznym, którego źródła do celów edykacyjnych są dostępne nieodpłatnie.
+\end_layout
+
+\begin_layout Section
+Python
+\end_layout
+
+\begin_layout Chapter
+Silniki elektryczne
+\end_layout
+
+\begin_layout Standard
+Cechą charakterystyczną robota jest wytwarzanie pewnych sił i momentów mechanicz
+nych w sposób kontrolowany.
+ Najpopularniejszą metodą na wytworzenie powyższych jest przekształcanie
+ energii elektrycznej na energię mechaniczną poprzez silniki elektryczne.
+ W rozdziale tym omówione zostały podstawy budowy silników elektrycznych
+ prądu stałego, to jest takich jak stosowane w omawianej konstrukcji robota.
+\end_layout
+
+\begin_layout Standard
+Prawidłowe sterowanie cyfrowe silnikiem elektrcznym prądu stałego wymaga
+ pewnej postawowej wiedzy z zakresu budowy silnika, mechaniki jego działania
+ oraz zasad przekształcania energii elektrycznej na pole magnetyczne a następnie
+ na moment obrotowy.
+\end_layout
+
+\begin_layout Chapter
+Narzędzia i moduły
+\end_layout
+
+\begin_layout Standard
+Rozdział ten opisuje techniczne aspekty narzędzi i modułów planowanych do
+ użycia w trakcie realizacji pracy.
+ Opracowany materiał pochodzi z ekstrakcji najbardziej użytecznych informacji
+ zawatych w dokumentacjach producentów opisywanych narządzi i modułów.
 \end_layout
 
 \begin_layout Section
@@ -2024,12 +2543,121 @@ name "sec:JTAG-ICE"
 JTAG ICE mk-II
 \end_layout
 
-\begin_layout Part
-Realizacja praktyczna
+\begin_layout Section
+\begin_inset LatexCommand label
+name "sec:EVK1100"
+
+\end_inset
+
+Zestaw EVK1100
 \end_layout
 
 \begin_layout Standard
-Testing
+Zestaw uruchomieniowy EVK1100 dla mikrokontrolera Atmel AT32UC3A0512 stanowi
+ bazę dla systemu sterowania robotem, którego realizacja jest opisana w
+ części 
+\begin_inset LatexCommand vref
+reference "par:Realizacja-praktyczna"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Moduł kamery PixelPlus
+\end_layout
+
+\begin_layout Part
+\begin_inset LatexCommand label
+name "par:Realizacja-praktyczna"
+
+\end_inset
+
+Realizacja praktyczna
+\end_layout
+
+\begin_layout Chapter
+Rozruch modułów
+\end_layout
+
+\begin_layout Standard
+Przed przystąpieniem do zasadniczej pracy nad projektem złożonym ze wszystkich
+ komponentów wchodzących w skład całości opisywanego systemu, poszczególne
+ moduły muszą być uruchomione i wstępnie przetestowane przed przystąpieniem
+ do ich wzajemnej integracji.
+ Rozdział ten omawia procedury rozruchowe najważniejszych komponentów i
+ narzędzi zastosowanych w realizacji całości projektu opisanej w kolejnych
+ rozdziałach.
+\end_layout
+
+\begin_layout Section
+JTAG ICE mk-II + STK 500
+\end_layout
+
+\begin_layout Section
+RoboActor
+\end_layout
+
+\begin_layout Section
+EVK1100
+\end_layout
+
+\begin_layout Section
+Moduł Bluetooth
+\end_layout
+
+\begin_layout Section
+Moduł kamery
+\end_layout
+
+\begin_layout Chapter
+Sterowanie elektromechaniki
+\end_layout
+
+\begin_layout Section
+Silniki elektryczne robota
+\end_layout
+
+\begin_layout Section
+Sterowanie cyfrowe silników elektrycznych
+\end_layout
+
+\begin_layout Chapter
+Architektura oprogramowania
+\end_layout
+
+\begin_layout Section
+Architektura ogólna
+\end_layout
+
+\begin_layout Section
+Architektura podsystemu układu mikrokontrolera
+\end_layout
+
+\begin_layout Section
+Architektura podsystemu zdalnej kontroli
+\end_layout
+
+\begin_layout Chapter
+Realizacja oprogramowania
+\end_layout
+
+\begin_layout Section
+Rozwiązane problemy
+\end_layout
+
+\begin_layout Chapter*
+Podsumowanie
+\end_layout
+
+\begin_layout Part*
+Dodatki
+\end_layout
+
+\begin_layout Chapter*
+Dodatek A.
+ Jakiś dodatek
 \end_layout
 
 \begin_layout Standard
