@@ -47,7 +47,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \defskip medskip
-\quotes_language english
+\quotes_language polish
 \papercolumns 1
 \papersides 1
 \paperpagestyle uheadings
@@ -1821,6 +1821,11 @@ Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
 \end_layout
 
 \begin_layout Subsubsection*
+\begin_inset LatexCommand label
+name "sub:Mikrokontroler-AT32UC3A0512"
+
+\end_inset
+
 Mikrokontroler AT32UC3A0512
 \end_layout
 
@@ -2368,9 +2373,9 @@ Do przydatnych cech języka poza obiektowością, należy zaliczyć szablony,
  które pozwalają na programowanie generyczne, to znaczy bez znajomości typów
  danych na których operują stworzone klasy i metody.
  Z szablonami wiąże się też biblioteka STL, dziś nierozerwalnie złączona
- z każdym kompilatorem C++, choć istniejące stosowane biblioteki STL to
- kolejne wersje zaproponowanej przez Silicon Graphics pierwszej komercyjnie
- stosowanej impelentacji oraz biblioteka STLport
+ z każdym kompilatorem C++, choć istniejące obecnie stosowane biblioteki
+ STL to kolejne wersje zaproponowanej przez Silicon Graphics pierwszej komercyjn
+ie stosowanej impelentacji oraz biblioteka STLport
 \begin_inset Foot
 status collapsed
 
@@ -2507,6 +2512,61 @@ ecie Technicznym, którego źródła do celów edykacyjnych są dostępne nieodp
 Python
 \end_layout
 
+\begin_layout Standard
+Język Python narodził się jako efekt prac Guido van Rossuma nad następcą
+ języka ABC w Stichting Mathematisch Centrum w Holandii.
+ Od roku 1995 prace były kontynuowane w Corporation for National Research
+ Initiatives w Virginii, USA.
+ W maju roku 2000 van Rossum przenosi główny zespół rozwijający Python do
+ firmy BeOpen.com i formuje BeOpen PythonLabs.
+ W październiku tego samego roku, zespół PythonLabs przenosi się do Digital
+ Creations, później przekształcone w Zope Corporation.
+ W roku 2001 powołana zostaje Python Software Foundation, organizacja niedochodo
+wa utworzona w celu utrzymywania własności intelektualnej związanej z językiem
+ Python i technologiami z nim związanymi.
+ Zope Corporation jest członkiem sponsorującym PSF.
+ Dzięki takiej formie działania, Python zachowuje swoją otwartość nie pozostawia
+jąc wątpliwości prawnych co do własności intelektualnych, a fundusze zebrane
+ przez PSF pozwalają na obronę przed pozwami o naruszanie patentów lub prawa
+ autorskiego.
+\end_layout
+
+\begin_layout Standard
+Jedną ze szczególnych cech wyróżniających język Python na tle innych popularnych
+ języków programowania używanych dziś powszechnie, jest stosowanie formatowania
+ kodu jako składni języka.
+ Oznacza to, że bloki w kodzie są tworzone przez wcięcia, a nie przez oznaczanie
+ początku i końca za pomocą nawiasów (jak w C) lub słów kluczowych (jak
+ w Pascalu).
+ Narzucanie pewnego stylu kodowania ma swoich przeciwników i zwolenników,
+ jednakże ma to wpływ na szybsze pisanie kodu przez programistę.
+\end_layout
+
+\begin_layout Standard
+Do zalet Pythona należy zaliczyć bogactwo operatorów działających na zbudowanych
+ typach danych, takich jak lista, krotka, słownik.
+ Prawdziwa siła języka Python tkwi właśnie w umiejętnym i wydajnym stosowaniu
+ tych możliwości.
+ W efekcie w krótkim programie, można zrealizować dużą funkcjnalność.
+ Przeładowywanie metod pozwala na tworzenie klas, których zachowanie pokrywa
+ się z zachowaniem niektórych typów wbudowanych.
+ Możliwe jest też konstruowanie modułów binarnych pisanych w językach niższego
+ poziomu, jak C i C++.
+ Równocześnie interpreter języka Python może być wbudowywany w inne aplikacje,
+ jako ich język skryptowy (np.
+ w programie Blender).
+ Dla języka Java istnieje pełna implementcja Pythona o nazwie Jython, która
+ nie posiada jedynie modułów specyficznych systemowo dostępnych w oryginalnym
+ Pythonie.
+ Jython działa całkowicie w formie bytecode'u Javy -- dotyczy to zarówno
+ interpretera poleceń, jak i samego kodu uruchamianego w nim.
+ Możliwy jest dostęp do wszystkich API języka Java.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
 \begin_layout Chapter
 Silniki elektryczne
 \end_layout
@@ -2557,15 +2617,145 @@ Zestaw EVK1100
 \end_layout
 
 \begin_layout Standard
-Zestaw uruchomieniowy EVK1100 dla mikrokontrolera Atmel AT32UC3A0512 stanowi
- bazę dla systemu sterowania robotem, którego realizacja jest opisana w
- części 
+\begin_inset Wrap figure
+placement r
+width "40col%"
+status open
+
+\begin_layout Standard
+\noindent
+\begin_inset Graphics
+	filename images/evk1100-angle.jpg
+	lyxscale 50
+	width 40col%
+	BoundingBox 10bp 20bp 390bp 329bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:Fotografia EVK1100"
+
+\end_inset
+
+Fotografia EVK1100
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Zestaw uruchomieniowy EVK1100 pozakazany na rysunku 
+\begin_inset LatexCommand vref
+reference "fig:Fotografia EVK1100"
+
+\end_inset
+
+ stanowi kontrolną jednostkę bazową dla systemu sterowania robotem, którego
+ praktyczna realizacja jest opisana w części 
 \begin_inset LatexCommand vref
 reference "par:Realizacja-praktyczna"
 
 \end_inset
 
 .
+ Konstrukcja płyty jest oparta o układ mikrokontrolera Atmel AT32UC3A0512
+ opisany w rozdziale 
+\begin_inset LatexCommand vref
+reference "sub:Mikrokontroler-AT32UC3A0512"
+
+\end_inset
+
+.
+ Została zaprojektowana w sposób umożliwiający projektantowi urządzenia
+ uruchomienie oprogramowania relizującego planowaną funkcjonalność na dostępnych
+ peryferiach.
+ Następnie tak uruchomiony projekt może zostać przeniesiony na docelową
+ płytę urządzenia, do zaprojektowania której zestaw EVK1100 może stanowić
+ dobrą konstrukcję referencyjną.
+\end_layout
+
+\begin_layout Standard
+Płyta zawiera następujące układy peryferyjne zainstalowane i gotowe do użycia
+ przez programistę:
+\end_layout
+
+\begin_layout Itemize
+Interfejs USB (2.0 mini A-B receptacle)
+\end_layout
+
+\begin_layout Itemize
+Interfejs Ethernet (External Ethernet Phy 10/100 and RJ45 connector)
+\end_layout
+
+\begin_layout Itemize
+3 × Zegar
+\end_layout
+
+\begin_layout Itemize
+1 × Atmel DataFlash (AT35DB642 8 MBytes, współdzielony z SPI1)
+\end_layout
+
+\begin_layout Itemize
+1 × SDRAM (32 MBytes)
+\end_layout
+
+\begin_layout Itemize
+2 × USARTs
+\end_layout
+
+\begin_layout Itemize
+Wyświetlacz LCD 4x20 (niebieski, z podświetlaniem regulowanym PWM)
+\end_layout
+
+\begin_layout Itemize
+6 × LEDs
+\end_layout
+
+\begin_layout Itemize
+3 × Przyciski
+\end_layout
+
+\begin_layout Itemize
+1 × Joystick
+\end_layout
+
+\begin_layout Itemize
+1 × Potencjometr
+\end_layout
+
+\begin_layout Itemize
+1 × Czujnik światła
+\end_layout
+
+\begin_layout Itemize
+1 × Czujnik temperatury
+\end_layout
+
+\begin_layout Itemize
+2 × SPI (Serial Peripheral Interface), w tym jeden wolny
+\end_layout
+
+\begin_layout Itemize
+1 × Slot SD/MMC (poprzez SPI0)
+\end_layout
+
+\begin_layout Itemize
+1 × TWI (Two Wire Interface) 
+\end_layout
+
+\begin_layout Standard
+Sterowanie silników elektrycznych jest możliwe dzięki 6 wyjściom PWM oferowanym
+ przez układ AT32UC3A0512.
 \end_layout
 
 \begin_layout Section
@@ -2597,6 +2787,12 @@ Przed przystąpieniem do zasadniczej pracy nad projektem złożonym ze wszystkic
 
 \begin_layout Section
 JTAG ICE mk-II + STK 500
+\begin_inset LatexCommand label
+name "sec:JTAG-ICE-rozruch"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -2605,6 +2801,123 @@ RoboActor
 
 \begin_layout Section
 EVK1100
+\end_layout
+
+\begin_layout Standard
+Uruchomienie układu rozwojowego EVK1100 firmy Atmel po wyjęciu z pudełka
+ przeprowadzamy w dwóch etapach, z których pierwszy polega na podłączeniu
+ zasilania do płytki zgodnie z ulotką zatytułowaną 
+\begin_inset Quotes eld
+\end_inset
+
+Quick Start Guide
+\begin_inset Quotes erd
+\end_inset
+
+ i sprawdzeniu działania aplikacji testowej preinstalowanej przez producenta.
+ W następnym kroku przeprowadzamy kompilację programu testowego ze źródeł
+ oraz ładowanie kodu binarnego na płytkę za pomocą JTAG ICE mk-II (opisanego
+ w sekcji 
+\begin_inset LatexCommand vref
+reference "sec:JTAG-ICE"
+
+\end_inset
+
+ oraz sekcji 
+\begin_inset LatexCommand vref
+reference "sec:JTAG-ICE-rozruch"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+Krok\InsetSpace ~
+1.
+ Przygotowanie zestawu narzędzi WinAVR
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Zestaw narzędzi dostępny na 
+\begin_inset LatexCommand url
+target "http://winavr.sourceforge.net/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ zawierającego między innymi kompliator gcc dla procesora AVR32.
+ Dodatkowo z płytki CD dostarczonej z zestawew EVK1100 lub ze strony producenta
+ ściągamy bibliotekę kodu dla procesora typu UC3.
+\end_layout
+
+\begin_layout Description
+Krok\InsetSpace ~
+2.
+ Następnie przykładowy kod z katalogu 
+\family typewriter
+/praca/DRIVERS/ADC/EXAMPLE/AT32UC3A/GCC
+\family default
+ budujemy poleceniem 
+\family typewriter
+make
+\family default
+.
+ Uruchamia ono kompilator 
+\family typewriter
+avr32-gcc
+\family default
+ i tworzy wynikowy plik relokowalny 
+\family typewriter
+uc3a0512-adc_example.elf
+\family default
+.
+\end_layout
+
+\begin_layout Description
+Krok\InsetSpace ~
+3.
+ Ładowanie programu dokonujemy poleceniem 
+\family typewriter
+avr32program
+\family default
+, którego przykładowe wywołanie wygląda następująco:
+\newline
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Standard
+
+\family typewriter
+avr32program program -finternal@0x80000000,512Kb -e -v uc3a0512-adc_example.elf
+ 
+\end_layout
+
+\end_inset
+
+
+\newline
+w rezultacie kod binarny zostaje zaprogramowany w pamięci flash procesora.
+ Zastosowane opcje programu inforują programator, że adres pamięci programowalne
+j zaczyna się pod adresem 0x80000000 i ma rozmiar 512\InsetSpace ~
+kilobajtów.
+ Opcja -e informuje o wykasowaniu pamięci przed programowaniem, a opcja
+ -v o przeprowadzeniu weryfikacji programowania.
 \end_layout
 
 \begin_layout Section
