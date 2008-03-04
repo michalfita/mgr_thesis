@@ -10,7 +10,7 @@
 
 \usepackage{type1ec}
 \usepackage[T1]{fontenc}
-
+\usepackage{textcomp}
 
 %\usepackage[pdftex,man,opt]{wmstitle}
 \usepackage[pdftex,type=mgr]{aghtitle}
@@ -1859,20 +1859,16 @@ Układ AT32UC3A0512 zawiera wewnętrzną pamięć Flash i pamięć statyczną dl
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
-The PowerManager improves design flexibility and security: the on-chip Brown-Out
- Detector monitors the power supply, the CPU runs from the on-chip RC oscillator
- or from one of external oscillator sources, a Real-Time Clock and its associate
-d timer keeps track of the time.
- The Timer/Counter includes three identical 16-bit timer/counter channels.
- Each channel can be independently programmed to perform frequency measurement,
- event counting, interval measurement, pulse generation, delay timing and
- pulse width modulation.
- The PWM modules provides seven independent channels with many configuration
- options including polarity, edge alignment and waveform non overlap control.
+Układ zarządzania zasilaniem PowerManager udoskonala elastyczność projektu
+ i bezpieczeństwo -- wykrywa zaniki zasilania.
+ Mikorkontroler może być taktowany z wewnętrznego oscylatora RC lub z jednego
+ z zewnętrznych oscylatorów, zegar czasu rzeczywistego i powiązany z nim
+ timer utrzymują pomiar czasu.
+ Timery/Liczniki to 3 kanały 16-bitowe.
+ Każdy kanał jest programowany niezależnie do pomiaru częstotliwości, zliczania
+ zdarzeń, generacji impulsów, pomiaru opóźnień i modulacji szerokości impulsów.
+ ------The PWM modules provides seven independent channels with many configurati
+on options including polarity, edge alignment and waveform non overlap control.
  One PWM channel can trigger ADC conversions for more accurate close loop
  control implementations.
  The AT32UC3A also features many communication interfaces for communication
@@ -2020,7 +2016,7 @@ status collapsed
 
 \end_inset
 
-Procesory TigerSHARK są podobnie jak układy Blackfin połączeniem konstrukcji
+Procesory TigerSHARC są podobnie jak układy Blackfin połączeniem konstrukcji
  DSP z wydajną architekturą RISC, jednakże ogromny nacisk położono na architektu
 rę wieloprocesorową.
  Bardzo duża wewnętrzna pamięć pozwala przetważać FFT nawet do 64.000 punktów,
@@ -2605,6 +2601,90 @@ name "sec:JTAG-ICE"
 \end_inset
 
 JTAG ICE mk-II
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+width "50col%"
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/jtag-ice-mkii-bw.jpg
+	lyxscale 30
+	width 40col%
+	BoundingBox 5bp 5bp 2353bp 1572bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Fotografia JTAG\InsetSpace ~
+ICE\InsetSpace ~
+mk-II
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+Urządzenie AVR
+\begin_inset Formula $\textregistered$
+\end_inset
+
+ JTAG ICE mk-II z firmy Atmel jest silnym narzędziem do On-chip Debugging
+ wszystkich typów 8-bitowych mikrokontrolerów AVR RISC z interfejsem IEEE
+ 1149.1 (opisany w podrozdziale 
+\begin_inset LatexCommand vref
+reference "sec:Interfejs-JTAG"
+
+\end_inset
+
+) lub interfejsem debugWIRE.
+ Interfejs DebugWIRE pozwala na debugowanie układów o małej liczbie wyprowadzeń
+ dzięku użyciu tylko jednej linii sygnałowej do komunikacji.
+ JTAG ICE mk-II wraz z programem AVR Studio daje do ręki użytkownika kompletną
+ kontrolę nad wewnętrznymi zasobami mikrokontrolera, skracając czas uruchamiania
+ poprzez uczynienie debugowania łatwiejszym.
+ Możliwe jest także emulowanie mikrokontrolera w czasie rzeczywistym, w
+ trakcie jego działania w systemie docelowym.
+\end_layout
+
+\begin_layout Standard
+Dzięki temu nardzędziu zasoby mikrokontrolera AVR mogą być monitorowane:
+ pamięć Flash, pamiięć EEPROM, pamięć SRAM, rejestry, licznik programu,
+ bity blokujące i zabezpieczające, oraz wszystkie moduły wejścia/wyjścia.
+ Wspierane jest także rozległe wsparcie dla warunków zatrzymania, włączając
+ w to zmianę przepływu w programie, zmianę komórek pamięci pod konkretnym
+ adresem lub zakresami adresów.
+\end_layout
+
+\begin_layout Standard
+Oprócz debugowania istotną funkcją realizowaną przez JTAG ICE mk-II jest
+ programowanie pamięci Flash i EEPROM mikrokontrolerów AVR i AVR32.
+ Chcąc programować układy AVR32 z pominięciem funkcjonalności programu startoweg
+o niezbędne jest posiadanie takiego właśnie urządzenia.
+ Elastyczne ustawianie i kasowanie bitów zabezpieczających w tej serii układów,
+ jest możliwe tylko z tym narzędziem.
+\end_layout
+
+\begin_layout Standard
+Integracja ze środowiskiem AVR32 Studio obejmuje poza programowaniem układów
+ i debugowaniem, również aktualizację oprogramowania w samym urządzeniu.
+ Aplikacja ta bazuje na uznanym standardzie środowisk programistycznych,
+ czyli Eclipse.
 \end_layout
 
 \begin_layout Section

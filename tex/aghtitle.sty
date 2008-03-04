@@ -1,9 +1,9 @@
 %% 
 %% This is file `aghtitle.sty',
 %% author: Micha/l Fita <manveru@interia.pl>
-%% version:  0.10  25/09/2007     
+%% version:  0.15  04/03/2008     
 %%
-%% Copyright (C) 2007 by Micha/l Fita. All rights reserved.
+%% Copyright (C) 2007-2008 by Micha/l Fita. All rights reserved.
 %% 
 %% It may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.2
@@ -15,7 +15,7 @@
 %% 
 %% 
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
-\ProvidesPackage{aghtitle}[2007/09/25 v. 0.1 Strona Tytylowa Pracy Magisterskiej]
+\ProvidesPackage{aghtitle}[2008/03/04 v. 0.15 Strona Tytulowa Pracy Magisterskiej]
 
 \typeout{Strona Tytulowa Pracy Magisterskiej by Michal Fita}
 
@@ -151,17 +151,24 @@
       
       % Put author info for each author
       \global\edef\@nauthor{\@author}
+      \global\edef\@nalbumno{\@albumNumber}
       \global\edef\@tmpauthor{.,.,.}
+      \global\edef\@tmpalbumn{.,.,.}
       \def\@leftPart##1,##2{##1}
       \def\@rightPart##1,##2{##2}
       \whiledo{\the@authorCounter>0}{\begingroup%
         \Large{\BeforeSubString{,}{\@nauthor}}\\
-        \small{Numer albumu: 1234}\\
+        \small{Numer albumu: \BeforeSubString{,}{\@nalbumno}}\\
         \addtocounter{@authorCounter}{-1}%
         \global\edef\@tmpauthor{\@nauthor,}%
+        \global\edef\@tmpalbumno{\@nalbumno,}%
         \IfSubStringInString{,}{\@tmpauthor}
         {
           \global\edef\@nauthor{\expandafter\@rightPart\@tmpauthor\relax}
+        }{\@empty}%
+        \IfSubStringInString{,}{\@tmpalbumno}
+        {
+          \global\edef\@nalbumno{\expandafter\@rightPart\@tmpalbumno\relax}
         }{\@empty}%
       \endgroup}
       
