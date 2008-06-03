@@ -1,7 +1,7 @@
 %% 
 %% This is file `aghtitle.sty',
 %% author: Micha/l Fita <manveru@interia.pl>
-%% version:  0.15  04/03/2008     
+%% version:  0.16  2008/06/03     
 %%
 %% Copyright (C) 2007-2008 by Micha/l Fita. All rights reserved.
 %% 
@@ -15,7 +15,7 @@
 %% 
 %% 
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
-\ProvidesPackage{aghtitle}[2008/03/04 v. 0.15 Strona Tytulowa Pracy Magisterskiej]
+\ProvidesPackage{aghtitle}[2008/06/03 v. 0.16 Strona Tytulowa Pracy Magisterskiej]
 
 \typeout{Strona Tytulowa Pracy Magisterskiej by Michal Fita}
 
@@ -64,10 +64,12 @@
 {
   %\RequirePackage[pdftex]{graphicx}
   \def\agh@orzelek{orzelAGH.jpg}
+  \def\agh@logo{logoagh.jpg}
 }
 {
   %\RequirePackage[dvips]{graphicx}
   \def\agh@orzelek{orzelAGH.eps}
+  \def\agh@logo{logoagh.eps}
 }
 % Definicje uniwersalne polskich znaczków
 \newcommand{\agh@a}{\k a}             %{\char177}
@@ -122,8 +124,9 @@
   	
     \begin{center}
     	\vspace{-33pt}
-      \includegraphics[height=44pt]{\agh@orzelek}\par % Orzelek
-      \vspace*{5pt}
+      %\includegraphics[height=44pt]{\agh@orzelek}\par % Orzelek
+      \includegraphics[height=20mm]{\agh@logo}\par % Nowe logo AGH
+      \vspace*{7pt}
       
       \begin{tabular}{c}
         \large{Akademia G{\agh@o}rniczo-Hutnicza im. Stanis{\agh@l}awa Staszica w Krakowie}

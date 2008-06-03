@@ -1,4 +1,4 @@
-#LyX 1.5.3 created this file. For more info see http://www.lyx.org/
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
 \lyxformat 276
 \begin_document
 \begin_header
@@ -1766,6 +1766,12 @@ Pulse Width Modulation
 
 \begin_layout Section
 Atmel Corporation
+\begin_inset LatexCommand label
+name "sec:Atmel-Corporation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1779,7 +1785,23 @@ Firma Atmel Corporation oferuje wiele różnych konstrukcji procesorów, z
 \end_layout
 
 \begin_layout Subsection
+AVR
+\begin_inset LatexCommand label
+name "sub:AVR-serie"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 AVR32
+\begin_inset LatexCommand label
+name "sub:AVR32-serie"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2609,11 +2631,13 @@ width "50col%"
 status open
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename images/jtag-ice-mkii-bw.jpg
 	lyxscale 30
-	width 40col%
+	width 6cm
 	BoundingBox 5bp 5bp 2353bp 1572bp
+	clip
 
 \end_inset
 
@@ -2631,10 +2655,6 @@ mk-II
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
@@ -2842,6 +2862,82 @@ Sterowanie silników elektrycznych jest możliwe dzięki 6 wyjściom PWM oferowa
 Moduł kamery PixelPlus
 \end_layout
 
+\begin_layout Standard
+System 
+\begin_inset Quotes pld
+\end_inset
+
+wzroku
+\begin_inset Quotes prd
+\end_inset
+
+ robota oparty jest o kamerę cyfrową PIXELPLUS PO2030NC-MS21-PP03 z matrycą
+ CMOS o rozmiarze 1/4.5
+\begin_inset Quotes prd
+\end_inset
+
+ (5,64 mm) i rozdzielczości efektywnej 640
+\begin_inset Formula $\times$
+\end_inset
+
+480 punktów.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename vector/camera-dimensions.svg
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Rozmiary kamery PIXELPLUS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Ta bardzo małych rozmiarów kamera może rejestrować obraz kolorowy lub w
+ odcieniach szarości.
+ Kąt widzenia optyki tej kamery to 63
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+ co odpowiada długości ogniskowej 35\InsetSpace ~
+mm obiektywu aparatu małoobrazkowego
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Pod pojęciem aparat fotograficzny małoobrazkowy kryje się format obrazka
+ 36
+\begin_inset Formula $\times$
+\end_inset
+
+24\InsetSpace ~
+mm kliszy fotograficznej.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Part
 \begin_inset LatexCommand label
 name "par:Realizacja-praktyczna"
@@ -2873,6 +2969,68 @@ name "sec:JTAG-ICE-rozruch"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+STK500 jest kartą rozwojową i zestawem startowy dla mikrokontrolerów z lini
+ AVR firmy ATMEL .
+ Jest to produkt o uznanej rynkowej pozycji, stosowany od kilku lat jako
+ układ rozruchowy dla aplikacji mikrokontrolerów AVR, głównie ATMEGA i ATtiny
+ (omówione w rozdziale 
+\begin_inset LatexCommand vref
+reference "sub:AVR-serie"
+
+\end_inset
+
+).
+ Płytka zawiera podstawki dla kilku najpopularniejszych typów układów w
+ obudowach DIP oraz trochę elektroniki służącej do sterowania zasilaniem,
+ komunikacją RS-232 i programowaniem w systemie (ISP).
+ Atrakcyjny zestaw inżynierski dostępny w promocji w roku 2007 nie zamyka
+ się w samym STK500, ale zawiera również JTAG ICE mk-II opisane dokładniej
+ w 
+\begin_inset LatexCommand vref
+reference "sec:JTAG-ICE"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Uruchomienie samego STK500 z domyślnie zainstalowanym układem ATMEGA8515L
+ przebiega bezproblemowo.
+ Zapinamy za pomocą dostępnych tasiemek złącze PORTB do złącza LEDS i złącze
+ PORTD do złącza SWITCHES.
+ Po podłączeniu zasilania powinien być dostępny domyślny program pozwalający
+ za pomocą przycisków sterować diodkami.
+ Jest to postępowanie dokładnie zgodne z krokami opisanymi w instrukcji
+ użytkownika.
+ Aby zaprogramować układ w podstawce STK500 (oznaczenie SCKT3000D3) należy
+ za pomocą tasiemki podłączyć złącze ISP6PIN ze złączem SPROG3.
+ Po podłączeniu zasilania i kabla RS-232 do gniazda RS232CTRL i komputera
+ PC możemy przeprowadzać programowanie układu w 
+\series bold
+AVR Studio
+\series default
+.
+ Przeprowadzamy to przez kliknięcie ikonki oznaczonej “AVR” na pasku narzędzi.
+ Dokładny opis procesu dostępny jest w dokumentacji użytkownika.
+\end_layout
+
+\begin_layout Standard
+Układ ATMEGA8515L nie posiada żadnych elementów JTAG ani wsparcia dla sprzętoweg
+o debugowania.
+ Aby wypróbować możliwości ICE mk-II należy zamonotwać w podstawce układ
+ ATMEGA162V dostępny standardowo w aktualnie dostarczanych zestawach STK500.
+ W tym układzie mamy dostęp do pełnego standardu IEEE 1149.1 oraz sprzętowego
+ debugowania i programowania pamięci Flash, EEPROM, fuse- i lock-bitów.
+ Aby układ ATMEGA162V współpracował z JTAG ICE mk-II należy podłączyć próbnik
+ do płytki STK500, przy czym w tym konkretnym wypadku wymaga do podłączenia
+ samodzielnego -- STK500 nie posiada portu dla JTAG.
+ Podłączenia należy dokonać przez wyprowadzenia ze złącza PORTC i jednego
+ pinu złącza PORTE (pin RST).
 \end_layout
 
 \begin_layout Section
@@ -2915,14 +3073,15 @@ reference "sec:JTAG-ICE-rozruch"
 \begin_layout Description
 Krok\InsetSpace ~
 1.
- Przygotowanie zestawu narzędzi WinAVR
+ Przygotowanie zestawu narzędzi GNU Compiler Collection dla AVR32
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
+\noindent
 Zestaw narzędzi dostępny na 
-\begin_inset LatexCommand url
-target "http://winavr.sourceforge.net/"
+\begin_inset LatexCommand htmlurl
+target "http://www.atmel.com/avr32"
 
 \end_inset
 
@@ -2931,7 +3090,8 @@ target "http://winavr.sourceforge.net/"
 
 \end_inset
 
- zawierającego między innymi kompliator gcc dla procesora AVR32.
+ zawierającego między innymi kompliator gcc i debuger gdb dla procesora
+ AVR32.
  Dodatkowo z płytki CD dostarczonej z zestawew EVK1100 lub ze strony producenta
  ściągamy bibliotekę kodu dla procesora typu UC3.
 \end_layout
@@ -2941,7 +3101,7 @@ Krok\InsetSpace ~
 2.
  Następnie przykładowy kod z katalogu 
 \family typewriter
-/praca/DRIVERS/ADC/EXAMPLE/AT32UC3A/GCC
+/praca/framework/APPLICATIONS/EVK1100-CONTROL_PANEL/AT32UC3A/GCC
 \family default
  budujemy poleceniem 
 \family typewriter
@@ -2954,7 +3114,7 @@ avr32-gcc
 \family default
  i tworzy wynikowy plik relokowalny 
 \family typewriter
-uc3a0512-adc_example.elf
+uc3a0512-ctrlpanel.elf
 \family default
 .
 \end_layout
@@ -2962,6 +3122,43 @@ uc3a0512-adc_example.elf
 \begin_layout Description
 Krok\InsetSpace ~
 3.
+ Kasowanie pamięci mikrokontrolera przeprowadzamy poleceniem avr32program,
+ którego wywołanie wygląda następująco:
+\newline
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Standard
+
+\family typewriter
+avr32program chiperase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Usuwa to zapezpieczenia pamięci flash mikrokontrolera i pozwala na zapisanie
+ nowego programu binarnego do tej pamięci.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Krok\InsetSpace ~
+4.
  Ładowanie programu dokonujemy poleceniem 
 \family typewriter
 avr32program
@@ -3000,6 +3197,189 @@ kilobajtów.
  -v o przeprowadzeniu weryfikacji programowania.
 \end_layout
 
+\begin_layout Standard
+Aby od tego momentu przystąpić do pracy nad projektem w 
+\series bold
+AVR32 Studio
+\series default
+, należy przygotować środowisko pracy, na które składają się:
+\end_layout
+
+\begin_layout Itemize
+elementy szkieletu aplikacji (ang.
+ 
+\shape italic
+application framework
+\shape default
+)
+\end_layout
+
+\begin_layout Itemize
+system operacyjny FreeRTOS wersja 4.8.0
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+\noindent
+Firma Atmel dostarczyła w szkielecie FreeRTOS w wersji 4.3.1.
+ Znajduje się on w katalogu 
+\family typewriter
+praca/framework/SERVICES/FREERTOS
+\family default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ze względu na pewne ograniczenia i niedogodności w zarządzaniu projektem
+ w 
+\series bold
+AVR32 Studio
+\series default
+ wszystkie elementy składające się na aplikację muszą znaleźć się w jednym
+ katalogu.
+ Polega to na skopiowaniu wybranych sterowników (ang.
+ 
+\shape italic
+drivers
+\shape default
+) i innych potrzebnych elementów ze szkieletu dostarczonego przez firmę
+ Atmel.
+ Zamiast systemu FreeRTOS dostarczonego ze szkieletem, załadowany został
+ system zciągnięty ze strony 
+\begin_inset LatexCommand htmlurl
+target "http://www.freertos.org"
+
+\end_inset
+
+ i umieszczony w katalogu 
+\family typewriter
+praca/src/FREERTOS
+\family default
+, usunięte zostały porty inne niż 
+\family typewriter
+AVR32_UC3
+\family default
+ z podkatalogu 
+\family typewriter
+portable/GCC
+\family default
+.
+ Ze szkieletu z podkatalogu 
+\family typewriter
+SERVICES/FREERTOS/portable
+\family default
+ przeniesiony został katalog 
+\family typewriter
+MemMang
+\family default
+ z plikiem 
+\family typewriter
+heap3.c
+\family default
+ do odpowiadającego katologu projektu.
+\end_layout
+
+\begin_layout Standard
+Jako bazę wybrana zostaje aplikacja Control Panel, która następnie jest
+ budowana pod kontrolą 
+\series bold
+AVR32 Studio
+\series default
+, jako projekt typu AVR32 Managed Make.
+ Przed zbudowaniem aplikacji, należy przekonfigurować nieco sposób kompilacji
+ pliku 
+\family typewriter
+exception.S
+\family default
+ z katalogu 
+\family typewriter
+DRIVERS/INTC
+\family default
+:
+\end_layout
+
+\begin_layout Itemize
+zmieniać nazwę pliku 
+\family typewriter
+exception.S
+\family default
+ na nazwę 
+\family typewriter
+exception.s
+\end_layout
+
+\begin_layout Itemize
+z menu prawego przycisku myszy wybrać 
+\begin_inset Quotes pld
+\end_inset
+
+Properties
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+wybrać opcję 
+\begin_inset Quotes pld
+\end_inset
+
+C/C++ Build item"
+\end_layout
+
+\begin_layout Itemize
+w zakładce 
+\begin_inset Quotes pld
+\end_inset
+
+Tool Settings" wybrać element 
+\begin_inset Quotes pld
+\end_inset
+
+AVR32/GNU Assembler"
+\end_layout
+
+\begin_layout Itemize
+zmienić 
+\family typewriter
+avr32-as
+\family default
+ na 
+\family typewriter
+avr32-gcc
+\end_layout
+
+\begin_layout Itemize
+wybrać podelement 
+\begin_inset Quotes pld
+\end_inset
+
+General"
+\end_layout
+
+\begin_layout Itemize
+dodać w polu 
+\begin_inset Quotes pld
+\end_inset
+
+Assembler Flags" wartość 
+\family typewriter
+-x assembler-with-cpp -c
+\family default
+ 
+\end_layout
+
+\begin_layout Standard
+Od tego momentu projekt jest gotowy do przebudowania w całości.
+ Zbudowanie całej aplikacji zajmuje kilkanaście minut.
+\end_layout
+
 \begin_layout Section
 Moduł Bluetooth
 \end_layout
@@ -3030,6 +3410,95 @@ Architektura ogólna
 
 \begin_layout Section
 Architektura podsystemu układu mikrokontrolera
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename vector/system-arch-general.svg
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Schemat blokowy podsystemu układu mikrokontrolera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Jedną z części systemu sterowania robotem stanowi układ kontrolno-sterujący
+ oparty o mikrokontroler AT32UC3A0512, w tym przypadku bazujący na bazie
+ zestawu ewaluacyjnego EVK1100, do którego dołożone są dodatkowe elementy:
+\end_layout
+
+\begin_layout Itemize
+Komunikacja bezprzewodowa w technologii Bluetooth
+\end_layout
+
+\begin_layout Itemize
+Kamera cyfrowa 1/4.5
+\begin_inset Quotes prd
+\end_inset
+
+ firmy Pixelplus
+\end_layout
+
+\begin_layout Itemize
+Układ zasilania silników elektrycznych sterowany cyfrowo oparty o układy
+ buforujące
+\end_layout
+
+\begin_layout Standard
+Część tego podsystemu stanowi oprogramowanie odpowiadające za komunikację
+ z podsystemem zdalnej kontroli działającym na komputerze PC oraz sterowanie
+ realizacją poleceń i transmisją obrazu.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vector/system-arch-avr-soft.svg
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Architektura oprogramowania układu mikrokontrolera
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Oprogramowanie to działa na bazie systemu operacyjnego FreeRTOS.
 \end_layout
 
 \begin_layout Section
