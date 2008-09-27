@@ -1,5 +1,5 @@
-This file was created with JabRef 2.3b.
-Encoding: Cp1250
+% This file was created with JabRef 2.3.
+% Encoding: Cp1250
 
 @ARTICLE{prio-inherit-rt-sync,
   author = {Sha, L. Rajkumar, R. Lehoczky, J.P.},
@@ -32,12 +32,26 @@ Encoding: Cp1250
   title = {JTAG Boundary Scan},
   journal = {Elektronik wersja online},
   year = {2006},
+  volume = {{}},
   pages = {1},
   month = {listopad},
   keywords = {jtag},
   owner = {Manveru},
   timestamp = {2007.09.08},
   url = {http://www.elektronikab2b.pl/content/view/1006/108/lang,pl/}
+}
+
+@ARTICLE{usb-elektronik-online,
+  author = {KKP},
+  title = {Dodawanie interfejsu USB do urz¹dzeñ},
+  journal = {Elektronik wersja online},
+  year = {2007},
+  volume = {{}},
+  pages = {1},
+  month = {Lipiec},
+  owner = {Manveru},
+  timestamp = {2007.09.09},
+  url = {http://www.elektronikab2b.pl/content/view/1782/108/lang,pl/}
 }
 
 @MISC{power.org-vision,
@@ -53,6 +67,21 @@ Encoding: Cp1250
   owner = {Manveru},
   timestamp = {2007.09.04},
   url = {http://www.power.org/news/articles/techvision}
+}
+
+@BOOK{usb-in-nutshell-beyondlogic,
+  title = {USB in a NutShell
+	
+	Making Sense of the USB Standard},
+  publisher = {BeyondLogic.org},
+  year = {2007},
+  author = {Craig Peacock},
+  pages = {7},
+  month = {April},
+  keywords = {usb},
+  owner = {Manveru},
+  timestamp = {2007.09.09},
+  url = {http://www.beyondlogic.org/usbnutshell/usb7.htm}
 }
 
 @TECHREPORT{jazelle-wp,
@@ -72,7 +101,9 @@ Encoding: Cp1250
   title = {Why 1149.1 (JTAG) really works},
   journal = {Electro/94 International. Conference Proceedings. Combined Volumes.},
   year = {1994},
+  volume = {{}},
   pages = {749--754},
+  month = {May},
   abstract = {The IEEE 1149.1 boundary-scan standard (JTAG) has now been a reality
 	for over four years, and has had a lot of success, not always in
 	the ways that the pioneers anticipated. This paper gives an overview
@@ -103,10 +134,20 @@ Encoding: Cp1250
   url = {http://www.analog.com/en/press/0,2890,3__99573,00.html}
 }
 
+@BOOK{szachista-lysiak,
+  title = {Szachista},
+  publisher = {Krajowa Agencja Wydawnicza},
+  year = {1982},
+  author = {Waldemar £ysiak}
+}
+
 @BOOK{jtag-std,
-  title = {IEEE standard test access port and boundary - scan architecture},
+  title = {1149.1-2001
+	
+	IEEE standard test access port and boundary - scan architecture},
   publisher = {The Institute of Electrical and Electronics Engineers, Inc.},
-  year = {1990},
+  year = {2001},
+  editor = {IEEE Computer Society},
   abstract = {IEEE Std. 1149.1-2001, defines circuitry that may be built into an
 	integrated circuit to assist in the test, maintenance, and support
 	of assembled printed circuit boards. The circuitry includes a standard
@@ -116,11 +157,12 @@ Encoding: Cp1250
 	designed to assist with testing of assembled printed circuit boards},
   citeulike-article-id = {1513003},
   comment = {IEEE 1149.1-2001},
+  doi = {ISBN 0-7381-2944-5},
   journal = {IEEE Std 1149.1-2001},
   keywords = {master thesis},
   owner = {Manveru},
   priority = {2},
-  url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=211226}
+  url = {http://ieeexplore.ieee.org/servlet/opac?punumber=7481}
 }
 
 @comment{jabref-meta: selector_publisher:IEEE;}

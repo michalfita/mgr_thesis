@@ -1,4 +1,4 @@
-#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+#LyX 1.5.6 created this file. For more info see http://www.lyx.org/
 \lyxformat 276
 \begin_document
 \begin_header
@@ -2617,6 +2617,219 @@ Rozdział ten opisuje techniczne aspekty narzędzi i modułów planowanych do
 \end_layout
 
 \begin_layout Section
+AVR32 Studio
+\begin_inset LatexCommand label
+name "sec:AVR32-Studio"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+placement r
+width "32mm"
+status open
+
+\begin_layout Standard
+\noindent
+\begin_inset Graphics
+	filename images/avr32studio_icon.gif
+	width 30mm
+	height 30mm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+AVR32 Studio według producenta
+\begin_inset LatexCommand cite
+key "AVR32015"
+
+\end_inset
+
+ jest zintegrowanym środowiskiem programistycznym (ang.
+ 
+\emph on
+integrated development environment
+\emph default
+) do produkcji oprogramowania dla mikrokontrolerów serii AVR32 firmy ATMEL
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+textsuperscript{
+\backslash
+textregistered}
+\end_layout
+
+\end_inset
+
+.
+ AVR32 Studio udostępnia kompletny zestaw funkcjonalności zawierający m.\InsetSpace ~
+in.:
+\end_layout
+
+\begin_layout Itemize
+zarządzanie projektem i integrację z kontrolą wersji (CVS)
+\end_layout
+
+\begin_layout Itemize
+edytor C/C++ z podświetlaniem składni i automatycznym uzupełnianiem kodu
+\end_layout
+
+\begin_layout Itemize
+wsparcie uruchamiania i debugowania włącznie z krokowym przetwarzaniem kodu
+ źródłowego i na poziomie instrukcji maszynowej wraz z pułapkami (ang.
+ 
+\emph on
+breakpoints)
+\end_layout
+
+\begin_layout Itemize
+podgląd rejestrów, pamięci oraz wejścia i wyjścia
+\end_layout
+
+\begin_layout Itemize
+konfigurację platformy docelowej i zarządzanie nią.
+\end_layout
+
+\begin_layout Standard
+AVR32 Studio jest określane terminem Built\InsetSpace ~
+On\InsetSpace ~
+Eclipse
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+textsuperscript{
+\backslash
+texttrademark}
+\end_layout
+
+\end_inset
+
+ (pol.
+ 
+\emph on
+zbudowane na Eclipse
+\emph default
+), oznaczającym możliwości łatwej integracji z rozszerzeniami zewnętrzymi
+ w celu zwiększania funkcjonalności środowiska pracy.
+\end_layout
+
+\begin_layout Standard
+AVR32 Studio wspiera wszystkie rodzaje układów mikrokontrolerów z serii
+ AVR32.
+ Umożliwia pracę nad projektami samodzielnymi bez systemu operacyjnego lub
+ z systemem integrowanym w projekcie (np.
+ FreeRTOS
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+textsuperscript{
+\backslash
+texttrademark}
+\end_layout
+
+\end_inset
+
+ lub ThreadX
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+textsuperscript{
+\backslash
+textregistered}
+\end_layout
+
+\end_inset
+
+ firmy Express Logic) oraz projektów będących aplikacjami systemu Linux
+ (dla rodziny AT32AP7).
+\end_layout
+
+\begin_layout Standard
+Wszystkie narzędzia firmy Atmel, które wspierają architekturę AVR32 włączając
+ w to JTAG ICE mk-II (patrz: podrozdział 
+\begin_inset LatexCommand vref
+reference "sec:JTAG-ICE"
+
+\end_inset
+
+), AVR
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+textsuperscript{
+\backslash
+textregistered}
+\end_layout
+
+\end_inset
+
+ONE! oraz STK
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+textsuperscript{
+\backslash
+textregistered}
+\end_layout
+
+\end_inset
+
+600 są wspierane przez AVR32 Studio.
+\end_layout
+
+\begin_layout Standard
+AVR32 Studo wspiera również wszystkie płyty firmy ATMEL przewidziane dla
+ systemu Linux, takie jak STK1000 i NGW100.
+ Aby uruchamiać i debugować system docelowy potrzebne jest połączenie sieciowe
+ pomiędzy komputerem a płytą.
+ AVR32 Studio integruje się z łańcuchem narzędzi GNU (ang.
+ 
+\emph on
+GNU Toolchain
+\emph default
+) dla AVR32, których przygotowanie jest krótko omówione w podrozdziale 
+\begin_inset LatexCommand vref
+reference "sec:prep-AVR32-Toolchain"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
 \begin_inset LatexCommand label
 name "sec:JTAG-ICE"
 
@@ -2627,7 +2840,8 @@ JTAG ICE mk-II
 
 \begin_layout Standard
 \begin_inset Wrap figure
-width "50col%"
+placement r
+width "40col%"
 status open
 
 \begin_layout Standard
@@ -2635,9 +2849,8 @@ status open
 \begin_inset Graphics
 	filename images/jtag-ice-mkii-bw.jpg
 	lyxscale 30
-	width 6cm
+	height 40mm
 	BoundingBox 5bp 5bp 2353bp 1572bp
-	clip
 
 \end_inset
 
@@ -2661,7 +2874,18 @@ mk-II
 \end_inset
 
 Urządzenie AVR
-\begin_inset Formula $\textregistered$
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+textsuperscript{
+\backslash
+textregistered}
+\end_layout
+
 \end_inset
 
  JTAG ICE mk-II z firmy Atmel jest silnym narzędziem do On-chip Debugging
@@ -2693,7 +2917,22 @@ Dzięki temu nardzędziu zasoby mikrokontrolera AVR mogą być monitorowane:
 
 \begin_layout Standard
 Oprócz debugowania istotną funkcją realizowaną przez JTAG ICE mk-II jest
- programowanie pamięci Flash i EEPROM mikrokontrolerów AVR i AVR32.
+ programowanie pamięci Flash i EEPROM mikrokontrolerów AVR
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+textsuperscript{
+\backslash
+textregistered}
+\end_layout
+
+\end_inset
+
+ i AVR32.
  Chcąc programować układy AVR32 z pominięciem funkcjonalności programu startoweg
 o niezbędne jest posiadanie takiego właśnie urządzenia.
  Elastyczne ustawianie i kasowanie bitów zabezpieczających w tej serii układów,
@@ -2948,6 +3187,357 @@ Realizacja praktyczna
 \end_layout
 
 \begin_layout Chapter
+Przygotowanie środowiska pracy
+\end_layout
+
+\begin_layout Section
+AVR32 Toolchain
+\begin_inset LatexCommand label
+name "sec:prep-AVR32-Toolchain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Do realizacji procesu produkcji oprogramowania dla urządzenia mikroprocesorowego
+ niezbędne jest posiadanie łańcucha narzędzi (ang.
+ 
+\emph on
+toolchain
+\emph default
+) dedykowanych dla danego typu procesora.
+ Zestaw taki składa się między innymi z:
+\end_layout
+
+\begin_layout Itemize
+assemblera krzyżowego (ang.
+ 
+\emph on
+cross assembler
+\emph default
+)
+\end_layout
+
+\begin_layout Itemize
+kompilatora krzyżowego (ang.
+ 
+\emph on
+cross compiler
+\emph default
+) język C i/lub języka C++
+\end_layout
+
+\begin_layout Itemize
+linkera
+\end_layout
+
+\begin_layout Itemize
+zdalnego debuggera dla procesora wbudowanego
+\end_layout
+
+\begin_layout Itemize
+narzędzi do programowania pamięci flash mikrokontrolera
+\end_layout
+
+\begin_layout Itemize
+i kilku dodatkowych do obsługi bibliotek.
+\end_layout
+
+\begin_layout Standard
+W przypadku procesora AT32UC3A0512 firma Atmel udostępnia nieodpłatnie
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+\noindent
+http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4118
+\end_layout
+
+\end_inset
+
+ zestaw narzędzi bazujących na znanym kompilatorze GNU GCC.
+ Kompilator GNU C (GCC) jest stosowany do kompilacji kodu źródłowego w językach
+ C i C++, natomiast GNU debugger (GDB) ma zastosowanie do uruchamiania i
+ debugowania aplikacji na platformie docelowej.
+\end_layout
+
+\begin_layout Standard
+Zestaw ten jest również wyposażony w sterowniki USB pozwalające na podpięcie
+ układów na bazie procesorów serii AVR32.
+ Narzędzie 
+\begin_inset listings
+lstparams "basicstyle={\ttfamily},language=bash"
+inline true
+status collapsed
+
+\begin_layout Standard
+
+avr32program
+\end_layout
+
+\end_inset
+
+ służy do zaprogramowania układu i wykonanie nastaw konfiguracyjnych napięć
+ i zegara poprzez JTAG, natomiast narzędzie 
+\begin_inset listings
+lstparams "basicstyle={\ttfamily},language=bash"
+inline true
+status collapsed
+
+\begin_layout Standard
+
+avr32gdbproxy
+\end_layout
+
+\end_inset
+
+ jest używane do połączenia aplikacji debugera z systemem docelowym.
+\end_layout
+
+\begin_layout Standard
+Aby rozpocząć pracę nad kompilacją i uruchomieniem kodu niezbędna jest instalacj
+a tego zestawu z pomocą instalatora dostępnego na stronie firmy Atmel.
+ Narzędzia te są niezbędne do prawidłowego korzystania ze środowiska AVR32
+ Studio omówionego w podrozdziale 
+\begin_inset LatexCommand vref
+reference "sec:prep-AVR32-Toolchain"
+
+\end_inset
+
+ oraz 
+\begin_inset LatexCommand vref
+reference "sec:prep-AVR32-Studio"
+
+\end_inset
+
+.
+ Przykładowe zastosowanie omawianych powyżej narzędzi opisane jest w podrozdzial
+e 
+\begin_inset LatexCommand vref
+reference "sec:EVK1100-rozruch"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+AVR32 Studio
+\begin_inset LatexCommand label
+name "sec:prep-AVR32-Studio"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Instalacja
+\end_layout
+
+\begin_layout Standard
+Omówione w podrozdziale 
+\begin_inset LatexCommand vref
+reference "sec:AVR32-Studio"
+
+\end_inset
+
+ środowisko programistyczne AVR32 Studio wymaga instalacji.
+ Aplikacja instalacyjna jest dostępna na stronie firmy Atmel nieodpłatnie
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+\noindent
+http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4116
+\end_layout
+
+\end_inset
+
+ po dokonaniu rejestracji swoich danych.
+ Ponieważ Eclipse na którym bazuje AVR32 Studio jest aplikacją Java, na
+ komputerze musi być zainstalowane środowisko Java (ang.
+ 
+\emph on
+Java Runtime Environment, JRE
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Przed rozpoczęciem instalacji AVR32 Studio dobrze jest mieć zainstalowane
+ narzędzia GNU dla AVR32 wspomniane w podrozdziale 
+\begin_inset LatexCommand vref
+reference "sec:prep-AVR32-Toolchain"
+
+\end_inset
+
+, choć przy uruchomieniu program samoczynnie wykryje brak odpowiednich narzędzi
+ w minimalnej wymaganej wersji.
+\end_layout
+
+\begin_layout Standard
+Pierwsze uruchomienie wykonuje także automatyczną aktualizację komponentów
+ środowiska Eclipse z których składa się AVR32 Studio.
+ Proces ten uruchamiany jest w tle, co możemy zaobserwować w formie małej
+ animacji w prawym dolnym rogu z procentowym wyrażeniem postępu analizy
+ dostępnych uaktualnień.
+ W przypadku znalezienia aktualizacji pojawi sie okno dialogowe z pytaniem,
+ czy przejżeć dostępne aktualizacje.
+ Po potwierdzeniu dostępne jest drzewo grup komponentów, które zawierają
+ jakieś aktualizacje.
+ Można zaznaczyć, które chce się zainstalować.
+\end_layout
+
+\begin_layout Standard
+AVR32 udostępnia krótkie kursy postępowania w realizacji podstawowych zadań
+ dostępne z głównego ekranu zaraz po uruchomieniu aplikacji.
+\end_layout
+
+\begin_layout Subsection
+Przygotowanie terminala
+\end_layout
+
+\begin_layout Standard
+Środowisko AVR32 Studio udostępnia narzędzia terminala, które może być bardzo
+ pomocne w pracy.
+ W przypadku EVK1100, potrzebny będzie terminal szeregowy.
+ Wymaga od jednak do pracy dodatkowej biblioteki RXTX na licencji GPL, którą
+ należy zainstalować samodzielnie.
+ Do pobrania z następującego adresu: 
+\begin_inset LatexCommand htmlurl
+target "http://rxtx.qbang.org/pub/rxtx/rxtx-2.1-7-bins-r2.zip"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Następnie pliki zawarte z archiwum należy umieścić w odpowiednich katalogach
+ (katalog JRE podany przykładowo):
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\family typewriter
+RXTXcomm.jar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\family typewriter
+C:
+\backslash
+Program Files
+\backslash
+Java
+\backslash
+jre_1.6.0_06
+\backslash
+lib
+\backslash
+ext
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\family typewriter
+rxtxSerial.dll
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\family typewriter
+C:
+\backslash
+Program Files
+\backslash
+Java
+\backslash
+jre_1.6.0_06
+\backslash
+bin
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\family typewriter
+rxtxParallel.dll
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\family typewriter
+C:
+\backslash
+Program Files
+\backslash
+Java
+\backslash
+jre_1.6.0_06
+\backslash
+bin
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dopiero po instalacji tych plików możliwe będzie stosowanie terminala szeregoweg
+o połączonego przez port RS232 komputer z portem RS232 na płytce EVK1100.
+\end_layout
+
+\begin_layout Chapter
 Rozruch modułów
 \end_layout
 
@@ -3039,6 +3629,12 @@ RoboActor
 
 \begin_layout Section
 EVK1100
+\begin_inset LatexCommand label
+name "sec:EVK1100-rozruch"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3382,6 +3978,214 @@ Od tego momentu projekt jest gotowy do przebudowania w całości.
 
 \begin_layout Section
 Moduł Bluetooth
+\end_layout
+
+\begin_layout Standard
+W celu uruchomienia modułu Bluetooth niezbędne okazało się podłączenie go
+ za pośrednictwem interfejsu RS232 do komputera w celu skomunikowania się
+ z logiką modułu.
+ Dzięki temu możliwe stało się wprowadzenie nastaw wstępnych do pamięci
+ Flash modułu, które umożliwiają bezproblemową komunikację modułu z UART
+ mikrokontrolera AT32UC3A0512.
+ Dodatkowo możliwe jest też łatwiejsze testowanie protokołów komunikacyjnych
+ działających na takim łączu szeregowym.
+\end_layout
+
+\begin_layout Standard
+Ponieważ zastosowany w projekcie moduł Bluetooth działa w napięciu 3,3\InsetSpace ~
+V,
+ to fizyczna interakcja interfejsu RS232 z logiką 3,3\InsetSpace ~
+V modułu wymagała wykonania
+ układu przejściowego według schematu z rysunku 
+\begin_inset LatexCommand ref
+reference "fig:Schemat-modułu-konwertera-RS232"
+
+\end_inset
+
+ opartego na układzie konwertera MAX3243CAI.
+ Pozwala to na podłączenie modułu do gniazda portu szeregowego w komputerze
+ PC oraz do gniazda karty EVK1100 na czas prac uruchomieniowych.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename vector/rs232_bluetooth.svg
+	width 99text%
+	BoundingBox 21bp 160bp 648bp 478bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:Schemat-modułu-konwertera-RS232"
+
+\end_inset
+
+Schemat modułu konwertera RS232
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dla powyższego układu wykonana została płytka drukowana, której projekt
+ prezentowany jest na rysunkach 
+\begin_inset LatexCommand ref
+reference "fig:Projekt-PCB-konwertera-RS232"
+
+\end_inset
+
+.
+ Zbudowanie układu na płytce drukowanej umożliwiło łatwiejsze wykorzystanie
+ elementów elektronicznych montowanych powierzchniowo (ang.
+ 
+\emph on
+SMD, surface mounted device
+\emph default
+).
+ Podyktowane to było możliwością zdobycia układu dopasowującego MAX3243
+ poziomy RS232 do logiki 3.3V tylko w wersji SMD.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename C:/Projects/mgr/schematics/rs232_bluetooth-Elementów.ps
+	BoundingBox 120bp 450bp 296bp 553bp
+	clip
+	rotateOrigin leftTop
+	subcaption
+	subcaptionText "Strona elementów"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename C:/Projects/mgr/schematics/rs232_bluetooth-Ścieżek.ps
+	BoundingBox 120bp 450bp 296bp 553bp
+	clip
+	rotateOrigin leftTop
+	subcaption
+	subcaptionText "Strona ścieżek"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename C:/Projects/mgr/schematics/rs232_bluetooth-Opisu_górna.ps
+	BoundingBox 120bp 450bp 296bp 553bp
+	clip
+	rotateOrigin leftTop
+	subcaption
+	subcaptionText "Rozkład elementów"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:Projekt-PCB-konwertera-RS232"
+
+\end_inset
+
+Projekt płytki drukowanej modułu konwertera RS232
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uruchomienie modułu konwertera po jego złożeniu okazało bardzo problematyczne.
+ Standardowe ustawienia prędkości pracy układu UART moduły Bluetooth okazały
+ się być inne, niż określone w dokumentacji producenta (referencja).
+ W dokumentacji mowa jest o prędkości 115200 bitów/s, w rzeczywistości UART
+ skonfigurowany był dla 9600 bitów/s.
+ Ustawienia prędkości portu wirtualnego działającego na Bluetooth po stronie
+ komputera PC nie ma znaczenia dla działania komunikacji.
+\end_layout
+
+\begin_layout Standard
+Do uruchamiania modułu użyto programu TeraTerm
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+\noindent
+Aktualne wersje tego narzędzia dostępne pod adresem 
+\begin_inset LatexCommand htmlurl
+name "http://ttssh2.sourceforge.jp/"
+target "http://ttssh2.sourceforge.jp/"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ Można użyć jednak dowolnego programu poprawnie obsługującego komunikację
+ szeregową w komputerach PC.
+\end_layout
+
+\begin_layout Standard
+Tryb komend modułu Bluetooth jest osiągalny tylko za pośrednictwm UART,
+ czyli od strony zbudowanego konwertera RS232 na logikę 3,3\InsetSpace ~
+V.
+ Przypomina to pracę klasycznego modemu.
+ Ciąg znaków, powodujących przejście do trybu komend to 
+\begin_inset Quotes pld
+\end_inset
+
++++
+\begin_inset Quotes prd
+\end_inset
+
+ (trzy znaki plus), który można zrekonfigurować na inny ciąg właściwą komendą.
+ Spis komend znajduje się w dokumentacji moduły Bluetooth (referencja).
 \end_layout
 
 \begin_layout Section

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448"
+   height="524.40942"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45+0.46pre2+devel"
+   sodipodi:docname="system-arch-general.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-50 : 600 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="700 : 600 : 1"
+       inkscape:persp3d-origin="300 : 400 : 1"
+       id="perspective2503" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-50 : 600 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="700 : 600 : 1"
+       inkscape:persp3d-origin="300 : 400 : 1"
+       id="perspective37" />
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         id="path4104"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-50 : 600 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="700 : 600 : 1"
+       inkscape:persp3d-origin="300 : 400 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="339.68491"
+     inkscape:cy="715.24854"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="22" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Architektura systemu</dc:title>
+        <dc:date>2008-03-06</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Michał Fita</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>robot</rdf:li>
+            <rdf:li>avr32</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000"
+       id="rect2389"
+       width="220"
+       height="220"
+       x="40.5"
+       y="112.86218" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="85.747772"
+       y="227.65729"
+       id="text3549"><tspan
+         sodipodi:role="line"
+         id="tspan3551"
+         x="85.747772"
+         y="227.65729">AT32UC3A0512</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1"
+       id="rect3553"
+       width="220"
+       height="58.999996"
+       x="40.5"
+       y="379.36218" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1"
+       id="rect3555"
+       width="220"
+       height="59.000004"
+       x="308.5"
+       y="273.86218" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="218.57143"
+       y="500.93362"
+       id="text3557"><tspan
+         sodipodi:role="line"
+         id="tspan3559"
+         x="218.57143"
+         y="500.93362" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="235.71429"
+       y="505.21933"
+       id="text3561"><tspan
+         sodipodi:role="line"
+         id="tspan3563"
+         x="235.71429"
+         y="505.21933" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="80.117188"
+       y="415.1991"
+       id="text3565"><tspan
+         sodipodi:role="line"
+         id="tspan3567"
+         x="80.117188"
+         y="415.1991">Bluetooth module</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1"
+       d="M 64.78571,333.05586 L 64.78571,377.81728"
+       id="path3569"
+       inkscape:connector-type="polyline" />
+    <text
+       id="text4858"
+       y="308.01599"
+       x="348.08643"
+       style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="308.01599"
+         x="348.08643"
+         id="tspan4860"
+         sodipodi:role="line">Kamera Pixelplus</tspan></text>
+    <path
+       inkscape:connector-type="polyline"
+       id="path4862"
+       d="M 82.82094,378.96523 L 82.82094,334.33892"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1" />
+    <path
+       inkscape:connector-type="polyline"
+       id="path4864"
+       d="M 260.97362,313.02816 L 306.59415,313.02816"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1"
+       d="M 307.75802,294.99293 L 261.90481,294.99293"
+       id="path4866"
+       inkscape:connector-type="polyline" />
+    <rect
+       y="113.86218"
+       x="308.5"
+       height="59.000004"
+       width="220"
+       id="rect4878"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="365.93701"
+       y="147.96765"
+       id="text4880"><tspan
+         sodipodi:role="line"
+         id="tspan4882"
+         x="365.93701"
+         y="147.96765">Pamięć RAM</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1"
+       d="M 260.97362,153.02816 L 306.59415,153.02816"
+       id="path4884"
+       inkscape:connector-type="polyline" />
+    <path
+       inkscape:connector-type="polyline"
+       id="path4886"
+       d="M 307.75802,134.99293 L 261.90481,134.99293"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1"
+       id="rect5735"
+       width="220"
+       height="59.000004"
+       x="308.5"
+       y="194.86218" />
+    <text
+       id="text5737"
+       y="230.72986"
+       x="326.74023"
+       style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="230.72986"
+         x="326.74023"
+         id="tspan5739"
+         sodipodi:role="line">Układ zasilania silników</tspan></text>
+    <path
+       inkscape:connector-type="polyline"
+       id="path5741"
+       d="M 260.97362,234.02816 L 306.59415,234.02816"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1"
+       d="M 307.75802,215.99293 L 261.90481,215.99293"
+       id="path5743"
+       inkscape:connector-type="polyline" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000"
+       id="rect2505"
+       width="80"
+       height="50"
+       x="560.5"
+       y="157.86218" />
+    <rect
+       y="177.86218"
+       x="580.5"
+       height="50"
+       width="80"
+       id="rect2507"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000"
+       id="rect2509"
+       width="80"
+       height="50"
+       x="600.5"
+       y="197.86218" />
+    <rect
+       y="217.86218"
+       x="620.5"
+       height="50"
+       width="80"
+       id="rect2511"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000"
+       id="rect2513"
+       width="80"
+       height="50"
+       x="640.5"
+       y="237.86218" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1"
+       d="M 528.49874,240.20494 L 599.21511,240.20494"
+       id="path2515"
+       inkscape:connector-type="polyline" />
+    <path
+       inkscape:connector-type="polyline"
+       id="path2517"
+       d="M 528.49874,220.20494 L 578.94635,220.20494"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;marker-mid:none;marker-end:url(#Arrow2Lend);stroke-opacity:1"
+       d="M 528.49872,200.20494 L 559.46706,200.20494"
+       id="path2519"
+       inkscape:connector-type="polyline" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="658.59766"
+       y="269.30457"
+       id="text2521"><tspan
+         sodipodi:role="line"
+         x="658.59766"
+         y="269.30457"
+         id="tspan2525">Silnik</tspan></text>
+  </g>
+</svg>

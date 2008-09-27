@@ -37,6 +37,13 @@
 \newboolean{WhetherMorePromotors} \setboolean{WhetherMorePromotors}{false}
 \newboolean{WhetherWoman} \setboolean{WhetherWoman}{true}
 
+% Potrzebujemy pakietu setspace
+%\@ifpackageloaded{graphicx}%
+%{%
+%}
+%{%
+  \RequirePackage{setspace}  
+%}
 % Opcje pakietu
 \DeclareOptionX{pdftex}{\setboolean{WhetherPdf}{true}}
 \DeclareOptionX{type}[lic]{
@@ -62,12 +69,22 @@
 % Opcjonalne ladowanie
 \ifthenelse{\boolean{WhetherPdf}}
 {
-  %\RequirePackage[pdftex]{graphicx}
+  \@ifpackageloaded{graphicx}%
+  {%
+  }
+  {%
+    \RequirePackage[pdftex]{graphicx}  
+  }
   \def\agh@orzelek{orzelAGH.jpg}
   \def\agh@logo{logoagh.jpg}
 }
 {
-  %\RequirePackage[dvips]{graphicx}
+  \@ifpackageloaded{graphicx}%
+  {%
+  }
+  {%
+    \RequirePackage[dvips]{graphicx}  
+  }
   \def\agh@orzelek{orzelAGH.eps}
   \def\agh@logo{logoagh.eps}
 }
@@ -121,12 +138,12 @@
   \countPromotors
   
   \begin{titlepage}
-  	
+  \begin{singlespace}	
     \begin{center}
     	\vspace{-33pt}
       %\includegraphics[height=44pt]{\agh@orzelek}\par % Orzelek
       \includegraphics[height=20mm]{\agh@logo}\par % Nowe logo AGH
-      \vspace*{7pt}
+      \vspace*{9pt}
       
       \begin{tabular}{c}
         \large{Akademia G{\agh@o}rniczo-Hutnicza im. Stanis{\agh@l}awa Staszica w Krakowie}
@@ -144,13 +161,13 @@
         \large\textit{Katedra Informatyki}
       \end{tabular}
       
-      \vspace*{33pt}
+      \vspace*{99pt}
     	{\Large\agh@worktype\par} % Typ pracy (definiowane opcj¹)
      	
       \vspace*{33pt}
       
       {\huge\bfseries\@title} % Tyty³ pracy
-      \vspace{25pt}
+      \vspace{26pt}
       
       % Put author info for each author
       \global\edef\@nauthor{\@author}
@@ -199,10 +216,11 @@
   		\noindent\rule{\textwidth}{1pt}\\[-11.55pt]
   		\noindent\rule{\textwidth}{.4pt}\par
   		\begin{tabular}{c}
-  			\large Kraków 2007
+  			\large Kraków \@date
   		\end{tabular}
       
     \end{center}
+  \end{singlespace}
   \end{titlepage}
   \newpage\relax
   
