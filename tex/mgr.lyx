@@ -1,5 +1,5 @@
-#LyX 1.5.6 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
 \textclass mwbk
@@ -13,12 +13,13 @@
 \usepackage{textcomp}
 
 %\usepackage[pdftex,man,opt]{wmstitle}
-\usepackage[pdftex,type=mgr]{aghtitle}
-\usepackage[bookmarks, bookmarksopen=true, bookmarksnumbered=true, colorlinks=true, pdftitle={System sterowania robotem mobilnym}, pdfauthor={Michał Fita}]{hyperref}
+\usepackage[pdftex,type=mgr,gender=male]{aghtitle}
+%\usepackage[bookmarks, bookmarksopen=true, bookmarksnumbered=true, colorlinks=true, pdftitle={System sterowania robotem mobilnym}, pdfauthor={Michał Fita}]{hyperref}
 
 \usepackage[protrusion=true,expansion=true, tracking=true, spacing=true, kerning=true, selected=true, babel=true]{microtype}
 \end_preamble
 \options wide,pdftex
+\use_default_options false
 \language polish
 \inputencoding auto
 \font_roman default
@@ -29,9 +30,22 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \paperfontsize 11
 \spacing single
+\use_hyperref true
+\pdf_title "System sterowania robotem mobilnym"
+\pdf_author "Michał Fita"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry true
 \use_amsmath 1
@@ -63,7 +77,7 @@
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -71,7 +85,7 @@ promotor{dr inż.
  Roman Krasowski}
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -92,7 +106,8 @@ Michał Fita
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand tableofcontents
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
 
 \end_inset
 
@@ -104,6 +119,10 @@ Wstęp
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Słowo 
 \begin_inset Quotes eld
 \end_inset
@@ -140,7 +159,7 @@ robotyki
  opowiadaniu w 1942 roku.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Słowo to z kart książkek szybko trafia do świata nauki i zaczyna żyć własnym
  życiem w raz z postępem technologii elektronicznej i mechanicznej.
  Choć dziś nadal robotyka przez wielu traktowana jest jako zabawa, niż poważna
@@ -151,7 +170,7 @@ ją one wyglądem człowieka, lecz za to są dobrze przystosowane do pracy,
  którą mają realizować.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ustanowienie 13 września 2007 roku -- przy wsparciu ze strony firmy Google
  -- nagrody 
 \noun on
@@ -159,12 +178,17 @@ Lunar X Prize
 \noun default
 
 \begin_inset Foot
-status collapsed
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Szczegóły na stronie fundacji X Prize: 
-\begin_inset LatexCommand htmlurl
-target "http://www.xprize.org"
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.xprize.org
+\end_layout
 
 \end_inset
 
@@ -186,11 +210,11 @@ yła do 2004 roku wyścigowi o pobicie bariery atmosfery i kosmosu przez prywatn
  z tak samo zapartym tchem, jak na start Space Ship One.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 +
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Niedocenianym obszarem współczesnej inżynierii jest robotyka.
  Łączy ona w sobie wiedzę z dziedziny elektroniki, automatyki, mechaniki
  oraz inżynierii oprogramowania.
@@ -209,7 +233,7 @@ Wiek XX był erą komputerów, wiek XXI będzie erą robotów
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Słowo 
 \begin_inset Quotes eld
 \end_inset
@@ -285,7 +309,7 @@ Robot musi chronić sam siebie, jeśli tylko nie stoi to w sprzeczności z
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Idea sztucznej istoty pojawia się w historii znacznie wcześniej, w mitologii
  jest wiele sztucznych istot.
  Choć najbardziej znaną sztuczną istotą jest Golem, choć ten najbardziej
@@ -300,6 +324,11 @@ Idea sztucznej istoty pojawia się w historii znacznie wcześniej, w mitologii
 e nie przetrwały rewolucji francuskiej) oraz mechaniczną kaczkę.
  On też jako pierwszy zastosował walec do sterowania procesem produkcyjnym
  zamiast karty perforowanej.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -371,7 +400,7 @@ Mechaniczny Turek
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Niektóre źródła podają, że mistrzostwo Napolena wynikało ze strachu jego
  przeciwników przed przegraną.
 \end_layout
@@ -428,7 +457,8 @@ Turek
  Ten rzekomy fakt historyczny jest dokładnie opisany w memoriale, do którego
  dostęp uzyskał Waldemar Łysiak w trakcie studiów i zamienił potem na fabularyzo
 waną historię 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "szachista-lysiak"
 
 \end_inset
@@ -448,7 +478,8 @@ Interfejsy
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:Interfejs-JTAG"
 
 \end_inset
@@ -467,7 +498,8 @@ orów i układów programowalnych ze stanowiskiem pracy inżyniera, czyli komput
  połączeń z dowolnej nóżki złożonego układu scalonego po ścieżce poprowadzonej
  po płytce drukowanej.
  W roku 1990 metoda ta została zatwierdzona jako standard IEEE 1149.1
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "jtag-std"
 
 \end_inset
@@ -535,24 +567,26 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
 	filename vector/jtag-internals-01.svg
 	lyxscale 50
 	height 30pheight%
+	BoundingBox 0bp 0bp 999bp 831bp
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:Schemat-blokowy-implementacji"
 
 \end_inset
@@ -572,7 +606,8 @@ Schemat blokowy implementacji JTAG w układzie
 
 \begin_layout Standard
 Prezentowany na 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:Schemat-blokowy-implementacji"
 
 \end_inset
@@ -598,7 +633,8 @@ Obsługa interfejsu odbywa się szeregowo z dużą szybkością, często zbliżo
  bitowych są naprawdę wyśrubowane, co wpływa również na cenę tych urządzeń.
  Jednym z takich urządzeń firmy Atmel jest JTAG ICE mk-II opisywany w rozdziale
  
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:JTAG-ICE"
 
 \end_inset
@@ -644,7 +680,8 @@ anie sterujące potrafi dość dokładnie obliczyć przewidywany procent pokryci
  Umożliwia także precyzyjne zlokalizowanie uszkodzenia, w przypadku, gdy
  otrzymany na wyjściu ścieżki ciąg bitów, nie będzie zgadzał się z przewidywanym.
  (na podstawie 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "jtag-elektronik-online"
 
 \end_inset
@@ -666,7 +703,7 @@ Zalety stosowania JTAG
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
  łoże szpilkowe (ang.
  
 \emph on
@@ -713,7 +750,8 @@ Kolejna zaleta posiadania JTAG w układzie to możliwość jego testowania przez
  jest możliwe zapewnienie wysokiego poziomu bezpieczeństwa i jakości pracy
  całego urządzenia.
  (na podstawie 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "jtag-elektronik-online,why-jtag-works"
 
 \end_inset
@@ -736,7 +774,7 @@ Dla wielu producentów cyfrowego sprzętu elektronicznego istnienie wyprowadzeń
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Popularny router Linksys WRT54G posiada alternatywne oprogramowanie, dostępne
  głównie na http://www.openwrt.org.
 \end_layout
@@ -764,10 +802,51 @@ Rozszerzenia producentów wbudowane w układ pozwalają na stosowanie JTAG
 on-chip debugging
 \emph default
 ).
+ Wykorzystuje się w tym celu możliwości 
+\begin_inset Quotes pld
+\end_inset
+
+okłamywania
+\begin_inset Quotes prd
+\end_inset
+
+ wejść logicznych procesora, czasem wirtualnie zawartych w konstrukcji układu.
+ Dzięki temu proces działania aplikacji jest monitorowany przez urzadzenie
+ zewnętrzne, kontrolowane ze stanowiska inżyniera pracującego nad programem.
+ W połączeniu z wbudowanymi w układ mechanizmami sprzętowymi, komunikacja
+ między debuggerem na komputerze a wnętrzem procesora odbywa się w sposób
+ przeźroczysty dla programu -- jednakże należy mieć na uwadze, że liczba
+ cykli procesora zużywana na takie działanie może nie pozostawać bez wpływu
+ na zachowanie szczególnie wrażliwego kodu (obsługa przerwań, timerów, itp.)
+\end_layout
+
+\begin_layout Standard
+Istnieją alternatywne metody sprzętowego wspierania uruchomień programów,
+ dla których powstały doskonalsze technicznie rozwiązania.
+ Zastosowany w opisywanym sterowniku mikrokontroler, posiada interfejs Nexus
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+zdefiniować dokładnie
+\end_layout
+
+\end_inset
+
+, który pozwala na bardzo dokładnie śledzenie zachowania programu, jego
+ interakcji z pamięcią i rejestrami, przy zachowaniu całkowitej transparentności
+ dla działającego mikrokontrolera.
+ W tej technice wykorzystany jest fakt, że komputer na stanowisku pracy
+ inżyniera jest wielkokrotnie szybszy od uruchamianego urządzenia i jest
+ możliwe wczytywanie śladu wykonania w czasie rzeczywistym przykładowo na
+ dysk twardy komputera.
+ Ponieważ ta technologia nie została tu użyta, nie będzie opisywana dokładniej.
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:Interfejs-USB"
 
 \end_inset
@@ -787,13 +866,15 @@ Universal Serial Bus
  i kamery cyfrowe.
  Ogromna ilość narzędzi dla elektroników korzysta już z interfejsu USB (w
  tym JTAG ICE mk-II opisany w rozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:JTAG-ICE"
 
 \end_inset
 
  oraz zestaw EVK1100 opisany w rozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:EVK1100"
 
 \end_inset
@@ -815,47 +896,95 @@ Standard USB został oficjalnie ogłoszony w 1996 roku przez konsorcjum złożon
 \end_layout
 
 \begin_layout Description
-USB\InsetSpace ~
+USB
+\begin_inset space ~
+\end_inset
+
 1.1 Standard ten koryguje braki standardu w wersji 1.0 i stosowany od 1999
  roku jest do dziś w większości urządzeń wejścia-wyjścia, gdyż jest prostszy
  w implementacji od USB 2.0.
- Obsługuje dwie standardowe prędkości transmisji danych 1,5\InsetSpace ~
-Mbit/s oraz 12\InsetSpace ~
+ Obsługuje dwie standardowe prędkości transmisji danych 1,5
+\begin_inset space ~
+\end_inset
+
+Mbit/s oraz 12
+\begin_inset space ~
+\end_inset
+
 Mbit/s.
  Do jednego kontrolera może być podłączonych maksymalnie 127 urządzeń.
 \end_layout
 
 \begin_layout Description
-USB\InsetSpace ~
-2.0 Istniejący od roku 2000 standard ten wprowadza tryb dużej prędkości
- (ang.
+USB
+\begin_inset space ~
+\end_inset
+
+2.0 Istniejący od roku 2000 standard ten wprowadza tryb dużej prędkości (ang.
  
 \emph on
 High Speed USB
 \emph default
-) o prędkości 480\InsetSpace ~
+) o prędkości 480
+\begin_inset space ~
+\end_inset
+
 Mbit/s.
  Dodatkowo w roku 2001 pojawia się suplement On-the-Go pozwalające łączyć
  ze sobą takie urządzenia jak dysk twardy i aparat cyfrowy, polegające na
  negocjacji, które z połączonych urządzeń będzie pełnić rolę hosta.
 \end_layout
 
+\begin_layout Description
+USB
+\begin_inset space ~
+\end_inset
+
+3.0 Opublikowany 17 listopada 2008 roku standard wprowadza łącze optyczne
+ obok elektrycznego, prędkość maksymalna 4,8
+\begin_inset space ~
+\end_inset
+
+Gbit/s (ang.
+ 
+\emph on
+Super Speed USB
+\emph default
+) oraz pracę w pełnym duplexie.
+ Nowością ma być też zaawansowany sposób zarządzania zasilaniem urządzeń
+ pracujących na magistrali -- nieużywane urządzenie może zostać zamodzielnie
+ wyłączone przez kontroler hosta.
+ Powstanie tego standardu może przyczynić się do śmierci standardu IEEE.1394
+ , zwanego inaczej FireWire.
+\end_layout
+
 \begin_layout Standard
 Urządzenia podłączone do portów interfejsu USB nie wymagają dodatkowego
  zasilania w przypadku spełniania pewnych warunków, standardowo pojedynczy
- port może zostać obciążony prądem 100\InsetSpace ~
+ port może zostać obciążony prądem 100
+\begin_inset space ~
+\end_inset
+
 mA.
  Po wykonaniu programowej konfiguracji port powinien umożliwiać pobór do
- 500\InsetSpace ~
+ 500
+\begin_inset space ~
+\end_inset
+
 mA.
  Fakt ten jest wykorzystywany jest już nawet do ładownia telefonów komórkowych
  podłączonych przez port USB do komputera PC.
  Aktualnie trwają pracę nad stworzeniem standardu Powered USB, który umożliwi
- zasilanie urządzeń nawet napięciem 24\InsetSpace ~
-V i obciążeniem do 6\InsetSpace ~
-A, co pozwoliłoby
- na rezygnację z zasilania zewnętrznego takich urządzeń jak drukarki, czy
- skanery.
+ zasilanie urządzeń nawet napięciem 24
+\begin_inset space ~
+\end_inset
+
+V i obciążeniem do 6
+\begin_inset space ~
+\end_inset
+
+A, co pozwoliłoby na rezygnację z zasilania zewnętrznego takich urządzeń
+ jak drukarki, czy skanery.
 \end_layout
 
 \begin_layout Standard
@@ -911,12 +1040,19 @@ Enhanced Host Controller Interface
 
 \begin_layout Standard
 Fizycznie interfejs USB jest magistralą szeregową zrealizowaną na 4 przewodach,
- z których dwa dostarczają zasilanie +5\InsetSpace ~
+ z których dwa dostarczają zasilanie +5
+\begin_inset space ~
+\end_inset
+
 V oraz GND.
  Pozostałe dwa przewody tworzą skręconą parę transmitującą sygnały różnicowe.
  Wykorzystywane jest przy tym kodowanie NRZI (ang.
- Non Return to Zero Invert) do transmisji danych zawierające pole synchronizacyj
-ne dla uzgadniania synchronizacji zegarów urządzeń podpiętych do magistrali.
+ 
+\emph on
+Non Return to Zero Invert
+\emph default
+) do transmisji danych zawierające pole synchronizacyjne dla uzgadniania
+ synchronizacji zegarów urządzeń podpiętych do magistrali.
  Zastosowane kodowanie NRZI działa na zasadzie zmiany stanu na linii transmisyjn
 ej w sytuacji transmitowania logicznej jedynki.
  Wadą tego rozwiązania jest utrata synchronizacji przy długich ciągach zer,
@@ -924,10 +1060,16 @@ ej w sytuacji transmitowania logicznej jedynki.
 \end_layout
 
 \begin_layout Standard
-Dla niskiej (1,5\InsetSpace ~
-MBit/s) i pełnej (12\InsetSpace ~
-Mbit/s) prędkości transmisji kodowanie
- różnicowego zera (oznaczanego symbolem 
+Dla niskiej (1,5
+\begin_inset space ~
+\end_inset
+
+MBit/s) i pełnej (12
+\begin_inset space ~
+\end_inset
+
+Mbit/s) prędkości transmisji kodowanie różnicowego zera (oznaczanego symbolem
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -935,19 +1077,34 @@ K
 \begin_inset Quotes erd
 \end_inset
 
-) odbywa się przez podciąganie linii D+ ponad 2,8\InsetSpace ~
-V rezystorem 15\InsetSpace ~
+) odbywa się przez podciąganie linii D+ ponad 2,8
+\begin_inset space ~
+\end_inset
+
+V rezystorem 15
+\begin_inset space ~
+\end_inset
+
 k
 \begin_inset Formula $\Omega$
 \end_inset
 
- podłączonym do masy, a linii D-- poniżej 0,3\InsetSpace ~
- poprzez rezystor 1,5\InsetSpace ~
+ podłączonym do masy, a linii D-- poniżej 0,3
+\begin_inset space ~
+\end_inset
+
+ poprzez rezystor 1,5
+\begin_inset space ~
+\end_inset
+
 k
 \begin_inset Formula $\Omega$
 \end_inset
 
- podłączony do 3,6\InsetSpace ~
+ podłączony do 3,6
+\begin_inset space ~
+\end_inset
+
 V.
  Kodowanie różnicowej jedynki (oznaczanej symbolem 
 \begin_inset Quotes eld
@@ -957,10 +1114,15 @@ J
 \begin_inset Quotes erd
 \end_inset
 
-) odbywa się przez podciąganie D-- powyżej 2,8\InsetSpace ~
-V i D+ poniżej 0,3\InsetSpace ~
-V poprzez
- te same rezystory.
+) odbywa się przez podciąganie D-- powyżej 2,8
+\begin_inset space ~
+\end_inset
+
+V i D+ poniżej 0,3
+\begin_inset space ~
+\end_inset
+
+V poprzez te same rezystory.
  Dla odbiornika sygnał 
 \begin_inset Quotes eld
 \end_inset
@@ -969,7 +1131,10 @@ J
 \begin_inset Quotes erd
 \end_inset
 
- jest zdefiniowany jako D+ większe o 200\InsetSpace ~
+ jest zdefiniowany jako D+ większe o 200
+\begin_inset space ~
+\end_inset
+
 mV od D--, a sygnał 
 \begin_inset Quotes eld
 \end_inset
@@ -978,9 +1143,15 @@ K
 \begin_inset Quotes erd
 \end_inset
 
- jako D+ mniejsze o 200\InsetSpace ~
+ jako D+ mniejsze o 200
+\begin_inset space ~
+\end_inset
+
 mV od D--.
- Polaryzacja sygnału zamienia się dla wysokiej prędkości (480\InsetSpace ~
+ Polaryzacja sygnału zamienia się dla wysokiej prędkości (480
+\begin_inset space ~
+\end_inset
+
 Mbit/s) i 
 \begin_inset Quotes eld
 \end_inset
@@ -1014,24 +1185,40 @@ Transceivery USB obsługują sygnalizację różnicową opisaną powyżej, ale r
 
 \begin_layout Standard
 Impedancja linii dla niskiej i pełnej prędkości wynosi według specyfikacji
- 90\InsetSpace ~
+ 90
+\begin_inset space ~
+\end_inset
+
 
 \begin_inset Formula $\Omega\ \pm$
 \end_inset
 
-\InsetSpace ~
+
+\begin_inset space ~
+\end_inset
+
 15%.
- Tryb wysokiej prędkości wymaga stałego prądu 17,78\InsetSpace ~
-mA dla sygnalizacji,
- co ma redukować poziom szumu.
+ Tryb wysokiej prędkości wymaga stałego prądu 17,78
+\begin_inset space ~
+\end_inset
+
+mA dla sygnalizacji, co ma redukować poziom szumu.
 \end_layout
 
 \begin_layout Standard
 Identyfikacja prędkości urządzenia odbywa się przez podciąganie linii D+
- do 3,3\InsetSpace ~
-V dla pełnej prędkości lub przez podciąganie D-- do 3,3\InsetSpace ~
-V dla niskiej
- prędkości przez rezystor 1,5\InsetSpace ~
+ do 3,3
+\begin_inset space ~
+\end_inset
+
+V dla pełnej prędkości lub przez podciąganie D-- do 3,3
+\begin_inset space ~
+\end_inset
+
+V dla niskiej prędkości przez rezystor 1,5
+\begin_inset space ~
+\end_inset
+
 k
 \begin_inset Formula $\Omega$
 \end_inset
@@ -1080,7 +1267,7 @@ Vendor IDenticifation
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Szczegóły dotyczące rejestracji numeru producenta (ang.
  
 \emph on
@@ -1114,7 +1301,7 @@ Projektant urządzenia planujący rozpowszechniania lub sprzedaż urządzenia
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Taką ofertę mają między innymi: Mechanique (http://www.mecanique.co.uk), EZPrototyp
 es (http:://www.ezprototypes.com), MCS Electronics (http://mcselec.com).
 \end_layout
@@ -1136,6 +1323,60 @@ Oba powyższe rozwiązania nie pozwalają na stosowanie zastrzeżonego logo
 Metody implementacji
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Opisać metody implementacji sprzętowej i programowej interfejsu USB.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Popularność interfejsu USB stała się możliwa dzięki wysokiej dostępności
+ w układach małych mikrokontrolerów, które trafiały do wszystkich urządzeń
+ współpracujących z komputerami przez USB.
+ Strategie realizacji obsługi USB przez urządzenia są jednak dwie:
+\end_layout
+
+\begin_layout Description
+programowa w której układ zawiera wyprowadzenia elektrycznie zgodne ze specyfika
+cją USB, a wszystkie elementy stosu są realizowane programowo -- w rezultacie
+ prędkość działania tak obsługiwanego USB nie może być wysoka, jest jednak
+ efektywna kosztowo i nadaje się doskonale do prostych urządzeń;
+\end_layout
+
+\begin_layout Description
+sprzętowa polegająca na umieszczeniu jak największej ilości elementów funkcjonal
+nych USB w autonomicznych blokach konfigurowalnych przez rejestry mikrokontroler
+a i pozwalająca na sięganie do bloków danych w adresowalnej pamięci -- uwalnia
+ to rdzeń procesora od zapewnienia prawidłowych warunków pracy, uproszczając
+ życie programiście oraz jest jedyną metodą pozwalającą na zapewnianie pełnej
+ zgodności dla USB 2.0 wysokiej prędkości.
+\end_layout
+
+\begin_layout Standard
+Zastosowanie metody programowej wymaga najczęściej zakupu kodu źródłowego
+ stosu USB od firmy dostarczającej tego typu rozwiązania.
+ Do niektórych mikrokontrolerów dostępne są stosy na otwartych licencjach.
+\end_layout
+
+\begin_layout Standard
+Realizacja sprzętowa spoczywa na producencie układu, który certyfikuje swój
+ produkt jako zgodny ze standardem USB.
+ Dzięki temu inżynier projektujący urządzenie ma większą pewność poprawności
+ współpracy urządzenia z kontrolerem hosta.
+ Wadą jest oczywiście wyższy koszt układu, co w dziesiejszych czasach przestaje
+ mieć znaczenie, gdyż uniwersalność USB powoduje, iż powinno być obecne
+ w każdym większym urządzeniu.
+ W przypadku realizacji sprzętowej łatwiej implementować kontroler hosta,
+ a przynajmniej częściową funkcjonalność objętą standardem On-the-Go.
+\end_layout
+
 \begin_layout Section
 Bluetooth
 \end_layout
@@ -1150,7 +1391,10 @@ Technologia Bluetooth oferuje bezprzewodową komunikację krótkiego zasięgu
 \end_layout
 
 \begin_layout Standard
-Fizyczna warstwa radiowa Bluetooth działa w nielicencjonowanym paśmie 2,4\InsetSpace ~
+Fizyczna warstwa radiowa Bluetooth działa w nielicencjonowanym paśmie 2,4
+\begin_inset space ~
+\end_inset
+
 GHz.
  System stosuje szybką zmianę częstotliwości (ang.
  frequency hoping) w celu zapobiegania interferencjom, zanikaniu i odbiciu
@@ -1159,9 +1403,14 @@ GHz.
  Tor radiowy działa z użyciem kształtowanej binarnej modulacji częstotliwości
  w celu znacznej redukcji złożoności transcivera.
  Konstrukcja pozwala na przesłanie 1 miliona symboli na sekundę, co pozwala
- na transfer danych z prędkością 1\InsetSpace ~
-MBit/s w trybie Basic Rate i nawet do
- 3\InsetSpace ~
+ na transfer danych z prędkością 1
+\begin_inset space ~
+\end_inset
+
+MBit/s w trybie Basic Rate i nawet do 3
+\begin_inset space ~
+\end_inset
+
 MBit/s w trybie Enhanced Data Rate.
 \end_layout
 
@@ -1188,7 +1437,7 @@ Urzadzenia w piconet używają specyficznego wzorca zmian częstotliwości,
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 ang.
  
 \emph on
@@ -1202,7 +1451,7 @@ anych urządzeniach komunikacyjnych odpornych na zakłócenia
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \emph on
 dopisać źródła specyfikacji...
@@ -1240,18 +1489,6 @@ Time-Division Duplex
  -- duplex z podziałem czasu).
 \end_layout
 
-\begin_layout Standard
-The physical channel is sub-divided into time units known as slots.
- Data is transmitted between Bluetooth devices in packets, that are positioned
- in these slots.
- When circumstances permit, a number of consecutive slots may be allocated
- to a single packet.
- Frequency hopping takes place between the transmission or reception of
- packets.
- Bluetooth technology provides the effect of full duplex transmission through
- the use of a Time-Division Duplex (TDD) scheme.
-\end_layout
-
 \begin_layout Subsection
 Architektura rdzenia Bluetooth
 \end_layout
@@ -1271,7 +1508,16 @@ Rdzeń systemu Bluetooth pokrywa cztery warstwy i powiązane z nimi protokoły
 \end_layout
 
 \begin_layout Standard
-<pict here>
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Obrazek stosu...
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1304,7 +1550,8 @@ Rozdział opisuje wybrane konstrukcje mikrokontrolerów oferowanych przez
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:ARM"
 
 \end_inset
@@ -1382,7 +1629,8 @@ ARM 6
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sub:ARM-7"
 
 \end_inset
@@ -1391,7 +1639,8 @@ ARM 7
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sub:ARM-9"
 
 \end_inset
@@ -1400,7 +1649,8 @@ ARM 9
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sub:Jazelle"
 
 \end_inset
@@ -1410,11 +1660,13 @@ Jazelle
 
 \begin_layout Standard
 \begin_inset Wrap figure
+lines 0
 placement r
+overhang 0col%
 width "34mm"
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \begin_inset Graphics
 	filename images/jazelle_logo.png
@@ -1463,7 +1715,8 @@ just-in-time
  Python.
  Implementację tej technologii wspierają wszystkie mikroprocesory z rodziny
  ARM Cortex-A
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "jazelle-wp"
 
 \end_inset
@@ -1480,10 +1733,15 @@ Firma Freescale Semiconductor
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Strona producenta: 
-\begin_inset LatexCommand htmlurl
-target "http://www.freescale.com"
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.freescale.com
+\end_layout
 
 \end_inset
 
@@ -1521,11 +1779,13 @@ Firma Motorola w latach 1991--2004 wraz z IBM i Apple brała udział w pracach
  układem zastosowanym w popularnych komputerach użytkowych.
  
 \begin_inset Wrap figure
+lines 0
 placement r
+overhang 0col%
 width "2cm"
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \begin_inset Graphics
 	filename images/logo_power_org_black.gif
@@ -1543,15 +1803,20 @@ Aktualnie firmy współpracujące nad architekturą związane są z Power.org
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Istniejąca od 2004 roku, utworzona przez IBM fundacja na rzecz architektury
  
 \shape smallcaps
 Power
 \shape default
 , jej adres internetowy: 
-\begin_inset LatexCommand htmlurl
-target "http://www.power.org"
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.power.org
+\end_layout
 
 \end_inset
 
@@ -1570,7 +1835,8 @@ target "http://www.power.org"
 Power Architecture
 \shape default
 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "power.org-vision"
 
 \end_inset
@@ -1606,7 +1872,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \begin_inset Graphics
 	filename vector/mpc885-block-diagram.svg
@@ -1618,10 +1884,10 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Schemat blokowy MPC885.
 \end_layout
 
@@ -1640,7 +1906,7 @@ W roku 1998 pojawiły się układy z linii PowerQUICC II oznaczane symbolami
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Abonencka linia cyfrowa (ang.
  Digital Subscriber Line, DSL) stosowana w telekomunikacji naziemnej do
  oferowania szybkich łącz Internetowych; multiplekser dostępowy DSL to urządzeni
@@ -1687,7 +1953,8 @@ ARM
 
 \begin_layout Standard
 W rozdziale 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ARM"
 
 \end_inset
@@ -1723,10 +1990,15 @@ cią do 300 MHz (w porównaniu z 60 MHz fla MC68060).
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Więcej informacji na stronie 
-\begin_inset LatexCommand htmlurl
-target "http://www.linux-m68k.org"
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.linux-m68k.org
+\end_layout
 
 \end_inset
 
@@ -1766,7 +2038,8 @@ Pulse Width Modulation
 
 \begin_layout Section
 Atmel Corporation
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:Atmel-Corporation"
 
 \end_inset
@@ -1786,7 +2059,8 @@ Firma Atmel Corporation oferuje wiele różnych konstrukcji procesorów, z
 
 \begin_layout Subsection
 AVR
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sub:AVR-serie"
 
 \end_inset
@@ -1796,7 +2070,8 @@ name "sub:AVR-serie"
 
 \begin_layout Subsection
 AVR32
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sub:AVR32-serie"
 
 \end_inset
@@ -1809,10 +2084,15 @@ AVR32 to rodzina 32 bitowych mikrokontrolerów produkcji firmy Atmel
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Strona układów AVR32 u producenta: 
-\begin_inset LatexCommand htmlurl
-target "http://www.atmel.com/products/avr32/"
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.atmel.com/products/avr32/
+\end_layout
 
 \end_inset
 
@@ -1843,7 +2123,8 @@ Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
 \end_layout
 
 \begin_layout Subsubsection*
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sub:Mikrokontroler-AT32UC3A0512"
 
 \end_inset
@@ -1853,8 +2134,14 @@ Mikrokontroler AT32UC3A0512
 
 \begin_layout Standard
 Układ AT32UC3A jest kompletnym systemem-w-układzie na bazie 32-bitowego
- rdzenia AVR32 UC typu RISC działającym z\InsetSpace ~
-częstotliwością do 66\InsetSpace ~
+ rdzenia AVR32 UC typu RISC działającym z
+\begin_inset space ~
+\end_inset
+
+częstotliwością do 66
+\begin_inset space ~
+\end_inset
+
 MHz.
  Rdzeń tego typu został zaprojektowany w celu redukcji kosztów aplikacji
  wbudowanych ze szczególnym naciskiem na niskie zużycie mocy, wysoką gęstość
@@ -1889,26 +2176,72 @@ Układ zarządzania zasilaniem PowerManager udoskonala elastyczność projektu
  Timery/Liczniki to 3 kanały 16-bitowe.
  Każdy kanał jest programowany niezależnie do pomiaru częstotliwości, zliczania
  zdarzeń, generacji impulsów, pomiaru opóźnień i modulacji szerokości impulsów.
- ------The PWM modules provides seven independent channels with many configurati
-on options including polarity, edge alignment and waveform non overlap control.
- One PWM channel can trigger ADC conversions for more accurate close loop
- control implementations.
- The AT32UC3A also features many communication interfaces for communication
- intensive applications.
- In addition to standard serial interfaces like UART, SPI or TWI, other
- interfaces like flexible Synchronous Serial Controller, USB and Ethernet
- MAC are available.
- The Synchronous Serial Controller provides easy access to serial communication
- protocols and audio standards like I2S.
- The Full-Speed USB 2.0 Device interface supports several USB Classes at
- the same time thanks to the rich End-Point configuration.
- The On-The-GO (OTG) Host interface allows device like a USB Flash disk
- or a USB printer to be directly connected to the processor.
- The media-independent interface (MII) and reduced MII (RMII) 10/100 Ethernet
- MAC module provides on-chip solutions for network-connected devices.
- AT32UC3A integrates a class 2+ Nexus 2.0 On-Chip Debug (OCD) System, with
- non-intrusive real-time trace, full-speed read/write memory access in addition
- to basic runtime control.
+\end_layout
+
+\begin_layout Standard
+Moduły PWM dostarczają siedem niezależnych kanałów z wieloma opcjami konfiguracy
+jnymi włączając polaryzację
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Przez polaryzację sygnału PWM należy rozumieć ustalenie, czy bazowym poziomem
+ jest logiczny stan niski, czy logiczny stan wysoki, nie zaś ujemna lub
+ dodatnia wartość potencjału elektrycznego wyjścia.
+\end_layout
+
+\end_inset
+
+, wyrównanie krawędzi i niezachodzenie sygnału.
+ Jeden z kanałów może wyzwalać przetwornik analogowo\SpecialChar \nobreakdash-
+cyfrowy, dzięki czemu
+ możliwe są bardziej dokładne implementacje z zamknięta pętlą.
+ Układ AT32UC3A jest wyposażony w wiele interfejsów komunikacyjnych dla
+ wymagających intensywnej kmunikacji aplikacji.
+ Poza standardowymi interfejsami szeregowymi typu UART, SPI lub TWI, dostępne
+ są inne interfejsy jak elastyczny kontroler synchroniczny (ang.
+ 
+\emph on
+Synchronous Serial Controller
+\emph default
+), USB i Ethernet MAC.
+ Kontroler synchroniczny udostępnia łatwy dostęp do protokołów komunikacji
+ szeregowej i standardów audio takich, jak I
+\begin_inset Formula $^{2}$
+\end_inset
+
+S.
+ Interfejs USB 2.0 Full-Speed wspiera wiele klas USB jednocześnie dzięki
+ bogatej konfiguracji punktu końcowego.
+ Wsparcie dla hosta standardu On\SpecialChar \nobreakdash-
+The\SpecialChar \nobreakdash-
+Go (OTG) pozwala podłączać bezpośrednio
+ do mikrokontrolera urządzenia typu dysk flash USB lub drukarkę USB.
+ Interfejs MII (ang.
+ 
+\emph on
+media independent interface
+\emph default
+) oraz RMII (ang.
+ 
+\emph on
+reduced media independent interface
+\emph default
+) modułu MAC Ethernet dla prędkości 10 i 100 Mbps udostępnia rozwiązania
+ wewnątrzukładowe dla urządzeń przyłączanych do sieci.
+ AT32UC3A integruje debugowanie w układzie OCD (ang.
+ 
+\emph on
+On\SpecialChar \nobreakdash-
+Chip
+\begin_inset space ~
+\end_inset
+
+Debug
+\emph default
+) klasy drugiej typu Nexus 2.0, pozwalający na bezinwazyjne śledzenie wykonania
+ programu w czasie rzeczywistym, zapis i odczyt pamięci z pełną prędkością
+ w połączeniu do podstawowej kontroli wykonywania programu.
 \end_layout
 
 \begin_layout Subsection
@@ -1928,7 +2261,8 @@ Układy serii AT91SAM cieszą się coraz większą popularnością, są bardzo d
 \begin_layout Standard
 Grupy układów AT91SAM7S, AT91SAM7SE, AT91SAM7X oparte są o rdzeń ARM 7 opisany
  w rozdziale 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sub:ARM-7"
 
 \end_inset
@@ -1937,7 +2271,8 @@ reference "sub:ARM-7"
  Poszczególne wersje różnią się dostępnymi interfejsami oraz wiekościami
  wbudowanej pamięci.
  Układy serii AT91SAM9 bazują na rdzeniu ARM 9 opisanym w rozdziale 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sub:ARM-9"
 
 \end_inset
@@ -1955,7 +2290,8 @@ Istniejąca od 1965 roku firma Analog Devices zajmuje się projektowaniem
  Opórcz uznanych wzmacniaczy i przetwoników analogowo-cyfrowych, firma produkuje
  różnego rodzaju sensory (w tym linowy sensor przyspieszenia ADXL3300 zastosowan
 y w konsoli do gier Wii firmy Nitendo
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "ad-wii-sensor"
 
 \end_inset
@@ -1970,11 +2306,13 @@ Blackfin
 
 \begin_layout Standard
 \begin_inset Wrap figure
+lines 0
 placement r
+overhang 0col%
 width "2cm"
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \begin_inset Graphics
 	filename images/BF_chip_100x100.jpg
@@ -1997,8 +2335,18 @@ Mikroprocesory z rdzeniem Blackfin to 16- lub 32-bitowe układy w architekturze
  Analog Devices i architektury XScale firmy Intel.
  Wewnętrzna budowa układów Blackfin oparta jest o architekturę harvardzką.
  Dwie 16-bitowe jednostki MAC, dwie 40-bitowe jednoski arytmetyczno-logiczne,
- dwie 40-bitowe <barrel shifter> pozwalają wykonać do trzech instrukcji
- w jednym cyklu zegara, przy odpowiedniej optymalizacji.
+ dwie 40-bitowe 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+tłumaczenie:
+\end_layout
+
+\end_inset
+
+<barrel shifter> pozwalają wykonać do trzech instrukcji w jednym cyklu zegara,
+ przy odpowiedniej optymalizacji.
  Lokuje to procesory Blackfin w rodzinie DSP.
  Ochrona pamięci (MPU), różne poziomy operacji (użytkownik, jądro), operacje
  jednocyklowe, pamięć podręczna instrukcji i danych oraz zestaw instrukcji
@@ -2007,7 +2355,7 @@ ch "peryferiów" czynią ten układ procesorem RISC.
  Lista instrukcji (16-biotwych dla zwykłych operacji i 32- lub 64-bitowych
  dla operacji DSP) tego procesora obejmuje bardzo złożone operacje, co czyni
  skompilowany kod binarny bardzo wydajnym i wysoce zoptymalizwoanym.
- Do wad układów Blackfin trzeba zaliczyć brak jedostki zarządzania pamięcią
+ Do wad układów Blackfin trzeba zaliczyć brak jednostki zarządzania pamięcią
  (MMU) i obsługi wirtualizacji.
  Układ ten najczęściej jest stosowanych w urządzeniach audio-video do użytku
  codziennego oraz w profesjonalnych urządzeniach wysokiej jakości przetwarzający
@@ -2021,11 +2369,13 @@ TigerSHARC
 
 \begin_layout Standard
 \begin_inset Wrap figure
+lines 0
 placement r
+overhang 0col%
 width "2cm"
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \begin_inset Graphics
 	filename images/TS_chip_100x100.jpg
@@ -2057,11 +2407,13 @@ SHARC
 
 \begin_layout Standard
 \begin_inset Wrap figure
+lines 0
 placement r
+overhang 0col%
 width "2cm"
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \begin_inset Graphics
 	filename images/sharc_chip_100x100.jpg
@@ -2104,6 +2456,26 @@ Infineon Technologies
 \begin_layout Standard
 Firma Infineon Technologies z siedzibą w Niemczech to producent układów
  półprzewodnikowych znany przede wszystkim z układłow pamięci DRAM.
+ Jest dynamicznie rozwijającą się firmą powstałą z wydzielenia działu półprzewod
+ników z firmy Siemens w 1994 roku.
+\end_layout
+
+\begin_layout Standard
+Wśród produktów Infineon znajdują się mikroprocesory trójrdzeniowe AUDO
+ TriCore, z których każdy pełni inną specjalizowana funkcję mikrokontrolera,
+ DSP i podsystemu ładująco-zapisującego z uproszczonym zestawem instrukcji
+ oraz procesory radiowe dla telefonii komórkowej (ang.
+ 
+\emph on
+baseband processor
+\emph default
+).
+ W katalogu oferowanych mikroprocesorów znajduje się poza tym kilka rodzin
+ układów mikrokontrolerów: 8-bitowe XC8000 i C500, 16-bitowe XC166, C166
+ i XE166, 32-bitowe TC116X oraz linię XC2000, która ma mieszaną architekturę
+ 16- i 32-bitową.
+ Praktycznie wszystkie układy mają specjalizowane zastosowania i poza architektu
+rą TriCode są przede wszystkim skierowane do przemysłu.
 \end_layout
 
 \begin_layout Section
@@ -2143,22 +2515,42 @@ Układu serii MSP430 to nastawione na oszczędność energii 16 bitowe układy
 \end_layout
 
 \begin_layout Standard
-Przykładowo układ mikrokontrolera MSP430FG4618 wyposażony w 116\InsetSpace ~
-kB pamięci
- Flash, 8\InsetSpace ~
-kB RAM, zasilany napięciem 2,2\InsetSpace ~
-V pobiera tylko 400\InsetSpace ~
+Przykładowo układ mikrokontrolera MSP430FG4618 wyposażony w 116
+\begin_inset space ~
+\end_inset
+
+kB pamięci Flash, 8
+\begin_inset space ~
+\end_inset
+
+kB RAM, zasilany napięciem 2,2
+\begin_inset space ~
+\end_inset
+
+V pobiera tylko 400
+\begin_inset space ~
+\end_inset
+
 
 \begin_inset Formula $\mu$
 \end_inset
 
-A w trakcie aktywności przy 1\InsetSpace ~
-MHz taktowania, 1,3\InsetSpace ~
+A w trakcie aktywności przy 1
+\begin_inset space ~
+\end_inset
+
+MHz taktowania, 1,3
+\begin_inset space ~
+\end_inset
+
 
 \begin_inset Formula $\mu$
 \end_inset
 
-A w trakcie spoczynku i 0,22\InsetSpace ~
+A w trakcie spoczynku i 0,22
+\begin_inset space ~
+\end_inset
+
 
 \begin_inset Formula $\mu$
 \end_inset
@@ -2203,7 +2595,8 @@ h.
 Dodatkową cechą istotną z punktu widzenia konstruktorów i programistów systemu
  na bazie tych mikorokontrolerów, jest sprzętowe wparcie dla JTAG (patrz
  rozdział 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:Interfejs-JTAG"
 
 \end_inset
@@ -2220,6 +2613,125 @@ reference "sec:Interfejs-JTAG"
 
 \begin_layout Subsection
 TMS470
+\end_layout
+
+\begin_layout Standard
+Cała gama układów z serii TMS470 to 32-bitowe mikrokonrolery w architekturze
+ ARM
+\begin_inset space ~
+\end_inset
+
+7 omówionej w sekcji 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:ARM-7"
+
+\end_inset
+
+.
+ Lista wersji obejmuje 8 wariantów, różniących się prędkością taktowania,
+ ilością pamięci Flash i RAM oraz interfejsami.
+ Znajdują one szerokie zastosowanie w motoryzacji i przemyśle.
+\end_layout
+
+\begin_layout Subsection
+TMS320 i OMAP
+\end_layout
+
+\begin_layout Standard
+Firma Texas Instruments słynie na cały elektroniczny świat z projektowania
+ i produkcji jednych z najbardziej uznanych procesorów sygnałowych.
+ Są stosowane przez prawie wszystkich światowych producentów urządzeń cyfrowych,
+ w których działaniu znajduje się przetwarzanie sygnałów -- zaczynając od
+ producentów sprzętu audio-video, idąc przez radiokomunikację, na specjalistyczn
+ym sprzęcie pomiarowym kończąc.
+ W momencie pisania tego tekstu dostępne są już wielordzeniowe układy DSP.
+\end_layout
+
+\begin_layout Standard
+W dziale DSP wyróżonione są następujące główne gałęzie:
+\end_layout
+
+\begin_layout Description
+DaVinci to technologia dla procesorów sygnałowych specjalizowanych do bardzo
+ wydajnego przetwarzania sygnałów video, jest odpowiedzią Texas Instruments
+ na rozsnące w ostatnim czasie zapotrzebowanie na przetwarzanie obrazów
+ video wysokiej jakości i rozdzielczości; niektóre z wersji posiadają rdzeń
+ ARM
+\begin_inset space ~
+\end_inset
+
+9 (patrz: sekcja 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:ARM-9"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+OMAP to rodzina procesorów o rdzeniach łączonych z ARM
+\begin_inset space ~
+\end_inset
+
+9 (patrz: sekcja 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:ARM-9"
+
+\end_inset
+
+) lub ARM Cortex-A8; stosowana dziś najczęściej w multimedialnych telefonach
+ komórkowych z racji bogactwa szybkich interfejsów do kamer, wyświetlaczy
+ i wielu innych; zoptymalizowana do pracy pod kontrolą systemu Linux lub
+ DSP/BIOS
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+DSP/BIOS to nazwa prostego systemu operacyjnego dla DSP oferowanego przez
+ Texas Instruments wraz ze środowiskiem inżynierskim CodeComposer.
+ Więcej:
+\begin_inset CommandInset href
+LatexCommand href
+name "http://focus.ti.com/docs/toolsw/folders/print/dspbios.html"
+target "http://focus.ti.com/docs/toolsw/folders/print/dspbios.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+C5000 to seria układów o wyjątkowo niskim zużyciu energii i przystosowana
+ do optymalizacij zasilania peryferiów, dzięki czemu doskonale nadają się
+ do pracy w systemach zasilanych bateriami w branży telekomunikacji i bezpieczeń
+stwa.
+ 
+\end_layout
+
+\begin_layout Description
+C6000 dzieli się na układy o arytmetyce zmiennopozycyjnej 32- i 64-bitowej
+ oraz układy o arytmetyce stałopozycyjnej, w tym taktowane ponad 1 GHz;
+ oferowane w konstrukcjach wielordzeniowych i wyposażone wysokowydajne specjaliz
+owane interfejsy komunikacyjne, przystosowane do pracy w architekturach
+ z pamięciami wspódzielonymi, stanowią źródło ogromnej mocy obliczeniowej,
+ dzieki której możliwe jest już dziś budowanie wydajnych przyszłościowych
+ systemów telekomunikacji i multimediów, takich jak sieci komórkowe piątej
+ generacji lub naziemna telewizja cyfrowa wysokiej rozdzielczości.
+\end_layout
+
+\begin_layout Standard
+Procesory sygnałowe nie będą szczegółowo omawiane, gdyż spektrum możliwości
+ zasługuje na objęcie tej działki osobnymi opracowaniami poświęconymi wybranym
+ specjalizacjom tych układów.
 \end_layout
 
 \begin_layout Section
@@ -2265,7 +2777,8 @@ Firma NXP Semiconductors z siedzibą w Holandii jest kontynuatorem dokonań
  firmy Philips w zakresie scalonych układów półprzewodnikowych.
  Wsród nich znajdują się układy mikrokontrolerów z rodziny 80C51 oraz układy
  oparte o rdzenie ARM7 i ARM9 opisane w rozdziale 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ARM"
 
 \end_inset
@@ -2283,7 +2796,8 @@ Firma STMicroelectronics z siedzibą w Szwajcarii jest twórcą i producentem
  Ma w swojej ofercie również 16-bitowe układy serii ST10.
  Rodzina 32-bitowych układów STM32, STR7 i STR9 produkowanych przez tą firmę,
  to konstrukcje bazujące na rdzeniach z firmy ARM (szerzej rozdział 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ARM"
 
 \end_inset
@@ -2313,14 +2827,22 @@ Autorem języka jest Dennis Ritchie, który zapisał się w historii informatyki
 
 \begin_layout Standard
 W roku 1989 pojawiła się pierwsza norma dla języka C w postaci standardu
- ANSI\InsetSpace ~
+ ANSI
+\begin_inset space ~
+\end_inset
+
 X3.159-1989.
  W 1990 roku norma amerykańska została zaadoptowana standardu w formie normy
- ISO\InsetSpace ~
+ ISO
+\begin_inset space ~
+\end_inset
+
 9899:1990.
- Standard ten był wielokrotnie modyfikowany by doczekać się wersji ISO\InsetSpace ~
-9899:1999,
- potocznie określaną jako C99.
+ Standard ten był wielokrotnie modyfikowany by doczekać się wersji ISO
+\begin_inset space ~
+\end_inset
+
+9899:1999, potocznie określaną jako C99.
 \end_layout
 
 \begin_layout Standard
@@ -2357,7 +2879,7 @@ Język C++ powstał jako obiektowe rozszerzenie języka C, a jego autor --
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Z funkcyjnego języka ML wykształcił się również język Ocaml, mający dziś
  wielu zwolenników.
 \end_layout
@@ -2397,7 +2919,7 @@ ie stosowanej impelentacji oraz biblioteka STLport
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Dostępna jako kod otwarty pod adresem http://www.stlport.org/
 \end_layout
 
@@ -2416,7 +2938,7 @@ alny zespół pod kierunkiem Jamesa Goslinga z firmy Sun Microsystems
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Do dziś strona numer jeden języka Java to http://java.sun.com
 \end_layout
 
@@ -2499,7 +3021,8 @@ esorów.
  Firma Xilinx oferuje LAVAcore, które jest kompletną implementacją mikroprocesor
 a bajtkodu Java dla układów FPGA typu Virtex i Virtex-II.
  W rozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sub:Jazelle"
 
 \end_inset
@@ -2516,7 +3039,7 @@ Oprócz rozwiązań komercyjnych istnieje kilka udanych konstrukcji stworzonych
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Strona projektu http://www.jopdesign.com
 \end_layout
 
@@ -2558,6 +3081,8 @@ Jedną ze szczególnych cech wyróżniających język Python na tle innych popul
  w Pascalu).
  Narzucanie pewnego stylu kodowania ma swoich przeciwników i zwolenników,
  jednakże ma to wpływ na szybsze pisanie kodu przez programistę.
+ Poprawia też czytelność kodu, ułatwiając rozwijanie kodu w zespołach programist
+ycznych.
 \end_layout
 
 \begin_layout Standard
@@ -2582,10 +3107,285 @@ Do zalet Pythona należy zaliczyć bogactwo operatorów działających na zbudow
 \end_layout
 
 \begin_layout Standard
-...
+Język Python jest językiem słabo typowanym, czyli zmienne mogą zmieniać
+ swój typ w trakcie wykonywania programu.
+ Mechanizm ten może być problematyczny w większych projektach, gdyż API
+ tworzonych modułów wymaga dokumentowania typów parametrów, dla zachowania
+ przejżystości.
+ Jednak dynamiczne rozpoznawanie typów danych nadaje się do wykorzystania
+ w algorytmie, co pozwala w prosty sposób realizować pewne zadania, wymagające
+ złożonego kodu w innych językach.
+\end_layout
+
+\begin_layout Standard
+Dodatkowym atutem tego języka jest mechanizm generatorów, który polega na
+ konstrułowaniu funkcji zwracającej rezultat swojego wykonania wraz zapamiętanie
+m swojego wewnętrznego stanu i powrocie do punktu ostatniego wyjścia przy
+ kolejnym wywołaniu.
+ Jest to szczególnie przydatne w tworzeniu metod klas, które stanowią kontenery
+ przechowujące elementy, po których potrzebna jest iteracja.
+\end_layout
+
+\begin_layout Standard
+Aby poprawić wydajność kluczowych elementów tworzonej aplikacji, Python
+ umożliwia wspomniane wcześniej wykorzystanie modułów napisanych w językach
+ kompilowanych do natywnego kodu procesora.
+ Jest to możliwe dzięki dobrze udekumentowanemu interfejsowi oraz kilku
+ projektom ułatwiającym realizację tego zadania.
+ Jednym z nich jest Cython, który jest językiem do pisania modułów rozszerzający
+ch dla Python z równą łatwością, co kodu w samym jęyzku Python.
+ Jest on następnie przegenerowywany na kod w języku C, który może zostać
+ skompilowany wybranym kompilatorem języka C.
+ Cython jest bardzo bliski oryginalnemu językowi, ma jednak kilka ograniczeń,
+ jak również pozwala dodatkowo wywoływać funkcje języka C oraz deklarować
+ typy zmiennych i atrybutów klas.
+\end_layout
+
+\begin_layout Standard
+Biblioteki języka Python, zarówno te dostarczane standardowo, jak również
+ dostępne w ramach odrębnych projektów, czynią z Python'a bardzo potężne
+ narzędzie inzynierskie.
+ Popularność Pythona rośnie nie tylko w kręgach wykorzystujących go jako
+ język skryptowy, ale również w poważnych komercyjnych zastosowaniach biznesowyc
+h i technicznych.
+ Jest z sukcesem stosowany w takich organizacjach jak NASA i Industrial
+ Light
+\begin_inset space ~
+\end_inset
+
+&
+\begin_inset space ~
+\end_inset
+
+Magic.
+\end_layout
+
+\begin_layout Section
+ASN.1
+\end_layout
+
+\begin_layout Standard
+Język ASN.1 (ang.
+ 
+\emph on
+Abstract Syntax Notation One
+\emph default
+) nie jest językiem programowania w rozumieniu algorytmicznym, ale deklaratywnym
+ opisem struktur danych.
+ Stanowi on abstrakcyjną notację do opisu struktur danych przeznaczonych
+ do kodowania i dekodowania danych transmitowanych w sposób spójny w złożonych
+ systemach niezależnie od platformy sprzętowej.
+ Standard ten został po raz pierwszy opisany w roku 1984 jako część dokumentu
+ CCITT (ang.
+ 
+\emph on
+Consultative Committee International Telegraphy and Telephony
+\emph default
+) numer X.409'84, a w roku 1988 wydzielony jako samodzielny standard ITU-T/ISO
+ w formie dokumentu ITU-T
+\begin_inset space ~
+\end_inset
+
+X.208.
+ W roku 1994 wydano nowa wersja opisana została w dokumentach ITU-T z seri
+ X.680 (X.680-X.683).
+ W roku 2002 wycofano dokument ITU-T X.208.
+ Standard ASN.1 znajduje zastosowanie w wielu dokumentach ITU-T w tym w serii
+ X.400 (poczta), w serii X.500 (usługi katalogowe) oraz w specyfikacji standardu
+ SNMP (ang.
+ 
+\emph on
+Simple Network Management Protocol
+\emph default
+) do opisu typów danych dla MIB (ang.
+ 
+\emph on
+Management Information Base
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Kod opisujący struktury danych kompilowany jest do postaci kodu źródłowego
+ w języku programowania, najczęściej języka C.
+ Dobiero tak wygenerowany moduł staje się częścią kodu programu, który jest
+ używany do kodowania danych w sposób niezależny od platformy.
+ Przy czym kodowanie odbywa się według reguł kodowania zdefiniowanych niezależni
+e od samego języka.
+ Aktualnie rozróznia się nastepujące typy kodowań w ASN.1:
+\end_layout
+
+\begin_layout Description
+BER (ang.
+ 
+\emph on
+Basic Encoding Rules
+\emph default
+) to oryginalne reguły zawarte w standardzie ASN.1 do zakodowania abstrakcyjnych
+ informacji do konkretnego strumienia danych.
+ Reguły te, określane mianem składni transferu w terminologii ASN.1, określa
+ dokładną kolejność oktetów użytych do zakodowania strumienia danych.
+ Składnia definiuje elementy takie, jak reprezentacja podstawowych typów
+ danych, struktura długości informacji oraz znaczenia do definiowania złożonych
+ typów na bazie typów prostych.
+ Składnia BER wraz z dwoma podzbiorami CER i DER są zdefiniowane w dokumencie
+ ITU-T X.690 (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "X690"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Ponieważ BER stosuje prostą składnię, łatwą do implementacji, wynikowy strumień
+ danych jest skonstrułowany mało efektywnie.
+ Powszechnie uważa się, że inne reguły kodowania są bardziej praktyczne
+ w rzeczywistych realizacjach systemów korzystających z ASN.1.
+ Nie przeszkadza to jednak w stosowaniu BER w wielu rozwiązaniach rzeczywistych
+ (SNMP, LDAP, sygnalizacja ISDN).
+\end_layout
+
+\end_deeper
+\begin_layout Description
+CER (ang.
+ 
+\emph on
+Canonical Encoding Rules
+\emph default
+) jest podzbiorem reguł BER, wybierającym z całego zestawu możliwych metod
+ zakodowania danych tylko te, które nie określają skończonych długości elementów
+ strumienia danych.
+ Oznacza to, że zawsze stosowany jest znacznik końca elementu struktury
+ abstrakcyjnej, zamiast znacznika określającego długość.
+ Dzięki czemu do zakodowania długich informacji potrzeba mnie metadanych
+ w strumieniu.
+\end_layout
+
+\begin_layout Description
+DER (ang.
+ 
+\emph on
+Distinguished Encoding Rules
+\emph default
+) jest podzbiorem reguł BER, ograniczającym sposób kodowania danych do jednoznac
+znej metody polegającej na podawania znacznika długości do każdego elementu
+ strumienia danych.
+ DER jest stosowane w kryptografii cyfrowej do zapewnienia, że struktura
+ danych poddawana podpisowi cyfrowemu, jest budowana z unikalnego ciągu
+ serializującego zadane informacje.
+ DER uważany jest za drugą formę kanoniczną BER.
+\end_layout
+
+\begin_layout Description
+XER (ang.
+ 
+\emph on
+XML Encoding Rules
+\emph default
+) jest zbiorem reguł dodanych do ASN.1 pozwalającym na zakodowanie danych
+ w strumieniu danych będących dokumentem XML.
+\end_layout
+
+\begin_layout Description
+PER (ang.
+ 
+\emph on
+Packed Encoding Rules
+\emph default
+) to zdefiniowane w 1994 roku reguły składni transferowej dla struktur opisanych
+ w ASN.1, które dostarczają dużo bardziej zwartego kodowania niż BER.
+ PER próbuje prezentować jednostki danych na minimalnej liczbie bitów.
+ Zwartość wymaga jednak, by dekoder znał całość abstrakcyjnej składni struktur
+ danych, aby móc je zdekodować.
+ W większości przypadków, nie stanowi to problemu, bo aplikacja zna struktury
+ danych, którym isię posługuje.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Istnieją dwa warianty reguł spakowanych: niewyrównane i wyrównane.
+ W pierwszym wypadku, bity upakowane są bez zważania dla granice okteków
+ (bajtów).
+ W przypadku wyrównanym, określone typy struktury danych są wyrównywane
+ do granic oktetów, co oznacza marnotrawstwo części bitów.
+ Niewyrównane kodowanie zużywa mniej bitów, kosztem jednak czasu przetwarzania
+ stumienia danych.
+ Typowe procesory są słabo przystosowane do danych niewyrównanych do bajtów,
+ a współcześnie nawet wymagają posługiwania się całymi słowami, by nie tracić
+ na wydajności.
+\end_layout
+
+\begin_layout Standard
+Standard kodowania PER jest aktualnie opisany w dokumentach ITU-T X.691 (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "X691"
+
+\end_inset
+
+) oraz ISO 8825-2.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+GSER (ang.
+ 
+\emph on
+Generic String Encoding Rules
+\emph default
+) jest zestawem reguł kodowania do tworzenia wymownej, czytelnej dla człowieka
+ formy tekstowej składni transferowej dla struktur danych opisanych w ASN.1.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Celem GSER jest reprezentacja zakodowanych danych użytkownikowi lub przyjmowanie
+ od niego danych w najprostszej możliwej formie.
+ Zestaw ten został oryginalnie opracowany na potrzeby LDAP (ang.
+ 
+\emph on
+Lightweight Directory Access Protocol
+\emph default
+)
+\emph on
+ 
+\emph default
+i jest rzadko stosowany poza nim.
+ Stosowanie GSER współcześnie jest zniechęcające, gdyż nie każdy sposób
+ kodowania znaków w ciągach wspierany przez ASN.1 może być w nim reprodukowany.
+\end_layout
+
+\begin_layout Standard
+Specyfikacja reguł kodowania GSER znajduje się w RFC 3641 i w przeciwieństwie
+ do pozostałych reguł nie stanowi standardu ITU-T ani ISO.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+dupa jaś karuzela coś jeszcze trzeba tu wpisać...
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "cha:Silniki-elektryczne"
+
+\end_inset
+
 Silniki elektryczne
 \end_layout
 
@@ -2594,15 +3394,144 @@ Cechą charakterystyczną robota jest wytwarzanie pewnych sił i momentów mecha
 nych w sposób kontrolowany.
  Najpopularniejszą metodą na wytworzenie powyższych jest przekształcanie
  energii elektrycznej na energię mechaniczną poprzez silniki elektryczne.
- W rozdziale tym omówione zostały podstawy budowy silników elektrycznych
- prądu stałego, to jest takich jak stosowane w omawianej konstrukcji robota.
+ W rozdziale tym omówione zostały podstawy budowy komutatorowych silników
+ elektrycznych obcowzbudnych prądu stałego, to jest takich jak stosowane
+ w omawianej konstrukcji robota.
 \end_layout
 
 \begin_layout Standard
-Prawidłowe sterowanie cyfrowe silnikiem elektrcznym prądu stałego wymaga
+Prawidłowe sterowanie cyfrowe silnikiem elektrycznym prądu stałego wymaga
  pewnej postawowej wiedzy z zakresu budowy silnika, mechaniki jego działania
  oraz zasad przekształcania energii elektrycznej na pole magnetyczne a następnie
  na moment obrotowy.
+\end_layout
+
+\begin_layout Standard
+Poza omawianym typem silnika elektrycznego istnieje wiele innych typów w
+ odmianach różniących się szczegółami konstrukcji i zastosowaniami.
+ Nie jest przedmiotem tej pracy omawianie wszystkich typów silników elektrycznyc
+h.
+ Aby zrozumieć pewne elementy klasyfikujące, omówienie silnika należy rozpocząć
+ od wyjaśnienia kilku pojęć:
+\end_layout
+
+\begin_layout Description
+komutatorowy silnik elektryczny to konstrukcja w której zasilanie twornika
+ -- uzwojenia w którym indukuje się siła elektromotoryczna -- odbywa się
+ przez element przełączający zasilanie poszczególnych cewek, zwany komutatorem
+ (patrz: sekcja 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Komutator"
+
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Description
+obcowzbudny silnik elektryczny ma stojan z magnesu trwałego (magneśnica)
+ lub z elektromagnesu zasilanego z osobnego źródła zasilania niż obwód twornika;
+ w omawianym przypadku mamy konstrukcje z magnesem stałym.
+\end_layout
+
+\begin_layout Section
+Stojan i twornik
+\end_layout
+
+\begin_layout Standard
+W opisywanym typie silnika elektrycznego stojan jest elementem nieruchomym
+ zbudowanym z magnesów trwałych lub ma wbudowane magnesy trwałe, stanowiącymi
+ elementy wzbudzające.
+ Jest to pole magnetyczne, którego indukcja magnetyczna nie zależy od zasilania
+ silnika.
+ Dlatego w tym przypadku mówimy o silniku obcowzbudnym.
+\end_layout
+
+\begin_layout Standard
+Twornik to uzwojenie wytwarzające pole elektromagnetyczne, które odziałując
+ z wzbudzającym polem magnetycznym wytarza ruch obrotowy wirnika.
+ W omawianym przypadku twornik znajduje się na wirniku i pojedyncze uzwojenia
+ są zasilane poprzez komutator.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Komutator"
+
+\end_inset
+
+Komutator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename vector/komutator.svg
+	lyxscale 50
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagram-komutatora"
+
+\end_inset
+
+Diagram ilustrujący działanie komutatora silnika prądu stałego
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Komutator w silniku prądu stałego dostarcza energię do wirnika.
+ Komutator zbudowany jest z dielektrycznego walca o wysokiej odporności
+ temperaturowej, nałożonego na oś wirnika.
+ Na powierzchni walca umieszczone są wzdłużnie sekcje połączone z uzwojeniami,
+ najczęściej wykonane z miedzi.
+ Sekcje izolowane są miedzy sobą szczeliną lub przy pomocy polimerowych
+ przekładek.
+ Po powierzchni walca ślizgają się grafitowe szczotki dociśnięte przy pomocy
+ sprężyn.
+\end_layout
+
+\begin_layout Standard
+Rysunek 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagram-komutatora"
+
+\end_inset
+
+ ilustruje zasadę działania komutatora.
+ Obracający się walec komutatora powoduje przesuwanie się styków uzwojeń
+ pod szczotkami, do których doprowadzone jest napięcie zasilające.
+ Kolejne styki są po kolei zasilane w trakcie ruchu obrotowego walca.
+ W rzeczywistych silnikach ilość styków na walcu komutatora jest większa
+ i może sięgać kilkunastu.
+ Działanie komutatora pozwala zasilać tylko te uzwojenia, których pole magnetycz
+ne wraz z polem magnetycznym stojanu wytwarza chwilowy moment obrotowy.
+ W sumie kolejno zasilane uzwojenia wytwarzają moment obrotowy zbliżony
+ do jednostajnego.
 \end_layout
 
 \begin_layout Chapter
@@ -2618,7 +3547,8 @@ Rozdział ten opisuje techniczne aspekty narzędzi i modułów planowanych do
 
 \begin_layout Section
 AVR32 Studio
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:AVR32-Studio"
 
 \end_inset
@@ -2628,11 +3558,13 @@ name "sec:AVR32-Studio"
 
 \begin_layout Standard
 \begin_inset Wrap figure
+lines 0
 placement r
+overhang 0col%
 width "32mm"
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \begin_inset Graphics
 	filename images/avr32studio_icon.gif
@@ -2648,7 +3580,8 @@ status open
 \end_inset
 
 AVR32 Studio według producenta
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "AVR32015"
 
 \end_inset
@@ -2660,9 +3593,9 @@ integrated development environment
 \emph default
 ) do produkcji oprogramowania dla mikrokontrolerów serii AVR32 firmy ATMEL
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2674,7 +3607,10 @@ textregistered}
 \end_inset
 
 .
- AVR32 Studio udostępnia kompletny zestaw funkcjonalności zawierający m.\InsetSpace ~
+ AVR32 Studio udostępnia kompletny zestaw funkcjonalności zawierający m.
+\begin_inset space ~
+\end_inset
+
 in.:
 \end_layout
 
@@ -2703,13 +3639,19 @@ konfigurację platformy docelowej i zarządzanie nią.
 \end_layout
 
 \begin_layout Standard
-AVR32 Studio jest określane terminem Built\InsetSpace ~
-On\InsetSpace ~
+AVR32 Studio jest określane terminem Built
+\begin_inset space ~
+\end_inset
+
+On
+\begin_inset space ~
+\end_inset
+
 Eclipse
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2736,9 +3678,9 @@ AVR32 Studio wspiera wszystkie rodzaje układów mikrokontrolerów z serii
  z systemem integrowanym w projekcie (np.
  FreeRTOS
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2751,9 +3693,9 @@ texttrademark}
 
  lub ThreadX
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2771,16 +3713,17 @@ textregistered}
 \begin_layout Standard
 Wszystkie narzędzia firmy Atmel, które wspierają architekturę AVR32 włączając
  w to JTAG ICE mk-II (patrz: podrozdział 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:JTAG-ICE"
 
 \end_inset
 
 ), AVR
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2793,9 +3736,9 @@ textregistered}
 
 ONE! oraz STK
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2820,7 +3763,8 @@ AVR32 Studo wspiera również wszystkie płyty firmy ATMEL przewidziane dla
 GNU Toolchain
 \emph default
 ) dla AVR32, których przygotowanie jest krótko omówione w podrozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:prep-AVR32-Toolchain"
 
 \end_inset
@@ -2830,7 +3774,8 @@ reference "sec:prep-AVR32-Toolchain"
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:JTAG-ICE"
 
 \end_inset
@@ -2840,29 +3785,36 @@ JTAG ICE mk-II
 
 \begin_layout Standard
 \begin_inset Wrap figure
-placement r
+lines 0
+placement R
+overhang 0in
 width "40col%"
 status open
 
-\begin_layout Standard
-\align center
+\begin_layout Plain Layout
 \begin_inset Graphics
-	filename images/jtag-ice-mkii-bw.jpg
-	lyxscale 30
-	height 40mm
-	BoundingBox 5bp 5bp 2353bp 1572bp
+	filename images/jtag-ice-mkii-bw-scaled.jpg
+	lyxscale 50
+	width 40col%
+	clip
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-Fotografia JTAG\InsetSpace ~
-ICE\InsetSpace ~
+\begin_layout Plain Layout
+Fotografia JTAG
+\begin_inset space ~
+\end_inset
+
+ICE
+\begin_inset space ~
+\end_inset
+
 mk-II
 \end_layout
 
@@ -2875,9 +3827,9 @@ mk-II
 
 Urządzenie AVR
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2891,7 +3843,8 @@ textregistered}
  JTAG ICE mk-II z firmy Atmel jest silnym narzędziem do On-chip Debugging
  wszystkich typów 8-bitowych mikrokontrolerów AVR RISC z interfejsem IEEE
  1149.1 (opisany w podrozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:Interfejs-JTAG"
 
 \end_inset
@@ -2919,9 +3872,9 @@ Dzięki temu nardzędziu zasoby mikrokontrolera AVR mogą być monitorowane:
 Oprócz debugowania istotną funkcją realizowaną przez JTAG ICE mk-II jest
  programowanie pamięci Flash i EEPROM mikrokontrolerów AVR
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2947,7 +3900,8 @@ Integracja ze środowiskiem AVR32 Studio obejmuje poza programowaniem układów
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:EVK1100"
 
 \end_inset
@@ -2957,28 +3911,32 @@ Zestaw EVK1100
 
 \begin_layout Standard
 \begin_inset Wrap figure
+lines 0
 placement r
+overhang 0col%
 width "40col%"
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \begin_inset Graphics
 	filename images/evk1100-angle.jpg
 	lyxscale 50
 	width 40col%
-	BoundingBox 10bp 20bp 390bp 329bp
+	BoundingBox 10bp 10bp 400bp 349bp
+	clip
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:Fotografia EVK1100"
 
 \end_inset
@@ -2994,14 +3952,16 @@ Fotografia EVK1100
 \end_inset
 
 Zestaw uruchomieniowy EVK1100 pozakazany na rysunku 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "fig:Fotografia EVK1100"
 
 \end_inset
 
  stanowi kontrolną jednostkę bazową dla systemu sterowania robotem, którego
  praktyczna realizacja jest opisana w części 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "par:Realizacja-praktyczna"
 
 \end_inset
@@ -3009,7 +3969,8 @@ reference "par:Realizacja-praktyczna"
 .
  Konstrukcja płyty jest oparta o układ mikrokontrolera Atmel AT32UC3A0512
  opisany w rozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sub:Mikrokontroler-AT32UC3A0512"
 
 \end_inset
@@ -3125,7 +4086,7 @@ wide false
 sideways false
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
@@ -3137,10 +4098,10 @@ status collapsed
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Rozmiary kamery PIXELPLUS
 \end_layout
 
@@ -3157,18 +4118,24 @@ Rozmiary kamery PIXELPLUS
 \begin_inset Formula $^{\circ}$
 \end_inset
 
- co odpowiada długości ogniskowej 35\InsetSpace ~
+ co odpowiada długości ogniskowej 35
+\begin_inset space ~
+\end_inset
+
 mm obiektywu aparatu małoobrazkowego
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Pod pojęciem aparat fotograficzny małoobrazkowy kryje się format obrazka
  36
 \begin_inset Formula $\times$
 \end_inset
 
-24\InsetSpace ~
+24
+\begin_inset space ~
+\end_inset
+
 mm kliszy fotograficznej.
 \end_layout
 
@@ -3178,7 +4145,8 @@ mm kliszy fotograficznej.
 \end_layout
 
 \begin_layout Part
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "par:Realizacja-praktyczna"
 
 \end_inset
@@ -3192,7 +4160,8 @@ Przygotowanie środowiska pracy
 
 \begin_layout Section
 AVR32 Toolchain
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prep-AVR32-Toolchain"
 
 \end_inset
@@ -3250,7 +4219,7 @@ W przypadku procesora AT32UC3A0512 firma Atmel udostępnia nieodpłatnie
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4118
 \end_layout
@@ -3272,7 +4241,7 @@ lstparams "basicstyle={\ttfamily},language=bash"
 inline true
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 avr32program
 \end_layout
@@ -3286,7 +4255,7 @@ lstparams "basicstyle={\ttfamily},language=bash"
 inline true
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 avr32gdbproxy
 \end_layout
@@ -3301,13 +4270,15 @@ Aby rozpocząć pracę nad kompilacją i uruchomieniem kodu niezbędna jest inst
 a tego zestawu z pomocą instalatora dostępnego na stronie firmy Atmel.
  Narzędzia te są niezbędne do prawidłowego korzystania ze środowiska AVR32
  Studio omówionego w podrozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:prep-AVR32-Toolchain"
 
 \end_inset
 
  oraz 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:prep-AVR32-Studio"
 
 \end_inset
@@ -3315,7 +4286,8 @@ reference "sec:prep-AVR32-Studio"
 .
  Przykładowe zastosowanie omawianych powyżej narzędzi opisane jest w podrozdzial
 e 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:EVK1100-rozruch"
 
 \end_inset
@@ -3325,7 +4297,8 @@ reference "sec:EVK1100-rozruch"
 
 \begin_layout Section
 AVR32 Studio
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prep-AVR32-Studio"
 
 \end_inset
@@ -3339,7 +4312,8 @@ Instalacja
 
 \begin_layout Standard
 Omówione w podrozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:AVR32-Studio"
 
 \end_inset
@@ -3349,7 +4323,7 @@ reference "sec:AVR32-Studio"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4116
 \end_layout
@@ -3369,7 +4343,8 @@ Java Runtime Environment, JRE
 \begin_layout Standard
 Przed rozpoczęciem instalacji AVR32 Studio dobrze jest mieć zainstalowane
  narzędzia GNU dla AVR32 wspomniane w podrozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:prep-AVR32-Toolchain"
 
 \end_inset
@@ -3407,8 +4382,13 @@ Przygotowanie terminala
  Wymaga od jednak do pracy dodatkowej biblioteki RXTX na licencji GPL, którą
  należy zainstalować samodzielnie.
  Do pobrania z następującego adresu: 
-\begin_inset LatexCommand htmlurl
-target "http://rxtx.qbang.org/pub/rxtx/rxtx-2.1-7-bins-r2.zip"
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://rxtx.qbang.org/pub/rxtx/rxtx-2.1-7-bins-r2.zip
+\end_layout
 
 \end_inset
 
@@ -3428,10 +4408,10 @@ Następnie pliki zawarte z archiwum należy umieścić w odpowiednich katalogach
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family typewriter
 RXTXcomm.jar
@@ -3439,10 +4419,10 @@ RXTXcomm.jar
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family typewriter
 C:
@@ -3462,10 +4442,10 @@ ext
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family typewriter
 rxtxSerial.dll
@@ -3473,10 +4453,10 @@ rxtxSerial.dll
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family typewriter
 C:
@@ -3494,10 +4474,10 @@ bin
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family typewriter
 rxtxParallel.dll
@@ -3505,10 +4485,10 @@ rxtxParallel.dll
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family typewriter
 C:
@@ -3553,7 +4533,8 @@ Przed przystąpieniem do zasadniczej pracy nad projektem złożonym ze wszystkic
 
 \begin_layout Section
 JTAG ICE mk-II + STK 500
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:JTAG-ICE-rozruch"
 
 \end_inset
@@ -3567,7 +4548,8 @@ STK500 jest kartą rozwojową i zestawem startowy dla mikrokontrolerów z lini
  Jest to produkt o uznanej rynkowej pozycji, stosowany od kilku lat jako
  układ rozruchowy dla aplikacji mikrokontrolerów AVR, głównie ATMEGA i ATtiny
  (omówione w rozdziale 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sub:AVR-serie"
 
 \end_inset
@@ -3579,7 +4561,8 @@ reference "sub:AVR-serie"
  Atrakcyjny zestaw inżynierski dostępny w promocji w roku 2007 nie zamyka
  się w samym STK500, ale zawiera również JTAG ICE mk-II opisane dokładniej
  w 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:JTAG-ICE"
 
 \end_inset
@@ -3629,7 +4612,8 @@ RoboActor
 
 \begin_layout Section
 EVK1100
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:EVK1100-rozruch"
 
 \end_inset
@@ -3652,13 +4636,15 @@ Quick Start Guide
  W następnym kroku przeprowadzamy kompilację programu testowego ze źródeł
  oraz ładowanie kodu binarnego na płytkę za pomocą JTAG ICE mk-II (opisanego
  w sekcji 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:JTAG-ICE"
 
 \end_inset
 
  oraz sekcji 
-\begin_inset LatexCommand vref
+\begin_inset CommandInset ref
+LatexCommand vref
 reference "sec:JTAG-ICE-rozruch"
 
 \end_inset
@@ -3667,17 +4653,25 @@ reference "sec:JTAG-ICE-rozruch"
 \end_layout
 
 \begin_layout Description
-Krok\InsetSpace ~
+Krok
+\begin_inset space ~
+\end_inset
+
 1.
  Przygotowanie zestawu narzędzi GNU Compiler Collection dla AVR32
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 Zestaw narzędzi dostępny na 
-\begin_inset LatexCommand htmlurl
-target "http://www.atmel.com/avr32"
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.atmel.com/avr32
+\end_layout
 
 \end_inset
 
@@ -3693,7 +4687,10 @@ target "http://www.atmel.com/avr32"
 \end_layout
 
 \begin_layout Description
-Krok\InsetSpace ~
+Krok
+\begin_inset space ~
+\end_inset
+
 2.
  Następnie przykładowy kod z katalogu 
 \family typewriter
@@ -3716,11 +4713,16 @@ uc3a0512-ctrlpanel.elf
 \end_layout
 
 \begin_layout Description
-Krok\InsetSpace ~
+Krok
+\begin_inset space ~
+\end_inset
+
 3.
  Kasowanie pamięci mikrokontrolera przeprowadzamy poleceniem avr32program,
  którego wywołanie wygląda następująco:
-\newline
+\begin_inset Newline newline
+\end_inset
+
 
 \begin_inset Box Boxed
 position "t"
@@ -3734,7 +4736,7 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family typewriter
 avr32program chiperase
@@ -3753,14 +4755,19 @@ Usuwa to zapezpieczenia pamięci flash mikrokontrolera i pozwala na zapisanie
 
 \end_deeper
 \begin_layout Description
-Krok\InsetSpace ~
+Krok
+\begin_inset space ~
+\end_inset
+
 4.
  Ładowanie programu dokonujemy poleceniem 
 \family typewriter
 avr32program
 \family default
 , którego przykładowe wywołanie wygląda następująco:
-\newline
+\begin_inset Newline newline
+\end_inset
+
 
 \begin_inset Box Boxed
 position "t"
@@ -3774,7 +4781,7 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \family typewriter
 avr32program program -finternal@0x80000000,512Kb -e -v uc3a0512-adc_example.elf
@@ -3784,10 +4791,15 @@ avr32program program -finternal@0x80000000,512Kb -e -v uc3a0512-adc_example.elf
 \end_inset
 
 
-\newline
+\begin_inset Newline newline
+\end_inset
+
 w rezultacie kod binarny zostaje zaprogramowany w pamięci flash procesora.
  Zastosowane opcje programu inforują programator, że adres pamięci programowalne
-j zaczyna się pod adresem 0x80000000 i ma rozmiar 512\InsetSpace ~
+j zaczyna się pod adresem 0x80000000 i ma rozmiar 512
+\begin_inset space ~
+\end_inset
+
 kilobajtów.
  Opcja -e informuje o wykasowaniu pamięci przed programowaniem, a opcja
  -v o przeprowadzeniu weryfikacji programowania.
@@ -3815,7 +4827,7 @@ system operacyjny FreeRTOS wersja 4.8.0
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
 Firma Atmel dostarczyła w szkielecie FreeRTOS w wersji 4.3.1.
  Znajduje się on w katalogu 
@@ -3847,8 +4859,13 @@ drivers
  Atmel.
  Zamiast systemu FreeRTOS dostarczonego ze szkieletem, załadowany został
  system zciągnięty ze strony 
-\begin_inset LatexCommand htmlurl
-target "http://www.freertos.org"
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.freertos.org
+\end_layout
 
 \end_inset
 
@@ -3992,12 +5009,18 @@ W celu uruchomienia modułu Bluetooth niezbędne okazało się podłączenie go
 \end_layout
 
 \begin_layout Standard
-Ponieważ zastosowany w projekcie moduł Bluetooth działa w napięciu 3,3\InsetSpace ~
-V,
- to fizyczna interakcja interfejsu RS232 z logiką 3,3\InsetSpace ~
-V modułu wymagała wykonania
- układu przejściowego według schematu z rysunku 
-\begin_inset LatexCommand ref
+Ponieważ zastosowany w projekcie moduł Bluetooth działa w napięciu 3,3
+\begin_inset space ~
+\end_inset
+
+V, to fizyczna interakcja interfejsu RS232 z logiką 3,3
+\begin_inset space ~
+\end_inset
+
+V modułu wymagała wykonania układu przejściowego według schematu z rysunku
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:Schemat-modułu-konwertera-RS232"
 
 \end_inset
@@ -4013,12 +5036,12 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename vector/rs232_bluetooth.svg
 	width 99text%
-	BoundingBox 21bp 160bp 648bp 478bp
+	BoundingBox 51bp 180bp 648bp 488bp
 	clip
 
 \end_inset
@@ -4026,11 +5049,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:Schemat-modułu-konwertera-RS232"
 
 \end_inset
@@ -4051,7 +5075,8 @@ Schemat modułu konwertera RS232
 \begin_layout Standard
 Dla powyższego układu wykonana została płytka drukowana, której projekt
  prezentowany jest na rysunkach 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:Projekt-PCB-konwertera-RS232"
 
 \end_inset
@@ -4074,52 +5099,116 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename C:/Projects/mgr/schematics/rs232_bluetooth-Elementów.ps
-	BoundingBox 120bp 450bp 296bp 553bp
-	clip
-	rotateOrigin leftTop
-	subcaption
-	subcaptionText "Strona elementów"
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
-\end_inset
-
-
-\begin_inset Graphics
-	filename C:/Projects/mgr/schematics/rs232_bluetooth-Ścieżek.ps
-	BoundingBox 120bp 450bp 296bp 553bp
-	clip
-	rotateOrigin leftTop
-	subcaption
-	subcaptionText "Strona ścieżek"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename C:/Projects/mgr/schematics/rs232_bluetooth-Opisu_górna.ps
-	BoundingBox 120bp 450bp 296bp 553bp
-	clip
-	rotateOrigin leftTop
-	subcaption
-	subcaptionText "Rozkład elementów"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+Strona elementów
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Projects/mgr/schematics/rs232_bluetooth/rs232_bluetooth-Elementów.ps
+	BoundingBox 120bp 450bp 296bp 553bp
+	clip
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Strona ścieżek
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Projects/mgr/schematics/rs232_bluetooth/rs232_bluetooth-Ścieżek.ps
+	BoundingBox 120bp 450bp 296bp 553bp
+	clip
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rozkład elementów
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Projects/mgr/schematics/rs232_bluetooth/rs232_bluetooth-Opisu_górna.ps
+	BoundingBox 120bp 450bp 296bp 553bp
+	clip
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:Projekt-PCB-konwertera-RS232"
 
 \end_inset
@@ -4152,12 +5241,17 @@ Do uruchamiania modułu użyto programu TeraTerm
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \noindent
-Aktualne wersje tego narzędzia dostępne pod adresem 
-\begin_inset LatexCommand htmlurl
-name "http://ttssh2.sourceforge.jp/"
-target "http://ttssh2.sourceforge.jp/"
+Aktualne wersje tego narzędzia dostępne pod adresem http://ttssh2.sourceforge.jp/
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://ttssh2.sourceforge.jp/
+\end_layout
 
 \end_inset
 
@@ -4173,7 +5267,10 @@ target "http://ttssh2.sourceforge.jp/"
 
 \begin_layout Standard
 Tryb komend modułu Bluetooth jest osiągalny tylko za pośrednictwm UART,
- czyli od strony zbudowanego konwertera RS232 na logikę 3,3\InsetSpace ~
+ czyli od strony zbudowanego konwertera RS232 na logikę 3,3
+\begin_inset space ~
+\end_inset
+
 V.
  Przypomina to pracę klasycznego modemu.
  Ciąg znaków, powodujących przejście do trybu komend to 
@@ -4200,8 +5297,908 @@ Sterowanie elektromechaniki
 Silniki elektryczne robota
 \end_layout
 
+\begin_layout Standard
+Rozdział 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cha:Silniki-elektryczne"
+
+\end_inset
+
+ omawia konstrukcję silnika prądu stałego.
+ Sterowanie zasilaniem siedmiu silników robota odbywa się za pośrednictwem
+ układów sterowników MOSFET firmy Microchip, model TC4424A opisanymi w 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tc4424a-datasheet"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+Dopisać:
+\end_layout
+
+\begin_layout Enumerate
+Skrótowy opis TC4424A
+\end_layout
+
+\begin_layout Enumerate
+Schemat modułu zasilania silników i opis działania
+\end_layout
+
+\begin_layout Enumerate
+Obrazek płytki, zdjęcie modułu.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Sterowanie cyfrowe silników elektrycznych
+\end_layout
+
+\begin_layout Standard
+Sterowanie silników elektrycznych napędzających mechaniczne elementy robota
+ odbywa się za pomocą siedmiu sterowników PWM (ang.
+ 
+\emph on
+pulse width modulation
+\emph default
+), w które wyposażony jest mikrokontroler AT32UC3A0512.
+ Aby umożliwić pracę dwukierunkową, oprócz wyprowadzeń PWM potrzebne są
+ dodatkowe wyprowadzenia logiczne.
+ Wybór logicznego stanu wysokiego i niskiego oraz odpowiedniej polaryzacji
+ PWM będą służyć do zmiany kierunku obrotów.
+ Tabela 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:wyprowadzenia-pwm"
+
+\end_inset
+
+ pokazuje, które wyprowadzenia mikroprocesora wraz z ich nazwami na szynie
+ modułu EVK1100 zostały użyte do tego celu.
+ Zestawienie to zostało przygotowane na podstawie tabel 7-1, 12-9 oraz 22-2
+ z dokumentacji mikrokontrolera 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "uc3a-datasheet"
+
+\end_inset
+
+.
+ Kolumna 
+\begin_inset Quotes pld
+\end_inset
+
+Funkcja
+\begin_inset Quotes prd
+\end_inset
+
+ podaje oznaczenie funkcji peryferyjnej, w przypadku wyprowadzeń logicznych,
+ stanem wyprowadzenia steruje rejestr GPIO.
+ Kolumna 
+\begin_inset Quotes pld
+\end_inset
+
+GPIO
+\begin_inset Quotes prd
+\end_inset
+
+ określa, która funkcja wyprowadzenia jest wybierana przy programowaniu
+ PM (ang.
+ 
+\emph on
+Power Manager
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="9">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PWM
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logiczne
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nóżka
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Szyna
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Funkcja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GPIO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nóżka
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Szyna
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Funkcja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GPIO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silnik 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+143
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PWM0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB29
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ODER
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+--
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silnik 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PWM1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ODER
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+--
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silnik 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PWM2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+22
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB31
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ODER
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+--
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silnik 4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB22
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PWM3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ODER
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+--
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silnik 5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PWM4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+139
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ODER
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+--
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silnik 6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PWM5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+77
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PA25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ODER
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+--
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Silnik 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+141
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PB18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PWM6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+78
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PA26
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ODER
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+--
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:wyprowadzenia-pwm"
+
+\end_inset
+
+Zestawienie wyprowadzeń użytych do sterowania silników elektrycznych
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -4222,7 +6219,7 @@ wide false
 sideways false
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename vector/system-arch-general.svg
@@ -4233,10 +6230,10 @@ status collapsed
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Schemat blokowy podsystemu układu mikrokontrolera
 \end_layout
 
@@ -4278,7 +6275,7 @@ wide false
 sideways false
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename vector/system-arch-avr-soft.svg
 	width 90col%
@@ -4288,10 +6285,10 @@ status collapsed
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Architektura oprogramowania układu mikrokontrolera
 \end_layout
 
@@ -4331,9 +6328,10 @@ Dodatek A.
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand bibtex
-options "plplain"
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
 bibfiles "literatura"
+options "plplain"
 
 \end_inset
 
