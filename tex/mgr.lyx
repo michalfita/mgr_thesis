@@ -5315,6 +5315,290 @@ key "tc4424a-datasheet"
 \end_inset
 
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Coś tu dodać o silniczkach?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Moduł sterowania zasilaniem silników
+\end_layout
+
+\begin_layout Standard
+Układ TC4424A jest przedstawicielem podwójnych sterowników MOSFET (ang.
+ 
+\emph on
+dual MOSFET driver
+\emph default
+) sterowanych poziomami logicznymi.
+ Konstrukcja podwójna pozwala na wybór polaryzacji na wyjściu.
+ Układ ten posiada następujące parametry:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features booktabs="true">
+<column alignment="right" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zakres napięć pracy:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.5
+\begin_inset space ~
+\end_inset
+
+V do 18
+\begin_inset space ~
+\end_inset
+
+V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maksymalny prąd chwilowy:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4500
+\begin_inset space ~
+\end_inset
+
+mA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Czas wysterowania przy zadanej pojemności wyjścia:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\begin_inset space ~
+\end_inset
+
+nS przy 1800
+\begin_inset space ~
+\end_inset
+
+pF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pobór prądu:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\begin_inset space ~
+\end_inset
+
+mA przy logicznym 
+\begin_inset Quotes pld
+\end_inset
+
+1
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+150
+\begin_inset space ~
+\end_inset
+
+µA przy logicznym 
+\begin_inset Quotes pld
+\end_inset
+
+0
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Impedancja wyjścia:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.5
+\begin_inset space ~
+\end_inset
+
+Ω
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Napięcie logicznej jedynki:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+> 2.4
+\begin_inset space ~
+\end_inset
+
+V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wewnętrzna architektura układu jest przedstawiona na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Architektura-wewnętrzna-TC4424A"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement bh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename vector/tc4424a-diagram.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Architektura-wewnętrzna-TC4424A"
+
+\end_inset
+
+Architektura wewnętrzna TC4424A
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5340,6 +5624,210 @@ Obrazek płytki, zdjęcie modułu.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Moduł sterowania zasilaniem silników elektrycznych składa sie z siedmiu
+ układów TC4424A, których wejścia są połączone z wyprowadzeniami GPIO miktrokont
+rolera, zaś wyjścia poprzez diody Schottky'ego połączone są ze stykami komutator
+ów opisanych w 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Komutator"
+
+\end_inset
+
+.
+ Opis połączeń wyprowadzeń wejściowych znajduje się w tabeli 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:wyprowadzenia-pwm"
+
+\end_inset
+
+.
+ Schemat modułu przedstawia rysunek 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Schemat-modułu-zasilania-silników"
+
+\end_inset
+
+, zaś rysunki 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Schemat-modułu-zasilania-silników"
+
+\end_inset
+
+ prezentują projekt obu stron płytki drukowanej modułu (rzut od strony elementów
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement b
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename vector/motor_drivers.svg
+	width 101col%
+	BoundingBox 5mm 5mm 257mm 180mm
+	clip
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schemat-modułu-zasilania-silników"
+
+\end_inset
+
+Schemat modułu zasilania silników elektrycznych
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Projects/mgr/schematics/motor_drivers/motor_drivers-Elementów.ps
+	width 98col%
+	BoundingBox 10mm 130mm 120mm 210mm
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Strona elementów
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Projects/mgr/schematics/motor_drivers/motor_drivers-Ścieżek.ps
+	width 98col%
+	BoundingBox 10mm 130mm 120mm 210mm
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Strona ścieżek
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Projekt-PCB-modułu-zasilania-silników"
+
+\end_inset
+
+Projekt płytki drukowanej modułu zasilania silników
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diody Schottky'ego na schemacie pełnią rolę zabezpieczeń wyść tranzystorów
+ MOSFET pracujących wewnątrz TC4424A przed impulsami o wysokim napięciu
+ indukowanych na zwojach twornika, gdy odłączane jest napięcie zasilające,
+ bądź pojawia się zewnętrzny moment napędowy.
+\end_layout
+
+\begin_layout Standard
+Zastosowany na schemacie układ par tranzystorów połączonych z obciążeniem
+ nazywany jest 
+\emph on
+mostkiem H
+\emph default
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Może odnieść do: http://www.modularcircuits.com/h-bridge_secrets1.htm
+\end_layout
+
+\end_inset
+
+ Jest to najpopularniejszy układ sterujący dla silników elektrycznych powszechni
+e stosowany w sterowaniu silników jednofazowych.
 \end_layout
 
 \begin_layout Section
@@ -5401,10 +5889,12 @@ GPIO
 Power Manager
 \emph default
 ).
+ Nazwa w pierwszej kolumnie określa funkcję sterującą wybranego silnika.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
+placement bh
 wide false
 sideways false
 status open
@@ -5595,7 +6085,7 @@ GPIO
 \begin_inset Text
 
 \begin_layout Plain Layout
-Silnik 1
+Prawy chwytak
 \end_layout
 
 \end_inset
@@ -5678,7 +6168,7 @@ ODER
 \begin_inset Text
 
 \begin_layout Plain Layout
-Silnik 2
+Prawe ramię
 \end_layout
 
 \end_inset
@@ -5761,7 +6251,7 @@ ODER
 \begin_inset Text
 
 \begin_layout Plain Layout
-Silnik 3
+Noga prawa
 \end_layout
 
 \end_inset
@@ -5844,7 +6334,7 @@ ODER
 \begin_inset Text
 
 \begin_layout Plain Layout
-Silnik 4
+Biodro
 \end_layout
 
 \end_inset
@@ -5927,7 +6417,7 @@ ODER
 \begin_inset Text
 
 \begin_layout Plain Layout
-Silnik 5
+Noga lewa
 \end_layout
 
 \end_inset
@@ -6010,7 +6500,7 @@ ODER
 \begin_inset Text
 
 \begin_layout Plain Layout
-Silnik 6
+Lewe ramię
 \end_layout
 
 \end_inset
@@ -6093,7 +6583,7 @@ ODER
 \begin_inset Text
 
 \begin_layout Plain Layout
-Silnik 7
+Lewy chwytak
 \end_layout
 
 \end_inset
@@ -6199,6 +6689,85 @@ Zestawienie wyprowadzeń użytych do sterowania silników elektrycznych
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Wszytkie wyprowadzenia mikrokontrolera operują na poziomach logicznych 
+\begin_inset Quotes pld
+\end_inset
+
+0
+\begin_inset Quotes prd
+\end_inset
+
+ i 
+\begin_inset Quotes pld
+\end_inset
+
+1
+\begin_inset Quotes prd
+\end_inset
+
+, który odpowiadają napięcia 0.2
+\begin_inset space ~
+\end_inset
+
+V oraz 3.2
+\begin_inset space ~
+\end_inset
+
+V.
+ Są one w parach (według wierszy tabeli 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:wyprowadzenia-pwm"
+
+\end_inset
+
+) podłączone do wejść logicznych siedmiu układów TC4424A umieszczonych na
+ module sterowania zasilaniem 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Wstawić odnośnik do opisu płytki modułu
+\end_layout
+
+\end_inset
+
+.
+ Sterowanie wyjściami logicznymi powoduje sterowanie wyjściami zasilania
+ silników elektrycznych, przy czym polaryzacja zależy od podawania na wejścia
+ logiczne pary stanów 
+\begin_inset Quotes pld
+\end_inset
+
+01
+\begin_inset Quotes prd
+\end_inset
+
+ lub 
+\begin_inset Quotes pld
+\end_inset
+
+10
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Dodatkowo sterowanie PWM pozwala na regulację obrotów silnika.
+ Dzięki funkcjonalności pozwalającej na zmianę polaryzacji PWM, proces ten
+ może odbywać się w obu kierunkach.
+\end_layout
+
+\begin_layout Standard
+Zmiana polaryzacji PWM oznacza, że przebieg prostokątny generowany z modulatora
+ impulsów jest logicznie zanegowany.
+ Z elektrycznego punktu widzenia 
+\series bold
+nie następuje
+\series default
+ zmiana polaryzacji z dodatniej na ujemną lub z ujemnej na dodatnią.
 \end_layout
 
 \begin_layout Chapter

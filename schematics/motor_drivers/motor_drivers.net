@@ -1,0 +1,811 @@
+# EESchema Netlist Version 1.1 created  14/10/2008-16:17:05
+(
+ ( /48F38BE1 con-molex-53047-02  P10 CONN_2 {Lib=CONN_2}
+  (    1 GND )
+  (    2 VDD )
+ )
+ ( /48F0AB4B SM0603  C17 100nF {Lib=C}
+  (    1 GND )
+  (    2 VDD )
+ )
+ ( /48F0AB44 SM0805  C7 1uF {Lib=C}
+  (    1 VDD )
+  (    2 GND )
+ )
+ ( /48F0AB33 SM0603  C16 100nF {Lib=C}
+  (    1 GND )
+  (    2 VDD )
+ )
+ ( /48F0AB23 SM0805  C6 1uF {Lib=C}
+  (    1 VDD )
+  (    2 GND )
+ )
+ ( /48F0AABD SM0603  C14 100nF {Lib=C}
+  (    1 GND )
+  (    2 VDD )
+ )
+ ( /48F0AAB9 SM0603  C15 100nF {Lib=C}
+  (    1 GND )
+  (    2 VDD )
+ )
+ ( /48F0AAB1 SM0805  C5 1uF {Lib=C}
+  (    1 VDD )
+  (    2 GND )
+ )
+ ( /48F0AAA8 SM0805  C4 1uF {Lib=C}
+  (    1 VDD )
+  (    2 GND )
+ )
+ ( /48F0AA9B SM0805  C3 1uF {Lib=C}
+  (    1 VDD )
+  (    2 GND )
+ )
+ ( /48F0AA61 SM0603  C12 100nF {Lib=C}
+  (    1 GND )
+  (    2 VDD )
+ )
+ ( /48F0AA53 SM0805  C2 1uF {Lib=C}
+  (    1 VDD )
+  (    2 GND )
+ )
+ ( /48F0AA4A SM0805  C1 1uF {Lib=C}
+  (    1 VDD )
+  (    2 GND )
+ )
+ ( /48F0AA3C SM0603  C11 100nF {Lib=C}
+  (    1 GND )
+  (    2 VDD )
+ )
+ ( /48F0AA29 SM0603  C13 100nF {Lib=C}
+  (    1 GND )
+  (    2 VDD )
+ )
+ ( /48F08DF0 con-molex-53047-02  P9 CONN_2 {Lib=CONN_2}
+  (    1 /OUT7.A )
+  (    2 /OUT7.B )
+ )
+ ( /48F08DCD con-molex-53047-02  P8 CONN_2 {Lib=CONN_2}
+  (    1 /OUT6.A )
+  (    2 /OUT6.B )
+ )
+ ( /48F08DB6 con-molex-53047-02  P7 CONN_2 {Lib=CONN_2}
+  (    1 /OUT5.A )
+  (    2 /OUT5.B )
+ )
+ ( /48F08D6F con-molex-53047-02  P6 CONN_2 {Lib=CONN_2}
+  (    1 /OUT4.A )
+  (    2 /OUT4.B )
+ )
+ ( /48F08D1B con-molex-53047-02  P5 CONN_2 {Lib=CONN_2}
+  (    1 /OUT3.A )
+  (    2 /OUT3.B )
+ )
+ ( /48F08D0E con-molex-53047-02  P4 CONN_2 {Lib=CONN_2}
+  (    1 /OUT2.A )
+  (    2 /OUT2.B )
+ )
+ ( /48F08CF4 con-molex-53047-02  P3 CONN_2 {Lib=CONN_2}
+  (    1 /OUT1.A )
+  (    2 /OUT1.B )
+ )
+ ( /48F0812C -MELF-MLL41  D24 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT6.B )
+ )
+ ( /48F0812B -MELF-MLL41  D23 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT6.A )
+ )
+ ( /48F0812A -MELF-MLL41  D22 SM5818 {Lib=DIODESCH}
+  (    1 /OUT6.B )
+  (    2 VDD )
+ )
+ ( /48F08129 -MELF-MLL41  D21 SM5818 {Lib=DIODESCH}
+  (    1 /OUT6.A )
+  (    2 VDD )
+ )
+ ( /48F08112 -MELF-MLL41  D16 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT4.B )
+ )
+ ( /48F08111 -MELF-MLL41  D15 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT4.A )
+ )
+ ( /48F08110 -MELF-MLL41  D14 SM5818 {Lib=DIODESCH}
+  (    1 /OUT4.B )
+  (    2 VDD )
+ )
+ ( /48F0810F -MELF-MLL41  D13 SM5818 {Lib=DIODESCH}
+  (    1 /OUT4.A )
+  (    2 VDD )
+ )
+ ( /48F08107 -MELF-MLL41  D8 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT2.B )
+ )
+ ( /48F08106 -MELF-MLL41  D7 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT2.A )
+ )
+ ( /48F08105 -MELF-MLL41  D6 SM5818 {Lib=DIODESCH}
+  (    1 /OUT2.B )
+  (    2 VDD )
+ )
+ ( /48F08104 -MELF-MLL41  D5 SM5818 {Lib=DIODESCH}
+  (    1 /OUT2.A )
+  (    2 VDD )
+ )
+ ( /48F08018 -MELF-MLL41  D28 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT7.B )
+ )
+ ( /48F08017 -MELF-MLL41  D27 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT7.A )
+ )
+ ( /48F08016 -MELF-MLL41  D26 SM5818 {Lib=DIODESCH}
+  (    1 /OUT7.B )
+  (    2 VDD )
+ )
+ ( /48F08015 -MELF-MLL41  D25 SM5818 {Lib=DIODESCH}
+  (    1 /OUT7.A )
+  (    2 VDD )
+ )
+ ( /48F07FB1 -MELF-MLL41  D20 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT5.B )
+ )
+ ( /48F07FB0 -MELF-MLL41  D19 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT5.A )
+ )
+ ( /48F07FAF -MELF-MLL41  D18 SM5818 {Lib=DIODESCH}
+  (    1 /OUT5.B )
+  (    2 VDD )
+ )
+ ( /48F07FAE -MELF-MLL41  D17 SM5818 {Lib=DIODESCH}
+  (    1 /OUT5.A )
+  (    2 VDD )
+ )
+ ( /48F07F75 -MELF-MLL41  D12 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT3.B )
+ )
+ ( /48F07F74 -MELF-MLL41  D11 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT3.A )
+ )
+ ( /48F07F73 -MELF-MLL41  D10 SM5818 {Lib=DIODESCH}
+  (    1 /OUT3.B )
+  (    2 VDD )
+ )
+ ( /48F07F72 -MELF-MLL41  D9 SM5818 {Lib=DIODESCH}
+  (    1 /OUT3.A )
+  (    2 VDD )
+ )
+ ( /48F07EC7 -MELF-MLL41  D4 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT1.B )
+ )
+ ( /48F07EBF -MELF-MLL41  D3 SM5818 {Lib=DIODESCH}
+  (    1 GND )
+  (    2 /OUT1.A )
+ )
+ ( /48F07E92 -MELF-MLL41  D2 SM5818 {Lib=DIODESCH}
+  (    1 /OUT1.B )
+  (    2 VDD )
+ )
+ ( /48F07E79 -MELF-MLL41  D1 SM5818 {Lib=DIODESCH}
+  (    1 /OUT1.A )
+  (    2 VDD )
+ )
+ ( /48F07DD5 con-molex-53048-08  P2 CONN_8 {Lib=CONN_8}
+  (    1 VCC )
+  (    2 /IN1.B )
+  (    3 /IN2.B )
+  (    4 /IN3.B )
+  (    5 /IN4.B )
+  (    6 /IN5.B )
+  (    7 /IN6.B )
+  (    8 /IN7.B )
+ )
+ ( /48F07CEE con-molex-53048-08  P1 CONN_8 {Lib=CONN_8}
+  (    1 GND )
+  (    2 /IN1.A )
+  (    3 /IN2.A )
+  (    4 /IN3.A )
+  (    5 /IN4.A )
+  (    6 /IN5.A )
+  (    7 /IN6.A )
+  (    8 /IN7.A )
+ )
+ ( /48F066D7 SM0603  R14 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN7.A )
+ )
+ ( /48F066D2 SM0603  R13 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN7.B )
+ )
+ ( /48F06663 SM0603  R12 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN6.A )
+ )
+ ( /48F0665B SM0603  R11 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN6.B )
+ )
+ ( /48F065FE SM0603  R10 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN5.A )
+ )
+ ( /48F065FB SM0603  R9 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN5.B )
+ )
+ ( /48F065F5 SM0603  R8 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN4.A )
+ )
+ ( /48F065F0 SM0603  R7 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN4.B )
+ )
+ ( /48F065E6 SM0603  R6 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN3.A )
+ )
+ ( /48F065DA SM0603  R5 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN3.B )
+ )
+ ( /48F065CF SM0603  R4 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN2.A )
+ )
+ ( /48F065CB SM0603  R3 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN2.B )
+ )
+ ( /48F065A1 SM0603  R2 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN1.A )
+ )
+ ( /48F06594 SM0603  R1 10k {Lib=R}
+  (    1 VCC )
+  (    2 /IN1.B )
+ )
+ ( /48ED0F2D -SOIC8  U7 TC4424A {Lib=TC4424A}
+  (    2 /IN7.A )
+  (    3 GND )
+  (    4 /IN7.B )
+  (    5 /OUT7.B )
+  (    6 VDD )
+  (    7 /OUT7.A )
+ )
+ ( /48ED0F12 -SOIC8  U6 TC4424A {Lib=TC4424A}
+  (    2 /IN6.A )
+  (    3 GND )
+  (    4 /IN6.B )
+  (    5 /OUT6.B )
+  (    6 VDD )
+  (    7 /OUT6.A )
+ )
+ ( /48ED0F01 -SOIC8  U5 TC4424A {Lib=TC4424A}
+  (    2 /IN5.A )
+  (    3 GND )
+  (    4 /IN5.B )
+  (    5 /OUT5.B )
+  (    6 VDD )
+  (    7 /OUT5.A )
+ )
+ ( /48ED0EFD -SOIC8  U4 TC4424A {Lib=TC4424A}
+  (    2 /IN4.A )
+  (    3 GND )
+  (    4 /IN4.B )
+  (    5 /OUT4.B )
+  (    6 VDD )
+  (    7 /OUT4.A )
+ )
+ ( /48ED0EF7 -SOIC8  U3 TC4424A {Lib=TC4424A}
+  (    2 /IN3.A )
+  (    3 GND )
+  (    4 /IN3.B )
+  (    5 /OUT3.B )
+  (    6 VDD )
+  (    7 /OUT3.A )
+ )
+ ( /48ED0EF3 -SOIC8  U2 TC4424A {Lib=TC4424A}
+  (    2 /IN2.A )
+  (    3 GND )
+  (    4 /IN2.B )
+  (    5 /OUT2.B )
+  (    6 VDD )
+  (    7 /OUT2.A )
+ )
+ ( /48ED0EE8 -SOIC8  U1 TC4424A {Lib=TC4424A}
+  (    2 /IN1.A )
+  (    3 GND )
+  (    4 /IN1.B )
+  (    5 /OUT1.B )
+  (    6 VDD )
+  (    7 /OUT1.A )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C17
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C16
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C14
+ SM*
+ C?
+ C1-1
+$endlist
+$component C15
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C12
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component C13
+ SM*
+ C?
+ C1-1
+$endlist
+$component D24
+ D?
+ S*
+$endlist
+$component D23
+ D?
+ S*
+$endlist
+$component D22
+ D?
+ S*
+$endlist
+$component D21
+ D?
+ S*
+$endlist
+$component D16
+ D?
+ S*
+$endlist
+$component D15
+ D?
+ S*
+$endlist
+$component D14
+ D?
+ S*
+$endlist
+$component D13
+ D?
+ S*
+$endlist
+$component D8
+ D?
+ S*
+$endlist
+$component D7
+ D?
+ S*
+$endlist
+$component D6
+ D?
+ S*
+$endlist
+$component D5
+ D?
+ S*
+$endlist
+$component D28
+ D?
+ S*
+$endlist
+$component D27
+ D?
+ S*
+$endlist
+$component D26
+ D?
+ S*
+$endlist
+$component D25
+ D?
+ S*
+$endlist
+$component D20
+ D?
+ S*
+$endlist
+$component D19
+ D?
+ S*
+$endlist
+$component D18
+ D?
+ S*
+$endlist
+$component D17
+ D?
+ S*
+$endlist
+$component D12
+ D?
+ S*
+$endlist
+$component D11
+ D?
+ S*
+$endlist
+$component D10
+ D?
+ S*
+$endlist
+$component D9
+ D?
+ S*
+$endlist
+$component D4
+ D?
+ S*
+$endlist
+$component D3
+ D?
+ S*
+$endlist
+$component D2
+ D?
+ S*
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$component R14
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R13
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R12
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R11
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R10
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "GND"
+ U3 3
+ U4 3
+ U5 3
+ U6 3
+ U7 3
+ P1 1
+ D3 1
+ D4 1
+ D11 1
+ D12 1
+ D19 1
+ D20 1
+ D27 1
+ D28 1
+ D7 1
+ D8 1
+ D15 1
+ D16 1
+ D23 1
+ D24 1
+ C13 1
+ C11 1
+ C1 2
+ C2 2
+ C12 1
+ C3 2
+ C4 2
+ C5 2
+ C15 1
+ C14 1
+ C6 2
+ C16 1
+ C7 2
+ C17 1
+ P10 1
+ U2 3
+ U1 3
+/Net 2 "OUT7.A"
+ P9 1
+ U7 7
+ D27 2
+ D25 1
+/Net 3 "OUT4.B"
+ D16 2
+ U4 5
+ P6 2
+ D14 1
+/Net 4 "OUT5.B"
+ D18 1
+ D20 2
+ U5 5
+ P7 2
+/Net 5 "OUT3.B"
+ P5 2
+ U3 5
+ D12 2
+ D10 1
+/Net 6 "OUT2.B"
+ D6 1
+ P4 2
+ D8 2
+ U2 5
+/Net 7 "OUT1.B"
+ D4 2
+ U1 5
+ D2 1
+ P3 2
+/Net 8 "OUT7.B"
+ D26 1
+ U7 5
+ D28 2
+ P9 2
+/Net 9 "IN1.B"
+ U1 4
+ R1 2
+ P2 2
+/Net 10 "IN3.B"
+ P2 4
+ R5 2
+ U3 4
+/Net 11 "IN5.B"
+ U5 4
+ P2 6
+ R9 2
+/Net 12 "IN7.B"
+ U7 4
+ P2 8
+ R13 2
+/Net 13 "IN3.A"
+ P1 4
+ R6 2
+ U3 2
+/Net 14 "IN1.A"
+ U1 2
+ R2 2
+ P1 2
+/Net 15 "IN6.A"
+ P1 7
+ R12 2
+ U6 2
+/Net 16 "IN7.A"
+ U7 2
+ P1 8
+ R14 2
+/Net 17 "IN5.A"
+ P1 6
+ U5 2
+ R10 2
+/Net 18 "IN2.A"
+ R4 2
+ P1 3
+ U2 2
+/Net 19 "IN4.A"
+ U4 2
+ P1 5
+ R8 2
+Net 20 "VCC"
+ P2 1
+ R1 1
+ R2 1
+ R3 1
+ R4 1
+ R5 1
+ R6 1
+ R7 1
+ R14 1
+ R13 1
+ R8 1
+ R9 1
+ R10 1
+ R11 1
+ R12 1
+/Net 21 "IN6.B"
+ P2 7
+ U6 4
+ R11 2
+/Net 22 "IN4.B"
+ R7 2
+ P2 5
+ U4 4
+/Net 23 "IN2.B"
+ P2 3
+ U2 4
+ R3 2
+/Net 24 "OUT3.A"
+ U3 7
+ D9 1
+ P5 1
+ D11 2
+/Net 25 "OUT5.A"
+ D19 2
+ D17 1
+ U5 7
+ P7 1
+/Net 26 "OUT2.A"
+ D5 1
+ P4 1
+ U2 7
+ D7 2
+/Net 27 "OUT4.A"
+ D13 1
+ P6 1
+ D15 2
+ U4 7
+/Net 28 "OUT6.B"
+ D24 2
+ P8 2
+ U6 5
+ D22 1
+/Net 29 "OUT6.A"
+ D23 2
+ P8 1
+ U6 7
+ D21 1
+/Net 30 "OUT1.A"
+ D3 2
+ P3 1
+ D1 1
+ U1 7
+Net 31 "VDD"
+ D5 2
+ D6 2
+ D13 2
+ D14 2
+ D26 2
+ D21 2
+ D22 2
+ D25 2
+ D18 2
+ C13 2
+ C11 2
+ C1 1
+ C2 1
+ C12 2
+ C3 1
+ C4 1
+ C5 1
+ D17 2
+ C15 2
+ C14 2
+ C6 1
+ C16 2
+ C7 1
+ C17 2
+ D10 2
+ P10 2
+ U7 6
+ U6 6
+ D9 2
+ U5 6
+ U4 6
+ U3 6
+ D1 2
+ U2 6
+ U1 6
+ D2 2
+}
+#End
