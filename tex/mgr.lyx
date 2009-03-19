@@ -278,7 +278,8 @@ Zabawa w berka
 
  (ang.
  
-\emph on
+\shape italic
+\lang british
 
 \begin_inset Quotes eld
 \end_inset
@@ -288,7 +289,8 @@ Runaround
 \end_inset
 
 
-\emph default
+\shape default
+\lang polish
 ).
  W jego literaturze pojawiają się również słynne trzy prawa robotyki:
 \end_layout
@@ -514,14 +516,18 @@ Zastosowana metoda testowania pozwalała weryfikować elektryczne połączenia
  lub rzadziej skanowania granicznego (ang.
  
 \shape italic
+\lang british
 boundary-scan
 \shape default
+\lang polish
 ).
  Polega ona na zastosowaniu pojedynczych bramek (ang.
  
 \shape italic
+\lang british
 Boundary Scan Cells
 \shape default
+\lang polish
 ) na wszystkich nóżkach sygnałowych układu scalonego, które mogą być wymuszane
  w stan logiczny zero lub jeden, mogą odczytywać stan logiczny nóżki podawany
  z zewnątrz lub w trakcie normalnej pracy układu pozostawać nieaktywne i
@@ -529,8 +535,10 @@ Boundary Scan Cells
  Łańcuch takich bramek tworzy rejestr (ang.
  
 \shape italic
+\lang british
 Boundary Scan Register
 \shape default
+\lang polish
 ), który współpracuje z dodatkowymi rejestrami instrukcji i danych.
 \end_layout
 
@@ -547,9 +555,11 @@ a i wymaga własnego oprogramowania do sterowania interfejsem, które umożliwia
  Programowanie układów scalonych z zastosowaniem tej metody (ale nie tylko)
  nazywa się programowaniem w systemie (ang.
  
-\emph on
+\shape italic
+\lang british
 in-system programming
-\emph default
+\shape default
+\lang polish
 , w skrócie ISP).
  Przykłady wielu mikrokontrolerów 8-bitowych pokazują, że ISP nie wymaga
  istnienia pełnego IEEE 1149.1 a wymaga tylko dostarczenia wyprowadzeń pozwalając
@@ -669,9 +679,11 @@ Wykorzystanie wszystkich możliwości JTAG do testowania, wymaga programu
  JTAG i ich otoczenia.
  Treść pliku zapisana jest w języku BSDL (ang.
  
-\emph on
+\shape italic
+\lang british
 Boundary-Scan Description Language
-\emph default
+\shape default
+\lang polish
 ), który został opracowany na podstawie wybranych elementów składni języka
  VHDL.
  Na podstawie wgranych plików oraz wygenerowanych wektorów testowych, oprogramow
@@ -706,9 +718,11 @@ status open
 \begin_layout Plain Layout
  łoże szpilkowe (ang.
  
-\emph on
+\shape italic
+\lang british
 nail bed tester
-\emph default
+\shape default
+\lang polish
 ), to podłoże z drobnymi, gęsto rozmieszczonymi szpilkami, stykającymi się
  w punktach kontaktowych z punktami testowymi na płytce drukowanej, pomiędzy
  którymi dokonuje się pomiaru paramterów sygnału elektrycznego; koszty testera
@@ -798,9 +812,11 @@ Rozszerzenia producentów wbudowane w układ pozwalają na stosowanie JTAG
  do uruchamiania i odpluskwiania programów działających w rzeczywistym systemie
  (ang.
  
-\emph on
+\shape italic
+\lang british
 on-chip debugging
-\emph default
+\shape default
+\lang polish
 ).
  Wykorzystuje się w tym celu możliwości 
 \begin_inset Quotes pld
@@ -857,9 +873,11 @@ Interfejs USB
 \begin_layout Standard
 Interfejs USB (ang.
  
-\emph on
+\shape italic
+\lang british
 Universal Serial Bus
-\emph default
+\shape default
+\lang polish
 ) jest dziś najpopularniejszym interfejsem szeregowym dla różnych urządzeń
  współpracujących ze sobą, również komputerów z urządzeniami wejścia-wyjścia
  i urządzeniami multimedialnymi, takimi jak odtwarzacze muzyki, aparaty
@@ -922,9 +940,11 @@ USB
 
 2.0 Istniejący od roku 2000 standard ten wprowadza tryb dużej prędkości (ang.
  
-\emph on
+\shape italic
+\lang british
 High Speed USB
-\emph default
+\shape default
+\lang polish
 ) o prędkości 480
 \begin_inset space ~
 \end_inset
@@ -947,9 +967,11 @@ USB
 
 Gbit/s (ang.
  
-\emph on
+\shape italic
+\lang british
 Super Speed USB
-\emph default
+\shape default
+\lang polish
 ) oraz pracę w pełnym duplexie.
  Nowością ma być też zaawansowany sposób zarządzania zasilaniem urządzeń
  pracujących na magistrali -- nieużywane urządzenie może zostać zamodzielnie
@@ -1008,9 +1030,11 @@ Specyfikacja standardu USB określa precyzyjnie wszystkie aspekty związane
 \begin_layout Description
 UHCI (ang.
  
-\emph on
+\shape italic
+\lang british
 Universal Host Controller Interface
-\emph default
+\shape default
+\lang polish
 ) opracowany przez Intela, który kładzie największy nacisk na oprogramowania
  redukując koszty sprzętu.
 \end_layout
@@ -1018,9 +1042,11 @@ Universal Host Controller Interface
 \begin_layout Description
 OHCI (ang.
  
-\emph on
+\shape italic
+\lang british
 Open Host Controller Interface
-\emph default
+\shape default
+\lang polish
 ) opracowany wspólnie przez Compaq, Microsoft i National Semiconductor,
  który kładzie największy nacisk na część sprzętową redukując oprogramowanie
  kontrolera do minimum.
@@ -1029,9 +1055,11 @@ Open Host Controller Interface
 \begin_layout Description
 EHCI (ang.
  
-\emph on
+\shape italic
+\lang british
 Enhanced Host Controller Interface
-\emph default
+\shape default
+\lang polish
 ) opracowany dopiero na potrzeby USB 2.0 przez Intel, Compaq, NEC, Lucent
  i Microsoft.
  Łączy pełne elementy tworząc wspólny standard współpracy urządzeń USB,
@@ -1048,9 +1076,11 @@ V oraz GND.
  Pozostałe dwa przewody tworzą skręconą parę transmitującą sygnały różnicowe.
  Wykorzystywane jest przy tym kodowanie NRZI (ang.
  
-\emph on
+\shape italic
+\lang british
 Non Return to Zero Invert
-\emph default
+\shape default
+\lang polish
 ) do transmisji danych zawierające pole synchronizacyjne dla uzgadniania
  synchronizacji zegarów urządzeń podpiętych do magistrali.
  Zastosowane kodowanie NRZI działa na zasadzie zmiany stanu na linii transmisyjn
@@ -1239,9 +1269,11 @@ Identyfikacja urządzeń USB
 \begin_layout Standard
 Interfejs USB wspiera filozofię włącz i działaj (ang.
  
-\emph on
+\shape italic
+\lang british
 Plug and Play
-\emph default
+\shape default
+\lang polish
 ) wraz z dynamicznym ładowaniem sterowników.
  Użytkownik wpina urządzenie do magistrali i następuje jego automatyczna
  identyfikacja.
@@ -1253,14 +1285,18 @@ Plug and Play
  Identyfikacja urządzeń następuje poprzez dwa numery identyfikacyjne PID
  (ang.
  
-\emph on
+\shape italic
+\lang british
 Product IDentification
-\emph default
+\shape default
+\lang polish
  -- identyfikator produktu) i VID (ang.
  
-\emph on
+\shape italic
+\lang british
 Vendor IDenticifation
-\emph default
+\shape default
+\lang polish
  -- identyfikator producenta).
  Uzyskanie numeru producenta wymaga wykupienia licencji od USB Implementation
  Forum
@@ -1270,9 +1306,11 @@ status collapsed
 \begin_layout Plain Layout
 Szczegóły dotyczące rejestracji numeru producenta (ang.
  
-\emph on
+\shape italic
+\lang british
 Vendor ID
-\emph default
+\shape default
+\lang polish
 ) można znaleźć na stronie: http://www.usb.org/developers/vendor.html.
 \end_layout
 
@@ -1397,9 +1435,21 @@ Fizyczna warstwa radiowa Bluetooth działa w nielicencjonowanym paśmie 2,4
 
 GHz.
  System stosuje szybką zmianę częstotliwości (ang.
- frequency hoping) w celu zapobiegania interferencjom, zanikaniu i odbiciu
- oraz wykorzystuje wiele nośnych w technice FHSS (ang.
- frequency hoping spread spectrum).
+ 
+\shape italic
+\lang british
+frequency hoping
+\shape default
+\lang polish
+) w celu zapobiegania interferencjom, zanikaniu i odbiciu oraz wykorzystuje
+ wiele nośnych w technice FHSS (ang.
+ 
+\shape italic
+\lang british
+frequency hoping spread spectrum
+\shape default
+\lang polish
+).
  Tor radiowy działa z użyciem kształtowanej binarnej modulacji częstotliwości
  w celu znacznej redukcji złożoności transcivera.
  Konstrukcja pozwala na przesłanie 1 miliona symboli na sekundę, co pozwala
@@ -1421,9 +1471,11 @@ Podczas normalnej pracy fizyczny kanał radiowy jest dzielony przez grupę
  za nadrzędne.
  Wszystkie pozostałe urządzenia określane są jako podrzędne.
  Grupa zsynchronizowanych w ten sposób urządzeń określana jest jako 
-\emph on
+\shape italic
+\lang british
 piconet
-\emph default
+\shape default
+\lang polish
 .
  Jest to podstawowa forma komunikacji w technologii Bluetooth.
 \end_layout
@@ -1440,9 +1492,11 @@ status collapsed
 \begin_layout Plain Layout
 ang.
  
-\emph on
+\shape italic
+\lang british
 industrial, scientific and medical radio bands
-\emph default
+\shape default
+\lang polish
  -- wybór pasm częstotliwości radiowych określonych dla przemysłu, medycyny
  i nauki do celów innych niż komunikacja; aktualnie stosowanych w nielicencjonow
 anych urządzeniach komunikacyjnych odpornych na zakłócenia
@@ -1483,10 +1537,12 @@ Kanał fizyczny jest podzielony na sloty czasowe.
  Technologia Bluetooth pozwala na transmisję z pełnym duplexem dzięki zastosowan
 iu schematu TTD (ang.
  
-\emph on
+\shape italic
+\lang british
 Time-Division Duplex
-\emph default
- -- duplex z podziałem czasu).
+\shape default
+\lang polish
+ -- dupleks z podziałem czasu).
 \end_layout
 
 \begin_layout Subsection
@@ -1497,13 +1553,33 @@ Architektura rdzenia Bluetooth
 Rdzeń systemu Bluetooth pokrywa cztery warstwy i powiązane z nimi protokoły
  zdefiniowane w specyfikacji, jak również jedną wspólną warstwę serwisów
  SDP (ang.
- Service Discovery Protocol) oraz ogólne wymagania profili określone w GAP
- (ang.
- Generic Access Profile).
+ 
+\shape italic
+\lang british
+Service Discovery Protocol
+\shape default
+\lang polish
+) oraz ogólne wymagania profili określone w GAP (ang.
+ 
+\shape italic
+\lang british
+Generic Access Profile
+\shape default
+\lang polish
+).
  Kompletna aplikacja Bluetooth wymaga wielu dodatkowych serwisów i protokołów
  warstwy wyższej określonych w specyfikacji Bluetooth ale nie opisanych
  tutaj.
- Architektura rdzenia jest pokazana na rysunku (blabla rysunek do wymachania)
+ Architektura rdzenia jest pokazana na rysunku 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(blabla rysunek do wymachania)
+\end_layout
+
+\end_inset
+
  nie obejmującym SDP, który nie jest pokazany dla zachowania przejżystości.
 \end_layout
 
@@ -1526,9 +1602,11 @@ Trzy najniższe warstwy są czasem grupowane w podsystem okreslany jako kontrole
  To jest potoczna implementacja obejmująca standardowy interfejs komunikacyjny
  pomiędzy kontrolerem i resztą systemu Bluetooth z włączeniem L2CAP (ang.
  
-\emph on
+\shape italic
+\lang british
 Logical Link Control and Adaptation Protocol
-\emph default
+\shape default
+\lang polish
 ), serwisów i warstw wyższych -- określanych jako host Bluetooth.
  Aczkolwiek ten interfejs jest opcjonalny, architektura jest zaprojektowana
  aby umożliwi jego istninie i charakterystykę.
@@ -1621,11 +1699,33 @@ ts -- wielordzeniowe procesory multimedialne.
 \end_layout
 
 \begin_layout Subsection
-ARM 3
+ARM 6
 \end_layout
 
-\begin_layout Subsection
-ARM 6
+\begin_layout Standard
+Rdzeń ARM6 jest wart wzmiankowania z racji historycznej roli, jaką jego
+ implementacja oznaczona ARM610 odegrała w świecie paltopów.
+ Realizacja procesora ujżała światło dzienne w 1990 roku.
+ W roku 1993 firma Apple rozpoczeła sprzedaż Apple Newton Message Pad --
+ produktu wyprzedzającego o epokę wymagania użytkowników.
+ Z racji niewielkiej popularności, po opracowaniu siedmiu modeli Apple Newton,
+ sprzedaż zakończyła się w 1998 roku.
+\end_layout
+
+\begin_layout Standard
+Implementacje architektury ARM6 w postaci układów ARM600 i ARM610 były jeszcze
+ produktami firmy ARM Limited, produkowanym w fabrykach VLSI Technologies
+ Inc.
+ Na bazie licencji DEC stworzył pierwszy procesor StrongARM.
+ Ten projekt następnie w roku 1997 na skutek realizacji warunków umowy trafił
+ pod skrzydła Intel'a, by poźniej przekształcić się w linię procesorów XScale
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cnet-intel-digital-1997"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1636,6 +1736,39 @@ name "sub:ARM-7"
 \end_inset
 
 ARM 7
+\end_layout
+
+\begin_layout Standard
+Rdzeń ARM7 jest obecny na rynku od 1993.
+ Do dnia dziesiejszego pełni istotną rolę w tworzeniu wielu specjalizowanych
+ układów sterujących do urzadzeń.
+ W 1994 roku dochodzi wersja ARM7TDMI, w której pojawia się rozszerzenie
+ Thumb oraz sprzętowe wsparcie dla cyfrowego przetwarzania sygnałów (ang.
+ 
+\shape italic
+\lang british
+digital signal processing
+\shape default
+\lang polish
+).
+ Do zastosowań dopasowanych do potrzeb produktów, rdzenie ARM7TDMI-S i ARM7EJ-S
+ są wpełni syntetyzowalne w układach programowalnych, które pozwala na konstruow
+anie układów scalonych w pełni dostosowanych do potrzeb produktu, w których
+ mają być stosowane.
+\end_layout
+
+\begin_layout Standard
+Gwarantowaną przez autorów cechą rdzeni ARM7 jest pełna przenoszalność kodu
+ na rdzenie nowszego typu, w szczególności ARM 9 i Cortex.
+ Rdzeń ARM7EJ-S zawiera też wsparcie dla technologii Jazelle opisanej w
+ podrozdziale
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:Jazelle"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1682,9 +1815,11 @@ status open
 
 Technologia Jazelle DBX (skrót od ang.
  
-\shape slanted
+\shape italic
+\lang british
 Direct Bytecode eXecution
 \shape default
+\lang polish
 ) została opracowana przez ARM w celu przyspieszania sprzętowego pewnych
  operacji bajtkodu maszyny wirtualnej Java (w skrócie JVM).
  Pozwala ona wykonywać bajtkod Javy, jakby był on natywnym kodem procesora.
@@ -1697,17 +1832,23 @@ Direct Bytecode eXecution
 \begin_layout Standard
 Takie podejście wzmocnione przez technologię Jazelle RCT (ang.
  
-\shape slanted
+\shape italic
+\lang british
 Runtime Compilation Target
 \shape default
+\lang polish
 ), która wspiera kompilację 
 \shape slanted
+\lang british
 ahead-of-time
 \shape default
+\lang polish
  (AOT) i 
 \shape slanted
+\lang british
 just-in-time
 \shape default
+\lang polish
  (JIT), pozwala znacząco zwiększyć wydajność aplikacji Java w urządzeniach
  przenośnych, głównie telefonach komórkowych.
  Aktualne możliwości technologii Jazelle RCT sięgają dużo dalej, wspierając
@@ -1868,6 +2009,7 @@ Układy zaawansowanych mikrokontrolerów na bazie konstrukcji PowerPC rozwijane
 
 \begin_layout Standard
 \begin_inset Float figure
+placement th
 wide false
 sideways false
 status open
@@ -1908,9 +2050,15 @@ status open
 
 \begin_layout Plain Layout
 Abonencka linia cyfrowa (ang.
- Digital Subscriber Line, DSL) stosowana w telekomunikacji naziemnej do
- oferowania szybkich łącz Internetowych; multiplekser dostępowy DSL to urządzeni
-e pozwalające na obsługę sygnału cyfrowego na analogowych liniach abonenckich.
+ 
+\shape italic
+\lang british
+Digital Subscriber Line
+\shape default
+\lang polish
+, DSL) stosowana w telekomunikacji naziemnej do oferowania szybkich łącz
+ Internetowych; multiplekser dostępowy DSL to urządzenie pozwalające na
+ obsługę sygnału cyfrowego na analogowych liniach abonenckich.
 \end_layout
 
 \end_inset
@@ -2030,9 +2178,11 @@ Rodzina MCORE to kilka układów 32-bitowych zaprojektowanych specjalnie do
  przemyśle (np.
  PWM, ang.
  
-\emph on
+\shape italic
+\lang british
 Pulse Width Modulation
-\emph default
+\shape default
+\lang polish
 ).
 \end_layout
 
@@ -2066,6 +2216,82 @@ name "sub:AVR-serie"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Utarło się przekonanie, że podstawowa architektura AVR została opracowana
+ przed dwóch studentów Norweskiego Instytutu Techonologii (nor.
+ 
+\shape italic
+\lang norsk
+Norges Tekniske Høgskole
+\shape default
+\lang polish
+, w skrócie NTH).
+ Nazywają się Alf-Egil Bogen i Vegard Wollan.
+\end_layout
+
+\begin_layout Standard
+W rzeczywistości orginalny mikrokontroler został opracowany w Trondheim
+ w Norwegii, gdzie dwóch przyszłych fundatorów norweskiego oddziału firmy
+ Atmel odbywało praktyki studenckie.
+ Był znany jako μRISC.
+ Kiedy technologia została sprzedana do firmy Atmel, jego wewnętrzna architektur
+a była dalej rozwijana przez Alfa i Vegarda w norweskim oddziale firmy.
+\end_layout
+
+\begin_layout Standard
+Oficjalne stanowisko w sprawie nazwy AVR mówi, że nie jest to ani akronim,
+ ani nie oznacza niczego innego poza nazwą własną.
+ Twórcy AVR nie dają jednoznacznej odpowiedzi, co do znaczenia terminu 
+\begin_inset Quotes pld
+\end_inset
+
+AVR
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Nazwa AVR stosowana tutaj odnosi sie do 8-bitowej linii mikrokontrolerów
+ RISC, niezależnie od wzmiankowanej dalej nazwy AVR32.
+\end_layout
+
+\begin_layout Standard
+Pierwszym produktem w rodzinie był AT90S8515 w 40-nóżkowej obudowie DIP,
+ posiadał identyczny układ wyprowadzeń jak popularny 8051, włączając w to
+ zewnętrzną multipleksację szyny adresowej i danych.
+ Polaryzacja nóżki resetującej była odwrotna (8051 miał aktywny stan wysoki,
+ AVR -- stan niski), lecza poza tym układ wyprowadzeń był całkowicie zgodny.
+\end_layout
+
+\begin_layout Standard
+W rodzinie AVR do dziś są oferowane układy zaklasyfikowane do następujących
+ kategorii:
+\end_layout
+
+\begin_layout Description
+ATtiny składa się z układów o bardzo małej liczbie wyprowadzeń, które służą
+ do realizacji projektów o dużej miniaturyzacji i bardzo ograniczonej funkcjonal
+ności, jak proste układy kontrolno-sterujące; nie posiadają wyprowadzeń
+ szyny adresowej na zewnątrz układu i cechują się niewielkimi ilościami
+ pamięci.
+\end_layout
+
+\begin_layout Description
+ATmega ...
+\end_layout
+
+\begin_layout Description
+ATxmega jest grupą która zmienia sposób mapowania elementów rdzenia, jakich
+ jak rejestry wewnętrzne, pamięć EEPROM, w kilku modelach możliwe jest adresowan
+ie pamięci SDRAM.
+ Mogą posiadać też DMA, bogaty zestaw przetworników cyfrowo-analogowych,
+ jak też sprzętowe wsparcie dla kryptografii.
+\end_layout
+
+\begin_layout Description
+FPSLIC to połączenie rdzenia AVR z logiką programowalną FPGA w jednym układzie
+ scalonym.
 \end_layout
 
 \begin_layout Subsection
@@ -2120,6 +2346,46 @@ AP7 odmianie wysokowydajnych mikrokontrolerów dla zaawansowanych multimedialnyc
 Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
  producentów jest bardzo silne wsparcie dla amatorów oraz środowiska otwartego
  oprogramowania.
+\begin_inset Float figure
+placement th
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename vector/avr32-block-diagram.svg
+	lyxscale 50
+	width 99text%
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schemat-blokowy-AVR32"
+
+\end_inset
+
+Schemat blokowy AVR32 UC3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -2201,9 +2467,11 @@ cyfrowy, dzięki czemu
  Poza standardowymi interfejsami szeregowymi typu UART, SPI lub TWI, dostępne
  są inne interfejsy jak elastyczny kontroler synchroniczny (ang.
  
-\emph on
+\shape italic
+\lang british
 Synchronous Serial Controller
-\emph default
+\shape default
+\lang polish
 ), USB i Ethernet MAC.
  Kontroler synchroniczny udostępnia łatwy dostęp do protokołów komunikacji
  szeregowej i standardów audio takich, jak I
@@ -2211,34 +2479,51 @@ Synchronous Serial Controller
 \end_inset
 
 S.
- Interfejs USB 2.0 Full-Speed wspiera wiele klas USB jednocześnie dzięki
- bogatej konfiguracji punktu końcowego.
- Wsparcie dla hosta standardu On\SpecialChar \nobreakdash-
+ Interfejs USB 2.0 
+\lang british
+Full-Speed
+\lang polish
+ wspiera wiele klas USB jednocześnie dzięki bogatej konfiguracji punktu
+ końcowego.
+ Wsparcie dla hosta standardu 
+\lang british
+On\SpecialChar \nobreakdash-
 The\SpecialChar \nobreakdash-
-Go (OTG) pozwala podłączać bezpośrednio
- do mikrokontrolera urządzenia typu dysk flash USB lub drukarkę USB.
+Go
+\lang polish
+ (OTG) pozwala podłączać bezpośrednio do mikrokontrolera urządzenia typu
+ dysk flash USB lub drukarkę USB.
  Interfejs MII (ang.
  
-\emph on
+\shape italic
+\lang british
 media independent interface
-\emph default
+\shape default
+\lang polish
 ) oraz RMII (ang.
  
+\shape italic
+\lang british
+reduced media independent interfac
+\shape default
 \emph on
-reduced media independent interface
+\lang polish
+e
 \emph default
 ) modułu MAC Ethernet dla prędkości 10 i 100 Mbps udostępnia rozwiązania
  wewnątrzukładowe dla urządzeń przyłączanych do sieci.
  AT32UC3A integruje debugowanie w układzie OCD (ang.
  
-\emph on
+\shape italic
+\lang british
 On\SpecialChar \nobreakdash-
 Chip
 \begin_inset space ~
 \end_inset
 
 Debug
-\emph default
+\shape default
+\lang polish
 ) klasy drugiej typu Nexus 2.0, pozwalający na bezinwazyjne śledzenie wykonania
  programu w czasie rzeczywistym, zapis i odczyt pamięci z pełną prędkością
  w połączeniu do podstawowej kontroli wykonywania programu.
@@ -2428,9 +2713,11 @@ status open
 
 Układy SHARC (nazwa od ang.
  
-\shape slanted
+\shape italic
+\lang british
 Super Harvard Architecture Single-Chip Computer
 \shape default
+\lang polish
 ) to wydajne procesory DSP o architekturze RISC, których pierwsze konstrukcje
  sięgają roku 1994.
  Są wzorcem dla nowszych układów TigerSHARC i Blackfin.
@@ -2466,9 +2753,11 @@ Wśród produktów Infineon znajdują się mikroprocesory trójrdzeniowe AUDO
  DSP i podsystemu ładująco-zapisującego z uproszczonym zestawem instrukcji
  oraz procesory radiowe dla telefonii komórkowej (ang.
  
-\emph on
+\shape italic
+\lang british
 baseband processor
-\emph default
+\shape default
+\lang polish
 ).
  W katalogu oferowanych mikroprocesorów znajduje się poza tym kilka rodzin
  układów mikrokontrolerów: 8-bitowe XC8000 i C500, 16-bitowe XC166, C166
@@ -2567,9 +2856,11 @@ C2000
 Układy rodziny TMS320C2000 są określane przez producenta jako cyfrowe kontrolery
  sygnałowe DSC (ang.
  
-\emph on
+\shape italic
+\lang british
 Digital Signal Controller
-\emph default
+\shape default
+\lang polish
 ).
  Jest to hybryda cech mikrokontrolera RISC z architekturą DSP, która przenaczo
  na jest do szybkiej analizy sygnałów w urządzeniach pomiarowych i pomiarowo-ste
@@ -2950,9 +3241,11 @@ Do dziś strona numer jeden języka Java to http://java.sun.com
  Dodatkowo z języka Smalltalk zaczęrpnął również idee maszyny wirtualnej
  i odśmiecacza (ang.
  
-\emph on
+\shape italic
+\lang british
 garbage collector
-\emph default
+\shape default
+\lang polish
 ).
  W przeciwieństwie do Smalltalk w języku Java istnieje silne typowanie,
  choć typowanie może się w pewien sposób odbywać dynamicznie (możliwy jest
@@ -3167,9 +3460,11 @@ ASN.1
 \begin_layout Standard
 Język ASN.1 (ang.
  
-\emph on
+\shape italic
+\lang british
 Abstract Syntax Notation One
-\emph default
+\shape default
+\lang polish
 ) nie jest językiem programowania w rozumieniu algorytmicznym, ale deklaratywnym
  opisem struktur danych.
  Stanowi on abstrakcyjną notację do opisu struktur danych przeznaczonych
@@ -3178,9 +3473,11 @@ Abstract Syntax Notation One
  Standard ten został po raz pierwszy opisany w roku 1984 jako część dokumentu
  CCITT (ang.
  
-\emph on
+\shape italic
+\lang british
 Consultative Committee International Telegraphy and Telephony
-\emph default
+\shape default
+\lang polish
 ) numer X.409'84, a w roku 1988 wydzielony jako samodzielny standard ITU-T/ISO
  w formie dokumentu ITU-T
 \begin_inset space ~
@@ -3194,14 +3491,18 @@ X.208.
  X.400 (poczta), w serii X.500 (usługi katalogowe) oraz w specyfikacji standardu
  SNMP (ang.
  
-\emph on
+\shape italic
+\lang british
 Simple Network Management Protocol
-\emph default
+\shape default
+\lang polish
 ) do opisu typów danych dla MIB (ang.
  
-\emph on
+\shape italic
+\lang british
 Management Information Base
-\emph default
+\shape default
+\lang polish
 ).
 \end_layout
 
@@ -3218,9 +3519,11 @@ e od samego języka.
 \begin_layout Description
 BER (ang.
  
-\emph on
+\shape italic
+\lang british
 Basic Encoding Rules
-\emph default
+\shape default
+\lang polish
 ) to oryginalne reguły zawarte w standardzie ASN.1 do zakodowania abstrakcyjnych
  informacji do konkretnego strumienia danych.
  Reguły te, określane mianem składni transferu w terminologii ASN.1, określa
@@ -3253,9 +3556,11 @@ Ponieważ BER stosuje prostą składnię, łatwą do implementacji, wynikowy str
 \begin_layout Description
 CER (ang.
  
-\emph on
+\shape italic
+\lang british
 Canonical Encoding Rules
-\emph default
+\shape default
+\lang polish
 ) jest podzbiorem reguł BER, wybierającym z całego zestawu możliwych metod
  zakodowania danych tylko te, które nie określają skończonych długości elementów
  strumienia danych.
@@ -3268,9 +3573,11 @@ Canonical Encoding Rules
 \begin_layout Description
 DER (ang.
  
-\emph on
+\shape italic
+\lang british
 Distinguished Encoding Rules
-\emph default
+\shape default
+\lang polish
 ) jest podzbiorem reguł BER, ograniczającym sposób kodowania danych do jednoznac
 znej metody polegającej na podawania znacznika długości do każdego elementu
  strumienia danych.
@@ -3283,9 +3590,11 @@ znej metody polegającej na podawania znacznika długości do każdego elementu
 \begin_layout Description
 XER (ang.
  
-\emph on
+\shape italic
+\lang british
 XML Encoding Rules
-\emph default
+\shape default
+\lang polish
 ) jest zbiorem reguł dodanych do ASN.1 pozwalającym na zakodowanie danych
  w strumieniu danych będących dokumentem XML.
 \end_layout
@@ -3293,9 +3602,11 @@ XML Encoding Rules
 \begin_layout Description
 PER (ang.
  
-\emph on
+\shape italic
+\lang british
 Packed Encoding Rules
-\emph default
+\shape default
+\lang polish
 ) to zdefiniowane w 1994 roku reguły składni transferowej dla struktur opisanych
  w ASN.1, które dostarczają dużo bardziej zwartego kodowania niż BER.
  PER próbuje prezentować jednostki danych na minimalnej liczbie bitów.
@@ -3334,9 +3645,11 @@ key "X691"
 \begin_layout Description
 GSER (ang.
  
-\emph on
+\shape italic
+\lang british
 Generic String Encoding Rules
-\emph default
+\shape default
+\lang polish
 ) jest zestawem reguł kodowania do tworzenia wymownej, czytelnej dla człowieka
  formy tekstowej składni transferowej dla struktur danych opisanych w ASN.1.
  
@@ -3348,9 +3661,11 @@ Celem GSER jest reprezentacja zakodowanych danych użytkownikowi lub przyjmowani
  od niego danych w najprostszej możliwej formie.
  Zestaw ten został oryginalnie opracowany na potrzeby LDAP (ang.
  
-\emph on
+\shape italic
+\lang british
 Lightweight Directory Access Protocol
-\emph default
+\shape default
+\lang polish
 )
 \emph on
  
@@ -3588,9 +3903,11 @@ key "AVR32015"
 
  jest zintegrowanym środowiskiem programistycznym (ang.
  
-\emph on
+\shape smallcaps
+\lang british
 integrated development environment
-\emph default
+\shape default
+\lang polish
 ) do produkcji oprogramowania dla mikrokontrolerów serii AVR32 firmy ATMEL
 \begin_inset ERT
 status collapsed
@@ -3626,8 +3943,12 @@ edytor C/C++ z podświetlaniem składni i automatycznym uzupełnianiem kodu
 wsparcie uruchamiania i debugowania włącznie z krokowym przetwarzaniem kodu
  źródłowego i na poziomie instrukcji maszynowej wraz z pułapkami (ang.
  
-\emph on
-breakpoints)
+\shape italic
+\lang british
+breakpoints
+\shape default
+\lang polish
+)
 \end_layout
 
 \begin_layout Itemize
@@ -3639,7 +3960,9 @@ konfigurację platformy docelowej i zarządzanie nią.
 \end_layout
 
 \begin_layout Standard
-AVR32 Studio jest określane terminem Built
+AVR32 Studio jest określane terminem 
+\lang british
+Built
 \begin_inset space ~
 \end_inset
 
@@ -3648,6 +3971,8 @@ On
 \end_inset
 
 Eclipse
+\lang polish
+
 \begin_inset ERT
 status collapsed
 
@@ -3664,9 +3989,9 @@ texttrademark}
 
  (pol.
  
-\emph on
+\shape italic
 zbudowane na Eclipse
-\emph default
+\shape default
 ), oznaczającym możliwości łatwej integracji z rozszerzeniami zewnętrzymi
  w celu zwiększania funkcjonalności środowiska pracy.
 \end_layout
@@ -3759,9 +4084,11 @@ AVR32 Studo wspiera również wszystkie płyty firmy ATMEL przewidziane dla
  pomiędzy komputerem a płytą.
  AVR32 Studio integruje się z łańcuchem narzędzi GNU (ang.
  
-\emph on
+\shape italic
+\lang british
 GNU Toolchain
-\emph default
+\shape default
+\lang polish
 ) dla AVR32, których przygotowanie jest krótko omówione w podrozdziale 
 \begin_inset CommandInset ref
 LatexCommand vref
@@ -4173,28 +4500,34 @@ name "sec:prep-AVR32-Toolchain"
 Do realizacji procesu produkcji oprogramowania dla urządzenia mikroprocesorowego
  niezbędne jest posiadanie łańcucha narzędzi (ang.
  
-\emph on
+\shape italic
+\lang british
 toolchain
-\emph default
+\shape default
+\lang polish
 ) dedykowanych dla danego typu procesora.
  Zestaw taki składa się między innymi z:
 \end_layout
 
 \begin_layout Itemize
-assemblera krzyżowego (ang.
+assemblera skrośny (ang.
  
-\emph on
+\shape italic
+\lang british
 cross assembler
-\emph default
+\shape default
+\lang polish
 )
 \end_layout
 
 \begin_layout Itemize
-kompilatora krzyżowego (ang.
+kompilatora skrośny (ang.
  
-\emph on
+\shape italic
+\lang british
 cross compiler
-\emph default
+\shape default
+\lang polish
 ) język C i/lub języka C++
 \end_layout
 
@@ -4334,10 +4667,12 @@ http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4116
  Ponieważ Eclipse na którym bazuje AVR32 Studio jest aplikacją Java, na
  komputerze musi być zainstalowane środowisko Java (ang.
  
-\emph on
-Java Runtime Environment, JRE
-\emph default
-).
+\shape italic
+\lang british
+Java Runtime Environment
+\shape default
+\lang polish
+, w skrócie JRE).
 \end_layout
 
 \begin_layout Standard
@@ -4816,9 +5151,9 @@ AVR32 Studio
 \begin_layout Itemize
 elementy szkieletu aplikacji (ang.
  
-\shape italic
+\lang british
 application framework
-\shape default
+\lang polish
 )
 \end_layout
 
@@ -4853,8 +5188,10 @@ AVR32 Studio
  Polega to na skopiowaniu wybranych sterowników (ang.
  
 \shape italic
+\lang british
 drivers
 \shape default
+\lang polish
 ) i innych potrzebnych elementów ze szkieletu dostarczonego przez firmę
  Atmel.
  Zamiast systemu FreeRTOS dostarczonego ze szkieletem, załadowany został
@@ -5085,10 +5422,12 @@ reference "fig:Projekt-PCB-konwertera-RS232"
  Zbudowanie układu na płytce drukowanej umożliwiło łatwiejsze wykorzystanie
  elementów elektronicznych montowanych powierzchniowo (ang.
  
-\emph on
-SMD, surface mounted device
-\emph default
-).
+\shape italic
+\lang british
+surface mounted device
+\shape default
+\lang polish
+, w skrócie SMD).
  Podyktowane to było możliwością zdobycia układu dopasowującego MAX3243
  poziomy RS232 do logiki 3.3V tylko w wersji SMD.
 \end_layout
@@ -5329,15 +5668,23 @@ Coś tu dodać o silniczkach?
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Moduł-sterowania-zasilaniem"
+
+\end_inset
+
 Moduł sterowania zasilaniem silników
 \end_layout
 
 \begin_layout Standard
 Układ TC4424A jest przedstawicielem podwójnych sterowników MOSFET (ang.
  
-\emph on
+\shape italic
+\lang british
 dual MOSFET driver
-\emph default
+\shape default
+\lang polish
 ) sterowanych poziomami logicznymi.
  Konstrukcja podwójna pozwala na wybór polaryzacji na wyjściu.
  Układ ten posiada następujące parametry:
@@ -5610,6 +5957,8 @@ Dopisać:
 \end_layout
 
 \begin_layout Enumerate
+
+\color cyan
 Skrótowy opis TC4424A
 \end_layout
 
@@ -5830,6 +6179,16 @@ Może odnieść do: http://www.modularcircuits.com/h-bridge_secrets1.htm
 e stosowany w sterowaniu silników jednofazowych.
 \end_layout
 
+\begin_layout Standard
+Wyprowadzenia końcówek sterujących zasilaniem silników elektrycznych są
+ połączone (w większości wypadków) z oryginalnymi wyprowadzeniami zastosowanymi
+ w okablowaniu oryginalnym robota.
+ W przypadku silników w ramionach robota i silników w korpusie sterujących
+ ramionami, kolory przewodów zasilających silniki to niebieski i zielony.
+ W przypadku silnika sterującego biodrem, to kolory zółty i zielony.
+ Silniki nóg są podłączony przewodami w kolorach czarnym i czerwonym.
+\end_layout
+
 \begin_layout Section
 Sterowanie cyfrowe silników elektrycznych
 \end_layout
@@ -5838,9 +6197,11 @@ Sterowanie cyfrowe silników elektrycznych
 Sterowanie silników elektrycznych napędzających mechaniczne elementy robota
  odbywa się za pomocą siedmiu sterowników PWM (ang.
  
-\emph on
+\shape italic
+\lang british
 pulse width modulation
-\emph default
+\shape default
+\lang polish
 ), w które wyposażony jest mikrokontroler AT32UC3A0512.
  Aby umożliwić pracę dwukierunkową, oprócz wyprowadzeń PWM potrzebne są
  dodatkowe wyprowadzenia logiczne.
@@ -5885,9 +6246,11 @@ GPIO
  określa, która funkcja wyprowadzenia jest wybierana przy programowaniu
  PM (ang.
  
-\emph on
+\shape italic
+\lang british
 Power Manager
-\emph default
+\shape default
+\lang polish
 ).
  Nazwa w pierwszej kolumnie określa funkcję sterującą wybranego silnika.
 \end_layout
@@ -6725,13 +7088,10 @@ reference "tab:wyprowadzenia-pwm"
 \end_inset
 
 ) podłączone do wejść logicznych siedmiu układów TC4424A umieszczonych na
- module sterowania zasilaniem 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Wstawić odnośnik do opisu płytki modułu
-\end_layout
+ module sterowania zasilaniem opisanym w podrozdziale 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Moduł-sterowania-zasilaniem"
 
 \end_inset
 

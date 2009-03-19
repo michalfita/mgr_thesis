@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,10 +12,9 @@
    viewBox="-4 2 55 47"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
+   inkscape:version="0.46+devel"
    sodipodi:docname="mpc885-block-diagram.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   sodipodi:docbase="M:\Projekty\mgr\trunk\tex\vector">
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <metadata
      id="metadata391">
     <rdf:RDF>
@@ -28,10 +27,18 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs389" />
+     id="defs389">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 832.67719 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1948.8188 : 832.67719 : 1"
+       inkscape:persp3d-origin="974.40942 : 555.11812 : 1"
+       id="perspective198" />
+  </defs>
   <sodipodi:namedview
-     inkscape:window-height="808"
-     inkscape:window-width="1152"
+     inkscape:window-height="997"
+     inkscape:window-width="1680"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      guidetolerance="10.0"
@@ -41,12 +48,13 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.64029437"
-     inkscape:cx="490.71418"
-     inkscape:cy="1471.5004"
+     inkscape:zoom="0.49058628"
+     inkscape:cx="1782.9066"
+     inkscape:cy="548.52737"
      inkscape:window-x="-4"
      inkscape:window-y="-4"
-     inkscape:current-layer="svg2" />
+     inkscape:current-layer="svg2"
+     showgrid="false" />
   <rect
      style="fill: #ffffff"
      x="17.05"
@@ -163,15 +171,15 @@
      points="16.45,14.8 16.95,14.55 16.45,14.3 "
      id="polygon40" />
   <rect
-     style="fill: #ffffff"
-     x="26"
+     style="fill:#ffffff"
+     x="30.402645"
      y="11"
      width="8"
      height="3"
      id="rect42" />
   <rect
-     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
-     x="26"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     x="30.402645"
      y="11"
      width="8"
      height="3"
@@ -191,20 +199,22 @@
      height="3"
      id="rect48" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="30"
-     y1="14.6"
-     x2="30"
-     y2="15.4"
+     style="fill:none;stroke:#000000;stroke-width:0.19999999"
+     x1="37.396122"
+     y1="17.483547"
+     x2="34.485126"
+     y2="17.483547"
      id="line50" />
   <polygon
-     style="fill: #000000"
+     style="fill:#000000"
      points="30.25,14.6 30,14.1 29.75,14.6 "
-     id="polygon52" />
+     id="polygon52"
+     transform="matrix(0,1,-1,0,51.999099,-12.516444)" />
   <polygon
-     style="fill: #000000"
-     points="29.75,15.4 30,15.9 30.25,15.4 "
-     id="polygon54" />
+     style="fill:#000000"
+     points="30,15.9 30.25,15.4 29.75,15.4 "
+     id="polygon54"
+     transform="matrix(0,1,-1,0,49.910671,-12.516444)" />
   <line
      style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
      x1="20.65"
@@ -221,35 +231,36 @@
      points="38.4007,10.2516 38.9,10.0003 38.3993,9.75158 "
      id="polygon60" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="30"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="34.402725"
      y1="10"
-     x2="30"
+     x2="34.402725"
      y2="10.4"
      id="line62" />
   <polygon
-     style="fill: #000000"
+     style="fill:#000000"
      points="29.75,10.4 30,10.9 30.25,10.4 "
-     id="polygon64" />
+     id="polygon64"
+     transform="translate(4.4026641,0)" />
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="8.7975"
-     y="10.025"
+     style="font-size:0.76200002px;fill:#000000"
+     x="9.0797205"
+     y="9.6298904"
      id="text66">Embedded</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="9.2875"
-     y="11.025"
+     style="font-size:0.76200002px;fill:#000000"
+     x="9.5697212"
+     y="10.62989"
      id="text68">8xx core</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="19.2463"
+     style="font-size:0.76200002px;fill:#000000"
+     x="19.528521"
      y="3.3"
      id="text70">8kB</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="17.59"
-     y="4.3"
+     style="font-size:0.76200002px;fill:#000000"
+     x="17.872221"
+     y="4.3000002"
      id="text72">Data Cache</text>
   <text
      style="fill:#000000;font-size:0.76200002"
@@ -277,14 +288,14 @@
      y="16.4"
      id="text82" />
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="17.605"
-     y="7.31"
+     style="font-size:0.76200002px;fill:#000000"
+     x="18.000109"
+     y="7.3099999"
      id="text84">Instructions</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="18.8763"
-     y="8.31"
+     style="font-size:0.76200002px;fill:#000000"
+     x="19.27141"
+     y="8.3100004"
      id="text86">MMU</text>
   <text
      style="fill:#000000;font-size:0.76200002"
@@ -353,34 +364,29 @@
      height="4"
      id="rect106" />
   <text
-     style="font-size:0.76200002"
-     x="10.650743"
-     y="24.469683"
+     style="font-size:0.76200002px"
+     x="10.255634"
+     y="24.356794"
      id="text108">Parallel I/O</text>
   <text
      style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
      x="18.363068"
-     y="24.431532"
+     y="24.318644"
      id="text110">Timers</text>
   <text
-     style="font-size:0.6171822px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="24.891581"
-     y="26.127113"
-     id="text112">Interrupt</text>
-  <text
      style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="24.62348"
-     y="25.002176"
-     id="text114">Control</text>
+     x="24.341259"
+     y="23.929737"
+     id="text2819" />
   <text
      style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="30.458427"
-     y="23.854033"
+     x="29.893986"
+     y="23.910477"
      id="text116">Dual-Port</text>
   <text
      style="font-size:0.78852814px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="31.40517"
-     y="24.7225"
+     x="30.840729"
+     y="24.778944"
      id="text118">RAM</text>
   <rect
      style="fill: #ffffff"
@@ -411,24 +417,24 @@
      height="4.05"
      id="rect126" />
   <text
-     style="font-size:0.76200002"
-     x="10.685833"
-     y="29.164032"
+     style="font-size:0.76200002px"
+     x="10.23428"
+     y="28.881811"
      id="text128">Baud Rate</text>
   <text
-     style="font-size:0.76200002"
-     x="10.566838"
-     y="30.169676"
+     style="font-size:0.76200002px"
+     x="10.115285"
+     y="29.887455"
      id="text130">Generator</text>
   <text
-     style="font-size:0.76200002"
-     x="9.4244146"
-     y="34.171684"
+     style="font-size:0.76200002px"
+     x="9.3115263"
+     y="33.889454"
      id="text132">Parallel Interface</text>
   <text
-     style="font-size:0.76200002"
-     x="11.832228"
-     y="35.171535"
+     style="font-size:0.76200002px"
+     x="11.098454"
+     y="35.002197"
      id="text134">Ports</text>
   <polygon
      style="fill: #ffffff"
@@ -454,22 +460,22 @@
      id="rect142" />
   <text
      style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="18.571867"
-     y="34.864735"
+     x="18.402534"
+     y="34.808289"
      id="text144">Timer</text>
   <text
-     style="font-size:0.60113484px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="20.663425"
-     y="30.970575"
+     style="font-size:0.76625174px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="19.640497"
+     y="29.806944"
      id="text146">32-bit Controller and Program ROM</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="27.2787"
+     style="font-size:0.76200002px;fill:#000000"
+     x="32.132904"
      y="12.2332"
      id="text148">Slave Master</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="28.1863"
+     style="font-size:0.76200002px;fill:#000000"
+     x="33.040535"
      y="13.2332"
      id="text150">Interface</text>
   <text
@@ -510,10 +516,10 @@
      ry="1.17549e-038"
      id="rect160" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="30"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="30.100693"
      y1="20"
-     x2="7.6"
+     x2="7.6004472"
      y2="20"
      id="line162" />
   <polygon
@@ -521,16 +527,17 @@
      points="7.6,19.75 7.1,20 7.6,20.25 "
      id="polygon164" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
      x1="30"
-     y1="20"
+     y1="20.010464"
      x2="30"
-     y2="21.4"
+     y2="21.556944"
      id="line166" />
   <polygon
-     style="fill: #000000"
-     points="29.75,21.4 30,21.9 30.25,21.4 "
-     id="polygon168" />
+     style="fill:#000000"
+     points="30.25,21.4 29.75,21.4 30,21.9 "
+     id="polygon168"
+     transform="translate(0,0.1128889)" />
   <line
      style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
      x1="25"
@@ -578,19 +585,19 @@
      points="36.2527,31.6896 36.7515,31.4373 36.2503,31.1896 "
      id="polygon184" />
   <text
-     style="font-size:0.6171822px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="37.561523"
-     y="32.532112"
+     style="font-size:0.79022223px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="38.125984"
+     y="29.935663"
      id="text186">Virtual Independent</text>
   <text
      style="font-size:0.78852814px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="41.380249"
-     y="31.27"
+     x="40.590004"
+     y="30.98778"
      id="text188">DMA</text>
   <text
      style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="41.180859"
-     y="32.401535"
+     x="40.785736"
+     y="32.175751"
      id="text190">and</text>
   <text
      style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
@@ -627,20 +634,22 @@
      y="8.73322"
      id="text202">Unit</text>
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
      x1="38"
-     y1="10.6"
+     y1="14.209979"
      x2="38"
-     y2="26.4"
+     y2="26.584589"
      id="line204" />
   <polygon
-     style="fill: #000000"
+     style="fill:#000000"
      points="38.25,10.6 38,10.1 37.75,10.6 "
-     id="polygon206" />
+     id="polygon206"
+     transform="translate(0,3.8946645)" />
   <polygon
-     style="fill: #000000"
-     points="37.75,26.4 38,26.9 38.25,26.4 "
-     id="polygon208" />
+     style="fill:#000000"
+     points="38.25,26.4 37.75,26.4 38,26.9 "
+     id="polygon208"
+     transform="translate(0,0.16933335)" />
   <rect
      style="fill: #ffffff"
      x="-2"
@@ -699,23 +708,23 @@
      id="rect224" />
   <text
      style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="1.0959274"
-     y="18.364733"
+     x="0.24926056"
+     y="18.308289"
      id="text226">DMAs</text>
   <text
      style="font-size:0.76201862px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="1.1659546"
-     y="21.370382"
+     x="0.31928784"
+     y="21.257494"
      id="text228">RFOs</text>
   <text
      style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="-0.098887809"
-     y="24.370377"
+     x="-0.77622122"
+     y="24.257488"
      id="text230">10/100 Media</text>
   <text
      style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="0.57028162"
-     y="27.370377"
+     x="-0.16349617"
+     y="27.257488"
      id="text232">MII/RMII</text>
   <rect
      style="fill: #ffffff"
@@ -1130,8 +1139,34 @@
      points="30,43 41,43 41,48 8,48 8,46 30,46 "
      id="polygon384" />
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="33.369816"
-     y="46.370312"
+     style="font-size:0.91838598px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="32.516125"
+     y="45.747501"
      id="text386">Serial Interface</text>
+  <text
+     xml:space="preserve"
+     style="font-size:8.75598526px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="25.443218"
+     y="23.766285"
+     id="text2823"><tspan
+       sodipodi:role="line"
+       id="tspan2825"
+       x="25.443218"
+       y="23.766285"
+       style="font-size:0.87559855px;text-align:center;text-anchor:middle">Interrupt</tspan><tspan
+       sodipodi:role="line"
+       x="25.443218"
+       y="24.860783"
+       style="font-size:0.87559855px;text-align:center;text-anchor:middle"
+       id="tspan2827">Controller</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:0.89132684px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="15.234311"
+     y="44.23241"
+     id="text2837"><tspan
+       sodipodi:role="line"
+       id="tspan2839"
+       x="15.234311"
+       y="44.23241">Time Slot Assigner</tspan></text>
 </svg>
