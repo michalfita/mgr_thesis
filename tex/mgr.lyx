@@ -1,4 +1,4 @@
-#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -3903,7 +3903,7 @@ key "AVR32015"
 
  jest zintegrowanym środowiskiem programistycznym (ang.
  
-\shape smallcaps
+\shape italic
 \lang british
 integrated development environment
 \shape default
@@ -5459,7 +5459,7 @@ Strona elementów
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename C:/Projects/mgr/schematics/rs232_bluetooth/rs232_bluetooth-Elementów.ps
+	filename ../schematics/rs232_bluetooth/rs232_bluetooth-Elementów.ps
 	BoundingBox 120bp 450bp 296bp 553bp
 	clip
 	rotateOrigin leftTop
@@ -5491,7 +5491,7 @@ Strona ścieżek
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename C:/Projects/mgr/schematics/rs232_bluetooth/rs232_bluetooth-Ścieżek.ps
+	filename ../schematics/rs232_bluetooth/rs232_bluetooth-Ścieżek.ps
 	BoundingBox 120bp 450bp 296bp 553bp
 	clip
 	rotateOrigin leftTop
@@ -5527,7 +5527,7 @@ Rozkład elementów
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename C:/Projects/mgr/schematics/rs232_bluetooth/rs232_bluetooth-Opisu_górna.ps
+	filename ../schematics/rs232_bluetooth/rs232_bluetooth-Opisu_górna.ps
 	BoundingBox 120bp 450bp 296bp 553bp
 	clip
 	rotateOrigin leftTop
@@ -6058,7 +6058,7 @@ Schemat modułu zasilania silników elektrycznych
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -6069,7 +6069,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Projects/mgr/schematics/motor_drivers/motor_drivers-Elementów.ps
+	filename ../schematics/motor_drivers/motor_drivers-Elementów.ps
 	width 98col%
 	BoundingBox 10mm 130mm 120mm 210mm
 	clip
@@ -6105,7 +6105,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Projects/mgr/schematics/motor_drivers/motor_drivers-Ścieżek.ps
+	filename ../schematics/motor_drivers/motor_drivers-Ścieżek.ps
 	width 98col%
 	BoundingBox 10mm 130mm 120mm 210mm
 	clip
