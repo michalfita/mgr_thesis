@@ -53,6 +53,14 @@
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
+\branch ASN.1
+\selected 0
+\color #fae58d
+\end_branch
+\branch Lua
+\selected 1
+\color #aaff7f
+\end_branch
 \leftmargin 3.5cm
 \topmargin 2cm
 \rightmargin 2.1cm
@@ -1416,6 +1424,12 @@ Realizacja sprzętowa spoczywa na producencie układu, który certyfikuje swój
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Bluetooth"
+
+\end_inset
+
 Bluetooth
 \end_layout
 
@@ -3453,6 +3467,10 @@ h i technicznych.
 Magic.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Branch ASN.1
+status open
+
 \begin_layout Section
 ASN.1
 \end_layout
@@ -3694,6 +3712,109 @@ dupa jaś karuzela coś jeszcze trzeba tu wpisać...
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Lua
+status open
+
+\begin_layout Section
+Lua
+\end_layout
+
+\begin_layout Standard
+Język skryptowy Lua (port.
+ 
+\shape italic
+\lang brazilian
+Księżyc
+\shape default
+\lang polish
+) narodził się w Brazylii, w roku 1993 na Uniwersytecie Papieskim w Rio
+ de Janerio w Brazylii.
+ Był rezultatem embarga technologicznego obowiązujęcego w Brazylii do 1992
+ roku, podtrzymywanego przez nacjonalistów uważających, że Brazylia ma dość
+ potencjału do rozwoju własnego sprzętu komputerowego i oprogramowania.
+ Troje członków grupy komputerowych technologii graficznych Uniwersytetu
+ Papieskiego: Roberto Ierusalimschy, Luiz Henrique de Figueiredo oraz Waldemar
+ Celes, stworzyło ten język dla aplikacji inżynieryjnych na półpaństwowej
+ firmy Petrobras.
+ Autorom języka szczególnie zależało na prostocie, gdyż w założeniach przewidywa
+ne było posługiwanie się tym językiem przez inżynierów, nie będących programista
+mi.
+\end_layout
+
+\begin_layout Standard
+Lua jest językiem wielu paradygmatów, elementy składni pochodzą z takich
+ języków jak Modula, CLU, C++, Snobol, AWK, jednakże zestaw głównych fukcjonalno
+ści jest ograniczony.
+ Lua nie ma wbudowanych wielu mechanizmów, które mogą być prosto zaimplementowan
+e, pozwalając na prowadzenie paradygmatu programowania funkcyjnego lub obiektowe
+go.
+ Lua jest językiem dynamicznie typowanym, który posiada tylko kilka typów
+ podstawowych: logiczny, liczbowy (w przeciwieństwie od innych języków domyślnie
+ zmiennopozycyjny), ciąg znaków.
+ Wszystkie złożone typy danych, takie jak wektory, zbiory, listy, rekordy,
+ mogą być zrealizowane za pomocą jedynej struktury danych zwanej tablicą,
+ która w rzeczywistości jest tablicą asocjacyjną.
+\end_layout
+
+\begin_layout Standard
+W rezultacie wszystkich decyzji projektowych, interpreter języka Lua jest
+ bardzo niewielki objętościowo.
+ Skompilowany zajmuje około 150
+\begin_inset space ~
+\end_inset
+
+kB i może być łatwo zadoptowany do wielu aplikacji.
+ Kod źródłowy jest kompilowany do bajtokodu, który następnie wykonywany
+ jest w maszynie wirtualnej.
+ W tym wypadku jednak, podobnie jak ma to miejsce w Python, kod binarny
+ Lua jest nieprzenośny ze względu na optymalizację dla architektury docelowego
+ procesora.
+\end_layout
+
+\begin_layout Standard
+Interfejs programistyczny do języka C jest bardzo prosty i pozwala na interakcję
+ z interpreterem na poziomie stosu wywołań.
+ Dostępna jest biblioteka, która pozwala na wykonywanie opracji współdziałania
+ z interpreterem Lua na trochę wyższym poziomie.
+\end_layout
+
+\begin_layout Subsection
+eLua
+\end_layout
+
+\begin_layout Standard
+Projekt eLua ma na celu wprowadzenie języka Lua do świata programowania
+ wbudowanego.
+ Główną intencją autorów Bogdana Marinescu i Dado Suttera jest stworzenie
+ środowiska programistycznego na samym mikrokontrolerze, bez potrzeby instalacji
+ specyficznych narzędzi po stronie PC.
+ Ewolucja projektu zmierza w kierunku udostępnienia podstawowego edytora
+ skryptów używalnego na różnych urzadzenia wejścia/wyjścia, znajdującego
+ się w programie mikrokontrolera.
+ W momencie pisania tego tekstu, oficjalne wsparcie dostępne jest dla architektu
+ry ARM, jednakże planowany jest rozwój innych platform.
+\end_layout
+
+\begin_layout Standard
+Doświadczenia w uruchamianiu interpretera Lua na mikrokontrolerach będą
+ przeniesione do realizacji sterownika robota, gdzie skrypty wykonawcze
+ będą ładowane z programu sterującego na komputerze PC.
+ Osiągnięta zostanie wysoka elastyczność w funkcjonalności, która będzie
+ mogła być rozszerzana na żądanie, bez rekompilacji kodu binarnego programu
+ mikrokontrolera.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 \begin_inset CommandInset label
 LatexCommand label
@@ -3861,6 +3982,10 @@ Rozdział ten opisuje techniczne aspekty narzędzi i modułów planowanych do
 \end_layout
 
 \begin_layout Section
+Narzędzia programowe
+\end_layout
+
+\begin_layout Subsection
 AVR32 Studio
 \begin_inset CommandInset label
 LatexCommand label
@@ -4100,7 +4225,49 @@ reference "sec:prep-AVR32-Toolchain"
  
 \end_layout
 
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Środowisko-ramowe"
+
+\end_inset
+
+Środowisko ramowe
+\end_layout
+
+\begin_layout Standard
+(ang.
+ 
+\shape italic
+\lang british
+framework
+\shape default
+\lang polish
+)
+\end_layout
+
+\begin_layout Subsection
+Doxygen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Stworzyć opis Doxygen'a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
+Narzędzia sprzętowe
+\end_layout
+
+\begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:JTAG-ICE"
@@ -4227,6 +4394,10 @@ Integracja ze środowiskiem AVR32 Studio obejmuje poza programowaniem układów
 \end_layout
 
 \begin_layout Section
+Moduły
+\end_layout
+
+\begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:EVK1100"
@@ -4385,7 +4556,7 @@ Sterowanie silników elektrycznych jest możliwe dzięki 6 wyjściom PWM oferowa
  przez układ AT32UC3A0512.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Moduł kamery PixelPlus
 \end_layout
 
@@ -4469,6 +4640,24 @@ mm kliszy fotograficznej.
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection
+Moduł Bluetooth
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Stworzyć prosty opis modułu Bluetooth i zawartego układu dodać referencję
+ do rozruchu.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part
@@ -5626,6 +5815,11 @@ V.
 
 \begin_layout Section
 Moduł kamery
+\end_layout
+
+\begin_layout Standard
+W aktualnej realizacja moduł kamery nie został zastosowany, ze względu na
+ czas i koszty implementacji współpracy kamery z mikrokontrolerem.
 \end_layout
 
 \begin_layout Chapter
@@ -7134,6 +7328,15 @@ nie następuje
 Architektura systemu
 \end_layout
 
+\begin_layout Standard
+Opis architektury systemu znajduje się tak odlegle od początku, ponieważ
+ ma największe znaczenie dla oprogramowania stworzonego do realizacji tego
+ projektu.
+ Szczegóły architektury podsystemu mikrokontrolera oraz podsystemu zdalnej
+ kontroli klarowały się w trakcie realizacji, jako uszczegółowenia ogólnej
+ wizji projektu.
+\end_layout
+
 \begin_layout Section
 Architektura ogólna
 \end_layout
@@ -7205,6 +7408,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename vector/system-arch-avr-soft.svg
 	width 90col%
@@ -7228,11 +7432,86 @@ Architektura oprogramowania układu mikrokontrolera
 
 \end_inset
 
-Oprogramowanie to działa na bazie systemu operacyjnego FreeRTOS.
+Oprogramowanie to działa na bazie systemu operacyjnego FreeRTOS
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Strona domowa systemu FreeRTOS: 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.freertos.org/"
+target "http://www.freertos.org/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
 Architektura podsystemu zdalnej kontroli
+\end_layout
+
+\begin_layout Standard
+W realizacji tego projektu istotną rolę odgrywają pewne decyzje technologiczne
+ dotyczące wyboru kanału komunikacji robota z komputerem PC.
+ Technologia Bluetooth (opis: 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Bluetooth"
+
+\end_inset
+
+) jest dostępna we współczesnych komputerach przenośnych (ang.
+ 
+\shape italic
+\lang british
+notebook computer
+\shape default
+\lang polish
+), potocznie zwanych 
+\begin_inset Quotes pld
+\end_inset
+
+laptopami
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Oznacza to, że realizacja tego elementu systemu, który pozwala na wprowadzanie
+ komend sterujących sprowadza się do napisania opprogramowania.
+ Poniżej znajduje się uproszczony opis architektury tej aplikacji.
+\end_layout
+
+\begin_layout Standard
+Szczegółowa dokumentacja projektowa tego fragmentu systemu znajduje się
+ w załączniku 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Stworzyć załącznik.
+\end_layout
+
+\end_inset
+
+ w języku angielskim i jest rezultatem automatycznej generacji dokumentacji
+ przez system Doxygen 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Rozważyć dodanie Doxygen'a do narzędzi.
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
@@ -7240,20 +7519,299 @@ Realizacja oprogramowania
 \end_layout
 
 \begin_layout Section
-Rozwiązane problemy
+Oprogramowanie mikrokontrolera (sprzętu)
+\end_layout
+
+\begin_layout Standard
+Oprogramowanie mikrokontrolera napisane jest w języku C i zawiera elementy
+ szkieletu programowego w wersji 1.3.0, w tym system operacyjny FreeRTOS w
+ wersji 4.7.2.
+\end_layout
+
+\begin_layout Subsection
+Przygotowanie szkieletu programowego i systemu FreeRTOS
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Opis ożenku FreeRTOS 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Konfiguracja środowiska do pracy z pamięcią SDRAM
+\end_layout
+
+\begin_layout Standard
+Standardowo środowisko ramowe firmy Atmel w wersji 1.3.0 (patrz: 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:Środowisko-ramowe"
+
+\end_inset
+
+) jest tak skonfigurowane, aby sterta
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Sterta (ang.
+ 
+\shape italic
+\lang british
+heap
+\shape default
+\lang polish
+) to obszar pamięci programu, gdzie przechowywane są zmienne dynamiczne
+ oraz obszary danych alokowane na żądanie programisty.
+\end_layout
+
+\end_inset
+
+ mieściła się w wewnętrznej pamięci mikrokontrolera AT32UC3A0512.
+ Aplikacja w tym projekcie przewiduje większe potrzeby pamięciowe, niż dostępna
+ pamięć 64 kB.
+ Karta EVK1100 jest fabrycznie wyposażona w pamięć SDRAM
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Model układu MT48LC16M16A2 opisany w 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "256msdram"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ o pojemności 32 MB.
+ Opisane poniżej zmiany zostały wprowadzone na podstawie opisu dostarczonego
+ przez firmę Atmel
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AVR32733"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dostęp do pamięci zewnętrznej wymaga inicjalizacji kontrolera pamięci dynamiczne
+j.
+ Służy do tego funkcja 
+\begin_inset listings
+lstparams "language=C,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+sdramc_init()
+\end_layout
+
+\end_inset
+
+ dostępna w środowisku ramowym jako sterownik kontrolera pamięci.
+ Aby jednak pamięć stała się dostępna odpowiednio wcześnie, wywołanie tej
+ funkcji musi nastąpić w początkowej fazie uruchamiania kodu.
+ Potrzebne są do tego następujące kroki:
+\end_layout
+
+\begin_layout Enumerate
+Napisanie własnej funkcji 
+\begin_inset listings
+lstparams "language=C,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+__init_startup()
+\end_layout
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+Podstawienie prawidłowego pliku 
+\family typewriter
+crt0.x
+\family default
+,
+\end_layout
+
+\begin_layout Enumerate
+Utworzenie nowego skryptu dla programu konsolidującego (ang.
+ 
+\shape italic
+\lang british
+linker
+\shape default
+\lang polish
+),
+\end_layout
+
+\begin_layout Enumerate
+Ustawienie opcji programu konsolidującego na 
+\begin_inset listings
+lstparams "breaklines=true,language=C,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+-Wl,--gc-sections -Wl,-e,_trampoline -Wl,--defsym,__heap_size__=0x00200000
+ -Tlink_uc3a0512_extsdram.lds
+\end_layout
+
+\end_inset
+
+, przy czym należy pamiętać, że plik 
+\family typewriter
+trampoline.x
+\family default
+ musi być kompilowany w projekcie, aby następował prawidłowy skok początkowy
+ po starcie.
+\end_layout
+
+\begin_layout Standard
+Nowe pliki znajdują się w katalogu 
+\family typewriter
+platform
+\family default
+.
+ Istotny kod funkcji wspomnianej powyżej, powinien zawierać:
+\begin_inset listings
+lstparams "language=C,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void __init_startup(void)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* Switch to external oscillator 0 */
+\end_layout
+
+\begin_layout Plain Layout
+
+	pm_switch_to_osc0(&AVR32_PM, FOSC0, OSC0_STARTUP);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* Initialize the SDRAM Controller and the external memory chip.
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+	sdramc_init(FOSC0);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+przy czym w pliku 
+\family typewriter
+port.c
+\family default
+ dla FreeRTOS w oryginalnym szkielecie programowym powyższa funkcja jest
+ już zdefiniowana i wymagała zmiany.
+\end_layout
+
+\begin_layout Standard
+Plik konfiguracji programu konsolidującego 
+\family typewriter
+link_uc3a0512_extsdram.lds
+\family default
+ zawiera przeniesienie segmentu stosu 
+\family typewriter
+.heap
+\family default
+ do obszaru adresowanego przypisanego dla pamięci SDRAM.
+ Dodatkowo tworzy dwa dodatkowe segmenty 
+\family typewriter
+.bss_sdram
+\family default
+ i 
+\family typewriter
+.data_sdram
+\family default
+, dla odpowiednio zmiennych niezainicjalizowanych i zmiennych zainicjalizowanych.
+ Do zastosowania tych dwóch segmentów należy dodać dyrektywę 
+\begin_inset listings
+lstparams "language=C,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+__attribute__((__section__(
+\begin_inset Quotes pld
+\end_inset
+
+section-name
+\begin_inset Quotes prd
+\end_inset
+
+)))
+\end_layout
+
+\end_inset
+
+ przed deklarację zmiennej.
+\end_layout
+
+\begin_layout Section
+Oprogramowanie sterujące
 \end_layout
 
 \begin_layout Chapter*
 Podsumowanie
 \end_layout
 
+\begin_layout Standard
+Milion słów o niczym.
+\end_layout
+
 \begin_layout Part*
-Dodatki
+Załączniki
 \end_layout
 
 \begin_layout Chapter*
-Dodatek A.
- Jakiś dodatek
+Załącznik A.
+ Dokumentacja programu Robotiq
 \end_layout
 
 \begin_layout Standard

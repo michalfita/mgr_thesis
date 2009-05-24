@@ -1,0 +1,20 @@
+MyModule DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+MyTypes ::= SEQUENCE {
+  myObjectId OBJECT IDENTIFIER,
+  mySeqOf SEQUENCE OF MyInt,
+  myChoice MyChoice,
+  myBitString BIT STRING {
+    muxToken(0), modemToken(1)
+  }
+}
+
+MyInt ::= INTEGER (0..65535)
+
+MyChoice ::= CHOICE {
+  dupaBlada INTEGER,
+  cipaLysa  INTEGER,
+  logicVal  BOOLEAN
+}
+
+END 

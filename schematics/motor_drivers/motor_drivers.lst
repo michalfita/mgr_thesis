@@ -1,0 +1,153 @@
+EESchema (20080825)  >> Creation date: 11/10/2008-14:15:24
+
+#Cmp ( porz¹dek = Oznaczenie )
+| C1         1uF         ; SM0805      
+| C2         1uF         ; SM0805      
+| C3         1uF         ; SM0805      
+| C4         1uF         ; SM0805      
+| C5         1uF         ; SM0805      
+| C6         1uF         ; SM0805      
+| C7         1uF         ; SM0805      
+| C11        100nF       ; SM0603      
+| C12        100nF       ; SM0603      
+| C13        100nF       ; SM0603      
+| C14        100nF       ; SM0603      
+| C15        100nF       ; SM0603      
+| C16        100nF       ; SM0603      
+| C17        100nF       ; SM0603      
+| D1         SM5818      ;             
+| D2         SM5818      ;             
+| D3         SM5818      ;             
+| D4         SM5818      ;             
+| D5         SM5818      ;             
+| D6         SM5818      ;             
+| D7         SM5818      ;             
+| D8         SM5818      ;             
+| D9         SM5818      ;             
+| D10        SM5818      ;             
+| D11        SM5818      ;             
+| D12        SM5818      ;             
+| D13        SM5818      ;             
+| D14        SM5818      ;             
+| D15        SM5818      ;             
+| D16        SM5818      ;             
+| D17        SM5818      ;             
+| D18        SM5818      ;             
+| D19        SM5818      ;             
+| D20        SM5818      ;             
+| D21        SM5818      ;             
+| D22        SM5818      ;             
+| D23        SM5818      ;             
+| D24        SM5818      ;             
+| D25        SM5818      ;             
+| D26        SM5818      ;             
+| D27        SM5818      ;             
+| D28        SM5818      ;             
+| P1         CONN_8      ; con-molex-53048-08
+| P2         CONN_8      ; con-molex-53048-08
+| P3         CONN_2      ; con-molex-53047-02
+| P4         CONN_2      ; con-molex-53047-02
+| P5         CONN_2      ; con-molex-53047-02
+| P6         CONN_2      ; con-molex-53047-02
+| P7         CONN_2      ; con-molex-53047-02
+| P8         CONN_2      ; con-molex-53047-02
+| P9         CONN_2      ; con-molex-53047-02
+| R1         10k         ; SM0603      
+| R2         10k         ; SM0603      
+| R3         10k         ; SM0603      
+| R4         10k         ; SM0603      
+| R5         10k         ; SM0603      
+| R6         10k         ; SM0603      
+| R7         10k         ; SM0603      
+| R8         10k         ; SM0603      
+| R9         10k         ; SM0603      
+| R10        10k         ; SM0603      
+| R11        10k         ; SM0603      
+| R12        10k         ; SM0603      
+| R13        10k         ; SM0603      
+| R14        10k         ; SM0603      
+| U1         TC4424A     ; -SOIC8      
+| U2         TC4424A     ; -SOIC8      
+| U3         TC4424A     ; -SOIC8      
+| U4         TC4424A     ; -SOIC8      
+| U5         TC4424A     ; -SOIC8      
+| U6         TC4424A     ; -SOIC8      
+| U7         TC4424A     ; -SOIC8      
+#Koniec Cmp
+
+#Cmp ( porz¹dek = Wartoœæ )
+| 100nF        C11       ; SM0603      
+| 100nF        C12       ; SM0603      
+| 100nF        C13       ; SM0603      
+| 100nF        C14       ; SM0603      
+| 100nF        C15       ; SM0603      
+| 100nF        C16       ; SM0603      
+| 100nF        C17       ; SM0603      
+| 10k          R1        ; SM0603      
+| 10k          R2        ; SM0603      
+| 10k          R3        ; SM0603      
+| 10k          R4        ; SM0603      
+| 10k          R5        ; SM0603      
+| 10k          R6        ; SM0603      
+| 10k          R7        ; SM0603      
+| 10k          R8        ; SM0603      
+| 10k          R9        ; SM0603      
+| 10k          R10       ; SM0603      
+| 10k          R11       ; SM0603      
+| 10k          R12       ; SM0603      
+| 10k          R13       ; SM0603      
+| 10k          R14       ; SM0603      
+| 1uF          C1        ; SM0805      
+| 1uF          C2        ; SM0805      
+| 1uF          C3        ; SM0805      
+| 1uF          C4        ; SM0805      
+| 1uF          C5        ; SM0805      
+| 1uF          C6        ; SM0805      
+| 1uF          C7        ; SM0805      
+| CONN_2       P3        ; con-molex-53047-02
+| CONN_2       P4        ; con-molex-53047-02
+| CONN_2       P5        ; con-molex-53047-02
+| CONN_2       P6        ; con-molex-53047-02
+| CONN_2       P7        ; con-molex-53047-02
+| CONN_2       P8        ; con-molex-53047-02
+| CONN_2       P9        ; con-molex-53047-02
+| CONN_8       P1        ; con-molex-53048-08
+| CONN_8       P2        ; con-molex-53048-08
+| SM5818       D1        ;             
+| SM5818       D2        ;             
+| SM5818       D3        ;             
+| SM5818       D4        ;             
+| SM5818       D5        ;             
+| SM5818       D6        ;             
+| SM5818       D7        ;             
+| SM5818       D8        ;             
+| SM5818       D9        ;             
+| SM5818       D10       ;             
+| SM5818       D11       ;             
+| SM5818       D12       ;             
+| SM5818       D13       ;             
+| SM5818       D14       ;             
+| SM5818       D15       ;             
+| SM5818       D16       ;             
+| SM5818       D17       ;             
+| SM5818       D18       ;             
+| SM5818       D19       ;             
+| SM5818       D20       ;             
+| SM5818       D21       ;             
+| SM5818       D22       ;             
+| SM5818       D23       ;             
+| SM5818       D24       ;             
+| SM5818       D25       ;             
+| SM5818       D26       ;             
+| SM5818       D27       ;             
+| SM5818       D28       ;             
+| TC4424A      U1        ; -SOIC8      
+| TC4424A      U2        ; -SOIC8      
+| TC4424A      U3        ; -SOIC8      
+| TC4424A      U4        ; -SOIC8      
+| TC4424A      U5        ; -SOIC8      
+| TC4424A      U6        ; -SOIC8      
+| TC4424A      U7        ; -SOIC8      
+#Koniec Cmp
+
+#Koniec listy
