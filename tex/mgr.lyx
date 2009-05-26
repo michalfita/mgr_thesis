@@ -2429,7 +2429,7 @@ MHz.
 \end_layout
 
 \begin_layout Standard
-Układ posiada jednostkę ochrony pamięci (MPU) oraz szybki i elatyczny kontroler
+Układ posiada jednostkę ochrony pamięci (MPU) oraz szybki i elastyczny kontroler
  przerwań wspierający nowoczesne systemy operacyjne i systemy operacyjne
  czasu rzeczywistego.
  Wysokia wydajność obliczeniowa jest osiągalna dzięki bogatemu zestawowi
@@ -7791,6 +7791,201 @@ section-name
 \end_inset
 
  przed deklarację zmiennej.
+\end_layout
+
+\begin_layout Subsection
+Konfiguracja dla częstotliwości 66 MHz
+\end_layout
+
+\begin_layout Standard
+Mikrokontroler AT32UC3A0512 (opisany w
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:Mikrokontroler-AT32UC3A0512"
+
+\end_inset
+
+) może pracować z maksymalną częstotliwością 66 MHz, przy czym ta częstotliwość
+ pracy osiągana jest z pętli sprzężenia fazowego PLL (ang.
+ 
+\shape italic
+\lang british
+Phase Locked Loop
+\shape default
+\lang polish
+) konfigurowalnej cyfrowo w module menadżera zasilania PM (ang.
+ Power Manager).
+ Aby otrzymać właściwą prędkość pracy należy rejestry 
+\family typewriter
+PLLMUL
+\family default
+, 
+\family typewriter
+PLLDIV
+\family default
+, 
+\family typewriter
+PLLOPT
+\family default
+ pętli o numerze 0 skonfigurować według następujących wzorów:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Dodać obrazki ze stron 57, 58 specyfikacji procka.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{vco}=\frac{(\mathtt{PLLMUL}+1)}{\mathtt{PLLDIV}}f_{osc},$
+\end_inset
+
+gdy 
+\begin_inset Formula $\mathtt{PLLDIV}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{vco}=2(\mathtt{PLLMUL}+1)f_{osc}$
+\end_inset
+
+, gdy 
+\begin_inset Formula $\mathtt{PLLDIV}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{pll}=f_{vco}$
+\end_inset
+
+, gdy 
+\begin_inset Formula $\mathtt{PLLOPT[1]}=0$
+\end_inset
+
+ lub 
+\begin_inset Formula $f_{pll}=\frac{f_{vco}}{2}$
+\end_inset
+
+, gdy 
+\begin_inset Formula $\mathtt{PLLOPT[1]}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Następnie należy dokonać przełączenia głównego zegara na sygnał z pętli
+ PLL0 poprzez ustawienie bitu 
+\family typewriter
+MCSEL
+\family default
+ rejestru 
+\family typewriter
+MCCTRL
+\family default
+ (ang.
+ 
+\shape italic
+\lang british
+Main Clock Control Register
+\shape default
+\lang polish
+).
+\end_layout
+
+\begin_layout Standard
+Przy konfigurowaniu zegarów należy pamiętać, że ten mikrokontroler może
+ pracować z maksymalną częstotliwością dla 66 MHz dla bloków CPU, HSB i
+ PBB, jednakże blok PBA może pracować z maksymalną częstotliwością 33 MHz.
+ Oznacza to, że należy włączyć preskaler dzielący częstotliwość PLL przez
+ 2.
+ Osiąga się to przez ustawienie bitu 
+\family typewriter
+PBADIV
+\family default
+ na 1 i 
+\family typewriter
+PBASEL
+\family default
+ na 0 (dzielnik częstotliwości preskalera to 
+\begin_inset Formula $2^{(\mathtt{PBASEL}+1)}$
+\end_inset
+
+).
+ Podane ograniczenie wynika z faktu, że w bloku PBA znajdują się wolniejsze
+ peryferia, na przykład UART, PWM, SPI.
+\end_layout
+
+\begin_layout Standard
+Środowisko ramowe (
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:Środowisko-ramowe"
+
+\end_inset
+
+) zawiera funkcję pm_blabla(), która sprowadza konfigurację zegarów do wpisania
+ oczekiwań w strukturę danych, a następnie dokonuje obliczeń dopasowujących
+ opisane rejestry.
+ W wyniku jej działania procesor rozpoczyna pracę na podanej częstotliwości
+ i modyfikuje zawartość struktury według wyliczonych wartości.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mechanizmy zabezpieczeń alokacji pamięci
+\end_layout
+
+\begin_layout Standard
+W systemie FreeTOS z planistą (ang.
+ 
+\shape italic
+\lang british
+scheduler
+\shape default
+\lang polish
+) wywłaszczającym (ang.
+ 
+\shape italic
+\lang british
+preemptive
+\shape default
+\lang polish
+) należy zadbać, aby alokacje pamięci nie zostały przerwane przez wywłaszczenie.
+ Biblioteka newlib przewiduje dwie metody:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+dopisać lockowanie malloca
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
