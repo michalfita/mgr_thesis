@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-06-12 19:20+Œrodkowoeuropejski czas letni\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: robotiq.py:60
+msgid ""
+"File: %s, Line: %d,\n"
+"In function: <b>%s</b>\n"
+"Cause: %s\n"
+msgstr ""
+
+#: robotiq.py:66
+msgid "Unhandled exception"
+msgstr ""
+
+#: robotiq.py:67
+msgid "The <b>error</b> \"%s: %s\" that has just occured during program operation left following <b>traceback</b>:"
+msgstr ""
+
+#: ui\AboutDialog.py:53
+msgid "Release %d"
+msgstr ""
+
+#: ui\AboutDialog.py:54
+msgid "Copyright by Micha\305\202 Fita \302\251 2008-2009. Some rights reserved according to the license."
+msgstr ""
+
+#: ui\AboutDialog.py:55
+msgid "This is the application for control the robot mechanics by processor board processing the commands."
+msgstr ""
+
+#: ui\AboutDialog.py:62
+msgid "Author of the icon: %s"
+msgstr ""
+
+#: ui\AboutDialog.py:63
+msgid "translator-credits"
+msgstr ""
+
+#: ui\ActionDispatcher.py:112 ui\ActionDispatcher.py:128
+#: ui\ActionDispatcher.py:144 ui\ActionManager.py:22 ui\ActionManager.py:30
+#: ui\ActionManager.py:37
+msgid "New action has to have name string, other types are not allowed."
+msgstr ""
+
+#: ui\ActionDispatcher.py:114 ui\ActionManager.py:24
+msgid "New action has to have callable object as second argument."
+msgstr ""
+
+#: ui\ActionDispatcher.py:146 ui\ActionManager.py:32 ui\ActionManager.py:39
+msgid "No such action as \"%s\" found."
+msgstr ""
+
+#: ui\ActionDispatcher.py:164
+msgid "You failed, sucker! You cannot dispatch item, only add to and remove from action."
+msgstr ""
+
+#: ui\CommunicationUserInterface.py:39
+msgid "Connect to the robot."
+msgstr ""
+
+#: ui\CommunicationUserInterface.py:39
+msgid "_Connect"
+msgstr ""
+
+#: ui\CommunicationUserInterface.py:40
+msgid "Disconnect the connection."
+msgstr ""
+
+#: ui\CommunicationUserInterface.py:40
+msgid "_Disconnect"
+msgstr ""
+
+#: ui\CommunicationUserInterface.py:41
+msgid "Confi_guration"
+msgstr ""
+
+#: ui\CommunicationUserInterface.py:41
+msgid "Configure all communication channels."
+msgstr ""
+
+#: ui\CommunicationUserInterface.py:56
+msgid "Use serial communication to interact with robot."
+msgstr ""
+
+#: ui\CommunicationUserInterface.py:56
+msgid "_Serial Communication"
+msgstr ""
+
+#: ui\ControlButtons.py:137 ui\ControlButtons.py:959
+msgid "Command \"%s\" not implemented in drawing."
+msgstr ""
+
+#: ui\MainMenu.py:33 ui\MainWindow.py:185
+msgid "_File"
+msgstr ""
+
+#: ui\MainMenu.py:46 ui\MainWindow.py:186
+msgid "_Edit"
+msgstr ""
+
+#: ui\MainWindow.py:84
+msgid "Placeholder"
+msgstr ""
+
+#: ui\MainWindow.py:187
+msgid "_Connection"
+msgstr ""
+
+#: ui\MainWindow.py:188
+msgid "_Help"
+msgstr ""
+
+#: ui\MainWindow.py:189
+msgid "Cu_t"
+msgstr ""
+
+#: ui\MainWindow.py:189
+msgid "Put selected content into the clipboard and remove from context."
+msgstr ""
+
+#: ui\MainWindow.py:190
+msgid "Copy seleted content into the clipboard."
+msgstr ""
+
+#: ui\MainWindow.py:190
+msgid "_Copy"
+msgstr ""
+
+#: ui\MainWindow.py:191
+msgid "Paste the content of clipboard in active context."
+msgstr ""
+
+#: ui\MainWindow.py:191
+msgid "_Paste"
+msgstr ""
+
+#: ui\MainWindow.py:192
+msgid "Select _All"
+msgstr ""
+
+#: ui\MainWindow.py:192
+msgid "Select all in active context."
+msgstr ""
+
+#: ui\MainWindow.py:193
+msgid "Displays information about application and its license."
+msgstr ""
+
+#: ui\MainWindow.py:193
+msgid "_About"
+msgstr ""
+
+#: ui\MainWindow.py:194
+msgid "Leave the application."
+msgstr ""
+
+#: ui\MainWindow.py:194
+msgid "_Quit"
+msgstr ""
+

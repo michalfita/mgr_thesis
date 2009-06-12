@@ -1,0 +1,34 @@
+<ui>
+  <menubar name="MenuBar">
+    <menu name="FileMenu" action="file-menu">
+      <placeholder name="FilePlaceholder" />
+      <separator />
+      <menuitem name="Quit" action="application-quit" />
+    </menu>
+    <menu name="EditMenu" action="edit-menu">
+      <menuitem name="Cut" action="clipboard-cut" />
+      <menuitem name="Copy" action="clipboard-copy" />
+      <menuitem name="Paste" action="clipboard-paste" />
+      <separator />
+      <menuitem name="Select All" action="selection-all" />
+    </menu>
+    <menu name="ConnectionMenu" action="connection-menu">
+      <menuitem name="Connect" action="connect" />
+      <menuitem name="Disconnect" action="disconnect" />
+      <separator />
+      <placeholder name="ConnectionPlaceholder" />
+      <separator />
+      <menuitem name="Setup" action="connection-setup" />
+    </menu>
+    <menu name="HelpMenu" action="help-menu">
+      <placeholder name="HelpPlaceholder" />
+      <separator />
+      <menuitem name="About" action="application-about" />
+    </menu>
+  </menubar>
+  <toolbar name="Toolbar">
+      <toolitem name="Connect" action="connect" />
+      <toolitem name="Disconnect" action="disconnect" />
+      <separator />
+  </toolbar>
+</ui>

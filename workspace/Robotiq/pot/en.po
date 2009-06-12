@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Robotiq 1.0\n"
+"POT-Creation-Date: 2009-03-28 16:25+Środkowoeuropejski czas stand.\n"
+"PO-Revision-Date: 2009-03-30 19:48+0100\n"
+"Last-Translator: Michał <michal.fita@gmail.com>\n"
+"Language-Team: Michał Fita <michal.fita@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+#: robotiq.py:63
+msgid ""
+"File: %s, Line: %d,\n"
+"In function: <b>%s</b>\n"
+"Cause: %s\n"
+msgstr ""
+
+#: robotiq.py:68
+msgid "Unhandled exception"
+msgstr ""
+
+#: robotiq.py:69
+msgid "The following <b>traceback</b> from the <b>error</b> that just occured during program operation is available:"
+msgstr ""
+
+#: robotiq.py:78
+msgid "Translation test"
+msgstr ""
+
