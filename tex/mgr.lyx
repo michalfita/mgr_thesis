@@ -17,6 +17,35 @@
 %\usepackage[bookmarks, bookmarksopen=true, bookmarksnumbered=true, colorlinks=true, pdftitle={System sterowania robotem mobilnym}, pdfauthor={Michał Fita}]{hyperref}
 
 \usepackage[protrusion=true,expansion=true, tracking=true, spacing=true, kerning=true, selected=true, babel=true]{microtype}
+
+% -- Here is the headers and footers configuration --
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[RO,LE]{\nouppercase{\leftmark}}
+\fancyhead[LO,RE]{\nouppercase{\rightmark}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,RE]{\tiny Michał Fita, Akademia Górniczo-Hutnicza, Kraków 2008-2009}
+\fancyfoot[CO,CE]{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0pt}
+% -- Here for opening pages --
+\fancypagestyle{opening}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[LE,RO]{\thepage} % except the center
+\fancyfoot[LO,RE]{\tiny Michał Fita, Akademia Górniczo-Hutnicza, Kraków 2008-2009}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+}
+% -- Here for closing pages --
+\fancypagestyle{closing}{%
+\fancyhf{} % clear all header and footer fields
+\fancyhead[RO,LE]{\nouppercase{\leftmark}}
+\fancyhead[LO,RE]{\nouppercase{\rightmark}}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0pt}
+}
 \end_preamble
 \options wide,pdftex
 \use_default_options false
@@ -62,17 +91,19 @@
 \color #aaff7f
 \end_branch
 \leftmargin 3.5cm
-\topmargin 2cm
+\topmargin 2.5cm
 \rightmargin 2.1cm
-\bottommargin 2cm
+\bottommargin 2.5cm
+\headsep 0.2cm
+\footskip 0.6cm
 \secnumdepth 3
-\tocdepth 3
+\tocdepth 2
 \paragraph_separation indent
 \defskip medskip
 \quotes_language polish
 \papercolumns 1
 \papersides 1
-\paperpagestyle uheadings
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \author "" 
@@ -3469,7 +3500,7 @@ Magic.
 
 \begin_layout Standard
 \begin_inset Branch ASN.1
-status open
+status collapsed
 
 \begin_layout Section
 ASN.1
