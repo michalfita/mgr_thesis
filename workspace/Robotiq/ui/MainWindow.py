@@ -16,14 +16,16 @@ import thread
 import traceback
 import sys
 import os.path
+import warnings
 import gettext
 from misc.Singleton import Singleton
-from AboutDialog import AboutDialog
-from ActionDispatcher import ActionDispatcher
-from CommandEntry import CommandEntry
-from CommandOutput import CommandOutput
-from ControlButtons import ControlButtons
-from CommunicationUserInterface import CommunicationUserInterface
+from misc.PersistentContainer import PersistentContainer
+from ui.AboutDialog import AboutDialog
+from ui.ActionDispatcher import ActionDispatcher
+from ui.CommandEntry import CommandEntry
+from ui.CommandOutput import CommandOutput
+from ui.ControlButtons import ControlButtons
+from ui.CommunicationUserInterface import CommunicationUserInterface
 
 class MainWindow(Singleton, gtk.Window):
     """Main window implementation.
@@ -49,6 +51,15 @@ class MainWindow(Singleton, gtk.Window):
         
         self.set_title('Robotiq')
         self.prepare_icons()
+        
+        p = PersistentContainer()
+        width = int(p.window.width or 400)
+        height = int(p.window.height or 300)
+        x = int(p.window.x or 200)
+        y = int(p.window.y or 200)
+        self.set_default_size(width, height)
+        self.move(x, y)
+        
         #gobject.type_register(MainWindow)
         self.uimanager = gtk.UIManager()
         
@@ -61,14 +72,17 @@ class MainWindow(Singleton, gtk.Window):
         accelgroup = self.uimanager.get_accel_group()
         self.add_accel_group(accelgroup)
         
-        self.main_menu = self.uimanager.get_widget('/MenuBar')
+        with warnings.catch_warnings():
+            # Suppress warnings of not filled menu at this stage
+            warnings.simplefilter('ignore', gtk.Warning)
+            self.main_menu = self.uimanager.get_widget('/MenuBar')
         #self.main_menu.show()
         
         self.toolbar = self.uimanager.get_widget('/Toolbar')
         #self.toolbar.show()
         
         # TODO: Temporary elements in window
-        self.command_output = CommandOutput(None) # FIXME: provide access to data by dispatcher insetead of object
+        self.command_output = CommandOutput(None) # FIXME: provide access to data by dispatcher instead of object
         #self.command_output.show()
         self.set_geometry_hints(self.command_output, 150, 200, -1, -1, 150, 200, 1, 1, 0.75, 10)
         self.frame_cmd_output = gtk.Frame()
@@ -76,7 +90,7 @@ class MainWindow(Singleton, gtk.Window):
         #self.frame_cmd_output.show()
         self.frame_cmd_output.add(self.command_output)
         
-        self.command_entry = CommandEntry(None, self.command_output) # FIXME: provide access to console by dispatcher instead of object
+        self.command_entry = CommandEntry(None, None) #self.command_output) # FIXME: provide access to console by dispatcher instead of object
         #self.command_entry.show()
         
         # TODO: going to be dockable
@@ -224,11 +238,11 @@ class MainWindow(Singleton, gtk.Window):
     def h_delete_event(self, widget, event, data=None):
         """Event handler for window delete.
         """
+        p = PersistentContainer()
         (width, height) = self.get_size()
         (x, y) = self.get_position()
-        #p = PersistentState.get_instance()
-        #p.put('Window', 'width', width)
-        #p.put('Window', 'height', height)
-        #p.put('Window', 'x', x)
-        #p.put('Window', 'y', y)
+        p.window.width = width
+        p.window.height = height
+        p.window.x = x
+        p.window.y = y
         return False

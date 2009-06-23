@@ -10,6 +10,7 @@ import traceback
 import sys
 import os.path
 import gettext
+from ui.ActionDispatcher import ActionDispatcher
 
 class CommandEntry(gtk.ComboBoxEntry):
     """Class for command entry combo box holding history of commands."""
@@ -19,6 +20,7 @@ class CommandEntry(gtk.ComboBoxEntry):
         self.history_length = history_length
         self.provider = provider
         self.output = output
+        self.action_dispatcher = ActionDispatcher()
         
         model = gtk.ListStore(str)
         #model.connect("row-inserted", self.h_row_inserted)
@@ -43,6 +45,9 @@ class CommandEntry(gtk.ComboBoxEntry):
     
     def h_activate(self, widget, ):
         entry_text = self.entry.get_text()
+        
+        if 'local-output-data' in self.action_dispatcher:
+            self.action_dispatcher['local-output-data'](entry_text + "\n")
         if self.provider is not None:
             self.provider.write(entry_text + "\n")
         if self.output is not None:

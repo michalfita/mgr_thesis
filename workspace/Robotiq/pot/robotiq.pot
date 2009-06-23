@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-06-12 19:20+Œrodkowoeuropejski czas letni\n"
+"POT-Creation-Date: 2009-06-12 21:17+Œrodkowoeuropejski czas letni\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,75 +100,79 @@ msgstr ""
 msgid "_Serial Communication"
 msgstr ""
 
+#: ui\CommunicationUserInterface.py:116
+msgid "Connection configuration"
+msgstr ""
+
 #: ui\ControlButtons.py:137 ui\ControlButtons.py:959
 msgid "Command \"%s\" not implemented in drawing."
 msgstr ""
 
-#: ui\MainMenu.py:33 ui\MainWindow.py:185
+#: ui\MainMenu.py:33 ui\MainWindow.py:189
 msgid "_File"
 msgstr ""
 
-#: ui\MainMenu.py:46 ui\MainWindow.py:186
+#: ui\MainMenu.py:46 ui\MainWindow.py:190
 msgid "_Edit"
 msgstr ""
 
-#: ui\MainWindow.py:84
+#: ui\MainWindow.py:88
 msgid "Placeholder"
 msgstr ""
 
-#: ui\MainWindow.py:187
+#: ui\MainWindow.py:191
 msgid "_Connection"
 msgstr ""
 
-#: ui\MainWindow.py:188
+#: ui\MainWindow.py:192
 msgid "_Help"
 msgstr ""
 
-#: ui\MainWindow.py:189
+#: ui\MainWindow.py:193
 msgid "Cu_t"
 msgstr ""
 
-#: ui\MainWindow.py:189
+#: ui\MainWindow.py:193
 msgid "Put selected content into the clipboard and remove from context."
 msgstr ""
 
-#: ui\MainWindow.py:190
+#: ui\MainWindow.py:194
 msgid "Copy seleted content into the clipboard."
 msgstr ""
 
-#: ui\MainWindow.py:190
+#: ui\MainWindow.py:194
 msgid "_Copy"
 msgstr ""
 
-#: ui\MainWindow.py:191
+#: ui\MainWindow.py:195
 msgid "Paste the content of clipboard in active context."
 msgstr ""
 
-#: ui\MainWindow.py:191
+#: ui\MainWindow.py:195
 msgid "_Paste"
 msgstr ""
 
-#: ui\MainWindow.py:192
+#: ui\MainWindow.py:196
 msgid "Select _All"
 msgstr ""
 
-#: ui\MainWindow.py:192
+#: ui\MainWindow.py:196
 msgid "Select all in active context."
 msgstr ""
 
-#: ui\MainWindow.py:193
+#: ui\MainWindow.py:197
 msgid "Displays information about application and its license."
 msgstr ""
 
-#: ui\MainWindow.py:193
+#: ui\MainWindow.py:197
 msgid "_About"
 msgstr ""
 
-#: ui\MainWindow.py:194
+#: ui\MainWindow.py:198
 msgid "Leave the application."
 msgstr ""
 
-#: ui\MainWindow.py:194
+#: ui\MainWindow.py:198
 msgid "_Quit"
 msgstr ""
 
