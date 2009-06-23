@@ -1,4 +1,4 @@
-#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -11,6 +11,8 @@
 \usepackage{type1ec}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
+
+\usepackage{dingbat}
 
 %\usepackage[pdftex,man,opt]{wmstitle}
 \usepackage[pdftex,type=mgr,gender=male]{aghtitle}
@@ -53,12 +55,12 @@
 \inputencoding auto
 \font_roman default
 \font_sans default
-\font_typewriter default
+\font_typewriter luximono
 \font_default_family default
 \font_sc false
 \font_osf false
 \font_sf_scale 100
-\font_tt_scale 100
+\font_tt_scale 87
 
 \graphics default
 \paperfontsize 11
@@ -70,7 +72,7 @@
 \pdf_bookmarksnumbered true
 \pdf_bookmarksopen true
 \pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
+\pdf_breaklinks true
 \pdf_pdfborder true
 \pdf_colorlinks true
 \pdf_backref false
@@ -104,6 +106,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\listings_params "basicstyle={\ttfamily},linewidth=154mm,prebreak={\carriagereturn}"
 \tracking_changes false
 \output_changes false
 \author "" 
@@ -173,8 +176,8 @@ robot
  pojawia się po raz pierwszy w sztuce, której autorem jest czeski pisarz
  Karel Čapek.
  Określenie to szybko trafia pomiędzy okładki dzieł literatury fantastycznej,
- zmieniając pierwotne znaczenie ze sztucznie chodowanego człowieka na sztucznie
- konstruowanego człowieka, by przez kolejne lata ewoluować do dziesiejszego
+ zmieniając pierwotne znaczenie ze sztucznie hodowanego człowieka na sztucznie
+ konstruowanego człowieka, by przez kolejne lata ewoluować do dzisiejszego
  znaczenia elektromechanicznej maszyny wykonującej różnorodne prace.
  Premiera czeskiej sztuki miała miejsce w 1921 roku, a dziś prawie wiek
  później słowo 
@@ -186,7 +189,7 @@ robot
 \end_inset
 
  jest tak powszechne, że mało kto wie, jaka jest jego geneza.
- Tym bardzej niewielu wie, że termin 
+ Tym bardziej niewielu wie, że termin 
 \begin_inset Quotes eld
 \end_inset
 
@@ -199,7 +202,7 @@ robotyki
 \end_layout
 
 \begin_layout Plain Layout
-Słowo to z kart książkek szybko trafia do świata nauki i zaczyna żyć własnym
+Słowo to z kart książek szybko trafia do świata nauki i zaczyna żyć własnym
  życiem w raz z postępem technologii elektronicznej i mechanicznej.
  Choć dziś nadal robotyka przez wielu traktowana jest jako zabawa, niż poważna
  dziedzina naukowa, to jednak znaczenie robotyki we współczesnym świecie
@@ -236,7 +239,7 @@ http://www.xprize.org
 
 \end_inset
 
- stawia robotykę przed nowym wyzwaniem wspieranym przez pieniądze prywantych
+ stawia robotykę przed nowym wyzwaniem wspieranym przez pieniądze prywatnych
  inwestorów na nową niespotykaną dotąd skalę, porównywalną z tą, która towarzysz
 yła do 2004 roku wyścigowi o pobicie bariery atmosfery i kosmosu przez prywatny
  pojazd kosmiczny.
@@ -244,7 +247,7 @@ yła do 2004 roku wyścigowi o pobicie bariery atmosfery i kosmosu przez prywatn
  na księżycu i pokona co najmniej 500 metrów po jego powierzchni przekazując
  na Ziemię zdjęcia i film video.
  Ogromna nagroda finansowa napędza do pracy siły i umysły, które wcześniej
- wogóle nie zakładały zajęcia się takim problemem.
+ w ogóle nie zakładały zajęcia się takim problemem.
  Czeka nas fascynująca rywalizacja, a na rezultat ludzkość będzie czekać
  z tak samo zapartym tchem, jak na start Space Ship One.
 \end_layout
@@ -259,7 +262,7 @@ Niedocenianym obszarem współczesnej inżynierii jest robotyka.
  oraz inżynierii oprogramowania.
  Wielu nawet dziś uważa robotykę za zabawę, a nie poważną dziedzinę badawczo-roz
 wojową.
- Lecz sukcesy takich projektów jak Mars Pathfinder czy DARPA Grand Challange
+ Lecz sukcesy takich projektów jak Mars Pathfinder czy DARPA Grand Challenge
  pokazują rosnące znaczenie robotyki we współczesnym świecie.
  Bill Gates powiedział: 
 \begin_inset Quotes eld
@@ -297,7 +300,7 @@ Rosumovi Uměli Roboti
  - Roboty Uniwersalne Rossuma), której autorem jest Karel Čapek - jeden
  z najbardziej uznanych pisarzy czeskich.
  Pierwotnie słowo to odnosiło się do istot żywych, sztucznie produkowanej
- uproszczonej wersji ludzi, jednaże dziś określa urządzenia mechaniczne.
+ uproszczonej wersji ludzi, jednakże dziś określa urządzenia mechaniczne.
  Termin 
 \begin_inset Quotes eld
 \end_inset
@@ -360,7 +363,7 @@ Idea sztucznej istoty pojawia się w historii znacznie wcześniej, w mitologii
  Leonarda da Vinci przedstawiające mechanicznego rycerza, który miał siadać,
  poruszać rękami, głową oraz szczęką.
  Pierwsze znane mechanizmy przypominające roboty są datowane na rok 1738
- i są dziełem Jacquesa de Vaucanson.
+ i są dziełem Jacques de Vaucanson.
  Zbudował on androida grającego na flecie, gracza na tamburynie (obie konstrukcj
 e nie przetrwały rewolucji francuskiej) oraz mechaniczną kaczkę.
  On też jako pierwszy zastosował walec do sterowania procesem produkcyjnym
@@ -390,7 +393,7 @@ Praca została podzielona na dwie logiczne części, z której pierwsza omawia
  w realizacji projektu, a część druga opisuje praktyczną realizację wszystkich
  elementów z opisem kroków prowadzących do wyboru stosowanych rozwiązań.
  Wśród opisywanych tematów znajdują się przede wszystkim systemy wbudowane,
- systemy operacyjne czasu rzeczywstego, radiowa transmisja danych, sterowanie
+ systemy operacyjne czasu rzeczywistego, radiowa transmisja danych, sterowanie
  silników elektrycznych oraz przetwarzanie obrazu.
 \end_layout
 
@@ -432,7 +435,7 @@ W okresie panowania Napoleona i jego europejskich podbojów do historii zapisał
 \shape slanted
 Mechaniczny Turek
 \shape default
-, który miałbyć wybitnym automatem do gry w szachy.
+, który miał być wybitnym automatem do gry w szachy.
  Skonstruowany w 1770 roku by zaimponować cesarzowej Marii Teresie przez
  barona Wolfganga von Kempelena mechanizm przez prawie 80 lat podbijał Europę
  i Amerykę.
@@ -442,7 +445,7 @@ Mechaniczny Turek
 status collapsed
 
 \begin_layout Plain Layout
-Niektóre źródła podają, że mistrzostwo Napolena wynikało ze strachu jego
+Niektóre źródła podają, że mistrzostwo Napoleona wynikało ze strachu jego
  przeciwników przed przegraną.
 \end_layout
 
@@ -475,8 +478,8 @@ Do czasu powstanie komputera DeepBlue w 1997 roku nie podjęto poważnej próby
  przeciwstawienia maszyny największym mistrzom szachów.
  Mechanizm ten jednak był szczytem technologii mechanicznej tamtego okresu
  i można odważyć się na nazwanie go robotem sterowanym przez człowieka.
- Mimo, że był dobrze kamuflowanym oszustem, przez kilkadzisiąt lat szokował
- obesrwatorów wierzących, że 
+ Mimo, że był dobrze kamuflowanym oszustem, przez kilkadziesiąt lat szokował
+ obserwatorów wierzących, że 
 \shape slanted
 Turek
 \shape default
@@ -755,7 +758,7 @@ Zalety stosowania JTAG
 status open
 
 \begin_layout Plain Layout
- łoże szpilkowe (ang.
+łoże szpilkowe (ang.
  
 \shape italic
 \lang british
@@ -764,7 +767,7 @@ nail bed tester
 \lang polish
 ), to podłoże z drobnymi, gęsto rozmieszczonymi szpilkami, stykającymi się
  w punktach kontaktowych z punktami testowymi na płytce drukowanej, pomiędzy
- którymi dokonuje się pomiaru paramterów sygnału elektrycznego; koszty testera
+ którymi dokonuje się pomiaru parametrów sygnału elektrycznego; koszty testera
  tego typu to rząd kilkunastu do setek tysięcy dolarów.
  
 \end_layout
@@ -866,7 +869,7 @@ okłamywania
 \end_inset
 
  wejść logicznych procesora, czasem wirtualnie zawartych w konstrukcji układu.
- Dzięki temu proces działania aplikacji jest monitorowany przez urzadzenie
+ Dzięki temu proces działania aplikacji jest monitorowany przez urządzenie
  zewnętrzne, kontrolowane ze stanowiska inżyniera pracującego nad programem.
  W połączeniu z wbudowanymi w układ mechanizmami sprzętowymi, komunikacja
  między debuggerem na komputerze a wnętrzem procesora odbywa się w sposób
@@ -893,7 +896,7 @@ zdefiniować dokładnie
  interakcji z pamięcią i rejestrami, przy zachowaniu całkowitej transparentności
  dla działającego mikrokontrolera.
  W tej technice wykorzystany jest fakt, że komputer na stanowisku pracy
- inżyniera jest wielkokrotnie szybszy od uruchamianego urządzenia i jest
+ inżyniera jest wielokrotnie szybszy od uruchamianego urządzenia i jest
  możliwe wczytywanie śladu wykonania w czasie rzeczywistym przykładowo na
  dysk twardy komputera.
  Ponieważ ta technologia nie została tu użyta, nie będzie opisywana dokładniej.
@@ -1011,9 +1014,9 @@ Gbit/s (ang.
 Super Speed USB
 \shape default
 \lang polish
-) oraz pracę w pełnym duplexie.
+) oraz pracę w pełnym dupleksie.
  Nowością ma być też zaawansowany sposób zarządzania zasilaniem urządzeń
- pracujących na magistrali -- nieużywane urządzenie może zostać zamodzielnie
+ pracujących na magistrali -- nieużywane urządzenie może zostać samodzielnie
  wyłączone przez kontroler hosta.
  Powstanie tego standardu może przyczynić się do śmierci standardu IEEE.1394
  , zwanego inaczej FireWire.
@@ -1387,7 +1390,7 @@ es (http:://www.ezprototypes.com), MCS Electronics (http://mcselec.com).
 
 , które zarejestrowały swój identyfikator producenta i odsprzedają pojedyncze
  identyfikatory produktu dla zainteresowanych elektroników lub małych firm,
- których budżet nie pozwala na rejestrację w USB Impelentation Forum.
+ których budżet nie pozwala na rejestrację w USB Implementation Forum.
 \end_layout
 
 \begin_layout Standard
@@ -1447,7 +1450,7 @@ Realizacja sprzętowa spoczywa na producencie układu, który certyfikuje swój
  produkt jako zgodny ze standardem USB.
  Dzięki temu inżynier projektujący urządzenie ma większą pewność poprawności
  współpracy urządzenia z kontrolerem hosta.
- Wadą jest oczywiście wyższy koszt układu, co w dziesiejszych czasach przestaje
+ Wadą jest oczywiście wyższy koszt układu, co w dzisiejszych czasach przestaje
  mieć znaczenie, gdyż uniwersalność USB powoduje, iż powinno być obecne
  w każdym większym urządzeniu.
  W przypadku realizacji sprzętowej łatwiej implementować kontroler hosta,
@@ -1469,7 +1472,7 @@ Technologia Bluetooth oferuje bezprzewodową komunikację krótkiego zasięgu
  pomiędzy urządzeniami elektronicznymi przy niskim zużyciu energii i niskim
  koszcie implementacji.
  Wiele z właściwości Bluetooth opisanych w specyfikacji jest opcjonalnych,
- dzieki czemu wachlarz urządzeń elektronicnych z tą technologią może być
+ dzięki czemu wachlarz urządzeń elektronicznych z tą technologią może być
  bardzo zróżnicowany.
 \end_layout
 
@@ -1511,8 +1514,8 @@ MBit/s w trybie Enhanced Data Rate.
 
 \begin_layout Standard
 Podczas normalnej pracy fizyczny kanał radiowy jest dzielony przez grupę
- urządzeń zsynchronizowancyh do wspłólnego zegara i wzorca zmian częstotliwości.
- Jedno z urzadzeń nadaje referencyjny sygnał synchronizacyjny i jest uznawane
+ urządzeń zsynchronizowanych do wspólnego zegara i wzorca zmian częstotliwości.
+ Jedno z urządzeń nadaje referencyjny sygnał synchronizacyjny i jest uznawane
  za nadrzędne.
  Wszystkie pozostałe urządzenia określane są jako podrzędne.
  Grupa zsynchronizowanych w ten sposób urządzeń określana jest jako 
@@ -1526,7 +1529,7 @@ piconet
 \end_layout
 
 \begin_layout Standard
-Urzadzenia w piconet używają specyficznego wzorca zmian częstotliwości,
+Urządzenia w piconet używają specyficznego wzorca zmian częstotliwości,
  które są określane na podstawie algorytmu z pewnych pól w adresie Bluetooth
  oraz czasu urządzenia nadrzędnego.
  Podstawową wzorcem dla zmian częstotliwości jest pseudolosowy układ 79
@@ -1579,8 +1582,8 @@ Kanał fizyczny jest podzielony na sloty czasowe.
  gdy warunki na to pozwalają.
  Zmiany częstotliwości następują pomiędzy nadaniem lub odbiorem pojedynczych
  pakietów.
- Technologia Bluetooth pozwala na transmisję z pełnym duplexem dzięki zastosowan
-iu schematu TTD (ang.
+ Technologia Bluetooth pozwala na transmisję z pełnym dupleksem dzięki zastosowa
+niu schematu TTD (ang.
  
 \shape italic
 \lang british
@@ -1625,7 +1628,7 @@ status open
 
 \end_inset
 
- nie obejmującym SDP, który nie jest pokazany dla zachowania przejżystości.
+ nie obejmującym SDP, który nie jest pokazany dla zachowania przejrzystości.
 \end_layout
 
 \begin_layout Standard
@@ -1642,7 +1645,7 @@ Obrazek stosu...
 \end_layout
 
 \begin_layout Standard
-Trzy najniższe warstwy są czasem grupowane w podsystem okreslany jako kontroler
+Trzy najniższe warstwy są czasem grupowane w podsystem określany jako kontroler
  Bluetooth.
  To jest potoczna implementacja obejmująca standardowy interfejs komunikacyjny
  pomiędzy kontrolerem i resztą systemu Bluetooth z włączeniem L2CAP (ang.
@@ -1654,8 +1657,8 @@ Logical Link Control and Adaptation Protocol
 \lang polish
 ), serwisów i warstw wyższych -- określanych jako host Bluetooth.
  Aczkolwiek ten interfejs jest opcjonalny, architektura jest zaprojektowana
- aby umożliwi jego istninie i charakterystykę.
- Specyfikacja umożliwia współdziałanie pomiędzy niezależymi systemami Bluetooth
+ aby umożliwi jego istnienie i charakterystykę.
+ Specyfikacja umożliwia współdziałanie pomiędzy niezależnymi systemami Bluetooth
  poprzez zdefiniowanie wiadomości protokołu wymienianych na poziomie odpowiadają
 cych sobie warstw, jak również współdziałanie pomiędzy niezależnymi podsystemami
  poprzez zdefiniowanie wspólnego interfejsu pomiędzy kontrolerem a hostem.
@@ -1685,7 +1688,7 @@ ARM Limited
 \begin_layout Standard
 Firma ARM Limited z siedzibą w Wielkiej Brytanii, nie jest producentem układów
  scalonych mikroprocesorów, lecz zajmuje się projektowaniem rdzeni procesorów
- oraz sprzedażą właśności intelektualnej do tych projektów firmom trzecim,
+ oraz sprzedażą własności intelektualnej do tych projektów firmom trzecim,
  głównie uznanym producentom układów mikroprocesorowych, o których mowa
  w tym rozdziale.
  Rdzenie serii ARM w kolejnych wcieleniach cieszą się ogromną popularnością
@@ -1696,7 +1699,7 @@ Firma ARM Limited z siedzibą w Wielkiej Brytanii, nie jest producentem układó
 \end_layout
 
 \begin_layout Standard
-Stosowana w tej chwili nazwa ARM jest akronimem od angieskich słów 
+Stosowana w tej chwili nazwa ARM jest akronimem od angielskich słów 
 \shape slanted
 Advanced RISC Machine
 \shape default
@@ -1749,9 +1752,9 @@ ARM 6
 
 \begin_layout Standard
 Rdzeń ARM6 jest wart wzmiankowania z racji historycznej roli, jaką jego
- implementacja oznaczona ARM610 odegrała w świecie paltopów.
- Realizacja procesora ujżała światło dzienne w 1990 roku.
- W roku 1993 firma Apple rozpoczeła sprzedaż Apple Newton Message Pad --
+ implementacja oznaczona ARM610 odegrała w świecie palmtopów.
+ Realizacja procesora ujrzała światło dzienne w 1990 roku.
+ W roku 1993 firma Apple rozpoczęła sprzedaż Apple Newton Message Pad --
  produktu wyprzedzającego o epokę wymagania użytkowników.
  Z racji niewielkiej popularności, po opracowaniu siedmiu modeli Apple Newton,
  sprzedaż zakończyła się w 1998 roku.
@@ -1763,7 +1766,7 @@ Implementacje architektury ARM6 w postaci układów ARM600 i ARM610 były jeszcz
  Inc.
  Na bazie licencji DEC stworzył pierwszy procesor StrongARM.
  Ten projekt następnie w roku 1997 na skutek realizacji warunków umowy trafił
- pod skrzydła Intel'a, by poźniej przekształcić się w linię procesorów XScale
+ pod skrzydła Intel'a, by później przekształcić się w linię procesorów XScale
 \begin_inset CommandInset citation
 LatexCommand cite
 key "cnet-intel-digital-1997"
@@ -1785,8 +1788,8 @@ ARM 7
 
 \begin_layout Standard
 Rdzeń ARM7 jest obecny na rynku od 1993.
- Do dnia dziesiejszego pełni istotną rolę w tworzeniu wielu specjalizowanych
- układów sterujących do urzadzeń.
+ Do dnia dzisiejszego pełni istotną rolę w tworzeniu wielu specjalizowanych
+ układów sterujących do urządzeń.
  W 1994 roku dochodzi wersja ARM7TDMI, w której pojawia się rozszerzenie
  Thumb oraz sprzętowe wsparcie dla cyfrowego przetwarzania sygnałów (ang.
  
@@ -1797,9 +1800,9 @@ digital signal processing
 \lang polish
 ).
  Do zastosowań dopasowanych do potrzeb produktów, rdzenie ARM7TDMI-S i ARM7EJ-S
- są wpełni syntetyzowalne w układach programowalnych, które pozwala na konstruow
-anie układów scalonych w pełni dostosowanych do potrzeb produktu, w których
- mają być stosowane.
+ są w pełni syntetyzowalne w układach programowalnych, które pozwala na
+ konstruowanie układów scalonych w pełni dostosowanych do potrzeb produktu,
+ w których mają być stosowane.
 \end_layout
 
 \begin_layout Standard
@@ -1866,8 +1869,8 @@ Direct Bytecode eXecution
 \shape default
 \lang polish
 ) została opracowana przez ARM w celu przyspieszania sprzętowego pewnych
- operacji bajtkodu maszyny wirtualnej Java (w skrócie JVM).
- Pozwala ona wykonywać bajtkod Javy, jakby był on natywnym kodem procesora.
+ operacji bajt-kodu maszyny wirtualnej Java (w skrócie JVM).
+ Pozwala ona wykonywać bajt-kod Javy, jakby był on natywnym kodem procesora.
  Sprzętowa implementacja Jazelle DBX wykonana jest na około 12 tysiącach
  bramek, co oznacza niski koszt implementacji wewnątrz układu.
  Liczba ta jest znacząco mniejsza od liczby bramek typowego koprocesora
@@ -1938,7 +1941,7 @@ http://www.freescale.com
 
  to korporacja powstała z wydzielenia działu układów scalonych firmy Motorola.
  Układy scalone Motoroli od kilkudziesięciu lat mają uznaną pozycję na rynku
- elektoniki cyfrowej, a udział Motoroli w konsorcjum tworzącym rdzeń PowerPC
+ elektroniki cyfrowej, a udział Motoroli w konsorcjum tworzącym rdzeń PowerPC
  odcisnął duże piętno na tej architekturze.
 \end_layout
 
@@ -1961,7 +1964,7 @@ Firma Motorola w latach 1991--2004 wraz z IBM i Apple brała udział w pracach
  na rzecz produktów firmy Intel, konsorcjum zmieniło swój kształt.
  Od 2004 roku, gdy Freescale został wydzielony jako osobny podmiot biznesowy
  z Motoroli, nadal pracował nad udoskonalaniem architektury PowerPC, natomiast
- wycofanie się Apple sprawiło, że świetny skąd inąd PowerPC G5 był ostatnim
+ wycofanie się Apple sprawiło, że świetny skądinąd PowerPC G5 był ostatnim
  układem zastosowanym w popularnych komputerach użytkowych.
  
 \begin_inset Wrap figure
@@ -2087,9 +2090,9 @@ Schemat blokowy MPC885.
 
 W roku 1998 pojawiły się układy z linii PowerQUICC II oznaczane symbolami
  MPC82xx bazowane na procesorze PowerPC 603e znanym też jako G2 (pojawiły
- się w komupterach firmy Apple).
- Wersja od Motoroli trafiała do stacji bazowych telefonii komórkowej, switchy
- sieciowych i multiplekserów obsługujących abonenckie linie cyfrowe
+ się w komputerach firmy Apple).
+ Wersja od Motoroli trafiała do stacji bazowych telefonii komórkowej, przełączni
+ków sieciowych i multiplekserów obsługujących abonenckie linie cyfrowe
 \begin_inset Foot
 status open
 
@@ -2126,15 +2129,15 @@ Linia PowerQUICC II Pro bazowała na rozbudowanym rdzeniu, którego pamięć
 Od roku 2003 firma Freescale oferuje układy z linii PowerQUICC III oparte
  o rdzeń e500, który nie ma odpowiednika w procesorach PowerPC ogólnego
  zastosowania.
- Oznaczane symbolami MPC85xx układy sa specjalizowanymi procesorami komunikacyjn
+ Oznaczane symbolami MPC85xx układy są specjalizowanymi procesorami komunikacyjn
 ymi, zdolnymi obsługiwać wiele portów Gigabit Ethernet jednocześnie, co
- czyni je doskonałymi procesorami dla szybkich switchy.
+ czyni je doskonałymi procesorami dla szybkich przełączników.
  W tej linii są układy wielordzeniowe.
 \end_layout
 
 \begin_layout Standard
 Firma Freescale wspiera projektowanie dla procesorów linii PowerQUICC bogatym
- zestawem nardzędzi, w tym środowiskiem CodeWarrior.
+ zestawem narzędzi, w tym środowiskiem CodeWarrior.
  Narzędzia te są jednak są bardzo drogie.
  Testowe wersje tego oprogramowania mają okrojone możliwości i nie są popularne
  wśród amatorów.
@@ -2164,8 +2167,8 @@ reference "sec:ARM"
 \begin_layout Standard
 Rodzina 68K jest najbardziej znaną rodziną mikroprocesorów firmy Motorola,
  a aktualnie Freescale Semiconductor.
- Model MC68000 debiutiował w 1979 roku i mocno zmodyfikowany jest produkowany
- do dnia dziesiejszego.
+ Model MC68000 debiutował w 1979 roku i mocno zmodyfikowany jest produkowany
+ do dnia dzisiejszego.
  Najmocniejszy typ układu w rodzinie MC68060 jest również nadal produkowany
  w kilku odmianach.
  Procesory te znalazły zastosowane w komputerach Atari i Amiga oraz wielu
@@ -2176,7 +2179,7 @@ Rodzina 68K jest najbardziej znaną rodziną mikroprocesorów firmy Motorola,
 Układy ColdFire są przekształconą wersją układów rodziny 68K dla zastosowań
  w systemach wbudowanych.
  Są wielokrotnie szybsze niż ich oryginalne odpowiedniki, pracują z częstotliwoś
-cią do 300 MHz (w porównaniu z 60 MHz fla MC68060).
+cią do 300 MHz (w porównaniu z 60 MHz dla MC68060).
  Aktualna zgodność binarna układów ColdFire sprawia, że grupy zapaleńców
  konstruują klony komputerów Atari i Amiga.
  Istnieją również porty systemu Linux dla układów z rodziny 68K
@@ -2205,7 +2208,7 @@ http://www.linux-m68k.org
 
 \begin_layout Standard
 Ostatnia wersja rdzenia ColdFire oznaczana jako V5 jest rdzeniem superskalarnym,
- przy czym do dziś firma Freescale nie rozpoczeła sprzedaży układów z tej
+ przy czym do dziś firma Freescale nie rozpoczęła sprzedaży układów z tej
  rodziny.
  Produkowane i sprzedawane układy posiadają nadal rdzeń oznaczany jako V4,
  który nie jest jeszcze w pełni superskalarny.
@@ -2265,7 +2268,7 @@ name "sub:AVR-serie"
 
 \begin_layout Standard
 Utarło się przekonanie, że podstawowa architektura AVR została opracowana
- przed dwóch studentów Norweskiego Instytutu Techonologii (nor.
+ przed dwóch studentów Norweskiego Instytutu Technologii (nor.
  
 \shape italic
 \lang norsk
@@ -2277,7 +2280,7 @@ Norges Tekniske Høgskole
 \end_layout
 
 \begin_layout Standard
-W rzeczywistości orginalny mikrokontroler został opracowany w Trondheim
+W rzeczywistości oryginalny mikrokontroler został opracowany w Trondheim
  w Norwegii, gdzie dwóch przyszłych fundatorów norweskiego oddziału firmy
  Atmel odbywało praktyki studenckie.
  Był znany jako μRISC.
@@ -2297,7 +2300,7 @@ AVR
 \end_inset
 
 .
- Nazwa AVR stosowana tutaj odnosi sie do 8-bitowej linii mikrokontrolerów
+ Nazwa AVR stosowana tutaj odnosi się do 8-bitowej linii mikrokontrolerów
  RISC, niezależnie od wzmiankowanej dalej nazwy AVR32.
 \end_layout
 
@@ -2324,6 +2327,16 @@ ności, jak proste układy kontrolno-sterujące; nie posiadają wyprowadzeń
 
 \begin_layout Description
 ATmega ...
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Uzupełnić!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -2463,13 +2476,13 @@ MHz.
 Układ posiada jednostkę ochrony pamięci (MPU) oraz szybki i elastyczny kontroler
  przerwań wspierający nowoczesne systemy operacyjne i systemy operacyjne
  czasu rzeczywistego.
- Wysokia wydajność obliczeniowa jest osiągalna dzięki bogatemu zestawowi
+ Wysoka wydajność obliczeniowa jest osiągalna dzięki bogatemu zestawowi
  instrukcji DSP.
 \end_layout
 
 \begin_layout Standard
 Układ AT32UC3A0512 zawiera wewnętrzną pamięć Flash i pamięć statyczną dla
- bezpiecznego i szybkiego dostepu.
+ bezpiecznego i szybkiego dostępu.
  Aplikacje wymagające większej dodatkowej pamięci mogą skorzystać z interfejsu
  zewnętrznej pamięci dynamicznej.
  Kontroler peryferyjnego bezpośredniego dostępu do pamięci (PDCA) umożliwia
@@ -2481,7 +2494,7 @@ Układ AT32UC3A0512 zawiera wewnętrzną pamięć Flash i pamięć statyczną dl
 \begin_layout Standard
 Układ zarządzania zasilaniem PowerManager udoskonala elastyczność projektu
  i bezpieczeństwo -- wykrywa zaniki zasilania.
- Mikorkontroler może być taktowany z wewnętrznego oscylatora RC lub z jednego
+ Mikrokontroler może być taktowany z wewnętrznego oscylatora RC lub z jednego
  z zewnętrznych oscylatorów, zegar czasu rzeczywistego i powiązany z nim
  timer utrzymują pomiar czasu.
  Timery/Liczniki to 3 kanały 16-bitowe.
@@ -2508,7 +2521,7 @@ Przez polaryzację sygnału PWM należy rozumieć ustalenie, czy bazowym poziome
 cyfrowy, dzięki czemu
  możliwe są bardziej dokładne implementacje z zamknięta pętlą.
  Układ AT32UC3A jest wyposażony w wiele interfejsów komunikacyjnych dla
- wymagających intensywnej kmunikacji aplikacji.
+ wymagających intensywnej komunikacji aplikacji.
  Poza standardowymi interfejsami szeregowymi typu UART, SPI lub TWI, dostępne
  są inne interfejsy jak elastyczny kontroler synchroniczny (ang.
  
@@ -2598,7 +2611,7 @@ reference "sub:ARM-7"
 \end_inset
 
 .
- Poszczególne wersje różnią się dostępnymi interfejsami oraz wiekościami
+ Poszczególne wersje różnią się dostępnymi interfejsami oraz wielkościami
  wbudowanej pamięci.
  Układy serii AT91SAM9 bazują na rdzeniu ARM 9 opisanym w rozdziale 
 \begin_inset CommandInset ref
@@ -2617,9 +2630,9 @@ Analog Devices
 \begin_layout Standard
 Istniejąca od 1965 roku firma Analog Devices zajmuje się projektowaniem
  i produkcją złożonych układów scalonych dla techniki analogowej i cyfrowej.
- Opórcz uznanych wzmacniaczy i przetwoników analogowo-cyfrowych, firma produkuje
- różnego rodzaju sensory (w tym linowy sensor przyspieszenia ADXL3300 zastosowan
-y w konsoli do gier Wii firmy Nitendo
+ Oprócz uznanych wzmacniaczy i przetworników analogowo-cyfrowych, firma
+ produkuje różnego rodzaju sensory (w tym linowy sensor przyspieszenia ADXL3300
+ zastosowany w konsoli do gier Wii firmy Nitendo
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ad-wii-sensor"
@@ -2664,7 +2677,7 @@ Mikroprocesory z rdzeniem Blackfin to 16- lub 32-bitowe układy w architekturze
  Procesor ten powstał jako rozwinięcie starszej architektury SHARC firmy
  Analog Devices i architektury XScale firmy Intel.
  Wewnętrzna budowa układów Blackfin oparta jest o architekturę harvardzką.
- Dwie 16-bitowe jednostki MAC, dwie 40-bitowe jednoski arytmetyczno-logiczne,
+ Dwie 16-bitowe jednostki MAC, dwie 40-bitowe jednostki arytmetyczno-logiczne,
  dwie 40-bitowe 
 \begin_inset Note Note
 status open
@@ -2682,9 +2695,9 @@ tłumaczenie:
  jednocyklowe, pamięć podręczna instrukcji i danych oraz zestaw instrukcji
  do testów bitu, dostępu do bajtu, słowa lub liczby całkowitej i do zintegrowany
 ch "peryferiów" czynią ten układ procesorem RISC.
- Lista instrukcji (16-biotwych dla zwykłych operacji i 32- lub 64-bitowych
+ Lista instrukcji (16-bitowych dla zwykłych operacji i 32- lub 64-bitowych
  dla operacji DSP) tego procesora obejmuje bardzo złożone operacje, co czyni
- skompilowany kod binarny bardzo wydajnym i wysoce zoptymalizwoanym.
+ skompilowany kod binarny bardzo wydajnym i wysoce zoptymalizowanym.
  Do wad układów Blackfin trzeba zaliczyć brak jednostki zarządzania pamięcią
  (MMU) i obsługi wirtualizacji.
  Układ ten najczęściej jest stosowanych w urządzeniach audio-video do użytku
@@ -2721,8 +2734,8 @@ status collapsed
 Procesory TigerSHARC są podobnie jak układy Blackfin połączeniem konstrukcji
  DSP z wydajną architekturą RISC, jednakże ogromny nacisk położono na architektu
 rę wieloprocesorową.
- Bardzo duża wewnętrzna pamięć pozwala przetważać FFT nawet do 64.000 punktów,
- a bardzo szybkie szyny wewnętrze i zewnętrzne pozwalają uzyskiwać ogromne
+ Bardzo duża wewnętrzna pamięć pozwala przetwarzać FFT nawet do 64.000 punktów,
+ a bardzo szybkie szyny wewnętrzne i zewnętrzne pozwalają uzyskiwać ogromne
  moce przetwarzania strumieni danych.
 \end_layout
 
@@ -2771,8 +2784,7 @@ Super Harvard Architecture Single-Chip Computer
 \begin_layout Standard
 Szerokość słowa rozkazu tych procesorów do 48 bitów, a liczby całkowitej
  i pojedynczej precyzji 32 bity.
- Rozrzeszona obsługa liczb zmienno-przecinkowych rozszerzona jest do 40
- bitów.
+ Rozszerzona obsługa liczb zmiennoprzecinkowych rozszerzona jest do 40 bitów.
  SHARC nie posiada wbudowanego MMU.
  Dwa identyczne zestawy rejestrów ogólnego stosowania pozwalają na realizację
  bardzo szybkiego przełączania kontekstu.
@@ -2787,7 +2799,7 @@ Infineon Technologies
 
 \begin_layout Standard
 Firma Infineon Technologies z siedzibą w Niemczech to producent układów
- półprzewodnikowych znany przede wszystkim z układłow pamięci DRAM.
+ półprzewodnikowych znany przede wszystkim z układów pamięci DRAM.
  Jest dynamicznie rozwijającą się firmą powstałą z wydzielenia działu półprzewod
 ników z firmy Siemens w 1994 roku.
 \end_layout
@@ -2818,19 +2830,19 @@ Texas Instruments
 
 \begin_layout Standard
 Firma Texas Instruments jest bardzo znanym producentem elektroniki dla zastosowa
-ń wojskowych i słynie z kalkulatorów naukowych, których rola spadła w dziesiejsz
-ych czasach, gdy dostęp do notebooków i palmtopów jest na porządku dziennym.
+ń wojskowych i słynie z kalkulatorów naukowych, których rola spadła w dzisiejszy
+ch czasach, gdy dostęp do notebooków i palmtopów jest na porządku dziennym.
  Najważniejszą dziedziną działania tej firmy jest aktualnie rozwijanie nowatorsk
 ich technologii, takich jak DLP oraz projektowanie i produkcja szerokiej
  gamy układów scalonych dla różnych zastosowań w elektronice.
- Klientami Texas Instruments są firmy działające w każdej istniejącej brażny
+ Klientami Texas Instruments są firmy działające w każdej istniejącej branży
  przemysłu.
 \end_layout
 
 \begin_layout Standard
 Mikroprocesory tej firmy mają ogromny udział w rynku telefonii komórkowej.
  Wydajność i możliwości układów tej firmy przyczyniła się do znacznego postępu
- w dziedzinie telefonii 3G, w krótce prawdopodobnie 4G.
+ w dziedzinie telefonii 3G, wkrótce prawdopodobnie 4G.
  Wśród oferowanych przez Texas Instruments układów są również 32 bitowe
  mikrokontrolery, w tym również układy o cech DSP, lub z rdzeniami DSP zintegrow
 ane (patrz: OMAP).
@@ -2907,9 +2919,9 @@ Digital Signal Controller
 \shape default
 \lang polish
 ).
- Jest to hybryda cech mikrokontrolera RISC z architekturą DSP, która przenaczo
- na jest do szybkiej analizy sygnałów w urządzeniach pomiarowych i pomiarowo-ste
-rujących.
+ Jest to hybryda cech mikrokontrolera RISC z architekturą DSP, która przeznaczon
+a na jest do szybkiej analizy sygnałów w urządzeniach pomiarowych i pomiarowo-st
+erujących.
  Wszystkie układy z tej rodziny posiadają wbudowane kanały PWM, które doskonale
  nadają się do sterowania urządzeń elektromechanicznych.
  Dodatkowo dostępne są wersje wspierające interfejsy CAN, SCI, SPI, I
@@ -2920,16 +2932,19 @@ C.
 \end_layout
 
 \begin_layout Standard
-Istotną cechą dostępną w tej rodzinie jest gałąź układów oznaczna symbolem
+Istotną cechą dostępną w tej rodzinie jest gałąź układów oznaczana symbolem
  TMS320F283xx, która posiada sprzętową jednostkę do operacji zmiennoprzecinkowyc
 h.
- Wydajność maksymalna osiągana w tych układach dochodzi do 300 MFLOPS przy
- 150 MHz zegarze taktującym rdzeń mikrokontrolera.
+ Wydajność maksymalna osiągana w tych układach dochodzi do 300
+\begin_inset space ~
+\end_inset
+
+MFLOPS przy 150 MHz zegarze taktującym rdzeń mikrokontrolera.
 \end_layout
 
 \begin_layout Standard
 Dodatkową cechą istotną z punktu widzenia konstruktorów i programistów systemu
- na bazie tych mikorokontrolerów, jest sprzętowe wparcie dla JTAG (patrz
+ na bazie tych mikrokontrolerów, jest sprzętowe wparcie dla JTAG (patrz
  rozdział 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2952,7 +2967,7 @@ TMS470
 \end_layout
 
 \begin_layout Standard
-Cała gama układów z serii TMS470 to 32-bitowe mikrokonrolery w architekturze
+Cała gama układów z serii TMS470 to 32-bitowe mikrokontrolery w architekturze
  ARM
 \begin_inset space ~
 \end_inset
@@ -2991,9 +3006,8 @@ W dziale DSP wyróżonione są następujące główne gałęzie:
 \begin_layout Description
 DaVinci to technologia dla procesorów sygnałowych specjalizowanych do bardzo
  wydajnego przetwarzania sygnałów video, jest odpowiedzią Texas Instruments
- na rozsnące w ostatnim czasie zapotrzebowanie na przetwarzanie obrazów
- video wysokiej jakości i rozdzielczości; niektóre z wersji posiadają rdzeń
- ARM
+ na rosnące w ostatnim czasie zapotrzebowanie na przetwarzanie obrazów video
+ wysokiej jakości i rozdzielczości; niektóre z wersji posiadają rdzeń ARM
 \begin_inset space ~
 \end_inset
 
@@ -3047,7 +3061,7 @@ target "http://focus.ti.com/docs/toolsw/folders/print/dspbios.html"
 
 \begin_layout Description
 C5000 to seria układów o wyjątkowo niskim zużyciu energii i przystosowana
- do optymalizacij zasilania peryferiów, dzięki czemu doskonale nadają się
+ do optymalizacji zasilania peryferiów, dzięki czemu doskonale nadają się
  do pracy w systemach zasilanych bateriami w branży telekomunikacji i bezpieczeń
 stwa.
  
@@ -3058,8 +3072,8 @@ C6000 dzieli się na układy o arytmetyce zmiennopozycyjnej 32- i 64-bitowej
  oraz układy o arytmetyce stałopozycyjnej, w tym taktowane ponad 1 GHz;
  oferowane w konstrukcjach wielordzeniowych i wyposażone wysokowydajne specjaliz
 owane interfejsy komunikacyjne, przystosowane do pracy w architekturach
- z pamięciami wspódzielonymi, stanowią źródło ogromnej mocy obliczeniowej,
- dzieki której możliwe jest już dziś budowanie wydajnych przyszłościowych
+ z pamięciami współdzielonymi, stanowią źródło ogromnej mocy obliczeniowej,
+ dzięki której możliwe jest już dziś budowanie wydajnych przyszłościowych
  systemów telekomunikacji i multimediów, takich jak sieci komórkowe piątej
  generacji lub naziemna telewizja cyfrowa wysokiej rozdzielczości.
 \end_layout
@@ -3111,7 +3125,7 @@ NXP Semiconductors
 \begin_layout Standard
 Firma NXP Semiconductors z siedzibą w Holandii jest kontynuatorem dokonań
  firmy Philips w zakresie scalonych układów półprzewodnikowych.
- Wsród nich znajdują się układy mikrokontrolerów z rodziny 80C51 oraz układy
+ Wśród nich znajdują się układy mikrokontrolerów z rodziny 80C51 oraz układy
  oparte o rdzenie ARM7 i ARM9 opisane w rozdziale 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3210,7 +3224,7 @@ C++
 
 \begin_layout Standard
 Język C++ powstał jako obiektowe rozszerzenie języka C, a jego autor --
- duńczyk Bjarne Stroustrup -- bazował na takich językach jak Simula, Algol,
+ Duńczyk Bjarne Stroustrup -- bazował na takich językach jak Simula, Algol,
  Ada, ML
 \begin_inset Foot
 status collapsed
@@ -3234,7 +3248,7 @@ ie optymalnego i szybkiego kodu maszynowego.
 Wadą języka C++ jest specyficzne pomieszanie go z elementami charakterystycznymi
  dla C, co dla początkującego programisty może być trudne do zrozumienia,
  ale prowadzi również do tworzenia kodu bardzo niskiej jakości i trudnego
- w zarzaniu.
+ w zarządzaniu.
  Natomiast najczęściej popełnianym błędem przez doświadczonych programistów
  w C, którzy przesiadają się na C++ jest pisanie kodu jak w języku C, tylko
  otoczonego klasami.
@@ -3251,7 +3265,7 @@ Do przydatnych cech języka poza obiektowością, należy zaliczyć szablony,
  Z szablonami wiąże się też biblioteka STL, dziś nierozerwalnie złączona
  z każdym kompilatorem C++, choć istniejące obecnie stosowane biblioteki
  STL to kolejne wersje zaproponowanej przez Silicon Graphics pierwszej komercyjn
-ie stosowanej impelentacji oraz biblioteka STLport
+ie stosowanej implementacji oraz biblioteka STLport
 \begin_inset Foot
 status collapsed
 
@@ -3281,9 +3295,9 @@ Do dziś strona numer jeden języka Java to http://java.sun.com
 \end_inset
 
 .
- Język ten bazuje na koncepcjach obiektowości z języka Smalltalk, lecz składnia
- bazuje na języku C++, przy czym w Java nie ma plików nagłówkowych.
- Dodatkowo z języka Smalltalk zaczęrpnął również idee maszyny wirtualnej
+ Język ten bazuje na koncepcjach obiektowością z języka Smalltalk, lecz
+ składnia bazuje na języku C++, przy czym w Java nie ma plików nagłówkowych.
+ Dodatkowo z języka Smalltalk zaczerpnął również idee maszyny wirtualnej
  i odśmiecacza (ang.
  
 \shape italic
@@ -3296,7 +3310,7 @@ garbage collector
  choć typowanie może się w pewien sposób odbywać dynamicznie (możliwy jest
  dzięki temu mechanizm refleksji).
  Od C++ odróżnia Javę w szczególności brak wielokrotnego dziedziczenia oraz
- możliwość tworzenia interfejsów, które jednak w przeciwieństiwe do klas
+ możliwość tworzenia interfejsów, które jednak w przeciwieństwie do klas
  abstrakcyjnych C++ nie mogą implementować żadnej funkcjonalności.
 \end_layout
 
@@ -3343,21 +3357,21 @@ Ciekawym aspektem języka Java są wielokrotnie podejmowane próby stworzenia
  w sprzeczności z założeniem o pełnej przenoszalności kodu, jednak ma znacząco
  pozytywny wpływ na wydajność tak skompilowanych programów.
  Pośród takich kompilatorów znajduje się GCJ, który może dokonać translacji
- do bajtkodu dla maszyny wirtualnej, jak również kompilacji bajtkodu do
+ do bajt-kodu dla maszyny wirtualnej, jak również kompilacji bajt-kodu do
  natywnego kodu maszynowego.
- Umożliwa tez miesznia kodu z bajtkodzie i binarnego kodu natywnego.
+ Umożliwia też mieszanie kodu w bajt-kodzie i binarnego kodu natywnego.
  Aktualnie GCJ wspiera standard Java 1.4, z pewnymi rozszerzeniami z Java
  1.5.
 \end_layout
 
 \begin_layout Standard
 W związku z gwałtownym rozwojem języka Java na platformy wbudowane, podjęto
- próby skonstruowania procesora, który potrafiłby wykonywać bajtkod języka
+ próby skonstruowania procesora, który potrafiłby wykonywać bajt-kod języka
  Java.
- Sum Microsystems oferuje wersję źródłową rdzenia dla bajtkodu Java do mikroproc
-esorów.
+ Sum Microsystems oferuje wersję źródłową rdzenia dla bajt-kodu Java do
+ mikroprocesorów.
  Firma Xilinx oferuje LAVAcore, które jest kompletną implementacją mikroprocesor
-a bajtkodu Java dla układów FPGA typu Virtex i Virtex-II.
+a bajt-kodu Java dla układów FPGA typu Virtex i Virtex-II.
  W rozdziale 
 \begin_inset CommandInset ref
 LatexCommand vref
@@ -3366,8 +3380,8 @@ reference "sub:Jazelle"
 \end_inset
 
  wspomniana została technologia Jazelle opracowana dla rdzeni mikroprocesorów
- ARM, która jest technologią przyspieszania wykonania bajtkodu Java na tych
- mikroporocesorach.
+ ARM, która jest technologią przyspieszania wykonania bajt-kodu Java na
+ tych mikroprocesorach.
 \end_layout
 
 \begin_layout Standard
@@ -3384,7 +3398,7 @@ Strona projektu http://www.jopdesign.com
 \end_inset
 
  stworzony w ramach pracy doktorskiej Martina Schoeberla na Wiedeńskim Uniwersyt
-ecie Technicznym, którego źródła do celów edykacyjnych są dostępne nieodpłatnie.
+ecie Technicznym, którego źródła do celów edukacyjnych są dostępne nieodpłatnie.
 \end_layout
 
 \begin_layout Section
@@ -3428,7 +3442,7 @@ Do zalet Pythona należy zaliczyć bogactwo operatorów działających na zbudow
  typach danych, takich jak lista, krotka, słownik.
  Prawdziwa siła języka Python tkwi właśnie w umiejętnym i wydajnym stosowaniu
  tych możliwości.
- W efekcie w krótkim programie, można zrealizować dużą funkcjnalność.
+ W efekcie w krótkim programie, można zrealizować dużą funkcjonalność.
  Przeładowywanie metod pozwala na tworzenie klas, których zachowanie pokrywa
  się z zachowaniem niektórych typów wbudowanych.
  Możliwe jest też konstruowanie modułów binarnych pisanych w językach niższego
@@ -3436,10 +3450,10 @@ Do zalet Pythona należy zaliczyć bogactwo operatorów działających na zbudow
  Równocześnie interpreter języka Python może być wbudowywany w inne aplikacje,
  jako ich język skryptowy (np.
  w programie Blender).
- Dla języka Java istnieje pełna implementcja Pythona o nazwie Jython, która
+ Dla języka Java istnieje pełna implementacja Pythona o nazwie Jython, która
  nie posiada jedynie modułów specyficznych systemowo dostępnych w oryginalnym
  Pythonie.
- Jython działa całkowicie w formie bytecode'u Javy -- dotyczy to zarówno
+ Jython działa całkowicie w formie bajt-kodu Javy -- dotyczy to zarówno
  interpretera poleceń, jak i samego kodu uruchamianego w nim.
  Możliwy jest dostęp do wszystkich API języka Java.
 \end_layout
@@ -3449,7 +3463,7 @@ Język Python jest językiem słabo typowanym, czyli zmienne mogą zmieniać
  swój typ w trakcie wykonywania programu.
  Mechanizm ten może być problematyczny w większych projektach, gdyż API
  tworzonych modułów wymaga dokumentowania typów parametrów, dla zachowania
- przejżystości.
+ przejrzystości.
  Jednak dynamiczne rozpoznawanie typów danych nadaje się do wykorzystania
  w algorytmie, co pozwala w prosty sposób realizować pewne zadania, wymagające
  złożonego kodu w innych językach.
@@ -3457,8 +3471,8 @@ Język Python jest językiem słabo typowanym, czyli zmienne mogą zmieniać
 
 \begin_layout Standard
 Dodatkowym atutem tego języka jest mechanizm generatorów, który polega na
- konstrułowaniu funkcji zwracającej rezultat swojego wykonania wraz zapamiętanie
-m swojego wewnętrznego stanu i powrocie do punktu ostatniego wyjścia przy
+ konstruowaniu funkcji zwracającej rezultat swojego wykonania wraz zapamiętaniem
+ swojego wewnętrznego stanu i powrocie do punktu ostatniego wyjścia przy
  kolejnym wywołaniu.
  Jest to szczególnie przydatne w tworzeniu metod klas, które stanowią kontenery
  przechowujące elementy, po których potrzebna jest iteracja.
@@ -3468,10 +3482,10 @@ m swojego wewnętrznego stanu i powrocie do punktu ostatniego wyjścia przy
 Aby poprawić wydajność kluczowych elementów tworzonej aplikacji, Python
  umożliwia wspomniane wcześniej wykorzystanie modułów napisanych w językach
  kompilowanych do natywnego kodu procesora.
- Jest to możliwe dzięki dobrze udekumentowanemu interfejsowi oraz kilku
+ Jest to możliwe dzięki dobrze udokumentowanemu interfejsowi oraz kilku
  projektom ułatwiającym realizację tego zadania.
  Jednym z nich jest Cython, który jest językiem do pisania modułów rozszerzający
-ch dla Python z równą łatwością, co kodu w samym jęyzku Python.
+ch dla Python z równą łatwością, co kodu w samym języku Python.
  Jest on następnie przegenerowywany na kod w języku C, który może zostać
  skompilowany wybranym kompilatorem języka C.
  Cython jest bardzo bliski oryginalnemu językowi, ma jednak kilka ograniczeń,
@@ -3482,7 +3496,7 @@ ch dla Python z równą łatwością, co kodu w samym jęyzku Python.
 \begin_layout Standard
 Biblioteki języka Python, zarówno te dostarczane standardowo, jak również
  dostępne w ramach odrębnych projektów, czynią z Python'a bardzo potężne
- narzędzie inzynierskie.
+ narzędzie inżynierskie.
  Popularność Pythona rośnie nie tylko w kręgach wykorzystujących go jako
  język skryptowy, ale również w poważnych komercyjnych zastosowaniach biznesowyc
 h i technicznych.
@@ -3533,7 +3547,7 @@ Consultative Committee International Telegraphy and Telephony
 \end_inset
 
 X.208.
- W roku 1994 wydano nowa wersja opisana została w dokumentach ITU-T z seri
+ W roku 1994 wydano nowa wersja opisana została w dokumentach ITU-T z serii
  X.680 (X.680-X.683).
  W roku 2002 wycofano dokument ITU-T X.208.
  Standard ASN.1 znajduje zastosowanie w wielu dokumentach ITU-T w tym w serii
@@ -3558,11 +3572,11 @@ Management Information Base
 \begin_layout Standard
 Kod opisujący struktury danych kompilowany jest do postaci kodu źródłowego
  w języku programowania, najczęściej języka C.
- Dobiero tak wygenerowany moduł staje się częścią kodu programu, który jest
+ Dopiero tak wygenerowany moduł staje się częścią kodu programu, który jest
  używany do kodowania danych w sposób niezależny od platformy.
  Przy czym kodowanie odbywa się według reguł kodowania zdefiniowanych niezależni
 e od samego języka.
- Aktualnie rozróznia się nastepujące typy kodowań w ASN.1:
+ Aktualnie rozróżnia się następujące typy kodowań w ASN.1:
 \end_layout
 
 \begin_layout Description
@@ -3594,7 +3608,7 @@ key "X690"
 \begin_deeper
 \begin_layout Standard
 Ponieważ BER stosuje prostą składnię, łatwą do implementacji, wynikowy strumień
- danych jest skonstrułowany mało efektywnie.
+ danych jest skonstruowany mało efektywnie.
  Powszechnie uważa się, że inne reguły kodowania są bardziej praktyczne
  w rzeczywistych realizacjach systemów korzystających z ASN.1.
  Nie przeszkadza to jednak w stosowaniu BER w wielu rozwiązaniach rzeczywistych
@@ -3662,18 +3676,18 @@ Packed Encoding Rules
  Zwartość wymaga jednak, by dekoder znał całość abstrakcyjnej składni struktur
  danych, aby móc je zdekodować.
  W większości przypadków, nie stanowi to problemu, bo aplikacja zna struktury
- danych, którym isię posługuje.
+ danych, którymi się posługuje.
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 Istnieją dwa warianty reguł spakowanych: niewyrównane i wyrównane.
- W pierwszym wypadku, bity upakowane są bez zważania dla granice okteków
+ W pierwszym wypadku, bity upakowane są bez zważania dla granice oktetów
  (bajtów).
  W przypadku wyrównanym, określone typy struktury danych są wyrównywane
  do granic oktetów, co oznacza marnotrawstwo części bitów.
  Niewyrównane kodowanie zużywa mniej bitów, kosztem jednak czasu przetwarzania
- stumienia danych.
+ strumienia danych.
  Typowe procesory są słabo przystosowane do danych niewyrównanych do bajtów,
  a współcześnie nawet wymagają posługiwania się całymi słowami, by nie tracić
  na wydajności.
@@ -3765,8 +3779,8 @@ Księżyc
 \shape default
 \lang polish
 ) narodził się w Brazylii, w roku 1993 na Uniwersytecie Papieskim w Rio
- de Janerio w Brazylii.
- Był rezultatem embarga technologicznego obowiązujęcego w Brazylii do 1992
+ de Janeiro w Brazylii.
+ Był rezultatem embarga technologicznego obowiązującego w Brazylii do 1992
  roku, podtrzymywanego przez nacjonalistów uważających, że Brazylia ma dość
  potencjału do rozwoju własnego sprzętu komputerowego i oprogramowania.
  Troje członków grupy komputerowych technologii graficznych Uniwersytetu
@@ -3780,8 +3794,8 @@ mi.
 
 \begin_layout Standard
 Lua jest językiem wielu paradygmatów, elementy składni pochodzą z takich
- języków jak Modula, CLU, C++, Snobol, AWK, jednakże zestaw głównych fukcjonalno
-ści jest ograniczony.
+ języków jak Modula, CLU, C++, Snobol, AWK, jednakże zestaw głównych funkcjonaln
+ości jest ograniczony.
  Lua nie ma wbudowanych wielu mechanizmów, które mogą być prosto zaimplementowan
 e, pozwalając na prowadzenie paradygmatu programowania funkcyjnego lub obiektowe
 go.
@@ -3800,8 +3814,8 @@ W rezultacie wszystkich decyzji projektowych, interpreter języka Lua jest
 \begin_inset space ~
 \end_inset
 
-kB i może być łatwo zadoptowany do wielu aplikacji.
- Kod źródłowy jest kompilowany do bajtokodu, który następnie wykonywany
+kB i może być łatwo zaadoptowany do wielu aplikacji.
+ Kod źródłowy jest kompilowany do bajt-kodu, który następnie wykonywany
  jest w maszynie wirtualnej.
  W tym wypadku jednak, podobnie jak ma to miejsce w Python, kod binarny
  Lua jest nieprzenośny ze względu na optymalizację dla architektury docelowego
@@ -3811,7 +3825,7 @@ kB i może być łatwo zadoptowany do wielu aplikacji.
 \begin_layout Standard
 Interfejs programistyczny do języka C jest bardzo prosty i pozwala na interakcję
  z interpreterem na poziomie stosu wywołań.
- Dostępna jest biblioteka, która pozwala na wykonywanie opracji współdziałania
+ Dostępna jest biblioteka, która pozwala na wykonywanie operacji współdziałania
  z interpreterem Lua na trochę wyższym poziomie.
 \end_layout
 
@@ -3826,7 +3840,7 @@ Projekt eLua ma na celu wprowadzenie języka Lua do świata programowania
  środowiska programistycznego na samym mikrokontrolerze, bez potrzeby instalacji
  specyficznych narzędzi po stronie PC.
  Ewolucja projektu zmierza w kierunku udostępnienia podstawowego edytora
- skryptów używalnego na różnych urzadzenia wejścia/wyjścia, znajdującego
+ skryptów używalnego na różnych urządzenia wejścia/wyjścia, znajdującego
  się w programie mikrokontrolera.
  W momencie pisania tego tekstu, oficjalne wsparcie dostępne jest dla architektu
 ry ARM, jednakże planowany jest rozwój innych platform.
@@ -3837,8 +3851,8 @@ Doświadczenia w uruchamianiu interpretera Lua na mikrokontrolerach będą
  przeniesione do realizacji sterownika robota, gdzie skrypty wykonawcze
  będą ładowane z programu sterującego na komputerze PC.
  Osiągnięta zostanie wysoka elastyczność w funkcjonalności, która będzie
- mogła być rozszerzana na żądanie, bez rekompilacji kodu binarnego programu
- mikrokontrolera.
+ mogła być rozszerzana na żądanie, bez ponownej kompilacji kodu binarnego
+ programu mikrokontrolera.
 \end_layout
 
 \end_inset
@@ -3868,7 +3882,7 @@ nych w sposób kontrolowany.
 
 \begin_layout Standard
 Prawidłowe sterowanie cyfrowe silnikiem elektrycznym prądu stałego wymaga
- pewnej postawowej wiedzy z zakresu budowy silnika, mechaniki jego działania
+ pewnej podstawowej wiedzy z zakresu budowy silnika, mechaniki jego działania
  oraz zasad przekształcania energii elektrycznej na pole magnetyczne a następnie
  na moment obrotowy.
 \end_layout
@@ -3916,10 +3930,128 @@ W opisywanym typie silnika elektrycznego stojan jest elementem nieruchomym
 \end_layout
 
 \begin_layout Standard
-Twornik to uzwojenie wytwarzające pole elektromagnetyczne, które odziałując
+Twornik to uzwojenie wytwarzające pole elektromagnetyczne, które oddziałując
  z wzbudzającym polem magnetycznym wytarza ruch obrotowy wirnika.
  W omawianym przypadku twornik znajduje się na wirniku i pojedyncze uzwojenia
  są zasilane poprzez komutator.
+\end_layout
+
+\begin_layout Standard
+Dla istotnej części, silnik prądu stałego może być przybliżony jako element
+ indukcyjny i źródło napięcia.
+ W wielu wypadkach istotne jest też uwzględnienie rezystancji w modelu silnika:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename vector/motor_model.svg
+	width 90col%
+	BoundingBox 0bp 0bp 721bp 146bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Uproszczony model elektryczny silnika prądu stałego
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cewka reprezentuje zwoje twornika, rezystor -- straty eklektyczne.
+ Źródło napięcia reprezentuje 
+\begin_inset Quotes pld
+\end_inset
+
+napięcie generatora
+\begin_inset Quotes prd
+\end_inset
+
+ i jest proporcjonalne do prędkości obrotowej silnika i jest oznaczone jako
+ 
+\begin_inset Formula $\textrm{U}{}_{\text{g}}$
+\end_inset
+
+.
+ Prąd płynący przez silnik jest proporcjonalny do momentu obrotowego.
+ 
+\end_layout
+
+\begin_layout Standard
+Są dwie ważne skrajności.
+ Jedna.
+ gdy silnik pracuje bez obciążenia.
+ W tym momencie moment obrotowy silnika jest użyty do kompensacji strat.
+ Jeżeli zlekceważymy to na chwilę, wtedy zobaczymy, że prąd wynosi 0 (nie
+ jest potrzebny moment) i napięcia na stykach wynosi 
+\begin_inset Formula $\textrm{U}{}_{\text{g}}$
+\end_inset
+
+.
+ Po uwzględnieniu również strat, prąd nadal pozostanie niski, a napięcie
+ na stykach nadal bliskie 
+\begin_inset Formula $\textrm{U}{}_{\text{g}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Druga skrajność ma miejsce, kiedy silnik jest zablokowany.
+ Wtedy nie ma obrotów, więc 
+\begin_inset Formula $\textrm{U}{}_{\text{g}}$
+\end_inset
+
+ wynosi 0.
+ Motor pełni rolę cewki.
+ Prąd płynący przez silni wytworzy moment, jednak napięcie na stykach będzie
+ 0 (lub bliskie 0 uwzględniając straty).
+\end_layout
+
+\begin_layout Standard
+Możemy zignorować straty w wielu przypadkach w trakcie omawiania, lub założyć,
+ że są stałe.
+ W wielu wypadkach straty silnika są zależne od prędkości.
+ Przyjmujemy 
+\begin_inset Formula $\textrm{L}{}_{\text{m}}$
+\end_inset
+
+, 
+\begin_inset Formula $\textrm{R}{}_{\text{m}}$
+\end_inset
+
+i 
+\begin_inset Formula $\textrm{U}{}_{\text{g}}$
+\end_inset
+
+ jako stałe przy zadanej prędkości, przynajmniej dla istotnej części.
+ W rzeczywiści jednak, na skutek komutacji w silniku i relatywnej pozycji
+ przewodzących zwojów względem pola magnetycznego stojanów, wszystkie te
+ wartości są funkcją położenia twornika.
+ To jest aspekt istotny dla omówienia zwrotnych zakłóceń elektromagnetycznych
+ i ich pomiaru.
 \end_layout
 
 \begin_layout Section
@@ -3933,7 +4065,20 @@ Komutator
 \end_layout
 
 \begin_layout Standard
+Komutator w silniku prądu stałego dostarcza energię do wirnika.
+ Komutator zbudowany jest z dielektrycznego walca o wysokiej odporności
+ temperaturowej, nałożonego na oś wirnika.
+ Na powierzchni walca umieszczone są wzdłużnie sekcje połączone z uzwojeniami,
+ najczęściej wykonane z miedzi.
+ Sekcje izolowane są miedzy sobą szczeliną lub przy pomocy polimerowych
+ przekładek.
+ Po powierzchni walca ślizgają się grafitowe szczotki dociśnięte przy pomocy
+ sprężyn.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
+placement !h
 wide false
 sideways false
 status open
@@ -3944,6 +4089,8 @@ status open
 	filename vector/komutator.svg
 	lyxscale 50
 	width 90col%
+	BoundingBox 0bp 180bp 842bp 482bp
+	clip
 
 \end_inset
 
@@ -3970,15 +4117,7 @@ Diagram ilustrujący działanie komutatora silnika prądu stałego
 
 \end_inset
 
-Komutator w silniku prądu stałego dostarcza energię do wirnika.
- Komutator zbudowany jest z dielektrycznego walca o wysokiej odporności
- temperaturowej, nałożonego na oś wirnika.
- Na powierzchni walca umieszczone są wzdłużnie sekcje połączone z uzwojeniami,
- najczęściej wykonane z miedzi.
- Sekcje izolowane są miedzy sobą szczeliną lub przy pomocy polimerowych
- przekładek.
- Po powierzchni walca ślizgają się grafitowe szczotki dociśnięte przy pomocy
- sprężyn.
+
 \end_layout
 
 \begin_layout Standard
@@ -3996,9 +4135,247 @@ reference "fig:Diagram-komutatora"
  W rzeczywistych silnikach ilość styków na walcu komutatora jest większa
  i może sięgać kilkunastu.
  Działanie komutatora pozwala zasilać tylko te uzwojenia, których pole magnetycz
-ne wraz z polem magnetycznym stojanu wytwarza chwilowy moment obrotowy.
+ne wraz z polem magnetycznym stojana wytwarza chwilowy moment obrotowy.
  W sumie kolejno zasilane uzwojenia wytwarzają moment obrotowy zbliżony
  do jednostajnego.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Mostek H"
+
+\end_inset
+
+Mostek H
+\end_layout
+
+\begin_layout Standard
+Sterowanie zasilaniem elementów elektroindukcyjnych silników elektrycznych
+ prądu stałego odbywa się najczęściej poprzez układ zwany mostkiem H.
+ Nazwa jest ściśle związana z wyglądem schematu elektrycznego tego układu.
+\end_layout
+
+\begin_layout Subsection
+Zasada działania mostka H
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !th
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename vector/mostek_h.svg
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Schemat elektryczny mostka H
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Elementy przełączające (oznaczenia T1 do T4) są zazwyczaj tranzystorami
+ bipolarnymi lub tranzystorami FET, w aplikacjach dla wysokich napięć stosuje
+ się - tranzystor bipolarny z izolowaną bramką (ang.
+ 
+\shape italic
+\lang british
+IGBT, Insulated Gate Bipolar Transistor
+\shape default
+\lang polish
+).
+ Istnieją również rozwiązania scalone, jednakże dla rozważań dotyczących
+ działania, rozpatrywany będzie układ dyskretny.
+ Diody (oznaczenia D1 do D4) są zwane zabezpieczającymi i są to przeważnie
+ diody Schottky'ego.
+ Chociaż są one wspominane w materiałach dotyczących mostków H, ich rola
+ jest z reguły zaniedbywana.
+ W rzeczywistości pełnią istotną rolę i muszą być dokładnie omówione.
+\end_layout
+
+\begin_layout Standard
+Ogólnie, każdy z czterech elementów przełączających może być załączany i
+ wyłączany niezależnie, są jednak pewnie oczywiste ograniczenia.
+\end_layout
+
+\begin_layout Standard
+Podstawowy tryb pracy mostka H jest bardzo prosty: jeżeli T2 i T3 są załączone,
+ lewa styk silnika będzie połączony z masą, podczas gdy prawy styk będzie
+ połączony z zasilaniem.
+ Prąd rozpoczyna przepływ przez silnik, co wywołuje ruch obrotowy wałka
+ (umownie) w przód.
+ Jeżeli T1 i T4 są załączone, następuje odwrócenie i silnik rozpoczyna ruch
+ obrotowy wałka w kierunku wstecznym.
+ Jeżeli kontrolowana ma być prędkość silnika, jeden z elementów przełączających
+ jest wysterowany przez kontrolowaną szerokość impulsu (ang.
+ 
+\shape italic
+\lang british
+PWM, pulse width modulation
+\shape default
+\lang polish
+).
+ Średnie napięcie widziane przez silnik będzie uzależnione od współczynnika
+ pomiędzy czasem załączenia i wyłączenia w sygnale PWM.
+\end_layout
+
+\begin_layout Subsection
+Diody zabezpieczające
+\end_layout
+
+\begin_layout Standard
+Diody zabezpieczające (D1 do D4) są często niedocenione i bardzo pobieżnie
+ wspomniane w opisach mostków H, jednakże są bardzo istotnym komponentem.
+\end_layout
+
+\begin_layout Standard
+Podstawowe reguła jest bardzo prosta: kiedy mostek jest włączony, dwa z
+ czterech elementów przełączających przenoszą prąd, więc diody nie pełnią
+ żadnej roli.
+ Jednakże, kiedy mostek jest wyłączony, elementy przełączające przestają
+ przewodzić prąd.
+ Gdy obciążeniem mostka jest elektryczny silnik prądu stałego, którego charakter
+ jest indukcyjny, to w trakcie włączenia powstaje wewnątrz pole elektromagnetycz
+ne.
+ W czasie braku przewodzenia wszystkich elementów przełączających, to pole
+ elektromagnetyczne musi zostać rozładowane, a do czasu gdy to nastąpi,
+ prąd płynie przez zwoje.
+ Ten prąd nie może przepłyną przez wyłączone elementy przełączające, jednak
+ musi znaleźć ujście.
+ Diody zabezpieczające są niskorezystancyjną ścieżką dla tych prądów rozładowują
+cych i pozwalają utrzymać napięcie na stykach silnika na racjonalnym poziomie.
+\end_layout
+
+\begin_layout Standard
+Kiedykolwiek dioda przewodzi prąd, następuje na niej relatywnie stały spadek
+ napięcia w kierunku przewodzenia określany jako 
+\begin_inset Formula $\textrm{U}_{\textrm{F}}$
+\end_inset
+
+.
+ Napięcie to zawiera się w przedziale 500 do 1000
+\begin_inset space ~
+\end_inset
+
+mV dla większości elementów.
+ Ten spadek napięcia w połączeniu z przepływem prądu powoduje wydzielanie
+ ciepła.
+ Jego aktualny poziom zależy o średniego prądu przepływającego przez diodę
+ i czasu jej otwarcia.
+ Jako przykład, jeżeli pole elektromagnetyczne rozładowuje się przez 1
+\begin_inset space ~
+\end_inset
+
+ms, czas pojedynczego cyklu wynosi 10
+\begin_inset space ~
+\end_inset
+
+ms, prąd na początku cyklu wyłączenia jest 10
+\begin_inset space ~
+\end_inset
+
+A i spada liniowo (zakładając obciążenie idealnie indukcyjne), wtedy średni
+ prąd 5
+\begin_inset space ~
+\end_inset
+
+A przepływa przez diodę przez 10% czasu.
+ Wydzielane ciepło to 
+\begin_inset Formula $5\,\unit{A}\times0,5\,\unit{V}\times10\%=0,25\,\unit{W}$
+\end_inset
+
+(zakładając 
+\begin_inset Formula $\textrm{U}_{\textrm{F}}=0,5\,\unit{V}$
+\end_inset
+
+).
+ Jeżeli jednak pole rozładowuje się wolniej, powiedzmy w 5
+\begin_inset space ~
+\end_inset
+
+ms, wydzielanie ciepła wzrasta do 
+\begin_inset Formula $5\,\unit{A}\times0,5\,\unit{V}\times50\%=1,25\,\unit{W}$
+\end_inset
+
+.
+ Liczby są jeszcze gorsze dla przypadków, gdy pole nie rozładuje się całkowicie
+ do końca cyklu wyłączenia.
+ Widać wyraźnie, że ilość ciepła wydzielanego przez diody może być tak samo
+ istotna, jak ciepło wydzielane na elementach przełączających.
+\end_layout
+
+\begin_layout Standard
+Jest bardzo istotne widzieć, że o ile dla układów niskiej częstotliwości,
+ wybór elementów przełączających jest wymuszony głównie przez maksymalny
+ statyczny prąd dostarczany przez mostek, to wybór diod jest bardziej angażujący
+ i wymaga analizy aktualnego rozładowywania się pola elektromagnetycznego.
+ Wybór diody będzie uzależniony od dynamicznego zachowania mostka.
+ Projekt i kontrola mostka ma znaczący wpływ jak długo diody będą przewodzić,
+ więc przy jednym rodzaju kontroli mostek może przetrwać większe prący,
+ niż w przypadku innego rodzaju.
+ W pewnych wypadkach diody nie przewodzą w ogóle.
+\end_layout
+
+\begin_layout Standard
+Istotną cechą tranzystorów MOSFET jest to, że posiadają nieodłączną (nie
+ do uniknięcia) diodę pomiędzy drenem a źródłem.
+ Ta dioda działa jak dioda zabezpieczająca w mostku H, a większość specyfikacji
+ MOSFETów określa parametry tej diody.
+ Tak więc, jest możliwe użycie tej wbudowanej diody tranzystora i nie wprowadzen
+ie dodatkowo zewnętrznej, jeżeli specyfikacja tej diody spełnia wymagania
+ projektu.
+ W przypadku tranzystorów bipolarnych taka wbudowana dioda nie występuje,
+ więc zewnętrzna dioda zawsze musi być obecna.
+\end_layout
+
+\begin_layout Standard
+Diody - głównie, gdy pozostają wyłączone - mają małą pojemność pomiędzy
+ swoimi stykami.
+ Ta pojemność musi zostać rozładowana zanim urządzenie może się włączy,
+ co prowadzi do opóźnień w odpowiedzi na nagłą zmianę napięcia.
+ Ta pojemność zależy od wielu współczynników, ogólnie patrząc rośnie wraz
+ z powierzchnią złącza P-N, które daje możliwość przewodzenia prądu tej
+ diodzie.
+ W skrócie, im większa dioda, tym wolniejsza.
+ Kiedy mostek się wyłącza, prąd silnika musi dalej płynąć.
+ Silnik wymusi na diodzie (lub diodach) przewodzenie, aby utworzyć drogę
+ dla tego prądu, jednakże opóźnienie załączenia diody stworzy problem.
+ Gorzej, to zdąży się w punkcie, gdzie prąd silnika jest najwyższy.
+ Bez złagodzenia napięcia może wzrosnąć do niebezpiecznego poziomi i zniszczyć
+ elementy przełączające.
+ Aby rozwiązać problem na okres, kiedy ani elementy przełączające, ani diody
+ nie nie przewodzą, kondensator musi być podłączony do styków silnika.
+ Niektóre silniki posiadają już kondensatory, jednak wiele wymaga zewnętrznych.
+ Taki kondensator będzie przewodził prąd do czasu, aż dioda się nie otworzy,
+ jednakże napięcie na stykach silnika nadal będzie gwałtownie rosło.
+ Jest więc istotne, aby wybierać diody o najkrótszym możliwym czasie załączania,
+ co jest powodem, że diody Schottky'ego są najlepsze do tej roli.
 \end_layout
 
 \begin_layout Chapter
@@ -4009,7 +4386,7 @@ Narzędzia i moduły
 Rozdział ten opisuje techniczne aspekty narzędzi i modułów planowanych do
  użycia w trakcie realizacji pracy.
  Opracowany materiał pochodzi z ekstrakcji najbardziej użytecznych informacji
- zawatych w dokumentacjach producentów opisywanych narządzi i modułów.
+ zawartych w dokumentacjach producentów opisywanych narządzi i modułów.
 \end_layout
 
 \begin_layout Section
@@ -4148,7 +4525,7 @@ texttrademark}
 \shape italic
 zbudowane na Eclipse
 \shape default
-), oznaczającym możliwości łatwej integracji z rozszerzeniami zewnętrzymi
+), oznaczającym możliwości łatwej integracji z rozszerzeniami zewnętrznymi
  w celu zwiększania funkcjonalności środowiska pracy.
 \end_layout
 
@@ -4234,7 +4611,7 @@ textregistered}
 \end_layout
 
 \begin_layout Standard
-AVR32 Studo wspiera również wszystkie płyty firmy ATMEL przewidziane dla
+AVR32 Studio wspiera również wszystkie płyty firmy ATMEL przewidziane dla
  systemu Linux, takie jak STK1000 i NGW100.
  Aby uruchamiać i debugować system docelowy potrzebne jest połączenie sieciowe
  pomiędzy komputerem a płytą.
@@ -4376,7 +4753,7 @@ reference "sec:Interfejs-JTAG"
 
 ) lub interfejsem debugWIRE.
  Interfejs DebugWIRE pozwala na debugowanie układów o małej liczbie wyprowadzeń
- dzięku użyciu tylko jednej linii sygnałowej do komunikacji.
+ dzięki użyciu tylko jednej linii sygnałowej do komunikacji.
  JTAG ICE mk-II wraz z programem AVR Studio daje do ręki użytkownika kompletną
  kontrolę nad wewnętrznymi zasobami mikrokontrolera, skracając czas uruchamiania
  poprzez uczynienie debugowania łatwiejszym.
@@ -4385,9 +4762,9 @@ reference "sec:Interfejs-JTAG"
 \end_layout
 
 \begin_layout Standard
-Dzięki temu nardzędziu zasoby mikrokontrolera AVR mogą być monitorowane:
- pamięć Flash, pamiięć EEPROM, pamięć SRAM, rejestry, licznik programu,
- bity blokujące i zabezpieczające, oraz wszystkie moduły wejścia/wyjścia.
+Dzięki temu narzędziu zasoby mikrokontrolera AVR mogą być monitorowane:
+ pamięć Flash, pamięć EEPROM, pamięć SRAM, rejestry, licznik programu, bity
+ blokujące i zabezpieczające, oraz wszystkie moduły wejścia/wyjścia.
  Wspierane jest także rozległe wsparcie dla warunków zatrzymania, włączając
  w to zmianę przepływu w programie, zmianę komórek pamięci pod konkretnym
  adresem lub zakresami adresów.
@@ -4480,7 +4857,7 @@ Fotografia EVK1100
 
 \end_inset
 
-Zestaw uruchomieniowy EVK1100 pozakazany na rysunku 
+Zestaw uruchomieniowy EVK1100 pokazany na rysunku 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Fotografia EVK1100"
@@ -4506,8 +4883,8 @@ reference "sub:Mikrokontroler-AT32UC3A0512"
 
 .
  Została zaprojektowana w sposób umożliwiający projektantowi urządzenia
- uruchomienie oprogramowania relizującego planowaną funkcjonalność na dostępnych
- peryferiach.
+ uruchomienie oprogramowania realizującego planowaną funkcjonalność na dostępnyc
+h peryferiach.
  Następnie tak uruchomiony projekt może zostać przeniesiony na docelową
  płytę urządzenia, do zaprojektowania której zestaw EVK1100 może stanowić
  dobrą konstrukcję referencyjną.
@@ -4523,7 +4900,7 @@ Interfejs USB (2.0 mini A-B receptacle)
 \end_layout
 
 \begin_layout Itemize
-Interfejs Ethernet (External Ethernet Phy 10/100 and RJ45 connector)
+Interfejs Ethernet (External Ethernet Phy 10/100 and gniazdko RJ45)
 \end_layout
 
 \begin_layout Itemize
@@ -4815,7 +5192,7 @@ avr32gdbproxy
 
 \end_inset
 
- jest używane do połączenia aplikacji debugera z systemem docelowym.
+ jest używane do połączenia aplikacji debuggera z systemem docelowym.
 \end_layout
 
 \begin_layout Standard
@@ -4914,8 +5291,8 @@ Pierwsze uruchomienie wykonuje także automatyczną aktualizację komponentów
  Proces ten uruchamiany jest w tle, co możemy zaobserwować w formie małej
  animacji w prawym dolnym rogu z procentowym wyrażeniem postępu analizy
  dostępnych uaktualnień.
- W przypadku znalezienia aktualizacji pojawi sie okno dialogowe z pytaniem,
- czy przejżeć dostępne aktualizacje.
+ W przypadku znalezienia aktualizacji pojawi się okno dialogowe z pytaniem,
+ czy przejrzeć dostępne aktualizacje.
  Po potwierdzeniu dostępne jest drzewo grup komponentów, które zawierają
  jakieś aktualizacje.
  Można zaznaczyć, które chce się zainstalować.
@@ -5098,7 +5475,7 @@ name "sec:JTAG-ICE-rozruch"
 \end_layout
 
 \begin_layout Standard
-STK500 jest kartą rozwojową i zestawem startowy dla mikrokontrolerów z lini
+STK500 jest kartą rozwojową i zestawem startowy dla mikrokontrolerów z linii
  AVR firmy ATMEL .
  Jest to produkt o uznanej rynkowej pozycji, stosowany od kilku lat jako
  układ rozruchowy dla aplikacji mikrokontrolerów AVR, głównie ATMEGA i ATtiny
@@ -5150,7 +5527,7 @@ AVR Studio
 \begin_layout Standard
 Układ ATMEGA8515L nie posiada żadnych elementów JTAG ani wsparcia dla sprzętoweg
 o debugowania.
- Aby wypróbować możliwości ICE mk-II należy zamonotwać w podstawce układ
+ Aby wypróbować możliwości ICE mk-II należy zamontować w podstawce układ
  ATMEGA162V dostępny standardowo w aktualnie dostarczanych zestawach STK500.
  W tym układzie mamy dostęp do pełnego standardu IEEE 1149.1 oraz sprzętowego
  debugowania i programowania pamięci Flash, EEPROM, fuse- i lock-bitów.
@@ -5235,9 +5612,9 @@ http://www.atmel.com/avr32
 
 \end_inset
 
- zawierającego między innymi kompliator gcc i debuger gdb dla procesora
+ zawierającego między innymi kompilator gcc i debugger gdb dla procesora
  AVR32.
- Dodatkowo z płytki CD dostarczonej z zestawew EVK1100 lub ze strony producenta
+ Dodatkowo z płytki CD dostarczonej z zestawem EVK1100 lub ze strony producenta
  ściągamy bibliotekę kodu dla procesora typu UC3.
 \end_layout
 
@@ -5304,7 +5681,7 @@ avr32program chiperase
 
 \begin_deeper
 \begin_layout Standard
-Usuwa to zapezpieczenia pamięci flash mikrokontrolera i pozwala na zapisanie
+Usuwa to zabezpieczenia pamięci flash mikrokontrolera i pozwala na zapisanie
  nowego programu binarnego do tej pamięci.
 \end_layout
 
@@ -5350,8 +5727,8 @@ avr32program program -finternal@0x80000000,512Kb -e -v uc3a0512-adc_example.elf
 \end_inset
 
 w rezultacie kod binarny zostaje zaprogramowany w pamięci flash procesora.
- Zastosowane opcje programu inforują programator, że adres pamięci programowalne
-j zaczyna się pod adresem 0x80000000 i ma rozmiar 512
+ Zastosowane opcje programu informują programator, że adres pamięci programowaln
+ej zaczyna się pod adresem 0x80000000 i ma rozmiar 512
 \begin_inset space ~
 \end_inset
 
@@ -5451,7 +5828,7 @@ MemMang
 \family typewriter
 heap3.c
 \family default
- do odpowiadającego katologu projektu.
+ do odpowiadającego katalogu projektu.
 \end_layout
 
 \begin_layout Standard
@@ -5825,7 +6202,7 @@ http://ttssh2.sourceforge.jp/
 \end_layout
 
 \begin_layout Standard
-Tryb komend modułu Bluetooth jest osiągalny tylko za pośrednictwm UART,
+Tryb komend modułu Bluetooth jest osiągalny tylko za pośrednictwem UART,
  czyli od strony zbudowanego konwertera RS232 na logikę 3,3
 \begin_inset space ~
 \end_inset
@@ -6201,10 +6578,10 @@ Obrazek płytki, zdjęcie modułu.
 \end_layout
 
 \begin_layout Standard
-Moduł sterowania zasilaniem silników elektrycznych składa sie z siedmiu
- układów TC4424A, których wejścia są połączone z wyprowadzeniami GPIO miktrokont
-rolera, zaś wyjścia poprzez diody Schottky'ego połączone są ze stykami komutator
-ów opisanych w 
+Moduł sterowania zasilaniem silników elektrycznych składa się z siedmiu
+ układów TC4424A, których wejścia są połączone z wyprowadzeniami GPIO mikrokontr
+olera, zaś wyjścia poprzez diody Schottky'ego połączone są ze stykami komutatoró
+w opisanych w 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:Komutator"
@@ -6378,7 +6755,7 @@ Projekt płytki drukowanej modułu zasilania silników
 \end_layout
 
 \begin_layout Standard
-Diody Schottky'ego na schemacie pełnią rolę zabezpieczeń wyść tranzystorów
+Diody Schottky'ego na schemacie pełnią rolę zabezpieczeń wyjść tranzystorów
  MOSFET pracujących wewnątrz TC4424A przed impulsami o wysokim napięciu
  indukowanych na zwojach twornika, gdy odłączane jest napięcie zasilające,
  bądź pojawia się zewnętrzny moment napędowy.
@@ -7280,7 +7657,8 @@ Zestawienie wyprowadzeń użytych do sterowania silników elektrycznych
 \end_layout
 
 \begin_layout Standard
-Wszytkie wyprowadzenia mikrokontrolera operują na poziomach logicznych 
+Wszystkie wyprowadzenia mikrokontrolera operują na poziomach logicznych
+ 
 \begin_inset Quotes pld
 \end_inset
 
@@ -7364,7 +7742,7 @@ Opis architektury systemu znajduje się tak odlegle od początku, ponieważ
  ma największe znaczenie dla oprogramowania stworzonego do realizacji tego
  projektu.
  Szczegóły architektury podsystemu mikrokontrolera oraz podsystemu zdalnej
- kontroli klarowały się w trakcie realizacji, jako uszczegółowenia ogólnej
+ kontroli klarowały się w trakcie realizacji, jako uszczegółowienia ogólnej
  wizji projektu.
 \end_layout
 
@@ -7515,7 +7893,7 @@ laptopami
 
 .
  Oznacza to, że realizacja tego elementu systemu, który pozwala na wprowadzanie
- komend sterujących sprowadza się do napisania opprogramowania.
+ komend sterujących sprowadza się do napisania oprogramowania.
  Poniżej znajduje się uproszczony opis architektury tej aplikacji.
 \end_layout
 
@@ -7699,7 +8077,7 @@ linker
 \begin_layout Enumerate
 Ustawienie opcji programu konsolidującego na 
 \begin_inset listings
-lstparams "breaklines=true,language=C,tabsize=4"
+lstparams "breakautoindent=true,breaklines=true,language=C,tabsize=4"
 inline true
 status open
 
@@ -7727,7 +8105,7 @@ platform
 .
  Istotny kod funkcji wspomnianej powyżej, powinien zawierać:
 \begin_inset listings
-lstparams "language=C,tabsize=4"
+lstparams "basicstyle={\ttfamily},breakatwhitespace=true,breakautoindent=true,breaklines=true,language=C,tabsize=4"
 inline false
 status open
 
@@ -7963,27 +8341,103 @@ reference "sub:Środowisko-ramowe"
 
 \end_inset
 
-) zawiera funkcję pm_blabla(), która sprowadza konfigurację zegarów do wpisania
- oczekiwań w strukturę danych, a następnie dokonuje obliczeń dopasowujących
- opisane rejestry.
+) zawiera funkcję 
+\family typewriter
+pm_configure_clocks()
+\family default
+, która sprowadza konfigurację zegarów do wpisania oczekiwań w strukturę
+ danych, a następnie dokonuje obliczeń dopasowujących opisane rejestry.
  W wyniku jej działania procesor rozpoczyna pracę na podanej częstotliwości
  i modyfikuje zawartość struktury według wyliczonych wartości.
 \end_layout
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=C,tabsize=4"
+lstparams "breaklines=true,language=C,tabsize=4"
 inline false
 status open
 
 \begin_layout Plain Layout
 
-...
+/* Put clock configuration into structure */
+\end_layout
+
+\begin_layout Plain Layout
+
+pm_freq_param_t freq_param = {
+\end_layout
+
+\begin_layout Plain Layout
+
+	.cpu_f = configCPU_CLOCK_HZ,
+\end_layout
+
+\begin_layout Plain Layout
+
+	.pba_f = configPBA_CLOCK_HZ,
+\end_layout
+
+\begin_layout Plain Layout
+
+	.osc0_f = FOSC0,
+\end_layout
+
+\begin_layout Plain Layout
+
+	.osc0_startup = OSC0_STARTUP
+\end_layout
+
+\begin_layout Plain Layout
+
+}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Configure CPU by PLL clocking */
+\end_layout
+
+\begin_layout Plain Layout
+
+pm_configure_clocks(&freq_param);
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Możliwość wykorzystywania pamięci SDRAM wymaga, aby inicjalizacja ostatecznej
+ prędkości pracy odbyła się zanim zostanie wykorzystana sterta do alokacji
+ pamięci przydzielanej dynamicznie.
+ Aby tego dokonać powyższy kod musi znaleźć się w funkcji 
+\begin_inset listings
+lstparams "language=C,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+__init_startup()
+\end_layout
+
+\end_inset
+
+, zastępując wywołanie funkcji 
+\begin_inset listings
+lstparams "language=C,tabsize=4"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+pm_switch_to_osc0()
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -8023,6 +8477,101 @@ dopisać lockowanie malloca
 Oprogramowanie sterujące
 \end_layout
 
+\begin_layout Standard
+Oprogramowanie sterujące o nazwie kodowej Robotiq zostało zrealizowane w
+ języku Python.
+ Interfejs graficzny oparty jest o bibliotekę GTK+.
+ Aplikacja ta pozwala na wydawanie poleceń tekstowych, posiada fragment
+ interfejsu upodobniony do oryginalnego kontrolera RoboActor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+zdjęcia pilota + screen shot programu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Zależności
+\end_layout
+
+\begin_layout Standard
+Aby uruchomić aplikację sterującą należy posiadać zainstalowany interpreter
+ języka Python w wersji 2.6.1.
+ Dodatkowo następujące rozszerzenia muszą być zainstalowane:
+\end_layout
+
+\begin_layout Enumerate
+PyGTK 2.12.1 -- dostępne pod adresem 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+PyGObject 2.14.2 -- dostępne pod adresem 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://ftp.gnome.org/pub/GNOME/binaries/win32/pygobject/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+PyCairo 1.4.12 -- dostępne pod adresem 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://ftp.gnome.org/pub/GNOME/binaries/win32/pycairo/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+PySerial 2.4 -- dostępne pod adresem 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://pyserial.wiki.sourceforge.net/pySerial"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+W przypadku uruchamiania aplikacji w systemie operacyjnym Windows, należy
+ zainstalować rozszerzenie:
+\end_layout
+
+\begin_layout Enumerate
+PyWin32 build 312 -- dostępne pod adresem 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://sourceforge.net/projects/pywin32/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mniamuśnie.
+\end_layout
+
 \begin_layout Chapter*
 Podsumowanie
 \end_layout
@@ -8038,6 +8587,10 @@ Załączniki
 \begin_layout Chapter*
 Załącznik A.
  Dokumentacja programu Robotiq
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
