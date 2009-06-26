@@ -1,4 +1,4 @@
-#LyX 1.6.3 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -2326,17 +2326,9 @@ ności, jak proste układy kontrolno-sterujące; nie posiadają wyprowadzeń
 \end_layout
 
 \begin_layout Description
-ATmega ...
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Uzupełnić!
-\end_layout
-
-\end_inset
-
-
+ATmega jest to rodzina układów o bardziej rozbudowanej konstrukcji wewnętrznej
+ z wyprowadzoną większą ilością lini wejścia-wyjścia, dostępne z różnymi
+ konfiguracjami wewnętrznej pamięci Flash.
 \end_layout
 
 \begin_layout Description
@@ -2805,8 +2797,8 @@ ników z firmy Siemens w 1994 roku.
 \end_layout
 
 \begin_layout Standard
-Wśród produktów Infineon znajdują się mikroprocesory trójrdzeniowe AUDO
- TriCore, z których każdy pełni inną specjalizowana funkcję mikrokontrolera,
+Wśród produktów Infineon znajdują się mikroprocesory trójrdzeniowe w architektur
+ze TriCore, z których każdy pełni inną specjalizowana funkcję mikrokontrolera,
  DSP i podsystemu ładująco-zapisującego z uproszczonym zestawem instrukcji
  oraz procesory radiowe dla telefonii komórkowej (ang.
  
@@ -2817,11 +2809,30 @@ baseband processor
 \lang polish
 ).
  W katalogu oferowanych mikroprocesorów znajduje się poza tym kilka rodzin
- układów mikrokontrolerów: 8-bitowe XC8000 i C500, 16-bitowe XC166, C166
- i XE166, 32-bitowe TC116X oraz linię XC2000, która ma mieszaną architekturę
- 16- i 32-bitową.
- Praktycznie wszystkie układy mają specjalizowane zastosowania i poza architektu
-rą TriCode są przede wszystkim skierowane do przemysłu.
+ układów mikrokontrolerów:
+\end_layout
+
+\begin_layout Itemize
+8-bitowe: XC8000 i C500 w architekturze Intel 8051,
+\end_layout
+
+\begin_layout Itemize
+16-bitowe: XC166, C166 i XE166,
+\end_layout
+
+\begin_layout Itemize
+32-bitowe: AUDO Future, Audo NextGeneration, TC116X, TC1130
+\end_layout
+
+\begin_layout Itemize
+linię XC2000, która ma mieszaną architekturę 16- i 32-bitową.
+\end_layout
+
+\begin_layout Standard
+Praktycznie wszystkie układy mają specjalizowane zastosowania i poza architektur
+ą TriCore są przede wszystkim skierowane do przemysłu motoryzacyjnego.
+ W przypadku układów 32-bitowych Infineon przewiduje znacznie szersze zastosowan
+ia.
 \end_layout
 
 \begin_layout Section
@@ -3149,6 +3160,43 @@ Firma STMicroelectronics z siedzibą w Szwajcarii jest twórcą i producentem
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:ARM"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Section
+Zilog
+\end_layout
+
+\begin_layout Standard
+Firma Zilog z siedzibą w Kaliforni istnieje od 1974 roku do dnia dziesiejszego,
+ choć jej biznesowe losy przechodziły pewne perturbacje.
+ Założona została przez Federico Fagginiego, która pracował wcześniej nad
+ projektem procesora 8080 w firmie Intel.
+ W roku 1976 wypuściła jeden z najsłynniejszych procesorów oznaczonych Z80,
+ który był znacznie zmodyfikowaną wersją 8080.
+ Do historii przeszedł dzięki słynnym komputerom osobistym ZX Spectrum firmy
+ Sinclair Research, za konstrukcję którego Clive Marles Sinclair otrzymał
+ w roku 1983 tytuł szlachecki.
+\end_layout
+
+\begin_layout Standard
+Istotną ciekawostką jest fakt, że procesor Z80 jest produkowany i stosowany
+ w urządzeniach elektronicznych do dnia dziesiejszego.
+ Zilog produkuje wiele wcieleń tego procesora, w tym Z8 i Z180.
+ Mikrokontroler eZ80 Acclaim to układ na bazie rdzenia Z80, ale zaprojektowany
+ do pracy w urządzeniach.
+ W ofercie firmy znajdują się również układy ZNEO o architekturze 16-bitowej,
+ oraz układy Zatara i Encore!
+\begin_inset space ~
+\end_inset
+
+32 o architekturze 32-bitowej na bazie rdzenia ARM9 (patrz 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:ARM-9"
 
 \end_inset
 
