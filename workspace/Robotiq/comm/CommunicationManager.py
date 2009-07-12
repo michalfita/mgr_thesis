@@ -55,10 +55,15 @@ class CommunicationManager(Singleton):
         for name, cls in self.__class__.__channels_class_dict.items():
             obj = cls()
             # consider default setup here
+        self.__current = None
+        self.__state = 'disconnected'
+        action_dispatcher = ActionDispatcher()
+        action_dispatcher['connect'] += self.connect
+        action_dispatcher['disconnect'] += self.disconnect
     
     @property
     def state(self):
-        return 'disconnected'
+        return self.__state
     
     @classmethod    
     def register_channel_class(cls, typename, typeobject):
@@ -96,3 +101,21 @@ class CommunicationManager(Singleton):
             }
             channels_data.append(chan_data)
         return channels_data
+    
+    def set_channels_data(self, channels_data):
+        for data in channels_data:
+            obj = self.__class__.__channels_obj_dict[data['name']]
+            obj.setup(data['parameters'])
+    
+    def select(self, name):
+        self.__current = self.__class__.__channels_obj_dict[name]
+    
+    def connect(self, p = None):
+        if self.__current is not None:
+            if self.__current.connect():
+                self.__state = 'connected'
+    
+    def disconnect(self, p = None):
+        if self.__current is not None:
+            if self.__current.disconnect():
+                self.__state = 'disconnected'

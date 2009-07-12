@@ -64,6 +64,7 @@ class AboutDialog(gtk.AboutDialog):
         self.set_program_name('Robotiq')
         pixbuf = gtk.gdk.pixbuf_new_from_file('icons/robot2-128x128.png')
         self.set_logo(pixbuf)
+        self.connect('response', self.on_response)
         super(AboutDialog, self).run()
     
     def email_hook(self, dialog, link, data):
@@ -75,3 +76,11 @@ class AboutDialog(gtk.AboutDialog):
         """URL hook method.
         """
         dialog.response(gtk.RESPONSE_CLOSE)
+
+    def on_response(self, windows, response_code):
+        print response_code
+        print "gtk.RESPONSE_CLOSE = ",gtk.RESPONSE_CLOSE
+	if response_code == gtk.RESPONSE_CLOSE:
+            self.hide()
+        if response_code == gtk.RESPONSE_CANCEL:
+	    self.hide()

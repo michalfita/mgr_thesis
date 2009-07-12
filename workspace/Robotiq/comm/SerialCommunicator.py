@@ -30,9 +30,7 @@ class SerialCommunicator(object):
         self.__state = 'initial'
         self.__serial = serial.Serial()
         self.__serial.timeout = 2 # particular value :-)
-        action_dispatcher = ActionDispatcher()
-        action_dispatcher['connect'] += self.connect
-        action_dispatcher['disconnect'] += self.disconnect
+        self.__available_ports = self.__scan()
         print self.__class__.__name__, "initialized..."
     
     @property
@@ -67,39 +65,46 @@ class SerialCommunicator(object):
         parameters['port'] = {
             'position' : 1,
             'name' : _('Serial Port'),
-            'options' : None,
+            'options' : [x[1] for x in self.__available_ports],
+            'value' : self.__serial.port
           }
         parameters['baudrate'] = {
             'position' : 2,
             'name' : _('Baud Rate'),
-            'options' : self.__serial.BAUDRATES
+            'options' : self.__serial.BAUDRATES,
+            'value' : self.__serial.baudrate
           }
         parameters['bytesize'] = {
             'position' : 3,
             'name' : _('Number of data bits'),
-            'options' : self.__serial.BYTESIZES
+            'options' : self.__serial.BYTESIZES,
+            'value' : self.__serial.bytesize
           }
         
         parameters['parity'] = {
             'position' : 4,
             'name' : _('Parity check mode'),
-            'options' : self.__serial.PARITIES
+            'options' : self.__serial.PARITIES,
+            'value' : self.__serial.parity
           }
         parameters['stopbits'] = {
             'position' : 5,
             'name' : _('Stop bits'),
-            'options' : self.__serial.STOPBITS
+            'options' : self.__serial.STOPBITS,
+            'value' : self.__serial.stopbits
           }
         
         parameters['xonxoff'] = {
             'position' : 6,
             'name' : _('XON/XOFF flow control'),
-            'logic' : [0 , 1]
+            'logic' : [0 , 1],
+            'value' : self.__serial.xonxoff
           }
         parameters['rtscts'] = {
             'position' : 7,
             'name' : _('RTS/CTS flow control'),
-            'logic' : [0, 1]
+            'logic' : [0, 1],
+            'value' : self.__serial.rtscts
           }
         return parameters
     
@@ -110,6 +115,7 @@ class SerialCommunicator(object):
         if self.__state != 'connected':
             self.__serial.open()
             self.__state = 'connected'
+        return True
     
     def disconnect(self, p = None):
         """
@@ -118,6 +124,22 @@ class SerialCommunicator(object):
         if self.__state != 'disconnected':
             self.__serial.close()
             self.__state = 'disconnected'
+        return True
+    
+    def __scan(self):
+        """
+        Scan for available ports. return a list of tuples (num, name)
+        """
+        available = []
+        for i in range(256):
+            try:
+                s = serial.Serial(i)
+                available.append((i, s.portstr))
+                s.close()   #explicit close 'cause of delayed GC in java
+            except serial.SerialException:
+                pass
+        return available
+
     
     def __working_thread(self):
         pass    

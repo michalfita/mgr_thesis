@@ -57,15 +57,17 @@ class CommunicationUserInterface(Singleton):
         actions_list = []
         items_string = ''
         number = 0
-        for chan_data in self.__comm_mgr.get_channels_data():
+        channels_data =  self.__comm_mgr.get_channels_data()
+        for chan_data in channels_data:
             actions_list.append(
                 (chan_data['action'], None, chan_data['menu'], None, chan_data['tooltip'], number)
             )
-            number += 1
             items_string += '<menuitem name="%s" action="%s" />\n' % (chan_data['name'], chan_data['action'])
+            if number == 0:
+                self.select(chan_data['name'])
+            number += 1
         #self.__chan_actiongroup.add_toggle_actions(actions_list)
-        self.__chan_actiongroup.add_radio_actions(actions_list)
-        
+        self.__chan_actiongroup.add_radio_actions(actions_list, on_change = self.__on_change)
         # Feed uimanager with additional menu items.
         id = self.__uimanager.add_ui_from_string('''
         <ui>
@@ -93,13 +95,19 @@ class CommunicationUserInterface(Singleton):
           if self.__comm_mgr.state == 'connected':
               self.__main_actiongroup.get_action('connect').set_sensitive(False)
               self.__main_actiongroup.get_action('disconnect').set_sensitive(True)
+              self.__main_actiongroup.get_action('connection-setup').set_sensitive(False)
               self.__chan_actiongroup.set_sensitive(False)
           else:
               self.__main_actiongroup.get_action('connect').set_sensitive(True)
               self.__main_actiongroup.get_action('disconnect').set_sensitive(False)
+              self.__main_actiongroup.get_action('connection-setup').set_sensitive(True)
               self.__chan_actiongroup.set_sensitive(True)
           self.__uimanager.ensure_update()
         return 
+    
+    def __on_change(self, current, user_param = None):
+        print "Selected:", current
+        #TODO: Need finish, without additional dummy communicator this is impossible
     
     def get_tabs(self):
         tabs = []
@@ -112,13 +120,27 @@ class CommunicationUserInterface(Singleton):
             tabs.append(tab)
         return tabs
     
-    def select(self):
-        pass
+    def setup(self, tabs):
+        channels_data = self.__comm_mgr.get_channels_data()
+        for num, tab in enumerate(tabs):
+            if channels_data[num]['name'] == tab['name']:
+                for param in channels_data[num]['parameters']:
+                    value = tab['parameters'][param]['value']
+                    channels_data[num]['parameters'][param]['value'] = value
+        self.__comm_mgr.set_channels_data(channels_data)
+    
+    def select(self, name):
+        if self.__comm_mgr is not None:
+            self.__comm_mgr.select(name)
     
     def connect(self, p = None):
+        if self.__comm_mgr is not None:
+            self.__comm_mgr.connect()
         self.__update_uimanager()
         
     def disconnect(self, p = None):
+        if self.__comm_mgr is not None:
+            self.__comm_mgr.disconnect()
         self.__update_uimanager()
         
     def setup_dialog(self, p = None):
@@ -135,6 +157,7 @@ class SetupDialog(gtk.Dialog):
         self.__save_button = gtk.Button(None, gtk.STOCK_SAVE)
         self.__save_button.use_stock = True
         self.__save_button.set_sensitive(False)
+        self.__save_button.connect('clicked', self.__on_save_clicked)
         self.add_action_widget(self.__save_button, gtk.RESPONSE_ACCEPT)
         self.__save_button.show()
         self.__cancel_button = gtk.Button(None, gtk.STOCK_CANCEL)
@@ -143,8 +166,11 @@ class SetupDialog(gtk.Dialog):
         self.add_action_widget(self.__cancel_button, gtk.RESPONSE_CANCEL)
         #Notebook
         self.__notebook = gtk.Notebook()
+        self.__notebook.connect('switch-page', self.__on_switch_page)
         self.__tables = []
-        for tab in CommunicationUserInterface().get_tabs():
+        self.__tabs = CommunicationUserInterface().get_tabs()
+        self.__current_page = 0
+        for tab in self.__tabs:
             rows = 0
             table = gtk.Table(1, 2, True) 
             table.set_row_spacings(4)
@@ -157,17 +183,28 @@ class SetupDialog(gtk.Dialog):
                 label.set_justify(gtk.JUSTIFY_RIGHT)
                 label.set_alignment(1.0, 0.5)
                 label.show()
-                combo = gtk.ComboBox(gtk.ListStore(gobject.TYPE_STRING))
+                model = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_PYOBJECT)
+                combo = gtk.ComboBox(model)
+                combo.set_wrap_width(1)
                 cell = gtk.CellRendererText()
                 combo.pack_start(cell, True)
                 combo.add_attribute(cell, 'text', 0)
 
                 if 'options' in details and details['options'] is not None:
                     for option in details['options']:
-                        combo.append_text(str(option))
+                        #combo.append_text(str(option))
+                        iter = model.append((str(option), option))
+                        if details['value'] == option:
+                            combo.set_active_iter(iter)
                 elif 'logic' in details:
-                    combo.append_text(_('Disable'))
-                    combo.append_text(_('Enable'))
+                    #combo.append_text(_('Disable'))
+                    iter_true = model.append((_('Disable'), 0))
+                    #combo.append_text(_('Enable'))
+                    iter_false = model.append((_('Enable'), 1))
+                    if details['value'] == True or details['value'] == 1:
+                        combo.set_active_iter(iter_true)
+                    else:
+                        combo.set_active_iter(iter_false)
                 combo.connect('changed', self.__on_combo_change, name)
                 combo.show()
                 table.attach(label, 0, 1, details['position'] - 1, details['position'])
@@ -181,11 +218,27 @@ class SetupDialog(gtk.Dialog):
     
     def __on_combo_change(self, combo, param):
         self.__save_button.set_sensitive(True)
-        print '$Changed', param
+        iter = combo.get_active_iter()
+        model = combo.get_model()
+        if iter is not None and model is not None:
+            value = model.get_value(iter, 0)
+            self.__tabs[self.__current_page]['parameters'][param]['value'] = value
+            print 'New value set to', value
         
     def __on_cancel_clicked(self, button, param = None):
         self.response(gtk.RESPONSE_CANCEL)
         self.destroy()
+        
+    def __on_save_clicked(self, button, param = None):
+        self.response(gtk.RESPONSE_ACCEPT)
+        comm_ui_if = CommunicationUserInterface()
+        comm_ui_if.setup(self.__tabs)    
+        self.destroy()
+    
+    def __on_switch_page(self, notebook, page, page_num, user_param = None):
+        print "Page:",page
+        print "Page num:", page_num
+        self.__current_page = page_num
         
     def garbage(self):
         for tab in CommunicationUserInterface().get_tabs():
