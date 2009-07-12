@@ -5,14 +5,50 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Robotiq 1.0\n"
-"POT-Creation-Date: 2009-06-12 19:13+rodkowoeuropejski czas letni\n"
-"PO-Revision-Date: 2009-06-12 19:19+0100\n"
-"Last-Translator: Michał Fita <michal.fita@gmail.com>\n"
+"POT-Creation-Date: 2009-07-11 13:34+CEST\n"
+"PO-Revision-Date: 2009-07-11 13:45+0100\n"
+"Last-Translator: MIchał Fita <michal.fita@gmail.com>\n"
 "Language-Team: Michał Fita <michal.fita@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
+
+#: comm/SerialCommunicator.py:40
+msgid "_Serial Communication"
+msgstr "Komunikacja _szeregowa"
+
+#: comm/SerialCommunicator.py:44
+msgid "Use serial communication to interact with robot."
+msgstr "Użyj komunikacji szeregowej do interakcji z robotem."
+
+#: comm/SerialCommunicator.py:69
+msgid "Serial Port"
+msgstr "Port szeregowy"
+
+#: comm/SerialCommunicator.py:74
+msgid "Baud Rate"
+msgstr "Prędkość danych"
+
+#: comm/SerialCommunicator.py:79
+msgid "Number of data bits"
+msgstr "Ilość bitów danych"
+
+#: comm/SerialCommunicator.py:85
+msgid "Parity check mode"
+msgstr "Tryb sprawdzania parzystości"
+
+#: comm/SerialCommunicator.py:90
+msgid "Stop bits"
+msgstr "Bity stopu"
+
+#: comm/SerialCommunicator.py:96
+msgid "XON/XOFF flow control"
+msgstr "Kontrola przepływu XON/XOFF"
+
+#: comm/SerialCommunicator.py:101
+msgid "RTS/CTS flow control"
+msgstr "Kontrola przepływu RTS/CTS"
 
 #: robotiq.py:60
 msgid ""
@@ -32,154 +68,166 @@ msgstr "Nieuchwycony wyjątek"
 msgid "The <b>error</b> \"%s: %s\" that has just occured during program operation left following <b>traceback</b>:"
 msgstr "<b>Błąd</b> \"%s: %s\" który właśnie nastąpił w czasie działania programu, pozostawił następujący <b>ślad</b>:"
 
-#: ui\AboutDialog.py:53
+#: ui/AboutDialog.py:53
 msgid "Release %d"
 msgstr "wydanie %d"
 
-#: ui\AboutDialog.py:54
+#: ui/AboutDialog.py:54
 msgid "Copyright by Michał Fita © 2008-2009. Some rights reserved according to the license."
 msgstr "Copyright Michał Fita © 2008-2009. Wszelkie prawa zastrzeżone według z licencji."
 
-#: ui\AboutDialog.py:55
+#: ui/AboutDialog.py:55
 msgid "This is the application for control the robot mechanics by processor board processing the commands."
 msgstr "To jest aplikacja do kontroli mechaniki robota poprzez płytę procesora przetwarzającą komendy."
 
-#: ui\AboutDialog.py:62
+#: ui/AboutDialog.py:62
 msgid "Author of the icon: %s"
 msgstr "Autor ikony: %s"
 
-#: ui\AboutDialog.py:63
+#: ui/AboutDialog.py:63
 msgid "translator-credits"
 msgstr "Michał Fita <michal.fita@gmail.com>"
 
-#: ui\ActionDispatcher.py:112
-#: ui\ActionDispatcher.py:128
-#: ui\ActionDispatcher.py:144
-#: ui\ActionManager.py:22
-#: ui\ActionManager.py:30
-#: ui\ActionManager.py:37
+#: ui/ActionDispatcher.py:112
+#: ui/ActionDispatcher.py:128
+#: ui/ActionDispatcher.py:144
+#: ui/ActionManager.py:22
+#: ui/ActionManager.py:30
+#: ui/ActionManager.py:37
 msgid "New action has to have name string, other types are not allowed."
 msgstr "Nowa akcja musi posiadać nazwę w postaci ciągu, inne typy nie są dopuszczalne."
 
-#: ui\ActionDispatcher.py:114
-#: ui\ActionManager.py:24
+#: ui/ActionDispatcher.py:114
+#: ui/ActionManager.py:24
 msgid "New action has to have callable object as second argument."
 msgstr "Nowa akcja musi posiadać wywoływalny obiekt jako drugi argument."
 
-#: ui\ActionDispatcher.py:146
-#: ui\ActionManager.py:32
-#: ui\ActionManager.py:39
+#: ui/ActionDispatcher.py:146
+#: ui/ActionManager.py:32
+#: ui/ActionManager.py:39
 msgid "No such action as \"%s\" found."
 msgstr "Akcji takiej jak \"%s\" nie znaleziono."
 
-#: ui\ActionDispatcher.py:164
+#: ui/ActionDispatcher.py:164
 msgid "You failed, sucker! You cannot dispatch item, only add to and remove from action."
 msgstr "Porażka, frajerze! Nie możesz przesyłać elementu, tylko dodawać do i usuwać z akcji."
 
-#: ui\CommunicationUserInterface.py:39
+#: ui/CommunicationUserInterface.py:43
 msgid "Connect to the robot."
 msgstr "Połącz z robotem."
 
-#: ui\CommunicationUserInterface.py:39
+#: ui/CommunicationUserInterface.py:43
 msgid "_Connect"
 msgstr "Połą_cz"
 
-#: ui\CommunicationUserInterface.py:40
+#: ui/CommunicationUserInterface.py:44
 msgid "Disconnect the connection."
 msgstr "Rozłącz połączenie."
 
-#: ui\CommunicationUserInterface.py:40
+#: ui/CommunicationUserInterface.py:44
 msgid "_Disconnect"
 msgstr "Ro_złącz"
 
-#: ui\CommunicationUserInterface.py:41
+#: ui/CommunicationUserInterface.py:45
 msgid "Confi_guration"
 msgstr "Konfi_guracja"
 
-#: ui\CommunicationUserInterface.py:41
+#: ui/CommunicationUserInterface.py:45
 msgid "Configure all communication channels."
 msgstr "Skonfiguruj wszystkie kanały komunikacyjne."
 
-#: ui\CommunicationUserInterface.py:56
-msgid "Use serial communication to interact with robot."
-msgstr "Użyj komunikacji szeregowej do interakcji z robotem."
+#: ui/CommunicationUserInterface.py:133
+msgid "Connection configuration"
+msgstr "Konfiguracja połączenia"
 
-#: ui\CommunicationUserInterface.py:56
-msgid "_Serial Communication"
-msgstr "Komunikacja _szeregowa"
+#: ui/CommunicationUserInterface.py:169
+msgid "Disable"
+msgstr "Wyłącz"
 
-#: ui\ControlButtons.py:137
-#: ui\ControlButtons.py:959
+#: ui/CommunicationUserInterface.py:170
+msgid "Enable"
+msgstr "Włącz"
+
+#: ui/CommunicationUserInterface.py:204
+msgid "Parameter"
+msgstr "Parametr"
+
+#: ui/CommunicationUserInterface.py:210
+msgid "Value"
+msgstr "Wartość"
+
+#: ui/ControlButtons.py:137
+#: ui/ControlButtons.py:959
 msgid "Command \"%s\" not implemented in drawing."
 msgstr "Komenda \"%s\" nie zaimplementowana w rysowaniu."
 
-#: ui\MainMenu.py:33
-#: ui\MainWindow.py:185
+#: ui/MainMenu.py:33
+#: ui/MainWindow.py:199
 msgid "_File"
 msgstr "_Plik"
 
-#: ui\MainMenu.py:46
-#: ui\MainWindow.py:186
+#: ui/MainMenu.py:46
+#: ui/MainWindow.py:200
 msgid "_Edit"
 msgstr "_Edycja"
 
-#: ui\MainWindow.py:84
+#: ui/MainWindow.py:98
 msgid "Placeholder"
 msgstr "Zaklepane miejsce"
 
-#: ui\MainWindow.py:187
+#: ui/MainWindow.py:201
 msgid "_Connection"
 msgstr "Połą_czenie"
 
-#: ui\MainWindow.py:188
+#: ui/MainWindow.py:202
 msgid "_Help"
 msgstr "P_omoc"
 
-#: ui\MainWindow.py:189
+#: ui/MainWindow.py:203
 msgid "Cu_t"
 msgstr "Wy_tnij"
 
-#: ui\MainWindow.py:189
+#: ui/MainWindow.py:203
 msgid "Put selected content into the clipboard and remove from context."
 msgstr "Umieść zaznaczoną teść w schowku i usuń ją z kontekstu."
 
-#: ui\MainWindow.py:190
+#: ui/MainWindow.py:204
 msgid "Copy seleted content into the clipboard."
 msgstr "Skopiuj zaznaczoną treść do schowka."
 
-#: ui\MainWindow.py:190
+#: ui/MainWindow.py:204
 msgid "_Copy"
 msgstr "_Kopiuj"
 
-#: ui\MainWindow.py:191
+#: ui/MainWindow.py:205
 msgid "Paste the content of clipboard in active context."
 msgstr "Wklej zawartość schowka w aktywnym kontekście."
 
-#: ui\MainWindow.py:191
+#: ui/MainWindow.py:205
 msgid "_Paste"
 msgstr "_Wklej"
 
-#: ui\MainWindow.py:192
+#: ui/MainWindow.py:206
 msgid "Select _All"
 msgstr "Z_aznacz wszystko"
 
-#: ui\MainWindow.py:192
+#: ui/MainWindow.py:206
 msgid "Select all in active context."
 msgstr "Zaznacz wszystko w aktyewym kontekście."
 
-#: ui\MainWindow.py:193
+#: ui/MainWindow.py:207
 msgid "Displays information about application and its license."
 msgstr "Wyświetla informacje o aplikacji i jej licencji."
 
-#: ui\MainWindow.py:193
+#: ui/MainWindow.py:207
 msgid "_About"
 msgstr "_O programie"
 
-#: ui\MainWindow.py:194
+#: ui/MainWindow.py:208
 msgid "Leave the application."
 msgstr "Opuść aplikację."
 
-#: ui\MainWindow.py:194
+#: ui/MainWindow.py:208
 msgid "_Quit"
 msgstr "_Wyjście"
 
