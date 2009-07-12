@@ -5,6 +5,8 @@ import serial
 import threading
 import gettext
 import gtk
+import gobject
+import time
 from comm.CommunicationManager import MetaCommunicator
 from ui.MainWindow import MainWindow
 from ui.ActionDispatcher import ActionDispatcher
@@ -31,6 +33,7 @@ class SerialCommunicator(object):
         self.__serial = serial.Serial()
         self.__serial.timeout = 2 # particular value :-)
         self.__available_ports = self.__scan()
+        self.__thread_enabled = False
         print self.__class__.__name__, "initialized..."
     
     @property
@@ -114,17 +117,21 @@ class SerialCommunicator(object):
         """
         if self.__state != 'connected':
             self.__serial.open()
+            self.__thread_start()
             self.__state = 'connected'
-        return True
+            return True
+        return False
     
     def disconnect(self, p = None):
         """
         This method disconnects.
         """
         if self.__state != 'disconnected':
+            self.__thread_stop()
             self.__serial.close()
             self.__state = 'disconnected'
-        return True
+            return True
+        return False
     
     def __scan(self):
         """
@@ -140,6 +147,28 @@ class SerialCommunicator(object):
                 pass
         return available
 
+    def write(self, data):
+        if self.__state == 'connected':
+            self.__serial.write(data)
+
+    def __thread_start(self):
+        self.__thread = threading.Thread(None, self.__working_thread, 'SerialThread')
+        self.__thread_enabled = True
+        self.__thread.daemon = True
+        self.__thread.start()
+    
+    def __thread_stop(self):
+        self.__thread_enabled = False
+        self.__thread.join(10)
+    
+    def __idle_write(self, data):
+        action_dispatcher = ActionDispatcher()
+        action_dispatcher['remote-input-data'](data)
+        return False
     
     def __working_thread(self):
-        pass    
+        while(self.__thread_enabled):
+            data = self.__serial.read(4096)
+            gobject.idle_add(self.__idle_write, data)
+
+                

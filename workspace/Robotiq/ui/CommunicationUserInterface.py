@@ -221,7 +221,7 @@ class SetupDialog(gtk.Dialog):
         iter = combo.get_active_iter()
         model = combo.get_model()
         if iter is not None and model is not None:
-            value = model.get_value(iter, 0)
+            value = model.get_value(iter, 1)
             self.__tabs[self.__current_page]['parameters'][param]['value'] = value
             print 'New value set to', value
         

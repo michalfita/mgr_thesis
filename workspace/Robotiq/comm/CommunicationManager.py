@@ -57,9 +57,9 @@ class CommunicationManager(Singleton):
             # consider default setup here
         self.__current = None
         self.__state = 'disconnected'
-        action_dispatcher = ActionDispatcher()
-        action_dispatcher['connect'] += self.connect
-        action_dispatcher['disconnect'] += self.disconnect
+        #action_dispatcher = ActionDispatcher()
+        #action_dispatcher['connect'] += self.connect
+        #action_dispatcher['disconnect'] += self.disconnect
     
     @property
     def state(self):
@@ -113,9 +113,18 @@ class CommunicationManager(Singleton):
     def connect(self, p = None):
         if self.__current is not None:
             if self.__current.connect():
+                action_dispatcher = ActionDispatcher()
+                action_dispatcher['local-output-data'] += self.write
                 self.__state = 'connected'
+                print '%Connect'
     
     def disconnect(self, p = None):
         if self.__current is not None:
             if self.__current.disconnect():
+                action_dispatcher = ActionDispatcher()
+                action_dispatcher['local-output-data'] -= self.write
                 self.__state = 'disconnected'
+                
+    def write(self, data):
+        if self.__current is not None:
+            self.__current.write(data)

@@ -31,6 +31,7 @@ import pygtk
 pygtk.require('2.0')
 import gtk
 import gobject
+import glib
 import thread
 import traceback
 import sys
@@ -87,13 +88,13 @@ class Application(Singleton):
     # behave like function.
     def __call__(self):
         try:
+            #glib.threads_init()
+            gtk.gdk.threads_init()
             self.main_window = MainWindow()
             #self.communicator = SerialCommunicator()
             self.main_window.show()
             #gobject.idle_add()
-            #gtk.gdk.threads_init()
             #gtk.gdk.threads_enter()
-            
             gtk.main()
         except:
             self.exception_handler()
