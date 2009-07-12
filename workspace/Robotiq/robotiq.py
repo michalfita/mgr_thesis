@@ -31,7 +31,6 @@ import pygtk
 pygtk.require('2.0')
 import gtk
 import gobject
-import glib
 import thread
 import traceback
 import sys

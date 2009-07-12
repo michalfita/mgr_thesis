@@ -152,23 +152,30 @@ class SerialCommunicator(object):
             self.__serial.write(data)
 
     def __thread_start(self):
-        self.__thread = threading.Thread(None, self.__working_thread, 'SerialThread')
+        #self.__thread = threading.Thread(None, self.__working_thread, 'SerialThread')
         self.__thread_enabled = True
-        self.__thread.daemon = True
-        self.__thread.start()
+        #self.__thread.daemon = True
+        #self.__thread.start()
+        gobject.idle_add(self.__idle_write)
     
     def __thread_stop(self):
         self.__thread_enabled = False
-        self.__thread.join(10)
+        #self.__thread.join(10)
     
-    def __idle_write(self, data):
+    def __idle_write(self, data = None):
         action_dispatcher = ActionDispatcher()
-        action_dispatcher['remote-input-data'](data)
-        return False
+        if self.__serial.inWaiting() > 0:
+            data = self.__serial.read(4096)
+            gtk.gdk.threads_enter()
+            action_dispatcher['remote-input-data'](data)
+            gtk.gdk.threads_leave()
+        return self.__thread_enabled # False
     
     def __working_thread(self):
         while(self.__thread_enabled):
             data = self.__serial.read(4096)
+            gtk.gdk.threads_enter()
             gobject.idle_add(self.__idle_write, data)
+            gtk.gdk.threads_leave()
 
                 
