@@ -88,7 +88,7 @@ class Application(Singleton):
     def __call__(self):
         try:
             #glib.threads_init()
-            gtk.gdk.threads_init()
+            #gtk.gdk.threads_init()
             self.main_window = MainWindow()
             #self.communicator = SerialCommunicator()
             self.main_window.show()

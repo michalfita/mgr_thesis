@@ -47,7 +47,7 @@ class CommandEntry(gtk.ComboBoxEntry):
         entry_text = self.entry.get_text()
         
         if 'local-output-data' in self.action_dispatcher:
-            self.action_dispatcher['local-output-data'](entry_text + "\n")
+            self.action_dispatcher['local-output-data'](entry_text + "\r\n")
         if self.provider is not None:
             self.provider.write(entry_text + "\n")
         if self.output is not None:

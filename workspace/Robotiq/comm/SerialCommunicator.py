@@ -31,7 +31,7 @@ class SerialCommunicator(object):
         super(SerialCommunicator, self).__init__()
         self.__state = 'initial'
         self.__serial = serial.Serial()
-        self.__serial.timeout = 2 # particular value :-)
+        self.__serial.timeout = 0 # particular value :-)
         self.__available_ports = self.__scan()
         self.__thread_enabled = False
         print self.__class__.__name__, "initialized..."
@@ -149,7 +149,8 @@ class SerialCommunicator(object):
 
     def write(self, data):
         if self.__state == 'connected':
-            self.__serial.write(data)
+            self.__serial.write(data+'\r\n')
+            print "write('",data,"')"
 
     def __thread_start(self):
         #self.__thread = threading.Thread(None, self.__working_thread, 'SerialThread')
