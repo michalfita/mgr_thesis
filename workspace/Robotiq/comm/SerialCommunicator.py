@@ -6,10 +6,12 @@ import threading
 import gettext
 import gtk
 import gobject
+import glib
 import time
 from comm.CommunicationManager import MetaCommunicator
 from ui.MainWindow import MainWindow
 from ui.ActionDispatcher import ActionDispatcher
+from misc.PersistentContainer import PersistentContainer
 
 """@package comm.SerialCommunicator
 This module contains class to communicate through serial port.
@@ -53,11 +55,13 @@ class SerialCommunicator(object):
         @todo Consider exception in case of calling in wrong place
         """
         if self.__state != 'connected':
+            persistent = PersistentContainer()
             if isinstance(parameters, dict):
                 for n,p in parameters.items():
                     if isinstance(p, dict):
                       p = p['value']
                     setattr(self.__serial, n, p)
+                    setattr(persistent.serialcommunicator, n, p)
             self.__state != 'disconnected'
         else:
             pass # consider exception
@@ -65,49 +69,50 @@ class SerialCommunicator(object):
     @property
     def parameters(self):
         parameters = {}
+        persistent = PersistentContainer()
         parameters['port'] = {
             'position' : 1,
             'name' : _('Serial Port'),
             'options' : [x[1] for x in self.__available_ports],
-            'value' : self.__serial.port
+            'value' : persistent.serialcommunicator.port or self.__serial.port
           }
         parameters['baudrate'] = {
             'position' : 2,
             'name' : _('Baud Rate'),
             'options' : self.__serial.BAUDRATES,
-            'value' : self.__serial.baudrate
+            'value' : int(persistent.serialcommunicator.baudrate or self.__serial.baudrate)
           }
         parameters['bytesize'] = {
             'position' : 3,
             'name' : _('Number of data bits'),
             'options' : self.__serial.BYTESIZES,
-            'value' : self.__serial.bytesize
+            'value' : int(persistent.serialcommunicator.bytesize or self.__serial.bytesize)
           }
         
         parameters['parity'] = {
             'position' : 4,
             'name' : _('Parity check mode'),
             'options' : self.__serial.PARITIES,
-            'value' : self.__serial.parity
+            'value' : persistent.serialcommunicator.parity or self.__serial.parity
           }
         parameters['stopbits'] = {
             'position' : 5,
             'name' : _('Stop bits'),
             'options' : self.__serial.STOPBITS,
-            'value' : self.__serial.stopbits
+            'value' : int(persistent.serialcommunicator.stopbits or self.__serial.stopbits)
           }
         
         parameters['xonxoff'] = {
             'position' : 6,
             'name' : _('XON/XOFF flow control'),
             'logic' : [0 , 1],
-            'value' : self.__serial.xonxoff
+            'value' : int(persistent.serialcommunicator.xonxoff or self.__serial.xonxoff)
           }
         parameters['rtscts'] = {
             'position' : 7,
             'name' : _('RTS/CTS flow control'),
             'logic' : [0, 1],
-            'value' : self.__serial.rtscts
+            'value' : int(persistent.serialcommunicator.rtscts or self.__serial.rtscts)
           }
         return parameters
     
@@ -157,15 +162,16 @@ class SerialCommunicator(object):
         self.__thread_enabled = True
         #self.__thread.daemon = True
         #self.__thread.start()
-        gobject.idle_add(self.__idle_write)
+        #gobject.idle_add(self.__idle_write)
+        glib.idle_add(self.__idle_write)
     
     def __thread_stop(self):
         self.__thread_enabled = False
         #self.__thread.join(10)
     
     def __idle_write(self, data = None):
-        action_dispatcher = ActionDispatcher()
-        if self.__serial.inWaiting() > 0:
+        if  self.__thread_enabled and self.__serial.inWaiting() > 0:
+            action_dispatcher = ActionDispatcher()
             data = self.__serial.read(4096)
             gtk.gdk.threads_enter()
             action_dispatcher['remote-input-data'](data)

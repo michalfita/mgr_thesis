@@ -55,6 +55,7 @@ class CommunicationManager(Singleton):
         for name, cls in self.__class__.__channels_class_dict.items():
             obj = cls()
             # consider default setup here
+            obj.setup(obj.parameters) # loops back persistently written data
         self.__current = None
         self.__state = 'disconnected'
         #action_dispatcher = ActionDispatcher()
@@ -103,6 +104,12 @@ class CommunicationManager(Singleton):
         return channels_data
     
     def set_channels_data(self, channels_data):
+        """This method stores channel data.
+        
+        This method uses channel data passed from GUI to configure channels.
+        @param channels_data The channels data of similar structure as the
+                             passed from ::get_channels_data().
+        """
         for data in channels_data:
             obj = self.__class__.__channels_obj_dict[data['name']]
             obj.setup(data['parameters'])

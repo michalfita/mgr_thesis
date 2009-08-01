@@ -547,12 +547,237 @@ class ControlButtonTiltRight(ControlButtonBase):
         ]
         self._boundaries_table = [
           (('m', 53.4, 43.1),
-           ('l', 63.6, 53.4),
+           ('l', 63.6, 64.4),
            ('l', 53.4, 64.4),
            ('l', 53.4, 43.1),
            ('p', 0.0, 1.0, 1.0, 1.0, 0.2))
         ]
 
+# --- Left work
+
+class ControlButtonLeftArmUp(ControlButtonBase):
+    def __init__(self, container):
+        super(ControlButtonLeftArmUp, self).__init__(container)
+        self._press_action_name = 'control-leftarmup-press'
+        self._release_action_name = 'control-leftarmup-release'
+        self._drawing_table = [
+          (('m',  22.80, 10.00),
+           ('l',  23.70, 12.50),
+           ('l',  18.70, 19.70),
+           ('l',  16.00, 20.20),
+           ('l',  22.80, 10.00),
+           ('s',  self._etch_color)),
+          (('m',  16.00, 20.20),
+           ('l',  18.70, 19.70),
+           ('l',  29.50, 25.60),
+           ('l',  29.60, 27.80),
+           ('l',  16.00, 20.20),
+           ('s',  self._etch_color)),
+          (('m',  29.60, 27.80),
+           ('l',  29.50, 25.60),
+           ('l',  36.50, 19.70),
+           ('l',  39.80, 19.40),
+           ('l',  29.60, 27.80),
+           ('s',  self._etch_color)),
+          (('m',  39.80, 19.40),
+           ('l',  36.50, 19.70),
+           ('l',  23.70, 12.50),
+           ('l',  22.80, 10.00),
+           ('l',  39.80, 19.40),
+           ('s',  self._relief_color)),
+          (('m',  23.70, 12.50),
+           ('l',  18.70, 19.70),
+           ('l',  29.50, 25.60),
+           ('l',  36.50, 19.70),
+           ('l',  23.70, 12.50),
+           ('s',  self._face_color))
+        ]
+        self._boundaries_table = [
+          (('m',  22.80, 10.00),
+           ('l',  16.00, 20.20),
+           ('l',  29.60, 27.80),
+           ('l',  39.80, 19.40),
+           ('l',  22.80, 10.00),
+           ('p',  1.00, 0.00, 0.00, 1.00, 0.20)),
+        ]
+
+class ControlButtonLeftArmDown(ControlButtonBase):
+    def __init__(self, container):
+        super(ControlButtonLeftArmDown, self).__init__(container)
+        self._press_action_name = 'control-leftarmdown-press'
+        self._release_action_name = 'control-leftarmdown-release'
+        self._drawing_table = [
+          ( ('m',  11.80, 26.50) ,
+            ('l',  12.30, 28.90) ,
+            ('l',  5.20, 39.50) ,
+            ('l',  2.70, 40.30) ,
+            ('l',  11.80, 26.50) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  2.70, 40.30) ,
+            ('l',  5.20, 39.50) ,
+            ('l',  9.70, 42.00) ,
+            ('l',  9.90, 44.00) ,
+            ('l',  2.70, 40.30) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  9.90, 44.00) ,
+            ('l',  9.70, 42.00) ,
+            ('l',  20.20, 33.00) ,
+            ('l',  23.80, 32.60) ,
+            ('l',  9.90, 44.00) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  23.80, 32.60) ,
+            ('l',  20.20, 33.00) ,
+            ('l',  12.30, 28.90) ,
+            ('l',  11.80, 26.50) ,
+            ('l',  23.80, 32.60) ,
+            ('s',  self._relief_color) ),
+          ( ('m',  12.30, 28.90) ,
+            ('l',  5.20, 39.50) ,
+            ('l',  9.70, 42.00) ,
+            ('l',  21.20, 33.00) ,
+            ('l',  12.30, 28.90) ,
+            ('s',  self._face_color) ),
+        ]
+        self._boundaries_table = [
+          ( ('m',  11.80, 26.50) ,
+            ('l',  2.70, 40.30) ,
+            ('l',  9.90, 44.00) ,
+            ('l',  23.80, 32.60) ,
+            ('l',  11.80, 26.50) ,
+            ('p',  0.00, 1.00, 0.00, 1.00, 0.20) ),
+        ]
+
+class ControlButtonLeftArmIn(ControlButtonBase):
+    def __init__(self, container):
+        super(ControlButtonLeftArmIn, self).__init__(container)
+        self._press_action_name = 'control-leftarmin-press'
+        self._release_action_name = 'control-leftarmin-release'
+        self._drawing_table = [
+          ( ('m',  39.80, 30.40) ,
+            ('l',  39.10, 33.30) ,
+            ('l',  21.30, 47.00) ,
+            ('l',  17.70, 47.40) ,
+            ('l',  39.80, 30.40) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  17.70, 47.40) ,
+            ('l',  21.30, 47.00) ,
+            ('l',  33.10, 52.60) ,
+            ('l',  33.80, 55.00) ,
+            ('l',  17.70, 47.40) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  33.80, 55.00) ,
+            ('l',  33.10, 52.60) ,
+            ('l',  41.10, 37.80) ,
+            ('l',  43.20, 38.00) ,
+            ('l',  33.80, 55.00) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  43.20, 38.00) ,
+            ('l',  41.10, 37.80) ,
+            ('l',  39.10, 33.30) ,
+            ('l',  39.80, 30.40) ,
+            ('l',  43.20, 38.00) ,
+            ('s',  self._relief_color) ),
+          ( ('m',  39.10, 33.30) ,
+            ('l',  21.30, 47.00) ,
+            ('l',  33.10, 52.60) ,
+            ('l',  41.10, 37.80) ,
+            ('l',  39.10, 33.30) ,
+            ('s',  self._face_color) ),
+        ]
+        self._boundaries_table = [
+          ( ('m',  39.80, 30.40) ,
+            ('l',  17.70, 47.40) ,
+            ('l',  33.80, 55.00) ,
+            ('l',  43.20, 38.00) ,
+            ('l',  39.80, 30.40) ,
+            ('p',  1.00, 0.00, 0.00, 0.00, 1.00) ),
+        ]
+
+class ControlButtonLeftArmOut(ControlButtonBase):
+    def __init__(self, container):
+        super(ControlButtonLeftArmOut, self).__init__(container)
+        self._press_action_name = 'control-leftarmout-press'
+        self._release_action_name = 'control-leftarmout-release'
+        self._drawing_table = [
+          ( ('m',  11.40, 55.30) ,
+            ('l',  11.50, 54.60) ,
+            ('l',  4.30, 60.00) ,
+            ('l',  0.60, 60.50) ,
+            ('l',  11.40, 52.30) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  0.60, 60.50) ,
+            ('l',  4.30, 60.00) ,
+            ('l',  23.90, 69.30) ,
+            ('l',  24.50, 71.80) ,
+            ('l',  0.60, 60.50) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  24.50, 71.80) ,
+            ('l',  23.90, 69.30) ,
+            ('l',  27.60, 62.40) ,
+            ('l',  30.30, 61.40) ,
+            ('l',  24.50, 71.80) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  30.30, 61.40) ,
+            ('l',  27.60, 62.40) ,
+            ('l',  11.50, 54.60) ,
+            ('l',  11.40, 52.30) ,
+            ('l',  30.30, 61.40) ,
+            ('s',  self._relief_color) ),
+          ( ('m',  11.50, 54.60) ,
+            ('l',  4.30, 60.00) ,
+            ('l',  23.90, 69.30) ,
+            ('l',  27.60, 62.40) ,
+            ('l',  11.50, 54.60) ,
+            ('s',  self._face_color) ),
+        ]
+        self._boundaries_table = [
+          ( ('m',  11.50, 52.60) ,
+            ('l',  0.60, 60.50) ,
+            ('l',  24.50, 71.80) ,
+            ('l',  30.30, 61.40) ,
+            ('l',  11.50, 52.60) ,
+            ('p',  0.00, 0.00, 1.00, 1.00, 0.20) ),
+        ]
+
+class ControlButtonTiltLeft(ControlButtonBase):
+    def __init__(self, container):
+        super(ControlButtonTiltLeft, self).__init__(container)
+        self._press_action_name = 'control-tiltleft-press'
+        self._release_action_name = 'control-tiltleft-release'
+        self._drawing_table = [
+          ( ('m',  46.60, 43.10) ,
+            ('l',  44.80, 50.80) ,
+            ('l',  39.10, 62.60) ,
+            ('l',  36.40, 64.40) ,
+            ('l',  46.60, 43.10) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  36.40, 64.40) ,
+            ('l',  39.10, 62.60) ,
+            ('l',  44.80, 62.60) ,
+            ('l',  46.60, 64.40) ,
+            ('l',  36.40, 64.40) ,
+            ('s',  self._etch_color) ),
+          ( ('m',  46.60, 64.40) ,
+            ('l',  44.80, 62.60) ,
+            ('l',  44.80, 50.80) ,
+            ('l',  46.60, 43.10) ,
+            ('l',  46.60, 64.40) ,
+            ('s',  self._relief_color) ),
+          ( ('m',  44.80, 50.80) ,
+            ('l',  39.10, 62.60) ,
+            ('l',  44.80, 62.60) ,
+            ('l',  44.80, 50.80) ,
+            ('s',  self._face_color) ),
+        ]
+        self._boundaries_table = [
+          ( ('m',  46.60, 43.10) ,
+            ('l',  36.40, 64.40) ,
+            ('l',  46.60, 64.40) ,
+            ('l',  46.60, 43.10) ,
+            ('p',  0.00, 1.00, 1.00, 1.00, 0.20) ),
+        ]
+
+# --- Worker
 class ControlButtonsNew(gtk.DrawingArea):
     """Class draws all control buttons to steer the robot."""
     def __init__(self):
@@ -573,7 +798,12 @@ class ControlButtonsNew(gtk.DrawingArea):
             ControlButtonRightArmDown(self),
             ControlButtonRightArmIn(self),
             ControlButtonRightArmOut(self),
-            ControlButtonTiltRight(self)
+            ControlButtonTiltRight(self),
+            ControlButtonLeftArmUp(self),
+            ControlButtonLeftArmDown(self),
+            ControlButtonLeftArmIn(self),
+            ControlButtonLeftArmOut(self),
+            ControlButtonTiltLeft(self),
         ]
         self._last_button = None
         
@@ -673,6 +903,7 @@ class ControlButtonsNew(gtk.DrawingArea):
     def _draw(self, context):
         for button in self._buttons:
             button._draw(context)
+            #button._draw(context, button._boundaries_table)
 
 # *** Deprecated code ***
 ##\cond GARBAGE

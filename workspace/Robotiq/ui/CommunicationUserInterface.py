@@ -198,9 +198,9 @@ class SetupDialog(gtk.Dialog):
                             combo.set_active_iter(iter)
                 elif 'logic' in details:
                     #combo.append_text(_('Disable'))
-                    iter_true = model.append((_('Disable'), 0))
+                    iter_false = model.append((_('Disable'), 0))
                     #combo.append_text(_('Enable'))
-                    iter_false = model.append((_('Enable'), 1))
+                    iter_true = model.append((_('Enable'), 1))
                     if details['value'] == True or details['value'] == 1:
                         combo.set_active_iter(iter_true)
                     else:
@@ -241,6 +241,7 @@ class SetupDialog(gtk.Dialog):
         self.__current_page = page_num
         
     def garbage(self):
+        """Deprecated method"""
         for tab in CommunicationUserInterface().get_tabs():
             liststore = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING)
             for name, details in tab['parameters'].items():
