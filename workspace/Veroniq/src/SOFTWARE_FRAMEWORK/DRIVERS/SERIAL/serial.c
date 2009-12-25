@@ -257,9 +257,13 @@ xComPortHandle xUsartInit( eCOMPort UsartId, unsigned portLONG ulWantedBaud,
         if(uxTxQueueLength)
           gpio_enable_module_pin(AVR32_USART1_TXD_0_0_PIN, AVR32_USART1_TXD_0_0_FUNCTION);
       }
-
+      
       // Initialize USART in RS232 mode.
+#ifdef FREERTOS_USED
+      usart_init_rs232(pxUsart->usart, &USART_OPTIONS, configPBA_CLOCK_HZ);
+#else
       usart_init_rs232(pxUsart->usart, &USART_OPTIONS, FOSC0/*CP_PBA_SPEED*/);
+#endif
 
       /* We're not fully done yet: disable receiver and transmitter. */
       pxUsart->usart->cr |= AVR32_USART_CR_RXDIS_MASK | AVR32_USART_CR_TXDIS_MASK;

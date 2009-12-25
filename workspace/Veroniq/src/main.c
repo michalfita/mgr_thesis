@@ -30,7 +30,7 @@ int main( void )
    //pm_switch_to_osc0(&AVR32_PM, FOSC0, OSC0_STARTUP);
 
    // Initialize the delay driver.
-   delay_init(48000000);
+   delay_init(configCPU_CLOCK_HZ);
 
    // Init USB & MACB clock.
    //prv_clk_gen_start();

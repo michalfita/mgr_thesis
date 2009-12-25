@@ -1,4 +1,4 @@
-#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -7948,12 +7948,9 @@ laptopami
 \begin_layout Standard
 Szczegółowa dokumentacja projektowa tego fragmentu systemu znajduje się
  w załączniku 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Stworzyć załącznik.
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cha:Dokumentacja-programu-Robotiq"
 
 \end_inset
 
@@ -8531,6 +8528,14 @@ Oprogramowanie sterujące o nazwie kodowej Robotiq zostało zrealizowane w
  Interfejs graficzny oparty jest o bibliotekę GTK+.
  Aplikacja ta pozwala na wydawanie poleceń tekstowych, posiada fragment
  interfejsu upodobniony do oryginalnego kontrolera RoboActor.
+ Widok okna aplikacji przedstawia rysunek 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Zrzut-ekranu-Robotiq"
+
+\end_inset
+
+ (aktualnie wymaga dopracowania).
 \end_layout
 
 \begin_layout Standard
@@ -8539,6 +8544,47 @@ status open
 
 \begin_layout Plain Layout
 zdjęcia pilota + screen shot programu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/robotiq_scrsht.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Zrzut-ekranu-Robotiq"
+
+\end_inset
+
+Zrzut ekranu aplikacji Robotiq
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8620,6 +8666,61 @@ target "http://sourceforge.net/projects/pywin32/"
 Mniamuśnie.
 \end_layout
 
+\begin_layout Subsection
+Organizacja aplikacji
+\end_layout
+
+\begin_layout Standard
+Język Python pozwala organizować elementy aplikacji w postaci modułów, które
+ mogą być pogrupowane w pakiety.
+ Formalnie pakietem jest katalog, zawierający plik 
+\family typewriter
+__init__.py
+\family default
+.
+ Dzięki temu plikowi mamy możliwość importowania modułów z takiego katalogu.
+ W przypadku aplikacji Robotiq, zastosowany został podział logiczny elementów
+ na następujące pakiety:
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+Pakiet
+\begin_inset space ~
+\end_inset
+
+comm zawierający moduły odpowiedzialne za komunikację aplikacji z kontrolerem
+ robota;
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+Pakiet
+\begin_inset space ~
+\end_inset
+
+misc zawierający moduły z różnorodnymi funkcjonalnościami nie klasyfikującymi
+ się do innych pakietów;
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+Pakiet
+\begin_inset space ~
+\end_inset
+
+ui zawierający moduły odpowiedzialne za elementy interfejsu użytkownika.
+\end_layout
+
+\begin_layout Standard
+Ponadto, istnieje kilka katalogów pomocniczych zawierających inne elementy
+ stosowane przez aplikację w czasie jej działania:
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Chapter*
 Podsumowanie
 \end_layout
@@ -8632,12 +8733,27 @@ Milion słów o niczym.
 Załączniki
 \end_layout
 
-\begin_layout Chapter*
-Załącznik A.
- Dokumentacja programu Robotiq
+\begin_layout Chapter
+\start_of_appendix
+\begin_inset CommandInset label
+LatexCommand label
+name "cha:Dokumentacja-programu-Robotiq"
+
+\end_inset
+
+Dokumentacja programu Robotiq
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Tu z Doxygen'a
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

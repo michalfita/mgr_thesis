@@ -48,13 +48,16 @@ unsigned char const motor_pins_pwm_func[] = {
 int get_pwm_structure(avr32_pwm_channel_t* p_pwm_channel, int duty_cycle)
 {
 	p_pwm_channel->CMR.calg = PWM_MODE_LEFT_ALIGNED;       // Channel mode.
-	p_pwm_channel->CMR.cpol = PWM_POLARITY_LOW;            // Channel polarity.
+	p_pwm_channel->CMR.cpol = PWM_POLARITY_HIGH;            // Channel polarity.
 	p_pwm_channel->CMR.cpd = PWM_UPDATE_DUTY;              // Not used the first time.
-	p_pwm_channel->CMR.cpre = AVR32_PWM_CPRE_MCK_DIV_256;  // Channel prescaler.
+	p_pwm_channel->CMR.cpre = AVR32_PWM_CPRE_MCK_DIV_512;  // Channel prescaler.
 	p_pwm_channel->cdty = 1;  // Channel duty cycle, should be < CPRD.
 	p_pwm_channel->cprd = 100;  // Channel period.
 	p_pwm_channel->cupd = 0;   // Channel update is not used here.
 	// With these settings, the output waveform period will be :
+	// (66000000/512)/100 == 1.289,0625 kHz [wrong]
+	// (33000000/256)/100 == 1.289,0625 kHz [6.05.2009]
+	// (66000000/256)/100 == 2.578,125 kHz
 	// (48000000/256)/100 == 1.875 kHz == (MCK/prescaler)/period,
 	// with MCK == 48MHz, prescaler == 256, period == 100
 	// (115200/256)/20 == 22.5Hz == (MCK/prescaler)/period, with MCK == 115200Hz,
@@ -126,10 +129,10 @@ unsigned int motor_process_queue()
 				{
 					/* Handle PWM duty cycle values update */
 					get_pwm_structure(&pwm_channel, msg.value - 100);
-					pwm_channel_init(motor_pins_pwm[msg.pin], &pwm_channel);
+					//pwm_channel_init(msg.pin/*motor_pins_pwm[msg.pin]*/, &pwm_channel);
 					gpio_enable_module_pin(motor_pins_pwm[msg.pin], motor_pins_pwm_func[msg.pin]);
-					//pwm_sync_update_channel(motor_pins_pwm[msg.pin], &pwm_channel);
-					pwm_start_channels(1 << msg.pin);
+					pwm_sync_update_channel(msg.pin/*motor_pins_pwm[msg.pin]*/, &pwm_channel);
+					//pwm_start_channels(1 << msg.pin);
 				}
 				break;
 			}

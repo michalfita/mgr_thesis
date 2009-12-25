@@ -61,8 +61,8 @@
 #define configUSE_PREEMPTION      1
 #define configUSE_IDLE_HOOK       0
 #define configUSE_TICK_HOOK       0
-#define configCPU_CLOCK_HZ        ( FOSC0 ) /* Hz clk gen */
-#define configPBA_CLOCK_HZ        ( FOSC0 )
+#define configCPU_CLOCK_HZ        ( FOSC0 * 11 / 2) /* Hz clk gen */
+#define configPBA_CLOCK_HZ        ( FOSC0 * 11 / 4) /* Not higher than 33 */
 #define configTICK_RATE_HZ        ( ( portTickType ) 1000 )
 #define configMAX_PRIORITIES      ( ( unsigned portBASE_TYPE ) 8 )
 #define configMINIMAL_STACK_SIZE  ( ( unsigned portSHORT ) 256 )
