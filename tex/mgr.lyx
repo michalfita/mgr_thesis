@@ -3878,7 +3878,7 @@ Interfejs programistyczny do języka C jest bardzo prosty i pozwala na interakcj
 \end_layout
 
 \begin_layout Subsection
-eLua
+Embedded Lua -- eLua
 \end_layout
 
 \begin_layout Standard
@@ -3901,6 +3901,21 @@ Doświadczenia w uruchamianiu interpretera Lua na mikrokontrolerach będą
  Osiągnięta zostanie wysoka elastyczność w funkcjonalności, która będzie
  mogła być rozszerzana na żądanie, bez ponownej kompilacji kodu binarnego
  programu mikrokontrolera.
+\end_layout
+
+\begin_layout Standard
+Szczegółowy opis projektu dostępny jest pod adresem 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.eluaproject.net/
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -5588,6 +5603,10 @@ o debugowania.
 
 \begin_layout Section
 RoboActor
+\end_layout
+
+\begin_layout Standard
+...
 \end_layout
 
 \begin_layout Section
@@ -8726,7 +8745,19 @@ Podsumowanie
 \end_layout
 
 \begin_layout Standard
+W trakcie realizacji opisywanego projektu wykonano modyfikacje konstrukcji
+ robota, elektroniczny układ sterujący, oprogramowanie dla mikrokontrolera
+ oraz oprogramowanie dla komputera PC.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Milion słów o niczym.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part*
