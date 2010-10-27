@@ -5,7 +5,7 @@
 #define VERSION_MIDDLE      0
 #define VERSION_MINOR       1
 
-#define BUILD_NUMBER       57
+#define BUILD_NUMBER       88
 
 /* Version macors to use */
 

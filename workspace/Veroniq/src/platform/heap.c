@@ -35,6 +35,62 @@
 xSemaphoreHandle g_xHeapRecursiveMutex;
 
 /**
+ * Forward declarations
+ */
+static void l_vEmptyFunction();
+static void l_vRaiseProtection();
+static void l_vLowerProtection();
+
+/**
+ * Function pointers to be used in protection mechanisms.
+ */
+static void (*l_pxRaiseProtection)() = l_vEmptyFunction;
+static void (*l_pxLowerProtection)() = l_vEmptyFunction;
+
+/**
+ * The heap_management_init() function.
+ *
+ * It creates g_xHeapRecursiveMutex and enables mechanics protecting memory
+ * allocations in __malloc_lock() and __malloc_unlock()
+ *
+ */
+void heap_management_init()
+{
+	//**
+    //** Create mutex for heap management locks.
+    //**
+    g_xHeapRecursiveMutex = xSemaphoreCreateRecursiveMutex();
+    if (NULL != g_xHeapRecursiveMutex)
+    {
+    	l_pxRaiseProtection = l_vRaiseProtection;
+    	l_pxLowerProtection = l_vLowerProtection;
+    }
+}
+
+/**
+ * The local l_vEmptyFunction() function.
+ *
+ * The empty function to point to the protection function pointers before
+ * initialization of mutexes.
+ */
+static void l_vEmptyFunction()
+{
+	return;
+}
+
+static void l_vRaiseProtection()
+{
+	// Take mutex or wait assumed infinity.
+	xSemaphoreTakeRecursive(g_xHeapRecursiveMutex, 99999);
+}
+
+static void l_vLowerProtection()
+{
+	// Give the mutex.
+	xSemaphoreGiveRecursive(g_xHeapRecursiveMutex);
+}
+
+/**
  * The __malloc_lock() function.
  * 
  * It implements locking mechanism for memory allocation.
@@ -43,8 +99,7 @@ xSemaphoreHandle g_xHeapRecursiveMutex;
 */
 void __malloc_lock ( struct _reent *_r )
 {
-	// Take mutex or wait assumed infinity.
-	//xSemaphoreTakeRecursive(g_xHeapRecursiveMutex, 99999); 
+	l_pxRaiseProtection();
 }
 
 /**
@@ -56,8 +111,7 @@ void __malloc_lock ( struct _reent *_r )
 */
 void __malloc_unlock ( struct _reent *_r )
 {
-	// Give the mutex.
-	//xSemaphoreGiveRecursive(g_xHeapRecursiveMutex);
+	l_pxLowerProtection();
 }
 
 /*
@@ -71,8 +125,18 @@ void __malloc_unlock ( struct _reent *_r )
  * management pages of http://www.FreeRTOS.org for more information.
  */
 
-/*-----------------------------------------------------------*/
+/**
+ * The pvPortMalloc() function.
+ *
+ * It implements the call required by FreeRTOS, has been moved from original
+ * port in heap3.c and modified accordingly.
+ *
+ * The idea is to remove protection mechanisms here.
+ *
+ * @param size The size of the memory to allocate.
+*/
 
+#if 0
 void *pvPortMalloc( size_t xWantedSize )
 {
 	void *pvReturn;
@@ -85,8 +149,10 @@ void *pvPortMalloc( size_t xWantedSize )
 
 	return pvReturn;
 }
+#endif
 /*-----------------------------------------------------------*/
 
+#if 0
 void vPortFree( void *pv )
 {
 	if( pv )
@@ -98,3 +164,29 @@ void vPortFree( void *pv )
 		xTaskResumeAll();
 	}
 }
+#endif
+
+/**
+ * The pvPortRealloc() function.
+ *
+ * It implements the call required by FreeRTOS, has been moved from original
+ * port in port.c (put there by error) and modified accordingly.
+ *
+ * The idea is to remove protection mechanisms here.
+ *
+ * @param size The size of the memory to allocate.
+*/
+#if 0
+void *pvPortRealloc( void *pv, size_t xWantedSize )
+{
+	void *pvReturn;
+
+	vTaskSuspendAll();
+	{
+		pvReturn = realloc( pv, xWantedSize );
+	}
+	xTaskResumeAll();
+
+	return pvReturn;
+}
+#endif

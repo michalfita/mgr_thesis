@@ -28,6 +28,7 @@ typedef struct {
 } __attribute__((__packed__)) motor_queue_msg_t;
 
 /* Declaration of the API */
-void motor_start(unsigned portBASE_TYPE priority);
+void   motor_start(unsigned portBASE_TYPE priority);
+bool_t motor_send_message(unsigned char pin, unsigned char value, unsigned char time);
 
 #endif /*MOTOR_H_*/

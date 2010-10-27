@@ -1,4 +1,11 @@
-#include <avr32/io.h>
+/*!
+ * \file
+ * \brief Implementation of motor driving operations through GPIO and PWM.
+ * \author Michał Fita <michal.fita@gmail.com>
+ */
+
+#include <nlao_io.h>
+#include <stdio.h>
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
@@ -12,7 +19,7 @@
 /* Some globals */
 xQueueHandle motor_queue;
 
-/* Pin mappings */
+/*! Pin mappings */
 unsigned char const motor_pins_logic[] = {
 		AVR32_PIN_PB29,
         AVR32_PIN_PB30,
@@ -41,9 +48,19 @@ unsigned char const motor_pins_pwm_func[] = {
 	    AVR32_PWM_6_FUNCTION,
 };
 
-/**
+/*!
+ * Stores current setting of pin values kept here instead of reading them from
+ * Peripherals current setting. This approach is easier but requires update
+ * always when pin value is updated.
+ */
+static unsigned int motor_pins_memory[7] = { 0 };
+
+/*!
  * Function returns the structure of avr32_pwm_channel_t type containing
  * default configuration for PWM modified for duty cycle.
+ * \param avr32_pwm_channel_t* Pointer to the PWM channel structure.
+ * \param int New duty cycle for PWM on given channel.
+ * \return Currently always zero.
  */
 int get_pwm_structure(avr32_pwm_channel_t* p_pwm_channel, int duty_cycle)
 {
@@ -76,7 +93,10 @@ int get_pwm_structure(avr32_pwm_channel_t* p_pwm_channel, int duty_cycle)
 	}
 	return 0;
 }
-
+/*!
+ * This function was intended to implement robot moves.
+ * \deprecated Idea was bad, used only for testing purposes. Left as reference.
+ */
 void motor_move_routine(/* subject to add direction */)
 {
 	static char status_move = 0;
@@ -98,66 +118,138 @@ void motor_move_routine(/* subject to add direction */)
 	}
 }
 
+/**
+ * This function prepares and sends basic message to the motor task to set
+ * proper value of the pin for particular time.
+ *
+ * @note To be used outside motor task.
+ * @return Status of sending message.
+ */
+bool_t motor_send_message(unsigned char pin, unsigned char value, unsigned char time)
+{
+	motor_queue_msg_t 	msg;
+	bool_t            	status = TRUE;
+
+	msg.pin = pin;
+	msg.value = value;
+	msg.time = time;
+
+	if (pdTRUE != xQueueSend(motor_queue, &msg, 200))
+	{
+		printf("Error: Failed to send message to motor task.\n");
+		status = FALSE;
+	}
+
+	return status;
+}
+
+/*!
+ * \brief Sets pin value to high or low or set PWM duty cycle.
+ * \param pin_id
+ * \param value
+ * \return Status of execution.
+ */
+bool_t motor_setpin_values(unsigned int pin_id, unsigned int value)
+{
+	unsigned int pin_number;
+	avr32_pwm_channel_t pwm_channel;
+	bool_t status = TRUE;
+
+	if (7 > pin_id) {
+		pin_number = motor_pins_pwm[pin_id];
+	} else if (14 > pin_id) {
+		pin_number = motor_pins_logic[pin_id - 7];
+	} else {
+		value = 255; // Force switch below to ignore
+	}
+	switch(value) {
+	case 1:
+		gpio_enable_gpio_pin(pin_number);
+		gpio_set_gpio_pin(pin_number);
+		motor_pins_memory[pin_id] = 1;
+		break;
+	case 0:
+		gpio_enable_gpio_pin(pin_number);
+		gpio_clr_gpio_pin(pin_number);
+		motor_pins_memory[pin_id] = 0;
+		break;
+	default:
+		if ((100 <= value) && (value <= 200) && (7 > pin_id))
+		{
+			/* Handle PWM duty cycle values update */
+			get_pwm_structure(&pwm_channel, value - 100);
+			//pwm_channel_init(msg.pin/*motor_pins_pwm[msg.pin]*/, &pwm_channel);
+			gpio_enable_module_pin(motor_pins_pwm[pin_id], motor_pins_pwm_func[pin_id]);
+			pwm_sync_update_channel(pin_id/*motor_pins_pwm[msg.pin]*/, &pwm_channel);
+			//pwm_start_channels(1 << msg.pin);
+			motor_pins_memory[pin_id] = value;
+		}
+		else
+		{
+			status = FALSE;
+		}
+		break;
+	}
+	return status;
+}
+
+bool_t motor_setpin_defer(unsigned int pin_id, unsigned int value, unsigned int latency)
+{
+	// Add motor_setpin_values into the list of timing to process.
+	return TRUE;
+}
+
+/**
+ * This function process message waiting in motor_queue and sets pin value
+ * according to value in the message - binary or from 100 to 200 reduced by
+ * 100 as duty cycle for PWM.
+ *
+ * @todo Requires finishing timing support.
+ *
+ * @return Time for given state passed in message.
+ */
 unsigned int motor_process_queue()
 {
 	static motor_queue_msg_t msg;
-	static unsigned int pin_number;
 	static unsigned int state_time;
-	avr32_pwm_channel_t pwm_channel;
 	
 	while (0 < uxQueueMessagesWaiting(motor_queue)) {
 		if (pdTRUE == xQueueReceive(motor_queue, &msg, 200)) {
-			if (7 > msg.pin) {
-				pin_number = motor_pins_pwm[msg.pin];
-			} else if (14 > msg.pin) {
-				pin_number = motor_pins_logic[msg.pin - 7];
-			} else {
-				msg.value = 255; // Force switch below to ignore
-			}
 			state_time = msg.time;
-			switch(msg.value) {
-			case 1:
-				gpio_enable_gpio_pin(pin_number);
-				gpio_set_gpio_pin(pin_number);
-				break;
-			case 0:
-				gpio_enable_gpio_pin(pin_number);
-				gpio_clr_gpio_pin(pin_number);
-				break;
-			default:
-				if ((100 <= msg.value) && (msg.value <= 200) && (7 > msg.pin))
-				{
-					/* Handle PWM duty cycle values update */
-					get_pwm_structure(&pwm_channel, msg.value - 100);
-					//pwm_channel_init(msg.pin/*motor_pins_pwm[msg.pin]*/, &pwm_channel);
-					gpio_enable_module_pin(motor_pins_pwm[msg.pin], motor_pins_pwm_func[msg.pin]);
-					pwm_sync_update_channel(msg.pin/*motor_pins_pwm[msg.pin]*/, &pwm_channel);
-					//pwm_start_channels(1 << msg.pin);
-				}
-				break;
+			if (state_time > 0)
+			{
+				/* TODO: Put reset to previous on time */
+				motor_setpin_defer(msg.pin,
+						           motor_pins_memory[msg.pin],
+						           state_time);
 			}
+			motor_setpin_values(msg.pin, msg.value);
 		}
 	}
 	return state_time;
 }
 
+/*!
+ * \fn motor_task
+ * The task infinite function of motor module.
+ */
 static portTASK_FUNCTION(motor_task, p_parameters)
 {
 	portTickType xDelayLength = ((portTickType) 100 / portTICK_RATE_MS);
 	portTickType xLastFocusTime;
 	    
-	avr32_pwm_channel_t pwm_channel;  // One channel config.
+	avr32_pwm_channel_t pwm_channel;  //! One channel config.
 	
 	unsigned int new_duty_cycle = 1;
 	unsigned int duty_cycle_step = 1;
-	unsigned int pin_logic = 0;
+	//unsigned int pin_logic = 0;
 	   
     pwm_start_channels(0x0000007F); // start all seven PWM pins
     
     /* Initialize PWM structure */
     get_pwm_structure(&pwm_channel, 50);
     
-    /* We need to initialise xLastFlashTime prior to the first call to vTaskDelayUntil(). */
+    /* We need to initialize xLastFlashTime prior to the first call to vTaskDelayUntil(). */
     xLastFocusTime = xTaskGetTickCount();
     
     // Enter endless task loop
@@ -175,7 +267,8 @@ static portTASK_FUNCTION(motor_task, p_parameters)
     	
     	/* Delay for the flash period then check. */
 		vTaskDelayUntil( &xLastFocusTime, xDelayLength );
-		
+
+#ifdef TO_BE_REMOVED /* TODO: Obvious */
 #if MOTOR_NO_PWM_MODE == 0
 		unsigned int channel_id;
 		for(channel_id = 0; channel_id < 7; ++channel_id)
@@ -198,25 +291,18 @@ static portTASK_FUNCTION(motor_task, p_parameters)
 			}
 		}
 #endif /* MOTOR_NO_PWM_MODE == 0 */
+#endif /* TO_BE_REMOVED */
 		
 		new_duty_cycle += duty_cycle_step;
     }
 }
 
+/**
+ * This function initializes GPIO module of CPU for PWM and binary output.
+ */
 void motor_gpio_init()
 {
 	int idx = 0;
-	
-	// Prepare GPIO pins for PWM output
-#if MOTOR_NO_PWM_MODE == 0
-	//gpio_enable_module_pin(AVR32_PWM_0_PIN, AVR32_PWM_0_FUNCTION);
-	//gpio_enable_module_pin(AVR32_PWM_1_PIN, AVR32_PWM_1_FUNCTION);
-	//gpio_enable_module_pin(AVR32_PWM_2_PIN, AVR32_PWM_2_FUNCTION);
-	//gpio_enable_module_pin(AVR32_PWM_3_PIN, AVR32_PWM_3_FUNCTION);
-	//gpio_enable_module_pin(AVR32_PWM_4_1_PIN, AVR32_PWM_4_1_FUNCTION); // do not use UART pins
-    //gpio_enable_module_pin(AVR32_PWM_5_1_PIN, AVR32_PWM_5_1_FUNCTION); // do not use UART pins
-    //gpio_enable_module_pin(AVR32_PWM_6_PIN, AVR32_PWM_6_FUNCTION);
-#endif /* MOTOR_NO_PWM_MODE == 0 */
     
     // Prepare GPIO pins for PWM output
     for(idx = 0; idx < 7; ++idx)
@@ -228,6 +314,7 @@ void motor_gpio_init()
 #endif
     	gpio_enable_pin_pull_up(motor_pins_pwm[idx]);
     	gpio_set_gpio_pin(motor_pins_pwm[idx]);
+    	motor_pins_memory[idx] = 1;
     }
     
     // Prepare GPIO pins for logic output
@@ -236,9 +323,13 @@ void motor_gpio_init()
     	gpio_enable_gpio_pin(motor_pins_logic[idx]);
     	gpio_enable_pin_pull_up(motor_pins_logic[idx]);
     	gpio_set_gpio_pin(motor_pins_logic[idx]);
+    	motor_pins_memory[idx + 7] = 1;
     }
 }
 
+/*!
+ * PWM initialization routine.
+ */
 void motor_pwm_init()
 {
 	pwm_opt_t pwm_opt;                // PWM option config.
@@ -246,8 +337,6 @@ void motor_pwm_init()
 	// The channel number and instance is used in several functions.
 	// It's defined as local variable for ease-of-use.
 	unsigned int channel_id;
-
-	//channel_id = 0;
 
 	// PWM controller configuration.
 	pwm_opt.diva = AVR32_PWM_DIVA_CLK_OFF;
@@ -265,17 +354,22 @@ void motor_pwm_init()
 	}
 }
 
+/*!
+ * This function starts motor task.
+ *
+ * \note To be called only from init task.
+ */
 void motor_start(unsigned portBASE_TYPE priority)
 {
-	/* Init GPIO */
+	/* Initialize GPIO */
 	motor_gpio_init();
 
 #if MOTOR_NO_PWM_MODE == 0  
-	/* Init PWM */
+	/* Initialize PWM */
 	motor_pwm_init();
 #endif /* MOTOR_NO_PWM_MODE == 0 */
 	
-	/* Init queue for motor control. */
+	/* Initialize queue for motor control. */
 	motor_queue = xQueueCreate(2, sizeof(motor_queue_msg_t));
 	
 	/* Spawn the motor task. */

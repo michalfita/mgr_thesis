@@ -66,9 +66,9 @@ int main( void )
    //v_cptime_Init();
 
    //**
-   //** Create mutex for heap management locks.
+   //** Init memory allocation multitask protection mechanisms.
    //**
-   g_xHeapRecursiveMutex = xSemaphoreCreateRecursiveMutex();
+   heap_management_init();
    
    //**
    //** Start main task here.

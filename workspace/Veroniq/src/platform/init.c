@@ -1,5 +1,5 @@
-#include <sys/cpu.h>
-#include <sys/usart.h>
+#include <nlao_cpu.h>
+#include <nlao_usart.h>
 
 #include "pm.h"
 #include "gpio.h"

@@ -13,7 +13,7 @@ static portTASK_FUNCTION(init_task, p_parameters)
 	motor_start(MOTOR_TASK_PRIORITY);
 	command_start(COMMAND_TASK_PRIORITY);
 	   
-    /* We need to initialise xLastFlashTime prior to the first call to vTaskDelayUntil(). */
+    /* We need to initialize xLastFlashTime prior to the first call to vTaskDelayUntil(). */
     xLastFocusTime = xTaskGetTickCount();
 	
     // Enter endless task loop
@@ -27,7 +27,7 @@ static portTASK_FUNCTION(init_task, p_parameters)
 
 void init_start(unsigned portBASE_TYPE priority)
 {
-   /* Spawn the inital task. */
+   /* Spawn the initial task. */
    xTaskCreate(init_task, (const signed portCHAR*)"INIT",
                 INIT_STACK_SIZE, NULL, priority, (xTaskHandle*)NULL);
 }

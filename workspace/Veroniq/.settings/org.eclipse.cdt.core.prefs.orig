@@ -1,0 +1,3 @@
+#Wed Oct 13 21:44:21 CEST 2010
+eclipse.preferences.version=1
+environment/project/avr32.managedbuild.config.gnu.exe.debug.1813483026=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<environment append\="true" appendContributed\="true">\n<variable delimiter\="\:" name\="GCC_EXEC_PREFIX" operation\="replace" value\="avr32"/>\n</environment>\n

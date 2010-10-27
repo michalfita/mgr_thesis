@@ -140,5 +140,10 @@ to exclude the API function. */
 #define serialPORT_USART_BAUDRATE     57600
 #endif
 
+#define pvPortMalloc(x)	malloc(x)
+#define vPortFree(x)	free(x)
+#define vPortRealloc(x) realloc(x)
+
+typedef int bool_t;
 
 #endif /* FREERTOS_CONFIG_H */

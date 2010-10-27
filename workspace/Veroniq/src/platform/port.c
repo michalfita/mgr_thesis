@@ -59,8 +59,8 @@
 
 
 /* Standard includes. */
-#include <sys/cpu.h>
-#include <sys/usart.h>
+//#include <sys/cpu.h>
+//#include <sys/usart.h>
 #include <malloc.h>
 
 /* Scheduler includes. */

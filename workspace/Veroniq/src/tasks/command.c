@@ -1,4 +1,9 @@
-#include <avr32/io.h>
+/*!
+ * \file
+ * \brief Implementation of textual command interface.
+ * \author Michał Fita <michal.fita@gmail.com>
+ */
+#include <nlao_io.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdarg.h>
@@ -35,11 +40,18 @@ typedef struct
 /* Forward declarations for functions handling particular commands */
 int cmd_identify(int argc, char* argv[]); // int cmd_identify(char* cmd, ...);
 int cmd_setpin(int argc, char* argv[]); // int cmd_setpin(char* cmd, ...);
+int cmd_arm(int argc, char* argv[]);
+int cmd_shoulder(int argc, char* argv[]);
 
+/*!
+ * The table contains mapping from command names to respective functions.
+ */
 static const command_entry_t commands_table[] = {
-		{"identify", cmd_identify},
-		{"setpin", cmd_setpin},
-		{NULL, NULL}
+		{ "identify", cmd_identify },
+		{ "setpin",   cmd_setpin },
+		{ "arm",      cmd_arm },
+		{ "shoulder", cmd_shoulder },
+		{ NULL,       NULL }
 };
 
 static hashmap_t commands_hashmap;
@@ -47,7 +59,16 @@ static hashmap_t commands_hashmap;
 /* Handler for serial port used for command entry */
 extern xComPortHandle serialPortHdlr;
 
-/* Commands implementation */
+/******************************
+ *  Commands implementation   *
+ ******************************/
+
+/*!
+ * Implements 'identify' command replying with version of the firmware.
+ * \param argc Parameters counter
+ * \param argv Parameters array
+ * \return Always zero.
+ */
 int cmd_identify(int argc, char* argv[])
 {
 	const portCHAR* text = "Robot Firmware for AT32UC3A0512 codename \"Veroniq\"\n"\
@@ -57,24 +78,35 @@ int cmd_identify(int argc, char* argv[])
 	return 0;
 }
 
+/*!
+ * \brief Implements 'setpin' command setting particular pin to the value.
+ *
+ * For PWM pins and GPIO pins value can be 0 or 1 to lower or raise the pin
+ * voltage; for PWM pins it can be from 100 to 200 where the value minus 100
+ * is the duty cycle of PWM waveform.
+ * \param argc Parameters counter
+ * \param argv Parameters array
+ * \return Always zero.
+ */
 int cmd_setpin(int argc, char* argv[])
 {
 	int status = 0;
-	motor_queue_msg_t msg;
+	int pin = 0;
+	int value = 0;
+	int time = 0;
 	
 	if (argc > 2) {
-		msg.pin = atoi(argv[1]);
-		msg.value = atoi(argv[2]);
+		pin = atoi(argv[1]);
+		value = atoi(argv[2]);
 		if (argc > 3) {
-			msg.time = atoi(argv[3]);
+			time = atoi(argv[3]);
 		}
 		else {
-			msg.time = 0; /* zero means no timeout of command */
+			time = 0; /* zero means no timeout of command */
 		}
 		
-		if (pdTRUE != xQueueSend(motor_queue, &msg, 200))
+		if (FALSE == motor_send_message(pin, value, time))
 		{
-			printf("Error: Failed to send message to motor task.\n");
 			status = 2;
 		}
 	} else {
@@ -82,6 +114,16 @@ int cmd_setpin(int argc, char* argv[])
 		status = 1;
 	}
 	return status;
+}
+
+int cmd_arm(int argc, char* argv[])
+{
+
+}
+
+int cmd_shoulder(int argc, char* argv[])
+{
+
 }
 
 /* Initialization of serial port */
@@ -115,12 +157,20 @@ void command_gpio_init()
 	
 }
 
+/*!
+ * \fn command_task
+ *
+ * The function of 'command' task which handles data incoming on serial port
+ * and parses them into commands with arguments.
+ *
+ * \param p_parameters
+ */
 static portTASK_FUNCTION(command_task, p_parameters)
 {
 	static portCHAR c;
-	static portCHAR* buffer_b = NULL; // begining marker
-	static portCHAR* buffer_e = NULL; // end marker
-	static portLONG  buffer_l = 0; // buffer length
+	static portCHAR* buffer_b = NULL; //! Beginning marker
+	static portCHAR* buffer_e = NULL; //! End marker
+	static portLONG  buffer_l = 0;    //! Buffer length
 
 	static portCHAR* line_tokenized[24] = {NULL};
 	static portSHORT token_number = 0;
@@ -149,7 +199,7 @@ static portTASK_FUNCTION(command_task, p_parameters)
 			xUsartPutChar(serialPortHdlr, '_', 400);
 #endif /* COMMAND_ECHO_MODE >= 2 */
 #endif /* COMMAND_ECHO_MODE >= 1 */
-			if(('\n' != c) && ('\r' != c))
+			if(('\n' != c) && ('\r' != c) && ('\b' != c)) /* TODO: not optimal conditions */
 			{
 				if(NULL == buffer_b)
 				{
@@ -164,6 +214,13 @@ static portTASK_FUNCTION(command_task, p_parameters)
 				  	buffer_l += 128;
 				  	buffer_b = (portCHAR*)realloc(buffer_b, buffer_l);
 				  	buffer_e = buffer_b + buff_len;
+				}
+			}
+			else if ('\b' == c)
+			{
+				if((NULL != buffer_b) && (buffer_e > buffer_b))
+				{
+				    buffer_e--;
 				}
 			}
 			else /* '\n' == c || '\r' == c */

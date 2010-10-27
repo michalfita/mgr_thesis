@@ -1,4 +1,4 @@
-/* This header file is part of the ATMEL AVR32-SoftwareFramework-1.3.0-AT32UC3A Release */
+/* This header file is part of the ATMEL AVR-UC3-SoftwareFramework-1.7.0 Release */
 
 /*This file is prepared for Doxygen automatic documentation generation.*/
 /*! \file *********************************************************************
@@ -17,33 +17,36 @@
  *
  ******************************************************************************/
 
-/* Copyright (C) 2006-2008, Atmel Corporation All rights reserved.
+/* Copyright (c) 2009 Atmel Corporation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
  *
- * 1. Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the following disclaimer.
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ * list of conditions and the following disclaimer.
  *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
  * this list of conditions and the following disclaimer in the documentation
  * and/or other materials provided with the distribution.
  *
- * 3. The name of ATMEL may not be used to endorse or promote products derived
+ * 3. The name of Atmel may not be used to endorse or promote products derived
  * from this software without specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY ATMEL ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * 4. This software may only be redistributed and used in connection with an Atmel
+ * AVR product.
+ *
+ * THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR IMPLIED
  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE EXPRESSLY AND
- * SPECIFICALLY DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT,
- * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
+ * EXPRESSLY AND SPECIFICALLY DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
  * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
  * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
+ *
  */
-
 
 #ifndef _CONF_ACCESS_H_
 #define _CONF_ACCESS_H_
@@ -56,8 +59,8 @@
  */
 //! @{
 #define LUN_0                DISABLE  //!< On-Chip Virtual Memory.
-#define LUN_1                DISABLE   //!< AT45DBX Data Flash.
-#define LUN_2                DISABLE  //!< SD/MMC Card.
+#define LUN_1                ENABLE   //!< AT45DBX Data Flash.
+#define LUN_2                DISABLE  //!< SD/MMC Card over SPI.
 #define LUN_3                DISABLE
 #define LUN_4                DISABLE
 #define LUN_5                DISABLE
@@ -103,18 +106,18 @@
 /*! \name LUN 2 Definitions
  */
 //! @{
-#define SD_MMC_MEM                              LUN_2
-#define LUN_ID_SD_MMC_MEM                       LUN_ID_2
-#define LUN_2_INCLUDE                           "sd_mmc_mem.h"
-#define Lun_2_test_unit_ready                   sd_mmc_test_unit_ready
-#define Lun_2_read_capacity                     sd_mmc_read_capacity
-#define Lun_2_wr_protect                        sd_mmc_wr_protect
-#define Lun_2_removal                           sd_mmc_removal
-#define Lun_2_usb_read_10                       sd_mmc_usb_read_10
-#define Lun_2_usb_write_10                      sd_mmc_usb_write_10
-#define Lun_2_mem_2_ram                         sd_mmc_mem_2_ram
-#define Lun_2_ram_2_mem                         sd_mmc_ram_2_mem
-#define LUN_2_NAME                              "\"SD/MMC Card\""
+#define SD_MMC_SPI_MEM                          LUN_2
+#define LUN_ID_SD_MMC_SPI_MEM                   LUN_ID_2
+#define LUN_2_INCLUDE                           "sd_mmc_spi_mem.h"
+#define Lun_2_test_unit_ready                   sd_mmc_spi_test_unit_ready
+#define Lun_2_read_capacity                     sd_mmc_spi_read_capacity
+#define Lun_2_wr_protect                        sd_mmc_spi_wr_protect
+#define Lun_2_removal                           sd_mmc_spi_removal
+#define Lun_2_usb_read_10                       sd_mmc_spi_usb_read_10
+#define Lun_2_usb_write_10                      sd_mmc_spi_usb_write_10
+#define Lun_2_mem_2_ram                         sd_mmc_spi_mem_2_ram
+#define Lun_2_ram_2_mem                         sd_mmc_spi_ram_2_mem
+#define LUN_2_NAME                              "\"SD/MMC Card over SPI\""
 //! @}
 
 /*! \name USB LUNs Definitions
@@ -140,25 +143,18 @@
  * \warning Be careful not to waste time in order not to disturb the functions.
  */
 //! @{
-#if BOARD == EVK1100
-  #define READ_LED                              LED_BI0_GREEN
-  #define WRITE_LED                             LED_BI0_RED
-#elif BOARD == EVK1101
-  #define READ_LED                              LED_MONO0_GREEN
-  #define WRITE_LED                             LED_MONO1_GREEN
-#endif
-#define memory_start_read_action()              LED_On(READ_LED)
-#define memory_stop_read_action()               LED_Off(READ_LED)
-#define memory_start_write_action()             LED_On(WRITE_LED)
-#define memory_stop_write_action()              LED_Off(WRITE_LED)
+#define memory_start_read_action(nb_sectors)
+#define memory_stop_read_action()
+#define memory_start_write_action(nb_sectors)
+#define memory_stop_write_action()
 //! @}
 
 /*! \name Activation of Interface Features
  */
 //! @{
 #define ACCESS_USB           DISABLED //!< MEM <-> USB interface.
-#define ACCESS_MEM_TO_RAM    DISABLED //!< MEM <-> RAM interface.
-#define ACCESS_STREAM        DISABLED  //!< Streaming MEM <-> MEM interface.
+#define ACCESS_MEM_TO_RAM    ENABLED  //!< MEM <-> RAM interface.
+#define ACCESS_STREAM        DISABLED //!< Streaming MEM <-> MEM interface.
 #define ACCESS_STREAM_RECORD DISABLED //!< Streaming MEM <-> MEM interface in record mode.
 #define ACCESS_MEM_TO_MEM    DISABLED //!< MEM <-> MEM interface.
 #define ACCESS_CODEC         DISABLED //!< Codec interface.
