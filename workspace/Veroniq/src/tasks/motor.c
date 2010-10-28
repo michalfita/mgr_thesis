@@ -6,11 +6,13 @@
 
 #include <nlao_io.h>
 #include <stdio.h>
+#include <stdint.h>
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
 #include "pwm.h"
 #include "gpio.h"
+#include "utlist.h"
 
 #include "motor.h"
 
@@ -47,6 +49,13 @@ unsigned char const motor_pins_pwm_func[] = {
 	    AVR32_PWM_5_1_FUNCTION, // do not use UART pins
 	    AVR32_PWM_6_FUNCTION,
 };
+
+/*!
+ * Structure holding data to be processed as deferred motor order.
+ */
+typedef struct motor_deffered_order_s {
+	uint32_t time;
+} motor_deffered_order_t;
 
 /*!
  * Stores current setting of pin values kept here instead of reading them from
