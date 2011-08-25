@@ -1,0 +1,221 @@
+eeschema (2011-06-08)-testing  >> Creation date: Mon 04 Jul 2011 20:19:46 CEST
+
+#Cmp ( order = Reference )
+| C1         45µF       ; cap-master-6032-28R/T
+| C2         45µF       ; cap-master-6032-28R/T
+| C3         45µF       ; cap-master-6032-28R/T
+| C4         45µF       ; cap-master-6032-28R/T
+| C5         100n        ; SM0603      
+| C6         100n        ; SM0603      
+| C7         100n        ; SM0603      
+| C8         100n        ; SM0603      
+| C9         100n        ; SM0603      
+| C10        100n        ; SM0603      
+| C11        100n        ; SM0603      
+| C12        100n        ; SM0603      
+| C13        100n        ; SM0603      
+| C14        100nF       ; SM0603      
+| C15        10µF       ; cap-master-3216-18R/T
+| C16        47nF        ; diode-DO214AC
+| C17        220µF      ; cap-master-7343-TE-D
+| D1         SK34A       ; diode-DO214AC
+| D2         SK34A       ; diode-DO214AC
+| D3         SK34A       ; diode-DO214AC
+| D4         SK34A       ; diode-DO214AC
+| D5         SK34A       ; diode-DO214AC
+| D6         SK34A       ; diode-DO214AC
+| D7         SK34A       ; diode-DO214AC
+| D8         SK34A       ; diode-DO214AC
+| D9         SK34A       ; diode-DO214AC
+| D10        SK34A       ; diode-DO214AC
+| D11        SK34A       ; diode-DO214AC
+| D12        SK34A       ; diode-DO214AC
+| D13        SK34A       ; diode-DO214AC
+| D14        SK34A       ; diode-DO214AC
+| D15        SK34A       ; diode-DO214AC
+| D16        SK34A       ; diode-DO214AC
+| D17        SK34A       ; diode-DO214AC
+| D18        SK34A       ; diode-DO214AC
+| D19        SK34A       ; diode-DO214AC
+| D20        SK34A       ; diode-DO214AC
+| D21        SK34A       ; diode-DO214AC
+| D22        SK34A       ; diode-DO214AC
+| D23        SK34A       ; diode-DO214AC
+| D24        SK34A       ; diode-DO214AC
+| D25        SK34A       ; diode-DO214AC
+| D26        SK34A       ; diode-DO214AC
+| D27        SK34A       ; diode-DO214AC
+| D28        SK34A       ; diode-DO214AC
+| D29        SK34A       ; diode-DO214AC
+| D30        SK34A       ; diode-DO214AC
+| D31        SK34A       ; diode-DO214AC
+| D32        SK34A       ; diode-DO214AC
+| D33        Orange      ; SM0805      
+| D34        Blue        ; SM0805      
+| D35        Orange      ; SM0805      
+| D36        Blue        ; SM0805      
+| D37        Orange      ; SM0805      
+| D38        Blue        ; SM0805      
+| D39        Orange      ; SM0805      
+| D40        Blue        ; SM0805      
+| D41        Orange      ; SM0805      
+| D42        Blue        ; SM0805      
+| D43        Orange      ; SM0805      
+| D44        Blue        ; SM0805      
+| D45        Orange      ; SM0805      
+| D46        Blue        ; SM0805      
+| D47        Orange      ; SM0805      
+| D48        Blue        ; SM0805      
+| D49        12V         ; SM0805      
+| P1         CONN_15X2   ; IDC_HDR_ANG_15x2_2.54mm
+| P2         CONN_2      ; jst_eph-B2B-PH-K-S; Left leg    
+| P3         CONN_2      ; jst_eph-B2B-PH-K-S; Right leg   
+| P4         CONN_4      ; jst_eph-B4B-PH-K-S; Left arm    
+| P5         CONN_4      ; jst_eph-B4B-PH-K-S; Right arm   
+| P6         CONN_4      ; jst_eph-B4B-PH-K-S; Left foot   
+| P7         CONN_4      ; jst_eph-B4B-PH-K-S; Right foot  
+| P8         CONN_6      ; jst_eph-B6B-PH-K-S; Left Graber 
+| P9         CONN_2      ; jst_eph-B2B-PH-K-S; Hip         
+| P10        CONN_6      ; jst_eph-B2B-PH-K-S; Right graber
+| P11        CONN_6      ; jst_eph-B2B-PH-K-S; Button & Speaker
+| P12        CONN_2      ; bornier2    
+| R1         10k         ; SM0805      
+| R2         130         ; SM0603      
+| R3         R           ; SM0805      
+| R4         10          ; SM0805      
+| R5         R           ; SM0805      
+| R6         R           ; SM0805      
+| R33        R           ; SM0805      
+| R34        R           ; SM0805      
+| R35        R           ; SM0805      
+| R36        R           ; SM0805      
+| R37        R           ; SM0805      
+| R38        R           ; SM0805      
+| R39        R           ; SM0805      
+| R40        R           ; SM0805      
+| R41        R           ; SM0805      
+| R42        R           ; SM0805      
+| R43        R           ; SM0805      
+| R44        R           ; SM0805      
+| R45        R           ; SM0805      
+| R46        R           ; SM0805      
+| R47        R           ; SM0805      
+| R48        R           ; SM0805      
+| U1         L298P       ; PowerSO-20-Dissi
+| U2         L298P       ; PowerSO-20-Dissi
+| U3         L298P       ; PowerSO-20-Dissi
+| U4         L298P       ; PowerSO-20-Dissi
+| U5         74HC240     ; SO20L       
+| U6         LM386       ; SO8E        
+#End Cmp
+
+#Cmp ( order = Value )
+| 10           R4        ; SM0805      
+| 100n         C5        ; SM0603      
+| 100n         C6        ; SM0603      
+| 100n         C7        ; SM0603      
+| 100n         C8        ; SM0603      
+| 100n         C9        ; SM0603      
+| 100n         C10       ; SM0603      
+| 100n         C11       ; SM0603      
+| 100n         C12       ; SM0603      
+| 100n         C13       ; SM0603      
+| 100nF        C14       ; SM0603      
+| 10k          R1        ; SM0805      
+| 10µF        C15       ; cap-master-3216-18R/T
+| 12V          D49       ; SM0805      
+| 130          R2        ; SM0603      
+| 220µF       C17       ; cap-master-7343-TE-D
+| 45µF        C1        ; cap-master-6032-28R/T
+| 45µF        C2        ; cap-master-6032-28R/T
+| 45µF        C3        ; cap-master-6032-28R/T
+| 45µF        C4        ; cap-master-6032-28R/T
+| 47nF         C16       ; diode-DO214AC
+| 74HC240      U5        ; SO20L       
+| Blue         D34       ; SM0805      
+| Blue         D36       ; SM0805      
+| Blue         D38       ; SM0805      
+| Blue         D40       ; SM0805      
+| Blue         D42       ; SM0805      
+| Blue         D44       ; SM0805      
+| Blue         D46       ; SM0805      
+| Blue         D48       ; SM0805      
+| CONN_15X2    P1        ; IDC_HDR_ANG_15x2_2.54mm
+| CONN_2       P2        ; jst_eph-B2B-PH-K-S; Left leg    
+| CONN_2       P3        ; jst_eph-B2B-PH-K-S; Right leg   
+| CONN_2       P9        ; jst_eph-B2B-PH-K-S; Hip         
+| CONN_2       P12       ; bornier2    
+| CONN_4       P4        ; jst_eph-B4B-PH-K-S; Left arm    
+| CONN_4       P5        ; jst_eph-B4B-PH-K-S; Right arm   
+| CONN_4       P6        ; jst_eph-B4B-PH-K-S; Left foot   
+| CONN_4       P7        ; jst_eph-B4B-PH-K-S; Right foot  
+| CONN_6       P8        ; jst_eph-B6B-PH-K-S; Left Graber 
+| CONN_6       P10       ; jst_eph-B2B-PH-K-S; Right graber
+| CONN_6       P11       ; jst_eph-B2B-PH-K-S; Button & Speaker
+| L298P        U1        ; PowerSO-20-Dissi
+| L298P        U2        ; PowerSO-20-Dissi
+| L298P        U3        ; PowerSO-20-Dissi
+| L298P        U4        ; PowerSO-20-Dissi
+| LM386        U6        ; SO8E        
+| Orange       D33       ; SM0805      
+| Orange       D35       ; SM0805      
+| Orange       D37       ; SM0805      
+| Orange       D39       ; SM0805      
+| Orange       D41       ; SM0805      
+| Orange       D43       ; SM0805      
+| Orange       D45       ; SM0805      
+| Orange       D47       ; SM0805      
+| R            R3        ; SM0805      
+| R            R5        ; SM0805      
+| R            R6        ; SM0805      
+| R            R33       ; SM0805      
+| R            R34       ; SM0805      
+| R            R35       ; SM0805      
+| R            R36       ; SM0805      
+| R            R37       ; SM0805      
+| R            R38       ; SM0805      
+| R            R39       ; SM0805      
+| R            R40       ; SM0805      
+| R            R41       ; SM0805      
+| R            R42       ; SM0805      
+| R            R43       ; SM0805      
+| R            R44       ; SM0805      
+| R            R45       ; SM0805      
+| R            R46       ; SM0805      
+| R            R47       ; SM0805      
+| R            R48       ; SM0805      
+| SK34A        D1        ; diode-DO214AC
+| SK34A        D2        ; diode-DO214AC
+| SK34A        D3        ; diode-DO214AC
+| SK34A        D4        ; diode-DO214AC
+| SK34A        D5        ; diode-DO214AC
+| SK34A        D6        ; diode-DO214AC
+| SK34A        D7        ; diode-DO214AC
+| SK34A        D8        ; diode-DO214AC
+| SK34A        D9        ; diode-DO214AC
+| SK34A        D10       ; diode-DO214AC
+| SK34A        D11       ; diode-DO214AC
+| SK34A        D12       ; diode-DO214AC
+| SK34A        D13       ; diode-DO214AC
+| SK34A        D14       ; diode-DO214AC
+| SK34A        D15       ; diode-DO214AC
+| SK34A        D16       ; diode-DO214AC
+| SK34A        D17       ; diode-DO214AC
+| SK34A        D18       ; diode-DO214AC
+| SK34A        D19       ; diode-DO214AC
+| SK34A        D20       ; diode-DO214AC
+| SK34A        D21       ; diode-DO214AC
+| SK34A        D22       ; diode-DO214AC
+| SK34A        D23       ; diode-DO214AC
+| SK34A        D24       ; diode-DO214AC
+| SK34A        D25       ; diode-DO214AC
+| SK34A        D26       ; diode-DO214AC
+| SK34A        D27       ; diode-DO214AC
+| SK34A        D28       ; diode-DO214AC
+| SK34A        D29       ; diode-DO214AC
+| SK34A        D30       ; diode-DO214AC
+| SK34A        D31       ; diode-DO214AC
+| SK34A        D32       ; diode-DO214AC
+#End Cmp
+
+#End List

@@ -1,0 +1,38 @@
+EESchema-DOCLIB  Version 2.0  Date: wto, 28 cze 2011, 22:04:09
+#
+$CMP CONN_15X2
+D Basic symbol of connector
+K CONN
+$ENDCMP
+#
+$CMP CONN_2
+D Basic symbol of connector
+K CONN
+$ENDCMP
+#
+$CMP CONN_4
+D Basic symbol of connector
+K CONN
+$ENDCMP
+#
+$CMP CONN_6
+D Basic symbol of connector
+K CONN
+$ENDCMP
+#
+$CMP CONN_7
+D Basic symbol of connector
+K CONN
+$ENDCMP
+#
+$CMP CONN_8
+D Basic symbol of connector
+K CONN
+$ENDCMP
+#
+$CMP CONN_9X2
+D Basic symbol of connector
+K CONN
+$ENDCMP
+#
+#End Doc Library

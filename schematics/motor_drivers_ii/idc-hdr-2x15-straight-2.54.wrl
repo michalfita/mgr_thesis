@@ -1,0 +1,556 @@
+#VRML V2.0 utf8
+
+# This file was authored with Blender (http://www.blender.org/)
+# Blender version 249
+# Blender file idc-hdr-2x15-straight-2.54.blend
+# Exported using VRML97 exporter v1.55 (2006/01/17)
+
+
+NavigationInfo {
+	headlight FALSE
+	visibilityLimit 100.0
+	type ["EXAMINE", "ANY"]
+	avatarSize [0.25, 1.75, 0.75]
+} 
+ 
+Background {
+	groundColor 0.0565629 0.2208154 0.4
+	skyColor 0.0565629 0.2208154 0.4
+}
+
+DEF OB_Pin_029 Transform {
+	translation 17.779999 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		DEF ME_Pin Group {
+			children [
+				Shape {
+					appearance Appearance {
+						material DEF MA_Material Material {
+							diffuseColor 0.9067619 0.9363068 0.1082834
+							ambientIntensity 0.1666667
+							specularColor 0.4012008 0.4012008 0.4012008
+							emissiveColor  0.0 0.0 0.0
+							shininess 0.0976563
+							transparency 0.0
+						}
+					}
+					geometry IndexedFaceSet {
+						solid TRUE
+						coord DEF coord_Pin Coordinate {
+							point [
+1.0 -1.0 -0.999999940395
+ 1.0 -1.0 1.0
+ -1.00000011921 -1.0 0.999999821186
+ -0.999999642372 -1.0 -1.00000035763
+ 1.00000047684 1.0 -0.999999463558
+ 0.999999344349 1.0 1.00000059605
+ -1.00000035763 1.0 0.999999642372
+ -0.999999940395 1.0 -1.0
+ 							]
+						}
+						
+						coordIndex [
+0 1 2 3 -1, 
+4 7 6 5 -1, 
+0 4 5 1 -1, 
+1 5 6 2 -1, 
+2 6 7 3 -1, 
+4 0 3 7 -1, 
+						]
+					}
+				}
+			]
+		}
+	]
+}
+DEF OB_Pin_028 Transform {
+	translation 17.779999 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_027 Transform {
+	translation 15.239999 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_026 Transform {
+	translation 15.240000 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_025 Transform {
+	translation 12.700000 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_024 Transform {
+	translation 12.699999 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_023 Transform {
+	translation 10.159999 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_022 Transform {
+	translation 10.160000 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_021 Transform {
+	translation 7.620000 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_020 Transform {
+	translation 7.619999 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_019 Transform {
+	translation 5.079999 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_018 Transform {
+	translation 5.080000 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_017 Transform {
+	translation 2.540000 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_016 Transform {
+	translation 2.539999 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_015 Transform {
+	translation -0.000001 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_014 Transform {
+	translation 0.000000 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_013 Transform {
+	translation -2.540001 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_012 Transform {
+	translation -2.540001 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_011 Transform {
+	translation -5.080001 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_010 Transform {
+	translation -5.080001 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_009 Transform {
+	translation -7.620001 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_008 Transform {
+	translation -7.620001 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_007 Transform {
+	translation -10.160001 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_006 Transform {
+	translation -10.160001 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_005 Transform {
+	translation -12.700001 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_004 Transform {
+	translation -12.700001 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_003 Transform {
+	translation -15.240001 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_002 Transform {
+	translation -15.240001 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin_001 Transform {
+	translation -17.780001 2.950001 -1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Pin Transform {
+	translation -17.780001 2.950000 1.270000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.300000 6.025000 0.300000
+	children [
+		USE ME_Pin
+	]
+}
+DEF OB_Indentation Transform {
+	translation 0.000000 5.950000 3.700000
+	rotation 1.000000 0.000000 0.000000 1.570796
+	scale 2.100000 1.000000 3.049999
+	children [
+		DEF ME_Mesh_001 Group {
+			children [
+			]
+		}
+	]
+}
+DEF OB_Plane_006 Transform {
+	translation 0.000000 4.500000 3.700000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 1.000000 1.000000 1.000000
+	children [
+		DEF ME_Plane_003 Group {
+			children [
+				Shape {
+					appearance Appearance {
+						material DEF MA_Gray Material {
+							diffuseColor 0.7172145 0.7159798 0.7159798
+							ambientIntensity 0.1666667
+							specularColor 0.4012008 0.4012008 0.4012008
+							emissiveColor  0.0 0.0 0.0
+							shininess 0.0976563
+							transparency 0.0
+						}
+					}
+					geometry IndexedFaceSet {
+						solid TRUE
+						coord DEF coord_Plane_003 Coordinate {
+							point [
+23.0 4.49999856949 1.96701179789e-07
+ 23.0 -4.49999904633 -1.9670120821e-07
+ -23.0000019073 -4.49999809265 -1.96701165578e-07
+ -22.9999923706 4.50000047684 1.96701265054e-07
+ -23.0000019073 -4.49999809265 -1.96701165578e-07
+ 23.0 -4.49999904633 -1.9670120821e-07
+ 23.0 4.49999856949 1.96701179789e-07
+ 2.09999990463 -4.49999856949 -6.55670646665e-08
+ -2.10000038147 -4.49999856949 -6.55670646665e-08
+ -22.9999961853 -1.59999990463 0.0
+ -23.0 -3.04999947548 7.1054273576e-15
+ -23.0000019073 -4.49999809265 -1.96701165578e-07
+ -23.0000019073 -4.49999809265 -1.96701165578e-07
+ 23.0 4.49999856949 1.96701179789e-07
+ 23.0 4.49999856949 1.96701179789e-07
+ -2.09999990463 4.5 0.0
+ 2.10000038147 4.49999904633 6.5567071772e-08
+ 23.0 -4.49999904633 -1.9670120821e-07
+ 23.0 -4.49999904633 -1.9670120821e-07
+ 23.0 -3.05000042915 -2.13162820728e-14
+ 23.0 -1.59999990463 0.0
+ -2.10000038147 -4.49999856949 -6.55670646665e-08
+ 2.09999990463 -4.49999856949 -6.55670646665e-08
+ 7.66666603088 -4.49999856949 -1.96701194e-07
+ -7.66666793823 -4.49999856949 -1.96701179789e-07
+ 7.66666603088 -4.49999856949 -1.96701194e-07
+ -7.66666793823 -4.49999856949 -1.96701179789e-07
+ -2.09999895096 -3.04999995232 1.31134129333e-07
+ -2.0999994278 -1.60000002384 3.2783535886e-08
+ 2.10000038147 -3.04999995232 1.31134129333e-07
+ 2.0999994278 -1.60000002384 -3.2783535886e-08
+ 							]
+						}
+						
+						coordIndex [
+8 2 11 24 -1, 
+7 8 24 23 -1, 
+1 7 23 17 -1, 
+24 11 12 26 -1, 
+23 24 26 25 -1, 
+17 23 25 18 -1, 
+26 12 4 21 -1, 
+25 26 21 22 -1, 
+18 25 22 5 -1, 
+9 3 15 28 -1, 
+10 9 28 27 -1, 
+4 10 27 21 -1, 
+27 28 30 29 -1, 
+21 27 29 22 -1, 
+30 16 6 20 -1, 
+29 30 20 19 -1, 
+22 29 19 5 -1, 
+						]
+					}
+				}
+			]
+		}
+	]
+}
+DEF OB_Indentation_001 Transform {
+	translation 0.000000 5.950000 3.700000
+	rotation 1.000000 0.000000 0.000000 1.570796
+	scale 2.100000 1.000000 3.049999
+	children [
+		DEF ME_Mesh Group {
+			children [
+			]
+		}
+	]
+}
+DEF OB_Plane_005 Transform {
+	translation -23.000000 4.500000 0.000000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 1.000000 1.000000 1.000000
+	children [
+		DEF ME_Case Group {
+			children [
+				Shape {
+					appearance Appearance {
+						material USE MA_Gray
+					}
+					geometry IndexedFaceSet {
+						solid TRUE
+						coord DEF coord_Case Coordinate {
+							point [
+-1.96701250843e-07 -4.5 -3.69999885559
+ -1.96701250843e-07 -4.5 3.69999909401
+ 1.96701279265e-07 4.50000047684 3.69999837875
+ 1.96701179789e-07 4.49999856949 -3.70000052452
+ 							]
+						}
+						
+						coordIndex [
+0 3 2 1 -1, 
+						]
+					}
+				}
+			]
+		}
+	]
+}
+DEF OB_Plane_004 Transform {
+	translation 23.000000 4.500000 0.000000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 1.000000 1.000000 1.000000
+	children [
+		DEF ME_Plane_005 Group {
+			children [
+				Shape {
+					appearance Appearance {
+						material USE MA_Gray
+					}
+					geometry IndexedFaceSet {
+						solid TRUE
+						coord DEF coord_Plane_005 Coordinate {
+							point [
+-1.96701250843e-07 -4.5 -3.69999885559
+ -1.96701250843e-07 -4.5 3.69999909401
+ 1.96701279265e-07 4.50000047684 3.69999837875
+ 1.96701179789e-07 4.49999856949 -3.70000052452
+ 							]
+						}
+						
+						coordIndex [
+0 3 2 1 -1, 
+						]
+					}
+				}
+			]
+		}
+	]
+}
+DEF OB_Plane_003 Transform {
+	translation 0.000000 4.500000 -3.700000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 1.000000 1.000000 1.000000
+	children [
+		DEF ME_Plane_004 Group {
+			children [
+				Shape {
+					appearance Appearance {
+						material USE MA_Gray
+					}
+					geometry IndexedFaceSet {
+						solid TRUE
+						coord DEF coord_Plane_004 Coordinate {
+							point [
+23.0 4.49999856949 1.96701179789e-07
+ 23.0 -4.49999904633 -1.9670120821e-07
+ -23.0000019073 -4.49999809265 -1.96701165578e-07
+ -22.9999923706 4.50000047684 1.96701265054e-07
+ 							]
+						}
+						
+						coordIndex [
+0 3 2 1 -1, 
+						]
+					}
+				}
+			]
+		}
+	]
+}
+DEF OB_Plane_001 Transform {
+	translation 0.000000 0.000000 0.000000
+	rotation 1.000000 0.000000 0.000000 0.000000
+	scale 0.500000 1.000000 0.500000
+	children [
+		DEF ME_Plane_002 Group {
+			children [
+				Shape {
+					appearance Appearance {
+						material USE MA_Gray
+					}
+					geometry IndexedFaceSet {
+						solid TRUE
+						coord DEF coord_Plane_002 Coordinate {
+							point [
+46.0 0.0 -7.39999961853
+ 46.0 0.0 7.40000009537
+ -46.0000038147 0.0 7.39999866486
+ -45.9999847412 0.0 -7.40000295639
+ 							]
+						}
+						
+						coordIndex [
+0 3 2 1 -1, 
+						]
+					}
+				}
+			]
+		}
+	]
+}
+DEF OB_Lamp Transform {
+	translation 4.076245 5.903862 -1.005454
+	rotation 0.205942 0.920698 -0.331517 1.926274
+	scale 1.000000 1.000000 1.000000
+	children [
+		DEF Lamp PointLight {
+			ambientIntensity 0.0
+			color 1.0 1.0 1.0
+			intensity 0.5714286
+			location 0.0 0.0 0.0
+			radius 29.9999828339
+		}
+		
+	]
+}
+DEF OB_Camera Transform {
+	translation 7.481132 5.343665 6.507640
+	rotation 0.772239 0.535848 -0.341341 1.347139
+	scale 1.000000 1.000000 1.000000
+	children [
+		DEF Camera Viewpoint {
+			description "Camera" 
+			position 0.0 0.0 0.0
+			orientation 1.0 0.0 0.0 -1.570796
+			fieldOfView 0.661
+		}
+		
+	]
+}
+

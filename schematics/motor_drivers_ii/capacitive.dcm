@@ -1,0 +1,12 @@
+EESchema-DOCLIB  Version 2.0  Date: sob, 8 sty 2011, 23:59:06
+#
+$CMP C_FEED
+D Feed-thru Capacitor
+$ENDCMP
+#
+$CMP C_POL
+D Polarized Capacitor
+K POLARIZED CAPACITOR
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0  Date: czw, 30 cze 2011, 22:50:26
+#
+$CMP LM386
+D Low Voltage Audio Power Amplifier
+K Audio Power Amplifiler
+F http://www.national.com/ds/LM/LM386.pdf
+$ENDCMP
+#
+#End Doc Library
