@@ -6242,7 +6242,7 @@ Uruchomienie modułu konwertera po jego złożeniu okazało bardzo problematyczn
 \begin_layout Standard
 Do uruchamiania modułu użyto programu TeraTerm
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -8139,7 +8139,60 @@ linker
 \end_layout
 
 \begin_layout Enumerate
-Ustawienie opcji programu konsolidującego na 
+Ustawienie opcji programu konsolidującego
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+W AVR32 Studio we właściwościach projektu rozwijamy ustawienia 
+\emph on
+\lang british
+C/C++ Build
+\emph default
+\lang polish
+ i wybieramy 
+\emph on
+\lang british
+Settings
+\emph default
+\lang polish
+, w zakładce 
+\emph on
+\lang british
+Tool Settings
+\emph default
+\lang polish
+ wybieramy z grupy 
+\emph on
+\lang british
+AVR32/GNU C Linker
+\emph default
+\lang polish
+ obszar 
+\emph on
+\lang british
+General
+\emph default
+\lang polish
+ i zaznaczamy opcję 
+\emph on
+\lang british
+Do not use standard start files (-nostartfiles)
+\emph default
+\lang polish
+, następnie w obszarze 
+\emph on
+\lang british
+Miscellaneous
+\emph default
+\lang polish
+ wpisujemy w wierszy oznaczonym Linker flags podane parametry programu konsolidu
+jącego.
+\end_layout
+
+\end_inset
+
+ na 
 \begin_inset listings
 lstparams "breakautoindent=true,breaklines=true,language=C,tabsize=4"
 inline true
@@ -8185,6 +8238,13 @@ void __init_startup(void)
 
 \begin_layout Plain Layout
 
+    /* ...
+ some other initialization code ...
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
 	/* Switch to external oscillator 0 */
 \end_layout
 
@@ -8210,6 +8270,13 @@ void __init_startup(void)
 
 \begin_layout Plain Layout
 
+    /* ...
+ some other initialization code ...
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
 }
 \end_layout
 
@@ -8221,6 +8288,7 @@ port.c
 \family default
  dla FreeRTOS w oryginalnym szkielecie programowym powyższa funkcja jest
  już zdefiniowana i wymagała zmiany.
+ Obsługa pamięci SDRAM wymaga taktowania procesora z oscylatora zewnętrznego.
 \end_layout
 
 \begin_layout Standard
@@ -8423,47 +8491,73 @@ status open
 
 \begin_layout Plain Layout
 
-/* Put clock configuration into structure */
+void vq_init_clock(void)
 \end_layout
 
 \begin_layout Plain Layout
 
-pm_freq_param_t freq_param = {
+{
 \end_layout
 
 \begin_layout Plain Layout
 
-	.cpu_f = configCPU_CLOCK_HZ,
+	int pm_status; 
 \end_layout
 
 \begin_layout Plain Layout
 
-	.pba_f = configPBA_CLOCK_HZ,
+	/* Put clock configuration into structure */
 \end_layout
 
 \begin_layout Plain Layout
 
-	.osc0_f = FOSC0,
+	pm_freq_param_t freq_param = {
 \end_layout
 
 \begin_layout Plain Layout
 
-	.osc0_startup = OSC0_STARTUP
+			.cpu_f = configCPU_CLOCK_HZ,
 \end_layout
 
 \begin_layout Plain Layout
 
-}; 
+			.pba_f = configPBA_CLOCK_HZ,
 \end_layout
 
 \begin_layout Plain Layout
 
-/* Configure CPU by PLL clocking */
+			.osc0_f = FOSC0,
 \end_layout
 
 \begin_layout Plain Layout
 
-pm_configure_clocks(&freq_param);
+			.osc0_startup = OSC0_STARTUP
+\end_layout
+
+\begin_layout Plain Layout
+
+	};
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* Configure CPU by PLL clocking */
+\end_layout
+
+\begin_layout Plain Layout
+
+	pm_status = pm_configure_clocks(&freq_param);
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* ...
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -8475,7 +8569,8 @@ pm_configure_clocks(&freq_param);
 Możliwość wykorzystywania pamięci SDRAM wymaga, aby inicjalizacja ostatecznej
  prędkości pracy odbyła się zanim zostanie wykorzystana sterta do alokacji
  pamięci przydzielanej dynamicznie.
- Aby tego dokonać powyższy kod musi znaleźć się w funkcji 
+ Aby tego dokonać wywołanie powyższej funkcji musi znaleźć się w funkcji
+ 
 \begin_inset listings
 lstparams "language=C,tabsize=4"
 inline true
@@ -8502,6 +8597,8 @@ pm_switch_to_osc0()
 \end_inset
 
 .
+ Dzięki temu minimalizujemy zmiany oryginalnego portu dostarczonego wraz
+ ze środowiskiem ramowym.
 \end_layout
 
 \begin_layout Subsection
@@ -8524,17 +8621,87 @@ preemptive
 \shape default
 \lang polish
 ) należy zadbać, aby alokacje pamięci nie zostały przerwane przez wywłaszczenie.
- Biblioteka newlib przewiduje dwie metody:
-\begin_inset Note Note
+ Biblioteka newlib przewiduje dwie metody
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gatliff-newlib-2"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Implementacja funkcji 
+\begin_inset listings
+lstparams "language=C"
+inline true
 status open
 
 \begin_layout Plain Layout
-dopisać lockowanie malloca
+
+malloc()
 \end_layout
 
 \end_inset
 
+ w oparciu o zastosowany w projekcie system operacyjny i jego wbudowane
+ mechanizmy zarządzania dostępną pamięcią.
+ W takiej sytuacji zamiast funkcji bibliotecznej włączona zostaje nasza
+ implementacja.
+\end_layout
 
+\begin_layout Enumerate
+Implementacja funkcji 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+__malloc_lock()
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+__malloc_unlock()
+\end_layout
+
+\end_inset
+
+ w celu zabezpieczenia wywołań do newralgicznych struktur danych o przydzielonej
+ pamięci w przypadku kolidujących wywołań z różnych zadań (ang.
+ 
+\emph on
+\lang british
+task
+\emph default
+\lang polish
+).
+ Metoda ta wymaga jednak bezpiecznego stosowania mechanizmów synchronizujących,
+ aby uniknąć zakleszczenia związanego z podwójnym wywołaniem 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+__malloc_lock()
+\end_layout
+
+\end_inset
+
+ przez kod biblioteczny.
 \end_layout
 
 \begin_layout Section
