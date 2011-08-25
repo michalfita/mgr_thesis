@@ -14,7 +14,7 @@ for line in file_r:
   match = re.match(pattern, line)
   if match is not None:
     file_w.write("#define BUILD_NUMBER %8d\n" % (int(match.group('number')) + 1))
-    print "#define BUILD_NUMBER %7d" % (int(match.group('number')) + 1)
+    print "Build number in version.h updated to %7d." % (int(match.group('number')) + 1)
   else:
     file_w.write(line)
     

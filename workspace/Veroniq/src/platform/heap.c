@@ -37,6 +37,7 @@ xSemaphoreHandle g_xHeapRecursiveMutex;
 /**
  * Forward declarations
  */
+static void l_vCheckSchedulingFunction();
 static void l_vEmptyFunction();
 static void l_vRaiseProtection();
 static void l_vLowerProtection();
@@ -44,7 +45,7 @@ static void l_vLowerProtection();
 /**
  * Function pointers to be used in protection mechanisms.
  */
-static void (*l_pxRaiseProtection)() = l_vEmptyFunction;
+static void (*l_pxRaiseProtection)() = l_vCheckSchedulingFunction;
 static void (*l_pxLowerProtection)() = l_vEmptyFunction;
 
 /**
@@ -68,6 +69,38 @@ void heap_management_init()
 }
 
 /**
+ * The local l_vCheckSchedulingFunction() function.
+ *
+ * If scheduling is not enables it does nothing. When scheduling goes into force
+ * it switches protection mechanism of memory allocation to semaphores. This is probably
+ * smartest thing we can do for now.
+ */
+static void l_vCheckSchedulingFunction()
+{
+	static int initialization_in_progress = FALSE; //! Recursion protection
+
+	if ((!initialization_in_progress) && (taskSCHEDULER_NOT_STARTED != xTaskGetSchedulerState()))
+	{
+		initialization_in_progress = TRUE;
+		vTaskSuspendAll();
+
+		/* Create semaphore for protecting memory allocations */
+		g_xHeapRecursiveMutex = xSemaphoreCreateRecursiveMutex();
+		if (NULL != g_xHeapRecursiveMutex)
+		{
+			/* Switch protection mechanisms if scheduler started to work */
+			l_pxRaiseProtection = l_vRaiseProtection;
+			l_pxLowerProtection = l_vLowerProtection;
+
+			/* Raise protection for the first time */
+			l_pxRaiseProtection();
+		}
+		xTaskResumeAll();
+		initialization_in_progress = FALSE;
+	}
+}
+
+/**
  * The local l_vEmptyFunction() function.
  *
  * The empty function to point to the protection function pointers before
@@ -78,11 +111,24 @@ static void l_vEmptyFunction()
 	return;
 }
 
+/**
+ * The local l_vRaiseProtection() function.
+ *
+ * Raises the semaphore protecting memory allocations. The proces takes place only when
+ * scheduling has been started.
+ */
 static void l_vRaiseProtection()
 {
 	// Take mutex or wait assumed infinity.
 	xSemaphoreTakeRecursive(g_xHeapRecursiveMutex, 99999);
 }
+
+/**
+ * The local l_vLowerProtection() function.
+ * +
+ * Lowers the semapthore protecting memory allocations. The process takses place only when
+ * scheduling has been started.
+ */
 
 static void l_vLowerProtection()
 {

@@ -16,6 +16,39 @@
 #include "tasks/init.h"
 #include "platform/heap.h"
 
+/*!
+ * \brief Reconfigure HMATRIX to better suit our needs.
+ * \refer http://www.atmel.com/dyn/resources/prod_documents/doc32058.pdf pages 132 to 144,
+ *        Chapter 19.
+ */
+static void init_hmatrix(void)
+{
+  // For the internal-flash HMATRIX slave, use last master as default.
+  union
+  {
+     unsigned long                 scfg;
+     avr32_hmatrix_scfg_t          SCFG;
+  } u_avr32_hmatrix_scfg = {AVR32_HMATRIX.scfg[AVR32_HMATRIX_SLAVE_FLASH]};
+
+  union
+  {
+    unsigned long                  mcfg;
+    avr32_hmatrix_mcfg_t           MCFG;
+  } u_avr32_hmatrix_mcfg = {AVR32_HMATRIX.mcfg[AVR32_HMATRIX_MASTER_CPU_INSN]};
+
+  /* Set last default master for FLASH */
+  u_avr32_hmatrix_scfg.SCFG.defmstr_type = AVR32_HMATRIX_DEFMSTR_TYPE_LAST_DEFAULT;
+  AVR32_HMATRIX.scfg[AVR32_HMATRIX_SLAVE_FLASH] = u_avr32_hmatrix_scfg.scfg;
+
+  /* Set last default master for PBA to which TC is connected */
+  u_avr32_hmatrix_scfg.scfg = AVR32_HMATRIX.scfg[AVR32_HMATRIX_SLAVE_PBA];
+  u_avr32_hmatrix_scfg.SCFG.defmstr_type = AVR32_HMATRIX_DEFMSTR_TYPE_LAST_DEFAULT;
+  AVR32_HMATRIX.scfg[AVR32_HMATRIX_SLAVE_PBA] = u_avr32_hmatrix_scfg.scfg;
+
+  /* Set undefined burst length type of instruction master to one */
+  u_avr32_hmatrix_mcfg.MCFG.ulbt = AVR32_HMATRIX_ULBT_SINGLE;
+  AVR32_HMATRIX.mcfg[AVR32_HMATRIX_MASTER_CPU_INSN] = u_avr32_hmatrix_mcfg.mcfg;
+}
 
 int main( void )
 {
@@ -67,9 +100,13 @@ int main( void )
 
    //**
    //** Init memory allocation multitask protection mechanisms.
-   //**
-   heap_management_init();
+   //** (process now handled internally)
+   //heap_management_init();
    
+   //**
+   //** Set HMATRIX for better performance of flash
+   //**
+   init_hmatrix();
    //**
    //** Start main task here.
    //**

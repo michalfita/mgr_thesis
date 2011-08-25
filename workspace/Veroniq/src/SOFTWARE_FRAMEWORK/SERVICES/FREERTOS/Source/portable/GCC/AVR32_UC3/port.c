@@ -145,15 +145,15 @@ int _init_startup(void)
     /* Initialize SDRAM Controller and external SDRAM chip. */ 
 	sdramc_init( configCPU_CLOCK_HZ );
 
-	#if configHEAP_INIT
+    #if configHEAP_INIT
 
-		/* Initialize the heap used by malloc. */
-		for( pxMem = &__heap_start__; pxMem < ( portBASE_TYPE * )&__heap_end__; )
-		{
-			*pxMem++ = 0xA5A5A5A5;
-		}
+        /* Initialize the heap used by malloc. */
+        for( pxMem = &__heap_start__; pxMem < ( portBASE_TYPE * )&__heap_end__; )
+        {
+                *pxMem++ = 0xA5A5A5A5;
+        }
 
-	#endif
+    #endif
 
 	/* Give the used PBA clock frequency to Newlib, so it can work properly. */
 	set_cpu_hz( configPBA_CLOCK_HZ );

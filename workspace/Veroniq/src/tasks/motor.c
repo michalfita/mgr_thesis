@@ -134,7 +134,7 @@ void motor_move_routine(/* subject to add direction */)
  * @note To be used outside motor task.
  * @return Status of sending message.
  */
-bool_t motor_send_message(unsigned char pin, unsigned char value, unsigned char time)
+bool_t motor_send_message(uint8_t pin, uint8_t value, uint16_t time)
 {
 	motor_queue_msg_t 	msg;
 	bool_t            	status = TRUE;
@@ -158,7 +158,7 @@ bool_t motor_send_message(unsigned char pin, unsigned char value, unsigned char 
  * \param value
  * \return Status of execution.
  */
-bool_t motor_setpin_values(unsigned int pin_id, unsigned int value)
+bool_t motor_setpin_values(uint8_t pin_id, uint8_t value)
 {
 	unsigned int pin_number;
 	avr32_pwm_channel_t pwm_channel;
@@ -202,7 +202,7 @@ bool_t motor_setpin_values(unsigned int pin_id, unsigned int value)
 	return status;
 }
 
-bool_t motor_setpin_defer(unsigned int pin_id, unsigned int value, unsigned int latency)
+bool_t motor_setpin_defer(uint8_t pin_id, uint8_t value, uint16_t latency)
 {
 	// Add motor_setpin_values into the list of timing to process.
 	return TRUE;
