@@ -2,6 +2,9 @@
  * \file
  * \brief Implementation of high precision timer service.
  * \author Michał Fita <michal.fita@gmail.com>
+ * \defgroup timer Timer Service
+ * \ingroup veroniq
+ * \{
  */
 
 #include <stdint.h>
@@ -9,19 +12,58 @@
 #include <avr32/io.h>
 #include <stdio.h>
 #include <string.h>
+#include <utlist.h>
 #include "FreeRTOS.h"
 #include "queue.h"
 #include "task.h"
-#include "serial.h"
 #include "gpio.h"
 #include "tc.h"
 #include "timer.h"
 
+#ifndef __GCC_POSIX__
+#include "serial.h"
+#endif /* __GCC_POSIX__ */
+
+#undef TIMER_TEST_MODE
+
+/*!
+ * \brief Macro that calculates period in TC ticks from microseconds.
+ */
+#define CALCULATE_TC_PERIOD_FROM_US(period) ((period * (configPBA_CLOCK_HZ / 8)) / (configTICK_RATE_HZ * 100) /10)
+
 /*!
  * \brief Channel of Timer Counter peripheral used in this module.
- * \notice This is an ugly workaround for widely well known issue with constants in C.
+ * \note This is an ugly workaround for widely well known issue with constants in C.
  */
-enum { TimerService_TC_Channel = 1 };
+enum { TimerService_TC_Channel = 1 };//!< TimerService_TC_Channel
+
+static enum {
+    TS_Idle,
+    TS_Awaiting,
+    TS_Executing,
+} ts_internal_state;
+
+static enum {
+	TS_Latency_Prev_Int,
+	TS_Latency_Curr_Int,
+	TS_Latency_Timer_Prep,
+	TS_Latency_Spent_Int,
+	TS_Latency_Schedule,
+	TS_Latency_Execute,
+	TS_Latency_Counters_Quantity /* Keep always last */
+} ts_latency_timestamp_type;
+
+/*!
+ * \brief Internal list of scheduled events;
+ */
+typedef struct ts_sched_list_s {
+    struct ts_sched_list_s*    next;             /*!< Pointer to the next element on the list */
+    struct ts_sched_list_s*    prev;             /*!< Pointer to the previous element on the list */
+    uint32_t                   id;               /*!< Identification of the scheduled element */
+    ts_time_t                  departure_time;   /*!< When the request leave the originator */
+    time_t                     execution_time;   /*!< When the element is scheduled (period) */
+    ts_callback_t              callback;         /*!< Scheduled function to be called on time */
+} ts_sched_list_t;
 
 /*!
  * \brief Interrupt number of Timer Counter peripheral used in this module.
@@ -50,7 +92,7 @@ static const tc_waveform_opt_t ts_waveform_opt =
     .eevt     = 0,                                 /* External event selection. */
     .eevtedg  = TC_SEL_NO_EDGE,                    /* External event edge selection. */
     .cpcdis   = TRUE,                              /* Counter disable when RC compare. */
-    .cpcstop  = FALSE,  //TRUE,                    /* Counter clock stopped with RC compare. */
+    .cpcstop  = TRUE,                              /* Counter clock stopped with RC compare. */
 
     .burst    = TC_BURST_NOT_GATED,                /* Burst signal selection. */
     .clki     = TC_CLOCK_RISING_EDGE,              /* Clock inversion. */
@@ -69,22 +111,37 @@ static const tc_interrupt_t ts_tc_interrupt =
     .covfs = 0
 };
 
-/*!ticks
- * Store values for latency counting
+
+/*!
+ * \brief Store values for latency counting
  */
-static long ts_latency = 0;
-static long ts_last_period = 0;
-static long ts_test_period = 50;
-static long ts_compensation = 0;
-static ts_time_t ts_period_between[4] = { };
+static struct ts_latency_s
+{
+	long latency; /*!< Calculted latency */
+	long last_period;
+	long test_period;
+	long compensation;
+	ts_time_t timestamps[TS_Latency_Counters_Quantity]; /*! < Timestams used to calculate latency */
+} ts_latency = { .latency = 0, .last_period = 0, .test_period = 500, .compensation = 0, .timestamps = { } };
+
+static const int initial_sched_list_size = 20;
+static ts_sched_list_t* sched_list = NULL;
+static ts_sched_list_t* first_free = NULL;
+static uint32_t current_id = 1; /**< ID to be used for new schedule. Intentionally not used 1 for first time */
+static uint32_t last_sched_id = 1; /**< Last ID used for timer schedule. In fact this initialization does not matter */
 
 static xQueueHandle ts_queue = NULL;
 
+/* Forward declarations */
 static void __attribute__((__noinline__)) vTimerTickTest(void);
-static inline void prepare_timer(long period, bool_t interrupt);
+static inline void prepare_timer(time_t period, uint32_t id);
+static inline bool_t check_reschedule(time_t period);
+static bool_t ts_timer_reschedule(ts_time_t departure_time, long  period, uint32_t id);
 
-/* Handler for serial port used for command entry */
+#ifndef __GCC_POSIX__
+/*! Handler for serial port used for command entry */
 extern xComPortHandle serialPortHdlr;
+#endif
 
 /*!
  * \brief Get time defined as system ticks and processor cycle counts.
@@ -106,7 +163,7 @@ ts_time_t ts_get_current_time()
  * \brief Compare two times and return difference between them.
  * \author Michał Fita <michal.fita@gmail.com>
  * \date 24 Aug 2011
- * \notice Later time have to be passed as second argument.
+ * \note Later time have to be passed as second argument.
  * \param[in] first Earlier time to calculate difference
  * \param[in] second Later time to calculate difference
  * \return Delta between second and first
@@ -128,14 +185,74 @@ ts_time_t ts_diff_time(ts_time_t first, ts_time_t second)
 }
 
 /*!
+ * \brief Substract one time from another and return result.
+ * \author Michał Fita <michal.fita@gmail.com>
+ * \date 31 Aug 2011
+ * \note Later time have to be passed as second argument.
+ * \param[in] minuend Time from which it subtracts.
+ * \param[in] subtrahend Time subtracted (should be < minuend).
+ * \return Difference of subtrahend subtracted from minuend.
+ */
+ts_time_t inline ts_substract_time(ts_time_t minuend, ts_time_t subtrahend)
+{
+    ts_time_t diff;
+
+    diff.system_ticks = minuend.system_ticks - subtrahend.system_ticks;
+    diff.cpu_counter = minuend.cpu_counter - subtrahend.cpu_counter;
+
+    return diff;
+}
+
+/*!
+ * \brief Substract one time from period in us and return result in us.
+ * \author Michał Fita <michal.fita@gmail.com>
+ * \date 31 Aug 2011
+ * \note If time expressed as \c subtrahend is higher than period, then
+ *         returned value is 0 (zero).
+ * \param[in] period Time in us from which it subtracts.
+ * \param[in] subtrahend Time subtracted (should be < minuend).
+ * \return Period in us reduced by subtrahend in us.
+ */
+long inline ts_substract_time_from_period(long period, ts_time_t subtrahend)
+{
+    const long cpu_ticks_in_us = (configCPU_CLOCK_HZ/configTICK_RATE_HZ) /* 1 ms */ / 1000; /* = t/(1 us) */
+    const long us_in_system_ticks = 1000000 / configTICK_RATE_HZ; /* 10e6 us / system ticks in second */
+
+    long us_subtrahend = (subtrahend.cpu_counter / cpu_ticks_in_us)
+                       + (subtrahend.system_ticks * us_in_system_ticks);
+
+    if (us_subtrahend > period)
+    {
+        return 0; /* Shall never be lower than 0 */
+    }
+    return period - us_subtrahend;
+}
+
+/*!
+ * \brief Returns period remaining to execute from departure time of the request.
+ * @param departure_time Time when request departed
+ * @param period Time after which request has to be executed
+ * @return Period remaining to execution
+ */
+static inline time_t ts_remaining_period(ts_time_t departure_time, long  period)
+{
+    ts_time_t schedule_time = ts_get_current_time();
+    ts_time_t delta_time = ts_diff_time(departure_time, schedule_time);
+
+    return ts_substract_time_from_period(period, delta_time);
+}
+
+/*!urrent_id
  * \brief Schedule some function to be executed after specific period.
+ * \author Michał Fita <michal.fita@gmail.com>
+ * \date 29 Aug 2011
  * \param[in] callback Function to be called after specified period.
  * \param[in] period   The period after which callback has to executed (10 us gradation; > 20 us)
  * \return             \c TRUE on success, \c FALSE on failure
  */
 bool_t ts_period_schedule(ts_callback_t callback, long period)
 {
-    timer_queue_msg_t schedule_message = { };
+    timer_queue_msg_t schedule_message = { .type = TS_SCHEDULE };
 
     schedule_message.departure_time = ts_get_current_time();
 
@@ -154,17 +271,129 @@ bool_t ts_period_schedule(ts_callback_t callback, long period)
 }
 
 /*!
- * \brief Schedules the execution of callback function internally
+ * \brief Checks if remaining period is shorter than current value of the comparator.
+ * @param departure_time Time when request was departed to be executed.
+ * @param period Period after which scheduled request has to be executed.
+ * @param id Unique internal identifier of the request.
+ * @return \c TRUE if reschedule take place, \c FALSE otherwise
+ */
+static bool_t ts_timer_reschedule(ts_time_t departure_time, long  period, uint32_t id)
+{
+    time_t remaining_period = ts_remaining_period(departure_time, period);
+
+    if((ts_internal_state == TS_Idle) || (ts_internal_state == TS_Awaiting && check_reschedule(remaining_period)))
+    {
+        prepare_timer(remaining_period, id);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+/*!
+ * \brief Schedules the execution of callback function internally.
+ * \author Michał Fita <michal.fita@gmail.com>
+ * \date 31 Aug 2011
+ * \note I may silently ignore request for schedule if there is no room on
+ *         schedule list for new entry.
  */
 static void ts_internal_schedule(ts_callback_t callback, ts_time_t departure_time, long period)
 {
-    static ts_time_t schedule_time = { };
-    static ts_time_t delta_time = { };
+    static ts_sched_list_t* sched_elem = NULL;
 
-    schedule_time = ts_get_current_time();
-    delta_time = ts_diff_time(departure_time, schedule_time);
+    if (TRUE == ts_timer_reschedule(departure_time, period, current_id))
+    {
+        first_free = first_free->prev;
+    }
+    else
+    {
+        prepare_timer(period, current_id);
+    }
 
+    CDL_FOREACH(first_free, sched_elem)
+    {
+        if (NULL != sched_elem->callback) continue;
 
+        sched_elem->callback = callback;
+        sched_elem->execution_time = ts_remaining_period(departure_time, period);
+        sched_elem->id = current_id++;
+
+        break; /* This would cause silent return without scheduling been done! */
+    } //while  ((NULL != (sched_elem = sched_elem->next) && (first_free = sched_elem)) || !(first_free = sched_list));
+
+    first_free = sched_elem->next;
+}
+
+/**
+ * \brief This function executes function from the list of scheduled
+ *        and prepares timer again if required for next element on the list
+ * @param departure_time The time when interrupt sent the message
+ * @param id Id of the element scheduled to be launched.
+ */
+static void ts_internal_execution(ts_time_t departure_time, uint32_t id)
+{
+    ts_sched_list_t* sched_elem = NULL;
+    ts_sched_list_t* prev_sched_elem;
+    //ts_time_t arrival_time = ts_get_current_time();
+
+    sched_elem = sched_list;
+
+    CDL_FOREACH(sched_list, sched_elem)
+    {
+       if ((NULL == sched_elem->callback) /*|| id != sched_elem->id*/) continue;
+
+       ts_time_t arrival_time = ts_get_current_time();
+
+      //TODO: calculation of time spent on processing request from interrupt.
+
+       sched_elem->callback();
+
+       prev_sched_elem = sched_elem;
+       sched_list = sched_elem->next; /* Next time execution will start search from next element */
+
+       /* Clean up the element on the list */
+       prev_sched_elem->callback = NULL;
+       prev_sched_elem->departure_time.system_ticks = 0;
+       prev_sched_elem->departure_time.cpu_counter = 0;
+       prev_sched_elem->execution_time = 0;
+
+       break; /* This would cause silent return without scheduling been done! */
+    }
+
+    //sched_elem = prev_sched_elem;
+
+    CDL_FOREACH(sched_list, sched_elem)
+    {
+        if (NULL != sched_elem->callback)
+        {
+           if (TRUE == ts_timer_reschedule(sched_elem->departure_time, sched_elem->execution_time, sched_elem->id))
+           {
+               break; /* If timer reschedule has taken place break further search */
+           }
+        }
+    }
+
+//    do {
+//        if (NULL != sched_elem->next)
+//        {
+//            sched_elem = sched_elem->next;
+//
+//            if (sched_elem->callback != NULL)
+//            {
+//                ts_timer_reschedule(sched_elem->departure_time, sched_elem->execution_time, sched_elem->id);
+//            }
+//        }
+//        else
+//        {
+//            /* Move one element from the front to the back of the list */
+//            sched_elem->next = sched_list;
+//            sched_list = sched_list->next;
+//            sched_elem = sched_elem->next;
+//            sched_elem->next = NULL;
+//        }
+//
+//    } while  ((NULL != sched_elem->next));
+
+    /* Silent leave */
 }
 
 /*!
@@ -177,19 +406,24 @@ static void __attribute__((__noinline__)) vTimerTick_non_naked(void)
     volatile avr32_tc_t *tc = &AVR32_TC;
     portBASE_TYPE qstatus, task_woken;
 
-    static timer_queue_msg_t interrupt_message = { };
+    static timer_queue_msg_t interrupt_message = { .type = TS_EXECUTION };
 
     // Clear the interrupt flag. This is a side effect of reading the TC SR.
     tc_read_sr(tc, TimerService_TC_Channel);
+
+    portENTER_CRITICAL();
+
+    ts_latency.timestamps[TS_Latency_Prev_Int] = ts_latency.timestamps[TS_Latency_Curr_Int];
+    ts_latency.timestamps[TS_Latency_Curr_Int] = ts_get_current_time();
 
     // Store departure time
     interrupt_message.departure_time = ts_get_current_time();
 
     // Take ID of first callback awaiting execution
-    interrupt_message.execution.id = 0;
+    interrupt_message.execution.id = last_sched_id;
 
     // Do the job! Send the message to the queue.
-    portENTER_CRITICAL();
+    ts_internal_state = TS_Executing;
     qstatus = xQueueSendToFrontFromISR(ts_queue, &interrupt_message, &task_woken);
     portEXIT_CRITICAL();
 }
@@ -198,46 +432,78 @@ static void __attribute__((__noinline__)) vTimerTick_non_naked(void)
  * \brief Interrupt handler for timer service.
  * \author Michał Fita <michal.fita@gmail.com>
  * \date 19 Aug 2011
- * \notice In result of queue usage, the interrupt handler has to cope with possible
+ * \note In result of queue usage, the interrupt handler has to cope with possible
  *         context switch, which may occur after we fed the queue.
  */
+#ifndef __GCC_POSIX__
 static void __attribute__((__naked__)) vTimerTick(void)
 {
     portENTER_SWITCHING_ISR();
-    //vTimerTick_non_naked();
-    vTimerTickTest();
+    vTimerTick_non_naked();
+    //vTimerTickTest();
     portEXIT_SWITCHING_ISR();
 }
+#else /* __GCC_POSIX__ */
+static void __attribute__((__noinline__)) vTimerTick(void)
+{
+    //vTimerTick_non_naked();
+    vTimerTickTest();
+    portEND_SWITCHING_ISR(TRUE);
+}
+#endif /* __GCC_POSIX__ */
 
 static void __attribute__((__noinline__)) vTimerTickTest(void)
 //static void __attribute__((interrupt)) vTimerTickTest(void)
 {
-    volatile avr32_tc_t *tc = &AVR32_TC;
+    static volatile avr32_tc_t *tc = &AVR32_TC;
 
     //portENTER_CRITICAL();
 
-    ts_period_between[0] = ts_period_between[1];
-    ts_period_between[1] = ts_get_current_time();
+    ts_latency.timestamps[TS_Latency_Prev_Int] = ts_latency.timestamps[TS_Latency_Curr_Int];
+    ts_latency.timestamps[TS_Latency_Curr_Int] = ts_get_current_time();
 
     tc_read_sr(tc, TimerService_TC_Channel);
 
-    prepare_timer(ts_test_period, TRUE);
+    prepare_timer(ts_latency.test_period, 0);
 
-    gpio_enable_gpio_pin(AVR32_PIN_PB21);
-    gpio_tgl_gpio_pin(AVR32_PIN_PB21);
+    //gpio_enable_gpio_pin(AVR32_PIN_PB21);
+    //gpio_tgl_gpio_pin(AVR32_PIN_PB21);
 
     //portEXIT_CRITICAL();
 }
 
 /*!
+ * \brief Checks if time left to trigger an interrupt is longer than given
+ *        periodts_internal_execution(time_t departure_time, uint32_t id)
+ * \author Michał Fita <michal.fita@gmail.com>
+ * \date 31 Aug 2011
+ * \param period Time after which the timer interrupt will be triggered
+ * \return \c True if we should reschedule because we need shorter time or
+ *         \c False otherwise
+ * \todo Add support for latency
+ */
+static inline bool_t check_reschedule(time_t period)
+{
+    static volatile avr32_tc_t *tc = &AVR32_TC;
+
+    // Calculate timer cycles for given period having rounding of integer math in mind
+    time_t calculated_period = CALCULATE_TC_PERIOD_FROM_US(period);
+
+    // Read the current timer counter and comparator
+    int tc_ticks_left = tc_read_rc(tc, TimerService_TC_Channel) - tc_read_tc(tc, TimerService_TC_Channel);
+
+    return ((tc_ticks_left <= 0) || (tc_ticks_left > calculated_period));
+}
+
+/*!
  * \brief Prepares timer to launch after specific period
- * \author Michał Fita <amf018@gmail.com>
+ * \author Michał Fita <michal.fita@gmail.com>
  * \date 19 Aug 2011
  * \param period Time after which the timer interrupt will be triggered
  */
-static inline void prepare_timer(long period, bool_t interrupt)
+static inline void prepare_timer(time_t period, uint32_t id)
 {
-    volatile avr32_tc_t *tc = &AVR32_TC;
+    static volatile avr32_tc_t *tc = &AVR32_TC;
 
     //long calculated_period = (((period < 20 ? 20 : period / 10) * (configPBA_CLOCK_HZ / (configTICK_RATE_HZ * 100)))
     //                - (1 * (configPBA_CLOCK_HZ / (configTICK_RATE_HZ * 200)))) / 8;
@@ -245,37 +511,57 @@ static inline void prepare_timer(long period, bool_t interrupt)
     period = period < 20 ? 20 : period;
 
     // Calculate timer cycles for given period having rounding of integer math in mind
-    long calculated_period = (period * (configPBA_CLOCK_HZ / 8)) / (configTICK_RATE_HZ * 100) /10;
+    time_t calculated_period = CALCULATE_TC_PERIOD_FROM_US(period);
 
     // =LICZBA.CAŁK(QUOTIENT(period*QUOTIENT(configPBA_CLOCK_HZ;8);(configTICK_RATE_HZ*100))/10)
 
-    ts_last_period = calculated_period;
+    ts_latency.last_period = calculated_period;
 
-    ts_period_between[2] = ts_get_current_time();
-    ts_compensation = ts_diff_time(ts_period_between[1], ts_period_between[2]).cpu_counter
+    ts_latency.timestamps[TS_Latency_Timer_Prep] = ts_get_current_time();
+    ts_latency.compensation = ts_diff_time(ts_latency.timestamps[TS_Latency_Curr_Int], ts_latency.timestamps[TS_Latency_Timer_Prep]).cpu_counter
                      / ((configCPU_CLOCK_HZ / configPBA_CLOCK_HZ) * 8);
 
     portENTER_CRITICAL();
 
     // Program timer comparator to be launched after given period in tenth of us
-    tc_write_rc(tc, TimerService_TC_Channel, calculated_period - ts_compensation);
+    tc_write_rc(tc, TimerService_TC_Channel, calculated_period - ts_latency.compensation);
+
+    // Timer is counting for the given ID
+    last_sched_id = id;
 
     // Start counting
-    if (FALSE /*interrupt == TRUE*/)
-    {
-        tc_software_trigger(tc, TimerService_TC_Channel);
-    }
-    else
-    {
-        tc_start(tc, TimerService_TC_Channel);
-    }
-
+    tc_start(tc, TimerService_TC_Channel);
 
     // Calculate real time spent on processing interrupt
-    ts_period_between[3] = ts_diff_time(ts_period_between[0], ts_period_between[1]);
+    ts_latency.timestamps[TS_Latency_Spent_Int] = ts_diff_time(ts_latency.timestamps[TS_Latency_Prev_Int], ts_latency.timestamps[TS_Latency_Curr_Int]);
 
+    // Mark internal state as awaiting for triggered interrupt
+    ts_internal_state = TS_Awaiting;
     portEXIT_CRITICAL();
 }
+
+/*!
+ * \brief Callback called first which allows measure of current latency.
+ */
+void ts_calculate_latency_cb(void)
+{
+	portENTER_CRITICAL();
+	ts_latency.timestamps[TS_Latency_Execute] = ts_get_current_time();
+	portEXIT_CRITICAL();
+
+	ts_time_t processing_time = ts_diff_time(ts_latency.timestamps[TS_Latency_Schedule], ts_latency.timestamps[TS_Latency_Execute]);
+
+	// calculate latency
+#ifdef TIMER_TEST_MODE
+	//xUsartPutChar(serialPortHdlr, '$', 0);
+
+	ts_period_schedule(ts_calculate_latency_cb, ts_latency.test_period);
+
+        gpio_enable_gpio_pin(AVR32_PIN_PB21);
+        gpio_tgl_gpio_pin(AVR32_PIN_PB21);
+#endif /* TIMER_TEST_MODE */
+}
+
 /*!
  * \fn timer_task
  * \brief Main function of timer service task.
@@ -290,7 +576,11 @@ static portTASK_FUNCTION(timer_task, p_parameters)
 
     static timer_queue_msg_t received_message = { };
 
-    while(1)
+    /* First go requires to launch latency calculation callback */
+    ts_latency.timestamps[TS_Latency_Schedule] = ts_get_current_time();
+    ts_period_schedule(ts_calculate_latency_cb, 500);
+
+    while(TRUE)
     {
         // Receive message
         // Select whether schedule interrupt or process callback as triggered by interrupt
@@ -300,19 +590,27 @@ static portTASK_FUNCTION(timer_task, p_parameters)
             switch (received_message.type)
             {
                 case TS_SCHEDULE:
+                    ts_internal_schedule(received_message.request.callback,
+                                         received_message.departure_time,
+                                         received_message.request.execution_time);
                     break;
                 case TS_EXECUTION:
+                    ts_internal_execution(received_message.departure_time,
+                                          received_message.execution.id);
                     break;
             }
         }
 
         portENTER_CRITICAL();
-        period_to_print = ts_period_between[3];
+        period_to_print = ts_latency.timestamps[TS_Latency_Spent_Int];
         portEXIT_CRITICAL();
 
-        snprintf(output, 200, "Latency %ld, last period %ld; pp.ticks = %ld, pp.cpu = %d; comp = %ld\r",
-                ts_latency, ts_last_period, period_to_print.system_ticks, period_to_print.cpu_counter, ts_compensation);
-        usUsartPutString(serialPortHdlr, output, strlen(output));
+        //snprintf(output, 200, "Latency %ld, last period %ld; pp.ticks = %lu, pp.cpu = %hu; comp = %ld\r",
+        //        ts_latency.latency, ts_latency.last_period,
+        //        period_to_print.system_ticks, period_to_print.cpu_counter,
+        //        ts_latency.compensation);
+        //usUsartPutString(serialPortHdlr, output, strlen(output));
+
         //gpio_enable_gpio_pin(AVR32_PIN_PB21);
         //gpio_tgl_gpio_pin(AVR32_PIN_PB21);
         //vTaskDelay((portTickType)TASK_DELAY_S(2));
@@ -327,7 +625,7 @@ static portTASK_FUNCTION(timer_task, p_parameters)
 void ts_set_test_period(long test_period)
 {
     portENTER_CRITICAL();
-    ts_test_period = test_period;
+    ts_latency.test_period = test_period;
     portEXIT_CRITICAL();
 }
 
@@ -339,8 +637,18 @@ void ts_set_test_period(long test_period)
 static void init_timer_service()
 {
     volatile avr32_tc_t *tc = &AVR32_TC;
+    int list_idx;
 
-    portDISABLE_INTERRUPTS();
+    /* Init list initially */
+    sched_list = malloc(initial_sched_list_size * sizeof(ts_sched_list_t));
+    memset(sched_list, 0, initial_sched_list_size * sizeof(ts_sched_list_t));
+
+    for (list_idx = 0; list_idx < initial_sched_list_size; ++list_idx)
+    {
+        CDL_PREPEND(first_free, (sched_list + list_idx));
+    }
+
+    taskENTER_CRITICAL();
     // Register interrupt
     INTC_register_interrupt(&vTimerTick/*Test*/, TimerService_TC_Interrupt, AVR32_INTC_INT0);
 
@@ -361,9 +669,9 @@ static void init_timer_service()
     // Start the timer/counter for the first time
     //tc_start(tc, TimerService_TC_Channel);
 
-    prepare_timer(200, FALSE);
+    //prepare_timer(200, 0);
 
-    portENABLE_INTERRUPTS();
+    taskEXIT_CRITICAL();
 
     //tc_init_capture();
 }
@@ -386,3 +694,5 @@ void timer_start(unsigned portBASE_TYPE priority)
     xTaskCreate(timer_task, (const signed portCHAR*)"TIMER",
                 TIMER_STACK_SIZE, NULL, priority, (xTaskHandle*)NULL);
 }
+
+/**\}*/ /* %doxygen endgroup% */

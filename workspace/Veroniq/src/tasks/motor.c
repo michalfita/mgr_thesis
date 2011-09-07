@@ -23,7 +23,7 @@ xQueueHandle motor_queue;
 
 /*! Pin mappings */
 unsigned char const motor_pins_logic[] = {
-		AVR32_PIN_PB29,
+        AVR32_PIN_PB29,
         AVR32_PIN_PB30,
         AVR32_PIN_PB31,
         AVR32_PIN_PB04,
@@ -322,8 +322,9 @@ void motor_gpio_init()
     	gpio_enable_gpio_pin(motor_pins_pwm[idx]);
 #endif
     	gpio_enable_pin_pull_up(motor_pins_pwm[idx]);
-    	gpio_set_gpio_pin(motor_pins_pwm[idx]);
-    	motor_pins_memory[idx] = 1;
+    	//gpio_set_gpio_pin(motor_pins_pwm[idx]);
+    	gpio_clr_gpio_pin(motor_pins_pwm[idx]);
+    	motor_pins_memory[idx] = 0 /* 1 */;
     }
     
     // Prepare GPIO pins for logic output
@@ -331,8 +332,9 @@ void motor_gpio_init()
     {
     	gpio_enable_gpio_pin(motor_pins_logic[idx]);
     	gpio_enable_pin_pull_up(motor_pins_logic[idx]);
-    	gpio_set_gpio_pin(motor_pins_logic[idx]);
-    	motor_pins_memory[idx + 7] = 1;
+    	//gpio_set_gpio_pin(motor_pins_logic[idx]);
+    	gpio_clr_gpio_pin(motor_pins_logic[idx]);
+    	motor_pins_memory[idx + 7] = 0 /* 1 */;
     }
 }
 
@@ -341,26 +343,26 @@ void motor_gpio_init()
  */
 void motor_pwm_init()
 {
-	pwm_opt_t pwm_opt;                // PWM option config.
-	avr32_pwm_channel_t pwm_channel;  // One channel config.
-	// The channel number and instance is used in several functions.
-	// It's defined as local variable for ease-of-use.
-	unsigned int channel_id;
+    pwm_opt_t pwm_opt;                // PWM option config.
+    avr32_pwm_channel_t pwm_channel;  // One channel config.
+    // The channel number and instance is used in several functions.
+    // It's defined as local variable for ease-of-use.
+    unsigned int channel_id;
 
-	// PWM controller configuration.
-	pwm_opt.diva = AVR32_PWM_DIVA_CLK_OFF;
-	pwm_opt.divb = AVR32_PWM_DIVB_CLK_OFF;
-	pwm_opt.prea = AVR32_PWM_PREA_MCK;
-	pwm_opt.preb = AVR32_PWM_PREB_MCK;
+    // PWM controller configuration.
+    pwm_opt.diva = AVR32_PWM_DIVA_CLK_OFF;
+    pwm_opt.divb = AVR32_PWM_DIVB_CLK_OFF;
+    pwm_opt.prea = AVR32_PWM_PREA_MCK;
+    pwm_opt.preb = AVR32_PWM_PREB_MCK;
 
-	pwm_init(&pwm_opt);
+    pwm_init(&pwm_opt);
 
-	get_pwm_structure(&pwm_channel, 50);
-	
-	for(channel_id = 0; channel_id < 7; ++channel_id)
+    get_pwm_structure(&pwm_channel, 50);
+
+    for(channel_id = 0; channel_id < 7; ++channel_id)
     {
-		pwm_channel_init(channel_id, &pwm_channel); // Set channel configuration to all channels.
-	}
+        pwm_channel_init(channel_id, &pwm_channel); // Set channel configuration to all channels.
+    }
 }
 
 /*!

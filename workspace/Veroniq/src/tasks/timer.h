@@ -10,9 +10,13 @@
 #define TIMER_H_
 
 #include <sys/types.h>
+#include <stdint.h>
+#ifndef __GCC_POSIX__
+//#include "portmacro.h"
+#endif /* __GCC_POSIX__ */
 
 /*! The command task stack size. */
-#define TIMER_STACK_SIZE              ( configMINIMAL_STACK_SIZE + 2048 )
+#define TIMER_STACK_SIZE              ( configMINIMAL_STACK_SIZE + 4092 )
 /*! The command task priority. */
 #define TIMER_TASK_PRIORITY       ( tskIDLE_PRIORITY + 5 )
 
@@ -60,5 +64,6 @@ extern ts_time_t  ts_get_current_time();
 extern ts_time_t  ts_diff_time(ts_time_t first, ts_time_t second);
 extern void       ts_set_test_period(long test_period);
 extern void       timer_start(unsigned portBASE_TYPE priority);
+extern bool_t     ts_period_schedule(ts_callback_t callback, long period);
 
 #endif /* TIMER_H_ */

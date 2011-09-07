@@ -1,8 +1,8 @@
-#Wed Aug 17 22:21:13 CEST 2011
+#Tue Sep 06 22:10:27 CEST 2011
 eclipse.preferences.version=1
 environment/project/avr32.managedbuild.config.gnu.exe.debug.1813483026=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<environment append\="true" appendContributed\="true"/>\n
 environment/project/avr32.managedbuild.config.gnu.exe.release.450239437=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<environment append\="true" appendContributed\="true"/>\n
-environment/project/avr32.managedbuild.config.gnu.exe.release.450239437.819070962=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<environment append\="true" appendContributed\="true"/>\n
+environment/project/avr32.managedbuild.config.gnu.exe.release.450239437.819070962=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<environment append\="true" appendContributed\="true">\n<variable delimiter\="\:" name\="PATH" operation\="replace" value\="/home/manveru/Narz\u0119dzia/avr32-gnu-toolchain-linux_x86_64/bin\:/home/manveru/bin\:/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin"/>\n</environment>\n
 org.eclipse.cdt.core.formatter.alignment_for_arguments_in_method_invocation=16
 org.eclipse.cdt.core.formatter.alignment_for_base_clause_in_type_declaration=80
 org.eclipse.cdt.core.formatter.alignment_for_compact_if=0
