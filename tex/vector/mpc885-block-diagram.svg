@@ -12,9 +12,10 @@
    viewBox="-4 2 55 47"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.46+devel"
+   inkscape:version="0.48.1 r9760"
    sodipodi:docname="mpc885-block-diagram.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1">
   <metadata
      id="metadata391">
     <rdf:RDF>
@@ -38,7 +39,7 @@
   </defs>
   <sodipodi:namedview
      inkscape:window-height="997"
-     inkscape:window-width="1680"
+     inkscape:window-width="1678"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      guidetolerance="10.0"
@@ -49,12 +50,13 @@
      pagecolor="#ffffff"
      id="base"
      inkscape:zoom="0.49058628"
-     inkscape:cx="1782.9066"
-     inkscape:cy="548.52737"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:cx="1266.4223"
+     inkscape:cy="878.06357"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
      inkscape:current-layer="svg2"
-     showgrid="false" />
+     showgrid="false"
+     inkscape:window-maximized="0" />
   <rect
      style="fill: #ffffff"
      x="17.05"
@@ -243,40 +245,47 @@
      id="polygon64"
      transform="translate(4.4026641,0)" />
   <text
-     style="font-size:0.76200002px;fill:#000000"
-     x="9.0797205"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="11.048457"
      y="9.6298904"
-     id="text66">Embedded</text>
+     id="text66"
+     sodipodi:linespacing="125%">Wbudowany</text>
   <text
-     style="font-size:0.76200002px;fill:#000000"
-     x="9.5697212"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="11.023983"
      y="10.62989"
-     id="text68">8xx core</text>
+     id="text68"
+     sodipodi:linespacing="125%">rdzeń 8xx</text>
   <text
-     style="font-size:0.76200002px;fill:#000000"
-     x="19.528521"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="19.277416"
      y="3.3"
-     id="text70">8kB</text>
+     id="text70"
+     sodipodi:linespacing="125%">8kB</text>
   <text
-     style="font-size:0.76200002px;fill:#000000"
-     x="17.872221"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="17.648464"
      y="4.3000002"
-     id="text72">Data Cache</text>
+     id="text72"
+     sodipodi:linespacing="125%">Data Cache</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="19.2712"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="19.302418"
      y="15.825"
-     id="text74">8kB</text>
+     id="text74"
+     sodipodi:linespacing="125%">8kB</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="17.69"
-     y="16.825"
-     id="text76">Instructions</text>
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="17.740494"
+     y="16.825001"
+     id="text76"
+     sodipodi:linespacing="125%">Instructions</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="18.7287"
-     y="17.825"
-     id="text78">Cache</text>
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="18.765312"
+     y="17.825001"
+     id="text78"
+     sodipodi:linespacing="125%">Cache</text>
   <text
      style="fill: #000000; font-size: 0.8 cm; length: 0 cm; font-family: sans; font-style: normal; font-weight: normal"
      x="17.45"
@@ -288,25 +297,29 @@
      y="16.4"
      id="text82" />
   <text
-     style="font-size:0.76200002px;fill:#000000"
-     x="18.000109"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="17.715492"
      y="7.3099999"
-     id="text84">Instructions</text>
+     id="text84"
+     sodipodi:linespacing="125%">Instructions</text>
   <text
-     style="font-size:0.76200002px;fill:#000000"
-     x="19.27141"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="18.973585"
      y="8.3100004"
-     id="text86">MMU</text>
+     id="text86"
+     sodipodi:linespacing="125%">MMU</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="19.0162"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="19.080301"
      y="12.3"
-     id="text88">Data</text>
+     id="text88"
+     sodipodi:linespacing="125%">Data</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="18.8862"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="18.973585"
      y="13.3"
-     id="text90">MMU</text>
+     id="text90"
+     sodipodi:linespacing="125%">MMU</text>
   <rect
      style="fill: #ffffff"
      x="8.05"
@@ -364,10 +377,11 @@
      height="4"
      id="rect106" />
   <text
-     style="font-size:0.76200002px"
-     x="10.255634"
+     style="font-size:0.84666669px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
+     x="12.04347"
      y="24.356794"
-     id="text108">Parallel I/O</text>
+     id="text108"
+     sodipodi:linespacing="125%">Równoległe We/Wy</text>
   <text
      style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
      x="18.363068"
@@ -427,15 +441,17 @@
      y="29.887455"
      id="text130">Generator</text>
   <text
-     style="font-size:0.76200002px"
-     x="9.3115263"
+     style="font-size:0.76200002px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial"
+     x="9.6739359"
      y="33.889454"
-     id="text132">Parallel Interface</text>
+     id="text132"
+     sodipodi:linespacing="125%">Interfejs Portu</text>
   <text
-     style="font-size:0.76200002px"
-     x="11.098454"
+     style="font-size:0.76200002px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
+     x="12.039372"
      y="35.002197"
-     id="text134">Ports</text>
+     id="text134"
+     sodipodi:linespacing="125%">Równoległego</text>
   <polygon
      style="fill: #ffffff"
      points="17,27 34.05,26.95 34.05,35.95 23,36 23,32 17,32 "
@@ -459,30 +475,35 @@
      height="3"
      id="rect142" />
   <text
-     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     style="font-size:0.90311113px;font-style:normal;font-weight:normal;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
      x="18.402534"
      y="34.808289"
-     id="text144">Timer</text>
+     id="text144"
+     sodipodi:linespacing="125%">Timer</text>
   <text
-     style="font-size:0.76625174px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="19.640497"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="18.115343"
      y="29.806944"
-     id="text146">32-bit Controller and Program ROM</text>
+     id="text146"
+     sodipodi:linespacing="125%">Kontroler 32-bitowy i ROM Programu</text>
   <text
-     style="font-size:0.76200002px;fill:#000000"
-     x="32.132904"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="31.739614"
      y="12.2332"
-     id="text148">Slave Master</text>
+     id="text148"
+     sodipodi:linespacing="125%">Slave Master</text>
   <text
-     style="font-size:0.76200002px;fill:#000000"
-     x="33.040535"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="32.62178"
      y="13.2332"
-     id="text150">Interface</text>
+     id="text150"
+     sodipodi:linespacing="125%">Interface</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="26.735"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="26.833378"
      y="17.7332"
-     id="text152">Security Engine</text>
+     id="text152"
+     sodipodi:linespacing="125%">Security Engine</text>
   <rect
      style="fill: #ffffff"
      x="-2"
@@ -546,15 +567,17 @@
      y2="20"
      id="line170" />
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="-1.26875"
-     y="15.14"
-     id="text172">Fast Ethernet</text>
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="-0.37325007"
+     y="15.25289"
+     id="text172"
+     sodipodi:linespacing="125%">Kontroler</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="-0.48875"
-     y="16.14"
-     id="text174">Controller</text>
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="-1.2459344"
+     y="16.252888"
+     id="text174"
+     sodipodi:linespacing="125%">Fast Ethernet</text>
   <rect
      style="fill: #ffffff"
      x="37.0015"
@@ -570,40 +593,46 @@
      height="8.9"
      id="rect178" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="34.65"
-     y1="31.4472"
-     x2="36.2515"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="34.706448"
+     y1="31.447201"
+     x2="36.307945"
      y2="31.4396"
      id="line180" />
   <polygon
-     style="fill: #000000"
-     points="34.6488,31.1972 34.15,31.4495 34.6512,31.6972 "
-     id="polygon182" />
+     style="fill:#000000"
+     points="34.15,31.4495 34.6512,31.6972 34.6488,31.1972 "
+     id="polygon182"
+     transform="translate(0.05644445,0)" />
   <polygon
-     style="fill: #000000"
-     points="36.2527,31.6896 36.7515,31.4373 36.2503,31.1896 "
-     id="polygon184" />
+     style="fill:#000000"
+     points="36.7515,31.4373 36.2503,31.1896 36.2527,31.6896 "
+     id="polygon184"
+     transform="translate(0.05644445,0)" />
   <text
-     style="font-size:0.79022223px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="38.125984"
-     y="29.935663"
-     id="text186">Virtual Independent</text>
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="41.552601"
+     y="29.822775"
+     id="text186"
+     sodipodi:linespacing="125%">Niezależne wirtualne</text>
   <text
-     style="font-size:0.78852814px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="40.590004"
-     y="30.98778"
-     id="text188">DMA</text>
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="41.516441"
+     y="31.044224"
+     id="text188"
+     sodipodi:linespacing="125%">DMA</text>
   <text
-     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="40.785736"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="41.568035"
      y="32.175751"
-     id="text190">and</text>
+     id="text190"
+     sodipodi:linespacing="125%">oraz</text>
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="39.698811"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="41.530994"
      y="33.407177"
-     id="text192">Serial DMA</text>
+     id="text192"
+     sodipodi:linespacing="125%">Szeregowe DMA</text>
   <text
      style="fill: #000000; font-size: 0.8 cm; length: 0 cm; font-family: sans; font-style: normal; font-weight: normal"
      x="49.8015"
@@ -624,15 +653,17 @@
      height="20"
      id="rect198" />
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="40.5"
-     y="7.73322"
-     id="text200">System Interface</text>
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.850067"
+     y="7.7332201"
+     id="text200"
+     sodipodi:linespacing="125%">Jednostka</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="43.1713"
-     y="8.73322"
-     id="text202">Unit</text>
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.936165"
+     y="8.7332201"
+     id="text202"
+     sodipodi:linespacing="125%">Interfejsu Systemowego</text>
   <line
      style="fill:none;stroke:#000000;stroke-width:0.2"
      x1="38"
@@ -707,25 +738,29 @@
      height="2"
      id="rect224" />
   <text
-     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="0.24926056"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="0.25226909"
      y="18.308289"
-     id="text226">DMAs</text>
+     id="text226"
+     sodipodi:linespacing="125%">DMAs</text>
   <text
-     style="font-size:0.76201862px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="0.31928784"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="0.30276033"
      y="21.257494"
-     id="text228">RFOs</text>
+     id="text228"
+     sodipodi:linespacing="125%">RFOs</text>
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="-0.77622122"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="-1.2682033"
      y="24.257488"
-     id="text230">10/100 Media</text>
+     id="text230"
+     sodipodi:linespacing="125%">10/100 Media</text>
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="-0.16349617"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="-0.19884562"
      y="27.257488"
-     id="text232">MII/RMII</text>
+     id="text232"
+     sodipodi:linespacing="125%">MII/RMII</text>
   <rect
      style="fill: #ffffff"
      x="40"
@@ -783,45 +818,53 @@
      height="3"
      id="rect248" />
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="42.3162"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.911198"
      y="11.2332"
-     id="text250">Memory</text>
+     id="text250"
+     sodipodi:linespacing="125%">Kontroler</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="41.9813"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.924225"
      y="12.2332"
-     id="text252">Controller</text>
+     id="text252"
+     sodipodi:linespacing="125%">Pamięci</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="41.2525"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.862171"
      y="15.2332"
-     id="text254">Bus Interface</text>
+     id="text254"
+     sodipodi:linespacing="125%">Jednostka</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="43.1713"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.936165"
      y="16.2332"
-     id="text256">Unit</text>
+     id="text256"
+     sodipodi:linespacing="125%">InterfejsuSzyny</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="42.4438"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.900333"
      y="19.2332"
-     id="text258">System</text>
+     id="text258"
+     sodipodi:linespacing="125%">Funkcje</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="41.9787"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.883038"
      y="20.2332"
-     id="text260">Functions</text>
+     id="text260"
+     sodipodi:linespacing="125%">Systemowe</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="42.1863"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.909397"
      y="23.2332"
-     id="text262">PCMCIA</text>
+     id="text262"
+     sodipodi:linespacing="125%">Interfejs</text>
   <text
-     style="fill:#000000;font-size:0.76200002"
-     x="42.1863"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.882938"
      y="24.2332"
-     id="text264">Interface</text>
+     id="text264"
+     sodipodi:linespacing="125%">PCMCIA</text>
   <line
      style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
      x1="48.6"
@@ -919,125 +962,141 @@
      points="27.7121,37.3281 27.9478,37.835 28.2119,37.3423 "
      id="polygon300" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="9.98295"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="9.7571735"
      y1="38.5998"
-     x2="9.96205"
-     y2="39.3352"
+     x2="9.7362738"
+     y2="39.335201"
      id="line302" />
   <polygon
-     style="fill: #000000"
-     points="10.2329,38.6069 9.99716,38.1 9.73305,38.5927 "
-     id="polygon304" />
+     style="fill:#000000"
+     points="9.99716,38.1 9.73305,38.5927 10.2329,38.6069 "
+     id="polygon304"
+     transform="translate(-0.2257778,0)" />
   <polygon
-     style="fill: #000000"
-     points="9.71215,39.3281 9.94784,39.835 10.2119,39.3423 "
-     id="polygon306" />
+     style="fill:#000000"
+     points="9.94784,39.835 10.2119,39.3423 9.71215,39.3281 "
+     id="polygon306"
+     transform="translate(-0.2257778,0)" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="13.983"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="13.757223"
      y1="38.5998"
-     x2="13.962"
-     y2="39.3352"
+     x2="13.736223"
+     y2="39.335201"
      id="line308" />
   <polygon
-     style="fill: #000000"
-     points="14.2329,38.6069 13.9972,38.1 13.7331,38.5927 "
-     id="polygon310" />
+     style="fill:#000000"
+     points="13.9972,38.1 13.7331,38.5927 14.2329,38.6069 "
+     id="polygon310"
+     transform="translate(-0.2257778,0)" />
   <polygon
-     style="fill: #000000"
-     points="13.7121,39.3281 13.9478,39.835 14.2119,39.3423 "
-     id="polygon312" />
+     style="fill:#000000"
+     points="13.9478,39.835 14.2119,39.3423 13.7121,39.3281 "
+     id="polygon312"
+     transform="translate(-0.2257778,0)" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="17.983"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="17.757223"
      y1="38.5998"
-     x2="17.962"
-     y2="39.3352"
+     x2="17.736223"
+     y2="39.335201"
      id="line314" />
   <polygon
-     style="fill: #000000"
-     points="18.2329,38.6069 17.9972,38.1 17.7331,38.5927 "
-     id="polygon316" />
+     style="fill:#000000"
+     points="17.9972,38.1 17.7331,38.5927 18.2329,38.6069 "
+     id="polygon316"
+     transform="translate(-0.2257778,0)" />
   <polygon
-     style="fill: #000000"
-     points="17.7121,39.3281 17.9478,39.835 18.2119,39.3423 "
-     id="polygon318" />
+     style="fill:#000000"
+     points="17.9478,39.835 18.2119,39.3423 17.7121,39.3281 "
+     id="polygon318"
+     transform="translate(-0.2257778,0)" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="22"
-     y1="38.6"
-     x2="22"
-     y2="39.4"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="21.774223"
+     y1="38.599998"
+     x2="21.774223"
+     y2="39.400002"
      id="line320" />
   <polygon
-     style="fill: #000000"
-     points="22.25,38.6 22,38.1 21.75,38.6 "
-     id="polygon322" />
+     style="fill:#000000"
+     points="22,38.1 21.75,38.6 22.25,38.6 "
+     id="polygon322"
+     transform="translate(-0.2257778,0)" />
   <polygon
-     style="fill: #000000"
-     points="21.75,39.4 22,39.9 22.25,39.4 "
-     id="polygon324" />
+     style="fill:#000000"
+     points="22,39.9 22.25,39.4 21.75,39.4 "
+     id="polygon324"
+     transform="translate(-0.2257778,0)" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="34.983"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="35.208786"
      y1="38.5998"
-     x2="34.962"
-     y2="39.3352"
+     x2="35.187786"
+     y2="39.335201"
      id="line326" />
   <polygon
-     style="fill: #000000"
-     points="35.2329,38.6069 34.9972,38.1 34.7331,38.5927 "
-     id="polygon328" />
+     style="fill:#000000"
+     points="34.9972,38.1 34.7331,38.5927 35.2329,38.6069 "
+     id="polygon328"
+     transform="translate(0.2257778,0)" />
   <polygon
-     style="fill: #000000"
-     points="34.7121,39.3281 34.9478,39.835 35.2119,39.3423 "
-     id="polygon330" />
+     style="fill:#000000"
+     points="34.9478,39.835 35.2119,39.3423 34.7121,39.3281 "
+     id="polygon330"
+     transform="translate(0.2257778,0)" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="30.983"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="31.208776"
      y1="38.5998"
-     x2="30.962"
-     y2="39.3352"
+     x2="31.187777"
+     y2="39.335201"
      id="line332" />
   <polygon
-     style="fill: #000000"
-     points="31.2329,38.6069 30.9972,38.1 30.7331,38.5927 "
-     id="polygon334" />
+     style="fill:#000000"
+     points="30.9972,38.1 30.7331,38.5927 31.2329,38.6069 "
+     id="polygon334"
+     transform="translate(0.2257778,0)" />
   <polygon
-     style="fill: #000000"
-     points="30.7121,39.3281 30.9478,39.835 31.2119,39.3423 "
-     id="polygon336" />
+     style="fill:#000000"
+     points="30.9478,39.835 31.2119,39.3423 30.7121,39.3281 "
+     id="polygon336"
+     transform="translate(0.2257778,0)" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="26.983"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="27.208776"
      y1="38.5998"
-     x2="26.962"
-     y2="39.3352"
+     x2="27.187777"
+     y2="39.335201"
      id="line338" />
   <polygon
-     style="fill: #000000"
-     points="27.2329,38.6069 26.9972,38.1 26.7331,38.5927 "
-     id="polygon340" />
+     style="fill:#000000"
+     points="26.9972,38.1 26.7331,38.5927 27.2329,38.6069 "
+     id="polygon340"
+     transform="translate(0.2257778,0)" />
   <polygon
-     style="fill: #000000"
-     points="26.7121,39.3281 26.9478,39.835 27.2119,39.3423 "
-     id="polygon342" />
+     style="fill:#000000"
+     points="26.9478,39.835 27.2119,39.3423 26.7121,39.3281 "
+     id="polygon342"
+     transform="translate(0.2257778,0)" />
   <line
-     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
-     x1="39"
-     y1="38.6"
-     x2="39"
-     y2="39.4"
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="39.225784"
+     y1="38.599998"
+     x2="39.225784"
+     y2="39.400002"
      id="line344" />
   <polygon
-     style="fill: #000000"
-     points="39.25,38.6 39,38.1 38.75,38.6 "
-     id="polygon346" />
+     style="fill:#000000"
+     points="39,38.1 38.75,38.6 39.25,38.6 "
+     id="polygon346"
+     transform="translate(0.2257778,0)" />
   <polygon
-     style="fill: #000000"
-     points="38.75,39.4 39,39.9 39.25,39.4 "
-     id="polygon348" />
+     style="fill:#000000"
+     points="39,39.9 39.25,39.4 38.75,39.4 "
+     id="polygon348"
+     transform="translate(0.2257778,0)" />
   <rect
      style="fill: #ffffff"
      x="8"
@@ -1067,50 +1126,66 @@
      height="2"
      id="rect356" />
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="39.323029"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="38.476345"
      y="41.370377"
-     id="text358">I2C</text>
+     id="text358"
+     sodipodi:linespacing="125%">I2C</text>
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="34.752312"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="34.526527"
      y="41.370377"
-     id="text360">SPI</text>
+     id="text360"
+     sodipodi:linespacing="125%">SPI</text>
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="30.209808"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="29.927588"
      y="41.370377"
-     id="text362">SMC2</text>
+     id="text362"
+     sodipodi:linespacing="125%">SMC2</text>
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="26.209808"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="26.040476"
      y="41.370377"
-     id="text364">SMC1</text>
+     id="text364"
+     sodipodi:linespacing="125%">SMC1</text>
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="9.9246655"
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="8.739337"
      y="41.370377"
-     id="text366">USB</text>
+     id="text366"
+     sodipodi:linespacing="125%">USB</text>
   <text
-     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="13.262308"
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;font-family:sans"
+     x="12.528532"
      y="41.370377"
-     id="text368">SCC2</text>
+     id="text368"
+     sodipodi:linespacing="125%">
+    <tspan
+       style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5602">SCC2</tspan>
+  </text>
   <text
-     style="font-size:0.76201862px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="17.262331"
+     style="font-size:0.76201862px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;font-family:sans"
+     x="16.472113"
      y="41.37587"
-     id="text370">SCC3</text>
+     id="text370"
+     sodipodi:linespacing="125%">
+    <tspan
+       style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5604">SCC3</tspan>
+  </text>
   <text
      style="font-size:0.76200002px"
-     x="21.015223"
+     x="20.789446"
      y="40.949375"
      id="text372">SCC4</text>
   <text
-     style="font-size:0.76200002px;text-align:center;text-anchor:middle"
-     x="21.823883"
+     style="font-size:0.76200002px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
+     x="21.598106"
      y="41.649384"
-     id="text374">/UTOPIA</text>
+     id="text374"
+     sodipodi:linespacing="125%">/UTOPIA</text>
   <rect
      style="fill: #ffffff"
      x="8"
@@ -1139,10 +1214,11 @@
      points="30,43 41,43 41,48 8,48 8,46 30,46 "
      id="polygon384" />
   <text
-     style="font-size:0.91838598px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
-     x="32.516125"
+     style="font-size:1.01600003px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="30.998741"
      y="45.747501"
-     id="text386">Serial Interface</text>
+     id="text386"
+     sodipodi:linespacing="125%">Interfejs Szeregowy</text>
   <text
      xml:space="preserve"
      style="font-size:8.75598526px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
@@ -1161,12 +1237,23 @@
        id="tspan2827">Controller</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:0.89132684px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     style="font-size:1.12888896px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      x="15.234311"
-     y="44.23241"
-     id="text2837"><tspan
+     y="44.313766"
+     id="text2837"
+     sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan2839"
        x="15.234311"
-       y="44.23241">Time Slot Assigner</tspan></text>
+       y="44.313766">Time Slot Assigner</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial"
+     x="474.94193"
+     y="301.67987"
+     id="text5606"
+     sodipodi:linespacing="125%"
+     transform="matrix(0.02822222,0,0,0.02822222,-4,1.9999988)"><tspan
+       sodipodi:role="line"
+       id="tspan5608"></tspan></text>
 </svg>

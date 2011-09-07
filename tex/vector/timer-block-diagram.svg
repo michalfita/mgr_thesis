@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="32cm" height="19cm" viewBox="118 59 623 362" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="300" y="60" width="440" height="360"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="300" y="60" width="440" height="360"/>
+  </g>
+  <text style="fill: #000000;text-anchor:start;font-size:16.9333;font-family:DejaVu Sans;font-style:normal;font-weight:normal" x="306" y="80">
+    <tspan x="306" y="80">Moduł serwisu timera wysokiej rozdzielczości</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="556,120 556,120 600,120 600,250.264 "/>
+    <polygon style="fill: #000000" points="600,257.764 595,247.764 600,250.264 605,247.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="600,257.764 595,247.764 600,250.264 605,247.764 "/>
+  </g>
+  <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="520" y="240">
+    <tspan x="520" y="240"></tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="200" y="100" width="200" height="38"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="200" y="100" width="200" height="38"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:13.5467;font-family:Droid Sans Mono;font-style:normal;font-weight:normal" x="218" y="124">
+      <tspan x="218" y="124">ts_period_schedule()</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="480,219 460,220 456.925,224.305 "/>
+    <polygon style="fill: #000000" points="452.566,230.408 454.309,219.365 456.925,224.305 462.447,225.177 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="452.566,230.408 454.309,219.365 456.925,224.305 462.447,225.177 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="120" y="260" width="160" height="160"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="120" y="260" width="160" height="160"/>
+  </g>
+  <text style="fill: #000000;text-anchor:start;font-size:13.5467;font-family:DejaVu Sans;font-style:normal;font-weight:normal" x="145" y="409">
+    <tspan x="145" y="409">Timer Sprzętowy</tspan>
+  </text>
+  <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="100" y="300">
+    <tspan x="100" y="300"></tspan>
+  </text>
+  <g>
+    <g>
+      <ellipse style="fill: #ffffff" cx="410" cy="290" rx="70" ry="70"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="410" cy="290" rx="70" ry="70"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:13.5467;font-family:DejaVu Sans;font-style:normal;font-weight:normal" x="370" y="294">
+      <tspan x="370" y="294">Bufor Kołowy</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="436" y="100" width="120" height="60"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="436" y="100" width="120" height="60"/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="436" y1="160" x2="436" y2="100"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="496" y1="130" x2="496" y2="130"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="476.5" y1="160" x2="476.5" y2="100"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="556" y1="160" x2="556" y2="100"/>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="400" y1="119" x2="426.268" y2="119.73"/>
+    <polygon style="fill: #000000" points="433.765,119.938 423.63,124.658 426.268,119.73 423.907,114.662 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="433.765,119.938 423.63,124.658 426.268,119.73 423.907,114.662 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="556,140 556,140 580,140 580,190.264 "/>
+    <polygon style="fill: #000000" points="580,197.764 575,187.764 580,190.264 585,187.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,197.764 575,187.764 580,190.264 585,187.764 "/>
+  </g>
+  <text style="fill: #000000;text-anchor:start;font-size:13.5467;font-family:DejaVu Sans;font-style:normal;font-weight:normal" x="440" y="180">
+    <tspan x="440" y="180">Kolejka (FreeRTOS)</tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="480" y="200" width="200" height="38"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="480" y="200" width="200" height="38"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:13.5467;font-family:Droid Sans Mono;font-style:normal;font-weight:normal" x="491" y="223">
+      <tspan x="491" y="223">ts_internal_schedule()</tspan>
+    </text>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="200" y="160" width="200" height="38"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="200" y="160" width="200" height="38"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:13.5467;font-family:Droid Sans Mono;font-style:normal;font-weight:normal" x="218" y="184">
+      <tspan x="218" y="184">ts_timer_tick()</tspan>
+    </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="400,179 417.496,179 417.496,139 425.256,139 "/>
+    <polygon style="fill: #000000" points="432.756,139 422.756,144 425.256,139 422.756,134 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="432.756,139 422.756,144 425.256,139 422.756,134 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="580,238 580,380 340,380 340,340 289.736,340 "/>
+    <polygon style="fill: #000000" points="282.236,340 292.236,335 289.736,340 292.236,345 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="282.236,340 292.236,335 289.736,340 292.236,345 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="475.258,262.032 480,260 492.941,272.294 "/>
+    <polygon style="fill: #000000" points="498.379,277.46 487.685,274.197 492.941,272.294 494.573,266.947 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="498.379,277.46 487.685,274.197 492.941,272.294 494.573,266.947 "/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="456.75" y1="160" x2="456.75" y2="100"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="496" y1="160" x2="496" y2="100"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="516.75" y1="160" x2="516.75" y2="100"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="537.25" y1="160" x2="537.25" y2="100"/>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="200,260 180,260 180,220 180,220 180,179 190.264,179 "/>
+    <polygon style="fill: #000000" points="197.764,179 187.764,184 190.264,179 187.764,174 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="197.764,179 187.764,184 190.264,179 187.764,174 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="600,298 600,402 320,402 320,362 289.736,362 "/>
+    <polygon style="fill: #000000" points="282.236,362 292.236,357 289.736,362 292.236,367 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="282.236,362 292.236,357 289.736,362 292.236,367 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="220" y="280" width="40" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="220" y="280" width="40" height="40"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="220" y="340" width="40" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="220" y="340" width="40" height="40"/>
+  </g>
+  <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="231" y="305">
+    <tspan x="231" y="305">RC</tspan>
+  </text>
+  <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="230.95" y="365.2">
+    <tspan x="230.95" y="365.2">TC</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="160" y="280" width="40" height="40"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="160" y="280" width="40" height="40"/>
+  </g>
+  <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="168" y="305">
+    <tspan x="168" y="305">IMR</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="240" y1="340" x2="240" y2="324.472"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="244,330.236 240,322.236 236,330.236 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="220" y1="300" x2="204.472" y2="300"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="210.236,296 202.236,300 210.236,304 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="180" y1="280" x2="180" y2="264.472"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="184,270.236 180,262.236 176,270.236 "/>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="640,320 700,320 720,340 700,360 640,360 620,340 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="640,320 700,320 720,340 700,360 640,360 620,340 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="700,279 720,280 720,320 716.884,323.116 "/>
+    <polygon style="fill: #000000" points="711.581,328.419 715.117,317.812 716.884,323.116 722.188,324.883 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="711.581,328.419 715.117,317.812 716.884,323.116 722.188,324.883 "/>
+  </g>
+  <text style="fill: #000000;text-anchor:start;font-size:13.5467;font-family:Droid Sans Mono;font-style:italic;font-weight:normal" x="630" y="343">
+    <tspan x="630" y="343">callback()</tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="500" y="260" width="200" height="38"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="500" y="260" width="200" height="38"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:13.5467;font-family:Droid Sans Mono;font-style:normal;font-weight:normal" x="511" y="283">
+      <tspan x="511" y="283">ts_internal_execute()</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x1="119.375" y1="119" x2="190.264" y2="119"/>
+    <polygon style="fill: #000000" points="197.764,119 187.764,124 190.264,119 187.764,114 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="197.764,119 187.764,124 190.264,119 187.764,114 "/>
+  </g>
+  <text style="fill: #000000;text-anchor:start;font-size:11.2889;font-family:Droid Sans Mono;font-style:normal;font-weight:normal" x="600" y="120">
+    <tspan x="600" y="120">TS_Execute</tspan>
+  </text>
+  <text style="fill: #000000;text-anchor:start;font-size:11.2889;font-family:Droid Sans Mono;font-style:normal;font-weight:normal" x="580" y="140">
+    <tspan x="580" y="140">TS_Schedule</tspan>
+  </text>
+</svg>
