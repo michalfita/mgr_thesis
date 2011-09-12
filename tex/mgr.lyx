@@ -124,7 +124,7 @@
 \color #fae58d
 \end_branch
 \branch Lua
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #aaff7f
 \end_branch
@@ -418,7 +418,7 @@ e nie przetrwały rewolucji francuskiej) oraz mechaniczną kaczkę.
 
 \begin_layout Standard
 Przedmiotem pracy jest sterownik mikroprocesorowy oraz zestaw oprogramowania
- dla sterownika oraz współpracującego komputera PC.
+ dla tegoż sterownika oraz współpracującego komputera PC.
  Platformą mechaniczną jest robot zabawka Robo--Actor, który ma służyć do
  demonstracji działania układu i oprogramowania stworzonych w ramach tej
  pracy.
@@ -463,22 +463,67 @@ Historia
 Starożytność
 \end_layout
 
+\begin_layout Standard
+Już w starożytności pociągały człowieka poszukiwania ułatwień w znoju codziennyc
+h prac.
+ Poza zupełnie prostymi narzędziami do pracy, które ewoluowały przez wieki
+ -- nie które aż do dziś -- możemy w historii starożytnej zwrócić uwagę
+ na powszechne przekonanie historyków i archelogów, iż do budowy egipskich
+ piramid użyto złożonych, jak na tamte czasy maszyn, które zwiększały możliwości
+ transporu ciężkich kamiennych bloków na kolejne poziomy piramid.
+\end_layout
+
+\begin_layout Standard
+W pozostałych po tamtej cywilizacji zapisach, możemy odnaleźć nawet ślady
+ wskazywane jako wizerunek żarówki elektrycznej -- obrazy te odnaleźć można
+ na ścianach świątyni w Denderze, w górnym Egipcie.
+ Teoria jakoby to faktcznie były żarówki, jest mocno kontrowersyjna, ale
+ spekulacje w tej materii pokazują, że nauka nadal nie jest pewna zakresu
+ wiedzy starożytnych.
+ Wypływały z niej również rozwiązania pozwalające na budowę obiektów, które
+ jeszcze doniedawna uważano za zniewalające.
+\end_layout
+
+\begin_layout Standard
+Archytas z Tarentu, grecki filozof, uważany za ojca mechaniki, miał stworzyć
+ latającą maszynę o kształcie gołębia, która prawdopodobnie napędzana parą
+ potrafiła pokonać około 200 metrów utrzymując się w powietrzu.
+\end_layout
+
+\begin_layout Standard
+Cywilizacja rzymska, poszła w innym kierunku i ich kiełkująca myśl techniczna
+ stworzyła akwedukty, kamienne mosty i utwardzane drogi.
+ Maszyny tworzone w tamtym okresie, służyły przede wszystkim w bodbojach
+ dokonywanych przez armię lub do zadawania bolesnej śmierci wrogom cesarstwa.
+\end_layout
+
 \begin_layout Section
 Średniowiecze
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Golem przez rabina Jehudę Löw ben Bezalela z Pragi (urodzonego w Poznaniu),
- znanego również jako Maharal.
+Budowa maszyn w średniowieczu sprowadzała się przede wszystkim do zapewniania
+ armii narzędzi w działaniach wojennych.
+ Ponieważ wojna w tamtych czasach była jednym z najbardziej intratnych zajęć,
+ napędzało to myśl techniczną w kierunkach militarnych.
 \end_layout
 
-\end_inset
+\begin_layout Standard
+Do interesujących legend ze średniowiecza dotyczących zapewniania sobie
+ wsparcia w pracy fizycznej należy ta dotycząca Golema stworzonego przez
+ pochodzącego z Poznania rabina Jehudę Löw ben Bezalela, znanego również
+ jako Maharal.
+ Wedle legendy Golem miał powstać w Pradze, w celu ochrony tamtejszej społecznoś
+ci żydowskiej i pomocy w ciężkich pracach fizycznych.
+ Ponieważ Golem miał być pozbawiony rozumu i wykonywał tylko proste polecenia,
+ został przez rabina unieruchomiony, po tym gdy zaczął siać szkody.
+\end_layout
 
-
+\begin_layout Standard
+Jakkolwiek to tylko legenda, pokazuje silną potrzebę ludzi do zapewniania
+ sobie wsparcia i fizycznej siły poza własnymi mięśniami.
+ Poszukiwania te odbywały się nie tylko w raczkującej nauce, ale również
+ w mistycyźmie.
 \end_layout
 
 \begin_layout Section
@@ -486,7 +531,22 @@ Renesans
 \end_layout
 
 \begin_layout Standard
-Mechaniczny rycerz da Vinci
+W epoce renesansu powstał podobno mechaniczny rycerz opracowany przez Leonarda
+ da Vinci.
+ Po jego projekcie pozostały bogate ilustracje i zapiski, z których wiemy,
+ że mistrz pracował nad takim wynazlazkiem.
+ Skomplikowane systemy linek i przekładni miały upodabniać ruchy maszyny
+ do człowieka.
+\end_layout
+
+\begin_layout Standard
+Na podstawie pomysłu Leonarda przez wiele następnych lat różni ekscentryczni
+ wynalazcy próbowali tworzyć maszyny naśladujące w pewnych czynnościach
+ człowieka.
+ Tworzono np.
+ proste figury, których jedyną czynnością było otwieranie i zamykanie gościom
+ drzwi.
+ Ich stosowanie miało przede wszystkich robić wrażnie na przybyłych.
 \end_layout
 
 \begin_layout Section
@@ -494,7 +554,27 @@ Oświecenie
 \end_layout
 
 \begin_layout Standard
-Jacques de Vaucanson
+W roku 1738 Jacques de Vaucanson, uznany za ojca automatyki, buduje trzy
+ roboty, z czego najsłynniejszy i najlepiej udokumentowany to 
+\begin_inset Quotes pld
+\end_inset
+
+mechaniczna kaczka
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Według doniesień, miała umieć pływać, jeść i wydalać.
+ Do najistotniejsze w postaci de Vaucansona, to fakt, że około roku 1741
+ w trakcie udoskonalania produkcji w przemyśle jedwabnicznym zastosował
+ karty dziurkowane do sterowania maszyn, a niedługo później metalowe walce.
+\end_layout
+
+\begin_layout Standard
+Do metody z kartami perforowanymi wraca w 1805 roku Joseph Jacquard, budując
+ automatyczne krosno.
+ Przy czym to jego zastosowanie kart zostaje uznane za wzór do późniejszych
+ zastosowań w komputerach, w czasach bliższych współczesności.
 \end_layout
 
 \begin_layout Section
@@ -587,6 +667,30 @@ key "szachista-lysiak"
 
 \begin_layout Section
 Współczesność
+\end_layout
+
+\begin_layout Standard
+Historia rozwoju pomysłów na automatyzację lub rozwiązawanie problemół matematyc
+znych drogą budowy urządzeń ma do współczesności dość burzliwy przebieg.
+\end_layout
+
+\begin_layout Standard
+Najbardziej istotne wydają się być skonstrułowanie w 1947 pierwszego tranzystora
+ przez zespół, który tworzą William Bradford Schockley, Walter Hauser Brittain
+ i John Ardeenoraz oraz teoretyczne prace Alana Turinga na temat automatów
+ skończonych.
+ Od 1952 roku pojawiają się kolejne urządzenia, których sterowanie opiera
+ się na sterowaniu cyfrowym.
+\end_layout
+
+\begin_layout Standard
+Pierwszy robot kroczący na dwóch nogach o nazwie WAP-1 zbudował Ichiro Kato
+ w roku 1969, a piętnaście lat później buduje on robota czytającego nuty
+ i grającego na organach elektrycznych.
+ Od tamtego czasu Japonia dominuje w rozwoju robotów będących połączeniem
+ doskonałej mechaniki, elektroniki i oprogramowania na bardzo wysokim poziomie.
+ Amerykańskie osiągnięcia nie pozostają daleko w tyle, choć koncetrują się
+ często na bardziej praktycznych zastosowaniach.
 \end_layout
 
 \begin_layout Chapter
@@ -3669,9 +3773,240 @@ h i technicznych.
 Magic.
 \end_layout
 
+\begin_layout Section
+Python-on-a-Chip
+\end_layout
+
+\begin_layout Standard
+Projekt nazwany przez autora w 2009 na 
+\shape slanted
+Python-on-a-Chip
+\shape default
+ to implementacja minimalistycznej maszyny wirtualnej języka Python (nazywanej
+ samodzielnie 
+\shape slanted
+PyMite
+\shape default
+) oraz narzędzi pozwalającej na używanie jej w mikrokontrolerach z niewielką
+ ilością pamięci.
+ Aktualnie projekt wymaga co najmniej 50 kB pamięci Flash i około 4 kB RAM
+ do uruchomienia.
+ Są sygnały na temat udanych prób zmniejszenia tych wymagań.
+\end_layout
+
+\begin_layout Standard
+Projekt maszyny wirtualnej PyMite wystartował w 2000 roku w domu autora
+ w Austin, Teksas.
+ Dean Hall uczynił źródła otwartymi i zaprezentował go na PyCon 2003 w Waszyngto
+nie i na spotkaniu Grupy Użytkownikół Python w Austin.
+ Początkowo projekt działał na dwóch platformach: komputerze PC i mikrokontroler
+ze Atmel ATmega103.
+ Miał niewiele funkcji, a rozwój posuwał się powoli, mając wiele błędów.
+\end_layout
+
+\begin_layout Standard
+Po PyCon 2003 nie przyciągnął zbytniej uwagi innych, przeczekał więc aż
+ do roku 2006, gdy autor odnalazł kolejny błąd.
+ Projekt został przenisiony na inne repozytorium.
+ W tym czasie do dyskusji włączyli się student stiudiów magisterskich z
+ Niemiec oraz kandydat na doktora w MIT.
+ Wsparli oni projekt poparciem i wspaniałym kodem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The code really grew from 2006-2009 as seen in releases 03-08:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+W trakcie PyCon 2009 autor dokonał krótkiej 5-minutowej prezentacji projektu,
+ która miała przyciągnąć więcej zainteresowanych programistów, niż 30 minutowa
+ sesja.
+ Po późniejszym udziale w trzech innych spotkaniach, idea PyMite urosła
+ do czegość znacznie większego.
+ Autor zademonstrował maszynę wirtualną działającą na platformie mbed, którą
+ autor sfinansował i dostarczył potem developerom na 7 miesięcy przed prawdziwym
+ wypuszczeniem tego produktu.
+\end_layout
+
+\begin_layout Standard
+Walnie zdecydowano o nazwaniu projektu Python-on-a-Chip, jako metoda treściwego
+ wyrażenia intencji tego projektu.
+ Maszyna wirtualna zachowała nazwę PyMite.
+ Określono pewne cele dla projektu: budowę sterowników dla urządzeń, bibliotek
+ oraz portów dla popularnych platform.
+ W rezultacie Dean Hall opuścił PyCon 2009 z toną pomysłów, wieloma zgłoszeniami
+ o nowe funkcje i podbudowaną motywacją.
+\end_layout
+
+\begin_layout Standard
+Większe audytorium programistów i użytkowników doprowadziło do odkrycia
+ i poprawienia defektów, jak również do pożądania nowych funkcji, rozszerzeń
+ i platform.
+ Oto lista istotnych funkcji dodanych od czasu PyCon 2009:
+\end_layout
+
+\begin_layout Itemize
+Klasy w wielokrotnym dziedziczeniem
+\end_layout
+
+\begin_layout Itemize
+Generatory z iteratorami, wyrażeniami i koprocedurami (ang.
+ coroutines)
+\end_layout
+
+\begin_layout Itemize
+Łączenie napisów z użyciem operatora dodawania 
+\begin_inset Quotes pld
+\end_inset
+
++
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Migracja do kompilatora Python 2.6 i jego bajtkodu
+\end_layout
+
+\begin_layout Itemize
+The backtick operator (s=`x`) for integers and floats
+\end_layout
+
+\begin_layout Itemize
+Formatowanie napisów (%) z użyciem %d,s,f znaków formatujących
+\end_layout
+
+\begin_layout Itemize
+Domknięcia (ang.
+ 
+\shape slanted
+closures
+\shape default
+).
+ Dopuszcza również dekoratory z argumentem
+\end_layout
+
+\begin_layout Itemize
+Klasa bytearray: 
+\begin_inset listings
+lstparams "language=Python"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+packet = bytearray(128); b = bytearray(b"abc")
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Poprawiona prezencja ipm (narzędzie interaktywnej pracy)
+\end_layout
+
+\begin_layout Itemize
+Naprawione 3 brzydkie przypadki nadmiaru ambicji
+\end_layout
+
+\begin_layout Itemize
+Odśmiecacz (ang.
+ 
+\shape slanted
+garbage collector
+\shape default
+)
+\end_layout
+
+\begin_layout Itemize
+Poprawiona czytelność stosów wywołań dla wyjątków
+\end_layout
+
+\begin_layout Itemize
+Przeniesienie tablic natywnych funkcji do obszaru stałych dla zaoszczędzenia
+ RAM
+\end_layout
+
+\begin_layout Itemize
+Dodatnie 
+\begin_inset listings
+lstparams "language=Python"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+iter()
+\end_layout
+
+\end_inset
+
+ do funkcji wbudowanych (wykomentowany)
+\end_layout
+
+\begin_layout Itemize
+Naprawione 
+\begin_inset listings
+lstparams "language=Python"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+string.count
+\end_layout
+
+\end_inset
+
+ oraz 
+\begin_inset listings
+lstparams "language=Python"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+string.find
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Od czasu PyCon 2009 projekt był powoli udoskonalany poprzez dodawanie funkcji
+ zwiększających możliwości maszyny wirtualnej.
+ Praca nad udoskonaleniem wyjątków została odłożona do czasu utworzenia
+ nowej generacji maszyny wirtualnej, gdyż przechowanie hierarchii wyjątków
+ zajeło by dużo pamięci.
+ Maszyna wirtualna nowej generacji ma przechowywać obiekty kodu w pamięci
+ programu, co powinno pozwolić na zaoszczędzenie pamięci RAM niezbędnej
+ hierarchii klas wyjątków.
+ Po ustabilizowaniu maszyny wirtualnej nowej generacji, autor zamierza się
+ skupić na innych elementach projektu istotnych dla jego użyteczności.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Branch ASN.1
-status collapsed
+status open
 
 \begin_layout Section
 ASN.1
@@ -10159,6 +10494,468 @@ ts_timer_tick()
  o określonym identyfikatorze oraz czas systemowy, kiedy przerwanie zostało
  uruchomione.
  Pozwala to wyliczać programowo opóźnienia występujące w przetwarzaniu przerwań.
+\end_layout
+
+\begin_layout Subsection
+Zarządzanie ruchem robota
+\end_layout
+
+\begin_layout Standard
+Ponieważ ruch robota składa się z wielu atomowych operacji wykonywanych
+ na poszczególnych wyprowadzeniach sterujących połączonych pewnymi zależnościami
+ czasu i kolejności następowania, powstał moduł automatu skończonego typu
+ automat Mealy'ego
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Cytat!
+\end_layout
+
+\end_inset
+
+.
+ W takiej formie automatu każda faza ruchu jest stanem, odpowiadającym pewnemu
+ zestawieniu wartości pinów sterujących nastawionych na pewien okres czasu.
+ Natomiast na wejściu podawane są zdarzenia mające na celu wpływ na decyzję
+ o następnym stanie.
+ Jedno ze zdarzeń jest wewnętrznie przesyłane po zadanym okresie czasu i
+ ma zadanie wyzwalać kolejne zmiany stanów wynikające z następstwa stanów.
+ Sterowane w taki sposób silniki pozwalają na wykonywanie ruchu.
+\end_layout
+
+\begin_layout Standard
+Sekwencja kroków chodu robota składa się z następujących stanów:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+placement !tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="8">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stan
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Biodro
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lewa noga
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prawa noga
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wł
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+k
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wł
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+k
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wł
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+k
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+STATE_STEP_RIGHT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pętla
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+STATE_STEP_LEFT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+STATE_STEP_STOP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Sygnały sterujące w poszczególnych stanach
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dwa pierwsze stany są naprzemiennie powtarzane do czasu, aż nie napłynie
+ zdarzenie wymuszające stan stopu, które zeruje wyprowadzenia sterujące
+ stanem włączającym obroty silnika.
+ Następnym stanem po stanie stopu, jest stan oczekiwania, w którym nie jest
+ czasowo wyzwalane następne zdarzenie.
 \end_layout
 
 \begin_layout Section
