@@ -28,8 +28,11 @@
 
 /*!
  * \brief Macro that calculates period in TC ticks from microseconds.
+ * \warning Theory of numeric calculations is important here!
  */
-#define CALCULATE_TC_PERIOD_FROM_US(period) ((period * (configPBA_CLOCK_HZ / 8)) / (configTICK_RATE_HZ * 100) /10)
+#define CALCULATE_TC_PERIOD_FROM_US(period) (period < 900) \
+    ? ((period * (configPBA_CLOCK_HZ / 8)) / (configTICK_RATE_HZ * 100) /10)  /* Good precision for small numbers */ \
+    : ((configPBA_CLOCK_HZ / 8) / (configTICK_RATE_HZ * 100) * (period / 10)) /* Much less precision for great numbers */
 
 /*!
  * \brief Channel of Timer Counter peripheral used in this module.
@@ -51,7 +54,7 @@ static enum {
 	TS_Latency_Schedule,
 	TS_Latency_Execute,
 	TS_Latency_Counters_Quantity /* Keep always last */
-} ts_latency_timestamp_type;
+} __attribute__((__unused__)) ts_latency_timestamp_type;
 
 /*!
  * \brief Internal list of scheduled events;
@@ -63,6 +66,7 @@ typedef struct ts_sched_list_s {
     ts_time_t                  departure_time;   /*!< When the request leave the originator */
     time_t                     execution_time;   /*!< When the element is scheduled (period) */
     ts_callback_t              callback;         /*!< Scheduled function to be called on time */
+    ts_callback_data_t*        cdata_p;
 } ts_sched_list_t;
 
 /*!
@@ -129,6 +133,7 @@ static ts_sched_list_t* sched_list = NULL;
 static ts_sched_list_t* first_free = NULL;
 static uint32_t current_id = 1; /**< ID to be used for new schedule. Intentionally not used 1 for first time */
 static uint32_t last_sched_id = 1; /**< Last ID used for timer schedule. In fact this initialization does not matter */
+static ts_callback_data_t latency_cb_data = { };
 
 static xQueueHandle ts_queue = NULL;
 
@@ -247,12 +252,15 @@ static inline time_t ts_remaining_period(ts_time_t departure_time, long  period)
  * \author Michał Fita <michal.fita@gmail.com>
  * \date 29 Aug 2011
  * \param[in] callback Function to be called after specified period.
+ * \param[in] cdata_p  Pointer to the structure holding potential data for the callback.
  * \param[in] period   The period after which callback has to executed (10 us gradation; > 20 us)
- * \return             \c TRUE on success, \c FALSE on failure
+ * \return             Handler of the schedule
  */
-bool_t ts_period_schedule(ts_callback_t callback, long period)
+uint32_t ts_period_schedule(ts_callback_t callback, ts_callback_data_t* cdata_p, long period)
 {
     timer_queue_msg_t schedule_message = { .type = TS_SCHEDULE };
+
+    taskENTER_CRITICAL();
 
     schedule_message.departure_time = ts_get_current_time();
 
@@ -260,14 +268,17 @@ bool_t ts_period_schedule(ts_callback_t callback, long period)
     {
         schedule_message.request.callback = callback;
         schedule_message.request.execution_time = period;
+        schedule_message.request.cdata_p = cdata_p;
+        schedule_message.request.handle = current_id++;
 
         if (pdFALSE != xQueueSend(ts_queue, &schedule_message, 0))
         {
-            return TRUE; /* OK if send successful */
+            return 0; /* OK if send successful */
         }
     }
+    taskEXIT_CRITICAL();
 
-    return FALSE;
+    return schedule_message.request.handle;
 }
 
 /*!
@@ -295,18 +306,27 @@ static bool_t ts_timer_reschedule(ts_time_t departure_time, long  period, uint32
  * \date 31 Aug 2011
  * \note I may silently ignore request for schedule if there is no room on
  *         schedule list for new entry.
+ * \param callback Function to be called after given time.
+ * \param cdata_p  Pointer to the structure holding potential data for the callback.
+ * \param handle Identification number of scheduled task (given on scheduling in client).
+ * \param departure_time Time when request was departed from client.
+ * \param period Requested period after which the function has to be called.
  */
-static void ts_internal_schedule(ts_callback_t callback, ts_time_t departure_time, long period)
+static void ts_internal_schedule(ts_callback_t callback,
+                                 ts_callback_data_t* cdata_p,
+                                 uint32_t handle,
+                                 ts_time_t departure_time,
+                                 long period)
 {
     static ts_sched_list_t* sched_elem = NULL;
 
-    if (TRUE == ts_timer_reschedule(departure_time, period, current_id))
+    if (TRUE == ts_timer_reschedule(departure_time, period, handle))
     {
         first_free = first_free->prev;
     }
     else
     {
-        prepare_timer(period, current_id);
+        prepare_timer(period, handle);
     }
 
     CDL_FOREACH(first_free, sched_elem)
@@ -314,8 +334,10 @@ static void ts_internal_schedule(ts_callback_t callback, ts_time_t departure_tim
         if (NULL != sched_elem->callback) continue;
 
         sched_elem->callback = callback;
+        sched_elem->cdata_p = cdata_p;
+        sched_elem->departure_time = departure_time;
         sched_elem->execution_time = ts_remaining_period(departure_time, period);
-        sched_elem->id = current_id++;
+        sched_elem->id = handle;
 
         break; /* This would cause silent return without scheduling been done! */
     } //while  ((NULL != (sched_elem = sched_elem->next) && (first_free = sched_elem)) || !(first_free = sched_list));
@@ -337,28 +359,33 @@ static void ts_internal_execution(ts_time_t departure_time, uint32_t id)
 
     sched_elem = sched_list;
 
-    CDL_FOREACH(sched_list, sched_elem)
+    if (0 != id)
     {
-       if ((NULL == sched_elem->callback) /*|| id != sched_elem->id*/) continue;
+        CDL_FOREACH(sched_list, sched_elem)
+        {
+           if ((NULL == sched_elem->callback) || id != sched_elem->id) continue;
 
-       ts_time_t arrival_time = ts_get_current_time();
+           ts_time_t arrival_time = ts_get_current_time();
 
-      //TODO: calculation of time spent on processing request from interrupt.
+           //TODO: calculation of time spent on processing request from interrupt.
 
-       sched_elem->callback();
+           sched_elem->callback(sched_elem->cdata_p);
 
-       prev_sched_elem = sched_elem;
-       sched_list = sched_elem->next; /* Next time execution will start search from next element */
+           prev_sched_elem = sched_elem;
+           sched_list = sched_elem->next; /* Next time execution will start search from next element */
 
-       /* Clean up the element on the list */
-       prev_sched_elem->callback = NULL;
-       prev_sched_elem->departure_time.system_ticks = 0;
-       prev_sched_elem->departure_time.cpu_counter = 0;
-       prev_sched_elem->execution_time = 0;
+           /* Clean up the element on the list */
+           prev_sched_elem->callback = NULL;
+           prev_sched_elem->cdata_p = NULL;
+           prev_sched_elem->departure_time.system_ticks = 0;
+           prev_sched_elem->departure_time.cpu_counter = 0;
+           prev_sched_elem->execution_time = 0;
 
-       break; /* This would cause silent return without scheduling been done! */
+           break; /* This would cause silent return without scheduling been done! */
+        }
     }
 
+    ts_internal_state = TS_Idle; /* Intermediate state after possible execution */
     //sched_elem = prev_sched_elem;
 
     CDL_FOREACH(sched_list, sched_elem)
@@ -416,11 +443,11 @@ static void __attribute__((__noinline__)) vTimerTick_non_naked(void)
     ts_latency.timestamps[TS_Latency_Prev_Int] = ts_latency.timestamps[TS_Latency_Curr_Int];
     ts_latency.timestamps[TS_Latency_Curr_Int] = ts_get_current_time();
 
-    // Store departure time
-    interrupt_message.departure_time = ts_get_current_time();
-
     // Take ID of first callback awaiting execution
     interrupt_message.execution.id = last_sched_id;
+
+    // Store departure time
+    interrupt_message.departure_time = ts_get_current_time();
 
     // Do the job! Send the message to the queue.
     ts_internal_state = TS_Executing;
@@ -515,19 +542,27 @@ static inline void prepare_timer(time_t period, uint32_t id)
 
     // =LICZBA.CAŁK(QUOTIENT(period*QUOTIENT(configPBA_CLOCK_HZ;8);(configTICK_RATE_HZ*100))/10)
 
-    ts_latency.last_period = calculated_period;
+    //ts_latency.last_period = calculated_period;
 
     ts_latency.timestamps[TS_Latency_Timer_Prep] = ts_get_current_time();
     ts_latency.compensation = ts_diff_time(ts_latency.timestamps[TS_Latency_Curr_Int], ts_latency.timestamps[TS_Latency_Timer_Prep]).cpu_counter
                      / ((configCPU_CLOCK_HZ / configPBA_CLOCK_HZ) * 8);
 
-    portENTER_CRITICAL();
+    // Internal timer & comparator is 16 bit only, so the trick is to schedule interrupt with no callback it should be
+    // rescheduled then for further execution after one of next ticks.
+    if ((calculated_period - ts_latency.compensation) > 0xFFF0)
+    {
+        calculated_period = 0xFFF0;
+        id = 0; // Resetting id will cause reschedule
+    }
 
-    // Program timer comparator to be launched after given period in tenth of us
-    tc_write_rc(tc, TimerService_TC_Channel, calculated_period - ts_latency.compensation);
+    portENTER_CRITICAL();
 
     // Timer is counting for the given ID
     last_sched_id = id;
+
+    // Program timer comparator to be launched after given period in tenth of us
+    tc_write_rc(tc, TimerService_TC_Channel, calculated_period - ts_latency.compensation);
 
     // Start counting
     tc_start(tc, TimerService_TC_Channel);
@@ -543,7 +578,7 @@ static inline void prepare_timer(time_t period, uint32_t id)
 /*!
  * \brief Callback called first which allows measure of current latency.
  */
-void ts_calculate_latency_cb(void)
+void ts_calculate_latency_cb(ts_callback_data_t* cdata_p)
 {
 	portENTER_CRITICAL();
 	ts_latency.timestamps[TS_Latency_Execute] = ts_get_current_time();
@@ -555,10 +590,10 @@ void ts_calculate_latency_cb(void)
 #ifdef TIMER_TEST_MODE
 	//xUsartPutChar(serialPortHdlr, '$', 0);
 
-	ts_period_schedule(ts_calculate_latency_cb, ts_latency.test_period);
+	ts_period_schedule(ts_calculate_latency_cb, latency_cb_data, ts_latency.test_period);
 
-        gpio_enable_gpio_pin(AVR32_PIN_PB21);
-        gpio_tgl_gpio_pin(AVR32_PIN_PB21);
+    gpio_enable_gpio_pin(AVR32_PIN_PB21);
+    gpio_tgl_gpio_pin(AVR32_PIN_PB21);
 #endif /* TIMER_TEST_MODE */
 }
 
@@ -578,7 +613,7 @@ static portTASK_FUNCTION(timer_task, p_parameters)
 
     /* First go requires to launch latency calculation callback */
     ts_latency.timestamps[TS_Latency_Schedule] = ts_get_current_time();
-    ts_period_schedule(ts_calculate_latency_cb, 500);
+    ts_period_schedule(ts_calculate_latency_cb, &latency_cb_data, 500);
 
     while(TRUE)
     {
@@ -591,8 +626,10 @@ static portTASK_FUNCTION(timer_task, p_parameters)
             {
                 case TS_SCHEDULE:
                     ts_internal_schedule(received_message.request.callback,
-                                         received_message.departure_time,
-                                         received_message.request.execution_time);
+                            received_message.request.cdata_p,
+                            received_message.request.handle,
+                            received_message.departure_time,
+                            received_message.request.execution_time);
                     break;
                 case TS_EXECUTION:
                     ts_internal_execution(received_message.departure_time,

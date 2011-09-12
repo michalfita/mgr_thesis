@@ -21,6 +21,8 @@
 #include "version.h"
 #include "motor.h"
 #include "timer.h"
+#include "pymite.h"
+#include "statemachine.h"
 
 #define HASH_FUNCTION HASH_FNV
 #include "uthash.h"
@@ -43,18 +45,21 @@ typedef int (*cmd_function_t)(int argc, char* argv[]);
  */
 typedef struct
 {
-        UT_hash_handle  hh;      /*!< Handle for UTHASH macros library */
+    UT_hash_handle  hh;      /*!< Handle for UTHASH macros library */
 	char*           command; /*!< Null terminated string of the command name used in MMI */
 	cmd_function_t  call;    /*!< The pointer to the function tied to the command, executed when demanded from MMI */
 } command_entry_t;
 
 /* Forward declarations for functions handling particular commands */
-int cmd_identify(int argc, char* argv[]); // int cmd_identify(char* cmd, ...);
-int cmd_setpin(int argc, char* argv[]); // int cmd_setpin(char* cmd, ...);
-int cmd_arm(int argc, char* argv[]);
-int cmd_shoulder(int argc, char* argv[]);
-int cmd_set_test_period(int argc, char* argv[]);
-int cmd_kicktimer(int argc, char* argv[]);
+static int cmd_identify(int argc, char* argv[]); // int cmd_identify(char* cmd, ...);
+static int cmd_setpin(int argc, char* argv[]); // int cmd_setpin(char* cmd, ...);
+static int cmd_arm(int argc, char* argv[]);
+static int cmd_shoulder(int argc, char* argv[]);
+static int cmd_set_test_period(int argc, char* argv[]);
+static int cmd_kicktimer(int argc, char* argv[]);
+static int cmd_python(int argc, char* argv[]);
+static int cmd_walk(int argc, char* argv[]);
+static int cmd_stop(int argc, char* argv[]);
 
 /*!
  * The table contains mapping from command names to respective functions.
@@ -66,6 +71,9 @@ static command_entry_t commands_table[] = {
 		{ {}, "shoulder",        cmd_shoulder,         },
 		{ {}, "set_test_period", cmd_set_test_period,  },
 		{ {}, "kicktimer",       cmd_kicktimer,        },
+		{ {}, "python",          cmd_python,           },
+		{ {}, "walk",            cmd_walk,             },
+		{ {}, "stop",            cmd_stop,             },
 		{ {}, NULL,              NULL,                 },
 };
 
@@ -85,7 +93,7 @@ extern xComPortHandle serialPortHdlr;
  * \param argv Parameters array
  * \return Always zero.
  */
-int cmd_identify(int argc, char* argv[])
+static int cmd_identify(int argc, char* argv[])
 {
 	const portCHAR* text = "Robot Firmware for AT32UC3A0512 codename \"Veroniq\"\n"\
                            "version "VERSION_STR" (build "BUILD_NUMBER_STR" date "BUILD_DATE")\n";
@@ -104,7 +112,7 @@ int cmd_identify(int argc, char* argv[])
  * \param argv Parameters array
  * \return Always zero.
  */
-int cmd_setpin(int argc, char* argv[])
+static int cmd_setpin(int argc, char* argv[])
 {
 	int status = 0;
 	int pin = 0;
@@ -126,18 +134,19 @@ int cmd_setpin(int argc, char* argv[])
 			status = 2;
 		}
 	} else {
-		printf("Error: At least 2 arguments have to be provided.\n");
+		const char error[] = "Error: At least 2 arguments have to be provided.\n";
+		usUsartPutString(serialPortHdlr, error, sizeof(error));
 		status = 1;
 	}
 	return status;
 }
 
-int cmd_arm(int argc, char* argv[])
+static int cmd_arm(int argc, char* argv[])
 {
     return 0;
 }
 
-int cmd_shoulder(int argc, char* argv[])
+static int cmd_shoulder(int argc, char* argv[])
 {
     return 0;
 }
@@ -150,7 +159,7 @@ int cmd_shoulder(int argc, char* argv[])
  * \param argv Parameters array
  * \return Always zero.
  */
-int cmd_set_test_period(int argc, char* argv[])
+static int cmd_set_test_period(int argc, char* argv[])
 {
     if (argc >= 1)
     {
@@ -158,7 +167,8 @@ int cmd_set_test_period(int argc, char* argv[])
     }
     else
     {
-        printf("Error: Provide one argument: number of microseconds.");
+        const char error[] = "Error: Provide one argument: number of microseconds.";
+        usUsartPutString(serialPortHdlr, error, sizeof(error));
     }
     return 0;
 }
@@ -171,38 +181,86 @@ int cmd_set_test_period(int argc, char* argv[])
  * \param argv Parameters array
  * \return Always zero.
  */
-int cmd_kicktimer(int argc, char* argv[])
+static int cmd_kicktimer(int argc, char* argv[])
 {
     if (argc >= 1)
     {
-        extern void ts_calculate_latency_cb(void);
-        ts_period_schedule(ts_calculate_latency_cb, 500);
+        extern void ts_calculate_latency_cb(ts_callback_data_t* cdata_p);
+        ts_period_schedule(ts_calculate_latency_cb, (void*)NULL, 500);
     }
     else
     {
-        printf("Error: Provide one argument: number of microseconds.");
+        const char* error = "Error: Provide one argument: number of microseconds.";
+        usUsartPutString(serialPortHdlr, error, strlen(error));
     }
     return 0;
 }
 
-/* Initialization of serial port */
+/*!
+ * \brief Command to execute Python example.
+ * \param argc
+ * \param argv
+ * \return Status from Python execution.
+ */
+static int cmd_python(int argc, char* argv[])
+{
+    #define PM_HEAP_SIZE 0x2F00
+
+    extern unsigned char usrlib_img[];
+    static portCHAR output[200] = {'\0'};
+
+    uint8_t* heap_p;
+    PmReturn_t retval;
+
+    heap_p = malloc(PM_HEAP_SIZE);
+
+    retval = pm_init(heap_p, PM_HEAP_SIZE, MEMSPACE_PROG, usrlib_img);
+    snprintf(output, 200, "* PyMite init result = 0x%x\r", retval);
+    usUsartPutString(serialPortHdlr, output, strlen(output));
+
+    PM_RETURN_IF_ERROR(retval);
+
+    retval = pm_run((uint8_t *)"main");
+
+    snprintf(output, 200, "* PyMite exec result = 0x%x\r", retval);
+    usUsartPutString(serialPortHdlr, output, strlen(output));
+
+    free(heap_p);
+
+    return (int)retval;
+}
+
+static int cmd_walk(int argc, char* argv[])
+{
+    sm_send_event(EVENT_WALK);
+}
+
+static int cmd_stop(int argc, char* argv[])
+{
+    sm_send_event(EVENT_STOP);
+}
+
+
+/**
+ * \brief Initialization of serial port
+ */
 void command_gpio_init()
 {
-	static const gpio_map_t USART_GPIO_MAP =
-	{
-	  {COMMAND_USART_RX_PIN, COMMAND_USART_RX_FUNCTION},
-	  {COMMAND_USART_TX_PIN, COMMAND_USART_TX_FUNCTION}
-	};
-
-	// USART options.
-	static const usart_options_t USART_OPTIONS =
-	{
-	  .baudrate     = 9600, //57600,
-	  .charlength   = 8,
-	  .paritytype   = USART_NO_PARITY,
-	  .stopbits     = USART_1_STOPBIT,
-	  .channelmode  = USART_NORMAL_CHMODE
-	};
+//	static const gpio_map_t USART_GPIO_MAP =
+//	{
+//	  {COMMAND_USART_RX_PIN, COMMAND_USART_RX_FUNCTION},
+//	  {COMMAND_USART_TX_PIN, COMMAND_USART_TX_FUNCTION}
+//	};
+//
+//	// USART options.
+//	static const usart_options_t USART_OPTIONS =
+//	{
+//	  .baudrate     = 9600, //57600,
+//	  .charlength   = 8,
+//	  .paritytype   = USART_NO_PARITY,
+//	  .stopbits     = USART_1_STOPBIT,
+//	  .channelmode  = USART_NORMAL_CHMODE
+//	};
 
 	// Assign GPIO to USART.
 	//gpio_enable_module(USART_GPIO_MAP,
@@ -212,7 +270,7 @@ void command_gpio_init()
 	//usart_init_rs232(COMMAND_USART, &USART_OPTIONS, FOSC0);
 
 	// Initialize serial driver
-	serialPortHdlr = xUsartInit(serCOM1, COMMAND_UART_SPEED, 128, 128);
+	serialPortHdlr = xUsartInit(serCOM1, COMMAND_UART_SPEED, 256, 256);
 	
 }
 
@@ -237,8 +295,8 @@ static portTASK_FUNCTION(command_task, p_parameters)
     //label hash_error;
 
     //command_entry_t* cmd_ptr = (command_entry_t*)&(commands_table[0]); // Init by begining of the table
-    void* cmd_func_ptr;
-    cmd_function_t cmd_func = NULL;
+//    void* cmd_func_ptr;
+//    cmd_function_t cmd_func = NULL;
 
     /* Process inital commands hashing */
 //    commands_hashmap = hashmap_create(20);

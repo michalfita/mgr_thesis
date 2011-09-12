@@ -12,6 +12,7 @@
 #include "motor.h"
 #include "command.h"
 #include "timer.h"
+#include "statemachine.h"
 
 static portTASK_FUNCTION(init_task, p_parameters)
 {
@@ -23,6 +24,7 @@ static portTASK_FUNCTION(init_task, p_parameters)
     motor_start(MOTOR_TASK_PRIORITY);
     command_start(COMMAND_TASK_PRIORITY);
     timer_start(TIMER_TASK_PRIORITY);
+    sm_start(SM_TASK_PRIORITY);
 	   
     /* We need to initialize xLastFlashTime prior to the first call to vTaskDelayUntil(). */
     xLastFocusTime = xTaskGetTickCount();

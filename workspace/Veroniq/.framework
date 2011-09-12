@@ -20,13 +20,13 @@
     <option id="com.atmel.avr32.sf.uc3a.component.option.sdram" value="true"/>
     <option id="com.atmel.avr32.sf.uc3a.service.option.autobaud" value="false"/>
     <option id="com.atmel.avr32.sf.uc3a.driver.option.wdt" value="false"/>
-    <option id="com.atmel.avr32.sf.uc3a.driver.option.ssc" value="false"/>
     <option id="com.atmel.avr32.sf.uc3a.service.option.usbb" value="None"/>
+    <option id="com.atmel.avr32.sf.uc3a.driver.option.ssc" value="false"/>
     <option id="com.atmel.avr32.sf.uc3a.component.option.audio.dac.pwmdac" value="false"/>
     <option id="com.atmel.avr32.sf.uc3a.driver.option.flashc" value="true"/>
     <option id="com.atmel.avr32.sf.uc3a.driver.option.macb" value="true"/>
-    <option id="com.atmel.avr32.sf.uc3a.service.option.newlibaddon" value="speed"/>
     <option id="com.atmel.avr32.sf.uc3a.service.option.debug.dsplib" value="false"/>
+    <option id="com.atmel.avr32.sf.uc3a.service.option.newlibaddon" value="speed"/>
     <option id="com.atmel.avr32.sf.uc3a.driver.option.twi" value="false"/>
     <option id="com.atmel.avr32.sf.uc3a.driver.option.usart" value="true"/>
     <option id="com.atmel.avr32.sf.uc3a.component.option.dataflash" value="true"/>
@@ -77,8 +77,8 @@
     <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/SPI/spi.c" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/SPI/spi.c" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/TC/tc.c" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/TC/tc.c" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/SERVICES/FREERTOS/Source/include/portable.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="SERVICES/FREERTOS/Source/include/portable.h" changed="false"/>
-    <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/FLASHC/flashc.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/FLASHC/flashc.h" changed="false"/>
     <file path="src/CONFIG/conf_at45dbx.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/EXAMPLE/conf_at45dbx.h" changed="false"/>
+    <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/FLASHC/flashc.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/FLASHC/flashc.h" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/CPU/CYCLE_COUNTER/cycle_counter.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/CPU/CYCLE_COUNTER/cycle_counter.h" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/USART/usart.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/USART/usart.h" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/PWM/pwm.c" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/PWM/pwm.c" changed="false"/>
@@ -108,10 +108,10 @@
     <file path="src/SOFTWARE_FRAMEWORK/UTILS/PREPROCESSOR/tpaste.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="UTILS/PREPROCESSOR/tpaste.h" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/PM/pm.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/PM/pm.h" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx_mem.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="COMPONENTS/MEMORY/DATA_FLASH/AT45DBX/at45dbx_mem.h" changed="false"/>
-    <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/PM/pm_conf_clocks.c" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/PM/pm_conf_clocks.c" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/SERVICES/FREERTOS/Source/portable/GCC/AVR32_UC3/portmacro.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="SERVICES/FREERTOS/Source/portable/GCC/AVR32_UC3/portmacro.h" changed="false"/>
+    <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/PM/pm_conf_clocks.c" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/PM/pm_conf_clocks.c" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/DRIVERS/SPI/spi.h" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="DRIVERS/SPI/spi.h" changed="false"/>
-    <file path="src/SOFTWARE_FRAMEWORK/COMPONENTS/DISPLAY/DIP204/dip204.c" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="COMPONENTS/DISPLAY/DIP204/dip204.c" changed="false"/>
     <file path="src/SOFTWARE_FRAMEWORK/SERVICES/FREERTOS/Source/tasks.c" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="SERVICES/FREERTOS/Source/tasks.c" changed="false"/>
+    <file path="src/SOFTWARE_FRAMEWORK/COMPONENTS/DISPLAY/DIP204/dip204.c" framework="com.atmel.avr32.sf.uc3a" version="1.7.0" source="COMPONENTS/DISPLAY/DIP204/dip204.c" changed="false"/>
   </files>
 </framework-data>

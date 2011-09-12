@@ -13,6 +13,7 @@
 #include "pwm.h"
 #include "gpio.h"
 #include "utlist.h"
+#include "timer.h"
 
 #include "motor.h"
 
@@ -54,6 +55,8 @@ unsigned char const motor_pins_pwm_func[] = {
  * Structure holding data to be processed as deferred motor order.
  */
 typedef struct motor_deffered_order_s {
+    uint8_t  pin;
+    uint8_t  value;
 	uint32_t time;
 } motor_deffered_order_t;
 
@@ -62,7 +65,7 @@ typedef struct motor_deffered_order_s {
  * Peripherals current setting. This approach is easier but requires update
  * always when pin value is updated.
  */
-static unsigned int motor_pins_memory[7] = { 0 };
+static unsigned int motor_pins_memory[14] = { 0 };
 
 /*!
  * Function returns the structure of avr32_pwm_channel_t type containing
@@ -76,14 +79,14 @@ int get_pwm_structure(avr32_pwm_channel_t* p_pwm_channel, int duty_cycle)
 	p_pwm_channel->CMR.calg = PWM_MODE_LEFT_ALIGNED;       // Channel mode.
 	p_pwm_channel->CMR.cpol = PWM_POLARITY_HIGH;            // Channel polarity.
 	p_pwm_channel->CMR.cpd = PWM_UPDATE_DUTY;              // Not used the first time.
-	p_pwm_channel->CMR.cpre = AVR32_PWM_CPRE_MCK_DIV_512;  // Channel prescaler.
+	p_pwm_channel->CMR.cpre = AVR32_PWM_CPRE_MCK_DIV_256;  // Channel prescaler.
 	p_pwm_channel->cdty = 1;  // Channel duty cycle, should be < CPRD.
 	p_pwm_channel->cprd = 100;  // Channel period.
 	p_pwm_channel->cupd = 0;   // Channel update is not used here.
 	// With these settings, the output waveform period will be :
-	// (66000000/512)/100 == 1.289,0625 kHz [wrong]
-	// (33000000/256)/100 == 1.289,0625 kHz [6.05.2009]
-	// (66000000/256)/100 == 2.578,125 kHz
+	// (66000000/512)/100 == 1.2890625 kHz [wrong]
+	// (33000000/256)/100 == 1.2890625 kHz [6.05.2009]
+	// (66000000/256)/100 == 2.578125 kHz  [10.09.2011]
 	// (48000000/256)/100 == 1.875 kHz == (MCK/prescaler)/period,
 	// with MCK == 48MHz, prescaler == 256, period == 100
 	// (115200/256)/20 == 22.5Hz == (MCK/prescaler)/period, with MCK == 115200Hz,
@@ -109,22 +112,25 @@ int get_pwm_structure(avr32_pwm_channel_t* p_pwm_channel, int duty_cycle)
 void motor_move_routine(/* subject to add direction */)
 {
 	static char status_move = 0;
-	
-	if (0 == status_move) {
-		/* step forward */
-		gpio_clr_gpio_pin(motor_pins_pwm[MOTOR_LEFT_LEG]);
-		gpio_set_gpio_pin(motor_pins_logic[MOTOR_LEFT_LEG]);
-		gpio_set_gpio_pin(motor_pins_pwm[MOTOR_RIGHT_LEG]);
-		gpio_clr_gpio_pin(motor_pins_logic[MOTOR_RIGHT_LEG]);
-		status_move = 1;
-	} else {
-		/* step backward */
-		gpio_set_gpio_pin(motor_pins_pwm[MOTOR_LEFT_LEG]);
-		gpio_clr_gpio_pin(motor_pins_logic[MOTOR_LEFT_LEG]);
-		gpio_clr_gpio_pin(motor_pins_pwm[MOTOR_RIGHT_LEG]);
-		gpio_set_gpio_pin(motor_pins_logic[MOTOR_RIGHT_LEG]);
-		status_move = 0;
-	}
+
+    if (0 == status_move)
+    {
+        /* step forward */
+        gpio_clr_gpio_pin(motor_pins_pwm[MOTOR_LEFT_LEG]);
+        gpio_set_gpio_pin(motor_pins_logic[MOTOR_LEFT_LEG]);
+        gpio_set_gpio_pin(motor_pins_pwm[MOTOR_RIGHT_LEG]);
+        gpio_clr_gpio_pin(motor_pins_logic[MOTOR_RIGHT_LEG]);
+        status_move = 1;
+    }
+    else
+    {
+        /* step backward */
+        gpio_set_gpio_pin(motor_pins_pwm[MOTOR_LEFT_LEG]);
+        gpio_clr_gpio_pin(motor_pins_logic[MOTOR_LEFT_LEG]);
+        gpio_clr_gpio_pin(motor_pins_pwm[MOTOR_RIGHT_LEG]);
+        gpio_set_gpio_pin(motor_pins_logic[MOTOR_RIGHT_LEG]);
+        status_move = 0;
+    }
 }
 
 /**
@@ -189,6 +195,7 @@ bool_t motor_setpin_values(uint8_t pin_id, uint8_t value)
 			get_pwm_structure(&pwm_channel, value - 100);
 			//pwm_channel_init(msg.pin/*motor_pins_pwm[msg.pin]*/, &pwm_channel);
 			gpio_enable_module_pin(motor_pins_pwm[pin_id], motor_pins_pwm_func[pin_id]);
+			/* Update channel. PWM channels are numbered, not pins ! */
 			pwm_sync_update_channel(pin_id/*motor_pins_pwm[msg.pin]*/, &pwm_channel);
 			//pwm_start_channels(1 << msg.pin);
 			motor_pins_memory[pin_id] = value;
@@ -202,9 +209,30 @@ bool_t motor_setpin_values(uint8_t pin_id, uint8_t value)
 	return status;
 }
 
+void motor_defered_cb(ts_callback_data_t* cdata_p)
+{
+    if (NULL != cdata_p)
+    {
+        uint8_t pin = ((motor_deffered_order_t*)cdata_p->data_p)->pin;
+        uint8_t value = ((motor_deffered_order_t*)cdata_p->data_p)->value;
+        motor_setpin_values(pin, value);
+
+        free(cdata_p);
+    }
+}
+
 bool_t motor_setpin_defer(uint8_t pin_id, uint8_t value, uint16_t latency)
 {
 	// Add motor_setpin_values into the list of timing to process.
+    ts_callback_data_t* cdata_p = malloc(sizeof(ts_callback_data_t) + sizeof(motor_deffered_order_t));
+    cdata_p->data_size = sizeof(motor_deffered_order_t);
+    cdata_p->data_p = (char*)cdata_p + sizeof(motor_deffered_order_t);
+
+    ((motor_deffered_order_t*)cdata_p->data_p)->value = value;
+    ((motor_deffered_order_t*)cdata_p->data_p)->pin = pin_id;
+
+    ts_period_schedule(motor_defered_cb, cdata_p, latency*1000);
+
 	return TRUE;
 }
 
@@ -229,8 +257,8 @@ unsigned int motor_process_queue()
 			{
 				/* TODO: Put reset to previous on time */
 				motor_setpin_defer(msg.pin,
-						           motor_pins_memory[msg.pin],
-						           state_time);
+						   motor_pins_memory[msg.pin],
+						   state_time);
 			}
 			motor_setpin_values(msg.pin, msg.value);
 		}
@@ -275,34 +303,34 @@ static portTASK_FUNCTION(motor_task, p_parameters)
     	pwm_channel.cupd = new_duty_cycle;
     	
     	/* Delay for the flash period then check. */
-		vTaskDelayUntil( &xLastFocusTime, xDelayLength );
+        vTaskDelayUntil( &xLastFocusTime, xDelayLength );
 
 #ifdef TO_BE_REMOVED /* TODO: Obvious */
 #if MOTOR_NO_PWM_MODE == 0
-		unsigned int channel_id;
-		for(channel_id = 0; channel_id < 7; ++channel_id)
-    	{
+	unsigned int channel_id;
+	for(channel_id = 0; channel_id < 7; ++channel_id)
+    	{3
     	    //pwm_sync_update_channel(channel_id, &pwm_channel); // Set channel configuration to all channels.
     	}
 #else
-		if (0 != pin_logic)
-		{
-			int pin_i;
-			// Subject for optimization: massively clear GPIO pins
-			for (pin_i = 0; pin_i < sizeof(motor_pins_logic); ++pin_i) {
-                //gpio_clr_gpio_pin(motor_pins_pwm[pin_i]);
-			}
-		} else {
-			int pin_i;
-			// Subject for optimization: massively set GPIO pins
-			for (pin_i = 0; pin_i < sizeof(motor_pins_logic); ++pin_i) {
-                //gpio_set_gpio_pin(motor_pins_pwm[pin_i]);
-			}
-		}
+            if (0 != pin_logic)
+            {
+                int pin_i;
+                // Subject for optimization: massively clear GPIO pins
+                for (pin_i = 0; pin_i < sizeof(motor_pins_logic); ++pin_i) {
+                    //gpio_clr_gpio_pin(motor_pins_pwm[pin_i]);
+                }
+            } else {
+                int pin_i;
+                // Subject for optimization: massively set GPIO pins
+                for (pin_i = 0; pin_i < sizeof(motor_pins_logic); ++pin_i) {
+                    //gpio_set_gpio_pin(motor_pins_pwm[pin_i]);
+                }
+            }
 #endif /* MOTOR_NO_PWM_MODE == 0 */
 #endif /* TO_BE_REMOVED */
-		
-		new_duty_cycle += duty_cycle_step;
+
+            new_duty_cycle += duty_cycle_step;
     }
 }
 
@@ -381,7 +409,7 @@ void motor_start(unsigned portBASE_TYPE priority)
 #endif /* MOTOR_NO_PWM_MODE == 0 */
 	
 	/* Initialize queue for motor control. */
-	motor_queue = xQueueCreate(2, sizeof(motor_queue_msg_t));
+	motor_queue = xQueueCreate(10, sizeof(motor_queue_msg_t));
 	
 	/* Spawn the motor task. */
 	xTaskCreate(motor_task, (const signed portCHAR*)"MOTOR",

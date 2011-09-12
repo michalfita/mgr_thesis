@@ -5,7 +5,7 @@
 
 xComPortHandle serialPortHdlr;
 
-int __attribute__((weak)) _write (int file, char * ptr, int len) { 
+int /*__attribute__((weak))*/ _write (int file, char * ptr, int len) {
     int i;
     for ( i = 0; i < len; i++ ){
        xUsartPutChar(serialPortHdlr, ptr[i], 200);
@@ -13,7 +13,7 @@ int __attribute__((weak)) _write (int file, char * ptr, int len) {
     return len;
 }
 
-size_t __attribute__((weak)) _write_r (struct _reent *ptr, int fd, const void *buf, size_t cnt )
+size_t  /*__attribute__((weak))*/ _write_r (struct _reent *ptr, int fd, const void *buf, size_t cnt )
 {
     unsigned short remaining = usUsartPutString(serialPortHdlr, buf, cnt);
     return cnt - remaining;
