@@ -44,11 +44,8 @@ class CommandOutput(gtk.TextView):
     
     def write(self, data, style):
         buffer = self.get_buffer()
-        buffer.insert_at_cursor(data)
         end_iter_before = buffer.get_end_iter()
-        end_iter_before.backward_chars(len(data)) # TODO: find design pattern
-        end_iter_after = buffer.get_end_iter()
-        buffer.apply_tag_by_name(style, end_iter_before, end_iter_after)
+        buffer.insert_with_tags_by_name(end_iter_before, data, style)
         
     def owrite(self, data):
         """Method displays local output of the application."""

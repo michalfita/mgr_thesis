@@ -1,56 +1,172 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR ORGANIZATION
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# MIchał Fita <michal.fita@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Robotiq 1.0\n"
-"POT-Creation-Date: 2009-07-11 13:34+CEST\n"
-"PO-Revision-Date: 2009-07-11 13:45+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-18 15:17+CEST\n"
+"PO-Revision-Date: 2011-09-18 16:10+0200\n"
 "Last-Translator: MIchał Fita <michal.fita@gmail.com>\n"
-"Language-Team: Michał Fita <michal.fita@gmail.com>\n"
+"Language-Team: No team\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.7.0\n"
 "Generated-By: pygettext.py 1.5\n"
 
-#: comm/SerialCommunicator.py:40
+#: comm/SerialCommunicator.py:43
 msgid "_Serial Communication"
 msgstr "Komunikacja _szeregowa"
 
-#: comm/SerialCommunicator.py:44
+#: comm/SerialCommunicator.py:47
 msgid "Use serial communication to interact with robot."
 msgstr "Użyj komunikacji szeregowej do interakcji z robotem."
 
-#: comm/SerialCommunicator.py:69
+#: comm/SerialCommunicator.py:76
 msgid "Serial Port"
 msgstr "Port szeregowy"
 
-#: comm/SerialCommunicator.py:74
+#: comm/SerialCommunicator.py:82
 msgid "Baud Rate"
 msgstr "Prędkość danych"
 
-#: comm/SerialCommunicator.py:79
+#: comm/SerialCommunicator.py:88
 msgid "Number of data bits"
 msgstr "Ilość bitów danych"
 
-#: comm/SerialCommunicator.py:85
+#: comm/SerialCommunicator.py:95
 msgid "Parity check mode"
 msgstr "Tryb sprawdzania parzystości"
 
-#: comm/SerialCommunicator.py:90
+#: comm/SerialCommunicator.py:101
 msgid "Stop bits"
 msgstr "Bity stopu"
 
-#: comm/SerialCommunicator.py:96
+#: comm/SerialCommunicator.py:108
 msgid "XON/XOFF flow control"
 msgstr "Kontrola przepływu XON/XOFF"
 
-#: comm/SerialCommunicator.py:101
+#: comm/SerialCommunicator.py:114
 msgid "RTS/CTS flow control"
 msgstr "Kontrola przepływu RTS/CTS"
 
-#: robotiq.py:60
+#: misc/Commands.py:42
+msgid "Press Control Up"
+msgstr "Naciśnięcie w górę"
+
+#: misc/Commands.py:43 misc/Commands.py:47
+msgid "Release Control Up"
+msgstr "Zwolnienie w dół"
+
+#: misc/Commands.py:44
+msgid "Press Control Down"
+msgstr "Naciśniecie w dół"
+
+#: misc/Commands.py:45
+msgid "Release Control Down"
+msgstr "Zwolnienie w dół"
+
+#: misc/Commands.py:46
+msgid "Press Control Left"
+msgstr "Naciśnięcie w lewo"
+
+#: misc/Commands.py:48
+msgid "Press Control Right"
+msgstr "Naciśnięcie w prawo"
+
+#: misc/Commands.py:49
+msgid "Release Control Right"
+msgstr "Zwolnienie w prawo"
+
+#: misc/Commands.py:50
+msgid "Press Control Stop"
+msgstr "Naciśnięcie stop"
+
+#: misc/Commands.py:51
+msgid "Release Control Stop"
+msgstr "Zwolnienie stop"
+
+#: misc/Commands.py:52
+msgid "Press Control Right Arm Up"
+msgstr "Naciśnięcie prawe ramię w góre"
+
+#: misc/Commands.py:53
+msgid "Release Control Right Arm Up"
+msgstr "Zwolnienie prawe ramię w górę"
+
+#: misc/Commands.py:54
+msgid "Press Control Right Arm Down"
+msgstr "Naciśnięcie prawe ramie w dół"
+
+#: misc/Commands.py:55
+msgid "Release Control Right Arm Down"
+msgstr "Zwolnienie prawe ramię w dół"
+
+#: misc/Commands.py:56
+msgid "Press Control Right Arm In"
+msgstr "Naciśnięcie prawe ramię do wewnątrz"
+
+#: misc/Commands.py:57
+msgid "Release Control Right Arm In"
+msgstr "Zwolnienie prawe ramię do wewnątrz"
+
+#: misc/Commands.py:58
+msgid "Press Control Right Arm Out"
+msgstr "Naciśnięcie prawe ramię na zewnątrz"
+
+#: misc/Commands.py:59
+msgid "Release Control Right Arm Out"
+msgstr "Zwolnienie prawe ramię do zewnątrz"
+
+#: misc/Commands.py:60
+msgid "Press Control Tilt Right"
+msgstr "Naciśnięcie przechył w prawo"
+
+#: misc/Commands.py:61 misc/Commands.py:71
+msgid "Release Control Tilt Right"
+msgstr "Zwolnienie przechył w prawo"
+
+#: misc/Commands.py:62
+msgid "Press Control Left Arm Up"
+msgstr "Naciśnięcie lewe ramię w górę"
+
+#: misc/Commands.py:63
+msgid "Release Control Left Arm Up"
+msgstr "Zwolnienie lewe ramię w dół"
+
+#: misc/Commands.py:64
+msgid "Press Control Left Arm Down"
+msgstr "Naciśnięcie lewe ramię w dół"
+
+#: misc/Commands.py:65
+msgid "Release Control Left Arm Down"
+msgstr "Naciśnięcie lewe ramię w dół"
+
+#: misc/Commands.py:66
+msgid "Press Control Left Arm In"
+msgstr "Naciśnięcie lewe ramię do wewnątrz"
+
+#: misc/Commands.py:67
+msgid "Release Control Left Arm In"
+msgstr "Zwolnienie lewe ramię do wewnątrz"
+
+#: misc/Commands.py:68
+msgid "Press Control Left Arm Out"
+msgstr "Naciśnięcie lewe ramię na zewnątrz"
+
+#: misc/Commands.py:69
+msgid "Release Control Left Arm Out"
+msgstr "Zwolnienie lewe ramię na zewnątrz"
+
+#: misc/Commands.py:70
+msgid "Press Control Tilt Left"
+msgstr "Naciśnięcie przechył w lewo"
+
+#: robotiq.py:61
 msgid ""
 "File: %s, Line: %d,\n"
 "In function: <b>%s</b>\n"
@@ -60,25 +176,31 @@ msgstr ""
 "W funkcji: <b>%s</b>\n"
 "Powód: %s\n"
 
-#: robotiq.py:66
+#: robotiq.py:67
 msgid "Unhandled exception"
 msgstr "Nieuchwycony wyjątek"
 
-#: robotiq.py:67
+#: robotiq.py:68
 msgid "The <b>error</b> \"%s: %s\" that has just occured during program operation left following <b>traceback</b>:"
-msgstr "<b>Błąd</b> \"%s: %s\" który właśnie nastąpił w czasie działania programu, pozostawił następujący <b>ślad</b>:"
+msgstr ""
+"<b>Błąd</b> \"%s: %s\" który właśnie nastąpił w czasie działania programu, "
+"pozostawił następujący <b>ślad</b>:"
 
 #: ui/AboutDialog.py:53
 msgid "Release %d"
 msgstr "wydanie %d"
 
 #: ui/AboutDialog.py:54
-msgid "Copyright by Michał Fita © 2008-2009. Some rights reserved according to the license."
-msgstr "Copyright Michał Fita © 2008-2009. Wszelkie prawa zastrzeżone według z licencji."
+msgid "Copyright by Micha\305\202 Fita \302\251 2008-2009. Some rights reserved according to the license."
+msgstr ""
+"Copyright Michał Fita © 2008-2009. Wszelkie prawa zastrzeżone według z "
+"licencji."
 
 #: ui/AboutDialog.py:55
 msgid "This is the application for control the robot mechanics by processor board processing the commands."
-msgstr "To jest aplikacja do kontroli mechaniki robota poprzez płytę procesora przetwarzającą komendy."
+msgstr ""
+"To jest aplikacja do kontroli mechaniki robota poprzez płytę procesora "
+"przetwarzającą komendy."
 
 #: ui/AboutDialog.py:62
 msgid "Author of the icon: %s"
@@ -88,149 +210,174 @@ msgstr "Autor ikony: %s"
 msgid "translator-credits"
 msgstr "Michał Fita <michal.fita@gmail.com>"
 
-#: ui/ActionDispatcher.py:112
-#: ui/ActionDispatcher.py:128
-#: ui/ActionDispatcher.py:144
-#: ui/ActionManager.py:22
-#: ui/ActionManager.py:30
+#: ui/ActionDispatcher.py:112 ui/ActionDispatcher.py:128
+#: ui/ActionDispatcher.py:144 ui/ActionManager.py:22 ui/ActionManager.py:30
 #: ui/ActionManager.py:37
 msgid "New action has to have name string, other types are not allowed."
-msgstr "Nowa akcja musi posiadać nazwę w postaci ciągu, inne typy nie są dopuszczalne."
+msgstr ""
+"Nowa akcja musi posiadać nazwę w postaci ciągu, inne typy nie są "
+"dopuszczalne."
 
-#: ui/ActionDispatcher.py:114
-#: ui/ActionManager.py:24
+#: ui/ActionDispatcher.py:114 ui/ActionManager.py:24
 msgid "New action has to have callable object as second argument."
 msgstr "Nowa akcja musi posiadać wywoływalny obiekt jako drugi argument."
 
-#: ui/ActionDispatcher.py:146
-#: ui/ActionManager.py:32
-#: ui/ActionManager.py:39
+#: ui/ActionDispatcher.py:146 ui/ActionManager.py:32 ui/ActionManager.py:39
 msgid "No such action as \"%s\" found."
 msgstr "Akcji takiej jak \"%s\" nie znaleziono."
 
 #: ui/ActionDispatcher.py:164
 msgid "You failed, sucker! You cannot dispatch item, only add to and remove from action."
-msgstr "Porażka, frajerze! Nie możesz przesyłać elementu, tylko dodawać do i usuwać z akcji."
+msgstr ""
+"Porażka, frajerze! Nie możesz przesyłać elementu, tylko dodawać do i usuwać "
+"z akcji."
 
-#: ui/CommunicationUserInterface.py:43
+#: ui/CommandsUserInterface.py:43
+msgid "Configure commands bound to buttons."
+msgstr "Konfiguracja komend powiązanych z przyciskami."
+
+#: ui/CommandsUserInterface.py:43
+msgid "_Settings"
+msgstr "U_stawienia"
+
+#: ui/CommandsUserInterface.py:57
+msgid "Arms"
+msgstr "Ramiona"
+
+#: ui/CommandsUserInterface.py:57
+msgid "Hips"
+msgstr "Biodra"
+
+#: ui/CommandsUserInterface.py:57
+msgid "Legs"
+msgstr "Nogi"
+
+#: ui/CommandsUserInterface.py:84
+msgid "Commands configuration"
+msgstr "Konfiguracja komend"
+
+#: ui/CommunicationUserInterface.py:45
 msgid "Connect to the robot."
 msgstr "Połącz z robotem."
 
-#: ui/CommunicationUserInterface.py:43
+#: ui/CommunicationUserInterface.py:45
 msgid "_Connect"
 msgstr "Połą_cz"
 
-#: ui/CommunicationUserInterface.py:44
+#: ui/CommunicationUserInterface.py:46
 msgid "Disconnect the connection."
 msgstr "Rozłącz połączenie."
 
-#: ui/CommunicationUserInterface.py:44
+#: ui/CommunicationUserInterface.py:46
 msgid "_Disconnect"
 msgstr "Ro_złącz"
 
-#: ui/CommunicationUserInterface.py:45
+#: ui/CommunicationUserInterface.py:47
 msgid "Confi_guration"
 msgstr "Konfi_guracja"
 
-#: ui/CommunicationUserInterface.py:45
+#: ui/CommunicationUserInterface.py:47
 msgid "Configure all communication channels."
 msgstr "Skonfiguruj wszystkie kanały komunikacyjne."
 
-#: ui/CommunicationUserInterface.py:133
+#: ui/CommunicationUserInterface.py:158
 msgid "Connection configuration"
 msgstr "Konfiguracja połączenia"
 
-#: ui/CommunicationUserInterface.py:169
+#: ui/CommunicationUserInterface.py:204
 msgid "Disable"
 msgstr "Wyłącz"
 
-#: ui/CommunicationUserInterface.py:170
+#: ui/CommunicationUserInterface.py:206
 msgid "Enable"
 msgstr "Włącz"
 
-#: ui/CommunicationUserInterface.py:204
+#: ui/CommunicationUserInterface.py:260
 msgid "Parameter"
 msgstr "Parametr"
 
-#: ui/CommunicationUserInterface.py:210
+#: ui/CommunicationUserInterface.py:266
 msgid "Value"
 msgstr "Wartość"
 
-#: ui/ControlButtons.py:137
-#: ui/ControlButtons.py:959
+#: ui/ControlButtons.py:137 ui/ControlButtons.py:1190
 msgid "Command \"%s\" not implemented in drawing."
 msgstr "Komenda \"%s\" nie zaimplementowana w rysowaniu."
 
-#: ui/MainMenu.py:33
-#: ui/MainWindow.py:199
+#: ui/MainMenu.py:33 ui/MainWindow.py:203
 msgid "_File"
 msgstr "_Plik"
 
-#: ui/MainMenu.py:46
-#: ui/MainWindow.py:200
+#: ui/MainMenu.py:46 ui/MainWindow.py:204
 msgid "_Edit"
 msgstr "_Edycja"
 
-#: ui/MainWindow.py:98
+#: ui/MainWindow.py:101
 msgid "Placeholder"
 msgstr "Zaklepane miejsce"
 
-#: ui/MainWindow.py:201
+#: ui/MainWindow.py:205
 msgid "_Connection"
 msgstr "Połą_czenie"
 
-#: ui/MainWindow.py:202
+#: ui/MainWindow.py:206
+msgid "Co_mmands"
+msgstr "Ko_mendy"
+
+#: ui/MainWindow.py:207
 msgid "_Help"
 msgstr "P_omoc"
 
-#: ui/MainWindow.py:203
+#: ui/MainWindow.py:208
 msgid "Cu_t"
 msgstr "Wy_tnij"
 
-#: ui/MainWindow.py:203
+#: ui/MainWindow.py:208
 msgid "Put selected content into the clipboard and remove from context."
 msgstr "Umieść zaznaczoną teść w schowku i usuń ją z kontekstu."
 
-#: ui/MainWindow.py:204
+#: ui/MainWindow.py:209
 msgid "Copy seleted content into the clipboard."
 msgstr "Skopiuj zaznaczoną treść do schowka."
 
-#: ui/MainWindow.py:204
+#: ui/MainWindow.py:209
 msgid "_Copy"
 msgstr "_Kopiuj"
 
-#: ui/MainWindow.py:205
+#: ui/MainWindow.py:210
 msgid "Paste the content of clipboard in active context."
 msgstr "Wklej zawartość schowka w aktywnym kontekście."
 
-#: ui/MainWindow.py:205
+#: ui/MainWindow.py:210
 msgid "_Paste"
 msgstr "_Wklej"
 
-#: ui/MainWindow.py:206
+#: ui/MainWindow.py:211
 msgid "Select _All"
 msgstr "Z_aznacz wszystko"
 
-#: ui/MainWindow.py:206
+#: ui/MainWindow.py:211
 msgid "Select all in active context."
 msgstr "Zaznacz wszystko w aktyewym kontekście."
 
-#: ui/MainWindow.py:207
+#: ui/MainWindow.py:212
 msgid "Displays information about application and its license."
 msgstr "Wyświetla informacje o aplikacji i jej licencji."
 
-#: ui/MainWindow.py:207
+#: ui/MainWindow.py:212
 msgid "_About"
 msgstr "_O programie"
 
-#: ui/MainWindow.py:208
+#: ui/MainWindow.py:213
 msgid "Leave the application."
 msgstr "Opuść aplikację."
 
-#: ui/MainWindow.py:208
+#: ui/MainWindow.py:213
 msgid "_Quit"
 msgstr "_Wyjście"
 
+#~ msgid "Copyright by Michał Fita © 2008-2009. Some rights reserved according to the license."
+#~ msgstr "Copyright Michał Fita © 2008-2009. Wszelkie prawa zastrzeżone według z licencji."
+
 #~ msgid "Translation test"
 #~ msgstr "Test translacji"
-

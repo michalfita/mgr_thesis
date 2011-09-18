@@ -20,6 +20,11 @@
       <separator />
       <menuitem name="Setup" action="connection-setup" />
     </menu>
+    <menu name="CommandsMenu" action="commands-menu">
+      <placeholder name="CommandsPlaceholder" />
+      <separator />
+      <menuitem name="Settings" action="commands-settings" />
+    </menu>
     <menu name="HelpMenu" action="help-menu">
       <placeholder name="HelpPlaceholder" />
       <separator />

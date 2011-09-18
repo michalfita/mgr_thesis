@@ -26,6 +26,7 @@ from ui.CommandEntry import CommandEntry
 from ui.CommandOutput import CommandOutput
 from ui.ControlButtons import ControlButtons
 from ui.CommunicationUserInterface import CommunicationUserInterface
+from ui.CommandsUserInterface import CommandsUserInterface
 
 class MainWindow(Singleton, gtk.Window):
     """Main window implementation.
@@ -77,7 +78,9 @@ class MainWindow(Singleton, gtk.Window):
             warnings.simplefilter('ignore', gtk.Warning)
             self.main_menu = self.uimanager.get_widget('/MenuBar')
         #self.main_menu.show()
-        
+        self.uimanager.get_widget('/MenuBar/HelpMenu').set_right_justified(True)        
+
+
         self.toolbar = self.uimanager.get_widget('/Toolbar')
         #self.toolbar.show()
         
@@ -130,6 +133,7 @@ class MainWindow(Singleton, gtk.Window):
         self._prepare_signals()
 
         self._comm_ui = CommunicationUserInterface()
+        self._cmds_ui = CommandsUserInterface()
         return
     
     def show(self):
@@ -199,6 +203,7 @@ class MainWindow(Singleton, gtk.Window):
             ('file-menu', None, _('_File')),
             ('edit-menu', None, _('_Edit')),
             ('connection-menu', None, _('_Connection')),
+            ('commands-menu', None, _('Co_mmands')),
             ('help-menu', None, _('_Help')),
             ('clipboard-cut', gtk.STOCK_CUT, _('Cu_t'), '<control>x', _('Put selected content into the clipboard and remove from context.')),
             ('clipboard-copy', gtk.STOCK_COPY, _('_Copy'), '<control>c', _('Copy seleted content into the clipboard.')),

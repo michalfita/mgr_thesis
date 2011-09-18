@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-07-11 13:45+CEST\n"
+"POT-Creation-Date: 2011-09-18 16:11+CEST\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,54 +15,166 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: comm/SerialCommunicator.py:40
+#: comm/SerialCommunicator.py:43
 msgid "_Serial Communication"
 msgstr ""
 
-#: comm/SerialCommunicator.py:44
+#: comm/SerialCommunicator.py:47
 msgid "Use serial communication to interact with robot."
 msgstr ""
 
-#: comm/SerialCommunicator.py:69
+#: comm/SerialCommunicator.py:76
 msgid "Serial Port"
 msgstr ""
 
-#: comm/SerialCommunicator.py:74
+#: comm/SerialCommunicator.py:82
 msgid "Baud Rate"
 msgstr ""
 
-#: comm/SerialCommunicator.py:79
+#: comm/SerialCommunicator.py:88
 msgid "Number of data bits"
 msgstr ""
 
-#: comm/SerialCommunicator.py:85
+#: comm/SerialCommunicator.py:95
 msgid "Parity check mode"
 msgstr ""
 
-#: comm/SerialCommunicator.py:90
+#: comm/SerialCommunicator.py:101
 msgid "Stop bits"
 msgstr ""
 
-#: comm/SerialCommunicator.py:96
+#: comm/SerialCommunicator.py:108
 msgid "XON/XOFF flow control"
 msgstr ""
 
-#: comm/SerialCommunicator.py:101
+#: comm/SerialCommunicator.py:114
 msgid "RTS/CTS flow control"
 msgstr ""
 
-#: robotiq.py:60
+#: misc/Commands.py:42
+msgid "Press Control Up"
+msgstr ""
+
+#: misc/Commands.py:43 misc/Commands.py:47
+msgid "Release Control Up"
+msgstr ""
+
+#: misc/Commands.py:44
+msgid "Press Control Down"
+msgstr ""
+
+#: misc/Commands.py:45
+msgid "Release Control Down"
+msgstr ""
+
+#: misc/Commands.py:46
+msgid "Press Control Left"
+msgstr ""
+
+#: misc/Commands.py:48
+msgid "Press Control Right"
+msgstr ""
+
+#: misc/Commands.py:49
+msgid "Release Control Right"
+msgstr ""
+
+#: misc/Commands.py:50
+msgid "Press Control Stop"
+msgstr ""
+
+#: misc/Commands.py:51
+msgid "Release Control Stop"
+msgstr ""
+
+#: misc/Commands.py:52
+msgid "Press Control Right Arm Up"
+msgstr ""
+
+#: misc/Commands.py:53
+msgid "Release Control Right Arm Up"
+msgstr ""
+
+#: misc/Commands.py:54
+msgid "Press Control Right Arm Down"
+msgstr ""
+
+#: misc/Commands.py:55
+msgid "Release Control Right Arm Down"
+msgstr ""
+
+#: misc/Commands.py:56
+msgid "Press Control Right Arm In"
+msgstr ""
+
+#: misc/Commands.py:57
+msgid "Release Control Right Arm In"
+msgstr ""
+
+#: misc/Commands.py:58
+msgid "Press Control Right Arm Out"
+msgstr ""
+
+#: misc/Commands.py:59
+msgid "Release Control Right Arm Out"
+msgstr ""
+
+#: misc/Commands.py:60
+msgid "Press Control Tilt Right"
+msgstr ""
+
+#: misc/Commands.py:61 misc/Commands.py:71
+msgid "Release Control Tilt Right"
+msgstr ""
+
+#: misc/Commands.py:62
+msgid "Press Control Left Arm Up"
+msgstr ""
+
+#: misc/Commands.py:63
+msgid "Release Control Left Arm Up"
+msgstr ""
+
+#: misc/Commands.py:64
+msgid "Press Control Left Arm Down"
+msgstr ""
+
+#: misc/Commands.py:65
+msgid "Release Control Left Arm Down"
+msgstr ""
+
+#: misc/Commands.py:66
+msgid "Press Control Left Arm In"
+msgstr ""
+
+#: misc/Commands.py:67
+msgid "Release Control Left Arm In"
+msgstr ""
+
+#: misc/Commands.py:68
+msgid "Press Control Left Arm Out"
+msgstr ""
+
+#: misc/Commands.py:69
+msgid "Release Control Left Arm Out"
+msgstr ""
+
+#: misc/Commands.py:70
+msgid "Press Control Tilt Left"
+msgstr ""
+
+#: robotiq.py:61
 msgid ""
 "File: %s, Line: %d,\n"
 "In function: <b>%s</b>\n"
 "Cause: %s\n"
 msgstr ""
 
-#: robotiq.py:66
+#: robotiq.py:67
 msgid "Unhandled exception"
 msgstr ""
 
-#: robotiq.py:67
+#: robotiq.py:68
 msgid "The <b>error</b> \"%s: %s\" that has just occured during program operation left following <b>traceback</b>:"
 msgstr ""
 
@@ -104,119 +216,147 @@ msgstr ""
 msgid "You failed, sucker! You cannot dispatch item, only add to and remove from action."
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:43
+#: ui/CommandsUserInterface.py:43
+msgid "Configure commands bound to buttons."
+msgstr ""
+
+#: ui/CommandsUserInterface.py:43
+msgid "_Settings"
+msgstr ""
+
+#: ui/CommandsUserInterface.py:57
+msgid "Arms"
+msgstr ""
+
+#: ui/CommandsUserInterface.py:57
+msgid "Hips"
+msgstr ""
+
+#: ui/CommandsUserInterface.py:57
+msgid "Legs"
+msgstr ""
+
+#: ui/CommandsUserInterface.py:84
+msgid "Commands configuration"
+msgstr ""
+
+#: ui/CommunicationUserInterface.py:45
 msgid "Connect to the robot."
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:43
+#: ui/CommunicationUserInterface.py:45
 msgid "_Connect"
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:44
+#: ui/CommunicationUserInterface.py:46
 msgid "Disconnect the connection."
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:44
+#: ui/CommunicationUserInterface.py:46
 msgid "_Disconnect"
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:45
+#: ui/CommunicationUserInterface.py:47
 msgid "Confi_guration"
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:45
+#: ui/CommunicationUserInterface.py:47
 msgid "Configure all communication channels."
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:133
+#: ui/CommunicationUserInterface.py:158
 msgid "Connection configuration"
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:169
+#: ui/CommunicationUserInterface.py:204
 msgid "Disable"
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:170
+#: ui/CommunicationUserInterface.py:206
 msgid "Enable"
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:204
+#: ui/CommunicationUserInterface.py:260
 msgid "Parameter"
 msgstr ""
 
-#: ui/CommunicationUserInterface.py:210
+#: ui/CommunicationUserInterface.py:266
 msgid "Value"
 msgstr ""
 
-#: ui/ControlButtons.py:137 ui/ControlButtons.py:959
+#: ui/ControlButtons.py:137 ui/ControlButtons.py:1190
 msgid "Command \"%s\" not implemented in drawing."
 msgstr ""
 
-#: ui/MainMenu.py:33 ui/MainWindow.py:199
+#: ui/MainMenu.py:33 ui/MainWindow.py:203
 msgid "_File"
 msgstr ""
 
-#: ui/MainMenu.py:46 ui/MainWindow.py:200
+#: ui/MainMenu.py:46 ui/MainWindow.py:204
 msgid "_Edit"
 msgstr ""
 
-#: ui/MainWindow.py:98
+#: ui/MainWindow.py:101
 msgid "Placeholder"
 msgstr ""
 
-#: ui/MainWindow.py:201
+#: ui/MainWindow.py:205
 msgid "_Connection"
 msgstr ""
 
-#: ui/MainWindow.py:202
+#: ui/MainWindow.py:206
+msgid "Co_mmands"
+msgstr ""
+
+#: ui/MainWindow.py:207
 msgid "_Help"
 msgstr ""
 
-#: ui/MainWindow.py:203
+#: ui/MainWindow.py:208
 msgid "Cu_t"
 msgstr ""
 
-#: ui/MainWindow.py:203
+#: ui/MainWindow.py:208
 msgid "Put selected content into the clipboard and remove from context."
 msgstr ""
 
-#: ui/MainWindow.py:204
+#: ui/MainWindow.py:209
 msgid "Copy seleted content into the clipboard."
 msgstr ""
 
-#: ui/MainWindow.py:204
+#: ui/MainWindow.py:209
 msgid "_Copy"
 msgstr ""
 
-#: ui/MainWindow.py:205
+#: ui/MainWindow.py:210
 msgid "Paste the content of clipboard in active context."
 msgstr ""
 
-#: ui/MainWindow.py:205
+#: ui/MainWindow.py:210
 msgid "_Paste"
 msgstr ""
 
-#: ui/MainWindow.py:206
+#: ui/MainWindow.py:211
 msgid "Select _All"
 msgstr ""
 
-#: ui/MainWindow.py:206
+#: ui/MainWindow.py:211
 msgid "Select all in active context."
 msgstr ""
 
-#: ui/MainWindow.py:207
+#: ui/MainWindow.py:212
 msgid "Displays information about application and its license."
 msgstr ""
 
-#: ui/MainWindow.py:207
+#: ui/MainWindow.py:212
 msgid "_About"
 msgstr ""
 
-#: ui/MainWindow.py:208
+#: ui/MainWindow.py:213
 msgid "Leave the application."
 msgstr ""
 
-#: ui/MainWindow.py:208
+#: ui/MainWindow.py:213
 msgid "_Quit"
 msgstr ""
 

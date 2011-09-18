@@ -60,6 +60,7 @@ class SerialCommunicator(object):
                 for n,p in parameters.items():
                     if isinstance(p, dict):
                       p = p['value']
+                    print "serial param '", n, "' = ", str(p)
                     setattr(self.__serial, n, p)
                     setattr(persistent.serialcommunicator, n, p)
             self.__state != 'disconnected'
@@ -154,7 +155,7 @@ class SerialCommunicator(object):
 
     def write(self, data):
         if self.__state == 'connected':
-            self.__serial.write(data+'\r\n')
+            self.__serial.write(data) #was '\r\n'
             print "write('",data,"')"
 
     def __thread_start(self):
@@ -163,7 +164,7 @@ class SerialCommunicator(object):
         #self.__thread.daemon = True
         #self.__thread.start()
         #gobject.idle_add(self.__idle_write)
-        glib.idle_add(self.__idle_write)
+        glib.idle_add(self.__idle_write, priority=gobject.PRIORITY_DEFAULT_IDLE+1)
     
     def __thread_stop(self):
         self.__thread_enabled = False
@@ -174,6 +175,7 @@ class SerialCommunicator(object):
             action_dispatcher = ActionDispatcher()
             data = self.__serial.read(4096)
             gtk.gdk.threads_enter()
+            print "read('", data, "')"
             action_dispatcher['remote-input-data'](data)
             gtk.gdk.threads_leave()
         return self.__thread_enabled # False

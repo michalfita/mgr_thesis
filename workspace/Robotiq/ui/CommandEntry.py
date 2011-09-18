@@ -10,12 +10,14 @@ import traceback
 import sys
 import os.path
 import gettext
+import logging
 from ui.ActionDispatcher import ActionDispatcher
 
 class CommandEntry(gtk.ComboBoxEntry):
     """Class for command entry combo box holding history of commands."""
     def __init__(self, provider, output, history_length = 10):
         super(CommandEntry, self).__init__(model = None, column = -1)
+        self.__log = logging.getLogger('robotiq.command_entry')
         
         self.history_length = history_length
         self.provider = provider
@@ -63,7 +65,7 @@ class CommandEntry(gtk.ComboBoxEntry):
         if entry_text is not None and len(entry_text) > 0:
             for row in model:
                 if row[0] == entry_text:
-                    print 'Debug', row.iter
+                    self.__log.debug('Debug %s' % str(row.iter))
                     model.move_before(row.iter, model[0].iter)
                     break
             else:

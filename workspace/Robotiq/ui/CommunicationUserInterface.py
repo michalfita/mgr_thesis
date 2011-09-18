@@ -4,13 +4,14 @@
 import gtk
 import gobject
 import gettext
+import logging
 from ui.ActionDispatcher import ActionDispatcher
 from misc.Singleton import Singleton
 from comm.CommunicationManager import CommunicationManager
 
 """@package ui.CommunicationUserInterface
 
-This module contains the class responsible for common GUI elements releated
+This module contains the class responsible for common GUI elements related
 to connection in the application.
 """
 
@@ -23,6 +24,7 @@ class CommunicationUserInterface(Singleton):
     """
     def __init__(self):
         super(self.__class__, self).__init__()
+        self.__log = logging.getLogger('robotiq.comm_ui')
         self.__comm_mgr = CommunicationManager()
         self.__feed_uimanager()
         self.__add_channels()
@@ -32,7 +34,7 @@ class CommunicationUserInterface(Singleton):
         action_dispatcher['connection-setup'] += self.setup_dialog
         
     def __feed_uimanager(self):
-        print "$Debug feed..."
+        self.__log.debug("Called __feed_uimanager()")
         from ui.MainWindow import MainWindow
         main_window = MainWindow()
         self.__uimanager = main_window.uimanager
@@ -85,7 +87,7 @@ class CommunicationUserInterface(Singleton):
     def __update_uimanager(self):
         """
         This private method updates the uimanager and controls.
-        @todo GUI has to be handled in higher level class with commonized
+        @todo GUI has to be handled in higher level class with commonlized
               interface for adding protocols similarly as plugins.
         """
         from ui.MainWindow import MainWindow
@@ -106,7 +108,7 @@ class CommunicationUserInterface(Singleton):
         return 
     
     def __on_change(self, current, user_param = None):
-        print "Selected:", current
+        self.__log.debug("__on_change(): Selected: %s" % str(current))
         #TODO: Need finish, without additional dummy communicator this is impossible
     
     def get_tabs(self):
@@ -150,6 +152,7 @@ class CommunicationUserInterface(Singleton):
         
 class SetupDialog(gtk.Dialog):
     def __init__(self):
+        self.__log = logging.getLogger('robotiq.comm_ui.setup_dlg')
         from ui.MainWindow import MainWindow
         main_window = MainWindow()
         super(self.__class__, self).__init__(_('Connection configuration'), main_window, gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT, None)
@@ -223,7 +226,7 @@ class SetupDialog(gtk.Dialog):
         if iter is not None and model is not None:
             value = model.get_value(iter, 1)
             self.__tabs[self.__current_page]['parameters'][param]['value'] = value
-            print 'New value set to', value
+            self.__log.debug('New value set to %s.' % str(value))
         
     def __on_cancel_clicked(self, button, param = None):
         self.response(gtk.RESPONSE_CANCEL)
@@ -236,8 +239,7 @@ class SetupDialog(gtk.Dialog):
         self.destroy()
     
     def __on_switch_page(self, notebook, page, page_num, user_param = None):
-        print "Page:",page
-        print "Page num:", page_num
+        self.__log.debug('__on_switch_page(): Page: %s; Page number: %d' % (str(page), page_num))
         self.__current_page = page_num
         
     def garbage(self):
@@ -253,7 +255,7 @@ class SetupDialog(gtk.Dialog):
                       details['position'],
                       [name, 'A', options]
                     )
-                print "@Debug loop", name, details['position'] 
+                self.__log.debug('@Debug loop %s %s' % (str(name), str(details['position']))) 
             treeview = gtk.TreeView(liststore)
             treeview.append_column(gtk.TreeViewColumn(_('Parameter'), gtk.CellRendererText(), text = 0))
             value_renderer = gtk.CellRendererCombo()

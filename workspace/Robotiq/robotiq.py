@@ -36,6 +36,7 @@ import traceback
 import sys
 import os.path
 import gettext
+import logging
 from misc.Singleton import Singleton
 from ui.MainWindow import MainWindow
 from ui.ActionDispatcher import ActionDispatcher
@@ -76,6 +77,10 @@ class Application(Singleton):
     #          Singleton pattern such call should return the existing instance.
     def __init__(self):
         super(Application, self).__init__()
+        self.__log = logging.getLogger('robotiq')
+        sys.path.append(os.path.dirname(os.path.abspath(sys.argv[0])))
+        self.__log.setLevel(logging.DEBUG)
+        self.__log.addHandler(logging.StreamHandler())
         translation = gettext.translation('robotiq', os.path.join('.','locale'), ['pl', 'en'], fallback = False, codeset = 'utf-8')
         translation.install(True)
         action_dispatcher = ActionDispatcher()

@@ -63,7 +63,7 @@ class PersistentContainer(Singleton):
         try:
             data = self.__cfgpr.get(section, option)
         except NoOptionError:
-            data = None
+            data = default
         else:
             if type is not None and inspect.isclass(type):
                 return type(data)

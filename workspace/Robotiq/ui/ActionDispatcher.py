@@ -5,7 +5,7 @@
 Event handlers dispatcher module.
 
 This module contains classes related to dispatching event handlers, it is
-somehow implementaiton of the observer design pattern.
+somehow implementation of the observer design pattern.
 """
 
 import pygtk
@@ -98,7 +98,7 @@ class ActionDispatcher(Singleton):
     functions or other callable objects.
     
     This frees programmer from remember which methods have to be called in case
-    of particural event. It additionally simplifies extendability of the code by
+    of particuar event. It additionally simplifies extendability of the code by
     limiting additions of new handlers to locally used ActionDispatcher instance.
     
     \note This is a singleton.
@@ -172,7 +172,7 @@ class ActionDispatcher(Singleton):
         sequences.
         @see get_delegate
         @param name Name of the ActionDeletagte instance in the collection.
-        @return Instance of ActionDelegate refered by \p name.
+        @return Instance of ActionDelegate referred by \p name.
         """
         return self.get_delegate(name)
         
@@ -180,7 +180,7 @@ class ActionDispatcher(Singleton):
         """Remove ActionDelegate instance.
         
         This method removes instance of ActionDelegate class hold in the
-        collection under \p name, but it is indirectly used by \p [key] operaion
+        collection under \p name, but it is indirectly used by \p [key] operation
         on Python sequences.
         @see remove_delegate
         @param name Name of the ActionDeletagte instance in the collection.
