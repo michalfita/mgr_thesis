@@ -97,6 +97,20 @@
 \newcommand{\agh@s}{\@tabacckludge's} %{\char182}
 \newcommand{\agh@z}{\.z}              %{\char191}
 \newcommand{\agh@x}{\@tabacckludge'z} %{\char188}
+\@ifpackageloaded{ucs}%
+{%
+  \PrerenderUnicode{\k a}%
+  \PrerenderUnicode{\@tabacckludge'c}%
+  \PrerenderUnicode{\k e}%
+  \PrerenderUnicode{\l}%
+  \PrerenderUnicode{\@tabacckludge'o}%
+  \PrerenderUnicode{\@tabacckludge's}%
+  \PrerenderUnicode{\.z}%
+  \PrerenderUnicode{\@tabacckludge'z}%
+  \PreloadUnicodePage{1}%
+}
+{%
+}
 
 % Nowe komendy
 %\renewcommand{\title}[1]{\def\agh@title{#1}}
@@ -216,7 +230,7 @@
   		\noindent\rule{\textwidth}{1pt}\\[-11.55pt]
   		\noindent\rule{\textwidth}{.4pt}\par
   		\begin{tabular}{c}
-  			\large Kraków \@date
+  			\large Krak{\agh@o}w \@date
   		\end{tabular}
       
     \end{center}

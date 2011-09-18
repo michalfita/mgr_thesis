@@ -15,6 +15,7 @@
 \usepackage{dingbat}
 
 \usepackage{afterpage}
+\usepackage{import}
 
 %\usepackage[pdftex,man,opt]{wmstitle}
 \usepackage[pdftex,type=mgr,gender=male]{aghtitle}
@@ -69,13 +70,15 @@
     \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
 % N.B.: floatpagefraction MUST be less than topfraction !!
     \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+%\usepackage{doxygen}
 \end_preamble
-\options wide,pdftex
+\options wide,pdftex,combine
 \use_default_options false
 \maintain_unincluded_children false
 \language polish
 \language_package default
-\inputencoding auto
+\inputencoding utf8x
 \fontencoding global
 \font_roman default
 \font_sans default
@@ -91,7 +94,7 @@
 \default_output_format default
 \output_sync 0
 \bibtex_command default
-\index_command default
+\index_command makeindex
 \paperfontsize 11
 \spacing single
 \use_hyperref true
@@ -128,6 +131,26 @@
 \filename_suffix 0
 \color #aaff7f
 \end_branch
+\branch Veroniq-Doxygen
+\selected 0
+\filename_suffix 0
+\color #ffaaff
+\end_branch
+\branch Historia
+\selected 0
+\filename_suffix 0
+\color #aaffff
+\end_branch
+\branch Interfejsy
+\selected 0
+\filename_suffix 0
+\color #aaffff
+\end_branch
+\branch Języki-programowania
+\selected 0
+\filename_suffix 0
+\color #aaffff
+\end_branch
 \index Indeks
 \shortcut idx
 \color #008000
@@ -136,7 +159,7 @@
 \topmargin 2.5cm
 \rightmargin 2.1cm
 \bottommargin 2.5cm
-\headsep 0.2cm
+\headsep 0.3cm
 \footskip 0.6cm
 \secnumdepth 3
 \tocdepth 2
@@ -203,7 +226,7 @@ Wstęp
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Słowo 
@@ -417,15 +440,100 @@ e nie przetrwały rewolucji francuskiej) oraz mechaniczną kaczkę.
 \end_layout
 
 \begin_layout Standard
-Przedmiotem pracy jest sterownik mikroprocesorowy oraz zestaw oprogramowania
- dla tegoż sterownika oraz współpracującego komputera PC.
- Platformą mechaniczną jest robot zabawka Robo--Actor, który ma służyć do
- demonstracji działania układu i oprogramowania stworzonych w ramach tej
- pracy.
- W kolejnych rozdziałach zostały opisane tematy teoretyczne oraz zadania
- realizowane w celu konstrukcji sterownika oraz stworzenia oprogramowania
- zarówno sterownika mikroprocesorowego oraz systemu kontrolnego dla komputera
- PC.
+Postęp w rozwoju technologii cyfrowej odbywa się na wielu płaszczyznach,
+ najbardziej widocznym rynku urządzeń konsumenckich, takich jak telefony
+ komórkowe, również w motoryzacji, przemyśle, szeroko rozumianym biznesie.
+ Każdy z tych obszarów cechuje szczególny dla niego sposób wykorzystywania
+ mocy obliczeniowych procesorów do osiągania zamierzeń.
+ W przypadku rynku konsumenckiego jest to odbiór wrażeń estetycznych lub
+ użytkowych płynących z wykorzystania urządzenia, przy czym rozumiany pośrednio,
+ jak oglądanie filmów, bądź bezpośrednio, jak obsłyuga aplikacji.
+ Motoryzacja od pewnego czasu rozwija technologie cyfrowe dwutorow, jeden
+ pokrywa się z wcześniej wspomnianą estetyką i użytecznością, drugi rozwija
+ metody cyfrowego wspomagania pracy mechaniki pojazdu i wpływu na bezpieczeństwo
+ podróży.
+ Przemysł wspiera techniką cyfrową zarówno logistykę, jak też proces produkcyjny
+ -- od składania urządzeń przez roboty do kontroli jakości.
+ W biznesie technologia pokrywa wspomniane obszary, dodając obsługę finansowo-ks
+ięgową, wpieranie decyzji, komunikację.
+\end_layout
+
+\begin_layout Standard
+W każdym z tych obszarów elementarnie postrzegane technologie różnią się
+ między sobą.
+ Proces rozwoju techniki cyfrowej na jej bazowym poziomie, czyli konstrukcji
+ procesorów jest szeroko zróżnicowany.
+ A ponieważ różnią się ich zastosowania, metody konstrukcji i narzędzia
+ stosowane do ich realizacji, informatyka nierozwija się jednotorowo i posiada
+ wiele gałęzi potomnych, które czynią z nich interdyscyplinarne kierunki
+ rozwoju.
+ Są nimi automatyka, robotyka, mechatronika, a dziedziny takie jak fizyka,
+ są od samych początków ściśle z informatyką związane.
+ Każda dyscyplina korzysta z informatyki inaczej, przeplata z wiedzą z innych
+ dziedziń, odnosi różne efekty.
+ Wiele z dokonań powstałych w laboratoriach w celach typowo naukowych, trafia
+ po pewnym czasie pod dachy zwykłych obywateli.
+ Najlepszym przykładem jest wynalazek Tima Bernersa Lee w dziedzinie Internetu
+ i przeglądania zasobów wiedzy.
+\end_layout
+
+\begin_layout Standard
+Bardzo niewiele osób jest świadomych faktu, że w urządzeniach towarzyszących
+ dziś w codziennym życiu, w sprzęcie AGD, RTV, w samochodach, działają aplikacje
+ stworzone przez -- często bardzo duże -- zespoły programistów.
+ Kto patrząc na nowiutki telewizor na półce w sklepie zastanawia się ile
+ linii kodu napisano, by realizował on swoje funkcje? Dla przeciętnego Kowalskie
+go, taki produkt jest twórcą anonimowego inżyniera.
+ Świadomość obecności elektroniki wzrosła w ciągu ostatnich lat, głównie
+ z przyczyn pragmatycznych i ekonomicznych -- awarie częściej zdarzają się
+ w częściach elektronicznych z racji wzrostu ich ilości.
+ Poza samymi inżynierami twórcami, brak jest świadomości obecności programów
+ w takich urządzeniach.
+\end_layout
+
+\begin_layout Standard
+Brak jest dokładnych danych ilościowych porównujących ilość aplikacji powstający
+ch na urządzenia, lecz w branży mówi się, że porównanie ilości zatrudnionych
+ programistów pokazuje, że do programowania urządzeń zatrudnia się więcej
+ specjalistów, niż dla tworzenia aplikacji biznesownych, lub gotowego oprogramow
+ania w pudełkach (włączając w to gry komputerowe).
+\end_layout
+
+\begin_layout Standard
+Przedmiotem tej pracy projekt i wykonanie systemu sterowania robotem złożonego
+ ze sterownika mikroprocesorowego i oprogramowania sterującego działającego
+ na komputrze PC.
+ Platformą mechaniczną jest robot zabawka Roboactor, z której usunięto oryginaln
+ą elektronikę pozostawiając tylko elementy mechaniczne i elektromechaniczne.
+ Ma to służyć demonstracji działania układu i oprogramowania stworzonych
+ w ramach tej pracy.
+ W kolejnych rozdziałach zostały opisane tematy teoretyczne oraz kolejne
+ zadania realizowane w celu skonstruowania sterownika oraz stworzenia oprogramow
+ania zarówno sterownika mikroprocesorowego oraz aplikacji kontrolnej dla
+ komputera PC.
+\end_layout
+
+\begin_layout Standard
+Wstępne założenia dotyczące realizacji tego tematu zawierały kilka elementów,
+ które musiały zostać zredukowane w ostatecznym projekcie.
+ Spowodowane to było ograniczeniami finansowymi i faktem realizacji całości
+ przez jedną osobę.
+ Całkowita ilość pracy włożona w realizację prezentowanego osiągnięcia była
+ istotnie duża, w porównaniu do przyjętego założenia szybkiej realizacji
+ podstawowych funkcji.
+ .
+ Główne elementy, które nie pojawiły się w ostatecznej wersji projektu to
+ wizja w oparciu o mikrokamerę cyfrową oraz komunikacja w oparciu o IEEE
+ 802.11 (czyli potocznie 
+\begin_inset Quotes pld
+\end_inset
+
+Wi-Fi
+\begin_inset Quotes prd
+\end_inset
+
+).
+ Komunikacja została w zrealizowana w oparciu o technologię Bluetooth.
 \end_layout
 
 \begin_layout Standard
@@ -434,26 +542,132 @@ Część pisemna pracy została podzielona na dwie logiczne części, z której
 ii stosowanych w realizacji projektu, a część druga opisuje praktyczną realizacj
 ę wszystkich elementów z opisem kroków prowadzących do wyboru stosowanych
  rozwiązań.
- Wśród opisywanych tematów znajdują się przede wszystkim systemy wbudowane,
- systemy operacyjne czasu rzeczywistego, radiowa transmisja danych, sterowanie
- silników elektrycznych oraz przetwarzanie obrazu.
+ Wśród opisywanych tematów znajdują się (w nawiasie numer rozdziału): 
+\begin_inset Branch Interfejsy
+status collapsed
+
+\begin_layout Standard
+interfejsy 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap:Interfejsy"
+
+\end_inset
+
+, 
+\end_layout
+
+\end_inset
+
+mikrokontrolery 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap:Mikrokontrolery"
+
+\end_inset
+
+, 
+\begin_inset Branch Języki-programowania
+status collapsed
+
+\begin_layout Standard
+języki programowania 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap:Języki-programowania"
+
+\end_inset
+
+, 
+\end_layout
+
+\end_inset
+
+silniki elektryczne 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "cha:Silniki-elektryczne"
+
+\end_inset
+
+, narzędzia 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap:Narzędzia-i-moduły"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+systemy wbudowane, systemy operacyjne czasu rzeczywistego, radiowa transmisja
+ danych
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Układ sterownika mikroprocesorowego został zrealizowany na platformie AVR32
- firmy Atmel.
- Jest to rodzina 32 bitowych mikrokontrolerów występująca w dwóch głównych
- odmianach, lekkiej odmianie UC3 dla mocno zintegrowanych rozwiązań, oraz
- AP7 -- odmianie wysokowydajnych mikrokontrolerów dla zaawansowanych aplikacji
- przenośnych, mogący między innymi pracować pod kontrolą systemu Linux.
- Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
- producentów jest bardzo silne wsparcie dla amatorów oraz środowiska otwartego
- oprogramowania.
+Opis części praktycznej obejmuje przygotowanie i rozruch elementów składowych
+ elektronicznej części systemu 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap:Narzędzia-i-moduły"
+
+\end_inset
+
+ oraz uruchomienie i konfigurację narzędzi potrzebnych do pracy 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap:Przygotowanie-środowiska-pracy"
+
+\end_inset
+
+.
+ Następnie opisane są kolejne kroki w projektowaniu i konstrukcji sterowania
+ silników elektrycznych 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap:Sterowanie-elektromechaniki"
+
+\end_inset
+
+.
+ W ostatniej kolejności znajduje się opis kluczowych elementów stworzonego
+ oprogramowania 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap:Realizacja-oprogramowania"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+W podsumowaniu (
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "chap:Podsumowanie"
+
+\end_inset
+
+) zawarto opis osiągniętych rezultatów, konkluzje wynikające z napotkanych
+ w trakcie realizacji trudności oraz możliości dalszego rozwoju projektu
+ i jego wykorzystania w celach edukacyjnych.
 \end_layout
 
 \begin_layout Part
 Wprowadzenie teoretyczne
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch Historia
+status collapsed
 
 \begin_layout Chapter
 Historia
@@ -516,7 +730,64 @@ Do interesujących legend ze średniowiecza dotyczących zapewniania sobie
  Wedle legendy Golem miał powstać w Pradze, w celu ochrony tamtejszej społecznoś
 ci żydowskiej i pomocy w ciężkich pracach fizycznych.
  Ponieważ Golem miał być pozbawiony rozumu i wykonywał tylko proste polecenia,
- został przez rabina unieruchomiony, po tym gdy zaczął siać szkody.
+ został przeSłowo 
+\begin_inset Quotes eld
+\end_inset
+
+robot
+\begin_inset Quotes erd
+\end_inset
+
+ zostało po raz pierwszy użyte w sztuce 
+\begin_inset Quotes eld
+\end_inset
+
+R.U.R.
+\begin_inset Quotes erd
+\end_inset
+
+ (cz.
+ 
+\emph on
+Rosumovi Uměli Roboti
+\emph default
+ - Roboty Uniwersalne Rossuma), której autorem jest Karel Čapek - jeden
+ z najbardziej uznanych pisarzy czeskich.
+ Pierwotnie słowo to odnosiło się do istot żywych, sztucznie produkowanej
+ uproszczonej wersji ludzi, jednakże dziś określa urządzenia mechaniczne.
+ Termin 
+\begin_inset Quotes eld
+\end_inset
+
+robotyka
+\begin_inset Quotes erd
+\end_inset
+
+ użył poraz pierwszy znany autor literatury fantastycznej Isaac Asimov w
+ roku 1942 roku w opowiadaniu 
+\begin_inset Quotes eld
+\end_inset
+
+Zabawa w berka
+\begin_inset Quotes erd
+\end_inset
+
+ (ang.
+ 
+\shape italic
+\lang british
+
+\begin_inset Quotes eld
+\end_inset
+
+Runaround
+\begin_inset Quotes erd
+\end_inset
+
+
+\shape default
+\lang polish
+).z rabina unieruchomiony, po tym gdy zaczął siać szkody.
 \end_layout
 
 \begin_layout Standard
@@ -684,6 +955,67 @@ Najbardziej istotne wydają się być skonstrułowanie w 1947 pierwszego tranzys
 \end_layout
 
 \begin_layout Standard
+Słowo 
+\begin_inset Quotes eld
+\end_inset
+
+robot
+\begin_inset Quotes erd
+\end_inset
+
+ zostało po raz pierwszy użyte w sztuce 
+\begin_inset Quotes eld
+\end_inset
+
+R.U.R.
+\begin_inset Quotes erd
+\end_inset
+
+ (cz.
+ 
+\emph on
+Rosumovi Uměli Roboti
+\emph default
+ - Roboty Uniwersalne Rossuma), której autorem jest Karel Čapek - jeden
+ z najbardziej uznanych pisarzy czeskich.
+ Pierwotnie słowo to odnosiło się do istot żywych, sztucznie produkowanej
+ uproszczonej wersji ludzi, jednakże dziś określa urządzenia mechaniczne.
+ Termin 
+\begin_inset Quotes eld
+\end_inset
+
+robotyka
+\begin_inset Quotes erd
+\end_inset
+
+ użył poraz pierwszy znany autor literatury fantastycznej Isaac Asimov w
+ roku 1942 roku w opowiadaniu 
+\begin_inset Quotes eld
+\end_inset
+
+Zabawa w berka
+\begin_inset Quotes erd
+\end_inset
+
+ (ang.
+ 
+\shape italic
+\lang british
+
+\begin_inset Quotes eld
+\end_inset
+
+Runaround
+\begin_inset Quotes erd
+\end_inset
+
+
+\shape default
+\lang polish
+).
+\end_layout
+
+\begin_layout Standard
 Pierwszy robot kroczący na dwóch nogach o nazwie WAP-1 zbudował Ichiro Kato
  w roku 1969, a piętnaście lat później buduje on robota czytającego nuty
  i grającego na organach elektrycznych.
@@ -693,7 +1025,19 @@ Pierwszy robot kroczący na dwóch nogach o nazwie WAP-1 zbudował Ichiro Kato
  często na bardziej praktycznych zastosowaniach.
 \end_layout
 
+\end_inset
+
+
+\begin_inset Branch Interfejsy
+status collapsed
+
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Interfejsy"
+
+\end_inset
+
 Interfejsy
 \end_layout
 
@@ -1849,7 +2193,18 @@ cych sobie warstw, jak również współdziałanie pomiędzy niezależnymi podsy
  poprzez zdefiniowanie wspólnego interfejsu pomiędzy kontrolerem a hostem.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Mikrokontrolery"
+
+\end_inset
+
 Mikrokontrolery
 \end_layout
 
@@ -2249,9 +2604,10 @@ status open
 
 \begin_layout Plain Layout
 \noindent
+\align center
 \begin_inset Graphics
 	filename vector/mpc885-block-diagram.svg
-	lyxscale 20
+	lyxscale 80
 	width 15cm
 
 \end_inset
@@ -2533,7 +2889,7 @@ FPSLIC to połączenie rdzenia AVR z logiką programowalną FPGA w jednym układ
 AVR32
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:AVR32-serie"
+name "sub:AVR32-series"
 
 \end_inset
 
@@ -3414,9 +3770,16 @@ reference "sub:ARM-9"
 \end_inset
 
 ).
-\end_layout
+\begin_inset Branch Języki-programowania
+status collapsed
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Języki-programowania"
+
+\end_inset
+
 Języki programowania
 \end_layout
 
@@ -4001,12 +4364,8 @@ Od czasu PyCon 2009 projekt był powoli udoskonalany poprzez dodawanie funkcji
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Branch ASN.1
-status open
+status collapsed
 
 \begin_layout Section
 ASN.1
@@ -4256,7 +4615,7 @@ dupa jaś karuzela coś jeszcze trzeba tu wpisać...
 
 \begin_layout Standard
 \begin_inset Branch Lua
-status open
+status collapsed
 
 \begin_layout Section
 Lua
@@ -4360,6 +4719,11 @@ http://www.eluaproject.net/
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4585,7 +4949,7 @@ Komutator w silniku prądu stałego dostarcza energię do wirnika.
 
 \begin_layout Standard
 \begin_inset Float figure
-placement !h
+placement !tbh
 wide false
 sideways false
 status open
@@ -4596,7 +4960,7 @@ status open
 	filename vector/komutator.svg
 	lyxscale 50
 	width 90col%
-	BoundingBox 0bp 180bp 842bp 482bp
+	BoundingBox 0bp 230bp 842bp 482bp
 	clip
 
 \end_inset
@@ -4886,6 +5250,12 @@ Diody - głównie, gdy pozostają wyłączone - mają małą pojemność pomięd
 \end_layout
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Narzędzia-i-moduły"
+
+\end_inset
+
 Narzędzia i moduły
 \end_layout
 
@@ -5166,16 +5536,260 @@ Doxygen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+Doxygen to narzędzie do generowania dokumentacji dla programów w językach
+ C, C++, C#, Fortran, Java, Objective-C, PHP, Python, IDL, VHDL.
+ Może być uruchamiane pod kontrolą wielu systemów operacyjnych, w tym Mac
+ OS X i Windows.
+ Pierwsza wersja Doxygen powstała na bazie części kodu starszych wersji
+ DOC++; później kod Doxygena został przepisany od początku przez Dimitri
+ van Heesch'a.
+\end_layout
+
+\begin_layout Standard
+Doxygen służy do generacji referencyjnej dokumentacji.
+ Oczywiście, proces ten nie następuje zupełnie automatycznie na podstawie
+ samego kodu źródłowego.
+ Dokumentacja jest tworzone razem z kodem w postaci odpowiednio sformatowanych
+ komentarzy.
+ Dzięki temu możliwe jest utrzymywanie aktualnej wersji dokumentacji wraz
+ z kodem.
+ Doxygen pozwala na tworzenie odniesień do kodu, dzięki czemu czytelnik
+ może zapoznać się z fragmentem kodu powiązanym z czytanym fragmentem dokumentac
+ji.
+\end_layout
+
+\begin_layout Standard
+Wśród programistów Doxygen ma swoich silnych przeciwników i zwolenników.
+ Przeciwnicy zwracają uwagę na fakt, że samo zastosowanie Doxygena, nie
+ powoduje powstania przydatnej dokumentacji, ponieważ treść komentarzy ktoś
+ musi uzupełniać.
+ Część menadżerów uważa zaś, że mogą umyć ręce od problemu dokumentowania
+ kodu, jeżeli w projekcie stosowany jest Doxygen.
+ Prowadzi do do sytuacji, gdzie Doxygen jest uruchamiany, ale w efekcie
+ powstaje tylko coś na kształt spisu funkcji.
+\end_layout
+
+\begin_layout Standard
+Zwolennicy Doxygena zwracają uwagę, że prawidłowo przygotowane opisy są
+ pomocne w dalszym rozwoju kodu i przy poprawianiu błędów.
+ Format komentarzy Doxygen'a narzuca pewne wymagania co do sposobu komentowania
+ funkcji i innych elementów kodu programów.
+ Takie komentarze są czytelne również w samym kodzie dla czytającego go
+ programisty.
+\end_layout
+
+\begin_layout Standard
+Komentarz w formacie Doxygen'a składa się ze znacznika początku komentarza
+ branego pod uwagę przez Doxygen, oraz zestawu poleceń (pełny zestaw jest
+ bardzo bogaty) rozpoczyjnających się znakiem 
+\begin_inset Quotes pld
+\end_inset
+
+
+\backslash
+
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\shape slanted
+\lang british
+backslash
+\shape default
+\lang polish
+) lub 
+\begin_inset Quotes pld
+\end_inset
+
+@
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\shape slanted
+\lang british
+at-sign
+\shape default
+\lang polish
+).
+ Przykładowe komentarze w formacie Doxygen'a wyglądają następująco:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
 status open
 
 \begin_layout Plain Layout
-Stworzyć opis Doxygen'a
+
+/**  
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @file 
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @author Michał Fita <michal.fita@gmail.com>
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @version 1.0
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/// Message structure
+\end_layout
+
+\begin_layout Plain Layout
+
+struct message {
+\end_layout
+
+\begin_layout Plain Layout
+
+	long destination; /*< Destination address */
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/*!
+\end_layout
+
+\begin_layout Plain Layout
+
+ * 
+\backslash
+brief This function does nothing, it is just for an example.
+\end_layout
+
+\begin_layout Plain Layout
+
+ * 
+\backslash
+notice Not intended to by ever compiled.
+\end_layout
+
+\begin_layout Plain Layout
+
+ * 
+\backslash
+param d Some number.
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void do_nothing(int d)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Doxygen potrafi wygenerować dokumentację w formatach HTML i LaTeX, jak również
+ w MS HTML Help, RTF, man pages.
+ Proces odbywa się przez przefiltrowanie kodu źródłowego ze wskazanych katalogów
+ projektu, a następnie tłumaczenie wewnętrznego formatu na jeden z formatów
+ dokumentacji.
+ Przy czym struktura aplikacji, a nawet stos wywołań może być zachowywany
+ i prezentowany, np.
+ w formie graficznych wykresów zależności.
+\end_layout
+
+\begin_layout Subsection
+KiCad
+\end_layout
+
+\begin_layout Standard
+KiCad jest mocno rozpowszechnionym pakietem programów wspomagania projektowania
+ elektronicznego.
+ Główne aplikacje pakietu KiCad to:
+\end_layout
+
+\begin_layout Description
+eeschema kilka słów
+\end_layout
+
+\begin_layout Description
+pcbnew kilka słów
+\end_layout
+
+\begin_layout Description
+gerbview kilka słów
+\end_layout
+
+\begin_layout Standard
+Narzędzia te zostały użyte w projektowaniu modułów omówionych w podrozdziałach
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Moduł-sterowania-zasilaniem"
+
+\end_inset
+
+ oraz 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Moduł-sterowania-zasilaniem-2"
+
+\end_inset
+
+.
+ Są to narzędzia bardzo zaawansowane w rozwoju, funkcjonalnie wystarczające
+ do projektowania płytek drukowanych do urządzeń w skali profesjonalnej.
+ Opinie użytkowników na listcie dyskusyjnej wskazują, że tak się dzieje
+ w istocie.
+\end_layout
+
+\begin_layout Standard
+Największą wadą pakietu KiCad są niedopracowane i nieupożądkowane biblioteki
+ elementów.
+ Bardzo wielu użytkowników KiCad tworzy własne biblioteki zupełnie od podstaw.
+ Wynika to przeważnie z odmiennych oczekiwań co do standardów, jakie muszę
+ spełniać projekty wyprowadzeń układów (pól lutowniczych) do produkcji płytek
+ drukowanych.
 \end_layout
 
 \begin_layout Section
@@ -5734,6 +6348,12 @@ Realizacja praktyczna
 \end_layout
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Przygotowanie-środowiska-pracy"
+
+\end_inset
+
 Przygotowanie środowiska pracy
 \end_layout
 
@@ -6224,6 +6844,12 @@ brak
 \end_layout
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Rozruch-modułów"
+
+\end_inset
+
 Rozruch modułów
 \end_layout
 
@@ -6317,7 +6943,139 @@ RoboActor
 \end_layout
 
 \begin_layout Standard
-...
+\begin_inset Float figure
+placement !tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/roboactor-image.jpg
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Wygąd robota zabawki RoboActor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Podstawą mechaniczną robota omawianego w tej pracy jest zabawka o nazwie
+ RoboActor pozbawiona oryginalnej elektroniki umieszczonej na plecach pod
+ obudową, w miejscu widocznym na ryzunku
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Moduł-sterownika-II"
+
+\end_inset
+
+, gdzie umieszczony został sterownik silników.
+ W celu zapewnienia właściwego zasilania robota, oryginalne uchwyty na baterie
+ zostały zamienione na elementy własnej konstrukcji, w których umieszczono
+ akumulatory żelowe.
+\end_layout
+
+\begin_layout Standard
+Do każdej z nóg można było wstawić dwie baterie typu R20 o napięciu 1,5
+\begin_inset space ~
+\end_inset
+
+V każda.
+ Akumulatory zastąpujące baterie mają napięcie 6
+\begin_inset space ~
+\end_inset
+
+V i pojemność 0,6
+\begin_inset space ~
+\end_inset
+
+Ah.
+ Pierwonie zostały połączone równolegle w celu zwiększenia pojemności, jednak
+ gdy próby pokazały, że napięcie 6
+\begin_inset space ~
+\end_inset
+
+V jest zbyt niskie do zapewnienia prawidłowej pracy silników robota, połączenie
+ akumulatorów zostało zamienione na szeregowe, w efekcie dają napięcie zasilania
+ 12
+\begin_inset space ~
+\end_inset
+
+V.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/new-akku-feet.jpg
+	lyxscale 25
+	width 98col%
+	BoundingBox 50mm 200mm 1150mm 810mm
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Konstrukcja-do-akumulatora"
+
+\end_inset
+
+Konstrukcja do montażu akumulatorów zastępująca oryginalny uchwyt na baterie
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Rysunek 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Konstrukcja-do-akumulatora"
+
+\end_inset
+
+ prezentuje montaż konstrukcji zastępującej oryginalny uchwyt bateryjny.
+ Konstrukcja ta została wstawiona do stóp robota.
+ Prezentowane zdjęcie nie pokazuje otworów wywierconych w późniejszym okresie
+ w celu połączenia blaszanego elmentu wraz z częściami mechaniki w nodze.
+ Po prawiej stronie widać na szczycie elementu plastikowego śruby, które
+ mocowały ten element do nóg robota.
+ Wykonany subsystut wykorzystał oryginalny układ otworów i dopasowany został
+ do tej koncepcji mocowania.
 \end_layout
 
 \begin_layout Section
@@ -6758,6 +7516,7 @@ status open
 
 \begin_layout Plain Layout
 \align center
+, jak 
 \begin_inset Graphics
 	filename vector/rs232_bluetooth.svg
 	width 99text%
@@ -7013,10 +7772,16 @@ Moduł kamery
 
 \begin_layout Standard
 W aktualnej realizacja moduł kamery nie został zastosowany, ze względu na
- czas i koszty implementacji współpracy kamery z mikrokontrolerem.
+ czas i koszty implementacji współpracy kamery z mikrokontr, jak olerem.
 \end_layout
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Sterowanie-elektromechaniki"
+
+\end_inset
+
 Sterowanie elektromechaniki
 \end_layout
 
@@ -7065,17 +7830,14 @@ reference "sec:Moduł-sterowania-zasilaniem"
 \begin_layout Enumerate
 Zaprojektowany na bazie układów pełnych mostków firmy ST Microelectronics,
  model L298P opisanymi w 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Dodać referencję.
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ds-l298"
 
 \end_inset
 
 .
- Wersja ostatecznie wybrana do konstrukcji.
+ Ta wersja sterownika została ostatecznie wybrana do konstrukcji.
 \end_layout
 
 \begin_layout Section
@@ -7281,7 +8043,11 @@ Impedancja wyjścia:
 \begin_inset space ~
 \end_inset
 
-Ω
+
+\begin_inset Formula $\textrm{\Omega}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -7319,7 +8085,8 @@ V
 \end_layout
 
 \begin_layout Standard
-Wewnętrzna architektura układu jest przedstawiona na rysunku 
+Wewnętrzna architektura układu scalonego TC4424A wybrana do skonstrułowania
+ tego modułu jest przedstawiona na rysunku 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Architektura-wewnętrzna-TC4424A"
@@ -9285,6 +10052,12 @@ nie następuje
 \end_layout
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Architektura-systemu"
+
+\end_inset
+
 Architektura systemu
 \end_layout
 
@@ -9452,18 +10225,22 @@ laptopami
 \end_layout
 
 \begin_layout Standard
-Szczegółowa dokumentacja projektowa tego fragmentu systemu znajduje się
- w załączniku 
+@@@
+\end_layout
+
+\begin_layout Standard
+Szczegółowa dokumentacja programistyczna tego fragmentu systemu znajduje
+ się w załączniku 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "cha:Dokumentacja-programu-Robotiq"
 
 \end_inset
 
- w języku angielskim i jest rezultatem automatycznej generacji dokumentacji
- przez system Doxygen 
+, jest w języku angielskim i jest rezultatem automatycznej generacji dokumentacj
+i przez system Doxygen 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Rozważyć dodanie Doxygen'a do narzędzi.
@@ -9475,6 +10252,12 @@ Rozważyć dodanie Doxygen'a do narzędzi.
 \end_layout
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Realizacja-oprogramowania"
+
+\end_inset
+
 Realizacja oprogramowania
 \end_layout
 
@@ -9493,16 +10276,15 @@ Przygotowanie szkieletu programowego i systemu FreeRTOS
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Opis ożenku FreeRTOS 
+Szkielet programowy został ściągnięty ze strony internetowej firmy Atmel.
+ AVR32 Studio posiada funkcje włączania do projektu tych elementów z tego
+ szkieletu, które wybierzemy w oknie dialogowym.
+ Dzięku czemu zbudowanie pełnego projektu jest prostsze.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Standard
+W ramach przygotowań dokonano przeniesienia wersji 6.0.0 sytemu FreeRTOS do
+ tego szkieletu, gdyż jego wersja 1.7.0 była wyposażona w starszą wersję.
 \end_layout
 
 \begin_layout Subsection
@@ -9920,7 +10702,17 @@ gdy
 \begin_inset Formula $f_{pll}=f_{vco}$
 \end_inset
 
-, gdy 
+, g
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Opis ożenku FreeRTOS 
+\end_layout
+
+\end_inset
+
+dy 
 \begin_inset Formula $\mathtt{PLLOPT[1]}=0$
 \end_inset
 
@@ -10115,7 +10907,17 @@ pm_switch_to_osc0()
 \end_layout
 
 \begin_layout Subsection
-Mechanizmy zabezpieczeń alokacji pamięci
+Me
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Opis ożenku FreeRTOS 
+\end_layout
+
+\end_inset
+
+chanizmy zabezpieczeń alokacji pamięci
 \end_layout
 
 \begin_layout Standard
@@ -10505,12 +11307,9 @@ Ponieważ ruch robota składa się z wielu atomowych operacji wykonywanych
  na poszczególnych wyprowadzeniach sterujących połączonych pewnymi zależnościami
  czasu i kolejności następowania, powstał moduł automatu skończonego typu
  automat Mealy'ego
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Cytat!
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "automata-theory"
 
 \end_inset
 
@@ -10525,7 +11324,18 @@ Cytat!
 \end_layout
 
 \begin_layout Standard
-Sekwencja kroków chodu robota składa się z następujących stanów:
+Sekwencja kroków chodu robota składa się ze stanów zaprezentowanych w tabeli
+ 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "tab:Stany-i-sygnały-sterujące"
+
+\end_inset
+
+ dla ruchu w przód i dla ruchu w tył, przy czym dla biodra, nóg lewej i
+ prawej podano nowe stany wyprowadzeń sterujących przełączanych w danym
+ ze stanów.
+ Symbol X oznacza brak zmiany stanu.
 \end_layout
 
 \begin_layout Standard
@@ -10540,8 +11350,10 @@ status open
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="8">
+<lyxtabular version="3" rows="9" columns="11">
 <features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -10550,12 +11362,31 @@ status open
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
 <row>
-<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="right" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Stan
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -10582,7 +11413,7 @@ Biodro
 \begin_inset Text
 
 \begin_layout Plain Layout
-Lewa noga
+Lewa
 \end_layout
 
 \end_inset
@@ -10596,11 +11427,11 @@ Lewa noga
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Prawa noga
+Prawa
 \end_layout
 
 \end_inset
@@ -10614,7 +11445,117 @@ Prawa noga
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Przód
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tył
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Czas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wł
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+k
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wł
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+k
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wł
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+k
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10625,7 +11566,27 @@ Prawa noga
 </cell>
 </row>
 <row>
-<cell alignment="right" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+STATE_IDLE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10634,61 +11595,70 @@ Prawa noga
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-wł
+X
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-k
+X
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-wł
+X
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-k
+X
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-wł
+X
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-k
+X
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10699,7 +11669,119 @@ k
 </cell>
 </row>
 <row>
-<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+STATE_START
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+400
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10710,7 +11792,16 @@ STATE_STEP_RIGHT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+600
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10719,7 +11810,16 @@ STATE_STEP_RIGHT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10728,7 +11828,7 @@ STATE_STEP_RIGHT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10737,7 +11837,7 @@ STATE_STEP_RIGHT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10746,16 +11846,7 @@ STATE_STEP_RIGHT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10764,18 +11855,36 @@ STATE_STEP_RIGHT
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Pętla
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10786,7 +11895,16 @@ STATE_STEP_LEFT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+600
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10795,7 +11913,25 @@ STATE_STEP_LEFT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10804,7 +11940,7 @@ STATE_STEP_LEFT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10813,16 +11949,7 @@ STATE_STEP_LEFT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10831,27 +11958,242 @@ STATE_STEP_LEFT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-1
+6
 \end_layout
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+STATE_HIP_RIGHT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+STATE_HIP_LEFT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10862,7 +12204,16 @@ STATE_STEP_STOP
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+600
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10871,7 +12222,7 @@ STATE_STEP_STOP
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10880,7 +12231,7 @@ X
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10889,7 +12240,7 @@ X
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10898,7 +12249,7 @@ X
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10907,7 +12258,7 @@ X
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10916,7 +12267,16 @@ X
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -10937,7 +12297,13 @@ X
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Sygnały sterujące w poszczególnych stanach
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Stany-i-sygnały-sterujące"
+
+\end_inset
+
+Sygnały sterujące w poszczególnych stanach i przejścia między stanami
 \end_layout
 
 \end_inset
@@ -10951,11 +12317,18 @@ Sygnały sterujące w poszczególnych stanach
 \end_layout
 
 \begin_layout Standard
-Dwa pierwsze stany są naprzemiennie powtarzane do czasu, aż nie napłynie
- zdarzenie wymuszające stan stopu, które zeruje wyprowadzenia sterujące
- stanem włączającym obroty silnika.
- Następnym stanem po stanie stopu, jest stan oczekiwania, w którym nie jest
- czasowo wyzwalane następne zdarzenie.
+Stany od 2 do 6 są naprzemiennie powtarzane do czasu poprzez zdarzenie nadsyłane
+ z timera.
+ Proces ten trwa, aż nie napłynie zdarzenie wymuszające stan stopu, które
+ zeruje wyprowadzenia sterujące stanem włączającym obroty silnika.
+ Następnym stanem po stanie stopu, jest stan oczekiwania, w którym nie następuje
+ ustawienie zdarzenia do wysłania po zadanym czasie.
+\end_layout
+
+\begin_layout Standard
+Podane czasy trwania danego stanu (jednoznaczne okresowi po jakim zostanie
+ wysłane następne zdarzenie) zostały dobrane eksperymentalnie.
+ Przy tak dobranych czasach ruch robota wygląda jak spacer.
 \end_layout
 
 \begin_layout Section
@@ -10967,18 +12340,26 @@ Oprogramowanie sterujące o nazwie kodowej Robotiq zostało zrealizowane w
  języku Python.
  Interfejs graficzny oparty jest o bibliotekę GTK+.
  Aplikacja ta pozwala na wydawanie poleceń tekstowych, posiada fragment
- interfejsu upodobniony do oryginalnego kontrolera RoboActor.
- Widok okna aplikacji przedstawia rysunek 
+ interfejsu upodobniony do oryginalnego kontrolera Roboactor.
+ Komendy przypisane do każdego z widocznych przycisków są konfigurowalne.
+ Widok głównego okna aplikacji przedstawia rysunek 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Zrzut-ekranu-Robotiq"
 
 \end_inset
 
- (aktualnie wymaga dopracowania).
+ .
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement !tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Note Note
 status open
 
@@ -10989,10 +12370,42 @@ zdjęcia pilota + screen shot programu
 \end_inset
 
 
+\begin_inset Graphics
+	filename images/pilot.jpg
+	lyxscale 25
+	width 98col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Oryginalny-kontroler"
+
+\end_inset
+
+Oryginalny kontroler zdalnego sterowania do robota Roboactor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement !tbh
 wide false
 sideways false
 status open
@@ -11001,8 +12414,8 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename images/robotiq_scrsht.png
-	width 15cm
+	filename images/robotiq-scr-shoot.png
+	width 16cm
 
 \end_inset
 
@@ -11030,6 +12443,34 @@ Zrzut ekranu aplikacji Robotiq
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Aplikacja pozwala na wydawanie poleceń z wiersza u dołu okna, który przechowuje
+ również historę poleceń.
+ Wydane polecenia i odpowiedź udzielona przez sterownik jest widoczna w
+ dużym oknie po stronie lewej.
+ Po stronie prawej widoczne są przyciski graficzne na podobieństwo oryginalnego
+ kontrolera zdalnego sterowania widocznego na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Oryginalny-kontroler"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Polecenia przypisane do poszczególnych przycisków są konfigurowalne w oknie
+ ustawień dostępnym z menu 
+\family sans
+Komendy\SpecialChar \menuseparator
+Ustawienia
+\family default
+.
+ Konfiguracja programu -- w tym kanału komunikacji -- jest zapisywana automatycz
+nie przy zamykaniu programu.
 \end_layout
 
 \begin_layout Subsection
@@ -11103,7 +12544,8 @@ target "http://sourceforge.net/projects/pywin32/"
 \end_layout
 
 \begin_layout Standard
-Mniamuśnie.
+Należy spełnić te zależności poprzez instalację wskazanych dodatków przed
+ użyciem aplikacji sterującej.
 \end_layout
 
 \begin_layout Subsection
@@ -11241,11 +12683,136 @@ status open
 \begin_layout Standard
 Ponadto, istnieje kilka katalogów pomocniczych zawierających inne elementy
  stosowane przez aplikację w czasie jej działania:
-\begin_inset Note Note
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Phantom VPhantom
 status open
 
 \begin_layout Plain Layout
-Wrzucić
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Katalog
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zawartość
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+locale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+binarne pliki tłumaczeń interfejsu z GNU gettext
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pliki źródłowe tłumaczeń interfejsu dla GNU gettext
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+icons
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ikony zastosowane w aplikacji
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+docs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+dokumentacja w postaci wygenerowanej przez Doxygen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Phantom VPhantom
+status open
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -11253,11 +12820,128 @@ Wrzucić
 
 \end_layout
 
+\begin_layout Subsection
+Główne elementy architektury aplikacji
+\end_layout
+
 \begin_layout Standard
+Jednym z podstawowych problemów w aplikacjach graficznego interfejsu użytkownika
+ jest efektywne zarządzanie zdarzeniami wywoływanymi przez interakcję użytkownik
+a i zdarzeniami napływającymi z zewnętrznych źródeł -- w tym przypadku interfejs
+u komunikacji.
+ Na potrzeby rozwiązania konfliktów i powiązań zdarzeń ze sobą stworzona
+ została klasa 
+\begin_inset listings
+lstparams "language=Python"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ActionDispatcher
+\end_layout
+
+\end_inset
+
+.
+ Jej rolą jest przechowywanie słownika
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+W języku Python słownik jest kontenerem hashującym klucze.
+\end_layout
+
+\end_inset
+
+ akcji z przypisanymi do pewnego zdarzenia metodami zarejestrowanymi z innych
+ klas.
+ Chcąc zrealizować określoną akcję, w rzeczywistości uruchamiane są wszystkie
+ te zarejestrowane metody.
+ Jest to specyficzna realizacje wzorca projektowego znanego pod nazwą Obserwator
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "head-first-design-patterns,design-patterns"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Aplikacja posiada mechanizm pozwalający bardzo łatwo podłączyć dowolny mechanizm
+ komunikacji do aplikacji.
+ W tej wersji aplikacji zaimplementowana jest klasa 
+\begin_inset listings
+lstparams "language=Python"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+SerialCommunicator
+\end_layout
+
+\end_inset
+
+, która realizuje interfejs komunikacji.
+ Za zarządzanie komunikatorami odpowiada klasa 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+CommunicationManager
+\end_layout
+
+\end_inset
+
+, w której można zarejestrować inne klasy zdolne komunikować się po skonfigurowa
+nym wcześniej kanale komunikacji.
+ Obsługa zmian w konfiguracji sprowadza się do zwracania listy parametrów,
+ które mogą być przestawione przez użytkownika.
+\end_layout
+
+\begin_layout Standard
+Obszar przycisków sterujących jest zrealizowany w oparciu o Cairo
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Cairo dostępne jest na stronie 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://cairographics.org/"
+
+\end_inset
+
 
 \end_layout
 
+\end_inset
+
+ i dowiązanie PyCairo -- jest to biblioteka graficzna służąca do realizacji
+ szybkich odrysowań obrazów dwuwymiarowych.
+ Kształt przycisków jest zrealizowany jako odrysowywanie na ekranie linii
+ według opisu graficznego.
+ Proces ten odbywa się przy każdym odświeżeniu obrazu w oknie.
+ Rysunek jest skalowany w raz ze zmianami obszaru graficznego, w którym
+ jest odrysowywany.
+ Każdy z przycisków stanowi osobny obiekt reagujący na zdarzenia naciśnięcia
+ i puszczenia.
+ Oddanie graficznego efektu wciśnięcia polega na zamianie kolorów zacienieni
+ i oświetlenia przycisku w trakcie przerysowania.
+\end_layout
+
 \begin_layout Chapter*
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Podsumowanie"
+
+\end_inset
+
 Podsumowanie
 \end_layout
 
@@ -11265,16 +12949,147 @@ Podsumowanie
 W trakcie realizacji opisywanego projektu wykonano modyfikacje konstrukcji
  robota, elektroniczny układ sterujący, oprogramowanie dla mikrokontrolera
  oraz oprogramowanie dla komputera PC.
-\begin_inset Note Note
-status collapsed
+ Przyjętne na początku przystąpienia do projektu założenia zawierały kilka
+ elementów, których realizacja została zredukowana w trakcie trwania prac.
+ Spowodowane to było możliwościami finansowymi i realizacją wsztkich zadań
+ przez jedną osobę.
+ Całkowity wkład pracy włożony w realizację opisanego projektu była ogromny.
+ Niektóre z zadań zakładały znacznie krótszy czas realizacji, niż miało
+ to miejsce w rzeczywistości.
+ Dotyczy to w szególności sterownika silników.
+ Uruchomienie elektroniznej części sterującej zajeło trzykrotnie więcej
+ czasu od założonych dwóch miesięcy.
+ W ostatecznej wersji projektu nie pojawiła się wizja w oparciu o mikrokamerę
+ cyfrową oraz komunikacja w oparciu o IEEE 802.11 (czyli potocznie 
+\begin_inset Quotes pld
+\end_inset
 
-\begin_layout Plain Layout
-Milion słów o niczym.
+Wi-Fi
+\begin_inset Quotes prd
+\end_inset
+
+).
+ Pierwszy z elementów nie mógł zostać zrealizowany ze względu na czas potrzebny
+ implementację interfejsu pomiędzy kamerą, a mikroprocesorem.
+ W przypadku komunikacji Wi-Fi zdobycie modułu komunikacyjnego za akceptowalne
+ środki finansowe okazało się być zadaniem nierealizowalnym w polskich warunkach.
 \end_layout
+
+\begin_layout Standard
+W robocie zastąpiono zasilanie bateryjne zasilaniem z akumulatorów żelowych.
+ Oryginalne pojemniki na baterie w nogach robota zostały zamienione na uchwyty
+ na akumulatory własnej konstrukcji.
+\end_layout
+
+\begin_layout Standard
+Układ sterownika mikroprocesorowego został zrealizowany na platformie rdzenia
+ AVR32 firmy Atmel.
+ Firma ta stworzyła rodzinę 32 bitowych mikrokontrolerów występująca w dwóch
+ głównych odmianach, lekkiej odmianie UC3 dla mocno zintegrowanych rozwiązań,
+ oraz AP7 -- odmianie wysokowydajnych mikrokontrolerów dla zaawansowanych
+ aplikacji przenośnych, mogący między innymi pracować pod kontrolą systemu
+ Linux.
+ Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
+ producentów jest bardzo silne wsparcie dla amatorów oraz środowiska otwartego
+ oprogramowania.
+ Opis tego mikrokontrolera znajduje się w podrozdziale 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:AVR32-series"
 
 \end_inset
 
+.
+\end_layout
 
+\begin_layout Standard
+W celu zapewnienia sterowania silnikami elektrycznymi skonstrułowano moduł
+ ze scalonymi mostkami H, który zamienia cyfrowe sygnały wystawiane z płyty
+ mikrokontrolera na napięcia sterujące obrotami silników w obu kierunkach.
+ Realizacja tej części odbyła się w dwóch wymuszonych niepowodzeniem pierwszego
+ etapach.
+ Układ sterownika opisany w 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Moduł-sterowania-zasilaniem"
+
+\end_inset
+
+ musiał zostać odrzucony, ze względu na niedostateczne możliwości sterowania.
+ W kolejnej wersji modułu opisanej w rozdziale 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Moduł-sterowania-zasilaniem-2"
+
+\end_inset
+
+ przewidziano zasilanie wyższym napięciem zasilania i zastosowano inne układy
+ scalone o wyższej wydajności prądowej.
+ Za jakością zastosowanych układów przemawia fakt, że udało się spalić jeden
+ z silników elektrycznych robota, bez uszkodzenia układu mimo osiągnięcia
+ przez niego wysokiej temperatury.
+\end_layout
+
+\begin_layout Standard
+Oprogramowanie działające na mikrokontrolerze działa w opraciu o system
+ operacyjny FreeRTOS.
+ Zawiera obsługę takich elementów jak timer wysokiej rozdzielczości, zarządzanie
+ wyjściami sygnałowymi (w tym PWM) do sterowania silnikami, zarządzanie
+ pracą silników do wykonywania ruchów chodzenia oraz odbieranie komend tekstowyc
+h.
+ Komunikacja odbywa się poprzez moduł Bluetooth, który można zastąpić kablowym
+ połączeniem szeregowym.
+ Program jest podzielony na moduły funkcjonalne działające w oddzielnych
+ zadaniach, pomiędzy którymi komunikacja odbywa się w kolejkach.
+ Przy pisaniu tego oprogramowania zachowano wysokie standardy -- dzięki
+ temu był możliwy powrót do rozwoju tej aplikacji po długich przerwach.
+ Moc obliczeniowa procesora jest wykorzystana w niewielkim stopniu, co pozostawi
+a pole do dalszego rozszerzania jego oprogramowania.
+\end_layout
+
+\begin_layout Standard
+Aplikację sterującą działającą na komputerze PC zrealizowano w języku Python.
+ Jest zrealizowana obiektowo.
+ Do obsługi interfejsu użytkownika zastosowano GTK+ poprzez PyGTK.
+ Pozwala ona na wydawanie komend z klawiatury i na przypisanie komend do
+ przycisków sterujących, których układ został zaczerpnięty z oryginalnego
+ kontrolera zdalnego sterowania Roboactora.
+ Architektura pozwala na dalsze rozszerzenie funcjonalne bez poprawiania
+ rdzenia aplikacji.
+\end_layout
+
+\begin_layout Standard
+Opisane elementy tworzą system, który może być zastosowany w sterowaniu
+ innej konstrukcji mechanicznej niż przedstawiona.
+ Możliwa jest łatwa adaptacja elektronicznych modułów do pracy z siedmioma
+ silnikami elektrycznymi prądu stałego.
+ Nie wymaga to przeprojektowywania opisanych rozwiązań.
+ Wystarczy dostosowanie oprogramowania.
+\end_layout
+
+\begin_layout Standard
+Projekt pozostawia duże możliwości dalszego rozwoju.
+ Do elementów o które można rozbudować projekt, jest wspomniana wcześniej
+ kamera cyfrowa lub inny mechanizm komunikacji bezprzewodowej.
+ Dodatkowo można zastosować do rozbudowy projektu takie elementy jak akceleratom
+etr, dalmierze ultradźwiękowe, bądź laserowe.
+ Moc obliczeniowa jest wystarczająca do działania oprogramowania kontrolującego
+ pracę takich urządzeń.
+\end_layout
+
+\begin_layout Standard
+Całość stanowi również doskonałą platformę edukacyjną.
+ W celach dydaktycznych można zastosować zarówno stworzone oprogramowanie,
+ jak również elementy elektroniki mogą stanowić przykład jednej z najpopularniej
+szych w tej chwili metod sterowania silników prądu stałego w robotyce amatorskie
+j.
+ Oprogramowanie stosuje wzorce stosowanie w zaawansowanych aplikacjach komercyjn
+ych i opiera się o bardzo znany i doceniany system czasu rzeczywistego FreeRTOS,
+ którego znajomość przyda się wszystkim chcącym tworzyć oprogramowanie dla
+ urządzeń.
+ Elementy składowe pozwalają na złożenie kopii takiej konstrukcji w stosunkowo
+ prosty sposób i zastosowanie jej przykładowo jako podstawy do realizacji
+ tematu prac zaliczeniowych, inżynierskich lub innych prac magisterskich.
 \end_layout
 
 \begin_layout Part*
@@ -11293,11 +13108,73 @@ Dokumentacja programu Robotiq
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+Ze względu na dużą objętość, kod źródłowy w języku Python i dokumentacja
+ do aplikacji sterującej znajduje się na dołączonej do pracy płycie CD w
+ katalogu 
+\begin_inset listings
+inline false
 status open
 
 \begin_layout Plain Layout
-Tu z Doxygen'a
+
+/Materiały/Aplikacje/Robotiq
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Dokumentacja-programu-Veroniq"
+
+\end_inset
+
+Dokumentacja programu Veroniq
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Veroniq-Doxygen
+status collapsed
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subimport{/home/manveru/workspace/dupatest/Veroniq/docs/latex/}{refman.tex}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ze względu na dużą objętość, kod źródłowy w języku C, projekt dla Eclipse
+ i dokumentacja do aplikacji sterownika mikroprocesorowego znajduje się
+ na dołączonej do pracy płycie CD w katalogu 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/Materiały/Aplikacje/Veroniq
 \end_layout
 
 \end_inset
