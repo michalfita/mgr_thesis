@@ -9,7 +9,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="711"
+   width="751"
    height="356.5"
    id="svg2"
    sodipodi:version="0.32"
@@ -65,9 +65,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="161.0131"
-     inkscape:cy="59.080686"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="369.98941"
+     inkscape:cy="144.18931"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -79,7 +79,9 @@
      fit-margin-left="15"
      fit-margin-top="15"
      fit-margin-bottom="15"
-     fit-margin-right="15" />
+     fit-margin-right="15"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -105,10 +107,52 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Hidden parts"
+     style="display:none"
+     transform="translate(0,0.01281776)">
+    <rect
+       transform="translate(-25,-97.375)"
+       style="fill:none;stroke:#000000;stroke-width:1;display:inline"
+       id="rect3555"
+       width="220"
+       height="59.000004"
+       x="308.5"
+       y="273.86218" />
+    <text
+       transform="translate(-25,-97.375)"
+       id="text4858"
+       y="308.01599"
+       x="348.08643"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         y="308.01599"
+         x="348.08643"
+         id="tspan4860"
+         sodipodi:role="line">Kamera Pixelplus</tspan></text>
+    <path
+       transform="translate(-25,-97.375)"
+       inkscape:connector-type="polyline"
+       id="path4864"
+       d="m 260.97362,313.02816 45.62053,0"
+       style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend);display:inline"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="translate(-25,-97.375)"
+       style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend);display:inline"
+       d="m 307.75802,294.99293 -45.85321,0"
+       id="path4866"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:label="Base image"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-25,-97.375)">
+     transform="translate(-25,-97.362183)"
+     style="display:inline">
     <rect
        style="fill:none;stroke:#000000"
        id="rect2389"
@@ -135,13 +179,6 @@
        height="58.999996"
        x="40.5"
        y="379.36218" />
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:1"
-       id="rect3555"
-       width="220"
-       height="59.000004"
-       x="308.5"
-       y="273.86218" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
@@ -164,48 +201,27 @@
          y="505.21933" /></text>
     <text
        xml:space="preserve"
-       style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="80.117188"
-       y="415.1991"
-       id="text3565"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="78.117188"
+       y="414.61328"
+       id="text3565"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3567"
-         x="80.117188"
-         y="415.1991">Bluetooth module</tspan></text>
+         x="78.117188"
+         y="414.61328"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">Moduł Bluetooth</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
        d="m 64.78571,333.05586 0,44.76142"
        id="path3569"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
-    <text
-       id="text4858"
-       y="308.01599"
-       x="348.08643"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       xml:space="preserve"
-       sodipodi:linespacing="125%"><tspan
-         y="308.01599"
-         x="348.08643"
-         id="tspan4860"
-         sodipodi:role="line">Kamera Pixelplus</tspan></text>
     <path
        inkscape:connector-type="polyline"
        id="path4862"
        d="m 82.82094,378.96523 0,-44.62631"
        style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:connector-type="polyline"
-       id="path4864"
-       d="m 260.97362,313.02816 45.62053,0"
-       style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
-       d="m 307.75802,294.99293 -45.85321,0"
-       id="path4866"
-       inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <rect
        y="113.86218"
@@ -218,13 +234,13 @@
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        x="365.93701"
-       y="147.96765"
+       y="148.67476"
        id="text4880"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan133398"
          x="365.93701"
-         y="147.96765">Pamięć RAM</tspan></text>
+         y="148.67476">Pamięć RAM</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
        d="m 260.97362,153.02816 45.62053,0"
@@ -238,35 +254,27 @@
        style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:1"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect5735"
        width="220"
-       height="59.000004"
+       height="127.9411"
        x="308.5"
        y="194.86218" />
     <text
        id="text5737"
-       y="231.43298"
-       x="311.91064"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       y="254.29318"
+       x="418.49561"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         y="231.43298"
-         x="311.91064"
+         y="254.29318"
+         x="418.49561"
          id="tspan5739"
-         sodipodi:role="line">Układ zasilania silników</tspan></text>
-    <path
-       inkscape:connector-type="polyline"
-       id="path5741"
-       d="m 260.97362,234.02816 45.62053,0"
-       style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
-       d="m 307.75802,215.99293 -45.85321,0"
-       id="path5743"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
+         sodipodi:role="line">Układ</tspan><tspan
+         y="276.79318"
+         x="418.49561"
+         sodipodi:role="line"
+         id="tspan3843">zasilania silników</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000"
        id="rect2505"
@@ -321,14 +329,72 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <text
+       id="text3034"
+       y="362.97711"
+       x="93.75322"
+       style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="362.97711"
+         x="93.75322"
+         id="tspan3036"
+         sodipodi:role="line">Komunikacja szeregowa</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.88685739;stroke-miterlimit:4;stroke-opacity:1"
+       d="m 266.46875,109.75 0,5.5 -30.78125,0 0,22.5625 30.78125,0 0,5.53125 16.25,-16.28125 0,-1.0625 z"
+       transform="translate(25,97.375)"
+       id="rect3040"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <g
+       id="g3049"
+       transform="translate(1.4696699,-1.0328775)" />
+    <rect
+       y="257.86218"
+       x="660.5"
+       height="50"
+       width="80"
+       id="rect3831"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000"
+       id="rect3833"
+       width="80"
+       height="50"
+       x="680.5"
+       y="277.86218" />
+    <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="658.59766"
-       y="269.30457"
+       x="698.59766"
+       y="309.30457"
        id="text2521"><tspan
          sodipodi:role="line"
-         x="658.59766"
-         y="269.30457"
+         x="698.59766"
+         y="309.30457"
          id="tspan2525">Silnik</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:connector-type="polyline"
+       id="path3835"
+       d="m 528.49874,260.20494 89.87783,0"
+       style="fill:none;stroke:#000000;stroke-width:1.12736952px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.24793398px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
+       d="m 528.49874,280.20494 110.12939,0"
+       id="path3837"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:connector-type="polyline"
+       id="path3839"
+       d="m 528.49874,300.20494 130.91971,0"
+       style="fill:none;stroke:#000000;stroke-width:1.36063766px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.45552731px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:none;marker-end:url(#Arrow2Lend)"
+       d="m 528.49874,320.20494 149.81687,0"
+       id="path3841"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
