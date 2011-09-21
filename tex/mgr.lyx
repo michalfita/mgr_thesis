@@ -446,6 +446,19 @@ e nie przetrwały rewolucji francuskiej) oraz mechaniczną kaczkę.
 
 \end_inset
 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Wstęp}{}
+\end_layout
+
+\end_inset
+
 Postęp w rozwoju technologii cyfrowej odbywa się na wielu płaszczyznach.
  Najbardziej widoczny jest na rynku urządzeń konsumenckich, takich jak telefony
  komórkowe, również w motoryzacji, przemyśle, szeroko rozumianym biznesie.
@@ -695,6 +708,18 @@ Podziękowania
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Podziękowania}{}
+\end_layout
+
+\end_inset
+
 Pragnę wyrazić swoją wdzięczność wobec wszystkich programistów oddających
  się pasji tworzenia wolnego oprogramowania i tworzących wspaniałe narzędzia,
  które wspomogły swoimi możliwościami tworzenie tej pracy.
@@ -13479,6 +13504,18 @@ Podsumowanie
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Podsumowanie}{}
+\end_layout
+
+\end_inset
+
 W trakcie realizacji opisywanego projektu wykonano modyfikacje konstrukcji
  robota, elektroniczny układ sterujący, oprogramowanie dla mikrokontrolera
  oraz oprogramowanie dla komputera PC.
