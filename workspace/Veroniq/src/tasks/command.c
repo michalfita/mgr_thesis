@@ -232,12 +232,25 @@ static int cmd_python(int argc, char* argv[])
 
 static int cmd_walk(int argc, char* argv[])
 {
-    sm_send_event(EVENT_WALK);
+    if (argc < 2)
+    {
+        sm_go(MODE_FORWARD);
+    }
+    else if (!strncmp(argv[1], "forward", 3))
+    {
+        sm_go(MODE_FORWARD);
+    }
+    else if (!strncmp(argv[1], "backward", 3))
+    {
+        sm_go(MODE_BACKWARD);
+    }
+    return 0;
 }
 
 static int cmd_stop(int argc, char* argv[])
 {
-    sm_send_event(EVENT_STOP);
+    sm_stop();
+    return 0;
 }
 
 
