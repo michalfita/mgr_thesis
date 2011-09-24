@@ -4,6 +4,7 @@
 \begin_header
 \textclass mwbk
 \begin_preamble
+\usepackage{ifthen}
 \usepackage{thumbpdf}
 
 \usepackage{fix-cm}
@@ -11,8 +12,23 @@
 \usepackage{type1ec}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
+\usepackage{keystroke}
 
+\@ifpackageloaded{amssymb}
+{\let\checkmark\relax}
+{}
 \usepackage{dingbat}
+
+\usepackage{babel}
+\usepackage[polish]{babelbib}
+
+\usepackage[format=hang,font=small,%
+labelfont=bf,up,%
+textfont=up,%
+justification=raggedright,singlelinecheck=true,%
+figurename=Ilustracja]{caption}
+\usepackage{float}
+
 
 \usepackage{afterpage}
 \usepackage{import}
@@ -72,12 +88,13 @@
     \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
 
 %\usepackage{doxygen}
+\floatname{figure}{Ilustracja}
 \end_preamble
 \options wide,pdftex,combine
 \use_default_options false
 \maintain_unincluded_children false
 \language polish
-\language_package default
+\language_package 
 \inputencoding utf8x
 \fontencoding global
 \font_roman default
@@ -93,7 +110,7 @@
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command bibtex8
 \index_command makeindex
 \paperfontsize 11
 \spacing single
@@ -157,6 +174,11 @@
 \color #faf0e6
 \end_branch
 \branch Kamera
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch STK500
 \selected 0
 \filename_suffix 0
 \color #faf0e6
@@ -547,8 +569,26 @@ Przedmiotem tej pracy projekt i wykonanie systemu sterowania robotem złożonego
 \end_layout
 
 \begin_layout Standard
+Pod kontrolą stworzonego systemu sterowania robot może się poruszać w przód
+ i w tył oraz wykonywać ruchy kończynami górnymi.
+ O ile chód robota jest określany przez postronnych obserwatorów jako zabawny,
+ ale ciekawie rozwiązany, to w przypadku ruchu ramion i chwytaków stopień
+ swobody tych ruchów mocno ogranicza możliwości manipulacji.
+ Związanie otwierania i zamykania chwytaka z ruchem w 
+\begin_inset Quotes pld
+\end_inset
+
+łokciu
+\begin_inset Quotes prd
+\end_inset
+
+ jest nawiększym ograniczeniem mechanicznym nakładanym przez wybrany do
+ realizacji tej pracy kadłub z zawabki Roboactor.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Greyedout
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Wstępne założenia dotyczące realizacji tego tematu zawierały kilka elementów,
@@ -635,7 +675,7 @@ reference "cha:Silniki-elektryczne"
 , narzędzia 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "chap:Narzędzia-i-moduły"
+reference "chap:Narzędzia-moduły-kadłub"
 
 \end_inset
 
@@ -658,7 +698,7 @@ Opis części praktycznej obejmuje przygotowanie i rozruch elementów składowyc
  elektronicznej części systemu 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "chap:Narzędzia-i-moduły"
+reference "chap:Narzędzia-moduły-kadłub"
 
 \end_inset
 
@@ -692,6 +732,7 @@ reference "chap:Realizacja-oprogramowania"
 
 \begin_layout Standard
 W podsumowaniu (str.
+ 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "chap:Podsumowanie"
@@ -3151,11 +3192,11 @@ Diody - głównie, gdy pozostają wyłączone - mają małą pojemność pomięd
 \begin_layout Chapter
 \begin_inset CommandInset label
 LatexCommand label
-name "chap:Narzędzia-i-moduły"
+name "chap:Narzędzia-moduły-kadłub"
 
 \end_inset
 
-Narzędzia i moduły
+Narzędzia, moduły, kadłub
 \end_layout
 
 \begin_layout Standard
@@ -4396,6 +4437,132 @@ reference "sec:Moduł-Bluetooth-Adapter"
 
 .
  
+\end_layout
+
+\begin_layout Section
+Kadłub Robota
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/roboactor-image.jpg
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Roboactor-orig"
+
+\end_inset
+
+Wygląd robota zabawki Roboactor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Podstawą mechaniczną robota omawianego w tej pracy jest zabawka o nazwie
+ Roboactor widoczna na ilustracji 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Roboactor-orig"
+
+\end_inset
+
+.
+ W celu stworzenia z niej kadłuba mechanicznego potrzebnego do realizacji
+ założeń tej pracy, pozbawiona została oryginalnej elektroniki umieszczonej
+ na plecach pod obudową, gdzie umieszczony został sterownik silników.
+ W celu zapewnienia właściwego zasilania robota, oryginalne uchwyty na baterie
+ zostały zamienione na elementy własnej konstrukcji, w których umieszczono
+ akumulatory żelowe.
+ Dokładniejszy opis i ilustracje wykonanych modyfikacji znajdują się w rozdziale
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Przebudowa-RoboActor"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sterowanie oryginalnym robotem odbywało się za pomocą pilota na podczerwień
+ widocznego na ilustracji 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Oryginalny-kontroler"
+
+\end_inset
+
+.
+ Robot po modyfikacji jest sterowany aplikacją kontrolną na uruchamianą
+ na komputerze PC, która komunikuje się z robotem protokołem tekstowym za
+ pośrednictem bezprzewodowego połączenia Bluetooth.
+ Komunikacja w tym standardzie umożliwia np.
+ kontrolę robota za pomocą aplikacji uruchomionej na telefonie komórkowym.
+\end_layout
+
+\begin_layout Standard
+Chód tego robota widziany przez postronnych obserwatorów określany jest
+ jako zabawny
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Padające najczęściej słowa to 
+\begin_inset Quotes pld
+\end_inset
+
+zabawnie się buja na boki
+\begin_inset Quotes prd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+, ale ciekawie rozwiązany.
+ Ruchu ramion i chwytaków tej konstrukcji mechanicznej ma bardzo ograniczony
+ stopień swobody.
+ Związanie otwierania i zamykania chwytaka z ruchem w 
+\begin_inset Quotes pld
+\end_inset
+
+łokciu
+\begin_inset Quotes prd
+\end_inset
+
+ mocno ogranicza możliwości manipulacji kończynami, szczególnie przy próbach
+ chwytania przedmiotów.
+ Problem ten stanowi nawiększym ograniczenie mechaniczne nakładane przez
+ kadłub z zawabki Roboactor.
+ Rozwarzano dorobienie elektromechanicznego uniezależnienia ruchu chwytaka
+ od obrotowego zgięcia łokcia ramienia robota, lecz zakres pracy i modyfikacji
+ mógby być przedmiotem odrębnej pracy dyplomowej.
 \end_layout
 
 \begin_layout Chapter
@@ -7530,7 +7697,7 @@ name "chap:Rozruch-modułów"
 
 \end_inset
 
-Rozruch modułów
+Rozruch i modyfikacja modułów
 \end_layout
 
 \begin_layout Standard
@@ -7541,7 +7708,8 @@ Przed przystąpieniem do zasadniczej pracy nad projektem złożonym ze wszystkic
  Rozdział ten omawia procedury rozruchowe najważniejszych komponentów i
  narzędzi zastosowanych w realizacji całości projektu opisanej w kolejnych
  rozdziałach.
-\end_layout
+\begin_inset Branch STK500
+status collapsed
 
 \begin_layout Section
 JTAG ICE mk-II + STK 500
@@ -7618,148 +7786,17 @@ o debugowania.
  pinu złącza PORTE (pin RST).
 \end_layout
 
-\begin_layout Section
-RoboActor
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement !tbh
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename images/roboactor-image.jpg
-	width 8cm
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Wygląd robota zabawki RoboActor
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-Podstawą mechaniczną robota omawianego w tej pracy jest zabawka o nazwie
- RoboActor pozbawiona oryginalnej elektroniki umieszczonej na plecach pod
- obudową, w miejscu widocznym na rysunku
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "fig:Moduł-sterownika-II"
-
-\end_inset
-
-, gdzie umieszczony został sterownik silników.
- W celu zapewnienia właściwego zasilania robota, oryginalne uchwyty na baterie
- zostały zamienione na elementy własnej konstrukcji, w których umieszczono
- akumulatory żelowe.
-\end_layout
-
-\begin_layout Standard
-Do każdej z nóg można było wstawić dwie baterie typu R20 o napięciu 1,5
-\begin_inset space ~
-\end_inset
-
-V każda.
- Akumulatory zastępujące baterie mają napięcie 6
-\begin_inset space ~
-\end_inset
-
-V i pojemność 0,6
-\begin_inset space ~
-\end_inset
-
-Ah.
- Pierwotnie zostały połączone równolegle w celu zwiększenia pojemności,
- jednak gdy próby pokazały, że napięcie 6
-\begin_inset space ~
-\end_inset
-
-V jest zbyt niskie do zapewnienia prawidłowej pracy silników robota, połączenie
- akumulatorów zostało zamienione na szeregowe, w efekcie dają napięcie zasilania
- 12
-\begin_inset space ~
-\end_inset
-
-V.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement !tbh
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename images/new-akku-feet.jpg
-	lyxscale 25
-	width 98col%
-	BoundingBox 50mm 200mm 1150mm 810mm
-	clip
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Konstrukcja-do-akumulatora"
-
-\end_inset
-
-Konstrukcja do montażu akumulatorów zastępująca oryginalny uchwyt na baterie
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-Rysunek 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Konstrukcja-do-akumulatora"
-
-\end_inset
-
- prezentuje montaż konstrukcji zastępującej oryginalny uchwyt bateryjny.
- Konstrukcja ta została wstawiona do stóp robota.
- Prezentowane zdjęcie nie pokazuje otworów wywierconych w późniejszym okresie
- w celu połączenia blaszanego elementu wraz z częściami mechaniki w nodze.
- Po prawej stronie widać na szczycie elementu plastikowego śruby, które
- mocowały ten element do nóg robota.
- Wykonany substytut wykorzystał oryginalny układ otworów i dopasowany został
- do tej koncepcji mocowania.
 \end_layout
 
 \begin_layout Section
 EVK1100
+\end_layout
+
+\begin_layout Subsection
+Uruchomienie
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:EVK1100-rozruch"
@@ -8149,6 +8186,482 @@ Od tego momentu projekt jest gotowy do przebudowania w całości.
  Zbudowanie całej aplikacji zajmuje kilkanaście minut.
 \end_layout
 
+\begin_layout Subsection
+Modyfikacje
+\end_layout
+
+\begin_layout Standard
+W celu przystosowania płyty rozwojowej EVK1100 do sterowania robotem modyfikacje
+ ograniczyły się do montażu gniazda typu IDC widocznego na ilustracjach
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Montaż-plecaka"
+
+\end_inset
+
+ oraz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Robot-mod-back"
+
+\end_inset
+
+, służącego do podłączenia przewodu z modułem sterującym silników (patrz:
+ podrozdziały 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Montaż-plecaka-sterującego"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Moduł-sterowania-zasilaniem-2"
+
+\end_inset
+
+).
+ Od spodu płyty znajdują się przewodu połączeniowe pomiędzy tym gniazdem
+ a wyprowadzeniami pinów sterujących mikrokontrolera.
+\end_layout
+
+\begin_layout Standard
+Cały moduł został przykręcony do stelaża przytwierdzonego do obudowy robota
+ z użyciem oryginalnych otworów montażowych znajdujących się na tej płycie.
+ Zasilanie zostało doprowadzone z modułu sterowania silnikami (napięcie
+ 12
+\begin_inset space ~
+\end_inset
+
+V) poprzez jedną z linii kabla taśmowego i doprowadzone do oryginalnego
+ wtyku zasilania płyty EVK1100.
+ Projektanci płyty nie przewidzieli wyprowadzenia (otworu) na płycie, do
+ którego można by się podłączyć przed stabilizatorami napięć 5
+\begin_inset space ~
+\end_inset
+
+V i 3,3
+\begin_inset space ~
+\end_inset
+
+V.
+\end_layout
+
+\begin_layout Standard
+Widoczny na ilustracji 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Robot-mod-back"
+
+\end_inset
+
+ wyświetlacz LCD nie jest używany.
+ Regulacja natężenia podświetlania była połączona z jednym z wyprowadzeń
+ PWM (ang.
+ 
+\shape slanted
+\lang british
+Pulse Width Modulation
+\shape default
+\lang polish
+) potrzebnym do sterowania silników prądu stałego w robocie.
+ Pod wyświetlaczem widoczne są diody LED sterowane innymi wyprowadzeniami
+ używanymi do sterowania silników, ubocznym efektem procesu sterowania jest
+ więc miganie tych diód LED.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Przebudowa-RoboActor"
+
+\end_inset
+
+Przebudowa RoboActor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/roboactor-mod-front.jpg
+	lyxscale 25
+	width 94col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Robot-mod-front"
+
+\end_inset
+
+Robot zmodyfikowany (widok od przodu)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement !tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/roboactor-mod-back.jpg
+	lyxscale 25
+	width 94col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Robot-mod-back"
+
+\end_inset
+
+Robot zmodyfikowany (widok od tyłu)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Podstawą mechaniczną robota omawianego w tej pracy jest zabawka o nazwie
+ RoboActor pozbawiona oryginalnej elektroniki umieszczonej na plecach pod
+ obudową, w miejscu widocznym na rysunku
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Moduł-sterownika-II"
+
+\end_inset
+
+, gdzie umieszczony został sterownik silników.
+ W celu zapewnienia właściwego zasilania robota, oryginalne uchwyty na baterie
+ zostały zamienione na elementy własnej konstrukcji, w których umieszczono
+ akumulatory żelowe.
+ Płytę zestawu EVK1100 ulokowano na plecach robota.
+ Robota po tych modyfikacjach obrazują ilustracje 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Robot-mod-front"
+
+\end_inset
+
+ oraz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Robot-mod-back"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Montaż akumulatorów żelowych
+\end_layout
+
+\begin_layout Standard
+Do każdej z nóg można było wstawić dwie baterie typu R20 o napięciu 1,5
+\begin_inset space ~
+\end_inset
+
+V każda.
+ Akumulatory zastępujące baterie mają napięcie 6
+\begin_inset space ~
+\end_inset
+
+V i pojemność 0,6
+\begin_inset space ~
+\end_inset
+
+Ah.
+ Pierwotnie zostały połączone równolegle w celu zwiększenia pojemności,
+ jednak gdy próby pokazały, że napięcie 6
+\begin_inset space ~
+\end_inset
+
+V jest zbyt niskie do zapewnienia prawidłowej pracy silników robota, połączenie
+ akumulatorów zostało zamienione na szeregowe, w efekcie dają napięcie zasilania
+ 12
+\begin_inset space ~
+\end_inset
+
+V.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/new-akku-feet.jpg
+	lyxscale 25
+	width 98col%
+	BoundingBox 50mm 200mm 1150mm 810mm
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Konstrukcja-do-akumulatora"
+
+\end_inset
+
+Konstrukcja do montażu akumulatorów zastępująca oryginalny uchwyt na baterie
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Rysunek 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Konstrukcja-do-akumulatora"
+
+\end_inset
+
+ prezentuje montaż konstrukcji zastępującej oryginalny uchwyt bateryjny.
+ Konstrukcja ta została wstawiona do stóp robota.
+ Prezentowane zdjęcie nie pokazuje otworów wywierconych w późniejszym okresie
+ w celu połączenia blaszanego elementu wraz z częściami mechaniki w nodze.
+ Po prawej stronie widać na szczycie elementu plastikowego śruby, które
+ mocowały ten element do nóg robota.
+ Wykonany substytut wykorzystał oryginalny układ otworów i dopasowany został
+ do tej koncepcji mocowania.
+\end_layout
+
+\begin_layout Standard
+Połączenia elektryczne akumulatorów są podwójne, jedna para przewodów z
+ każdego z akumulatorów służy do zasilania robota poprzez płytę modułu sterowani
+a silników.
+ Druga para jest połączona z gniazdkiem służącym do ładowania.
+ Dzięki temu nawet w przypadku pracy robota z podłączonym zasilaczem, prąd
+ przepływa najpierw przez styki akumulatorów.
+ W efekcie akumulatory są ładowane w każdym momencie, gdy prąd pobierany
+ przez całego robota jest mniejszy od wydajności prądowej zasilacza, w przeciwny
+m wypadku akumulatory oddają energię by skompensować braki mocy zasilacza
+ do zapewnienia prądów potrzebnych do zasilenia działających silników.
+ Jest to zasilanie buforowe.
+ Efektem ubocznym takiej formy zasilania w sytuacji bardzo mocno rozładowanych
+ akumumlatorów jest widzoczne osłabione działanie silników spowodowane malejącą
+ rezystancją rozładowanego akumulatora i zwiększaniem się jego zapotrzebowania
+ na prąd do ładowania.
+ W takiej sytuacji należy wyłączyć robota i naładować akumulatory.
+\end_layout
+
+\begin_layout Standard
+Ładowarkę buforową (pozwalającą na długotrwałe podtrzymywanie podłączonych
+ do niej akumulatorów) stanowi popularny zestaw do samodzielnego montażu
+ AVT
+\begin_inset space ~
+\end_inset
+
+2309.
+ Jest to prosty i tani układ do ładowania akumulatorów o mniejszych pojemnościac
+h, szczególnie nowoczesnych, szczelnych akumulatorów żelowych.
+ Konfiguracja skutecznie zapobiega przeładowaniu akumulatora, nawet przy
+ podłączeniu go na dowolnie długi okres czasu.
+ Urządzenie zostało wyregulowane na dziesięciogodzinny prąd ładowania (dobór
+ rezystora) 60
+\begin_inset space ~
+\end_inset
+
+mA i napięcie maksymalne minimalnie niższe niż 14
+\begin_inset space ~
+\end_inset
+
+V.
+ Jest to kompromis pomiędzy zalecanym napięciem ładowania cyklicznego 14...14,4
+\begin_inset space ~
+\end_inset
+
+V a napięciem ładowania podtrzymującego 13,60...13,70
+\begin_inset space ~
+\end_inset
+
+V.
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Montaż-plecaka-sterującego"
+
+\end_inset
+
+Montaż 
+\begin_inset Quotes pld
+\end_inset
+
+plecaka
+\begin_inset Quotes prd
+\end_inset
+
+ sterującego
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/backpack-mount.jpg
+	lyxscale 35
+	width 98col%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Montaż-plecaka"
+
+\end_inset
+
+Montaż 
+\begin_inset Quotes pld
+\end_inset
+
+plecaka
+\begin_inset Quotes prd
+\end_inset
+
+ -- płyty mikrokontrolera EV1100
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+W celu zamocowania karty ewaluacyjnej EVK1100 do obudowy robota Roboactor,
+ wykonany został stelaż z listew z włókna węglowego.
+ Powierzchnia na 
+\begin_inset Quotes pld
+\end_inset
+
+plecach
+\begin_inset Quotes prd
+\end_inset
+
+ obudowy robota jest zbyt mała, aby zamontowac tam tak dużą płytę.
+ Wykonany stelaż pozwala na wykorzystanie oryginalnych otworów na płycie
+ do przykręcenia jej do umieszczonych w stelaąu tulei dystansowych.
+ Z obudową robota stelaż jest połączony za pomocą śrub i tulei dystansowej.
+ Ilustracja 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Robot-mod-back"
+
+\end_inset
+
+ prezentuje robota z zamocowaną do niego kartą.
+ Na ilustracji
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Montaż-plecaka"
+
+\end_inset
+
+ przedstawiono sposób montażu płyty na stelażu przykręconego do obudowy
+ robota.
+\end_layout
+
+\begin_layout Standard
+Widoczny na ilustracji 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Montaż-plecaka"
+
+\end_inset
+
+ oraz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Robot-mod-back"
+
+\end_inset
+
+ kabel taśmowy trzydziestożyłowy służy do połączenia płyty EVK1100 do modułu
+ sterowania silników opisanego w rozdziale 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Moduł-sterowania-zasilaniem-2"
+
+\end_inset
+
+.
+ Kablem tym dostarczane jest również zasilanie dla elektroniki na tej płycie.
+ Dodatkowy przewód (czerwony na zdjęciu) łączy odpowiednie wyprowadzenie
+ gniazda IDC z oryginalnym gniazdem zasilania EVK1100.
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -8157,6 +8670,10 @@ name "sec:Moduł-Bluetooth-Adapter"
 \end_inset
 
 Moduł Bluetooth
+\end_layout
+
+\begin_layout Subsection
+Uruchomienie
 \end_layout
 
 \begin_layout Standard
@@ -8200,7 +8717,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-, jak 
 \begin_inset Graphics
 	filename vector/rs232_bluetooth.svg
 	width 99text%
@@ -8447,6 +8963,35 @@ V.
 
  (trzy znaki plus), który można przekonfigurować na inny ciąg właściwą komendą.
  Spis komend znajduje się w dokumentacji modułu Bluetooth (referencja).
+\end_layout
+
+\begin_layout Subsection
+Instalacja
+\end_layout
+
+\begin_layout Standard
+Pierwotnie przewidywano instalację modułu na podstawce przylutowanej na
+ polach lutowniczych moduły EVK1100, lecz zapewnienie kanału komunikacji
+ z modułem wiązało się z potrzebą usunięcia kilku elementów na płycie, które
+ stanowią w tej chwili interfejs RS232 (jeden z dwóch).
+\end_layout
+
+\begin_layout Standard
+Ostatecznie w celu uproszczenia konstrukcji i pozostawienia portu komunikacyjneg
+o z możliwością opcjonalnego podłączenia kablowego z komputerem PC, wykorzystano
+ opiasny powyżej konwerter i moduł Bluetooth razem z konwerterem jest wpinany
+ do dziewięciopinowego portu oznaczonego 
+\family typewriter
+\lang british
+UART
+\begin_inset space ~
+\end_inset
+
+0
+\family default
+\lang polish
+.
+ 
 \begin_inset Branch Kamera
 status collapsed
 
@@ -9748,7 +10293,7 @@ status collapsed
 	filename images/motor-driver-ii-mounted.jpg
 	lyxscale 20
 	width 93text%
-	BoundingBox 0bp 150bp 2468bp 1801bp
+	BoundingBox 70mm 40mm 1130mm 820mm
 	clip
 
 \end_inset
@@ -9838,10 +10383,38 @@ Wyprowadzenia elektryczne
 Wyprowadzenia końcówek sterujących zasilaniem silników elektrycznych są
  połączone (w większości wypadków) z oryginalnymi wyprowadzeniami zastosowanymi
  w okablowaniu oryginalnym robota.
+ Widoczne to jest na ilustracji 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "fig:Moduł-sterownika-II"
+
+\end_inset
+
+.
  W przypadku silników w ramionach robota i silników w korpusie sterujących
  ramionami, kolory przewodów zasilających silniki to niebieski i zielony.
  W przypadku silnika sterującego biodrem, to kolory żółty i zielony.
  Silniki nóg są podłączony przewodami w kolorach czarnym i czerwonym.
+\end_layout
+
+\begin_layout Standard
+Z akumulatorów w nogach poprowadzono zasilanie przewodami w kolorach:
+\end_layout
+
+\begin_layout Description
+czerwony biegun dodatni akumulatora nogi prawej
+\end_layout
+
+\begin_layout Description
+szary biegun ujemny akumulatora nogi prawej
+\end_layout
+
+\begin_layout Description
+pomarańczowy biegun dodatni akumulatora nogi lewej.
+\end_layout
+
+\begin_layout Description
+biały biegun ujemny akumulatora nogi lewej
 \end_layout
 
 \begin_layout Section
@@ -12871,8 +13444,360 @@ Podane czasy trwania danego stanu (jednoznaczne okresowi po jakim zostanie
  Przy tak dobranych czasach ruch robota wygląda jak spacer.
 \end_layout
 
+\begin_layout Subsection
+Interfejs poleceń
+\end_layout
+
+\begin_layout Standard
+Oprogramowanie sterujące działające na mikrokontrolerze ma zaimplementowany
+ prosty interfejs poleceń służący do sterowania robotem.
+ Interfejs ten przyjmuje polecenia napływające z portu szeregowego i wysyła
+ tam swoją odpowiedź, gdy to potrzebne.
+ Dostępny jest pewien ograniczony zestaw komend sterujących.
+\end_layout
+
+\begin_layout Standard
+W oprogramowaniu zaimplementowane zostały komendy podane w tabeli 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Polecenia-sterujące"
+
+\end_inset
+
+.
+ Nawiasy prostokątne zgodnie z ogólnoprzyjętą konwecją, oznaczają część
+ opcjonalną.
+ Kursywą oznaczono miejsca, w których argumenty przyjmują określone wartości
+ mieszczące się w warunkach podanych w objaśnieniu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement bh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features booktabs="true" tabularvalignment="middle" tabularwidth="98col%">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="65col%">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Polecenie
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Argumenty
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Objaśnienie
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+setpin
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape italic
+x
+\shape default
+ 
+\shape italic
+y
+\shape default
+ 
+\shape italic
+z
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ustawienie wartości pinu sterującego 
+\shape italic
+
+\begin_inset Formula $x$
+\end_inset
+
+
+\shape default
+ na 
+\shape italic
+
+\begin_inset Formula $y$
+\end_inset
+
+
+\shape default
+ na czas 
+\shape italic
+
+\begin_inset Formula $z$
+\end_inset
+
+
+\shape default
+ (
+\begin_inset Formula $x,\; y,\; z\in\mathbb{Z}\mid0\leq x\leq13\mid y\in\{0,\;1\}\cup[100,\;200]\mid z>0$
+\end_inset
+
+), gdzie 
+\begin_inset Formula $x$
+\end_inset
+
+ to numer wyprowadzenia sterującego, 
+\begin_inset Formula $y$
+\end_inset
+
+ wartość logiczna 0 lub 1 lub wartości od 100 do 200 reprezentują współczynnik
+ wypełnienia PWM (podana wartość pomniejszona o 100), 
+\begin_inset Formula $z$
+\end_inset
+
+ to czas trwania zadanego stanu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+walk
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+for[ward]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uruchamia ruch robota do przodu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bac[kward]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uruchamia ruch robota w tył
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sto[p]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zatrzymuje ruch robota
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+identify
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Polecenie wyświetla informacje o wersji programu sterującego załadowanego
+ do mikrokontrolera i datę kompilacji
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Polecenia-sterujące"
+
+\end_inset
+
+Zaimplementowane polecenia sterujące
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Komendy są przechowywane w tablicy, która podczas inicjalizacji w głównej
+ funkcji zadania interpretera jest zamieniana na tablicę asocjacyjną, w
+ której kluczem jest nazwa polecenia.
+ Do realizacji tego zadania wykorzystano bibliotekę 
+\family typewriter
+uthash
+\family default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Dostępna pod adresem: 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://uthash.sourceforge.net"
+target "http://uthash.sourceforge.net"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, skonfigurowaną do użycia funkcji mieszającej FNV 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fnv-hash"
+
+\end_inset
+
+.
+ Odnaleziene polecenia, polega na obliczeniu wartości funkcji kluczującej
+ i wybraniu pozycji w tablicy pasującej do tego klucza.
+ Dzięki czemu wyszukiwanie poleceń odbywa się z dużo mniejszą złożonością,
+ niż w przypadku porównywania napisów w pętli, tak często stosowanego w
+ różnym oprogramowaniu.
+ Szczegóły implementacyjne ukrywa 
+\family typewriter
+uthash
+\family default
+, więc stosowanie tej metody we własnym kodzie jest bardzo proste.
+\end_layout
+
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Oprogramowanie-sterujące"
+
+\end_inset
+
 Oprogramowanie sterujące
+\end_layout
+
+\begin_layout Subsection
+Opis aplikacji Robotiq
 \end_layout
 
 \begin_layout Standard
@@ -12989,18 +13914,6 @@ reference "fig:Oryginalny-kontroler"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Polecenia przypisane do poszczególnych przycisków są konfigurowalne w oknie
- ustawień dostępnym z menu 
-\family sans
-Komendy\SpecialChar \menuseparator
-Ustawienia
-\family default
-.
- Konfiguracja programu -- w tym kanału komunikacji -- jest zapisywana automatycz
-nie przy zamykaniu programu.
 \end_layout
 
 \begin_layout Subsection
@@ -13442,7 +14355,7 @@ SerialCommunicator
 
 \end_inset
 
-, która realizuje interfejs komunikacji.
+, która realizuje interfejs komunikacji szeregowej.
  Za zarządzanie komunikatorami odpowiada klasa 
 \begin_inset listings
 lstparams "breakatwhitespace=false,breaklines=true"
@@ -13491,6 +14404,252 @@ target "http://cairographics.org/"
  i puszczenia.
  Oddanie graficznego efektu wciśnięcia polega na zamianie kolorów zacienieni
  i oświetlenia przycisku w trakcie przerysowania.
+\end_layout
+
+\begin_layout Chapter
+Instrukcja obsługi
+\end_layout
+
+\begin_layout Section
+Ładowanie programu do robota
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "96col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Wrap figure
+lines 0
+placement L
+overhang 0in
+width "18mm"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset VSpace -5mm
+\end_inset
+
+
+\begin_inset Graphics
+	filename vector/red-exclamation-mark.svg
+	width 23mm
+	BoundingBox 0bp 0bp 36bp 40bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+UWAGA!
+\series default
+ W celu zaprogramowania robota poprzez interfejs JTAG, należy wyłączyć zasilanie
+ wyłącznikiem z tyłu obudowy, rozłączyć kabel taśmowy z płyty mikrokontrolera
+ i podłączyć do niej zasilacz o napięciu 9
+\begin_inset space ~
+\end_inset
+
+V lub 12
+\begin_inset space ~
+\end_inset
+
+V.
+ Stany wyjść mikrokontrolera w czasie programowania powodują włączanie zasilania
+ silników, a w konsekwencji ich blokadę pod prądem, co może prowadzić do
+ ich trwałego uszkodzenia!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Załadowanie programu sterującego do pamięci Flash microkotrolera poprzez
+ interfejs JTAG wymaga uruchomienia AVR32 Studio.
+ Następnie należy zaimportować projekt dostarczony na płycie CD do swojego
+ obszaru roboczego.
+ Po otwarciu projektu uruchamiamy proces kompilacji przez naciśnięcie klawiszy
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Ctrl
+\end_layout
+
+\end_inset
+
++
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+keystroke{B}
+\end_layout
+
+\end_inset
+
+.
+ W przypadku problemów ze skompilowaniem, należy w pierwszej kolejności
+ zdiagnozować czy ścieżki określone we właściwościach projektu wskazują
+ na prawidłowe katalogi, w szczególności dotyczy to ścieżek do narzędzi
+ kompilacyjnych (projekt powinien skompilować się poprawnie z narzędziami
+ dostarczanymi razem z AVR32 Studio w wersji 2.6).
+ Dostarczony projekt jest poprawny pod innymi względami.
+\end_layout
+
+\begin_layout Standard
+Jeżeli podczas uruchamiania programu AVR32 Studio JTAG był podłączony do
+ komputera, to w zakładce Target powinien być widoczny.
+ Należy zapoznać się z instrukcją do JTAG'a w przypadku problemów z połączeniem.
+\end_layout
+
+\begin_layout Standard
+Gdy płyta jest podłączona do JTAG, załadowanie programu do pamięci flash
+ powinno odbyć się po uruchomieniu aplikacji w AVR32 Studio, co odbywa się
+ poprzez naciśnięcie przycisku 
+\begin_inset Graphics
+	filename images/eclipse_icon_runner.gif
+	height 10pt
+	BoundingBox 0bp 1bp 16bp 16bp
+	clip
+
+\end_inset
+
+.
+ W oknie konsoli powinno być widać kolejne kroki wykonywane przez program
+ w celu załadowania programu.
+ Zakończenie procesu umożliwia rozpoczęcie korzystania z robota.
+\end_layout
+
+\begin_layout Section
+Obsługa robota
+\end_layout
+
+\begin_layout Standard
+Do sterowania robotem służy aplikacja Robotiq opisana w rozdziale 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Oprogramowanie-sterujące"
+
+\end_inset
+
+.
+ Aby móc wydawać polecenia robotowi należy nawiązać połączenie.
+ W pierwszej kolejności musi to być połączenie Bluetooth, w systemie Windows
+ wydajemy w oknie Bluetooth polecenia wyszukania urządzeń w zasięgu, a następnie
+ łączymy się z urządzeniem o nazwie 
+\begin_inset Quotes pld
+\end_inset
+
+AVR Robot
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Otrzymamy numer portu szeregowego, do którego mamy się połączyć, aby nawiązać
+ komunikację z robotem.
+ 
+\end_layout
+
+\begin_layout Standard
+Po uruchomieniu aplikacji Robotiq przechodzimy do konfiguracji portu szeregowego
+ dostępnego z menu 
+\family sans
+Połączenie\SpecialChar \menuseparator
+Konfiguracja.
+ 
+\family default
+Tam wybieramy port szeregowy podany przez system operacyjny komputera przy
+ połączeniu z robotem.
+ Następnie określamy prędkość komunikacji na 115200, pozostałe parametry:
+ ilość bitów danych
+\begin_inset space ~
+\end_inset
+
+=
+\begin_inset space ~
+\end_inset
+
+8, tryb sprawdzania parzystości
+\begin_inset space ~
+\end_inset
+
+=
+\begin_inset space ~
+\end_inset
+
+N, bity stopu
+\begin_inset space ~
+\end_inset
+
+=
+\begin_inset space ~
+\end_inset
+
+1; obie kontrole przepływu mają być wyłączone.
+\end_layout
+
+\begin_layout Standard
+Następnie klikamy ikonkę wtyczki lub naciskamy F5 w celu nawiązania połączenia
+ przez aplikację z portem szeregowym.
+ Od tego momentu po nawiązaniu połączenia możemy wydawać polecenia dla robota.
+ Lista dostępnych poleceń w wersji programu dostarczonej z tą pracą znajduje
+ się w tabeli 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:Polecenia-sterujące"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Istnieje możliwość sterowania robotem poprzez graficzne przyciski widoczne
+ w oknie.
+ Układ tych przycisków jest widoczny na ilustracji 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Zrzut-ekranu-Robotiq"
+
+\end_inset
+
+.
+ Polecenia przypisane do poszczególnych przycisków są konfigurowalne w oknie
+ ustawień dostępnym z menu 
+\family sans
+Komendy\SpecialChar \menuseparator
+Ustawienia
+\family default
+.
+ Konfiguracja programu -- w tym kanału komunikacji -- jest zapisywana automatycz
+nie przy zamykaniu programu.
 \end_layout
 
 \begin_layout Chapter*
@@ -13616,6 +14775,19 @@ h.
  i niezrozumienia kodu.
  Moc obliczeniowa procesora jest wykorzystana w niewielkim stopniu, co pozostawi
 a pole do dalszego rozszerzania jego oprogramowania.
+\end_layout
+
+\begin_layout Standard
+Funkcjonalnie robot wykonuje polecenia wydawane tej aplikacji w prostym
+ interpreterze poleceń dostępnym przez interfejs szeregowy w standardowej
+ konfiguracji dostępny przez Bluetooth.
+ Zestaw poleceń pozwala na niskopoziomowe sterowanie poszczególnymi wyprowadzeni
+ami sterującymi silniki (poprzez mostki H), jak również na kontrolę logiki
+ odpowiedzialnej za chód robota w tył i w przód.
+ Możliwe jest też wykonywanie ruchów kończyn poprzez wydawanie poleceń niskiego
+ poziomu.
+ Proces kontroli chodu robota jest asynchroniczny, czyli umożliwia użytkownikowi
+ robota na wydawanie innych poleceń.
 \end_layout
 
 \begin_layout Standard
