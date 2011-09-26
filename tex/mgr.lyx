@@ -269,14 +269,20 @@ robot
 \begin_inset Quotes erd
 \end_inset
 
- pojawia się po raz pierwszy w sztuce, której autorem jest czeski pisarz
- Karel Čapek.
+ pojawia się po raz pierwszy w
+\begin_inset space ~
+\end_inset
+
+sztuce, której autorem jest czeski pisarz Karel Čapek.
  Określenie to szybko trafia pomiędzy okładki dzieł literatury fantastycznej,
  zmieniając pierwotne znaczenie ze sztucznie hodowanego człowieka na sztucznie
  konstruowanego człowieka, by przez kolejne lata ewoluować do dzisiejszego
  znaczenia elektromechanicznej maszyny wykonującej różnorodne prace.
- Premiera czeskiej sztuki miała miejsce w 1921 roku, a dziś prawie wiek
- później słowo 
+ Premiera czeskiej sztuki miała miejsce w
+\begin_inset space ~
+\end_inset
+
+1921 roku, a dziś prawie wiek później słowo 
 \begin_inset Quotes eld
 \end_inset
 
@@ -293,19 +299,37 @@ robotyki
 \begin_inset Quotes erd
 \end_inset
 
- jako dziedziny badań naukowych stworzył Isaac Asimov, który użył go w swoim
- opowiadaniu w 1942 roku.
+ jako dziedziny badań naukowych stworzył Isaac Asimov, który użył go w
+\begin_inset space ~
+\end_inset
+
+swoim opowiadaniu w
+\begin_inset space ~
+\end_inset
+
+1942 roku.
 \end_layout
 
 \begin_layout Plain Layout
-Słowo to z kart książek szybko trafia do świata nauki i zaczyna żyć własnym
- życiem w raz z postępem technologii elektronicznej i mechanicznej.
+Słowo to z kart książek szybko trafia do świata nauki i
+\begin_inset space ~
+\end_inset
+
+zaczyna żyć własnym życiem w
+\begin_inset space ~
+\end_inset
+
+raz z postępem technologii elektronicznej i
+\begin_inset space ~
+\end_inset
+
+mechanicznej.
  Choć dziś nadal robotyka przez wielu traktowana jest jako zabawa, niż poważna
  dziedzina naukowa, to jednak znaczenie robotyki we współczesnym świecie
  gwałtownie rośnie.
- Stosowanie robotów w produkcji przemysłowej jest już standardem; nie przypomina
-ją one wyglądem człowieka, lecz za to są dobrze przystosowane do pracy,
- którą mają realizować.
+ Stosowanie robotów produkcji przemysłowej jest już standardem; nie przypominają
+ one wyglądem człowieka, lecz za to są dobrze przystosowane do pracy, którą
+ mają realizować.
 \end_layout
 
 \begin_layout Plain Layout
@@ -337,13 +361,27 @@ http://www.xprize.org
 
  stawia robotykę przed nowym wyzwaniem wspieranym przez pieniądze prywatnych
  inwestorów na nową niespotykaną dotąd skalę, porównywalną z tą, która towarzysz
-yła do 2004 roku wyścigowi o pobicie bariery atmosfery i kosmosu przez prywatny
- pojazd kosmiczny.
+yła do 2004 roku wyścigowi o pobicie bariery atmosfery i
+\begin_inset space ~
+\end_inset
+
+kosmosu przez prywatny pojazd kosmiczny.
  Tym razem walka toczy się o konstrukcję robota, który jako pierwszy wyląduje
- na księżycu i pokona co najmniej 500 metrów po jego powierzchni przekazując
- na Ziemię zdjęcia i film video.
- Ogromna nagroda finansowa napędza do pracy siły i umysły, które wcześniej
- w ogóle nie zakładały zajęcia się takim problemem.
+ na księżycu i
+\begin_inset space ~
+\end_inset
+
+pokona co najmniej 500 metrów po jego powierzchni przekazując na Ziemię
+ zdjęcia i
+\begin_inset space ~
+\end_inset
+
+film video.
+ Ogromna nagroda finansowa napędza do pracy siły i
+\begin_inset space ~
+\end_inset
+
+umysły, które wcześniej w ogóle nie zakładały zajęcia się takim problemem.
  Czeka nas fascynująca rywalizacja, a na rezultat ludzkość będzie czekać
  z tak samo zapartym tchem, jak na start Space Ship One.
 \end_layout
@@ -459,7 +497,11 @@ Idea sztucznej istoty pojawia się w historii znacznie wcześniej, w mitologii
  Leonarda da Vinci przedstawiające mechanicznego rycerza, który miał siadać,
  poruszać rękami, głową oraz szczęką.
  Pierwsze znane mechanizmy przypominające roboty są datowane na rok 1738
- i są dziełem Jacques de Vaucanson.
+ i
+\begin_inset space ~
+\end_inset
+
+są dziełem Jacques de Vaucanson.
  Zbudował on androida grającego na flecie, gracza na tamburynie (obie konstrukcj
 e nie przetrwały rewolucji francuskiej) oraz mechaniczną kaczkę.
  On też jako pierwszy zastosował walec do sterowania procesem produkcyjnym
@@ -490,9 +532,16 @@ Postęp w rozwoju technologii cyfrowej odbywa się na wielu płaszczyznach.
  użytkowych płynących z wykorzystania urządzenia, jak możliwość oglądania
  filmów, bądź wygodna obsługa aplikacji.
  Motoryzacja od pewnego czasu rozwija technologie cyfrowe dwutorowo, jeden
- pokrywa się z wcześniej wspomnianą estetyką i użytecznością, drugi rozwija
- metody cyfrowego wspomagania pracy mechaniki pojazdu i wpływu na bezpieczeństwo
- podróży.
+ pokrywa się z wcześniej wspomnianą estetyką i
+\begin_inset space ~
+\end_inset
+
+użytecznością, drugi rozwija metody cyfrowego wspomagania pracy mechaniki
+ pojazdu i
+\begin_inset space ~
+\end_inset
+
+wpływu na bezpieczeństwo podróży.
  Przemysł wspiera techniką cyfrową zarówno logistykę, jak też proces produkcyjny
  -- od składania urządzeń przez roboty do kontroli jakości.
  W szeroko rozumianym biznesie technologia pokrywa wspomniane obszary, dodając
@@ -504,36 +553,67 @@ W każdym z tych obszarów elementarnie postrzegane technologie różnią się
  między sobą.
  Proces rozwoju techniki cyfrowej na jej bazowym poziomie, czyli konstrukcji
  procesorów jest szeroko zróżnicowany.
- A ponieważ różnią się ich zastosowania, metody konstrukcji i narzędzia
- stosowane do ich realizacji, informatyka nie rozwija się jednotorowo i
- posiada dziś wiele gałęzi, które czynią z nich interdyscyplinarne kierunki
+ A ponieważ różnią się ich zastosowania, metody konstrukcji i
+\begin_inset space ~
+\end_inset
+
+narzędzia stosowane do ich realizacji, informatyka nie rozwija się jednotorowo
+ i
+\begin_inset space ~
+\end_inset
+
+posiada dziś wiele gałęzi, które czynią z nich interdyscyplinarne kierunki
  rozwoju.
  Są nimi automatyka, robotyka, mechatronika, a dziedziny takie jak fizyka,
  są od samych początków informatyki ściśle z nią związane.
- Każda dyscyplina korzysta z informatyki inaczej, przeplata z wiedzą z innych
- dziedzin, odnosi różne efekty.
+ Każda dyscyplina korzysta z informatyki inaczej, przeplata z
+\begin_inset space ~
+\end_inset
+
+wiedzą z innych dziedzin, odnosi różne efekty.
  Wiele z dokonań powstałych w laboratoriach w celach typowo naukowych, trafia
  po pewnym czasie pod dachy zwykłych obywateli.
  Najlepszym przykładem jest wynalazek Tima Bernersa Lee -- długoletniego
- pracownika naukowego w CERN -- w dziedzinie Internetu i przeglądania zasobów
- wiedzy (czyt.
+ pracownika naukowego w CERN -- w
+\begin_inset space ~
+\end_inset
+
+dziedzinie Internetu i
+\begin_inset space ~
+\end_inset
+
+przeglądania zasobów wiedzy (czyt.
  WWW).
 \end_layout
 
 \begin_layout Standard
 Bardzo niewiele osób jest świadomych faktu, że w urządzeniach towarzyszących
- dziś w codziennym życiu, w sprzęcie AGD, RTV, w samochodach, działają aplikacje
+ dziś w
+\begin_inset space ~
+\end_inset
+
+codziennym życiu, w sprzęcie AGD, RTV, w samochodach, działają aplikacje
  stworzone przez -- często bardzo duże -- zespoły programistów.
- Kto patrząc na telewizor stojący na półce w sklepie zastanawia się ile
- linii kodu napisano, by realizował on swoje funkcje? Dla przeciętnego Kowalskie
-go, taki produkt jest wytworem anonimowego inżyniera.
+ Kto patrząc na telewizor stojący na półce w
+\begin_inset space ~
+\end_inset
+
+sklepie zastanawia się ile linii kodu napisano, by realizował on swoje funkcje?
+ Dla przeciętnego Kowalskiego, taki produkt jest wytworem anonimowego inżyniera.
  Świadomość obecności elektroniki wzrosła w ciągu ostatnich lat, głównie
- z przyczyn pragmatycznych i ekonomicznych -- awarie częściej zdarzają się
- w układach elektronicznych z racji wzrostu ich ilości.
+ z przyczyn pragmatycznych i
+\begin_inset space ~
+\end_inset
+
+ekonomicznych -- awarie częściej zdarzają się w układach elektronicznych
+ z racji wzrostu ich ilości.
  Dzieje się tak, mimo iż statystycznie ilość awarii w stosunku do ilości
  sprzętu maleje, gdyż cywilizacja wytwarza coraz doskonalsze produkty.
- Najbardziej świadomymi istnienia oprogramowania w urządzeniach, są sami
- jego twórcy.
+ Najbardziej świadomymi istnienia oprogramowania w
+\begin_inset space ~
+\end_inset
+
+urządzeniach, są sami jego twórcy.
 \end_layout
 
 \begin_layout Standard
@@ -549,32 +629,69 @@ Istotne elementy wchodzące w skład systemu zrealizowanego w ramach tej pracy
  demonstrują zagadnienia związane z tworzeniem aplikacji działających na
  dedykowanych urządzeniach elektronicznych.
  Pisanie programów w tym obszarze wymaga szerokiej wiedzy z zakresu działania
- mikroprocesora i jego peryferiów.
+ mikroprocesora i
+\begin_inset space ~
+\end_inset
+
+jego peryferiów.
  Wiedza elektroniczna pozwala na kompensację pewnych rozwiązań dawniej realizowa
 nych czysto elektronicznie w sposób programowy.
 \end_layout
 
 \begin_layout Standard
-Przedmiotem tej pracy projekt i wykonanie systemu sterowania robotem złożonego
- ze sterownika mikroprocesorowego i oprogramowania sterującego działającego
- na komputerze PC.
+Przedmiotem tej pracy projekt i
+\begin_inset space ~
+\end_inset
+
+wykonanie systemu sterowania robotem złożonego ze sterownika mikroprocesorowego
+ i
+\begin_inset space ~
+\end_inset
+
+oprogramowania sterującego działającego na komputerze PC.
  Platformą mechaniczną jest robot zabawka Roboactor, z której usunięto oryginaln
-ą elektronikę pozostawiając tylko elementy mechaniczne i elektromechaniczne.
- Ma to służyć demonstracji działania układu i oprogramowania stworzonych
- w ramach tej pracy.
+ą elektronikę pozostawiając tylko elementy mechaniczne i
+\begin_inset space ~
+\end_inset
+
+elektromechaniczne.
+ Ma to służyć demonstracji działania układu i
+\begin_inset space ~
+\end_inset
+
+oprogramowania stworzonych w ramach tej pracy.
  W kolejnych rozdziałach zostały opisane założenia wstępne, istotne informacje
  teoretyczne oraz kolejne zadania realizowane w celu skonstruowania sterownika
- i stworzenia oprogramowania zarówno sterownika mikroprocesorowego, jak
- również aplikacji kontrolnej dla komputera PC.
+ i
+\begin_inset space ~
+\end_inset
+
+stworzenia oprogramowania zarówno sterownika mikroprocesorowego, jak również
+ aplikacji kontrolnej dla komputera PC.
 \end_layout
 
 \begin_layout Standard
 Pod kontrolą stworzonego systemu sterowania robot może się poruszać w przód
- i w tył oraz wykonywać ruchy kończynami górnymi.
+ i
+\begin_inset space ~
+\end_inset
+
+w tył oraz wykonywać ruchy kończynami górnymi.
  O ile chód robota jest określany przez postronnych obserwatorów jako zabawny,
- ale ciekawie rozwiązany, to w przypadku ruchu ramion i chwytaków stopień
- swobody tych ruchów mocno ogranicza możliwości manipulacji.
- Związanie otwierania i zamykania chwytaka z ruchem w 
+ ale ciekawie rozwiązany, to w przypadku ruchu ramion i
+\begin_inset space ~
+\end_inset
+
+chwytaków stopień swobody tych ruchów mocno ogranicza możliwości manipulacji.
+ Związanie otwierania i
+\begin_inset space ~
+\end_inset
+
+zamykania chwytaka z ruchem w
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Quotes pld
 \end_inset
 
@@ -582,23 +699,22 @@ Pod kontrolą stworzonego systemu sterowania robot może się poruszać w przód
 \begin_inset Quotes prd
 \end_inset
 
- jest nawiększym ograniczeniem mechanicznym nakładanym przez wybrany do
- realizacji tej pracy kadłub z zawabki Roboactor.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Greyedout
-status open
+ jest największym ograniczeniem mechanicznym nakładanym przez wybrany do
+ realizacji tej pracy kadłub z zabawki Roboactor.
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
 Wstępne założenia dotyczące realizacji tego tematu zawierały kilka elementów,
  które musiały zostać zredukowane w ostatecznym projekcie.
- Spowodowane to było ograniczeniami finansowymi i faktem realizacji całości
- przez jedną osobę.
+ Spowodowane to było ograniczeniami finansowymi i
+\begin_inset space ~
+\end_inset
+
+faktem realizacji całości przez jedną osobę.
  Całkowita ilość pracy włożona w realizację prezentowanego osiągnięcia była
  istotnie duża, w porównaniu do przyjętego założenia szybkiej realizacji
  podstawowych funkcji.
- .
  Główne elementy, które nie pojawiły się w ostatecznej wersji projektu to
  wizja w oparciu o mikrokamerę cyfrową oraz komunikacja w oparciu o IEEE
  802.11 (czyli potocznie 
@@ -620,10 +736,16 @@ Wi-Fi
 
 \begin_layout Standard
 Część pisemna pracy została podzielona na dwie logiczne części, z której
- pierwsza omawia teoretyczne zagadnienia związane z tematem robotyki i technolog
-ii stosowanych w realizacji projektu oraz koncepcję i założenia, a część
- druga opisuje praktyczną realizację wszystkich elementów z opisem kroków
- prowadzących do wyboru stosowanych rozwiązań.
+ pierwsza omawia teoretyczne zagadnienia związane z tematem robotyki i
+\begin_inset space ~
+\end_inset
+
+technologii stosowanych w realizacji projektu oraz koncepcję i
+\begin_inset space ~
+\end_inset
+
+założenia, a część druga opisuje praktyczną realizację wszystkich elementów
+ z opisem kroków prowadzących do wyboru stosowanych rozwiązań.
  Wśród opisywanych tematów znajdują się (w nawiasie numer rozdziału): 
 \begin_inset Branch Interfejsy
 status collapsed
@@ -694,15 +816,22 @@ systemy wbudowane, systemy operacyjne czasu rzeczywistego, radiowa transmisja
 \end_layout
 
 \begin_layout Standard
-Opis części praktycznej obejmuje przygotowanie i rozruch elementów składowych
- elektronicznej części systemu 
+Opis części praktycznej obejmuje przygotowanie i
+\begin_inset space ~
+\end_inset
+
+rozruch elementów składowych elektronicznej części systemu 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "chap:Narzędzia-moduły-kadłub"
 
 \end_inset
 
- oraz uruchomienie i konfigurację narzędzi potrzebnych do pracy 
+ oraz uruchomienie i
+\begin_inset space ~
+\end_inset
+
+konfigurację narzędzi potrzebnych do pracy 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "chap:Przygotowanie-środowiska-pracy"
@@ -710,8 +839,11 @@ reference "chap:Przygotowanie-środowiska-pracy"
 \end_inset
 
 .
- Następnie opisane są kolejne kroki w projektowaniu i konstrukcji sterowania
- silników elektrycznych 
+ Następnie opisane są kolejne kroki w projektowaniu i
+\begin_inset space ~
+\end_inset
+
+konstrukcji sterowania silników elektrycznych 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "chap:Sterowanie-elektromechaniki"
@@ -739,9 +871,16 @@ reference "chap:Podsumowanie"
 
 \end_inset
 
-) zawarto opis osiągniętych rezultatów, konkluzje wynikające z napotkanych
- w trakcie realizacji trudności oraz możliwości dalszego rozwoju projektu
- i jego wykorzystania w celach edukacyjnych.
+) zawarto opis osiągniętych rezultatów, konkluzje wynikające z
+\begin_inset space ~
+\end_inset
+
+napotkanych w trakcie realizacji trudności oraz możliwości dalszego rozwoju
+ projektu i
+\begin_inset space ~
+\end_inset
+
+jego wykorzystania w celach edukacyjnych.
 \end_layout
 
 \begin_layout Chapter*
@@ -762,13 +901,21 @@ markboth{Podziękowania}{}
 \end_inset
 
 Pragnę wyrazić swoją wdzięczność wobec wszystkich programistów oddających
- się pasji tworzenia wolnego oprogramowania i tworzących wspaniałe narzędzia,
- które wspomogły swoimi możliwościami tworzenie tej pracy.
+ się pasji tworzenia wolnego oprogramowania i
+\begin_inset space ~
+\end_inset
+
+tworzących wspaniałe narzędzia, które wspomogły swoimi możliwościami tworzenie
+ tej pracy.
 \end_layout
 
 \begin_layout Standard
 W szczególności wyróżniam na tym tle narzędzie LyX, dzięki któremu pisanie
- tekstów o objętości książek stało się przyjemnością.
+ tekstów o
+\begin_inset space ~
+\end_inset
+
+objętości książek stało się przyjemnością.
  Mattias Ettrich zasługuje za powołanie LyX do życia na dozgonną moją wdzięcznoś
 ć.
 \end_layout
@@ -776,42 +923,76 @@ W szczególności wyróżniam na tym tle narzędzie LyX, dzięki któremu pisani
 \begin_layout Standard
 Dla Jean-Pierre Charrasa należą się podziękowania za powołanie do życia
  projektu KiCad, który jest narzędziem pozwalającym na projektowanie układów
- elektronicznych o otwartych i bezpłatnych źródłach.
+ elektronicznych o
+\begin_inset space ~
+\end_inset
+
+otwartych i
+\begin_inset space ~
+\end_inset
+
+bezpłatnych źródłach.
  Wszystkim pozostałym programistom z zespołu KiCad dziękuję za doprowadzenie
  tego narzędzia do obecnego stanu.
 \end_layout
 
 \begin_layout Standard
 Wyrazy wdzięczności należą się również wszystkim kiedykolwiek zaangażowanym
- w tworzenie aplikacji GIMP i Inkscape, to za pomocą tych programów wykonano
- lub przetworzono ilustracje w tej pracy.
+ w tworzenie aplikacji GIMP i
+\begin_inset space ~
+\end_inset
+
+Inkscape, to za pomocą tych programów wykonano lub przetworzono ilustracje
+ w tej pracy.
  Program JabRef pozwolił na przygotowanie kolekcji publikacji bibliograficznych.
  Jego autorom należy się podziękowanie za ciągłe utrzymanie tego programu.
 \end_layout
 
 \begin_layout Standard
-Wszyscy autorzy i osoby partycypujące w tworzeniu lub wspierające wymienione
- projekty swoimi funduszami, zasługują na podziękowania, gdyż dzięki nim
- możliwa staje się się tworzenie treści i implementacji rozwiązań na bardzo
- wysokim poziomie.
+Wszyscy autorzy i
+\begin_inset space ~
+\end_inset
+
+osoby partycypujące w tworzeniu lub wspierające wymienione projekty swoimi
+ funduszami, zasługują na podziękowania, gdyż dzięki nim możliwa staje się
+ się tworzenie treści i
+\begin_inset space ~
+\end_inset
+
+implementacji rozwiązań na bardzo wysokim poziomie.
 \end_layout
 
 \begin_layout Standard
 Prodziekanowi Katedry Informatyki Wydziału EAIiE AGH, dr inż.
- Markowi Gajęckiemu dziękuję za wyrozumiałość i możliwość godnego zakończenia
- długotrwałego procesu tworzenia tej pracy w jej części praktycznej i pisemnej.
+ Markowi Gajęckiemu dziękuję za wyrozumiałość i
+\begin_inset space ~
+\end_inset
+
+możliwość godnego zakończenia długotrwałego procesu tworzenia tej pracy
+ w jej części praktycznej i
+\begin_inset space ~
+\end_inset
+
+pisemnej.
  Promotorowi dr inż.
  Romanowi Krasowskiemu dziękuję za umożliwienie wypłynięcia z tematem pracy
  poza obszar terytorium informatyki, jaką wkładał nam do głowy zakres przedmiotó
 w tych studiów.
- Dzięki temu wyjątkowo wzbogaciłem swoją wiedzę i zdobyłem nowe doświadczenia.
+ Dzięki temu wyjątkowo wzbogaciłem swoją wiedzę i
+\begin_inset space ~
+\end_inset
+
+zdobyłem nowe doświadczenia.
 \end_layout
 
 \begin_layout Standard
 Na koniec wyrazy szczególnej wdzięczności dla najbliższej mi osoby, za ogromną
  siłę nacisku wywieraną na moje opory w mobilizacji do powrotów po chwilach
- przerw wywołanych niespodziewanymi, niekontrolowanymi i niechcianymi wydarzenia
-mi życia codziennego.
+ przerw wywołanych niespodziewanymi, niekontrolowanymi i
+\begin_inset space ~
+\end_inset
+
+niechcianymi wydarzeniami życia codziennego.
  Sylwia dziękuję!
 \end_layout
 
@@ -821,7 +1002,7 @@ Wprowadzenie teoretyczne
 
 \begin_layout Standard
 \begin_inset Branch Historia
-status collapsed
+status open
 
 \begin_layout Chapter
 Historia
@@ -1850,7 +2031,11 @@ mV od D--.
 \begin_inset space ~
 \end_inset
 
-Mbit/s) i 
+Mbit/s) i
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -2244,7 +2429,7 @@ Generic Access Profile
  Kompletna aplikacja Bluetooth wymaga wielu dodatkowych serwisów i protokołów
  warstwy wyższej określonych w specyfikacji Bluetooth ale nie opisanych
  tutaj.
- Architektura rdzenia jest pokazana na rysunku 
+ Architektura rdzenia jest pokazana na ilustracji 
 \begin_inset Note Note
 status open
 
@@ -2307,9 +2492,17 @@ Architektura systemu
 
 \begin_layout Standard
 Rozdział prezentuje podstawowe koncepcje projektu w postaci blokowych schematów
- i krótkiego opisu założeń projektu.
+ i
+\begin_inset space ~
+\end_inset
+
+krótkiego opisu założeń projektu.
  Jest to jednocześnie ilustracja z jakie elementy wchodzą w skład całej
- konstrukcji tego projektu i jakie oprogramowanie funkcjonuje w tym projekcie.
+ konstrukcji tego projektu i
+\begin_inset space ~
+\end_inset
+
+jakie oprogramowanie funkcjonuje w tym projekcie.
  Kolejne rozdziały części drugiej tej pracy omawiają praktyczną realizację
  zaprezentowanych w tym rozdziale założeń.
 \end_layout
@@ -2400,8 +2593,12 @@ Elementy wykonawcze
 \end_deeper
 \end_deeper
 \begin_layout Standard
-Konstrukcja mechaniczna i elementy wykonawcze są tymi fragmentami, które
- wchodzą do projektu jako gotowe.
+Konstrukcja mechaniczna i
+\begin_inset space ~
+\end_inset
+
+elementy wykonawcze są tymi fragmentami, które wchodzą do projektu jako
+ gotowe.
 \end_layout
 
 \begin_layout Section
@@ -2441,8 +2638,12 @@ Schemat blokowy podsystemu układu mikrokontrolera
 \end_inset
 
 Jedną z części systemu sterowania robotem stanowi układ kontrolno-sterujący
- oparty o mikrokontroler AT32UC3A0512, w tym przypadku bazujący na bazie
- zestawu ewaluacyjnego EVK1100, do którego dołożone są dodatkowe elementy:
+ oparty o
+\begin_inset space ~
+\end_inset
+
+mikrokontroler AT32UC3A0512, w tym przypadku bazujący na bazie zestawu ewaluacyj
+nego EVK1100, do którego dołożone są dodatkowe elementy:
 \end_layout
 
 \begin_layout Itemize
@@ -2567,14 +2768,14 @@ laptopami
 .
  Oznacza to, że realizacja tego elementu systemu, który pozwala na wprowadzanie
  komend sterujących sprowadza się do napisania oprogramowania.
- Rysunek 
+ Ilustracja 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Robotiq-class-diagram"
 
 \end_inset
 
- ilustruje w sposób uproszczony architekturę tej aplikacji.
+ przedstawia w sposób uproszczony architekturę tej aplikacji.
 \end_layout
 
 \begin_layout Standard
@@ -2630,12 +2831,19 @@ Wydawanie poleceń dla robota przesyłanych kanałem komunikacji do aplikacji
 \end_layout
 
 \begin_layout Enumerate
-Odbieranie odpowiedzi płynącej ze sterownika i prezentowanie jej w oknie
+Odbieranie odpowiedzi płynącej ze sterownika i
+\begin_inset space ~
+\end_inset
+
+prezentowanie jej w oknie
 \end_layout
 
 \begin_layout Enumerate
-Wyróżnienie tekstu pochodzącego od użytkownika i pochodzącego od sterownika
- kolorami
+Wyróżnienie tekstu pochodzącego od użytkownika i
+\begin_inset space ~
+\end_inset
+
+pochodzącego od sterownika kolorami
 \end_layout
 
 \begin_layout Enumerate
@@ -2648,7 +2856,11 @@ Udostępnienie dla użytkownika przycisków z funkcjami robota
 
 \begin_layout Enumerate
 Możliwość konfiguracji poleceń powiązanych z poszczególnymi przyciskami
- funkcyjnymi w oknie
+ funkcyjnymi w
+\begin_inset space ~
+\end_inset
+
+oknie
 \end_layout
 
 \begin_layout Standard
@@ -2660,8 +2872,12 @@ reference "cha:Dokumentacja-programu-Robotiq"
 
 \end_inset
 
-, jest w języku angielskim i jest rezultatem automatycznej generacji dokumentacj
-i przez system Doxygen opisany w podrozdziale 
+, jest w języku angielskim i
+\begin_inset space ~
+\end_inset
+
+jest rezultatem automatycznej generacji dokumentacji przez system Doxygen
+ opisany w podrozdziale 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Doxygen"
@@ -2682,8 +2898,11 @@ Silniki elektryczne
 \end_layout
 
 \begin_layout Standard
-Cechą charakterystyczną robota jest wytwarzanie pewnych sił i momentów mechanicz
-nych w sposób kontrolowany.
+Cechą charakterystyczną robota jest wytwarzanie pewnych sił i
+\begin_inset space ~
+\end_inset
+
+momentów mechanicznych w sposób kontrolowany.
  Najpopularniejszą metodą na wytworzenie powyższych jest przekształcanie
  energii elektrycznej na energię mechaniczną poprzez silniki elektryczne.
  W rozdziale tym omówione zostały podstawy budowy komutatorowych silników
@@ -2700,7 +2919,11 @@ Prawidłowe sterowanie cyfrowe silnikiem elektrycznym prądu stałego wymaga
 
 \begin_layout Standard
 Poza omawianym typem silnika elektrycznego istnieje wiele innych typów w
- odmianach różniących się szczegółami konstrukcji i zastosowaniami.
+ odmianach różniących się szczegółami konstrukcji i
+\begin_inset space ~
+\end_inset
+
+zastosowaniami.
  Nie jest przedmiotem tej pracy omawianie wszystkich typów silników elektrycznyc
 h.
  Aby zrozumieć pewne elementy klasyfikujące, omówienie silnika należy rozpocząć
@@ -2743,13 +2966,20 @@ W opisywanym typie silnika elektrycznego stojan jest elementem nieruchomym
 \begin_layout Standard
 Twornik to uzwojenie wytwarzające pole elektromagnetyczne, które oddziałując
  z wzbudzającym polem magnetycznym wytarza ruch obrotowy wirnika.
- W omawianym przypadku twornik znajduje się na wirniku i pojedyncze uzwojenia
- są zasilane poprzez komutator.
+ W omawianym przypadku twornik znajduje się na wirniku i
+\begin_inset space ~
+\end_inset
+
+pojedyncze uzwojenia są zasilane poprzez komutator.
 \end_layout
 
 \begin_layout Standard
 Dla istotnej części, silnik prądu stałego może być przybliżony jako element
- indukcyjny i źródło napięcia.
+ indukcyjny i
+\begin_inset space ~
+\end_inset
+
+źródło napięcia.
  W wielu wypadkach istotne jest też uwzględnienie rezystancji w modelu silnika:
 \end_layout
 
@@ -2800,8 +3030,11 @@ napięcie generatora
 \begin_inset Quotes prd
 \end_inset
 
- i jest proporcjonalne do prędkości obrotowej silnika i jest oznaczone jako
- 
+, jest proporcjonalne do prędkości obrotowej silnika i
+\begin_inset space ~
+\end_inset
+
+jest oznaczone jako 
 \begin_inset Formula $\textrm{U}{}_{\text{g}}$
 \end_inset
 
@@ -2816,7 +3049,11 @@ Są dwie ważne skrajności.
  gdy silnik pracuje bez obciążenia.
  W tym momencie moment obrotowy silnika jest użyty do kompensacji strat.
  Jeżeli zlekceważymy to na chwilę, wtedy zobaczymy, że prąd wynosi 0 (nie
- jest potrzebny moment) i napięcia na stykach wynosi 
+ jest potrzebny moment) i
+\begin_inset space ~
+\end_inset
+
+napięcia na stykach wynosi 
 \begin_inset Formula $\textrm{U}{}_{\text{g}}$
 \end_inset
 
@@ -2853,16 +3090,27 @@ Możemy zignorować straty w wielu przypadkach w trakcie omawiania, lub założy
 \begin_inset Formula $\textrm{R}{}_{\text{m}}$
 \end_inset
 
-i 
+i
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Formula $\textrm{U}{}_{\text{g}}$
 \end_inset
 
  jako stałe przy zadanej prędkości, przynajmniej dla istotnej części.
- W rzeczywiści jednak, na skutek komutacji w silniku i relatywnej pozycji
- przewodzących zwojów względem pola magnetycznego stojanów, wszystkie te
- wartości są funkcją położenia twornika.
+ W rzeczywiści jednak, na skutek komutacji w silniku i
+\begin_inset space ~
+\end_inset
+
+relatywnej pozycji przewodzących zwojów względem pola magnetycznego stojanów,
+ wszystkie te wartości są funkcją położenia twornika.
  To jest aspekt istotny dla omówienia zwrotnych zakłóceń elektromagnetycznych
- i ich pomiaru.
+ i
+\begin_inset space ~
+\end_inset
+
+ich pomiaru.
 \end_layout
 
 \begin_layout Section
@@ -2932,19 +3180,26 @@ Diagram ilustrujący działanie komutatora silnika prądu stałego
 \end_layout
 
 \begin_layout Standard
-Rysunek 
+Ilustracja 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Diagram-komutatora"
 
 \end_inset
 
- ilustruje zasadę działania komutatora.
+ przedstawia zasadę działania komutatora.
  Obracający się walec komutatora powoduje przesuwanie się styków uzwojeń
  pod szczotkami, do których doprowadzone jest napięcie zasilające.
  Kolejne styki są po kolei zasilane w trakcie ruchu obrotowego walca.
- W rzeczywistych silnikach ilość styków na walcu komutatora jest większa
- i może sięgać kilkunastu.
+ W
+\begin_inset space ~
+\end_inset
+
+rzeczywistych silnikach ilość styków na walcu komutatora jest większa i
+\begin_inset space ~
+\end_inset
+
+może sięgać kilkunastu.
  Działanie komutatora pozwala zasilać tylko te uzwojenia, których pole magnetycz
 ne wraz z polem magnetycznym stojana wytwarza chwilowy moment obrotowy.
  W sumie kolejno zasilane uzwojenia wytwarzają moment obrotowy zbliżony
@@ -2964,7 +3219,11 @@ Mostek H
 \begin_layout Standard
 Sterowanie zasilaniem elementów elektroindukcyjnych silników elektrycznych
  prądu stałego odbywa się najczęściej poprzez układ zwany mostkiem H.
- Nazwa jest ściśle związana z wyglądem schematu elektrycznego tego układu.
+ Nazwa jest ściśle związana z
+\begin_inset space ~
+\end_inset
+
+wyglądem schematu elektrycznego tego układu.
 \end_layout
 
 \begin_layout Subsection
@@ -3013,7 +3272,7 @@ Schemat elektryczny mostka H
 \begin_layout Standard
 Elementy przełączające (oznaczenia T1 do T4) są zazwyczaj tranzystorami
  bipolarnymi lub tranzystorami FET, w aplikacjach dla wysokich napięć stosuje
- się - tranzystor bipolarny z izolowaną bramką (ang.
+ się -- tranzystor bipolarny z izolowaną bramką (ang.
  
 \shape italic
 \lang british
@@ -3023,26 +3282,46 @@ IGBT, Insulated Gate Bipolar Transistor
 ).
  Istnieją również rozwiązania scalone, jednakże dla rozważań dotyczących
  działania, rozpatrywany będzie układ dyskretny.
- Diody (oznaczenia D1 do D4) są zwane zabezpieczającymi i są to przeważnie
- diody Schottky'ego.
+ Diody (oznaczenia D1 do D4) są zwane zabezpieczającymi i
+\begin_inset space ~
+\end_inset
+
+są to przeważnie diody Schottky'ego.
  Chociaż są one wspominane w materiałach dotyczących mostków H, ich rola
  jest z reguły zaniedbywana.
- W rzeczywistości pełnią istotną rolę i muszą być dokładnie omówione.
+ W rzeczywistości pełnią istotną rolę i
+\begin_inset space ~
+\end_inset
+
+muszą być dokładnie omówione.
 \end_layout
 
 \begin_layout Standard
 Ogólnie, każdy z czterech elementów przełączających może być załączany i
- wyłączany niezależnie, są jednak pewnie oczywiste ograniczenia.
+\begin_inset space ~
+\end_inset
+
+wyłączany niezależnie, są jednak pewnie oczywiste ograniczenia.
 \end_layout
 
 \begin_layout Standard
-Podstawowy tryb pracy mostka H jest bardzo prosty: jeżeli T2 i T3 są załączone,
- lewa styk silnika będzie połączony z masą, podczas gdy prawy styk będzie
- połączony z zasilaniem.
+Podstawowy tryb pracy mostka H jest bardzo prosty: jeżeli T2 i
+\begin_inset space ~
+\end_inset
+
+T3 są załączone, lewa styk silnika będzie połączony z masą, podczas gdy
+ prawy styk będzie połączony z zasilaniem.
  Prąd rozpoczyna przepływ przez silnik, co wywołuje ruch obrotowy wałka
  (umownie) w przód.
- Jeżeli T1 i T4 są załączone, następuje odwrócenie i silnik rozpoczyna ruch
- obrotowy wałka w kierunku wstecznym.
+ Jeżeli T1 i
+\begin_inset space ~
+\end_inset
+
+T4 są załączone, następuje odwrócenie i
+\begin_inset space ~
+\end_inset
+
+silnik rozpoczyna ruch obrotowy wałka w kierunku wstecznym.
  Jeżeli kontrolowana ma być prędkość silnika, jeden z elementów przełączających
  jest wysterowany przez kontrolowaną szerokość impulsu (ang.
  
@@ -3053,7 +3332,11 @@ PWM, pulse width modulation
 \lang polish
 ).
  Średnie napięcie widziane przez silnik będzie uzależnione od współczynnika
- pomiędzy czasem załączenia i wyłączenia w sygnale PWM.
+ pomiędzy czasem załączenia i
+\begin_inset space ~
+\end_inset
+
+wyłączenia w sygnale PWM.
 \end_layout
 
 \begin_layout Subsection
@@ -3061,8 +3344,12 @@ Diody zabezpieczające
 \end_layout
 
 \begin_layout Standard
-Diody zabezpieczające (D1 do D4) są często niedocenione i bardzo pobieżnie
- wspomniane w opisach mostków H, jednakże są bardzo istotnym komponentem.
+Diody zabezpieczające (D1 do D4) są często niedocenione i
+\begin_inset space ~
+\end_inset
+
+bardzo pobieżnie wspomniane w opisach mostków H, jednakże są bardzo istotnym
+ komponentem.
 \end_layout
 
 \begin_layout Standard
@@ -3080,12 +3367,20 @@ ne.
  Ten prąd nie może przepłyną przez wyłączone elementy przełączające, jednak
  musi znaleźć ujście.
  Diody zabezpieczające są niskorezystancyjną ścieżką dla tych prądów rozładowują
-cych i pozwalają utrzymać napięcie na stykach silnika na racjonalnym poziomie.
+cych i
+\begin_inset space ~
+\end_inset
+
+pozwalają utrzymać napięcie na stykach silnika na racjonalnym poziomie.
 \end_layout
 
 \begin_layout Standard
 Kiedykolwiek dioda przewodzi prąd, następuje na niej relatywnie stały spadek
- napięcia w kierunku przewodzenia określany jako 
+ napięcia w
+\begin_inset space ~
+\end_inset
+
+kierunku przewodzenia określany jako 
 \begin_inset Formula $\textrm{U}_{\textrm{F}}$
 \end_inset
 
@@ -3098,7 +3393,11 @@ mV dla większości elementów.
  Ten spadek napięcia w połączeniu z przepływem prądu powoduje wydzielanie
  ciepła.
  Jego aktualny poziom zależy o średniego prądu przepływającego przez diodę
- i czasu jej otwarcia.
+ i
+\begin_inset space ~
+\end_inset
+
+czasu jej otwarcia.
  Jako przykład, jeżeli pole elektromagnetyczne rozładowuje się przez 1
 \begin_inset space ~
 \end_inset
@@ -3111,7 +3410,11 @@ ms, prąd na początku cyklu wyłączenia jest 10
 \begin_inset space ~
 \end_inset
 
-A i spada liniowo (zakładając obciążenie idealnie indukcyjne), wtedy średni
+A i
+\begin_inset space ~
+\end_inset
+
+spada liniowo (zakładając obciążenie idealnie indukcyjne), wtedy średni
  prąd 5
 \begin_inset space ~
 \end_inset
@@ -3145,11 +3448,19 @@ ms, wydzielanie ciepła wzrasta do
 Jest bardzo istotne widzieć, że o ile dla układów niskiej częstotliwości,
  wybór elementów przełączających jest wymuszony głównie przez maksymalny
  statyczny prąd dostarczany przez mostek, to wybór diod jest bardziej angażujący
- i wymaga analizy aktualnego rozładowywania się pola elektromagnetycznego.
+ i
+\begin_inset space ~
+\end_inset
+
+wymaga analizy aktualnego rozładowywania się pola elektromagnetycznego.
  Wybór diody będzie uzależniony od dynamicznego zachowania mostka.
- Projekt i kontrola mostka ma znaczący wpływ jak długo diody będą przewodzić,
- więc przy jednym rodzaju kontroli mostek może przetrwać większe prący,
- niż w przypadku innego rodzaju.
+ Projekt i
+\begin_inset space ~
+\end_inset
+
+kontrola mostka ma znaczący wpływ jak długo diody będą przewodzić, więc
+ przy jednym rodzaju kontroli mostek może przetrwać większe prący, niż w
+ przypadku innego rodzaju.
  W pewnych wypadkach diody nie przewodzą w ogóle.
 \end_layout
 
@@ -3158,15 +3469,18 @@ Istotną cechą tranzystorów MOSFET jest to, że posiadają nieodłączną (nie
  do uniknięcia) diodę pomiędzy drenem a źródłem.
  Ta dioda działa jak dioda zabezpieczająca w mostku H, a większość specyfikacji
  MOSFETów określa parametry tej diody.
- Tak więc, jest możliwe użycie tej wbudowanej diody tranzystora i nie wprowadzen
-ie dodatkowo zewnętrznej, jeżeli specyfikacja tej diody spełnia wymagania
- projektu.
+ Tak więc, jest możliwe użycie tej wbudowanej diody tranzystora i
+\begin_inset space ~
+\end_inset
+
+nie wprowadzenie dodatkowo zewnętrznej, jeżeli specyfikacja tej diody spełnia
+ wymagania projektu.
  W przypadku tranzystorów bipolarnych taka wbudowana dioda nie występuje,
  więc zewnętrzna dioda zawsze musi być obecna.
 \end_layout
 
 \begin_layout Standard
-Diody - głównie, gdy pozostają wyłączone - mają małą pojemność pomiędzy
+Diody -- głównie, gdy pozostają wyłączone -- mają małą pojemność pomiędzy
  swoimi stykami.
  Ta pojemność musi zostać rozładowana zanim urządzenie może się włączy,
  co prowadzi do opóźnień w odpowiedzi na nagłą zmianę napięcia.
@@ -3178,8 +3492,11 @@ Diody - głównie, gdy pozostają wyłączone - mają małą pojemność pomięd
  Silnik wymusi na diodzie (lub diodach) przewodzenie, aby utworzyć drogę
  dla tego prądu, jednakże opóźnienie załączenia diody stworzy problem.
  Gorzej, to zdąży się w punkcie, gdzie prąd silnika jest najwyższy.
- Bez złagodzenia napięcia może wzrosnąć do niebezpiecznego poziomi i zniszczyć
- elementy przełączające.
+ Bez złagodzenia napięcia może wzrosnąć do niebezpiecznego poziomi i
+\begin_inset space ~
+\end_inset
+
+zniszczyć elementy przełączające.
  Aby rozwiązać problem na okres, kiedy ani elementy przełączające, ani diody
  nie nie przewodzą, kondensator musi być podłączony do styków silnika.
  Niektóre silniki posiadają już kondensatory, jednak wiele wymaga zewnętrznych.
@@ -3200,10 +3517,21 @@ Narzędzia, moduły, kadłub
 \end_layout
 
 \begin_layout Standard
-Rozdział ten opisuje techniczne aspekty narzędzi i modułów planowanych do
- użycia w trakcie realizacji pracy.
+Rozdział ten opisuje techniczne aspekty narzędzi i
+\begin_inset space ~
+\end_inset
+
+modułów planowanych do użycia w
+\begin_inset space ~
+\end_inset
+
+trakcie realizacji pracy.
  Opracowany materiał pochodzi z ekstrakcji najbardziej użytecznych informacji
- zawartych w dokumentacjach producentów opisywanych narządzi i modułów.
+ zawartych w dokumentacjach producentów opisywanych narządzi i
+\begin_inset space ~
+\end_inset
+
+modułów.
 \end_layout
 
 \begin_layout Section
@@ -3282,16 +3610,39 @@ in.:
 \end_layout
 
 \begin_layout Itemize
-zarządzanie projektem i integrację z kontrolą wersji (CVS)
+zarządzanie projektem i
+\begin_inset space ~
+\end_inset
+
+integrację z kontrolą wersji (CVS)
 \end_layout
 
 \begin_layout Itemize
-edytor C/C++ z podświetlaniem składni i automatycznym uzupełnianiem kodu
+edytor C/C++ z podświetlaniem składni i
+\begin_inset space ~
+\end_inset
+
+automatycznym uzupełnianiem kodu
 \end_layout
 
 \begin_layout Itemize
-wsparcie uruchamiania i debugowania włącznie z krokowym przetwarzaniem kodu
- źródłowego i na poziomie instrukcji maszynowej wraz z pułapkami (ang.
+wsparcie uruchamiania i
+\begin_inset space ~
+\end_inset
+
+debugowania włącznie z krokowym przetwarzaniem kodu źródłowego i
+\begin_inset space ~
+\end_inset
+
+na poziomie instrukcji
+\begin_inset space ~
+\end_inset
+
+maszynowej wraz z pułapkami
+\begin_inset space ~
+\end_inset
+
+(ang.
  
 \shape italic
 \lang british
@@ -3302,11 +3653,23 @@ breakpoints
 \end_layout
 
 \begin_layout Itemize
-podgląd rejestrów, pamięci oraz wejścia i wyjścia
+podgląd rejestrów, pamięci
+\begin_inset space ~
+\end_inset
+
+oraz wejścia i
+\begin_inset space ~
+\end_inset
+
+wyjścia
 \end_layout
 
 \begin_layout Itemize
-konfigurację platformy docelowej i zarządzanie nią.
+konfigurację platformy docelowej i
+\begin_inset space ~
+\end_inset
+
+zarządzanie nią.
 \end_layout
 
 \begin_layout Standard
@@ -3429,9 +3792,17 @@ textregistered}
 
 \begin_layout Standard
 AVR32 Studio wspiera również wszystkie płyty firmy ATMEL przewidziane dla
- systemu Linux, takie jak STK1000 i NGW100.
- Aby uruchamiać i debugować system docelowy potrzebne jest połączenie sieciowe
- pomiędzy komputerem a płytą.
+ systemu Linux, takie jak STK1000 i
+\begin_inset space ~
+\end_inset
+
+NGW100.
+ Aby uruchamiać i
+\begin_inset space ~
+\end_inset
+
+debugować system docelowy potrzebne jest połączenie sieciowe pomiędzy komputerem
+ a płytą.
  AVR32 Studio integruje się z łańcuchem narzędzi GNU (ang.
  
 \shape italic
@@ -3468,10 +3839,17 @@ name "sub:Środowisko-ramowe"
 framework
 \shape default
 \lang polish
-) dostarcza sterowniki i biblioteki do budowy aplikacji dla układów megaAVR,
- AVR XMEGA and AVR UC3 firmy Atmel.
+) dostarcza sterowniki i
+\begin_inset space ~
+\end_inset
+
+biblioteki do budowy aplikacji dla układów megaAVR, AVR XMEGA and AVR UC3
+ firmy Atmel.
  Zostało zaprojektowane do przyspieszenia procesu tworzenia aplikacji i
- łączy ze sobą różne komponenty architektury.
+\begin_inset space ~
+\end_inset
+
+łączy ze sobą różne komponenty architektury.
  Jako produkt pod nazwą 
 \lang british
 AVR Software Framework
@@ -3482,18 +3860,29 @@ AVR Software Framework
 \end_layout
 
 \begin_layout Standard
-Dzięki dostarczonym przez firmę Atmel sterownikom i przykładom, zdecydowanie
- szybciej programuje się peryferia mikrokontrolera, pozwala też na pominięcie
- etapu szczegółowej weryfikacji kodu uzyskującego dostęp do rejestrów.
+Dzięki dostarczonym przez firmę Atmel sterownikom i
+\begin_inset space ~
+\end_inset
+
+przykładom, zdecydowanie szybciej programuje się peryferia mikrokontrolera,
+ pozwala też na pominięcie etapu szczegółowej weryfikacji kodu uzyskującego
+ dostęp do rejestrów.
  Po zweryfikowaniu dokumentacji mikrokontrolera, gdy posiadamy wiedzę o
- tym, co chcemy zrealizować, wystarczy sięgnąć po odpowiedni plik i zawarte
- w nim funkcje.
+ tym, co chcemy zrealizować, wystarczy sięgnąć po odpowiedni plik i
+\begin_inset space ~
+\end_inset
+
+zawarte w nim funkcje.
  Proces pisania rozdrobnionego kodu realizującego pojedyncze atomowe operacje
  według wytycznych z dokumentacji przestaje być potrzebny.
  Cały ASF jest udokumentowany w formacie Doxygen.
  Separacja funkcji niskiego poziomu pozwala zachować większy porządek w
- pisanym kodzie i odsuwa pokusę pisania w pośpiechu kodu mieszającego operację
- niskiego poziomu z operacjami logiki aplikacji.
+ pisanym kodzie i
+\begin_inset space ~
+\end_inset
+
+odsuwa pokusę pisania w pośpiechu kodu mieszającego operację niskiego poziomu
+ z operacjami logiki aplikacji.
 \end_layout
 
 \begin_layout Standard
@@ -3516,7 +3905,11 @@ Doxygen
 Doxygen to narzędzie do generowania dokumentacji dla programów w językach
  C, C++, C#, Fortran, Java, Objective-C, PHP, Python, IDL, VHDL.
  Może być uruchamiane pod kontrolą wielu systemów operacyjnych, w tym Mac
- OS X i Windows.
+ OS X i
+\begin_inset space ~
+\end_inset
+
+Windows.
  Pierwsza wersja Doxygen powstała na bazie części kodu starszych wersji
  DOC++; później kod Doxygen'a został przepisany od początku przez Dimitri
  van Heesch'a.
@@ -3531,26 +3924,48 @@ Doxygen służy do generacji referencyjnej dokumentacji.
  Dzięki temu możliwe jest utrzymywanie aktualnej wersji dokumentacji wraz
  z kodem.
  Doxygen pozwala na tworzenie odniesień do kodu, dzięki czemu czytelnik
- może zapoznać się z fragmentem kodu powiązanym z czytanym fragmentem dokumentac
-ji.
+ może zapoznać się z
+\begin_inset space ~
+\end_inset
+
+fragmentem kodu powiązanym z czytanym fragmentem dokumentacji.
 \end_layout
 
 \begin_layout Standard
-Wśród programistów Doxygen ma swoich silnych przeciwników i zwolenników.
- Przeciwnicy zwracają uwagę na fakt, że samo zastosowanie Doxygena, nie
+Wśród programistów Doxygen ma swoich silnych przeciwników i
+\begin_inset space ~
+\end_inset
+
+zwolenników.
+ Przeciwnicy zwracają uwagę na fakt, że samo zastosowanie Doxygen'a, nie
  powoduje powstania przydatnej dokumentacji, ponieważ treść komentarzy ktoś
  musi uzupełniać.
  Część menadżerów uważa zaś, że mogą umyć ręce od problemu dokumentowania
  kodu, jeżeli w projekcie stosowany jest Doxygen.
- Prowadzi do do sytuacji, gdzie Doxygen jest uruchamiany, ale w efekcie
- powstaje tylko coś na kształt spisu funkcji.
+ Prowadzi do do sytuacji, gdzie Doxygen jest uruchamiany, ale w
+\begin_inset space ~
+\end_inset
+
+efekcie powstaje tylko coś na kształt spisu funkcji.
 \end_layout
 
 \begin_layout Standard
 Zwolennicy Doxygena zwracają uwagę, że prawidłowo przygotowane opisy są
- pomocne w dalszym rozwoju kodu i przy poprawianiu błędów.
+ pomocne w
+\begin_inset space ~
+\end_inset
+
+dalszym rozwoju kodu i
+\begin_inset space ~
+\end_inset
+
+przy poprawianiu błędów.
  Format komentarzy Doxygen'a narzuca pewne wymagania co do sposobu komentowania
- funkcji i innych elementów kodu programów.
+ funkcji i
+\begin_inset space ~
+\end_inset
+
+innych elementów kodu programów.
  Takie komentarze są czytelne również w samym kodzie dla czytającego go
  programisty.
 \end_layout
@@ -3591,7 +4006,11 @@ at-sign
 \shape default
 \lang polish
 ).
- Przykładowe komentarze w formacie Doxygen'a wyglądają następująco:
+ Przykładowe komentarze w
+\begin_inset space ~
+\end_inset
+
+formacie Doxygen'a wyglądają następująco:
 \end_layout
 
 \begin_layout Standard
@@ -3705,13 +4124,24 @@ void do_nothing(int d)
 \end_layout
 
 \begin_layout Standard
-Doxygen potrafi wygenerować dokumentację w formatach HTML i LaTeX, jak również
- w MS HTML Help, RTF, man pages.
+Doxygen potrafi wygenerować dokumentację w formatach HTML i
+\begin_inset space ~
+\end_inset
+
+LaTeX, jak również w
+\begin_inset space ~
+\end_inset
+
+MS HTML Help, RTF, man pages.
  Proces odbywa się przez przefiltrowanie kodu źródłowego ze wskazanych katalogów
  projektu, a następnie tłumaczenie wewnętrznego formatu na jeden z formatów
  dokumentacji.
  Przy czym struktura aplikacji, a nawet stos wywołań może być zachowywany
- i prezentowany, np.
+ i
+\begin_inset space ~
+\end_inset
+
+prezentowany, np.
  w formie graficznych wykresów zależności.
 \end_layout
 
@@ -3722,8 +4152,11 @@ KiCad
 \begin_layout Standard
 KiCad jest mocno rozpowszechnionym pakietem programów wspomagania projektowania
  elektronicznego.
- Został stworzony przez Jean-Pierre Charras'a i dziś jest rozwijany przez
- kilku innych programistów.
+ Został stworzony przez Jean-Pierre Charras'a i
+\begin_inset space ~
+\end_inset
+
+dziś jest rozwijany przez kilku innych programistów.
  Główne aplikacje pakietu KiCad to:
 \end_layout
 
@@ -3742,9 +4175,12 @@ pcbnew
 pcbnew jest edytorem projektów płytek drukowanych, który pozwala na rysowanie
  ścieżek pomiędzy elementami na wielu warstwach projektowanej płytki; może
  eksportować rysunki warstw do różnych formatów graficznych; generuje pliki
- formatu Gerber, które w zakładach produkcji płytek drukowanych służą do
- naświetlania filmów wykorzystywanych przy nanoszeniu obrazu ścieżek na
- laminat metodą fotograficzną.
+ formatu Gerber, które w
+\begin_inset space ~
+\end_inset
+
+zakładach produkcji płytek drukowanych służą do naświetlania filmów wykorzystywa
+nych przy nanoszeniu obrazu ścieżek na laminat metodą fotograficzną.
 \end_layout
 
 \begin_layout Description
@@ -3777,8 +4213,11 @@ reference "sec:Moduł-sterowania-zasilaniem-2"
 \end_layout
 
 \begin_layout Standard
-Największą wadą pakietu KiCad są niedopracowane i nieuporządkowane biblioteki
- elementów.
+Największą wadą pakietu KiCad są niedopracowane i
+\begin_inset space ~
+\end_inset
+
+nieuporządkowane biblioteki elementów.
  Bardzo wielu użytkowników KiCad tworzy własne biblioteki zupełnie od podstaw.
  Wynika to przeważnie z odmiennych oczekiwań co do standardów, jakie muszę
  spełniać projekty wyprowadzeń układów (pól lutowniczych) do produkcji płytek
@@ -3787,8 +4226,12 @@ Największą wadą pakietu KiCad są niedopracowane i nieuporządkowane bibliote
 
 \begin_layout Standard
 Do realizacji projektów płytek drukowanych w tym projekcie wykorzystano
- istniejące i dostępne w Internecie biblioteki elementów, a brakujące komponenty
- uzupełniono własnymi rysunkami komponentów.
+ istniejące i
+\begin_inset space ~
+\end_inset
+
+dostępne w Internecie biblioteki elementów, a brakujące komponenty uzupełniono
+ własnymi rysunkami komponentów.
 \end_layout
 
 \begin_layout Subsection
@@ -3828,8 +4271,19 @@ What You See Is What You Mean
  Cała popularna inteligencja formatowania ukryta w LaTeX jest przedstawiana
  użytkownikowi poprzez wizualne elementy kontrolne, jak okno spisu treści,
  służące za nawigator po konspekcie, żywe odnośniki (to podpisów ilustracji
- i tabel, sekcji, stron i cytatów), automatyczną obsługę wielopoziomowych
- sekcji i numerację list, oraz wiele więcej.
+ i
+\begin_inset space ~
+\end_inset
+
+tabel, sekcji, stron i
+\begin_inset space ~
+\end_inset
+
+cytatów), automatyczną obsługę wielopoziomowych sekcji i
+\begin_inset space ~
+\end_inset
+
+numerację list, oraz wiele więcej.
  Polega to na określaniu czym jest słowo lub wiersz w tekście, np.
  to jest standardowy tekst, to jest tytuł sekcji, to jest przypis, to jest
  podpis pod wstawioną ilustracją.
@@ -3838,9 +4292,17 @@ What You See Is What You Mean
 \begin_layout Standard
 Takie podejście ma zalety ergonomiczne.
  Można czcionkę ekranową powiększyć do rozmiarów odpowiadających piszącemu
- – bez zaburzania marginesów i formatowania finalnego produktu.
+ – bez zaburzania marginesów i
+\begin_inset space ~
+\end_inset
+
+formatowania finalnego produktu.
  W ten sposób można pracować nawet na małym ekranie (lub gdy oczy są zmęczone
- lub niezbyt sprawne) i otrzymać gotowy dokument po kilku podglądach stron.
+ lub niezbyt sprawne) i
+\begin_inset space ~
+\end_inset
+
+otrzymać gotowy dokument po kilku podglądach stron.
 \end_layout
 
 \begin_layout Standard
@@ -3854,14 +4316,21 @@ szare eminencje
 \begin_inset Quotes prd
 \end_inset
 
- zespołu LyX, to Lars Gullik Bjønnes i Jean-Marc Lasgouttes.
+ zespołu LyX, to Lars Gullik Bjønnes i
+\begin_inset space ~
+\end_inset
+
+Jean-Marc Lasgouttes.
  Wyjątkowe podziękowania należą się Matthiasowi Ettrichowi, który to wszystko
  rozpoczął.
 \end_layout
 
 \begin_layout Standard
-Treść tej pracy została napisana w LyX i zawdzięcza swój wygląd generacji
- przez LaTeX dokumentu w formacie PDF.
+Treść tej pracy została napisana w LyX i
+\begin_inset space ~
+\end_inset
+
+zawdzięcza swój wygląd generacji przez LaTeX dokumentu w formacie PDF.
  Pozwolił się skoncentrować na napisaniu treści w oderwaniu od programistycznych
  niuansów LaTeX, z zachowaniem jego potęgi w formatowaniu dokumentów.
 \end_layout
@@ -3943,14 +4412,24 @@ textregistered}
 
  JTAG ICE mk-II z firmy Atmel jest silnym narzędziem do On-chip Debugging
  wszystkich typów 8-bitowych mikrokontrolerów AVR RISC z interfejsem IEEE
- 1149.1 (opisany w podrozdziale 
+ 1149.1
+\begin_inset Branch Interfejsy
+status collapsed
+
+\begin_layout Standard
+ (opisany w podrozdziale 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:Interfejs-JTAG"
 
 \end_inset
 
-) lub interfejsem debugWIRE.
+)
+\end_layout
+
+\end_inset
+
+ lub interfejsem debugWIRE.
  Interfejs DebugWIRE pozwala na debugowanie układów o małej liczbie wyprowadzeń
  dzięki użyciu tylko jednej linii sygnałowej do komunikacji.
  JTAG ICE mk-II wraz z programem AVR Studio daje do ręki użytkownika kompletną
@@ -3963,7 +4442,11 @@ reference "sec:Interfejs-JTAG"
 \begin_layout Standard
 Dzięki temu narzędziu zasoby mikrokontrolera AVR mogą być monitorowane:
  pamięć Flash, pamięć EEPROM, pamięć SRAM, rejestry, licznik programu, bity
- blokujące i zabezpieczające, oraz wszystkie moduły wejścia/wyjścia.
+ blokujące i
+\begin_inset space ~
+\end_inset
+
+zabezpieczające, oraz wszystkie moduły wejścia/wyjścia.
  Wspierane jest także rozległe wsparcie dla warunków zatrzymania, włączając
  w to zmianę przepływu w programie, zmianę komórek pamięci pod konkretnym
  adresem lub zakresami adresów.
@@ -3971,7 +4454,11 @@ Dzięki temu narzędziu zasoby mikrokontrolera AVR mogą być monitorowane:
 
 \begin_layout Standard
 Oprócz debugowania istotną funkcją realizowaną przez JTAG ICE mk-II jest
- programowanie pamięci Flash i EEPROM mikrokontrolerów AVR
+ programowanie pamięci Flash i
+\begin_inset space ~
+\end_inset
+
+EEPROM mikrokontrolerów AVR
 \begin_inset ERT
 status collapsed
 
@@ -3986,16 +4473,28 @@ textregistered}
 
 \end_inset
 
- i AVR32.
+ i
+\begin_inset space ~
+\end_inset
+
+AVR32.
  Chcąc programować układy AVR32 z pominięciem funkcjonalności programu startoweg
 o niezbędne jest posiadanie takiego właśnie urządzenia.
- Elastyczne ustawianie i kasowanie bitów zabezpieczających w tej serii układów,
- jest możliwe tylko z tym narzędziem.
+ Elastyczne ustawianie i
+\begin_inset space ~
+\end_inset
+
+kasowanie bitów zabezpieczających w tej serii układów, jest możliwe tylko
+ z tym narzędziem.
 \end_layout
 
 \begin_layout Standard
 Integracja ze środowiskiem AVR32 Studio obejmuje poza programowaniem układów
- i debugowaniem, również aktualizację oprogramowania w samym urządzeniu.
+ i
+\begin_inset space ~
+\end_inset
+
+debugowaniem, również aktualizację oprogramowania w samym urządzeniu.
  Aplikacja ta bazuje na uznanym standardzie środowisk programistycznych,
  czyli Eclipse.
 \end_layout
@@ -4067,7 +4566,7 @@ Zestaw EVK1100
 \end_layout
 
 \begin_layout Standard
-Zestaw uruchomieniowy EVK1100 pokazany na rysunku 
+Zestaw uruchomieniowy EVK1100 pokazany na ilustracji 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Fotografia EVK1100"
@@ -4101,8 +4600,11 @@ h peryferiach.
 \end_layout
 
 \begin_layout Standard
-Płyta zawiera następujące układy peryferyjne zainstalowane i gotowe do użycia
- przez programistę:
+Płyta zawiera następujące układy peryferyjne zainstalowane i
+\begin_inset space ~
+\end_inset
+
+gotowe do użycia przez programistę:
 \end_layout
 
 \begin_layout Itemize
@@ -4243,7 +4745,11 @@ wzroku
 \begin_inset Quotes prd
 \end_inset
 
- (5,64 mm) i rozdzielczości efektywnej 640
+ (5,64 mm) i
+\begin_inset space ~
+\end_inset
+
+rozdzielczości efektywnej 640
 \begin_inset Formula $\times$
 \end_inset
 
@@ -4291,14 +4797,14 @@ Moduł Bluetooth
 
 \begin_layout Standard
 \begin_inset Wrap figure
-lines 9
-placement O
+lines 10
+placement r
 overhang 0in
-width "40text%"
+width "55mm"
 status open
 
 \begin_layout Plain Layout
-\begin_inset VSpace -12mm
+\begin_inset VSpace -14mm
 \end_inset
 
 
@@ -4353,18 +4859,30 @@ target "http://www.sparkfun.com/products/8474"
 
 \end_inset
 
- i został zaprojektowany do zastąpienia przewodów połączeniach do komunikacji
+ i
+\begin_inset space ~
+\end_inset
+
+został zaprojektowany do zastąpienia przewodów połączeniach do komunikacji
  szeregowej.
  Kompletny stos Bluetooth jest zamknięty w układzie scalonym BGB203 produkcji
  firmy NXP.
- Użytkownik końcowy przesyła strumień znaków przesyłany z terminalu i odbiera
- odpowiedź z urządzenia połączonego do modułu.
+ Użytkownik końcowy przesyła strumień znaków przesyłany z
+\begin_inset space ~
+\end_inset
+
+terminalu i odbiera odpowiedź z urządzenia połączonego do modułu.
  Układ ma na wyposażeniu bogaty zestaw komend AT (lista dostępna na stronie
  produktu).
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Funkcje:
+\noindent
+Funkcje modułu:
 \end_layout
 
 \begin_layout Itemize
@@ -4497,8 +5015,11 @@ reference "fig:Roboactor-orig"
  W celu zapewnienia właściwego zasilania robota, oryginalne uchwyty na baterie
  zostały zamienione na elementy własnej konstrukcji, w których umieszczono
  akumulatory żelowe.
- Dokładniejszy opis i ilustracje wykonanych modyfikacji znajdują się w rozdziale
- 
+ Dokładniejszy opis i
+\begin_inset space ~
+\end_inset
+
+ilustracje wykonanych modyfikacji znajdują się w rozdziale 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:Przebudowa-RoboActor"
@@ -4520,7 +5041,7 @@ reference "fig:Oryginalny-kontroler"
 .
  Robot po modyfikacji jest sterowany aplikacją kontrolną na uruchamianą
  na komputerze PC, która komunikuje się z robotem protokołem tekstowym za
- pośrednictem bezprzewodowego połączenia Bluetooth.
+ pośrednictwem bezprzewodowego połączenia Bluetooth.
  Komunikacja w tym standardzie umożliwia np.
  kontrolę robota za pomocą aplikacji uruchomionej na telefonie komórkowym.
 \end_layout
@@ -4546,9 +5067,20 @@ zabawnie się buja na boki
 \end_inset
 
 , ale ciekawie rozwiązany.
- Ruchu ramion i chwytaków tej konstrukcji mechanicznej ma bardzo ograniczony
- stopień swobody.
- Związanie otwierania i zamykania chwytaka z ruchem w 
+ Ruchu ramion i
+\begin_inset space ~
+\end_inset
+
+chwytaków tej konstrukcji mechanicznej ma bardzo ograniczony stopień swobody.
+ Związanie otwierania i
+\begin_inset space ~
+\end_inset
+
+zamykania chwytaka z ruchem w
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Quotes pld
 \end_inset
 
@@ -4558,11 +5090,14 @@ zabawnie się buja na boki
 
  mocno ogranicza możliwości manipulacji kończynami, szczególnie przy próbach
  chwytania przedmiotów.
- Problem ten stanowi nawiększym ograniczenie mechaniczne nakładane przez
- kadłub z zawabki Roboactor.
- Rozwarzano dorobienie elektromechanicznego uniezależnienia ruchu chwytaka
- od obrotowego zgięcia łokcia ramienia robota, lecz zakres pracy i modyfikacji
- mógby być przedmiotem odrębnej pracy dyplomowej.
+ Problem ten stanowi największe ograniczenie mechaniczne nakładane przez
+ kadłub z zabawki Roboactor.
+ Rozważano dorobienie elektromechanicznego uniezależnienia ruchu chwytaka
+ od obrotowego zgięcia łokcia ramienia robota, lecz zakres pracy i
+\begin_inset space ~
+\end_inset
+
+modyfikacji mógłby być przedmiotem odrębnej pracy dyplomowej.
 \end_layout
 
 \begin_layout Chapter
@@ -4646,19 +5181,31 @@ Acorn
 \lang polish
  na brytyjskim rynku w owym czasie, przypominało tryumfy komputerów Apple
  w Stanach Zjednoczonych.
- W latach odpowiednio 1985 i roku następnym, 
+ W latach odpowiednio 1985 i
+\begin_inset space ~
+\end_inset
+
+roku następnym, 
 \lang british
 Acorn
 \lang polish
- prezentuje kolejno procesory ARM1 i ARM2.
+ prezentuje kolejno procesory ARM1 i
+\begin_inset space ~
+\end_inset
+
+ARM2.
 \end_layout
 
 \begin_layout Standard
 Cechą szczególną całej rodziny procesorów ARM, w tym również odgałęzień
  jest zestaw instrukcji maszynowych łączących pewne zestawy operacji często
  pojawiających się w kodzie napisanych w językach wyższego poziomu.
- Dzięki czemu, skompilowany kod binarny jest bardzo mały i może być wykonywany
- szybko, mimo niskich częstotliwości zegarów taktujących pracę rdzenia procesora.
+ Dzięki czemu, skompilowany kod binarny jest bardzo mały i
+\begin_inset space ~
+\end_inset
+
+może być wykonywany szybko, mimo niskich częstotliwości zegarów taktujących
+ pracę rdzenia procesora.
  Zachowano przy tym mechanizmy z procesorów RISC, gwarantujące stałą długość
  rozkazu.
  ARM dodatkowo rozszerzyła możliwości rdzeni o technologie 
@@ -4671,7 +5218,11 @@ Thumb
 \shape smallcaps
 Thumb-2
 \shape default
- i 
+ i
+\begin_inset space ~
+\end_inset
+
+
 \shape smallcaps
 Neon
 \shape default
@@ -5363,8 +5914,15 @@ http://www.atmel.com/products/avr32/
 
 \begin_layout Description
 UC3 lżejszej odmianie rdzenia mikrokontrolera dla dla mocno zintegrowanych
- rozwiązań o niskim poborze energii do kontroli i sterowania, którego schemat
- blokowy przedstawia rysunek 
+ rozwiązań o
+\begin_inset space ~
+\end_inset
+
+niskim poborze energii do kontroli i
+\begin_inset space ~
+\end_inset
+
+sterowania, którego schemat blokowy przedstawia ilustracja 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Schemat-blokowy-AVR32"
@@ -5377,32 +5935,55 @@ reference "fig:Schemat-blokowy-AVR32"
 \begin_layout Description
 AP7 odmianie wysokowydajnych mikrokontrolerów dla zaawansowanych multimedialnych
  aplikacji przenośnych, mogący między innymi pracować pod kontrolą systemu
- operacyjnego Linux; układ AP7000 znajduje się w sprzedaży jako produkt
- dojrzały, nowe produkty w tej linii nie pojawią się.
+ operacyjnego Linux; układ AP7000 znajduje się w
+\begin_inset space ~
+\end_inset
+
+sprzedaży jako produkt dojrzały, nowe produkty w
+\begin_inset space ~
+\end_inset
+
+tej linii nie pojawią się.
 \end_layout
 
 \begin_layout Standard
-Istotną przewagą oferty firmy Atmel i układów AVR32 nad układami innych
- producentów jest bardzo silne wsparcie dla amatorów oraz środowiska otwartego
- oprogramowania.
+Istotną przewagą oferty firmy Atmel i
+\begin_inset space ~
+\end_inset
+
+układów AVR32 nad układami innych producentów jest bardzo silne wsparcie
+ dla amatorów oraz środowiska otwartego oprogramowania.
  W potencjał układów AP7000 przegrał jednak na rynku z uniwersalnością procesoró
 w projektu firmy ARM, które pod postacią produktów różnych producentów trafiły
- do szerokiej gamy telefonów komórkowych i tabletów.
- Firma ATMEL sama oferuje procesory oparte o architekturę ARM (Wzmianka
- w sekcji 
+ do szerokiej gamy telefonów komórkowych i
+\begin_inset space ~
+\end_inset
+
+tabletów.
+ Firma ATMEL sama oferuje procesory oparte o architekturę ARM
+\begin_inset Branch Pozostałe-mikrokontrolery
+status collapsed
+
+\begin_layout Standard
+ (Wzmianka w sekcji 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sub:Atmel-ARM"
 
 \end_inset
 
-).
+)
+\end_layout
+
+\end_inset
+
+.
  
 \begin_inset Float figure
 placement !tbh
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -5452,8 +6033,14 @@ Mikrokontroler AT32UC3A0512
 \end_layout
 
 \begin_layout Standard
-Układ AT32UC3A jest kompletnym systemem-w-układzie na bazie 32-bitowego
- rdzenia AVR32 UC typu RISC działającym z
+Układ AT32UC3A jest kompletnym systemem-w-układzie (ang.
+ 
+\shape slanted
+\lang british
+system-on-a-chip
+\shape default
+\lang polish
+) na bazie 32-bitowego rdzenia AVR32 UC typu RISC działającym z
 \begin_inset space ~
 \end_inset
 
@@ -5464,37 +6051,69 @@ częstotliwością do 66
 MHz.
  Rdzeń tego typu został zaprojektowany w celu redukcji kosztów aplikacji
  wbudowanych ze szczególnym naciskiem na niskie zużycie mocy, wysoką gęstość
- kodu i wysoką wydajność.
+ kodu i
+\begin_inset space ~
+\end_inset
+
+wysoką wydajność.
 \end_layout
 
 \begin_layout Standard
-Układ posiada jednostkę ochrony pamięci (MPU) oraz szybki i elastyczny kontroler
- przerwań wspierający nowoczesne systemy operacyjne i systemy operacyjne
- czasu rzeczywistego.
+Układ posiada jednostkę ochrony pamięci (MPU) oraz szybki i
+\begin_inset space ~
+\end_inset
+
+elastyczny kontroler przerwań wspierający nowoczesne systemy operacyjne
+ i
+\begin_inset space ~
+\end_inset
+
+systemy operacyjne czasu rzeczywistego.
  Wysoka wydajność obliczeniowa jest osiągalna dzięki bogatemu zestawowi
  instrukcji DSP.
 \end_layout
 
 \begin_layout Standard
-Układ AT32UC3A0512 zawiera wewnętrzną pamięć Flash i pamięć statyczną dla
- bezpiecznego i szybkiego dostępu.
+Układ AT32UC3A0512 zawiera wewnętrzną pamięć Flash i
+\begin_inset space ~
+\end_inset
+
+pamięć statyczną dla bezpiecznego i
+\begin_inset space ~
+\end_inset
+
+szybkiego dostępu.
  Aplikacje wymagające większej dodatkowej pamięci mogą skorzystać z interfejsu
  zewnętrznej pamięci dynamicznej.
  Kontroler peryferyjnego bezpośredniego dostępu do pamięci (PDCA) umożliwia
  transfer danych pomiędzy peryferiami a pamięcią bez angażowania procesora.
- PDCA drastycznie redukuje koszty transferu ciągłych i wielkich strumieni
- danych pomiędzy modułami wewnątrz mikrokontrolera.
+ PDCA drastycznie redukuje koszty transferu ciągłych i
+\begin_inset space ~
+\end_inset
+
+wielkich strumieni danych pomiędzy modułami wewnątrz mikrokontrolera.
 \end_layout
 
 \begin_layout Standard
 Układ zarządzania zasilaniem PowerManager udoskonala elastyczność projektu
- i bezpieczeństwo -- wykrywa zaniki zasilania.
+ i
+\begin_inset space ~
+\end_inset
+
+bezpieczeństwo -- wykrywa zaniki zasilania.
  Mikrokontroler może być taktowany z wewnętrznego oscylatora RC lub z jednego
- z zewnętrznych oscylatorów, zegar czasu rzeczywistego i powiązany z nim
- timer utrzymują pomiar czasu.
+ z zewnętrznych oscylatorów, zegar czasu rzeczywistego i
+\begin_inset space ~
+\end_inset
+
+powiązany z nim timer utrzymują pomiar czasu.
  Timery/Liczniki to 3 kanały 16-bitowe.
  Każdy kanał jest programowany niezależnie do pomiaru częstotliwości, zliczania
- zdarzeń, generacji impulsów, pomiaru opóźnień i modulacji szerokości impulsów.
+ zdarzeń, generacji impulsów, pomiaru opóźnień i
+\begin_inset space ~
+\end_inset
+
+modulacji szerokości impulsów.
 \end_layout
 
 \begin_layout Standard
@@ -5511,7 +6130,11 @@ Przez polaryzację sygnału PWM należy rozumieć ustalenie, czy bazowym poziome
 
 \end_inset
 
-, wyrównanie krawędzi i niezachodzenie sygnału.
+, wyrównanie krawędzi i
+\begin_inset space ~
+\end_inset
+
+niezachodzenie sygnału.
  Jeden z kanałów może wyzwalać przetwornik analogowo\SpecialChar \nobreakdash-
 cyfrowy, dzięki czemu
  możliwe są bardziej dokładne implementacje z zamknięta pętlą.
@@ -5527,7 +6150,11 @@ Synchronous Serial Controller
 \lang polish
 ), USB i Ethernet MAC.
  Kontroler synchroniczny udostępnia łatwy dostęp do protokołów komunikacji
- szeregowej i standardów audio takich, jak I
+ szeregowej i
+\begin_inset space ~
+\end_inset
+
+standardów audio takich, jak I
 \begin_inset Formula $^{2}$
 \end_inset
 
@@ -5545,7 +6172,7 @@ The\SpecialChar \nobreakdash-
 Go
 \lang polish
  (OTG) pozwala podłączać bezpośrednio do mikrokontrolera urządzenia typu
- dysk flash USB lub drukarkę USB.
+ dysk Flash USB lub drukarkę USB.
  Interfejs MII (ang.
  
 \shape italic
@@ -5563,8 +6190,12 @@ reduced media independent interfac
 \lang polish
 e
 \emph default
-) modułu MAC Ethernet dla prędkości 10 i 100 Mbps udostępnia rozwiązania
- wewnątrzukładowe dla urządzeń przyłączanych do sieci.
+) modułu MAC Ethernet dla prędkości 10 i
+\begin_inset space ~
+\end_inset
+
+100 Mbps udostępnia rozwiązania wewnątrzukładowe dla urządzeń przyłączanych
+ do sieci.
  AT32UC3A integruje debugowanie w układzie OCD (ang.
  
 \shape italic
@@ -5578,8 +6209,12 @@ Debug
 \shape default
 \lang polish
 ) klasy drugiej typu Nexus 2.0, pozwalający na bezinwazyjne śledzenie wykonania
- programu w czasie rzeczywistym, zapis i odczyt pamięci z pełną prędkością
- w połączeniu do podstawowej kontroli wykonywania programu.
+ programu w czasie rzeczywistym, zapis i
+\begin_inset space ~
+\end_inset
+
+odczyt pamięci z pełną prędkością w połączeniu do podstawowej kontroli wykonywan
+ia programu.
 \begin_inset Branch Pozostałe-mikrokontrolery
 status collapsed
 
@@ -6607,7 +7242,7 @@ PyMite
 Projekt maszyny wirtualnej PyMite wystartował w 2000 roku w domu autora
  w Austin, Teksas.
  Dean Hall uczynił źródła otwartymi i zaprezentował go na PyCon 2003 w Waszyngto
-nie i na spotkaniu Grupy Użytkownikół Python w Austin.
+nie i na spotkaniu Grupy Użytkowników Python w Austin.
  Początkowo projekt działał na dwóch platformach: komputerze PC i mikrokontroler
 ze Atmel ATmega103.
  Miał niewiele funkcji, a rozwój posuwał się powoli, mając wiele błędów.
@@ -7259,7 +7894,7 @@ zdalnego debuggera dla procesora wbudowanego
 \end_layout
 
 \begin_layout Itemize
-narzędzi do programowania pamięci flash mikrokontrolera
+narzędzi do programowania pamięci Flash mikrokontrolera
 \end_layout
 
 \begin_layout Itemize
@@ -7273,15 +7908,28 @@ status collapsed
 
 \begin_layout Plain Layout
 \noindent
-http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4118
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4118"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
  zestaw narzędzi bazujących na znanym kompilatorze GNU GCC.
  Kompilator GNU C (GCC) jest stosowany do kompilacji kodu źródłowego w językach
- C i C++, natomiast GNU debugger (GDB) ma zastosowanie do uruchamiania i
- debugowania aplikacji na platformie docelowej.
+ C i
+\begin_inset space ~
+\end_inset
+
+C++, natomiast GNU debugger (GDB) ma zastosowanie do uruchamiania i
+\begin_inset space ~
+\end_inset
+
+debugowania aplikacji na platformie docelowej.
 \end_layout
 
 \begin_layout Standard
@@ -7300,8 +7948,12 @@ avr32program
 
 \end_inset
 
- służy do zaprogramowania układu i wykonanie nastaw konfiguracyjnych napięć
- i zegara poprzez JTAG, natomiast narzędzie 
+ służy do zaprogramowania układu, wykonania nastaw konfiguracyjnych napięć
+ i
+\begin_inset space ~
+\end_inset
+
+zegara poprzez JTAG, natomiast narzędzie 
 \begin_inset listings
 lstparams "basicstyle={\ttfamily},language=bash"
 inline true
@@ -7318,17 +7970,14 @@ avr32gdbproxy
 \end_layout
 
 \begin_layout Standard
-Aby rozpocząć pracę nad kompilacją i uruchomieniem kodu niezbędna jest instalacj
-a tego zestawu z pomocą instalatora dostępnego na stronie firmy Atmel.
- Narzędzia te są niezbędne do prawidłowego korzystania ze środowiska AVR32
- Studio omówionego w podrozdziale 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "sec:prep-AVR32-Toolchain"
-
+Aby rozpocząć pracę nad kompilacją i
+\begin_inset space ~
 \end_inset
 
- oraz 
+uruchomieniem kodu niezbędna jest instalacja tego zestawu z pomocą instalatora
+ dostępnego na stronie firmy Atmel.
+ Narzędzia te są niezbędne do prawidłowego korzystania ze środowiska AVR32
+ Studio omówionego w podrozdziale 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:prep-AVR32-Studio"
@@ -7377,7 +8026,13 @@ status collapsed
 
 \begin_layout Plain Layout
 \noindent
-http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4116
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.atmel.com/dyn/products/tools_card.asp?tool_id=4116"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -7690,6 +8345,16 @@ brak
 
 \end_layout
 
+\begin_layout Standard
+W praktyce można stosować dowolną inną aplikację terminalu szeregowego dostępną
+ dla systemu Windows lub Linux, która umożliwa elastyczną konfigurację parametró
+w pracy portu szeregowego oraz lokalnego echa i
+\begin_inset space ~
+\end_inset
+
+znaków zakończenia wiersza.
+\end_layout
+
 \begin_layout Chapter
 \begin_inset CommandInset label
 LatexCommand label
@@ -7706,7 +8371,10 @@ Przed przystąpieniem do zasadniczej pracy nad projektem złożonym ze wszystkic
  moduły muszą być uruchomione i wstępnie przetestowane przed przystąpieniem
  do ich wzajemnej integracji.
  Rozdział ten omawia procedury rozruchowe najważniejszych komponentów i
- narzędzi zastosowanych w realizacji całości projektu opisanej w kolejnych
+\begin_inset space ~
+\end_inset
+
+narzędzi zastosowanych w realizacji całości projektu opisanej w kolejnych
  rozdziałach.
 \begin_inset Branch STK500
 status collapsed
@@ -7740,7 +8408,11 @@ reference "sub:AVR-serie"
  komunikacją RS-232 i programowaniem w systemie (ISP).
  Atrakcyjny zestaw inżynierski dostępny w promocji w roku 2007 nie zamyka
  się w samym STK500, ale zawiera również JTAG ICE mk-II opisane dokładniej
- w 
+ w
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:JTAG-ICE"
@@ -7817,20 +8489,34 @@ Quick Start Guide
 \begin_inset Quotes erd
 \end_inset
 
- i sprawdzeniu działania aplikacji testowej preinstalowanej przez producenta.
+ i
+\begin_inset space ~
+\end_inset
+
+sprawdzeniu działania aplikacji testowej preinstalowanej przez producenta.
  W następnym kroku przeprowadzamy kompilację programu testowego ze źródeł
  oraz ładowanie kodu binarnego na płytkę za pomocą JTAG ICE mk-II (opisanego
- w sekcji 
+ w podrozdziale 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:JTAG-ICE"
 
 \end_inset
 
+
+\begin_inset Branch STK500
+status collapsed
+
+\begin_layout Standard
  oraz sekcji 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:JTAG-ICE-rozruch"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -7869,10 +8555,25 @@ http://www.atmel.com/avr32
 
 \end_inset
 
- zawierającego między innymi kompilator gcc i debugger gdb dla procesora
- AVR32.
- Dodatkowo z płytki CD dostarczonej z zestawem EVK1100 lub ze strony producenta
- ściągamy bibliotekę kodu dla procesora typu UC3.
+ zawierającego między innymi kompilator 
+\family typewriter
+gcc
+\family default
+ i
+\begin_inset space ~
+\end_inset
+
+debugger 
+\family typewriter
+gdb
+\family default
+ dla procesora AVR32.
+ Dodatkowo z
+\begin_inset space ~
+\end_inset
+
+płytki CD dostarczonej z zestawem EVK1100 lub ze strony producenta ściągamy
+ bibliotekę kodu dla procesora typu UC3.
 \end_layout
 
 \begin_layout Description
@@ -7881,11 +8582,19 @@ Krok
 \end_inset
 
 2.
- Następnie przykładowy kod z katalogu 
+ Następnie przykładowy kod z katalogu
+\begin_inset Newline newline
+\end_inset
+
+
 \family typewriter
 /praca/framework/APPLICATIONS/EVK1100-CONTROL_PANEL/AT32UC3A/GCC
+\begin_inset Newline newline
+\end_inset
+
+
 \family default
- budujemy poleceniem 
+budujemy poleceniem 
 \family typewriter
 make
 \family default
@@ -7894,7 +8603,11 @@ make
 \family typewriter
 avr32-gcc
 \family default
- i tworzy wynikowy plik relokowalny 
+ i
+\begin_inset space ~
+\end_inset
+
+tworzy wynikowy plik relokowalny 
 \family typewriter
 uc3a0512-ctrlpanel.elf
 \family default
@@ -7939,8 +8652,11 @@ avr32program chiperase
 
 \begin_deeper
 \begin_layout Standard
-Usuwa to zabezpieczenia pamięci flash mikrokontrolera i pozwala na zapisanie
- nowego programu binarnego do tej pamięci.
+Usuwa to zabezpieczenia pamięci Flash mikrokontrolera i
+\begin_inset space ~
+\end_inset
+
+pozwala na zapisanie nowego programu binarnego do tej pamięci.
 \end_layout
 
 \end_deeper
@@ -7985,9 +8701,17 @@ avr32program program -finternal@0x80000000,512Kb -e -v uc3a0512-adc_example.elf
 \begin_inset Newline newline
 \end_inset
 
-w rezultacie kod binarny zostaje zaprogramowany w pamięci flash procesora.
+w
+\begin_inset space ~
+\end_inset
+
+rezultacie kod binarny zostaje zaprogramowany w pamięci Flash procesora.
  Zastosowane opcje programu informują programator, że adres pamięci programowaln
-ej zaczyna się pod adresem 0x80000000 i ma rozmiar 512
+ej zaczyna się pod adresem 0x80000000 i
+\begin_inset space ~
+\end_inset
+
+ma rozmiar 512
 \begin_inset space ~
 \end_inset
 
@@ -8034,8 +8758,11 @@ praca/framework/SERVICES/FREERTOS
 \end_layout
 
 \begin_layout Standard
-Ze względu na pewne ograniczenia i niedogodności w zarządzaniu projektem
- w 
+Ze względu na pewne ograniczenia i
+\begin_inset space ~
+\end_inset
+
+niedogodności w zarządzaniu projektem w 
 \series bold
 AVR32 Studio
 \series default
@@ -8048,10 +8775,13 @@ AVR32 Studio
 drivers
 \shape default
 \lang polish
-) i innych potrzebnych elementów ze szkieletu dostarczonego przez firmę
- Atmel.
+) i
+\begin_inset space ~
+\end_inset
+
+innych potrzebnych elementów ze szkieletu dostarczonego przez firmę Atmel.
  Zamiast systemu FreeRTOS dostarczonego ze szkieletem, załadowany został
- system zciągnięty ze strony 
+ system ściągnięty ze strony 
 \begin_inset Flex URL
 status collapsed
 
@@ -8062,7 +8792,11 @@ http://www.freertos.org
 
 \end_inset
 
- i umieszczony w katalogu 
+ i
+\begin_inset space ~
+\end_inset
+
+umieszczony w katalogu 
 \family typewriter
 praca/src/FREERTOS
 \family default
@@ -8070,7 +8804,11 @@ praca/src/FREERTOS
 \family typewriter
 AVR32_UC3
 \family default
- z podkatalogu 
+ z
+\begin_inset space ~
+\end_inset
+
+podkatalogu 
 \family typewriter
 portable/GCC
 \family default
@@ -8124,7 +8862,11 @@ z menu prawego przycisku myszy wybrać
 \begin_inset Quotes pld
 \end_inset
 
+
+\lang british
 Properties
+\lang polish
+
 \begin_inset Quotes prd
 \end_inset
 
@@ -8144,11 +8886,19 @@ w zakładce
 \begin_inset Quotes pld
 \end_inset
 
-Tool Settings" wybrać element 
+
+\lang british
+Tool Settings
+\lang polish
+" wybrać element 
 \begin_inset Quotes pld
 \end_inset
 
-AVR32/GNU Assembler"
+
+\lang british
+AVR32/GNU Assembler
+\lang polish
+"
 \end_layout
 
 \begin_layout Itemize
@@ -8174,7 +8924,11 @@ dodać w polu
 \begin_inset Quotes pld
 \end_inset
 
-Assembler Flags" wartość 
+
+\lang british
+Assembler Flags
+\lang polish
+" wartość 
 \family typewriter
 -x assembler-with-cpp -c
 \family default
@@ -8235,8 +8989,11 @@ Cały moduł został przykręcony do stelaża przytwierdzonego do obudowy robota
 \begin_inset space ~
 \end_inset
 
-V) poprzez jedną z linii kabla taśmowego i doprowadzone do oryginalnego
- wtyku zasilania płyty EVK1100.
+V) poprzez jedną z linii kabla taśmowego i
+\begin_inset space ~
+\end_inset
+
+doprowadzone do oryginalnego wtyku zasilania płyty EVK1100.
  Projektanci płyty nie przewidzieli wyprowadzenia (otworu) na płycie, do
  którego można by się podłączyć przed stabilizatorami napięć 5
 \begin_inset space ~
@@ -8269,7 +9026,7 @@ Pulse Width Modulation
 ) potrzebnym do sterowania silników prądu stałego w robocie.
  Pod wyświetlaczem widoczne są diody LED sterowane innymi wyprowadzeniami
  używanymi do sterowania silników, ubocznym efektem procesu sterowania jest
- więc miganie tych diód LED.
+ więc miganie tych diod LED.
 \end_layout
 
 \begin_layout Section
@@ -8364,7 +9121,7 @@ Robot zmodyfikowany (widok od tyłu)
 
 Podstawą mechaniczną robota omawianego w tej pracy jest zabawka o nazwie
  RoboActor pozbawiona oryginalnej elektroniki umieszczonej na plecach pod
- obudową, w miejscu widocznym na rysunku
+ obudową, w miejscu widocznym na ilustracji
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Moduł-sterownika-II"
@@ -8407,7 +9164,11 @@ V każda.
 \begin_inset space ~
 \end_inset
 
-V i pojemność 0,6
+V i
+\begin_inset space ~
+\end_inset
+
+pojemność 0,6
 \begin_inset space ~
 \end_inset
 
@@ -8468,7 +9229,7 @@ Konstrukcja do montażu akumulatorów zastępująca oryginalny uchwyt na baterie
 
 \end_inset
 
-Rysunek 
+Ilustracja 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Konstrukcja-do-akumulatora"
@@ -8481,27 +9242,52 @@ reference "fig:Konstrukcja-do-akumulatora"
  w celu połączenia blaszanego elementu wraz z częściami mechaniki w nodze.
  Po prawej stronie widać na szczycie elementu plastikowego śruby, które
  mocowały ten element do nóg robota.
- Wykonany substytut wykorzystał oryginalny układ otworów i dopasowany został
- do tej koncepcji mocowania.
+ Wykonany substytut wykorzystał oryginalny układ otworów i
+\begin_inset space ~
+\end_inset
+
+dopasowany został do tej koncepcji mocowania.
 \end_layout
 
 \begin_layout Standard
-Połączenia elektryczne akumulatorów są podwójne, jedna para przewodów z
- każdego z akumulatorów służy do zasilania robota poprzez płytę modułu sterowani
-a silników.
+Połączenia elektryczne akumulatorów są podwójne, jedna para przewodów każdego
+ z
+\begin_inset space ~
+\end_inset
+
+akumulatorów służy do zasilania robota poprzez płytę modułu sterowania silników.
  Druga para jest połączona z gniazdkiem służącym do ładowania.
  Dzięki temu nawet w przypadku pracy robota z podłączonym zasilaczem, prąd
  przepływa najpierw przez styki akumulatorów.
- W efekcie akumulatory są ładowane w każdym momencie, gdy prąd pobierany
- przez całego robota jest mniejszy od wydajności prądowej zasilacza, w przeciwny
-m wypadku akumulatory oddają energię by skompensować braki mocy zasilacza
+ W
+\begin_inset space ~
+\end_inset
+
+efekcie akumulatory są ładowane w każdym momencie, gdy prąd pobierany przez
+ całego robota jest mniejszy od wydajności prądowej zasilacza, w przeciwnym
+ wypadku akumulatory oddają energię by skompensować braki mocy zasilacza
  do zapewnienia prądów potrzebnych do zasilenia działających silników.
  Jest to zasilanie buforowe.
- Efektem ubocznym takiej formy zasilania w sytuacji bardzo mocno rozładowanych
- akumumlatorów jest widzoczne osłabione działanie silników spowodowane malejącą
- rezystancją rozładowanego akumulatora i zwiększaniem się jego zapotrzebowania
- na prąd do ładowania.
- W takiej sytuacji należy wyłączyć robota i naładować akumulatory.
+ Efektem ubocznym takiej formy zasilania w
+\begin_inset space ~
+\end_inset
+
+sytuacji bardzo mocno rozładowanych akumulatorów jest widoczne osłabione
+ działanie silników spowodowane malejącą rezystancją rozładowanego akumulatora
+ i
+\begin_inset space ~
+\end_inset
+
+zwiększaniem się jego zapotrzebowania na prąd do ładowania.
+ W
+\begin_inset space ~
+\end_inset
+
+takiej sytuacji należy wyłączyć robota i
+\begin_inset space ~
+\end_inset
+
+naładować akumulatory.
 \end_layout
 
 \begin_layout Standard
@@ -8512,8 +9298,12 @@ m wypadku akumulatory oddają energię by skompensować braki mocy zasilacza
 \end_inset
 
 2309.
- Jest to prosty i tani układ do ładowania akumulatorów o mniejszych pojemnościac
-h, szczególnie nowoczesnych, szczelnych akumulatorów żelowych.
+ Jest to prosty i
+\begin_inset space ~
+\end_inset
+
+tani układ do ładowania akumulatorów o mniejszych pojemnościach, szczególnie
+ nowoczesnych, szczelnych akumulatorów żelowych.
  Konfiguracja skutecznie zapobiega przeładowaniu akumulatora, nawet przy
  podłączeniu go na dowolnie długi okres czasu.
  Urządzenie zostało wyregulowane na dziesięciogodzinny prąd ładowania (dobór
@@ -8521,7 +9311,11 @@ h, szczególnie nowoczesnych, szczelnych akumulatorów żelowych.
 \begin_inset space ~
 \end_inset
 
-mA i napięcie maksymalne minimalnie niższe niż 14
+mA i
+\begin_inset space ~
+\end_inset
+
+napięcie maksymalne minimalnie niższe niż 14
 \begin_inset space ~
 \end_inset
 
@@ -8610,10 +9404,14 @@ plecach
 \begin_inset Quotes prd
 \end_inset
 
- obudowy robota jest zbyt mała, aby zamontowac tam tak dużą płytę.
+ obudowy robota jest zbyt mała, aby zamontować tam tak dużą płytę.
  Wykonany stelaż pozwala na wykorzystanie oryginalnych otworów na płycie
- do przykręcenia jej do umieszczonych w stelaąu tulei dystansowych.
- Z obudową robota stelaż jest połączony za pomocą śrub i tulei dystansowej.
+ do przykręcenia jej do umieszczonych w stelażu tulei dystansowych.
+ Z obudową robota stelaż jest połączony za pomocą śrub i
+\begin_inset space ~
+\end_inset
+
+tulei dystansowej.
  Ilustracja 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -8622,7 +9420,7 @@ reference "fig:Robot-mod-back"
 \end_inset
 
  prezentuje robota z zamocowaną do niego kartą.
- Na ilustracji
+ Na ilustracji 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Montaż-plecaka"
@@ -8660,6 +9458,18 @@ reference "sec:Moduł-sterowania-zasilaniem-2"
  Kablem tym dostarczane jest również zasilanie dla elektroniki na tej płycie.
  Dodatkowy przewód (czerwony na zdjęciu) łączy odpowiednie wyprowadzenie
  gniazda IDC z oryginalnym gniazdem zasilania EVK1100.
+ Pozostałe przewody łączą wyprowadzenia mikrokontrolera z
+\begin_inset space ~
+\end_inset
+
+wyprowadzeniami sterownika silników jak podano w tabeli 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:wyprowadzenia-pwm"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -8696,7 +9506,7 @@ V, to fizyczna interakcja interfejsu RS232 z logiką 3,3
 \begin_inset space ~
 \end_inset
 
-V modułu wymagała wykonania układu przejściowego według schematu z rysunku
+V modułu wymagała wykonania układu przejściowego według schematu z ilustracji
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -8753,7 +9563,7 @@ Schemat modułu konwertera RS232
 
 \begin_layout Standard
 Dla powyższego układu wykonana została płytka drukowana, której projekt
- prezentowany jest na rysunkach 
+ prezentowany jest na ilustracji 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Projekt-PCB-konwertera-RS232"
@@ -8962,7 +9772,11 @@ V.
 \end_inset
 
  (trzy znaki plus), który można przekonfigurować na inny ciąg właściwą komendą.
- Spis komend znajduje się w dokumentacji modułu Bluetooth (referencja).
+ Spis komend znajduje się w
+\begin_inset space ~
+\end_inset
+
+dokumentacji modułu Bluetooth (referencja).
 \end_layout
 
 \begin_layout Subsection
@@ -8977,10 +9791,21 @@ Pierwotnie przewidywano instalację modułu na podstawce przylutowanej na
 \end_layout
 
 \begin_layout Standard
-Ostatecznie w celu uproszczenia konstrukcji i pozostawienia portu komunikacyjneg
-o z możliwością opcjonalnego podłączenia kablowego z komputerem PC, wykorzystano
- opiasny powyżej konwerter i moduł Bluetooth razem z konwerterem jest wpinany
- do dziewięciopinowego portu oznaczonego 
+Ostatecznie w celu uproszczenia konstrukcji i
+\begin_inset space ~
+\end_inset
+
+pozostawienia portu komunikacyjnego z
+\begin_inset space ~
+\end_inset
+
+możliwością opcjonalnego podłączenia kablowego z komputerem PC, wykorzystano
+ opisany powyżej konwerter i
+\begin_inset space ~
+\end_inset
+
+moduł Bluetooth razem z konwerterem jest wpinany do dziewięciopinowego gniazda
+ oznaczonego 
 \family typewriter
 \lang british
 UART
@@ -9043,14 +9868,22 @@ ne zostały dwa układy sterujące:
 
 \begin_layout Enumerate
 Zaprojektowany na bazie sterowników MOSFET firmy Microchip, model TC4424A
- opisanymi w 
+ opisanymi w
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "tc4424a-datasheet"
 
 \end_inset
 
-; ta wersja została fizycznie wykonana i uruchomiona; pełny opis w sekcji
+; ta wersja została fizycznie wykonana i
+\begin_inset space ~
+\end_inset
+
+uruchomiona; pełny opis w sekcji
 \begin_inset space ~
 \end_inset
 
@@ -9066,7 +9899,11 @@ reference "sec:Moduł-sterowania-zasilaniem"
 
 \begin_layout Enumerate
 Zaprojektowany na bazie układów pełnych mostków firmy ST Microelectronics,
- model L298P opisanymi w 
+ model L298P opisanymi w
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ds-l298"
@@ -9330,7 +10167,7 @@ V
 
 \begin_layout Standard
 Wewnętrzna architektura układu scalonego TC4424A wybrana do skonstruowania
- tego modułu jest przedstawiona na rysunku 
+ tego modułu jest przedstawiona na ilustracji 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Architektura-wewnętrzna-TC4424A"
@@ -9385,7 +10222,11 @@ Architektura wewnętrzna TC4424A
 Moduł sterowania zasilaniem silników elektrycznych składa się z siedmiu
  układów TC4424A, których wejścia są połączone z wyprowadzeniami GPIO mikrokontr
 olera, zaś wyjścia poprzez diody Schottky'ego połączone są ze stykami komutatoró
-w opisanych w 
+w opisanych w
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:Komutator"
@@ -9401,17 +10242,17 @@ reference "tab:wyprowadzenia-pwm"
 \end_inset
 
 .
- Schemat modułu przedstawia rysunek 
+ Schemat modułu przedstawia ilustracja 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Schemat-modułu-zasilania-silników"
 
 \end_inset
 
-, zaś rysunki 
+, zaś ilustracje 
 \begin_inset CommandInset ref
 LatexCommand vref
-reference "fig:Schemat-modułu-zasilania-silników"
+reference "fig:Projekt-PCB-modułu-zasilania-silników"
 
 \end_inset
 
@@ -9583,8 +10424,16 @@ Może odnieść do: http://www.modularcircuits.com/h-bridge_secrets1.htm
 \end_inset
 
  Jest to najpopularniejszy układ sterujący dla silników elektrycznych powszechni
-e stosowany w sterowaniu silników jednofazowych.
- Opis mostka H znajduje się w sekcji 
+e stosowany w
+\begin_inset space ~
+\end_inset
+
+sterowaniu silników jednofazowych.
+ Opis mostka H znajduje się w
+\begin_inset space ~
+\end_inset
+
+sekcji 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:Mostek H"
@@ -9738,9 +10587,19 @@ Proces uruchamiania modułu przebiegał w dwóch głównych etapach:
 \end_layout
 
 \begin_layout Enumerate
-Złożenie modułu na płytce wykonanej ręcznie metodą termotransferu i trawienia
- płytek w wytrawiaczu, a następnie uruchamianie sterownika we współpracy
- z głównym procesorem (wersja widoczna na 
+Złożenie modułu na płytce wykonanej ręcznie metodą termotransferu i
+\begin_inset space ~
+\end_inset
+
+trawienia płytek w
+\begin_inset space ~
+\end_inset
+
+wytrawiaczu, a następnie uruchamianie sterownika we współpracy z
+\begin_inset space ~
+\end_inset
+
+głównym procesorem (wersja widoczna na 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Moduł-zasilania-silników-ręczny"
@@ -9749,8 +10608,11 @@ reference "fig:Moduł-zasilania-silników-ręczny"
 
 ).
  Do celów prac uruchomieniowych zastosowano układ pozwalający na wizualną
- obserwację stanów wyprowadzeń dla silników zbudowany w oparciu o diody
- LED (widoczny na rysunku 
+ obserwację stanów wyprowadzeń dla silników zbudowany w
+\begin_inset space ~
+\end_inset
+
+oparciu o diody LED (widoczny na ilustracji 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Płytka-testowa-LED"
@@ -9759,7 +10621,11 @@ reference "fig:Płytka-testowa-LED"
 
 ).
  Po krótkich testach okazało się, że ścieżki w niektórych miejscach na płytce
- drukowanej nie wytrzymały lutowania i wystąpiły przerwy w połączeniach.
+ drukowanej nie wytrzymały lutowania i
+\begin_inset space ~
+\end_inset
+
+wystąpiły przerwy w połączeniach.
 \end_layout
 
 \begin_layout Enumerate
@@ -9781,7 +10647,11 @@ target "http://www.propox.com"
 
 \end_inset
 
- i zmontowanie układu ponownie na nowej płytce drukowanej (rezultat widoczny
+ i
+\begin_inset space ~
+\end_inset
+
+zmontowanie układu ponownie na nowej płytce drukowanej (rezultat widoczny
  na 
 \begin_inset CommandInset ref
 LatexCommand nameref
@@ -9794,9 +10664,13 @@ reference "fig:Moduł-zasilania-silników-Propox"
 \end_layout
 
 \begin_layout Standard
-W trakcie składania elementów robota i uruchamiania robota w całości okazało
- się, iż masa niektórych elementów powoduje, że silniki są za słabe do wykonywan
-ia pracy potrzebnej do ruchów robota -- w szczególności chodzenia.
+W trakcie składania elementów robota i
+\begin_inset space ~
+\end_inset
+
+uruchamiania robota w całości okazało się, iż masa niektórych elementów
+ powoduje, że silniki są za słabe do wykonywania pracy potrzebnej do ruchów
+ robota -- w szczególności chodzenia.
  Dokładniejsze pomiary pokazały, że zastosowane układy scalone w pracy pod
  obciążeniem o charakterze oporowo-indukcyjnym nie są w stanie zapewnić
  odpowiedniej wydajności prądowej, a co za tym idzie końcowe napięcie zasilania
@@ -9806,10 +10680,17 @@ ia pracy potrzebnej do ruchów robota -- w szczególności chodzenia.
 \begin_layout Standard
 Silniki bez obciążenia pracowały prawidłowo, jednakże ich moment obrotowy
  okazał się za słaby do praktycznego zastosowania.
- Wszelkie próby i pomiary wykonane na tym sterowniku pokazały, że próba
- jego zastosowania skazana jest na niepowodzenie.
- W praktyce oznaczało to porzucenie tego projektu i rozpoczęcie pracy nad
- sterownikiem od samego początku.
+ Wszelkie próby i
+\begin_inset space ~
+\end_inset
+
+pomiary wykonane na tym sterowniku pokazały, że próba jego zastosowania
+ skazana jest na niepowodzenie.
+ W praktyce oznaczało to porzucenie tego projektu i
+\begin_inset space ~
+\end_inset
+
+rozpoczęcie pracy nad sterownikiem od samego początku.
 \end_layout
 
 \begin_layout Standard
@@ -9901,7 +10782,11 @@ Płytka prototypowa do badań zachowania silników z układem L298N
 
 \begin_layout Standard
 Porażka z pierwszym sterownikiem wymusiła ponowne podejście do problemu
- projektu i konstrukcji modułu zasilania silników robota.
+ projektu i
+\begin_inset space ~
+\end_inset
+
+konstrukcji modułu zasilania silników robota.
  Tym razem praca rozpoczęła się od eksperymentów.
 \end_layout
 
@@ -10164,7 +11049,7 @@ V
 \end_layout
 
 \begin_layout Standard
-Wewnętrzna architektura układu jest przedstawiona na rysunku 
+Wewnętrzna architektura układu jest przedstawiona na ilustracji 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Architektura-wewnętrzna-L298P"
@@ -10238,16 +11123,24 @@ target "http://www.eurocircutis.com"
 \end_inset
 
  przylutowano wszystkie elementy elektroniczne, rozpoczynając od układów
- scalonych, następnie kondensatory odprzęgające i diody.
+ scalonych, następnie kondensatory odprzęgające i
+\begin_inset space ~
+\end_inset
+
+diody.
  Na samym końcu złącza.
- Widoczne na rysunku 
+ Widoczne na ilustracji 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Moduł-sterownika-II"
 
 \end_inset
 
- miedziane druty łączące nóżkę 8 i 18 są 
+ miedziane druty łączące nóżkę 8 i
+\begin_inset space ~
+\end_inset
+
+18 są 
 \begin_inset Quotes pld
 \end_inset
 
@@ -10261,14 +11154,15 @@ reference "fig:Moduł-sterownika-II"
 
 \begin_layout Standard
 Do przeprowadzenia prac uruchomieniowych na gotowym zmontowanym sterowniku
- (zamontowany do szkieletu robota - widoczny na rysunku 
+ (zamontowany do szkieletu robota jest widoczny na ilustracji 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Moduł-sterownika-II"
 
 \end_inset
 
-) użyto w pierwszej kolejności układu testowego (widoczny na rysunku 
+) użyto w pierwszej kolejności układu testowego (widoczny na ilustracji
+ 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Płytka-testowa-3.3V"
@@ -10367,12 +11261,19 @@ Płytka testowa do sterowania wejść układów L298P na płytce sterownika napi
 \end_layout
 
 \begin_layout Standard
-Po zamontowaniu układu na szkielecie robota i podłączeniu wszystkich silników
- oraz zasilania 12 z szeregowo połączonych akumulatorów, wykonano próby
- ruchów robota poprzez określanie stanów przyciskami na testowej płytce
- sterującej.
+Po zamontowaniu układu na szkielecie robota i
+\begin_inset space ~
+\end_inset
+
+podłączeniu wszystkich silników oraz zasilania 12 z szeregowo połączonych
+ akumulatorów, wykonano próby ruchów robota poprzez określanie stanów przyciskam
+i na testowej płytce sterującej.
  Wszystkie próby zakończyły się powodzeniem demonstrującym dużą szybkość
- i siłę działania.
+ i
+\begin_inset space ~
+\end_inset
+
+siłę działania.
 \end_layout
 
 \begin_layout Section
@@ -10385,16 +11286,32 @@ Wyprowadzenia końcówek sterujących zasilaniem silników elektrycznych są
  w okablowaniu oryginalnym robota.
  Widoczne to jest na ilustracji 
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand vref
 reference "fig:Moduł-sterownika-II"
 
 \end_inset
 
 .
- W przypadku silników w ramionach robota i silników w korpusie sterujących
- ramionami, kolory przewodów zasilających silniki to niebieski i zielony.
- W przypadku silnika sterującego biodrem, to kolory żółty i zielony.
- Silniki nóg są podłączony przewodami w kolorach czarnym i czerwonym.
+ W przypadku silników w ramionach robota i
+\begin_inset space ~
+\end_inset
+
+silników w korpusie sterujących ramionami, kolory przewodów zasilających
+ silniki to niebieski i
+\begin_inset space ~
+\end_inset
+
+zielony.
+ W przypadku silnika sterującego biodrem, to kolory żółty i
+\begin_inset space ~
+\end_inset
+
+zielony.
+ Silniki nóg są podłączony przewodami w kolorach czarnym i
+\begin_inset space ~
+\end_inset
+
+czerwonym.
 \end_layout
 
 \begin_layout Standard
@@ -10410,7 +11327,7 @@ szary biegun ujemny akumulatora nogi prawej
 \end_layout
 
 \begin_layout Description
-pomarańczowy biegun dodatni akumulatora nogi lewej.
+pomarańczowy biegun dodatni akumulatora nogi lewej
 \end_layout
 
 \begin_layout Description
@@ -10433,8 +11350,12 @@ pulse width modulation
 ), w które wyposażony jest mikrokontroler AT32UC3A0512.
  Aby umożliwić pracę dwukierunkową, oprócz wyprowadzeń PWM potrzebne są
  dodatkowe wyprowadzenia logiczne.
- Wybór logicznego stanu wysokiego i niskiego oraz odpowiedniej polaryzacji
- PWM będą służyć do zmiany kierunku obrotów.
+ Wybór logicznego stanu wysokiego i
+\begin_inset space ~
+\end_inset
+
+niskiego oraz odpowiedniej polaryzacji PWM będą służyć do zmiany kierunku
+ obrotów.
  Tabela 
 \begin_inset CommandInset ref
 LatexCommand vref
@@ -10480,7 +11401,11 @@ Power Manager
 \shape default
 \lang polish
 ).
- Nazwa w pierwszej kolumnie określa funkcję sterującą wybranego silnika.
+ Nazwa w
+\begin_inset space ~
+\end_inset
+
+pierwszej kolumnie określa funkcję sterującą wybranego silnika.
 \end_layout
 
 \begin_layout Standard
@@ -11292,7 +12217,11 @@ Wszystkie wyprowadzenia mikrokontrolera operują na poziomach logicznych
 \begin_inset Quotes prd
 \end_inset
 
- i 
+ i
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Quotes pld
 \end_inset
 
@@ -11309,16 +12238,31 @@ V oraz 3.2
 \end_inset
 
 V.
- Są one w parach (według wierszy tabeli 
+ Są one w
+\begin_inset space ~
+\end_inset
+
+parach (według wierszy tabeli 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:wyprowadzenia-pwm"
 
 \end_inset
 
-) podłączone do wejść logicznych siedmiu układów TC4424A (w pierwszej wersji
- sterownika) oraz czterech układów L298P (w drugiej wersji) umieszczonych
- na modułach sterowania zasilaniem opisanych w podrozdziałach 
+) podłączone do wejść logicznych siedmiu układów TC4424A (w
+\begin_inset space ~
+\end_inset
+
+pierwszej wersji sterownika) oraz czterech układów L298P (w
+\begin_inset space ~
+\end_inset
+
+drugiej wersji) umieszczonych na modułach sterowania zasilaniem opisanych
+ w
+\begin_inset space ~
+\end_inset
+
+podrozdziałach 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:Moduł-sterowania-zasilaniem"
@@ -11354,7 +12298,11 @@ reference "sec:Moduł-sterowania-zasilaniem-2"
 .
  Dodatkowo sterowanie PWM pozwala na regulację obrotów silnika.
  Dzięki funkcjonalności pozwalającej na zmianę polaryzacji PWM, proces ten
- może odbywać się w obu kierunkach.
+ może odbywać się w
+\begin_inset space ~
+\end_inset
+
+obu kierunkach.
 \end_layout
 
 \begin_layout Standard
@@ -11382,9 +12330,12 @@ Oprogramowanie mikrokontrolera (sprzętu)
 \end_layout
 
 \begin_layout Standard
-Oprogramowanie mikrokontrolera napisane jest w języku C i zawiera elementy
- szkieletu programowego w wersji 1.7.0, w tym system operacyjny FreeRTOS w
- wersji 6.0.0.
+Oprogramowanie mikrokontrolera napisane jest w języku C i
+\begin_inset space ~
+\end_inset
+
+zawiera elementy szkieletu programowego w wersji 1.7.0, w tym system operacyjny
+ FreeRTOS w wersji 6.0.0.
 \end_layout
 
 \begin_layout Subsection
@@ -11394,7 +12345,11 @@ Przygotowanie szkieletu programowego i systemu FreeRTOS
 \begin_layout Standard
 Szkielet programowy został ściągnięty ze strony internetowej firmy Atmel.
  AVR32 Studio posiada funkcje włączania do projektu tych elementów z tego
- szkieletu, które wybierzemy w oknie dialogowym.
+ szkieletu, które wybierzemy w
+\begin_inset space ~
+\end_inset
+
+oknie dialogowym.
  Dzięki czemu zbudowanie pełnego projektu jest prostsze.
 \end_layout
 
@@ -11441,7 +12396,11 @@ heap
 status open
 
 \begin_layout Plain Layout
-Model układu MT48LC16M16A2 opisany w 
+Model układu MT48LC16M16A2 opisany w
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "256msdram"
@@ -11535,7 +12494,11 @@ W AVR32 Studio we właściwościach projektu rozwijamy ustawienia
 C/C++ Build
 \emph default
 \lang polish
- i wybieramy 
+ i
+\begin_inset space ~
+\end_inset
+
+wybieramy 
 \emph on
 \lang british
 Settings
@@ -11559,7 +12522,11 @@ AVR32/GNU C Linker
 General
 \emph default
 \lang polish
- i zaznaczamy opcję 
+ i
+\begin_inset space ~
+\end_inset
+
+zaznaczamy opcję 
 \emph on
 \lang british
 Do not use standard start files (-nostartfiles)
@@ -11677,7 +12644,11 @@ przy czym w pliku
 port.c
 \family default
  dla FreeRTOS w oryginalnym szkielecie programowym powyższa funkcja jest
- już zdefiniowana i wymagała zmiany.
+ już zdefiniowana i
+\begin_inset space ~
+\end_inset
+
+wymagała zmiany.
  Obsługa pamięci SDRAM wymaga taktowania procesora z oscylatora zewnętrznego.
 \end_layout
 
@@ -11695,11 +12666,19 @@ link_uc3a0512_extsdram.lds
 \family typewriter
 .bss_sdram
 \family default
- i 
+ i
+\begin_inset space ~
+\end_inset
+
+
 \family typewriter
 .data_sdram
 \family default
-, dla odpowiednio zmiennych niezainicjalizowanych i zmiennych zainicjalizowanych.
+, dla odpowiednio zmiennych niezainicjalizowanych i
+\begin_inset space ~
+\end_inset
+
+zmiennych zainicjalizowanych.
  Do zastosowania tych dwóch segmentów należy dodać dyrektywę 
 \begin_inset listings
 lstparams "language=C,tabsize=4"
@@ -11728,6 +12707,8 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename vector/avr32-pll-diagram.svg
 	width 98text%
@@ -11823,17 +12804,7 @@ gdy
 \begin_inset Formula $f_{pll}=f_{vco}$
 \end_inset
 
-, g
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Opis ożenku FreeRTOS 
-\end_layout
-
-\end_inset
-
-dy 
+, gdy 
 \begin_inset Formula $\mathtt{PLLOPT[1]}=0$
 \end_inset
 
@@ -11870,15 +12841,26 @@ Main Clock Control Register
 
 \begin_layout Standard
 Przy konfigurowaniu zegarów należy pamiętać, że ten mikrokontroler może
- pracować z maksymalną częstotliwością dla 66 MHz dla bloków CPU, HSB i
- PBB, jednakże blok PBA może pracować z maksymalną częstotliwością 33 MHz.
+ pracować z
+\begin_inset space ~
+\end_inset
+
+maksymalną częstotliwością dla 66 MHz dla bloków CPU, HSB i
+\begin_inset space ~
+\end_inset
+
+PBB, jednakże blok PBA może pracować z maksymalną częstotliwością 33 MHz.
  Oznacza to, że należy włączyć preskaler dzielący częstotliwość PLL przez
  2.
  Osiąga się to przez ustawienie bitu 
 \family typewriter
 PBADIV
 \family default
- na 1 i 
+ na 1 i
+\begin_inset space ~
+\end_inset
+
+
 \family typewriter
 PBASEL
 \family default
@@ -11906,7 +12888,11 @@ pm_configure_clocks()
 , która sprowadza konfigurację zegarów do wpisania oczekiwań w strukturę
  danych, a następnie dokonuje obliczeń dopasowujących opisane rejestry.
  W wyniku jej działania procesor rozpoczyna pracę na podanej częstotliwości
- i modyfikuje zawartość struktury według wyliczonych wartości.
+ i
+\begin_inset space ~
+\end_inset
+
+modyfikuje zawartość struktury według wyliczonych wartości.
 \end_layout
 
 \begin_layout Standard
@@ -12047,7 +13033,11 @@ preemptive
 \shape default
 \lang polish
 ) należy zadbać, aby alokacje pamięci nie zostały przerwane przez wywłaszczenie.
- Biblioteka newlib przewiduje dwie metody
+ Biblioteka 
+\family typewriter
+newlib
+\family default
+ przewiduje dwie metody
 \begin_inset CommandInset citation
 LatexCommand cite
 key "gatliff-newlib-2"
@@ -12091,7 +13081,11 @@ __malloc_lock()
 
 \end_inset
 
- i 
+ i
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset listings
 lstparams "language=C"
 inline true
@@ -12104,7 +13098,11 @@ __malloc_unlock()
 
 \end_inset
 
- w celu zabezpieczenia wywołań do newralgicznych struktur danych o przydzielonej
+ w
+\begin_inset space ~
+\end_inset
+
+celu zabezpieczenia wywołań do newralgicznych struktur danych o przydzielonej
  pamięci w przypadku kolidujących wywołań z różnych zadań (ang.
  
 \emph on
@@ -12114,7 +13112,11 @@ task
 \lang polish
 ).
  Metoda ta wymaga jednak bezpiecznego stosowania mechanizmów synchronizujących,
- aby uniknąć zakleszczenia związanego z podwójnym wywołaniem 
+ aby uniknąć zakleszczenia związanego z
+\begin_inset space ~
+\end_inset
+
+podwójnym wywołaniem 
 \begin_inset listings
 lstparams "language=C"
 inline true
@@ -12134,8 +13136,11 @@ __malloc_lock()
 W projekcie zrealizowano mechanizm drugi, pozwalający na alokację pamięci
  przez poszczególne zadania z zachowaniem ochrony w oparciu o semafory systemu
  FreeRTOS.
- Mechanizm ten ma cechę samoinicjalizacji i ochrona nie występuje do momentu
- uruchomienia planisty.
+ Mechanizm ten ma cechę samoinicjalizacji i
+\begin_inset space ~
+\end_inset
+
+ochrona nie występuje do momentu uruchomienia planisty.
  Pierwsza alokacja pamięci, a co za tym idzie pierwsze wywołanie 
 \begin_inset listings
 lstparams "language=C"
@@ -12150,7 +13155,11 @@ __malloc_lock()
 \end_inset
 
  po starcie planisty, powoduje przełączenie implementacji funkcji chroniących
- z pustych na funkcje podnoszące i opuszczające semafory.
+ z pustych na funkcje podnoszące i
+\begin_inset space ~
+\end_inset
+
+opuszczające semafory.
  Ma to na celu zabezpieczanie przed zakleszczeniem programu, w sytuacji
  gdy proces inicjalizacji nie dobiegł końca, a potrzebne są w tym czasie
  dynamiczne alokacje pamięci -- przykładowo, utworzenie semafora również
@@ -12276,7 +13285,7 @@ Omówienie architektury sprzętowej
 \end_layout
 
 \begin_layout Standard
-Zasada działania timera (obrazuje rysunek 
+Zasada działania timera (obrazuje ją ilustracja 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Schemat-blokowy-timera"
@@ -12381,7 +13390,11 @@ ts_internal_execute()
 \begin_layout Standard
 Timer sprzętowy liczy kolejne impulsy, a stan licznika jest badany przez
  komparator cyfrowy -- w momencie osiągnięcia zadanej wartości, następuje
- rzucenie przerwania; licznik zatrzymuje się i jest resetowany
+ rzucenie przerwania; licznik zatrzymuje się i
+\begin_inset space ~
+\end_inset
+
+jest resetowany
 \begin_inset Foot
 status collapsed
 
@@ -12418,8 +13431,12 @@ Zarządzanie ruchem robota
 \begin_layout Standard
 Ponieważ ruch robota składa się z wielu atomowych operacji wykonywanych
  na poszczególnych wyprowadzeniach sterujących połączonych pewnymi zależnościami
- czasu i kolejności następowania, powstał moduł automatu skończonego typu
- automat Mealy'ego
+ czasu i
+\begin_inset space ~
+\end_inset
+
+kolejności następowania, powstał moduł automatu skończonego typu automat
+ Mealy'ego
 \begin_inset CommandInset citation
 LatexCommand cite
 key "automata-theory"
@@ -12432,7 +13449,10 @@ key "automata-theory"
  Natomiast na wejściu podawane są zdarzenia mające na celu wpływ na decyzję
  o następnym stanie.
  Jedno ze zdarzeń jest wewnętrznie przesyłane po zadanym okresie czasu i
- ma zadanie wyzwalać kolejne zmiany stanów wynikające z następstwa stanów.
+\begin_inset space ~
+\end_inset
+
+ma zadanie wyzwalać kolejne zmiany stanów wynikające z następstwa stanów.
  Sterowane w taki sposób silniki pozwalają na wykonywanie ruchu.
 \end_layout
 
@@ -12445,9 +13465,16 @@ reference "tab:Stany-i-sygnały-sterujące"
 
 \end_inset
 
- dla ruchu w przód i dla ruchu w tył, przy czym dla biodra, nóg lewej i
- prawej podano nowe stany wyprowadzeń sterujących przełączanych w danym
- ze stanów.
+ dla ruchu w przód i
+\begin_inset space ~
+\end_inset
+
+dla ruchu w tył, przy czym dla biodra, nóg lewej i
+\begin_inset space ~
+\end_inset
+
+prawej podano nowe stany wyprowadzeń sterujących przełączanych w danym ze
+ stanów.
  Symbol X oznacza brak zmiany stanu.
 \end_layout
 
@@ -13416,7 +14443,11 @@ name "tab:Stany-i-sygnały-sterujące"
 
 \end_inset
 
-Sygnały sterujące w poszczególnych stanach i przejścia między stanami
+Sygnały sterujące w poszczególnych stanach i
+\begin_inset space ~
+\end_inset
+
+przejścia między stanami
 \end_layout
 
 \end_inset
@@ -13430,8 +14461,8 @@ Sygnały sterujące w poszczególnych stanach i przejścia między stanami
 \end_layout
 
 \begin_layout Standard
-Stany od 2 do 6 są naprzemiennie powtarzane do czasu poprzez zdarzenie nadsyłane
- z timera.
+Stany o numerach od 2 do 6 są naprzemiennie powtarzane do czasu poprzez
+ zdarzenie nadsyłane z timera.
  Proces ten trwa, aż nie napłynie zdarzenie wymuszające stan stopu, które
  zeruje wyprowadzenia sterujące stanem włączającym obroty silnika.
  Następnym stanem po stanie stopu, jest stan oczekiwania, w którym nie następuje
@@ -13451,8 +14482,11 @@ Interfejs poleceń
 \begin_layout Standard
 Oprogramowanie sterujące działające na mikrokontrolerze ma zaimplementowany
  prosty interfejs poleceń służący do sterowania robotem.
- Interfejs ten przyjmuje polecenia napływające z portu szeregowego i wysyła
- tam swoją odpowiedź, gdy to potrzebne.
+ Interfejs ten przyjmuje polecenia napływające z portu szeregowego i
+\begin_inset space ~
+\end_inset
+
+wysyła tam swoją odpowiedź, gdy to potrzebne.
  Dostępny jest pewien ograniczony zestaw komend sterujących.
 \end_layout
 
@@ -13465,10 +14499,18 @@ reference "tab:Polecenia-sterujące"
 \end_inset
 
 .
- Nawiasy prostokątne zgodnie z ogólnoprzyjętą konwecją, oznaczają część
+ Nawiasy prostokątne zgodnie z ogólnie przyjętą konwencją, oznaczają część
  opcjonalną.
  Kursywą oznaczono miejsca, w których argumenty przyjmują określone wartości
- mieszczące się w warunkach podanych w objaśnieniu.
+ mieszczące się w
+\begin_inset space ~
+\end_inset
+
+warunkach podanych w
+\begin_inset space ~
+\end_inset
+
+objaśnieniu.
 \end_layout
 
 \begin_layout Standard
@@ -13707,7 +14749,11 @@ identify
 
 \begin_layout Plain Layout
 Polecenie wyświetla informacje o wersji programu sterującego załadowanego
- do mikrokontrolera i datę kompilacji
+ do mikrokontrolera i
+\begin_inset space ~
+\end_inset
+
+datę kompilacji
 \end_layout
 
 \end_inset
@@ -13774,8 +14820,12 @@ key "fnv-hash"
 \end_inset
 
 .
- Odnaleziene polecenia, polega na obliczeniu wartości funkcji kluczującej
- i wybraniu pozycji w tablicy pasującej do tego klucza.
+ Odnalezienie polecenia, polega na obliczeniu wartości funkcji kluczującej
+ i
+\begin_inset space ~
+\end_inset
+
+wybraniu pozycji w tablicy pasującej do tego klucza.
  Dzięki czemu wyszukiwanie poleceń odbywa się z dużo mniejszą złożonością,
  niż w przypadku porównywania napisów w pętli, tak często stosowanego w
  różnym oprogramowaniu.
@@ -13807,14 +14857,14 @@ Oprogramowanie sterujące o nazwie kodowej Robotiq zostało zrealizowane w
  Aplikacja ta pozwala na wydawanie poleceń tekstowych, posiada fragment
  interfejsu upodobniony do oryginalnego kontrolera Roboactor.
  Komendy przypisane do każdego z widocznych przycisków są konfigurowalne.
- Widok głównego okna aplikacji przedstawia rysunek 
+ Widok głównego okna aplikacji przedstawia ilustracja 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:Zrzut-ekranu-Robotiq"
 
 \end_inset
 
- .
+.
 \end_layout
 
 \begin_layout Standard
@@ -13903,10 +14953,14 @@ Zrzut ekranu aplikacji Robotiq
 \begin_layout Standard
 Aplikacja pozwala na wydawanie poleceń z wiersza u dołu okna, który przechowuje
  również historię poleceń.
- Wydane polecenia i odpowiedź udzielona przez sterownik jest widoczna w
- dużym oknie po stronie lewej.
+ Wydane polecenia i
+\begin_inset space ~
+\end_inset
+
+odpowiedź udzielona przez sterownik jest widoczna w dużym oknie po stronie
+ lewej.
  Po stronie prawej widoczne są przyciski graficzne na podobieństwo oryginalnego
- kontrolera zdalnego sterowania widocznego na rysunku 
+ kontrolera zdalnego sterowania widocznego na ilustracji 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Oryginalny-kontroler"
@@ -14297,10 +15351,17 @@ Główne elementy architektury aplikacji
 \begin_layout Standard
 Jednym z podstawowych problemów w aplikacjach graficznego interfejsu użytkownika
  jest efektywne zarządzanie zdarzeniami wywoływanymi przez interakcję użytkownik
-a i zdarzeniami napływającymi z zewnętrznych źródeł -- w tym przypadku interfejs
-u komunikacji.
- Na potrzeby rozwiązania konfliktów i powiązań zdarzeń ze sobą stworzona
- została klasa 
+a i
+\begin_inset space ~
+\end_inset
+
+zdarzeniami napływającymi z zewnętrznych źródeł -- w tym przypadku interfejsu
+ komunikacji.
+ Na potrzeby rozwiązania konfliktów i
+\begin_inset space ~
+\end_inset
+
+powiązań zdarzeń ze sobą stworzona została klasa 
 \begin_inset listings
 lstparams "language=Python"
 inline true
@@ -14324,8 +15385,11 @@ W języku Python słownik jest kontenerem hashującym klucze.
 
 \end_inset
 
- akcji z przypisanymi do pewnego zdarzenia metodami zarejestrowanymi z innych
- klas.
+ akcji z
+\begin_inset space ~
+\end_inset
+
+przypisanymi do pewnego zdarzenia metodami zarejestrowanymi z innych klas.
  Chcąc zrealizować określoną akcję, w rzeczywistości uruchamiane są wszystkie
  te zarejestrowane metody.
  Jest to specyficzna realizacje wzorca projektowego znanego pod nazwą Obserwator
@@ -14376,12 +15440,22 @@ nym wcześniej kanale komunikacji.
 \end_layout
 
 \begin_layout Standard
-Obszar przycisków sterujących jest zrealizowany w oparciu o Cairo
+Obszar przycisków sterujących jest zrealizowany w oparciu o bibliotekę 
+\lang british
+Cairo
+\lang polish
+
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-Cairo dostępne jest na stronie 
+Biblioteka 
+\shape slanted
+\lang british
+Cairo
+\shape default
+\lang polish
+ dostępne jest na stronie 
 \begin_inset CommandInset href
 LatexCommand href
 target "http://cairographics.org/"
@@ -14393,7 +15467,11 @@ target "http://cairographics.org/"
 
 \end_inset
 
- i dowiązanie PyCairo -- jest to biblioteka graficzna służąca do realizacji
+ i
+\begin_inset space ~
+\end_inset
+
+dowiązanie PyCairo -- jest to biblioteka graficzna służąca do realizacji
  szybkich odrysowań obrazów dwuwymiarowych.
  Kształt przycisków jest zrealizowany jako odrysowywanie na ekranie linii
  według opisu graficznego.
@@ -14401,9 +15479,17 @@ target "http://cairographics.org/"
  Rysunek jest skalowany w raz ze zmianami obszaru graficznego, w którym
  jest odrysowywany.
  Każdy z przycisków stanowi osobny obiekt reagujący na zdarzenia naciśnięcia
- i puszczenia.
+ i
+\begin_inset space ~
+\end_inset
+
+puszczenia.
  Oddanie graficznego efektu wciśnięcia polega na zamianie kolorów zacienieni
- i oświetlenia przycisku w trakcie przerysowania.
+ i
+\begin_inset space ~
+\end_inset
+
+oświetlenia przycisku w trakcie przerysowania.
 \end_layout
 
 \begin_layout Chapter
@@ -14464,7 +15550,11 @@ UWAGA!
 \series default
  W celu zaprogramowania robota poprzez interfejs JTAG, należy wyłączyć zasilanie
  wyłącznikiem z tyłu obudowy, rozłączyć kabel taśmowy z płyty mikrokontrolera
- i podłączyć do niej zasilacz o napięciu 9
+ i
+\begin_inset space ~
+\end_inset
+
+podłączyć do niej zasilacz o napięciu 9
 \begin_inset space ~
 \end_inset
 
@@ -14484,7 +15574,7 @@ V.
 \end_layout
 
 \begin_layout Standard
-Załadowanie programu sterującego do pamięci Flash microkotrolera poprzez
+Załadowanie programu sterującego do pamięci Flash mikrokontrolera poprzez
  interfejs JTAG wymaga uruchomienia AVR32 Studio.
  Następnie należy zaimportować projekt dostarczony na płycie CD do swojego
  obszaru roboczego.
@@ -14515,22 +15605,44 @@ keystroke{B}
 \end_inset
 
 .
- W przypadku problemów ze skompilowaniem, należy w pierwszej kolejności
- zdiagnozować czy ścieżki określone we właściwościach projektu wskazują
- na prawidłowe katalogi, w szczególności dotyczy to ścieżek do narzędzi
- kompilacyjnych (projekt powinien skompilować się poprawnie z narzędziami
- dostarczanymi razem z AVR32 Studio w wersji 2.6).
+ W
+\begin_inset space ~
+\end_inset
+
+przypadku problemów ze skompilowaniem, należy w
+\begin_inset space ~
+\end_inset
+
+pierwszej kolejności zdiagnozować czy ścieżki określone we właściwościach
+ projektu wskazują na prawidłowe katalogi, w
+\begin_inset space ~
+\end_inset
+
+szczególności dotyczy to ścieżek do narzędzi kompilacyjnych (projekt powinien
+ skompilować się poprawnie z narzędziami dostarczanymi razem z
+\begin_inset space ~
+\end_inset
+
+AVR32 Studio w
+\begin_inset space ~
+\end_inset
+
+wersji 2.6).
  Dostarczony projekt jest poprawny pod innymi względami.
 \end_layout
 
 \begin_layout Standard
 Jeżeli podczas uruchamiania programu AVR32 Studio JTAG był podłączony do
  komputera, to w zakładce Target powinien być widoczny.
- Należy zapoznać się z instrukcją do JTAG'a w przypadku problemów z połączeniem.
+ Należy zapoznać się z instrukcją do JTAG'a w
+\begin_inset space ~
+\end_inset
+
+przypadku problemów z połączeniem.
 \end_layout
 
 \begin_layout Standard
-Gdy płyta jest podłączona do JTAG, załadowanie programu do pamięci flash
+Gdy płyta jest podłączona do JTAG, załadowanie programu do pamięci Flash
  powinno odbyć się po uruchomieniu aplikacji w AVR32 Studio, co odbywa się
  poprzez naciśnięcie przycisku 
 \begin_inset Graphics
@@ -14542,8 +15654,12 @@ Gdy płyta jest podłączona do JTAG, załadowanie programu do pamięci flash
 \end_inset
 
 .
- W oknie konsoli powinno być widać kolejne kroki wykonywane przez program
- w celu załadowania programu.
+ W oknie konsoli powinno być widać kolejne kroki wykonywane przez aplikację
+ środowiska programistycznego w
+\begin_inset space ~
+\end_inset
+
+celu załadowania programu mikrokontrolera.
  Zakończenie procesu umożliwia rozpoczęcie korzystania z robota.
 \end_layout
 
@@ -14675,16 +15791,33 @@ markboth{Podsumowanie}{}
 
 \end_inset
 
-W trakcie realizacji opisywanego projektu wykonano modyfikacje konstrukcji
+W
+\begin_inset space ~
+\end_inset
+
+trakcie realizacji opisywanego projektu wykonano modyfikacje konstrukcji
  robota, elektroniczny układ sterujący, oprogramowanie dla mikrokontrolera
  oraz oprogramowanie dla komputera PC.
  Przyjęte przez przystąpieniem do realizacji tego projektu założenia zawierały
  kilka elementów, których próba realizacji została zarzucona.
- Spowodowane to było możliwościami finansowymi i realizacją wszystkich zadań
- przez jedną osobę.
- Całkowity wkład pracy włożony w realizację opisanego projektu był ogromny.
- Niektóre z zadań zakładały znacznie krótszy czas realizacji, niż miało
- to miejsce w rzeczywistości.
+ Spowodowane to było możliwościami finansowymi i
+\begin_inset space ~
+\end_inset
+
+realizacją wszystkich zadań przez jedną osobę.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Całkowity wkład pracy włożony w realizację opisanego projektu był ogromny.
+ 
+\end_layout
+
+\end_inset
+
+Niektóre z zadań zakładały znacznie krótszy czas realizacji, niż miało to
+ miejsce w rzeczywistości.
  Dotyczy to w szczególności sterownika silników.
  Uruchomienie elektronicznej części sterującej zajęło trzykrotnie więcej
  czasu od założonych dwóch miesięcy.
@@ -14737,7 +15870,11 @@ W celu zapewnienia sterowania silnikami elektrycznymi skonstruowano moduł
  mikrokontrolera na napięcia sterujące obrotami silników w obu kierunkach.
  Realizacja tego zadania odbyła się w dwóch -- wymuszonych niepowodzeniem
  pierwszego -- etapach.
- Układ sterownika opisany w 
+ Układ sterownika opisany w
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:Moduł-sterowania-zasilaniem"
@@ -14752,8 +15889,11 @@ reference "sec:Moduł-sterowania-zasilaniem-2"
 
 \end_inset
 
- przewidziano zasilanie wyższym napięciem zasilania i zastosowano inne układy
- scalone o wyższej wydajności prądowej.
+ przewidziano zasilanie wyższym napięciem zasilania i
+\begin_inset space ~
+\end_inset
+
+zastosowano inne układy scalone o wyższej wydajności prądowej.
  Za jakością zastosowanych układów przemawia fakt, iż mimo spalenia jednego
  z silników elektrycznych robota, nie doszło do uszkodzenia układu mimo
  osiągnięcia przez niego wysokiej temperatury.
@@ -14772,7 +15912,11 @@ h.
  zadaniach, pomiędzy którymi komunikacja odbywa się w kolejkach.
  Przy pisaniu tego oprogramowania zadbano o zachowanie wysokich standardów,
  dzięki czemu można wracać do rozwoju tej aplikacji bez poczucia zagubienia
- i niezrozumienia kodu.
+ i
+\begin_inset space ~
+\end_inset
+
+niezrozumienia kodu.
  Moc obliczeniowa procesora jest wykorzystana w niewielkim stopniu, co pozostawi
 a pole do dalszego rozszerzania jego oprogramowania.
 \end_layout
@@ -14783,7 +15927,11 @@ Funkcjonalnie robot wykonuje polecenia wydawane tej aplikacji w prostym
  konfiguracji dostępny przez Bluetooth.
  Zestaw poleceń pozwala na niskopoziomowe sterowanie poszczególnymi wyprowadzeni
 ami sterującymi silniki (poprzez mostki H), jak również na kontrolę logiki
- odpowiedzialnej za chód robota w tył i w przód.
+ odpowiedzialnej za chód robota w tył i
+\begin_inset space ~
+\end_inset
+
+w przód.
  Możliwe jest też wykonywanie ruchów kończyn poprzez wydawanie poleceń niskiego
  poziomu.
  Proces kontroli chodu robota jest asynchroniczny, czyli umożliwia użytkownikowi
@@ -14792,11 +15940,18 @@ ami sterującymi silniki (poprzez mostki H), jak również na kontrolę logiki
 
 \begin_layout Standard
 Aplikację sterującą działającą na komputerze PC zrealizowano w języku Python.
- Ma ona architekturę obiektową w obu warstwach: graficznej i komunikacyjnej.
+ Ma ona architekturę obiektową w obu warstwach: graficznej i
+\begin_inset space ~
+\end_inset
+
+komunikacyjnej.
  Do realizacji interfejsu użytkownika zastosowano GTK+ poprzez PyGTK.
- Pozwala ona na wydawanie komend z klawiatury i na przypisanie komend do
- przycisków sterujących, których układ został zaczerpnięty z oryginalnego
- kontrolera zdalnego sterowania Roboactora.
+ Pozwala ona na wydawanie komend z klawiatury i
+\begin_inset space ~
+\end_inset
+
+na przypisanie komend do przycisków sterujących, których układ został zaczerpnię
+ty z oryginalnego kontrolera zdalnego sterowania Roboactora.
  Architektura pozwala na dalsze rozszerzenie funkcjonalne bez poprawiania
  rdzenia aplikacji.
 \end_layout
@@ -14812,8 +15967,16 @@ Opisane elementy tworzą system, który może być zastosowany w sterowaniu
 
 \begin_layout Standard
 Przedstawiony projekt pozostawia duże możliwości dalszego rozwoju.
- Do elementów o które można go rozbudować należą m.in.: wspomniana wcześniej
- kamera cyfrowa i inny od zastosowanego mechanizm komunikacji bezprzewodowej.
+ Do elementów o
+\begin_inset space ~
+\end_inset
+
+które można go rozbudować należą m.in.: wspomniana wcześniej kamera cyfrowa
+ i
+\begin_inset space ~
+\end_inset
+
+inny od zastosowanego mechanizm komunikacji bezprzewodowej.
  Dodatkowo można zastosować do rozbudowy projektu takie elementy jak akceleromet
 r, dalmierze ultradźwiękowe, bądź laserowe.
  Moc obliczeniowa jest wystarczająca do działania oprogramowania kontrolującego
@@ -14827,13 +15990,20 @@ Wartość może też przedstawiać możliwość zastosowania programów w język
  Udało się wykonać prosty program, którego bajtkod jest zaszyty w aplikacji
  mikrokontrolera.
  Ze względu na trudności ze współbieżną komunikacją w przypadku takiej formy
- zastosowania Bluetooth, ta technika nie została wykorzystana w praktyce,
- mimo dużego potencjału.
+ zastosowania Bluetooth, ta technika nie została wykorzystana w
+\begin_inset space ~
+\end_inset
+
+praktyce, mimo dużego potencjału.
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-Trzeba było głąbie zrobić PPP na BT, i by były połączenia IP.
+Trzeba było głąbie zrobić PPP na BT, i
+\begin_inset space ~
+\end_inset
+
+by były połączenia IP.
 \end_layout
 
 \end_inset
@@ -14848,13 +16018,20 @@ Całość stanowi również doskonałą platformę edukacyjną.
 szych w tej chwili metod sterowania silników prądu stałego w robotyce amatorskie
 j.
  Oprogramowanie stosuje wzorce stosowane w zaawansowanych aplikacjach komercyjny
-ch, opiera się o bardzo znany i doceniany system czasu rzeczywistego FreeRTOS,
- którego znajomość przyda się wszystkim chcącym tworzyć w swojej karierze
- programistycznej oprogramowanie do urządzeń.
+ch, opiera się o bardzo znany i
+\begin_inset space ~
+\end_inset
+
+doceniany system czasu rzeczywistego FreeRTOS, którego znajomość przyda
+ się wszystkim chcącym tworzyć w swojej karierze programistycznej oprogramowanie
+ do urządzeń.
  Wszystkie elementy składowe są ogólnodostępne, pozwalają więc na złożenie
- kopii takiej konstrukcji w stosunkowo prosty sposób i zastosowanie jej
- przykładowo, jako podstawy do realizacji tematu prac zaliczeniowych, inżyniersk
-ich lub innych prac magisterskich.
+ kopii takiej konstrukcji w stosunkowo prosty sposób i
+\begin_inset space ~
+\end_inset
+
+zastosowanie jej przykładowo, jako podstawy do realizacji tematu prac zaliczenio
+wych, inżynierskich lub innych prac magisterskich.
 \end_layout
 
 \begin_layout Part*
@@ -14873,9 +16050,12 @@ Dokumentacja programu Robotiq
 \end_layout
 
 \begin_layout Standard
-Ze względu na dużą objętość, kod źródłowy w języku Python i dokumentacja
- do aplikacji sterującej znajduje się na dołączonej do pracy płycie CD w
- katalogu 
+Ze względu na dużą objętość, kod źródłowy w języku Python i
+\begin_inset space ~
+\end_inset
+
+dokumentacja do aplikacji sterującej znajduje się na dołączonej do pracy
+ płycie CD w katalogu 
 \begin_inset listings
 inline false
 status open
@@ -14931,8 +16111,12 @@ subimport{/home/manveru/workspace/dupatest/Veroniq/docs/latex/}{refman.tex}
 
 \begin_layout Standard
 Ze względu na dużą objętość, kod źródłowy w języku C, projekt dla Eclipse
- i dokumentacja do aplikacji sterownika mikroprocesorowego znajduje się
- na dołączonej do pracy płycie CD w katalogu 
+ i
+\begin_inset space ~
+\end_inset
+
+dokumentacja do aplikacji sterownika mikroprocesorowego znajduje się na
+ dołączonej do pracy płycie CD w katalogu 
 \begin_inset listings
 inline false
 status open
