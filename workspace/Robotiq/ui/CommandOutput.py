@@ -46,6 +46,7 @@ class CommandOutput(gtk.TextView):
         buffer = self.get_buffer()
         end_iter_before = buffer.get_end_iter()
         buffer.insert_with_tags_by_name(end_iter_before, data, style)
+        self.scroll_to_iter(end_iter_before, 0.1, False, 0, 0)
         
     def owrite(self, data):
         """Method displays local output of the application."""
