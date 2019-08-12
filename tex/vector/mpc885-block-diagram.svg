@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="55cm"
+   height="47cm"
+   viewBox="-4 2 55 47"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="mpc885-block-diagram.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1">
+  <metadata
+     id="metadata391">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs389">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 832.67719 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1948.8188 : 832.67719 : 1"
+       inkscape:persp3d-origin="974.40942 : 555.11812 : 1"
+       id="perspective198" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="997"
+     inkscape:window-width="1678"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.49058628"
+     inkscape:cx="1266.4223"
+     inkscape:cy="878.06357"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <rect
+     style="fill: #ffffff"
+     x="17.05"
+     y="2.1"
+     width="6"
+     height="2.9"
+     id="rect4" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.05"
+     y="2.1"
+     width="6"
+     height="2.9"
+     id="rect6" />
+  <rect
+     style="fill: #ffffff"
+     x="17.05"
+     y="6"
+     width="6"
+     height="3.05"
+     id="rect8" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.05"
+     y="6"
+     width="6"
+     height="3.05"
+     id="rect10" />
+  <rect
+     style="fill: #ffffff"
+     x="17.05"
+     y="11.05"
+     width="6"
+     height="3"
+     id="rect12" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.05"
+     y="11.05"
+     width="6"
+     height="3"
+     id="rect14" />
+  <rect
+     style="fill: #ffffff"
+     x="17.1"
+     y="15.05"
+     width="5.95"
+     height="2.95"
+     id="rect16" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.1"
+     y="15.05"
+     width="5.95"
+     height="2.95"
+     id="rect18" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="20.05"
+     y1="10.45"
+     x2="20.05"
+     y2="9.65"
+     id="line20" />
+  <polygon
+     style="fill: #000000"
+     points="19.8,10.45 20.05,10.95 20.3,10.45 "
+     id="polygon22" />
+  <polygon
+     style="fill: #000000"
+     points="20.3,9.65 20.05,9.15 19.8,9.65 "
+     id="polygon24" />
+  <rect
+     style="fill: #ffffff"
+     x="8.05"
+     y="4"
+     width="6"
+     height="12.05"
+     id="rect26" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8.05"
+     y="4"
+     width="6"
+     height="12.05"
+     id="rect28" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="14.65"
+     y1="5.6"
+     x2="16.5"
+     y2="5.6"
+     id="line30" />
+  <polygon
+     style="fill: #000000"
+     points="14.65,5.35 14.15,5.6 14.65,5.85 "
+     id="polygon32" />
+  <polygon
+     style="fill: #000000"
+     points="16.5,5.85 17,5.6 16.5,5.35 "
+     id="polygon34" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="14.65"
+     y1="14.55"
+     x2="16.45"
+     y2="14.55"
+     id="line36" />
+  <polygon
+     style="fill: #000000"
+     points="14.65,14.3 14.15,14.55 14.65,14.8 "
+     id="polygon38" />
+  <polygon
+     style="fill: #000000"
+     points="16.45,14.8 16.95,14.55 16.45,14.3 "
+     id="polygon40" />
+  <rect
+     style="fill:#ffffff"
+     x="30.402645"
+     y="11"
+     width="8"
+     height="3"
+     id="rect42" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     x="30.402645"
+     y="11"
+     width="8"
+     height="3"
+     id="rect44" />
+  <rect
+     style="fill: #ffffff"
+     x="26"
+     y="16"
+     width="8"
+     height="3"
+     id="rect46" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="26"
+     y="16"
+     width="8"
+     height="3"
+     id="rect48" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.19999999"
+     x1="37.396122"
+     y1="17.483547"
+     x2="34.485126"
+     y2="17.483547"
+     id="line50" />
+  <polygon
+     style="fill:#000000"
+     points="30.25,14.6 30,14.1 29.75,14.6 "
+     id="polygon52"
+     transform="matrix(0,1,-1,0,51.999099,-12.516444)" />
+  <polygon
+     style="fill:#000000"
+     points="30,15.9 30.25,15.4 29.75,15.4 "
+     id="polygon54"
+     transform="matrix(0,1,-1,0,49.910671,-12.516444)" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="20.65"
+     y1="10.0484"
+     x2="38.4"
+     y2="10.0016"
+     id="line56" />
+  <polygon
+     style="fill: #000000"
+     points="20.6493,9.79842 20.15,10.0497 20.6507,10.2984 "
+     id="polygon58" />
+  <polygon
+     style="fill: #000000"
+     points="38.4007,10.2516 38.9,10.0003 38.3993,9.75158 "
+     id="polygon60" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="34.402725"
+     y1="10"
+     x2="34.402725"
+     y2="10.4"
+     id="line62" />
+  <polygon
+     style="fill:#000000"
+     points="29.75,10.4 30,10.9 30.25,10.4 "
+     id="polygon64"
+     transform="translate(4.4026641,0)" />
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="11.048457"
+     y="9.6298904"
+     id="text66"
+     sodipodi:linespacing="125%">Wbudowany</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="11.023983"
+     y="10.62989"
+     id="text68"
+     sodipodi:linespacing="125%">rdzeń 8xx</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="19.277416"
+     y="3.3"
+     id="text70"
+     sodipodi:linespacing="125%">8kB</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="17.648464"
+     y="4.3000002"
+     id="text72"
+     sodipodi:linespacing="125%">Data Cache</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="19.302418"
+     y="15.825"
+     id="text74"
+     sodipodi:linespacing="125%">8kB</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="17.740494"
+     y="16.825001"
+     id="text76"
+     sodipodi:linespacing="125%">Instructions</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="18.765312"
+     y="17.825001"
+     id="text78"
+     sodipodi:linespacing="125%">Cache</text>
+  <text
+     style="fill: #000000; font-size: 0.8 cm; length: 0 cm; font-family: sans; font-style: normal; font-weight: normal"
+     x="17.45"
+     y="17.35"
+     id="text80" />
+  <text
+     style="fill: #000000; font-size: 0.8 cm; length: 0 cm; font-family: sans; font-style: normal; font-weight: normal"
+     x="20.95"
+     y="16.4"
+     id="text82" />
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="17.715492"
+     y="7.3099999"
+     id="text84"
+     sodipodi:linespacing="125%">Instructions</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="18.973585"
+     y="8.3100004"
+     id="text86"
+     sodipodi:linespacing="125%">MMU</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="19.080301"
+     y="12.3"
+     id="text88"
+     sodipodi:linespacing="125%">Data</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="18.973585"
+     y="13.3"
+     id="text90"
+     sodipodi:linespacing="125%">MMU</text>
+  <rect
+     style="fill: #ffffff"
+     x="8.05"
+     y="22"
+     width="8.05"
+     height="4.05"
+     id="rect92" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8.05"
+     y="22"
+     width="8.05"
+     height="4.05"
+     id="rect94" />
+  <rect
+     style="fill: #ffffff"
+     x="17.05"
+     y="22.05"
+     width="5"
+     height="4"
+     id="rect96" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17.05"
+     y="22.05"
+     width="5"
+     height="4"
+     id="rect98" />
+  <rect
+     style="fill: #ffffff"
+     x="22.98"
+     y="22.065"
+     width="5.07"
+     height="4"
+     id="rect100" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="22.98"
+     y="22.065"
+     width="5.07"
+     height="4"
+     id="rect102" />
+  <rect
+     style="fill: #ffffff"
+     x="29.07"
+     y="22.0225"
+     width="4.98"
+     height="4"
+     id="rect104" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="29.07"
+     y="22.0225"
+     width="4.98"
+     height="4"
+     id="rect106" />
+  <text
+     style="font-size:0.84666669px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
+     x="12.04347"
+     y="24.356794"
+     id="text108"
+     sodipodi:linespacing="125%">Równoległe We/Wy</text>
+  <text
+     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="18.363068"
+     y="24.318644"
+     id="text110">Timers</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="24.341259"
+     y="23.929737"
+     id="text2819" />
+  <text
+     style="font-size:0.77582699px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="29.893986"
+     y="23.910477"
+     id="text116">Dual-Port</text>
+  <text
+     style="font-size:0.78852814px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="30.840729"
+     y="24.778944"
+     id="text118">RAM</text>
+  <rect
+     style="fill: #ffffff"
+     x="8.04"
+     y="27.0075"
+     width="8.05"
+     height="4.05"
+     id="rect120" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8.04"
+     y="27.0075"
+     width="8.05"
+     height="4.05"
+     id="rect122" />
+  <rect
+     style="fill: #ffffff"
+     x="8.03"
+     y="32.015"
+     width="8.05"
+     height="4.05"
+     id="rect124" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8.03"
+     y="32.015"
+     width="8.05"
+     height="4.05"
+     id="rect126" />
+  <text
+     style="font-size:0.76200002px"
+     x="10.23428"
+     y="28.881811"
+     id="text128">Baud Rate</text>
+  <text
+     style="font-size:0.76200002px"
+     x="10.115285"
+     y="29.887455"
+     id="text130">Generator</text>
+  <text
+     style="font-size:0.76200002px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial"
+     x="9.6739359"
+     y="33.889454"
+     id="text132"
+     sodipodi:linespacing="125%">Interfejs Portu</text>
+  <text
+     style="font-size:0.76200002px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
+     x="12.039372"
+     y="35.002197"
+     id="text134"
+     sodipodi:linespacing="125%">Równoległego</text>
+  <polygon
+     style="fill: #ffffff"
+     points="17,27 34.05,26.95 34.05,35.95 23,36 23,32 17,32 "
+     id="polygon136" />
+  <polygon
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     points="17,27 34.05,26.95 34.05,35.95 23,36 23,32 17,32 "
+     id="polygon138" />
+  <rect
+     style="fill: #ffffff"
+     x="17"
+     y="33"
+     width="5"
+     height="3"
+     id="rect140" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="17"
+     y="33"
+     width="5"
+     height="3"
+     id="rect142" />
+  <text
+     style="font-size:0.90311113px;font-style:normal;font-weight:normal;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     x="18.402534"
+     y="34.808289"
+     id="text144"
+     sodipodi:linespacing="125%">Timer</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="18.115343"
+     y="29.806944"
+     id="text146"
+     sodipodi:linespacing="125%">Kontroler 32-bitowy i ROM Programu</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="31.739614"
+     y="12.2332"
+     id="text148"
+     sodipodi:linespacing="125%">Slave Master</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="32.62178"
+     y="13.2332"
+     id="text150"
+     sodipodi:linespacing="125%">Interface</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="26.833378"
+     y="17.7332"
+     id="text152"
+     sodipodi:linespacing="125%">Security Engine</text>
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="15"
+     width="9"
+     height="15"
+     id="rect154" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="15"
+     width="9"
+     height="15"
+     id="rect156" />
+  <rect
+     style="fill: #ffffff"
+     x="-3"
+     y="14"
+     width="9"
+     height="15"
+     rx="1.17549e-038"
+     ry="1.17549e-038"
+     id="rect158" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-3"
+     y="14"
+     width="9"
+     height="15"
+     rx="1.17549e-038"
+     ry="1.17549e-038"
+     id="rect160" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="30.100693"
+     y1="20"
+     x2="7.6004472"
+     y2="20"
+     id="line162" />
+  <polygon
+     style="fill: #000000"
+     points="7.6,19.75 7.1,20 7.6,20.25 "
+     id="polygon164" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="30"
+     y1="20.010464"
+     x2="30"
+     y2="21.556944"
+     id="line166" />
+  <polygon
+     style="fill:#000000"
+     points="30.25,21.4 29.75,21.4 30,21.9 "
+     id="polygon168"
+     transform="translate(0,0.1128889)" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="25"
+     y1="10"
+     x2="25"
+     y2="20"
+     id="line170" />
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="-0.37325007"
+     y="15.25289"
+     id="text172"
+     sodipodi:linespacing="125%">Kontroler</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="-1.2459344"
+     y="16.252888"
+     id="text174"
+     sodipodi:linespacing="125%">Fast Ethernet</text>
+  <rect
+     style="fill: #ffffff"
+     x="37.0015"
+     y="27.0868"
+     width="9.1"
+     height="8.9"
+     id="rect176" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="37.0015"
+     y="27.0868"
+     width="9.1"
+     height="8.9"
+     id="rect178" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="34.706448"
+     y1="31.447201"
+     x2="36.307945"
+     y2="31.4396"
+     id="line180" />
+  <polygon
+     style="fill:#000000"
+     points="34.15,31.4495 34.6512,31.6972 34.6488,31.1972 "
+     id="polygon182"
+     transform="translate(0.05644445,0)" />
+  <polygon
+     style="fill:#000000"
+     points="36.7515,31.4373 36.2503,31.1896 36.2527,31.6896 "
+     id="polygon184"
+     transform="translate(0.05644445,0)" />
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="41.552601"
+     y="29.822775"
+     id="text186"
+     sodipodi:linespacing="125%">Niezależne wirtualne</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="41.516441"
+     y="31.044224"
+     id="text188"
+     sodipodi:linespacing="125%">DMA</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="41.568035"
+     y="32.175751"
+     id="text190"
+     sodipodi:linespacing="125%">oraz</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="41.530994"
+     y="33.407177"
+     id="text192"
+     sodipodi:linespacing="125%">Szeregowe DMA</text>
+  <text
+     style="fill: #000000; font-size: 0.8 cm; length: 0 cm; font-family: sans; font-style: normal; font-weight: normal"
+     x="49.8015"
+     y="31.3368"
+     id="text194" />
+  <rect
+     style="fill: #ffffff"
+     x="39"
+     y="6"
+     width="10"
+     height="20"
+     id="rect196" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="39"
+     y="6"
+     width="10"
+     height="20"
+     id="rect198" />
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.850067"
+     y="7.7332201"
+     id="text200"
+     sodipodi:linespacing="125%">Jednostka</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.936165"
+     y="8.7332201"
+     id="text202"
+     sodipodi:linespacing="125%">Interfejsu Systemowego</text>
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="38"
+     y1="14.209979"
+     x2="38"
+     y2="26.584589"
+     id="line204" />
+  <polygon
+     style="fill:#000000"
+     points="38.25,10.6 38,10.1 37.75,10.6 "
+     id="polygon206"
+     transform="translate(0,3.8946645)" />
+  <polygon
+     style="fill:#000000"
+     points="38.25,26.4 37.75,26.4 38,26.9 "
+     id="polygon208"
+     transform="translate(0,0.16933335)" />
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="17"
+     width="7"
+     height="2"
+     id="rect210" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="17"
+     width="7"
+     height="2"
+     id="rect212" />
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="20"
+     width="7"
+     height="2"
+     id="rect214" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="20"
+     width="7"
+     height="2"
+     id="rect216" />
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="23"
+     width="7"
+     height="2"
+     id="rect218" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="23"
+     width="7"
+     height="2"
+     id="rect220" />
+  <rect
+     style="fill: #ffffff"
+     x="-2"
+     y="26"
+     width="7"
+     height="2"
+     id="rect222" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="-2"
+     y="26"
+     width="7"
+     height="2"
+     id="rect224" />
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="0.25226909"
+     y="18.308289"
+     id="text226"
+     sodipodi:linespacing="125%">DMAs</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="0.30276033"
+     y="21.257494"
+     id="text228"
+     sodipodi:linespacing="125%">RFOs</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="-1.2682033"
+     y="24.257488"
+     id="text230"
+     sodipodi:linespacing="125%">10/100 Media</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="-0.19884562"
+     y="27.257488"
+     id="text232"
+     sodipodi:linespacing="125%">MII/RMII</text>
+  <rect
+     style="fill: #ffffff"
+     x="40"
+     y="10"
+     width="8"
+     height="3"
+     id="rect234" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="40"
+     y="10"
+     width="8"
+     height="3"
+     id="rect236" />
+  <rect
+     style="fill: #ffffff"
+     x="40"
+     y="14"
+     width="8"
+     height="3"
+     id="rect238" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="40"
+     y="14"
+     width="8"
+     height="3"
+     id="rect240" />
+  <rect
+     style="fill: #ffffff"
+     x="40"
+     y="18"
+     width="8"
+     height="3"
+     id="rect242" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="40"
+     y="18"
+     width="8"
+     height="3"
+     id="rect244" />
+  <rect
+     style="fill: #ffffff"
+     x="40"
+     y="22"
+     width="8"
+     height="3"
+     id="rect246" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="40"
+     y="22"
+     width="8"
+     height="3"
+     id="rect248" />
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.911198"
+     y="11.2332"
+     id="text250"
+     sodipodi:linespacing="125%">Kontroler</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.924225"
+     y="12.2332"
+     id="text252"
+     sodipodi:linespacing="125%">Pamięci</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.862171"
+     y="15.2332"
+     id="text254"
+     sodipodi:linespacing="125%">Jednostka</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.936165"
+     y="16.2332"
+     id="text256"
+     sodipodi:linespacing="125%">InterfejsuSzyny</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.900333"
+     y="19.2332"
+     id="text258"
+     sodipodi:linespacing="125%">Funkcje</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.883038"
+     y="20.2332"
+     id="text260"
+     sodipodi:linespacing="125%">Systemowe</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.909397"
+     y="23.2332"
+     id="text262"
+     sodipodi:linespacing="125%">Interfejs</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="43.882938"
+     y="24.2332"
+     id="text264"
+     sodipodi:linespacing="125%">PCMCIA</text>
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="48.6"
+     y1="23.5"
+     x2="50.4"
+     y2="23.5"
+     id="line266" />
+  <polygon
+     style="fill: #000000"
+     points="48.6,23.25 48.1,23.5 48.6,23.75 "
+     id="polygon268" />
+  <polygon
+     style="fill: #000000"
+     points="50.4,23.75 50.9,23.5 50.4,23.25 "
+     id="polygon270" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="48"
+     y1="19.5"
+     x2="50.39"
+     y2="19.506"
+     id="line272" />
+  <polygon
+     style="fill: #000000"
+     points="50.3894,19.756 50.89,19.5072 50.3906,19.256 "
+     id="polygon274" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="48"
+     y1="15.5"
+     x2="50.38"
+     y2="15.512"
+     id="line276" />
+  <polygon
+     style="fill: #000000"
+     points="50.3787,15.762 50.88,15.5145 50.3813,15.262 "
+     id="polygon278" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="48"
+     y1="11.5"
+     x2="50.37"
+     y2="11.518"
+     id="line280" />
+  <polygon
+     style="fill: #000000"
+     points="50.3681,11.7679 50.87,11.5217 50.3719,11.268 "
+     id="polygon282" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="46.1015"
+     y1="31.5368"
+     x2="50.28"
+     y2="31.5177"
+     id="line284" />
+  <polygon
+     style="fill: #000000"
+     points="50.2811,31.7677 50.78,31.5155 50.2789,31.2677 "
+     id="polygon286" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.3; stroke: #000000"
+     x1="6"
+     y1="38"
+     x2="47"
+     y2="38"
+     id="line288" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="12.038"
+     y1="36.6648"
+     x2="12.017"
+     y2="37.4002"
+     id="line290" />
+  <polygon
+     style="fill: #000000"
+     points="12.2879,36.6719 12.0522,36.165 11.7881,36.6577 "
+     id="polygon292" />
+  <polygon
+     style="fill: #000000"
+     points="11.7671,37.3931 12.0028,37.9 12.2669,37.4073 "
+     id="polygon294" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000"
+     x1="27.983"
+     y1="36.5998"
+     x2="27.962"
+     y2="37.3352"
+     id="line296" />
+  <polygon
+     style="fill: #000000"
+     points="28.2329,36.6069 27.9972,36.1 27.7331,36.5927 "
+     id="polygon298" />
+  <polygon
+     style="fill: #000000"
+     points="27.7121,37.3281 27.9478,37.835 28.2119,37.3423 "
+     id="polygon300" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="9.7571735"
+     y1="38.5998"
+     x2="9.7362738"
+     y2="39.335201"
+     id="line302" />
+  <polygon
+     style="fill:#000000"
+     points="9.99716,38.1 9.73305,38.5927 10.2329,38.6069 "
+     id="polygon304"
+     transform="translate(-0.2257778,0)" />
+  <polygon
+     style="fill:#000000"
+     points="9.94784,39.835 10.2119,39.3423 9.71215,39.3281 "
+     id="polygon306"
+     transform="translate(-0.2257778,0)" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="13.757223"
+     y1="38.5998"
+     x2="13.736223"
+     y2="39.335201"
+     id="line308" />
+  <polygon
+     style="fill:#000000"
+     points="13.9972,38.1 13.7331,38.5927 14.2329,38.6069 "
+     id="polygon310"
+     transform="translate(-0.2257778,0)" />
+  <polygon
+     style="fill:#000000"
+     points="13.9478,39.835 14.2119,39.3423 13.7121,39.3281 "
+     id="polygon312"
+     transform="translate(-0.2257778,0)" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="17.757223"
+     y1="38.5998"
+     x2="17.736223"
+     y2="39.335201"
+     id="line314" />
+  <polygon
+     style="fill:#000000"
+     points="17.9972,38.1 17.7331,38.5927 18.2329,38.6069 "
+     id="polygon316"
+     transform="translate(-0.2257778,0)" />
+  <polygon
+     style="fill:#000000"
+     points="17.9478,39.835 18.2119,39.3423 17.7121,39.3281 "
+     id="polygon318"
+     transform="translate(-0.2257778,0)" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="21.774223"
+     y1="38.599998"
+     x2="21.774223"
+     y2="39.400002"
+     id="line320" />
+  <polygon
+     style="fill:#000000"
+     points="22,38.1 21.75,38.6 22.25,38.6 "
+     id="polygon322"
+     transform="translate(-0.2257778,0)" />
+  <polygon
+     style="fill:#000000"
+     points="22,39.9 22.25,39.4 21.75,39.4 "
+     id="polygon324"
+     transform="translate(-0.2257778,0)" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="35.208786"
+     y1="38.5998"
+     x2="35.187786"
+     y2="39.335201"
+     id="line326" />
+  <polygon
+     style="fill:#000000"
+     points="34.9972,38.1 34.7331,38.5927 35.2329,38.6069 "
+     id="polygon328"
+     transform="translate(0.2257778,0)" />
+  <polygon
+     style="fill:#000000"
+     points="34.9478,39.835 35.2119,39.3423 34.7121,39.3281 "
+     id="polygon330"
+     transform="translate(0.2257778,0)" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="31.208776"
+     y1="38.5998"
+     x2="31.187777"
+     y2="39.335201"
+     id="line332" />
+  <polygon
+     style="fill:#000000"
+     points="30.9972,38.1 30.7331,38.5927 31.2329,38.6069 "
+     id="polygon334"
+     transform="translate(0.2257778,0)" />
+  <polygon
+     style="fill:#000000"
+     points="30.9478,39.835 31.2119,39.3423 30.7121,39.3281 "
+     id="polygon336"
+     transform="translate(0.2257778,0)" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="27.208776"
+     y1="38.5998"
+     x2="27.187777"
+     y2="39.335201"
+     id="line338" />
+  <polygon
+     style="fill:#000000"
+     points="26.9972,38.1 26.7331,38.5927 27.2329,38.6069 "
+     id="polygon340"
+     transform="translate(0.2257778,0)" />
+  <polygon
+     style="fill:#000000"
+     points="26.9478,39.835 27.2119,39.3423 26.7121,39.3281 "
+     id="polygon342"
+     transform="translate(0.2257778,0)" />
+  <line
+     style="fill:none;stroke:#000000;stroke-width:0.2"
+     x1="39.225784"
+     y1="38.599998"
+     x2="39.225784"
+     y2="39.400002"
+     id="line344" />
+  <polygon
+     style="fill:#000000"
+     points="39,38.1 38.75,38.6 39.25,38.6 "
+     id="polygon346"
+     transform="translate(0.2257778,0)" />
+  <polygon
+     style="fill:#000000"
+     points="39,39.9 39.25,39.4 38.75,39.4 "
+     id="polygon348"
+     transform="translate(0.2257778,0)" />
+  <rect
+     style="fill: #ffffff"
+     x="8"
+     y="40"
+     width="15.5"
+     height="2"
+     id="rect350" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8"
+     y="40"
+     width="15.5"
+     height="2"
+     id="rect352" />
+  <rect
+     style="fill: #ffffff"
+     x="25.5"
+     y="40"
+     width="15.5"
+     height="2"
+     id="rect354" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="25.5"
+     y="40"
+     width="15.5"
+     height="2"
+     id="rect356" />
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="38.476345"
+     y="41.370377"
+     id="text358"
+     sodipodi:linespacing="125%">I2C</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="34.526527"
+     y="41.370377"
+     id="text360"
+     sodipodi:linespacing="125%">SPI</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="29.927588"
+     y="41.370377"
+     id="text362"
+     sodipodi:linespacing="125%">SMC2</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="26.040476"
+     y="41.370377"
+     id="text364"
+     sodipodi:linespacing="125%">SMC1</text>
+  <text
+     style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="8.739337"
+     y="41.370377"
+     id="text366"
+     sodipodi:linespacing="125%">USB</text>
+  <text
+     style="font-size:0.76252127px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;font-family:sans"
+     x="12.528532"
+     y="41.370377"
+     id="text368"
+     sodipodi:linespacing="125%">
+    <tspan
+       style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5602">SCC2</tspan>
+  </text>
+  <text
+     style="font-size:0.76201862px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;font-family:sans"
+     x="16.472113"
+     y="41.37587"
+     id="text370"
+     sodipodi:linespacing="125%">
+    <tspan
+       style="font-size:0.90311116px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan5604">SCC3</tspan>
+  </text>
+  <text
+     style="font-size:0.76200002px"
+     x="20.789446"
+     y="40.949375"
+     id="text372">SCC4</text>
+  <text
+     style="font-size:0.76200002px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
+     x="21.598106"
+     y="41.649384"
+     id="text374"
+     sodipodi:linespacing="125%">/UTOPIA</text>
+  <rect
+     style="fill: #ffffff"
+     x="8"
+     y="43"
+     width="21"
+     height="2"
+     id="rect376" />
+  <rect
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     x="8"
+     y="43"
+     width="21"
+     height="2"
+     id="rect378" />
+  <text
+     style="font-size:0.60144758px;font-style:normal;font-weight:normal;fill:#000000;font-family:sans"
+     x="14.853454"
+     y="46.632015"
+     id="text380">Time Slot Assigner</text>
+  <polygon
+     style="fill: #ffffff"
+     points="30,43 41,43 41,48 8,48 8,46 30,46 "
+     id="polygon382" />
+  <polygon
+     style="fill: none; fill-opacity:0; stroke-width: 0.1; stroke: #000000"
+     points="30,43 41,43 41,48 8,48 8,46 30,46 "
+     id="polygon384" />
+  <text
+     style="font-size:1.01600003px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+     x="30.998741"
+     y="45.747501"
+     id="text386"
+     sodipodi:linespacing="125%">Interfejs Szeregowy</text>
+  <text
+     xml:space="preserve"
+     style="font-size:8.75598526px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="25.443218"
+     y="23.766285"
+     id="text2823"><tspan
+       sodipodi:role="line"
+       id="tspan2825"
+       x="25.443218"
+       y="23.766285"
+       style="font-size:0.87559855px;text-align:center;text-anchor:middle">Interrupt</tspan><tspan
+       sodipodi:role="line"
+       x="25.443218"
+       y="24.860783"
+       style="font-size:0.87559855px;text-align:center;text-anchor:middle"
+       id="tspan2827">Controller</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:1.12888896px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="15.234311"
+     y="44.313766"
+     id="text2837"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan2839"
+       x="15.234311"
+       y="44.313766">Time Slot Assigner</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial"
+     x="474.94193"
+     y="301.67987"
+     id="text5606"
+     sodipodi:linespacing="125%"
+     transform="matrix(0.02822222,0,0,0.02822222,-4,1.9999988)"><tspan
+       sodipodi:role="line"
+       id="tspan5608"></tspan></text>
+</svg>

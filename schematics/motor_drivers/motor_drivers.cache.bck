@@ -1,0 +1,33 @@
+EESchema-DOCLIB  Version 2.0  16/10/2008-17:19:37
+#
+$CMP C
+D Condensateur non polarise
+$ENDCMP
+#
+$CMP CONN_2
+D Symbole general de connecteur
+K CONN
+$ENDCMP
+#
+$CMP CONN_8
+D Symbole general de connecteur
+K CONN
+$ENDCMP
+#
+$CMP DIODESCH
+D Diode schottky
+K DEV DIODE
+$ENDCMP
+#
+$CMP R
+D Resistance
+K R DEV
+$ENDCMP
+#
+$CMP TC4424A
+D 3A Dual High-Speed Power MOSFET Drivers
+K mosfet driver
+F http://ww1.microchip.com/downloads/en/DeviceDoc/21998b.pdf
+$ENDCMP
+#
+#End Doc Library

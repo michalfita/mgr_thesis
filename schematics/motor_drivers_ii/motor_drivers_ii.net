@@ -1,0 +1,1090 @@
+# EESchema Netlist Version 1.1 created  Sun 10 Jul 2011 18:44:32 CEST
+(
+ ( /4E0E11C1 SM0805  R6 660Ω {Lib=R}
+  (    1 /RLED+ )
+  (    2 /IA9 )
+ )
+ ( /4E0E11BA SM0805  R5 660Ω {Lib=R}
+  (    1 /LLED+ )
+  (    2 /IA8 )
+ )
+ ( /4E0CE358 cap-master-7343-TE-D  C17 220µF {Lib=C_POL}
+  (    + N-000080 )
+  (    - /SPEAKER )
+ )
+ ( /4E0CE322 SM2512  R2 100Ω/1W {Lib=R}
+  (    1 +12V )
+  (    2 N-000031 )
+ )
+ ( /4E0CDF55 SM0603  C14 100nF {Lib=C}
+  (    1 GND )
+  (    2 N-000038 )
+ )
+ ( /4E0CD712 cap-master-0805  C16 47nF {Lib=C}
+  (    1 N-000037 )
+  (    2 GND )
+ )
+ ( /4E0CD705 SM0805  R4 10Ω {Lib=R}
+  (    1 N-000037 )
+  (    2 N-000080 )
+ )
+ ( /4E0CD610 diode-DO214AC  D49 12V/1W {Lib=DIODE_ZENER}
+  (    A GND )
+  (    K N-000031 )
+ )
+ ( /4E0CD4E7 cap-master-3216-18R/T  C15 10µF {Lib=C_POL}
+  (    + N-000036 )
+  (    - N-000035 )
+ )
+ ( /4E0CD447 SM0805  R3 1kΩ {Lib=R}
+  (    1 N-000034 )
+  (    2 N-000036 )
+ )
+ ( /4E0CD31F POT_CMS  R1 10kΩ {Lib=POT}
+  (    1 GND )
+  (    2 N-000033 )
+  (    3 /AUDIO )
+ )
+ ( /4E0CD2CD SO8E  U6 LM386 {Lib=LM386}
+  (    1 N-000034 )
+  (    2 GND )
+  (    3 N-000033 )
+  (    4 GND )
+  (    5 N-000080 )
+  (    6 N-000031 )
+  (    7 N-000038 )
+  (    8 N-000035 )
+ )
+ ( /4E0B8B0A jst_eph-B6B-PH-K-S  P11 CONN_6 {Lib=CONN_6}
+  (    1 ? )
+  (    2 ? )
+  (    3 +12V )
+  (    4 /PWROn2 )
+  (    5 /SPEAKER )
+  (    6 GND )
+ )
+ ( /4E0B88C4 jst_eph-B8B-PH-K-S  P10 CONN_8 {Lib=CONN_8}
+  (    1 /MOTOR4.1 )
+  (    2 /MOTOR4.2 )
+  (    3 GND )
+  (    4 /RLED+ )
+  (    5 /IB9 )
+  (    6 GND )
+  (    7 /IA13 )
+  (    8 GND )
+ )
+ ( /4E0B8896 jst_eph-B2B-PH-K-S  P9 CONN_2 {Lib=CONN_2}
+  (    1 /MOTOR5.1 )
+  (    2 /MOTOR5.2 )
+ )
+ ( /4E0B6404 jst_eph-B8B-PH-K-S  P8 CONN_8 {Lib=CONN_8}
+  (    1 /MOTOR3.1 )
+  (    2 /MOTOR3.2 )
+  (    3 GND )
+  (    4 /LLED+ )
+  (    5 /IB8 )
+  (    6 GND )
+  (    7 /IA12 )
+  (    8 GND )
+ )
+ ( /4E0A3502 jst_eph-B4B-PH-K-S  P7 CONN_4 {Lib=CONN_4}
+  (    1 GND )
+  (    2 /IB11 )
+  (    3 /LBat+ )
+  (    4 /PWROn2 )
+ )
+ ( /4E0A34F3 jst_eph-B4B-PH-K-S  P6 CONN_4 {Lib=CONN_4}
+  (    1 GND )
+  (    2 /IB10 )
+  (    3 GND )
+  (    4 /LBat+ )
+ )
+ ( /4E0A34EB jst_eph-B4B-PH-K-S  P5 CONN_4 {Lib=CONN_4}
+  (    1 /MOTOR2.1 )
+  (    2 /MOTOR2.2 )
+  (    3 GND )
+  (    4 /IA11 )
+ )
+ ( /4E0A339D jst_eph-B4B-PH-K-S  P4 CONN_4 {Lib=CONN_4}
+  (    1 /MOTOR1.1 )
+  (    2 /MOTOR1.2 )
+  (    3 GND )
+  (    4 /IA10 )
+ )
+ ( /4E0A32AC jst_eph-B2B-PH-K-S  P3 CONN_2 {Lib=CONN_2}
+  (    1 /MOTOR7.1 )
+  (    2 /MOTOR7.2 )
+ )
+ ( /4E0A3289 jst_eph-B2B-PH-K-S  P2 CONN_2 {Lib=CONN_2}
+  (    1 /MOTOR6.1 )
+  (    2 /MOTOR6.2 )
+ )
+ ( /4E0A214A IDC_HDR_ANG_15x2_2.54mm  P1 CONN_15X2 {Lib=CONN_15X2}
+  (    1 GND )
+  (    2 +5V )
+  (    3 /IA0 )
+  (    4 /IB0 )
+  (    5 /IA1 )
+  (    6 /IB1 )
+  (    7 /IA2 )
+  (    8 /IB2 )
+  (    9 /IA3 )
+  (   10 /IB3 )
+  (   11 /IA4 )
+  (   12 /IB4 )
+  (   13 /IA5 )
+  (   14 /IB5 )
+  (   15 /IA6 )
+  (   16 /IB6 )
+  (   17 /IA7 )
+  (   18 /IB7 )
+  (   19 /IA8 )
+  (   20 /IB8 )
+  (   21 /IA9 )
+  (   22 /IB9 )
+  (   23 /IA10 )
+  (   24 /IB10 )
+  (   25 /IA11 )
+  (   26 /IB11 )
+  (   27 /IA12 )
+  (   28 /AUDIO )
+  (   29 /IA13 )
+  (   30 +12V )
+ )
+ ( /4E0A1910 SO20L  U5 74HC240D {Lib=74LS240}
+  (    1 GND )
+  (    2 /IA0 )
+  (    3 /~IA7 )
+  (    4 /IA1 )
+  (    5 /~IA6 )
+  (    6 /IA2 )
+  (    7 /~IA5 )
+  (    8 /IA3 )
+  (    9 /~IA4 )
+  (   10 GND )
+  (   11 /IA4 )
+  (   12 /~IA3 )
+  (   13 /IA5 )
+  (   14 /~IA2 )
+  (   15 /IA6 )
+  (   16 /~IA1 )
+  (   17 /IA7 )
+  (   18 /~IA0 )
+  (   19 GND )
+  (   20 +5V )
+ )
+ ( /4E060207 SM0603  C13 100nF {Lib=C}
+  (    1 GND )
+  (    2 +5V )
+ )
+ ( /4E0331AD bornier2  P12 CONN_2 {Lib=CONN_2}
+  (    1 GND )
+  (    2 +12V )
+ )
+ ( /4E023D62 SM0805  R47 660Ω {Lib=R}
+  (    1 /MOTOR8.2 )
+  (    2 N-000012 )
+ )
+ ( /4E023D61 SM0805  R48 540Ω {Lib=R}
+  (    1 /MOTOR8.2 )
+  (    2 N-000011 )
+ )
+ ( /4E023D60 SM0805  D47 Orange {Lib=LED}
+  (    A /MOTOR8.1 )
+  (    K N-000012 )
+ )
+ ( /4E023D5F SM0805  D48 Blue {Lib=LED}
+  (    A N-000011 )
+  (    K /MOTOR8.1 )
+ )
+ ( /4E023D4F SM0805  D46 Blue {Lib=LED}
+  (    A N-000009 )
+  (    K /MOTOR7.1 )
+ )
+ ( /4E023D4E SM0805  D45 Orange {Lib=LED}
+  (    A /MOTOR7.1 )
+  (    K N-000008 )
+ )
+ ( /4E023D4D SM0805  R46 540Ω {Lib=R}
+  (    1 /MOTOR7.2 )
+  (    2 N-000009 )
+ )
+ ( /4E023D4C SM0805  R45 660Ω {Lib=R}
+  (    1 /MOTOR7.2 )
+  (    2 N-000008 )
+ )
+ ( /4E023C35 SM0805  R43 660Ω {Lib=R}
+  (    1 /MOTOR6.2 )
+  (    2 N-000073 )
+ )
+ ( /4E023C34 SM0805  R44 540Ω {Lib=R}
+  (    1 /MOTOR6.2 )
+  (    2 N-000072 )
+ )
+ ( /4E023C33 SM0805  D43 Orange {Lib=LED}
+  (    A /MOTOR6.1 )
+  (    K N-000073 )
+ )
+ ( /4E023C32 SM0805  D44 Blue {Lib=LED}
+  (    A N-000072 )
+  (    K /MOTOR6.1 )
+ )
+ ( /4E023BB3 SM0805  D42 Blue {Lib=LED}
+  (    A N-000078 )
+  (    K /MOTOR5.1 )
+ )
+ ( /4E023BB2 SM0805  D41 Orange {Lib=LED}
+  (    A /MOTOR5.1 )
+  (    K N-000077 )
+ )
+ ( /4E023BB1 SM0805  R42 540Ω {Lib=R}
+  (    1 /MOTOR5.2 )
+  (    2 N-000078 )
+ )
+ ( /4E023BB0 SM0805  R41 660Ω {Lib=R}
+  (    1 /MOTOR5.2 )
+  (    2 N-000077 )
+ )
+ ( /4E023B97 SM0805  R39 660Ω {Lib=R}
+  (    1 /MOTOR4.2 )
+  (    2 N-000076 )
+ )
+ ( /4E023B96 SM0805  R40 540Ω {Lib=R}
+  (    1 /MOTOR4.2 )
+  (    2 N-000075 )
+ )
+ ( /4E023B95 SM0805  D39 Orange {Lib=LED}
+  (    A /MOTOR4.1 )
+  (    K N-000076 )
+ )
+ ( /4E023B94 SM0805  D40 Blue {Lib=LED}
+  (    A N-000075 )
+  (    K /MOTOR4.1 )
+ )
+ ( /4E023ADD SM0805  D38 Blue {Lib=LED}
+  (    A N-000074 )
+  (    K /MOTOR3.1 )
+ )
+ ( /4E023ADC SM0805  D37 Orange {Lib=LED}
+  (    A /MOTOR3.1 )
+  (    K N-000069 )
+ )
+ ( /4E023ADB SM0805  R38 540Ω {Lib=R}
+  (    1 /MOTOR3.2 )
+  (    2 N-000074 )
+ )
+ ( /4E023ADA SM0805  R37 660Ω {Lib=R}
+  (    1 /MOTOR3.2 )
+  (    2 N-000069 )
+ )
+ ( /4E023AC5 SM0805  D34 Blue {Lib=LED}
+  (    A N-000068 )
+  (    K /MOTOR1.1 )
+ )
+ ( /4E023AC4 SM0805  D33 Orange {Lib=LED}
+  (    A /MOTOR1.1 )
+  (    K N-000067 )
+ )
+ ( /4E023AC3 SM0805  R34 540Ω {Lib=R}
+  (    1 /MOTOR1.2 )
+  (    2 N-000068 )
+ )
+ ( /4E023AC2 SM0805  R33 660Ω {Lib=R}
+  (    1 /MOTOR1.2 )
+  (    2 N-000067 )
+ )
+ ( /4E02399A SM0805  R35 660Ω {Lib=R}
+  (    1 /MOTOR2.2 )
+  (    2 N-000071 )
+ )
+ ( /4E02398D SM0805  R36 540Ω {Lib=R}
+  (    1 /MOTOR2.2 )
+  (    2 N-000070 )
+ )
+ ( /4E0236DC SM0805  D35 Orange {Lib=LED}
+  (    A /MOTOR2.1 )
+  (    K N-000071 )
+ )
+ ( /4E02366C SM0805  D36 Blue {Lib=LED}
+  (    A N-000070 )
+  (    K /MOTOR2.1 )
+ )
+ ( /4E00FDD1 diode-DO214AC  D32 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR8.2 )
+ )
+ ( /4E00FDD0 diode-DO214AC  D30 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR8.1 )
+ )
+ ( /4E00FDCF diode-DO214AC  D31 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR8.2 )
+  (    K +12V )
+ )
+ ( /4E00FDCE diode-DO214AC  D29 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR8.1 )
+  (    K +12V )
+ )
+ ( /4E00FDCD diode-DO214AC  D28 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR7.2 )
+ )
+ ( /4E00FDCC diode-DO214AC  D27 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR7.2 )
+  (    K +12V )
+ )
+ ( /4E00FDCB diode-DO214AC  D25 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR7.1 )
+  (    K +12V )
+ )
+ ( /4E00FDCA diode-DO214AC  D26 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR7.1 )
+ )
+ ( /4E00FCAB diode-DO214AC  D16 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR4.2 )
+ )
+ ( /4E00FCAA diode-DO214AC  D14 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR4.1 )
+ )
+ ( /4E00FCA9 diode-DO214AC  D15 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR4.2 )
+  (    K +12V )
+ )
+ ( /4E00FCA8 diode-DO214AC  D13 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR4.1 )
+  (    K +12V )
+ )
+ ( /4E00FCA7 diode-DO214AC  D12 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR3.2 )
+ )
+ ( /4E00FCA6 diode-DO214AC  D11 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR3.2 )
+  (    K +12V )
+ )
+ ( /4E00FCA5 diode-DO214AC  D9 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR3.1 )
+  (    K +12V )
+ )
+ ( /4E00FCA4 diode-DO214AC  D10 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR3.1 )
+ )
+ ( /4E00FC27 diode-DO214AC  D18 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR5.1 )
+ )
+ ( /4E00FC26 diode-DO214AC  D17 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR5.1 )
+  (    K +12V )
+ )
+ ( /4E00FC25 diode-DO214AC  D19 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR5.2 )
+  (    K +12V )
+ )
+ ( /4E00FC24 diode-DO214AC  D20 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR5.2 )
+ )
+ ( /4E00FC23 diode-DO214AC  D21 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR6.1 )
+  (    K +12V )
+ )
+ ( /4E00FC22 diode-DO214AC  D23 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR6.2 )
+  (    K +12V )
+ )
+ ( /4E00FC21 diode-DO214AC  D22 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR6.1 )
+ )
+ ( /4E00FC20 diode-DO214AC  D24 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR6.2 )
+ )
+ ( /4E00FAB3 diode-DO214AC  D8 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR2.2 )
+ )
+ ( /4E00FAAF diode-DO214AC  D6 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR2.1 )
+ )
+ ( /4E00FAA9 diode-DO214AC  D7 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR2.2 )
+  (    K +12V )
+ )
+ ( /4E00FAA0 diode-DO214AC  D5 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR2.1 )
+  (    K +12V )
+ )
+ ( /4E00F96A diode-DO214AC  D4 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR1.2 )
+ )
+ ( /4E00F963 diode-DO214AC  D3 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR1.2 )
+  (    K +12V )
+ )
+ ( /4E00F94A diode-DO214AC  D1 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A /MOTOR1.1 )
+  (    K +12V )
+ )
+ ( /4E00F92F diode-DO214AC  D2 SK34A {Lib=DIODE_SCHOTTKY}
+  (    A GND )
+  (    K /MOTOR1.1 )
+ )
+ ( /4D28E58E cap-master-6032-28R/T  C1 45µF {Lib=C_POL}
+  (    + +12V )
+  (    - GND )
+ )
+ ( /4D28E58A cap-master-6032-28R/T  C2 45µF {Lib=C_POL}
+  (    + +12V )
+  (    - GND )
+ )
+ ( /4D28E580 cap-master-6032-28R/T  C3 45µF {Lib=C_POL}
+  (    + +12V )
+  (    - GND )
+ )
+ ( /4D28E27C cap-master-6032-28R/T  C4 45µF {Lib=C_POL}
+  (    + +12V )
+  (    - GND )
+ )
+ ( /4D2792F7 SM0603  C8 100nF {Lib=C}
+  (    1 GND )
+  (    2 +12V )
+ )
+ ( /4D2792F6 SM0603  C7 100nF {Lib=C}
+  (    1 GND )
+  (    2 +12V )
+ )
+ ( /4D2792F5 SM0603  C6 100nF {Lib=C}
+  (    1 GND )
+  (    2 +12V )
+ )
+ ( /4D2792F4 SM0603  C5 100nF {Lib=C}
+  (    1 GND )
+  (    2 +12V )
+ )
+ ( /4D2790C3 SM0603  C9 100nF {Lib=C}
+  (    1 GND )
+  (    2 +5V )
+ )
+ ( /4D2790BD SM0603  C10 100nF {Lib=C}
+  (    1 GND )
+  (    2 +5V )
+ )
+ ( /4D2790AE SM0603  C11 100nF {Lib=C}
+  (    1 GND )
+  (    2 +5V )
+ )
+ ( /4D27909D SM0603  C12 100nF {Lib=C}
+  (    1 GND )
+  (    2 +5V )
+ )
+ ( /4D278FE0 PowerSO-20-Dissi  U4 L298P {Lib=L298P}
+  (    1 GND )
+  (    2 GND )
+  (    4 /MOTOR7.1 )
+  (    5 /MOTOR7.2 )
+  (    6 +12V )
+  (    7 /IA6 )
+  (    9 /~IA6 )
+  (   10 GND )
+  (   11 GND )
+  (   12 +5V )
+  (   13 /IA7 )
+  (   14 /IB7 )
+  (   15 /~IA7 )
+  (   16 /MOTOR8.1 )
+  (   17 /MOTOR8.2 )
+  (   18 /IB6 )
+  (   19 GND )
+  (   20 GND )
+ )
+ ( /4D278F1C PowerSO-20-Dissi  U3 L298P {Lib=L298P}
+  (    1 GND )
+  (    2 GND )
+  (    4 /MOTOR5.1 )
+  (    5 /MOTOR5.2 )
+  (    6 +12V )
+  (    7 /IA4 )
+  (    9 /~IA4 )
+  (   10 GND )
+  (   11 GND )
+  (   12 +5V )
+  (   13 /IA5 )
+  (   14 /IB5 )
+  (   15 /~IA5 )
+  (   16 /MOTOR6.1 )
+  (   17 /MOTOR6.2 )
+  (   18 /IB4 )
+  (   19 GND )
+  (   20 GND )
+ )
+ ( /4D278F0D PowerSO-20-Dissi  U2 L298P {Lib=L298P}
+  (    1 GND )
+  (    2 GND )
+  (    4 /MOTOR3.1 )
+  (    5 /MOTOR3.2 )
+  (    6 +12V )
+  (    7 /IA2 )
+  (    9 /~IA2 )
+  (   10 GND )
+  (   11 GND )
+  (   12 +5V )
+  (   13 /IA3 )
+  (   14 /IB3 )
+  (   15 /~IA3 )
+  (   16 /MOTOR4.1 )
+  (   17 /MOTOR4.2 )
+  (   18 /IB2 )
+  (   19 GND )
+  (   20 GND )
+ )
+ ( /4D278F01 PowerSO-20-Dissi  U1 L298P {Lib=L298P}
+  (    1 GND )
+  (    2 GND )
+  (    4 /MOTOR1.1 )
+  (    5 /MOTOR1.2 )
+  (    6 +12V )
+  (    7 /IA0 )
+  (    9 /~IA0 )
+  (   10 GND )
+  (   11 GND )
+  (   12 +5V )
+  (   13 /IA1 )
+  (   14 /IB1 )
+  (   15 /~IA1 )
+  (   16 /MOTOR2.1 )
+  (   17 /MOTOR2.2 )
+  (   18 /IB0 )
+  (   19 GND )
+  (   20 GND )
+ )
+)
+*
+{ Allowed footprints by component:
+$component R6
+ R*
+$endlist
+$component R5
+ R*
+$endlist
+$component R2
+ R*
+$endlist
+$component R4
+ R*
+$endlist
+$component R3
+ R*
+$endlist
+$component U6
+ 8DIP300
+ 8DIP-ELL300
+ SSOP8
+ SO8E
+$endlist
+$component R47
+ R*
+$endlist
+$component R48
+ R*
+$endlist
+$component R46
+ R*
+$endlist
+$component R45
+ R*
+$endlist
+$component R43
+ R*
+$endlist
+$component R44
+ R*
+$endlist
+$component R42
+ R*
+$endlist
+$component R41
+ R*
+$endlist
+$component R39
+ R*
+$endlist
+$component R40
+ R*
+$endlist
+$component R38
+ R*
+$endlist
+$component R37
+ R*
+$endlist
+$component R34
+ R*
+$endlist
+$component R33
+ R*
+$endlist
+$component R35
+ R*
+$endlist
+$component R36
+ R*
+$endlist
+$component U4
+ PowerSO20
+$endlist
+$component U3
+ PowerSO20
+$endlist
+$component U2
+ PowerSO20
+$endlist
+$component U1
+ PowerSO20
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "/IA12" "IA12"
+ P8 7
+ P1 27
+Net 2 "/IA8" "IA8"
+ P1 19
+ R5 2
+Net 3 "+5V" "+5V"
+ C13 2
+ C10 2
+ C9 2
+ C11 2
+ C12 2
+ U4 12
+ U2 12
+ U1 12
+ U3 12
+ U5 20
+ P1 2
+Net 4 "GND" "GND"
+ D30 A
+ D32 A
+ D22 A
+ D20 A
+ D18 A
+ D4 A
+ D6 A
+ D8 A
+ D24 A
+ D26 A
+ D28 A
+ U3 19
+ U2 1
+ U2 2
+ U2 10
+ U2 20
+ U3 2
+ U3 10
+ U3 20
+ D16 A
+ D14 A
+ D12 A
+ D10 A
+ D2 A
+ C1 -
+ C2 -
+ C3 -
+ C4 -
+ U4 10
+ U4 20
+ U4 11
+ U4 19
+ U3 1
+ U4 2
+ U4 1
+ C12 1
+ C11 1
+ U3 11
+ U1 10
+ U1 20
+ U1 11
+ U1 19
+ U2 11
+ U2 19
+ U1 1
+ U1 2
+ C8 1
+ C7 1
+ C6 1
+ C5 1
+ P7 1
+ U5 1
+ C13 1
+ U5 19
+ U6 2
+ U6 4
+ R1 1
+ P11 6
+ D49 A
+ C16 2
+ C14 1
+ P10 3
+ P4 3
+ P5 3
+ P6 3
+ P10 6
+ P6 1
+ P10 8
+ C10 1
+ C9 1
+ P8 3
+ U5 10
+ P8 6
+ P1 1
+ P8 8
+ P12 1
+Net 5 "/IB10" "IB10"
+ P6 2
+ P1 24
+Net 6 "+12V" "+12V"
+ C3 +
+ C2 +
+ P11 3
+ C1 +
+ C4 +
+ D7 K
+ D3 K
+ D1 K
+ D15 K
+ D13 K
+ D11 K
+ D25 K
+ D9 K
+ D27 K
+ D31 K
+ D29 K
+ D23 K
+ D21 K
+ D19 K
+ D17 K
+ R2 1
+ D5 K
+ U2 6
+ P12 2
+ P1 30
+ U3 6
+ C5 2
+ C6 2
+ U4 6
+ C8 2
+ U1 6
+ C7 2
+Net 7 "/IB8" "IB8"
+ P1 20
+ P8 5
+Net 8 "" ""
+ R45 2
+ D45 K
+Net 9 "" ""
+ R46 2
+ D46 A
+Net 10 "/MOTOR8.1" "MOTOR8.1"
+ D29 A
+ D30 K
+ U4 16
+ D47 A
+ D48 K
+Net 11 "" ""
+ R48 2
+ D48 A
+Net 12 "" ""
+ R47 2
+ D47 K
+Net 13 "/MOTOR8.2" "MOTOR8.2"
+ R48 1
+ D31 A
+ D32 K
+ R47 1
+ U4 17
+Net 14 "/~IA0" "~IA0"
+ U1 9
+ U5 18
+Net 15 "/IA7" "IA7"
+ U4 13
+ P1 17
+ U5 17
+Net 16 "/~IA1" "~IA1"
+ U5 16
+ U1 15
+Net 17 "/IA6" "IA6"
+ P1 15
+ U5 15
+ U4 7
+Net 18 "/~IA2" "~IA2"
+ U2 9
+ U5 14
+Net 19 "/IA5" "IA5"
+ P1 13
+ U5 13
+ U3 13
+Net 20 "/~IA3" "~IA3"
+ U5 12
+ U2 15
+Net 21 "/IA4" "IA4"
+ U3 7
+ P1 11
+ U5 11
+Net 22 "/~IA4" "~IA4"
+ U5 9
+ U3 9
+Net 23 "/IA3" "IA3"
+ U5 8
+ U2 13
+ P1 9
+Net 24 "/~IA5" "~IA5"
+ U3 15
+ U5 7
+Net 25 "/IA2" "IA2"
+ U2 7
+ P1 7
+ U5 6
+Net 26 "/~IA6" "~IA6"
+ U5 5
+ U4 9
+Net 27 "/IA1" "IA1"
+ U1 13
+ U5 4
+ P1 5
+Net 28 "/~IA7" "~IA7"
+ U5 3
+ U4 15
+Net 29 "/IA0" "IA0"
+ U1 7
+ P1 3
+ U5 2
+Net 30 "/AUDIO" "AUDIO"
+ P1 28
+ R1 3
+Net 31 "" ""
+ R2 2
+ D49 K
+ U6 6
+Net 32 "/SPEAKER" "SPEAKER"
+ C17 -
+ P11 5
+Net 33 "" ""
+ U6 3
+ R1 2
+Net 34 "" ""
+ R3 1
+ U6 1
+Net 35 "" ""
+ C15 -
+ U6 8
+Net 36 "" ""
+ C15 +
+ R3 2
+Net 37 "" ""
+ R4 1
+ C16 1
+Net 38 "" ""
+ C14 2
+ U6 7
+Net 39 "/MOTOR6.1" "MOTOR6.1"
+ D22 K
+ U3 16
+ P2 1
+ D21 A
+ D44 K
+ D43 A
+Net 40 "/MOTOR7.2" "MOTOR7.2"
+ R45 1
+ U4 5
+ R46 1
+ P3 2
+ D27 A
+ D28 K
+Net 41 "/MOTOR7.1" "MOTOR7.1"
+ P3 1
+ D26 K
+ U4 4
+ D25 A
+ D45 A
+ D46 K
+Net 42 "/IA10" "IA10"
+ P4 4
+ P1 23
+Net 43 "/MOTOR1.2" "MOTOR1.2"
+ D4 K
+ R33 1
+ R34 1
+ D3 A
+ U1 5
+ P4 2
+Net 44 "/MOTOR1.1" "MOTOR1.1"
+ U1 4
+ P4 1
+ D34 K
+ D1 A
+ D33 A
+ D2 K
+Net 45 "/IA11" "IA11"
+ P5 4
+ P1 25
+Net 46 "/MOTOR2.2" "MOTOR2.2"
+ U1 17
+ D8 K
+ D7 A
+ R36 1
+ R35 1
+ P5 2
+Net 47 "/MOTOR2.1" "MOTOR2.1"
+ D5 A
+ D6 K
+ P5 1
+ U1 16
+ D35 A
+ D36 K
+Net 48 "/PWROn2" "PWROn2"
+ P11 4
+ P7 4
+Net 49 "/LBat+" "LBat+"
+ P6 4
+ P7 3
+Net 50 "/MOTOR6.2" "MOTOR6.2"
+ U3 17
+ R43 1
+ D24 K
+ R44 1
+ D23 A
+ P2 2
+Net 51 "/MOTOR3.1" "MOTOR3.1"
+ D10 K
+ D9 A
+ P8 1
+ D38 K
+ U2 4
+ D37 A
+Net 52 "/MOTOR5.2" "MOTOR5.2"
+ U3 5
+ R42 1
+ D20 K
+ D19 A
+ R41 1
+ P9 2
+Net 53 "/MOTOR5.1" "MOTOR5.1"
+ P9 1
+ D17 A
+ D18 K
+ D42 K
+ D41 A
+ U3 4
+Net 54 "/MOTOR4.2" "MOTOR4.2"
+ R39 1
+ R40 1
+ P10 2
+ U2 17
+ D16 K
+ D15 A
+Net 55 "/MOTOR4.1" "MOTOR4.1"
+ D14 K
+ U2 16
+ D13 A
+ D40 K
+ D39 A
+ P10 1
+Net 58 "/MOTOR3.2" "MOTOR3.2"
+ R38 1
+ D12 K
+ R37 1
+ D11 A
+ P8 2
+ U2 5
+Net 59 "/IB6" "IB6"
+ P1 16
+ U4 18
+Net 60 "/IB7" "IB7"
+ P1 18
+ U4 14
+Net 61 "/IB2" "IB2"
+ P1 8
+ U2 18
+Net 62 "/IB3" "IB3"
+ P1 10
+ U2 14
+Net 63 "/IB0" "IB0"
+ U1 18
+ P1 4
+Net 64 "/IB1" "IB1"
+ P1 6
+ U1 14
+Net 65 "/IB5" "IB5"
+ U3 14
+ P1 14
+Net 66 "/IB4" "IB4"
+ U3 18
+ P1 12
+Net 67 "" ""
+ D33 K
+ R33 2
+Net 68 "" ""
+ D34 A
+ R34 2
+Net 69 "" ""
+ D37 K
+ R37 2
+Net 70 "" ""
+ D36 A
+ R36 2
+Net 71 "" ""
+ R35 2
+ D35 K
+Net 72 "" ""
+ R44 2
+ D44 A
+Net 73 "" ""
+ R43 2
+ D43 K
+Net 74 "" ""
+ D38 A
+ R38 2
+Net 75 "" ""
+ R40 2
+ D40 A
+Net 76 "" ""
+ D39 K
+ R39 2
+Net 77 "" ""
+ R41 2
+ D41 K
+Net 78 "" ""
+ D42 A
+ R42 2
+Net 79 "/LLED+" "LLED+"
+ R5 1
+ P8 4
+Net 80 "" ""
+ R4 2
+ C17 +
+ U6 5
+Net 81 "/RLED+" "RLED+"
+ R6 1
+ P10 4
+Net 82 "/IA9" "IA9"
+ P1 21
+ R6 2
+Net 83 "/IA13" "IA13"
+ P1 29
+ P10 7
+Net 84 "/IB9" "IB9"
+ P10 5
+ P1 22
+Net 85 "/IB11" "IB11"
+ P7 2
+ P1 26
+}
+#End

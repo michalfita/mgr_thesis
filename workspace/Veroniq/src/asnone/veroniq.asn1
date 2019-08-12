@@ -1,0 +1,72 @@
+Veroniq DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+
+-- For description who participates in communication
+Participant ::= ENUMERATED {
+  console,  -- for console/steering application
+  remote,   -- for additional remote controller
+  board,    -- for the microcontroller board
+  other     -- for anything else not mentioned here
+}
+
+-- Typical response for the request
+Response ::= SEQUENCE {
+  success BOOLEAN,
+  errorcode INTEGER
+}
+
+-- Response to request for identification of the software version
+IdentificationResponse ::= SEQUENCE {
+  version SEQUENCE (SIZE (3)) OF INTEGER,
+  build INTEGER
+}
+
+-- Request for single pin (low level)
+PinRequest ::= SEQUENCE {
+  pin INTEGER(0..6), -- number of the pin on the board
+  value CHOICE {
+    logic BOOLEAN, -- logic value
+    pwm INTEGER(0..100) -- duty cyle
+  },
+  period INTEGER OPTIONAL -- how long keep the new state [miliseconds]
+}
+
+MoveRequest ::= SEQUENCE {
+  limb ENUMERATED {
+    leftHand,
+    leftArm,
+    rightHand,
+    rightArm,
+    hips,
+    leftLeg,
+    rightLeg
+  },
+  direction ENUMERATED {
+    forward,
+    backward
+  },
+  period INTEGER OPTIONAL -- how long keep the movement [miliseconds]
+}
+
+-- Content types of the message
+MessageContent ::= CHOICE {
+  identificationRequest NULL,
+  identificationResponse IdentificationResponse,
+  pinRequest PinRequest, -- low level request for single pin
+  moveRequest MoveRequest, -- atomic move request
+  response Response, -- confirmation
+  
+  nothing NULL
+}
+
+-- The main message definition
+Message ::= SEQUENCE {
+  veroniqObjectId OBJECT IDENTIFIER DEFAULT {iso member-body country(48)},
+  --messageType MessageType,
+  source Participant,
+  destination Participant,
+  content MessageContent
+}
+
+
+END

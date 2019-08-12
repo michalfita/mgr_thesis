@@ -1,0 +1,21 @@
+EESchema-DOCLIB  Version 2.0  Date: pią, 7 sty 2011, 23:06:08
+#
+$CMP L298HN
+D Dual Full Bridge Driver (Multiwatt 15 Horizontal)
+K BRIDGE DRIVER
+F http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000240.pdf
+$ENDCMP
+#
+$CMP L298N
+D Dual Full Bridge Driver (Multiwatt 15)
+K BRIDGE DRIVER
+F http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000240.pdf
+$ENDCMP
+#
+$CMP L298P
+D Dual Full Bridge Driver (PowerSO 20)
+K BRIDGE DRIVER
+F http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000240.pdf
+$ENDCMP
+#
+#End Doc Library

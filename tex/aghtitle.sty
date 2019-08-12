@@ -1,0 +1,274 @@
+%% 
+%% This is file `aghtitle.sty',
+%% author: Micha/l Fita <manveru@interia.pl>
+%% version:  0.16  2008/06/03     
+%%
+%% Copyright (C) 2007-2008 by Micha/l Fita. All rights reserved.
+%% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.2
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% 
+\NeedsTeXFormat{LaTeX2e}[1996/12/01]
+\ProvidesPackage{aghtitle}[2008/06/03 v. 0.16 Strona Tytulowa Pracy Magisterskiej]
+
+\typeout{Strona Tytulowa Pracy Magisterskiej by Michal Fita}
+
+% Ladowanie niezbednych zaleznosci
+\RequirePackage{ifthen}
+\RequirePackage{xkeyval}
+\RequirePackage{substr}
+\RequirePackage{calc}
+
+% Deklaracje liczników
+\newcounter{@authorCounter}
+\setcounter{@authorCounter}{0}
+\newcounter{@promotorCounter}
+\setcounter{@promotorCounter}{0}
+
+% Deklaracje wartosci logicznych
+\newboolean{WhetherPdf} \setboolean{WhetherPdf}{false}
+\newboolean{WhetherMoreAuthors} \setboolean{WhetherMoreAuthors}{false}
+\newboolean{WhetherMorePromotors} \setboolean{WhetherMorePromotors}{false}
+\newboolean{WhetherWoman} \setboolean{WhetherWoman}{true}
+
+% Potrzebujemy pakietu setspace
+%\@ifpackageloaded{graphicx}%
+%{%
+%}
+%{%
+  \RequirePackage{setspace}  
+%}
+% Opcje pakietu
+\DeclareOptionX{pdftex}{\setboolean{WhetherPdf}{true}}
+\DeclareOptionX{type}[lic]{
+  \ifthenelse{\equal{#1}{lic}}
+    {\def\agh@worktype{Praca licencjacka}}{}
+  \ifthenelse{\equal{#1}{mgr}}
+    {\def\agh@worktype{Praca magisterska}}{}
+  \ifthenelse{\equal{#1}{inz}}
+    {\def\agh@worktype{Praca in¿ynierska}}{}
+  \ifthenelse{\equal{#1}{dr}}
+    {\def\agh@worktype{Praca doktorska}}{}
+}
+\DeclareOptionX{gender}[female]{
+  \ifthenelse{\equal{#1}{male}}
+  {
+    \setboolean{WhetherWoman}{false}
+  }
+  {
+    \setboolean{WhetherWoman}{true}
+  }
+}
+\ProcessOptionsX
+% Opcjonalne ladowanie
+\ifthenelse{\boolean{WhetherPdf}}
+{
+  \@ifpackageloaded{graphicx}%
+  {%
+  }
+  {%
+    \RequirePackage[pdftex]{graphicx}  
+  }
+  \def\agh@orzelek{orzelAGH.jpg}
+  \def\agh@logo{logoagh.jpg}
+}
+{
+  \@ifpackageloaded{graphicx}%
+  {%
+  }
+  {%
+    \RequirePackage[dvips]{graphicx}  
+  }
+  \def\agh@orzelek{orzelAGH.eps}
+  \def\agh@logo{logoagh.eps}
+}
+% Definicje uniwersalne polskich znaczków
+\newcommand{\agh@a}{\k a}             %{\char177}
+\newcommand{\agh@c}{\@tabacckludge'c} %{\char230}
+\newcommand{\agh@e}{\k e}             %{\char234}
+\newcommand{\agh@l}{\l}               %{\char179}
+\newcommand{\agh@o}{\@tabacckludge'o} %{\char243}
+\newcommand{\agh@s}{\@tabacckludge's} %{\char182}
+\newcommand{\agh@z}{\.z}              %{\char191}
+\newcommand{\agh@x}{\@tabacckludge'z} %{\char188}
+\@ifpackageloaded{ucs}%
+{%
+  \PrerenderUnicode{\k a}%
+  \PrerenderUnicode{\@tabacckludge'c}%
+  \PrerenderUnicode{\k e}%
+  \PrerenderUnicode{\l}%
+  \PrerenderUnicode{\@tabacckludge'o}%
+  \PrerenderUnicode{\@tabacckludge's}%
+  \PrerenderUnicode{\.z}%
+  \PrerenderUnicode{\@tabacckludge'z}%
+  \PreloadUnicodePage{1}%
+}
+{%
+}
+
+% Nowe komendy
+%\renewcommand{\title}[1]{\def\agh@title{#1}}
+%\renewcommand{\author}[1]{\def\agh@author{#1}}
+
+\edef\@albumNumber{\@empty} % Przechowuje numery albumów
+\edef\@promotor{\@empty} % Przechowuje promotorów
+
+\newcommand{\countAuthors}{% Liczenie autorów
+  \IfSubStringInString{,}{\@author}{%
+    \SubStringsToCounter{@authorCounter}{,}{\@author}%
+    \stepcounter{@authorCounter}%
+    \setboolean{WhetherMoreAuthors}{true}%
+  }{\stepcounter{@authorCounter}}%
+}
+
+\newcommand{\countPromotors}{% Liczenie promotorów
+  \IfSubStringInString{,}{\@promotor}{%
+    \SubStringsToCounter{@promotorCounter}{,}{\@promotor}%
+    \stepcounter{@promotorCounter}%
+    \setboolean{WhetherMorePromotors}{true}%
+  }{\stepcounter{@promotorCounter}}%
+}
+
+
+\newcommand{\albumNumber}[1]{\global\edef\@albumNumber{#1}}
+\newcommand{\promotor}[1]{\global\edef\@promotor{#1}}
+
+\newcommand{\promotorJeden}[1]{}
+\newcommand{\promotorDwa}[1]{}
+\newcommand{\authorJeden}[1]{}
+\newcommand{\authorDwa}[1]{}
+\newcommand{\nralbumuJeden}[1]{}
+\newcommand{\nralbumuDwa}[1]{}
+
+% Uklad strony tytulowej
+\renewcommand{\maketitle}{
+  \countAuthors
+  \countPromotors
+  
+  \begin{titlepage}
+  \begin{singlespace}	
+    \begin{center}
+    	\vspace{-33pt}
+      %\includegraphics[height=44pt]{\agh@orzelek}\par % Orzelek
+      \includegraphics[height=20mm]{\agh@logo}\par % Nowe logo AGH
+      \vspace*{9pt}
+      
+      \begin{tabular}{c}
+        \large{Akademia G{\agh@o}rniczo-Hutnicza im. Stanis{\agh@l}awa Staszica w Krakowie}
+      \end{tabular}
+      
+      \vspace{-7.3pt}
+      \noindent\rule{\textwidth}{.4pt}\\[-10.95pt]
+  		\noindent\rule{\textwidth}{1pt}\\[-11.55pt]
+  		\noindent\rule{\textwidth}{.4pt}\par 
+      
+      \vspace*{5pt}
+      
+      \begin{tabular}{c}
+        \large{Wydzia{\agh@l}\ Elektrotechniki, Automatyki, Informatyki i Elektroniki}\\
+        \large\textit{Katedra Informatyki}
+      \end{tabular}
+      
+      \vspace*{99pt}
+    	{\Large\agh@worktype\par} % Typ pracy (definiowane opcj¹)
+     	
+      \vspace*{33pt}
+      
+      {\huge\bfseries\@title} % Tyty³ pracy
+      \vspace{26pt}
+      
+      % Put author info for each author
+      \global\edef\@nauthor{\@author}
+      \global\edef\@nalbumno{\@albumNumber}
+      \global\edef\@tmpauthor{.,.,.}
+      \global\edef\@tmpalbumn{.,.,.}
+      \def\@leftPart##1,##2{##1}
+      \def\@rightPart##1,##2{##2}
+      \whiledo{\the@authorCounter>0}{\begingroup%
+        \Large{\BeforeSubString{,}{\@nauthor}}\\
+        \small{Numer albumu: \BeforeSubString{,}{\@nalbumno}}\\
+        \addtocounter{@authorCounter}{-1}%
+        \global\edef\@tmpauthor{\@nauthor,}%
+        \global\edef\@tmpalbumno{\@nalbumno,}%
+        \IfSubStringInString{,}{\@tmpauthor}
+        {
+          \global\edef\@nauthor{\expandafter\@rightPart\@tmpauthor\relax}
+        }{\@empty}%
+        \IfSubStringInString{,}{\@tmpalbumno}
+        {
+          \global\edef\@nalbumno{\expandafter\@rightPart\@tmpalbumno\relax}
+        }{\@empty}%
+      \endgroup}
+      
+      \vfill
+      
+      % Put promotor names
+      \global\edef\@npromotor{\@promotor}
+      \global\edef\@tmppromotor{.,.,.}
+      %\begin{tabular}{c}
+      \ifthenelse{\boolean{WhetherMorePromotors}}{Promotorzy:}{Promotor:}\\
+      \whiledo{\the@promotorCounter>0}{\begingroup%
+        \large{\BeforeSubString{,}{\@npromotor}}\\        
+        \addtocounter{@promotorCounter}{-1}%
+        \global\edef\@tmppromotor{\@npromotor,}%
+      %  \IfSubStringInString{,}{\@tmppromotor}
+      %  {
+          \global\edef\@npromotor{\expandafter\@rightPart\@tmppromotor\relax}%
+      %  }{\@empty}%
+      \endgroup}
+      %\end{tabular}
+      
+      \vspace{2.5\baselineskip}
+      
+      \noindent\rule{\textwidth}{.4pt}\\[-10.95pt]
+  		\noindent\rule{\textwidth}{1pt}\\[-11.55pt]
+  		\noindent\rule{\textwidth}{.4pt}\par
+  		\begin{tabular}{c}
+  			\large Krak{\agh@o}w \@date
+  		\end{tabular}
+      
+    \end{center}
+  \end{singlespace}
+  \end{titlepage}
+  \newpage\relax
+  
+  \thispagestyle{empty}
+  \vspace*{43pt}
+  \ifthenelse{\NOT\boolean{WhetherMoreAuthors}}
+  {
+    \begin{center} 
+		  {\large\bfseries O{\agh@s}wiadczenie autora}\par\bigskip
+    \end{center}
+      
+    \ifthenelse{\boolean{WhetherWoman}}{
+      % Dla pracy jednoosobowej (kobieta):
+      O{\agh@s}wiadczam, {\agh@s}wiadoma odpowiedzialno{\agh@s}ci karnej za po{\agh@s}wiadczenie nieprawdy,
+      {\agh@z}e niniejsz{\agh@a} prac{\agh@e} dyplomow{\agh@a} wykona{\agh@l}am osobi{\agh@s}cie i samodzielnie oraz {\agh@z}e nie
+      korzysta{\agh@l}am ze {\agh@x}r{\agh@o}de{\agh@l} innych ni{\agh@z} wymienione w pracy.
+    }{
+      % Dla pracy jednoosobowej (mezczyzna):
+      O{\agh@s}wiadczam, {\agh@s}wiadomy odpowiedzialno{\agh@s}ci karnej za po{\agh@s}wiadczenie nieprawdy,
+      {\agh@z}e niniejsz{\agh@a} prac{\agh@e} dyplomow{\agh@a} wykona{\agh@l}em osobi{\agh@s}cie i samodzielnie oraz {\agh@z}e nie
+      korzysta{\agh@l}em ze {\agh@x}r{\agh@o}de{\agh@l} innych ni{\agh@z} wymienione w pracy.
+    }
+  }{
+    \begin{center} 
+		  {\large\bfseries O{\agh@s}wiadczenie autor{\agh@o}w}\par\bigskip
+    \end{center}
+    
+    % Dla pracy dwuosobowej:
+    O{\agh@s}wiadczamy, {\agh@s}wiadomi odpowiedzialno{\agh@s}ci karnej za po{\agh@s}wiadczenie nieprawdy,
+    {\agh@z}e niniejsz{\agh@a} prac{\agh@e} dyplomow{\agh@a} wykonali{\agh@s}my osobi{\agh@s}cie i samodzielnie (w zakresie
+    wyszczeg{\agh@o}lnionym we wstêpie) i {\agh@z}e nie korzystali{\agh@s}my ze {\agh@x}róde³ innych ni{\agh@z}
+    wymienione w pracy.
+  }
+  \vfill
+  \newpage\relax
+  % Hmm... \setcounter{page}{2}
+}
